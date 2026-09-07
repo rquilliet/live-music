@@ -1,10 +1,11 @@
 """Hand-written parsers for venue websites that publish their programme as HTML."""
+import datetime as dt
 import re
 import urllib.parse
 
-from ..fetch import get
+from ..fetch import get, FetchError
 from ..model import Event
-from ..util import clean_text, parse_fr_date, parse_time, parse_price, FR_MONTHS, infer_year
+from ..util import clean_text, parse_fr_date, parse_time, parse_price, strip_accents, FR_MONTHS, infer_year
 
 
 def _abs(base, href):
@@ -227,6 +228,54 @@ def instantschavires(venue, ctx):
         events.append(Event(title=title, date=date, venue=venue["name"], venue_slug=venue["slug"],
                             source="instantschavires", url=url, image=img))
     return events
+
+
+# ------------------------------------------------------------------ La Boule Noire (own site since 2026, Elementor cards)
+
+def boulenoire(venue, ctx):
+    """Cards 'TITLE / JEUDI 10 SEPTEMBRE 2026 – 19H30', 24 per page, /page/N/ for the rest."""
+    events, seen = [], set()
+    for page in range(1, 9):
+        url = venue["url"] if page == 1 else f"{venue['url'].rstrip('/')}/page/{page}/"
+        try:
+            html = get(url)
+        except FetchError:
+            break
+        blocks = list(_blocks(html, r'<article class="elementor-post '))
+        titles = [_first(r'<h2 class="elementor-post__title">\s*<a[^>]*>(.*?)</a>', b) for b in blocks]
+        if not blocks or set(titles) <= seen:  # the site repeats the last page forever
+            break
+        seen.update(titles)
+        for b in blocks:
+            url = _first(r'<h2 class="elementor-post__title">\s*<a[^>]*href="([^"]+)"', b)
+            title = clean_text(_first(r'<h2 class="elementor-post__title">\s*<a[^>]*>(.*?)</a>', b) or "")
+            when = clean_text(_first(r'<div class="elementor-post__excerpt">(.*?)</div>', b) or "")
+            img = _first(r'<img[^>]+src="([^"]+)"', b)
+            sold_out = "category-complet" in b[:800] or bool(re.search(r'elementor-post__badge">\s*Complet', b))
+            if not title or not when:
+                continue
+            for date in _boulenoire_dates(when, ctx["today"]):
+                events.append(Event(title=title, date=date, time=parse_time(when), venue=venue["name"],
+                                    venue_slug=venue["slug"], source="boulenoire", url=url, image=img, sold_out=sold_out))
+    return events
+
+
+def _boulenoire_dates(when, today):
+    """'JEUDI 10 SEPTEMBRE 2026 – 19H30' -> ['2026-09-10']; '15, 16 & 17 SEPTEMBRE 2026' -> three dates."""
+    t = strip_accents(when.lower()).replace("1er", "1")
+    for m in re.finditer(r"((?:\b\d{1,2}\s*(?:,|&|et)\s*)*\b\d{1,2})\s+([a-z]+)\.?(?:\s+(\d{4}))?", t):
+        if m.group(2) not in FR_MONTHS:  # "20h30 samedi 12 decembre": skip "30 samedi", keep "12 decembre"
+            continue
+        month = FR_MONTHS[m.group(2)]
+        out = []
+        for d in re.findall(r"\d{1,2}", m.group(1)):
+            year = int(m.group(3)) if m.group(3) else infer_year(month, int(d), today)
+            try:
+                out.append(dt.date(year, month, int(d)).isoformat())
+            except ValueError:
+                continue
+        return out
+    return []
 
 
 # ------------------------------------------------------------------ New Morning (JSON-LD, but not valid JSON)

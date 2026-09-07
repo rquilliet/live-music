@@ -957,6 +957,21 @@
 ],
 "is_music": true
 },
+"cabaret-sauvage|deejay mk": {
+"genres": [
+"electro",
+"world"
+],
+"is_music": true
+},
+"cabaret-sauvage|les concerts volants d arte": {
+"genres": [
+"pop",
+"rock",
+"indie"
+],
+"is_music": true
+},
 "cabaret-sauvage|sidi bemol presente guellal montreal": {
 "genres": [
 "world",
@@ -968,6 +983,20 @@
 "cabaret-sauvage|the dire straits experience le lundi 7 decembre a paris": {
 "genres": [
 "rock"
+],
+"is_music": true
+},
+"cabaret-sauvage|the prophecy": {
+"genres": [
+"reggae",
+"world"
+],
+"is_music": true
+},
+"cabaret-sauvage|zozo machine": {
+"genres": [
+"electro",
+"world"
 ],
 "is_music": true
 },
@@ -1034,6 +1063,20 @@
 "chapelle-de-l-hopital-lariboisiere|voyage musical en compagnie de schubert et debussy lieder et melodies": {
 "genres": [
 "classical"
+],
+"is_music": true
+},
+"cirque-electrique|celine le mega karaoke des fans": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true
+},
+"cirque-electrique|musique enchienne par sucre d orge": {
+"genres": [
+"chanson",
+"experimental"
 ],
 "is_music": true
 },
@@ -1881,6 +1924,13 @@
 ],
 "is_music": true
 },
+"fgo-barbara|a festa showcases": {
+"genres": [
+"world",
+"latin"
+],
+"is_music": true
+},
 "fgo-barbara|batbat": {
 "genres": [
 "electro",
@@ -1892,6 +1942,68 @@
 "genres": [
 "electro",
 "experimental"
+],
+"is_music": true
+},
+"fgo-barbara|elevator donevald xobo a ile eniah": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true
+},
+"fgo-barbara|gu1t4r": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"fgo-barbara|jasmine not jafar release party": {
+"genres": [
+"hip-hop",
+"pop"
+],
+"is_music": true
+},
+"fgo-barbara|kinji00 domingo cruz": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"fgo-barbara|loufox bellboy": {
+"genres": [
+"hip-hop",
+"pop"
+],
+"is_music": true
+},
+"fgo-barbara|mama music convention": {
+"genres": [
+"pop",
+"indie",
+"electro"
+],
+"is_music": true
+},
+"fgo-barbara|naeko": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true
+},
+"fgo-barbara|saoirse dream estelle allen michele bry": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true
+},
+"fgo-barbara|silence musique festival sadandsolo dnd mendilabaz gt1boiavantcsur": {
+"genres": [
+"hip-hop",
+"electro"
 ],
 "is_music": true
 },
@@ -2476,10 +2588,561 @@
 ],
 "is_music": true
 },
+"la-boule-noire|2120": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|afar": {
+"genres": [
+"indie",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|alexis muratti": {
+"genres": [
+"jazz",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|ao": {
+"genres": [
+"pop",
+"electro",
+"world"
+],
+"is_music": true
+},
+"la-boule-noire|arkayla": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|baptiste sartoria": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|beka": {
+"genres": [
+"pop",
+"indie",
+"soul-rnb"
+],
+"is_music": true
+},
+"la-boule-noire|beka gyal": {
+"genres": [
+"reggae",
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|bel cobain": {
+"genres": [
+"soul-rnb",
+"hip-hop",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|ben ellis": {
+"genres": [
+"folk",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|berre": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true
+},
+"la-boule-noire|brarda": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|campesino": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true
+},
+"la-boule-noire|charles dolle": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|chrissy chlapecka": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|coralie fischer": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|crenoka release party": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|davina michelle": {
+"genres": [
+"pop",
+"rock"
+],
+"is_music": true
+},
+"la-boule-noire|day we ran": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true
+},
+"la-boule-noire|dernier motel": {
+"genres": [
+"rock",
+"chanson",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|dracoboy": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|eloquence": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|emma harner": {
+"genres": [
+"folk",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|emma hoet": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|essosa": {
+"genres": [
+"soul-rnb",
+"afro"
+],
+"is_music": true
+},
+"la-boule-noire|flagalive 2": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|fleur et bleue": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true
+},
+"la-boule-noire|frizzy p mr cole": {
+"genres": [
+"hip-hop",
+"soul-rnb"
+],
+"is_music": true
+},
+"la-boule-noire|gotti maras": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|grandmas house": {
+"genres": [
+"punk",
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|heroe": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|hey nothing": {
+"genres": [
+"indie",
+"folk",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|holseek": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|ice sealed eyes": {
+"genres": [
+"electro",
+"experimental",
+"rock"
+],
+"is_music": true
+},
+"la-boule-noire|isimaria": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|james smith": {
+"genres": [
+"pop",
+"soul-rnb",
+"folk"
+],
+"is_music": true
+},
+"la-boule-noire|jetlag release party de baozi cumulus ilo navahy": {
+"genres": [
+"indie",
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|jolina louise": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|josh levi": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|kilimanjaro live": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|lmzg": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|lost": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|lynx irl": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|mama music convention 2026": {
+"genres": [
+"indie",
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|marina p the radiators": {
+"genres": [
+"reggae",
+"world"
+],
+"is_music": true
+},
+"la-boule-noire|mathilda": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|maureen valet": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|mulaa joans": {
+"genres": [
+"soul-rnb",
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|nade": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true
+},
+"la-boule-noire|nathalie froehlich": {
+"genres": [
+"chanson",
+"pop",
+"folk"
+],
+"is_music": true
+},
+"la-boule-noire|nothhingspecial": {
+"genres": [
+"indie",
+"pop",
+"rock"
+],
+"is_music": true
+},
+"la-boule-noire|numah": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|oan kim": {
+"genres": [
+"jazz",
+"experimental",
+"rock"
+],
+"is_music": true
+},
+"la-boule-noire|olga myko": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|paolo": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|parviz": {
+"genres": [
+"pop",
+"indie",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|pernod ricard live music": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|radiance 2026": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|really good time": {
+"genres": [
+"indie",
+"rock",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|renny conti": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|robb": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true
+},
+"la-boule-noire|romance": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|sex shop mushrooms": {
+"genres": [
+"rock",
+"punk",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|sinto pap": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|sofy": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|solal roubine": {
+"genres": [
+"chanson",
+"pop",
+"folk"
+],
+"is_music": true
+},
+"la-boule-noire|solamour": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true
+},
+"la-boule-noire|thx4crying": {
+"genres": [
+"hip-hop",
+"electro",
+"pop"
+],
+"is_music": true
+},
 "la-boule-noire|thx4crying a la boule noire": {
 "genres": [
 "pop",
 "electro"
+],
+"is_music": true
+},
+"la-boule-noire|tiana major9": {
+"genres": [
+"soul-rnb"
+],
+"is_music": true
+},
+"la-boule-noire|tigercub 16h": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|tigercub 20h": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|tisma": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|tommy barlow": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true
+},
+"la-boule-noire|tony the kiki": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true
+},
+"la-boule-noire|treaks": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-boule-noire|xam": {
+"genres": [
+"hip-hop"
+],
+"is_music": true
+},
+"la-boule-noire|zoh amba les femmes s en melent": {
+"genres": [
+"jazz",
+"experimental"
 ],
 "is_music": true
 },
@@ -2504,6 +3167,187 @@
 "experimental"
 ],
 "is_music": true
+},
+"la-dame-de-canton|ame release party": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true
+},
+"la-dame-de-canton|armelle yons x kaptain bando": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|chu chi cha release party": {
+"genres": [
+"world",
+"latin"
+],
+"is_music": true
+},
+"la-dame-de-canton|concert coplateau marty jjh potter": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|concert louis arlette": {
+"genres": [
+"chanson",
+"electro",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|edemzi": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true
+},
+"la-dame-de-canton|emma giulia x david atger quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true
+},
+"la-dame-de-canton|gassine zecar x l oreille kc": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|guess my name": {
+"genres": [
+"rock",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|jamspace": {
+"genres": [
+"jazz",
+"funk"
+],
+"is_music": true
+},
+"la-dame-de-canton|jamspace blue orange x minuit boulevard": {
+"genres": [
+"jazz",
+"funk",
+"soul-rnb"
+],
+"is_music": true
+},
+"la-dame-de-canton|jozeph x jude aston": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|kndns x sicklips": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-dame-de-canton|lucie shame x the reed conservation society": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true
+},
+"la-dame-de-canton|mune concert": {
+"genres": [
+"folk",
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|no monark sans roi release party": {
+"genres": [
+"chanson",
+"rock"
+],
+"is_music": true
+},
+"la-dame-de-canton|suzon x rondo": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true
+},
+"la-dame-de-canton|the expats jam": {
+"genres": [
+"jazz",
+"blues",
+"funk"
+],
+"is_music": true
+},
+"la-dame-de-canton|the mercury riots usa": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true
+},
+"la-dame-de-canton|tio manuel": {
+"genres": [
+"world",
+"latin"
+],
+"is_music": true
+},
+"la-dame-de-canton|toma sidibe dakan live": {
+"genres": [
+"afro",
+"world"
+],
+"is_music": true
+},
+"la-dame-de-canton|two trains left x neon sabrina x tom apter": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true
+},
+"la-dame-de-canton|ulysse mars desespoir des singes": {
+"genres": [
+"chanson",
+"rock"
+],
+"is_music": true
+},
+"la-dame-de-canton|yann gael concert de sortie la pieuvre": {
+"genres": [
+"chanson",
+"folk"
+],
+"is_music": true
+},
+"la-machine|63kluf": {
+"genres": [
+"electro"
+],
+"is_music": true
+},
+"la-machine|miss bashful presents the glamour snobby tour": {
+"genres": [],
+"is_music": false
 },
 "la-machine|natewantstobattle en concert a la machine du moulin rouge avec cam steady": {
 "genres": [
@@ -3301,6 +4145,21 @@
 ],
 "is_music": true
 },
+"le-360|le rythme de la parole": {
+"genres": [
+"hip-hop",
+"world"
+],
+"is_music": true
+},
+"le-360|palace of mirrors release party": {
+"genres": [
+"indie",
+"electro",
+"pop"
+],
+"is_music": true
+},
 "le-baiser-sale|anastasiia donna quartet invite joachim govin": {
 "genres": [
 "jazz"
@@ -3597,6 +4456,34 @@
 },
 "le-bal-blomet|christmas jazz night au bal blomet": {
 "genres": [
+"jazz"
+],
+"is_music": true
+},
+"le-bal-blomet|l heure exquise au dela du reel": {
+"genres": [
+"chanson",
+"jazz"
+],
+"is_music": true
+},
+"le-bal-blomet|l heure exquise prepare la dinde": {
+"genres": [
+"chanson",
+"jazz"
+],
+"is_music": true
+},
+"le-bal-blomet|l heure exquise voyage dans le temps": {
+"genres": [
+"chanson",
+"jazz"
+],
+"is_music": true
+},
+"le-bal-blomet|la legende de l heure exquise": {
+"genres": [
+"chanson",
 "jazz"
 ],
 "is_music": true
@@ -4607,11 +5494,26 @@
 "genres": [],
 "is_music": false
 },
+"les-trois-baudets|mama festival 2026": {
+"genres": [
+"indie",
+"pop",
+"rock"
+],
+"is_music": true
+},
 "les-trois-baudets|mama music 2026": {
 "genres": [
 "indie",
 "pop",
 "rock"
+],
+"is_music": true
+},
+"les-trois-baudets|slon": {
+"genres": [
+"indie",
+"pop"
 ],
 "is_music": true
 },
@@ -5276,6 +6178,13 @@
 "genres": [
 "chanson",
 "folk"
+],
+"is_music": true
+},
+"paris-la-defense-arena|celine dion paris 2026": {
+"genres": [
+"pop",
+"chanson"
 ],
 "is_music": true
 },
@@ -6297,11 +7206,33 @@
 ],
 "is_music": true
 },
+"popup|kuleeangee": {
+"genres": [
+"indie",
+"electro"
+],
+"is_music": true
+},
+"popup|noonzy": {
+"genres": [
+"pop",
+"indie",
+"electro"
+],
+"is_music": true
+},
 "popup|take me out guacayo en concert a paris": {
 "genres": [
 "indie",
 "pop",
 "reggae"
+],
+"is_music": true
+},
+"popup|tara": {
+"genres": [
+"electro",
+"pop"
 ],
 "is_music": true
 },

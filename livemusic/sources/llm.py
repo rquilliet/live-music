@@ -1,6 +1,7 @@
 """Generic extractor: fetch the venue's programme page(s), turn them into text, and let Claude
 pull out the concerts.  Used for venues without a hand-written parser.  Needs ANTHROPIC_API_KEY.
 """
+import datetime as dt
 import hashlib
 import json
 import os
@@ -56,7 +57,7 @@ def scrape(venue, ctx):
     hit = cache.get(venue["slug"])
     if hit and hit.get("digest") == digest and hit.get("today") == ctx["today"].isoformat():
         ctx["log"](f"  {venue['name']}: unchanged page, reusing cached extraction")
-        return [_to_event(x, venue) for x in hit["events"]]
+        return [_to_event(x, venue, ctx) for x in hit["events"]]
 
     client = anthropic.Anthropic()
     model = os.environ.get("LIVEMUSIC_MODEL", "claude-opus-5")
@@ -100,13 +101,32 @@ def scrape(venue, ctx):
             events.append(x.model_dump())
     cache[venue["slug"]] = {"digest": digest, "today": ctx["today"].isoformat(), "events": events}
     _cache_save(cache)
-    return [_to_event(x, venue) for x in events]
+    return [_to_event(x, venue, ctx) for x in events]
 
 
-def _to_event(x: dict, venue) -> Event:
+def _fix_year(date: str, today: dt.date, horizon_days: int) -> str:
+    """Programme pages print '11 septembre' without a year and the model sometimes picks last year's;
+    a date in the past whose next anniversary falls inside the scraping window is that mistake
+    (La Marbrerie: 38 extracted concerts, 1 kept, before this)."""
+    try:
+        d = dt.date.fromisoformat(date)
+    except ValueError:
+        return date
+    if d < today:
+        try:
+            nxt = d.replace(year=d.year + 1)
+        except ValueError:  # 29 February
+            return date
+        if today <= nxt <= today + dt.timedelta(days=horizon_days):
+            return nxt.isoformat()
+    return date
+
+
+def _to_event(x: dict, venue, ctx) -> Event:
     genres = [g for g in x.get("genres", []) if g in TAGS][:3]
+    date = _fix_year(x["date"], ctx["today"], ctx["horizon_days"])
     return Event(
-        title=x["title"], date=x["date"], time=x.get("time") or None, venue=venue["name"], venue_slug=venue["slug"],
+        title=x["title"], date=date, time=x.get("time") or None, venue=venue["name"], venue_slug=venue["slug"],
         source="llm", url=x.get("url") or venue["url"], price=x.get("price"), genres=genres,
         genre_source="llm" if genres else None, is_music=x.get("is_music", True), sold_out=x.get("sold_out", False),
         description=", ".join(x["artists"]) if x.get("artists") else None,

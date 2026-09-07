@@ -120,7 +120,22 @@ def run(only=None, use_llm=True, log=print):
         json.dump(out, f, ensure_ascii=False, indent=0)
     fresh = sum(1 for e in events if first_seen.get(e.id) == today.isoformat())
     log(f"wrote {len(events)} events -> {os.path.relpath(OUT_PATH, ROOT)} ({fresh} newly announced today)")
+    low = low_coverage(todo, report)
+    if low:
+        log(f"  low coverage (< {LOW_COVERAGE} events from the venue's own site, check the URL / parser): "
+            + ", ".join(f"{name} ({n})" for name, n in low))
     return out
+
+
+LOW_COVERAGE = 3
+
+
+def low_coverage(scraped, report):
+    """(venue name, count) for venue sites that answered but yielded almost nothing: a programme page
+    rendered by JavaScript or a URL that moved looks like a thin programme, not like a failure."""
+    strategy = {v["name"]: v["strategy"] for v in scraped}
+    return [(r["venue"], r["count"]) for r in report
+            if r["ok"] and r["count"] < LOW_COVERAGE and strategy.get(r["venue"]) != "opendata"]
 
 
 # ------------------------------------------------------------------ venue identity

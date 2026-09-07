@@ -26,7 +26,7 @@ and the venues marked `"strategy": "llm"` in `venues.json`.
 | Sources | `venues.json` + `livemusic/sources/` | One entry per venue with a `strategy`. |
 | `opendata` | Paris "Que faire à Paris ?" API | Every concert declared to the city, free, no key. Hundreds of small venues. |
 | `tribe` | WordPress Events Calendar REST | Supersonic, Sunset/Sunside. |
-| hand parsers | `sources/venues_html.py` | Bataclan, Cigale/Boule Noire, Trianon, Élysée Montmartre, Maroquinerie, Petit Bain, Point Éphémère, Café de la Danse, Hasard Ludique, New Morning. |
+| hand parsers | `sources/venues_html.py` | Bataclan, Cigale, Boule Noire, Trianon, Élysée Montmartre, Maroquinerie, Petit Bain, Point Éphémère, Café de la Danse, Hasard Ludique, New Morning, Instants Chavirés. |
 | `llm` | `sources/llm.py` | Any other venue: the programme page is turned into text and Claude extracts the concerts. Needs the API key. |
 | Merge | `pipeline.merge` | Same venue + same date + similar title → one event (venue site wins over open data). |
 | Genres | `livemusic/genres.py` | 1. tags published by the venue, 2. keyword rules on title/description, 3. venue default, 4. Claude for whatever is still weak (cached in `data/genre_cache.json`). |
@@ -35,6 +35,13 @@ and the venues marked `"strategy": "llm"` in `venues.json`.
 
 Pages are cached 6 h in `data/cache/` (`--fresh` to bypass). Run `scrape.py` daily (cron / launchd) so
 "newly announced" means something.
+
+## Coverage check
+
+The end of every run lists the venues whose own site yielded fewer than 3 events (`low coverage`): that is
+almost always a programme page rendered by JavaScript or a URL that moved, not an empty programme. Venues
+whose programme only lives on Facebook / Instagram / Shotgun (`"strategy": "none"` with a `note` in
+`venues.json`) are covered by the open data feed only.
 
 ## Adding a venue
 
