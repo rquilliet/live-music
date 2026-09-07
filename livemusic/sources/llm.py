@@ -1,6 +1,8 @@
 """Generic extractor: fetch the venue's programme page(s), turn them into text, and let Claude
 pull out the concerts.  Used for venues without a hand-written parser.  Needs ANTHROPIC_API_KEY.
 """
+import hashlib
+import json
 import os
 from typing import List, Optional
 
@@ -48,6 +50,14 @@ def scrape(venue, ctx):
         return []
     chunks = _chunks(text, CHUNK_CHARS)[:MAX_CHUNKS]
 
+    # Same page text as last time -> same answer, no API call (programme pages change rarely).
+    cache = _cache_load()
+    digest = hashlib.sha1(text.encode("utf-8")).hexdigest()
+    hit = cache.get(venue["slug"])
+    if hit and hit.get("digest") == digest and hit.get("today") == ctx["today"].isoformat():
+        ctx["log"](f"  {venue['name']}: unchanged page, reusing cached extraction")
+        return [_to_event(x, venue) for x in hit["events"]]
+
     client = anthropic.Anthropic()
     model = os.environ.get("LIVEMUSIC_MODEL", "claude-opus-5")
     system = (
@@ -87,14 +97,36 @@ def scrape(venue, ctx):
             if not x.title or len(x.date) != 10 or (x.title, x.date) in seen:
                 continue
             seen.add((x.title, x.date))
-            genres = [g for g in x.genres if g in TAGS][:3]
-            events.append(Event(
-                title=x.title, date=x.date, time=x.time or None, venue=venue["name"], venue_slug=venue["slug"],
-                source="llm", url=x.url or venue["url"], price=x.price, genres=genres,
-                genre_source="llm" if genres else None, is_music=x.is_music, sold_out=x.sold_out,
-                description=", ".join(x.artists) if x.artists else None,
-            ))
-    return events
+            events.append(x.model_dump())
+    cache[venue["slug"]] = {"digest": digest, "today": ctx["today"].isoformat(), "events": events}
+    _cache_save(cache)
+    return [_to_event(x, venue) for x in events]
+
+
+def _to_event(x: dict, venue) -> Event:
+    genres = [g for g in x.get("genres", []) if g in TAGS][:3]
+    return Event(
+        title=x["title"], date=x["date"], time=x.get("time") or None, venue=venue["name"], venue_slug=venue["slug"],
+        source="llm", url=x.get("url") or venue["url"], price=x.get("price"), genres=genres,
+        genre_source="llm" if genres else None, is_music=x.get("is_music", True), sold_out=x.get("sold_out", False),
+        description=", ".join(x["artists"]) if x.get("artists") else None,
+    )
+
+
+CACHE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "llm_cache.json")
+
+
+def _cache_load():
+    if os.path.exists(CACHE_PATH):
+        with open(CACHE_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def _cache_save(cache):
+    os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+    with open(CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=0)
 
 
 def _chunks(text: str, size: int) -> List[str]:

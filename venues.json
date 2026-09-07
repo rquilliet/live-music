@@ -23,6 +23,8 @@
    "address": "128 avenue de Saint-Ouen, 75018 Paris", "lat": 48.8969, "lon": 2.3277},
   {"name": "New Morning", "slug": "new-morning", "strategy": "newmorning", "url": "https://www.newmorning.com/programmation.html",
    "address": "7-9 rue des Petites Écuries, 75010 Paris", "lat": 48.8731, "lon": 2.3533, "genres": ["jazz"]},
+  {"name": "Instants Chavirés", "slug": "instants-chavires", "strategy": "instantschavires", "url": "https://www.instantschavires.com/musique/concerts/",
+   "address": "7 rue Richard Lenoir, 93100 Montreuil", "lat": 48.8567, "lon": 2.4292, "genres": ["experimental"]},
   {"name": "Supersonic", "slug": "supersonic", "strategy": "tribe", "url": "https://supersonic-club.fr",
    "address": "9 rue Biscornet, 75012 Paris", "lat": 48.8514, "lon": 2.3706, "genres": ["rock", "indie"]},
   {"name": "Sunset / Sunside", "slug": "sunset-sunside", "strategy": "tribe", "url": "https://www.sunset-sunside.com",

@@ -561,6 +561,13 @@
 ],
 "is_music": true
 },
+"badaboum|concert alastair lane presents love is the answer": {
+"genres": [
+"electro",
+"soul-rnb"
+],
+"is_music": true
+},
 "badaboum|concert article15": {
 "genres": [
 "hip-hop"
@@ -1902,6 +1909,13 @@
 ],
 "is_music": true
 },
+"file7|dans ton casque avec les fatals picards": {
+"genres": [
+"rock",
+"chanson"
+],
+"is_music": true
+},
 "file7|jam session": {
 "genres": [
 "jazz",
@@ -1947,6 +1961,91 @@
 "grand-halle-de-la-villette|grunt festival": {
 "genres": [
 "hip-hop"
+],
+"is_music": true
+},
+"instants-chavires|circuit breath isabelle duthoit alen sinkauz nenad sinkauz marion coutts andy moor": {
+"genres": [
+"experimental",
+"jazz"
+],
+"is_music": true
+},
+"instants-chavires|endless breakfast paula sanchez gabby fluke mogul maria portugal pascal battus bertrand gauguet": {
+"genres": [
+"experimental",
+"jazz"
+],
+"is_music": true
+},
+"instants-chavires|ensemble dedalus creations d anthony pateras clara de asis et karl naegelen": {
+"genres": [
+"classical",
+"experimental"
+],
+"is_music": true
+},
+"instants-chavires|horse lords 1er soir julien claire": {
+"genres": [
+"experimental",
+"rock"
+],
+"is_music": true
+},
+"instants-chavires|horse lords 2eme soir lise barkas": {
+"genres": [
+"experimental",
+"rock"
+],
+"is_music": true
+},
+"instants-chavires|leila bordreuil michael foster chris corsano greg malcolm": {
+"genres": [
+"experimental",
+"jazz"
+],
+"is_music": true
+},
+"instants-chavires|marja ahti crys cole l oriole stephane clor clara levy": {
+"genres": [
+"experimental"
+],
+"is_music": true
+},
+"instants-chavires|moor mother": {
+"genres": [
+"experimental",
+"hip-hop",
+"jazz"
+],
+"is_music": true
+},
+"instants-chavires|quasi 2026 7 t1518 raphael bastide trills": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true
+},
+"instants-chavires|quasi 2026 8 olivier lasson niloofar asghary paul bonnet varvalia lodenko": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true
+},
+"instants-chavires|vice de forme 18 smr tni xomo andrea pensado": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true
+},
+"instants-chavires|wolf eyes cuntroaches": {
+"genres": [
+"experimental",
+"punk",
+"rock"
 ],
 "is_music": true
 },
@@ -4520,6 +4619,13 @@
 "genres": [],
 "is_music": false
 },
+"mains-d-oeuvres|polysonic festival": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true
+},
 "mairie-du-10e-arrondissement|midi en musique les dejeuners musicaux du 10e": {
 "genres": [
 "classical"
@@ -6819,6 +6925,13 @@
 "is_music": true
 },
 "sunset-sunside|jazz gouter fete disney": {
+"genres": [
+"jazz",
+"pop"
+],
+"is_music": true
+},
+"sunset-sunside|jazz gouter fete disney en karaoke": {
 "genres": [
 "jazz",
 "pop"

@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-09-07T22:56:45",
+"generated_at": "2026-09-07T23:10:33",
 "today": "2026-09-07",
 "new_window_days": 7,
 "tags": [
@@ -75,6 +75,7 @@
 "Gambetta Club",
 "Glazart",
 "Grand Halle de la Villette",
+"Instants Chavirés",
 "International Visual Theatre",
 "JASS CLUB PARIS",
 "Jardin Nelson Mandela",
@@ -238,6 +239,11 @@
 "count": 68
 },
 {
+"venue": "Instants Chavirés",
+"ok": true,
+"count": 12
+},
+{
 "venue": "Supersonic",
 "ok": true,
 "count": 80
@@ -269,8 +275,8 @@
 },
 {
 "venue": "Paris La Défense Arena",
-"ok": true,
-"count": 0
+"ok": false,
+"error": "no page could be fetched for Paris La Défense Arena"
 },
 {
 "venue": "Alhambra",
@@ -290,7 +296,7 @@
 {
 "venue": "La Marbrerie",
 "ok": true,
-"count": 34
+"count": 1
 },
 {
 "venue": "Le Plan",
@@ -354,8 +360,8 @@
 },
 {
 "venue": "Le Trabendo",
-"ok": true,
-"count": 0
+"ok": false,
+"error": "no page could be fetched for Le Trabendo"
 },
 {
 "venue": "La Clef",
@@ -370,7 +376,7 @@
 {
 "venue": "FGO-Barbara",
 "ok": true,
-"count": 8
+"count": 1
 }
 ],
 "events": [
@@ -401,34 +407,6 @@
 "is_music": true,
 "id": "a0032defcb45",
 "first_seen": "baseline"
-},
-{
-"title": "Jaguar Sun • Thala",
-"date": "2026-09-07",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/jaguar-sun-thala-112389",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"indie",
-"pop"
-],
-"genre_source": "llm",
-"description": "Cette soirée plaira aux fans de… Bleachers, James Blake & Launder.",
-"image": "https://cdn.paris.fr/qfapv4/2026/05/26/huge-470a72a91ffddde68102e4de153bcf47.jpeg",
-"address": "9 Rue Biscornet, 75012, Paris",
-"lat": 48.8502469839762,
-"lon": 2.36970702296574,
-"is_music": true,
-"id": "2c72d43921c2",
-"first_seen": "2026-09-07"
 },
 {
 "title": "A Birchola Trio, Chansons brésiliennes & compositions au 38Riv Jazz Club",
@@ -563,7 +541,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "6c91dbaac2b9",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "BEDOUINE & BARBARA FORSTNER",
@@ -630,7 +608,7 @@
 "free": true,
 "sold_out": false,
 "cancelled": false,
-"raw_genre": null,
+"raw_genre": "Festival",
 "genres": [
 "punk",
 "rock",
@@ -645,34 +623,6 @@
 "is_music": true,
 "id": "40b168e85505",
 "first_seen": "baseline"
-},
-{
-"title": "Headsend",
-"date": "2026-09-08",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/headsend-114196",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"punk",
-"rock"
-],
-"genre_source": "llm",
-"description": "Il faut venir si vous aimez… Fugazi, Turnstile & Sonic Youth.",
-"image": "https://cdn.paris.fr/qfapv4/2026/06/17/huge-9a7715b92166492c37985a1cc604f3da.jpeg",
-"address": "9 Rue Biscornet, 75012, Paris",
-"lat": 48.8502469839762,
-"lon": 2.36970702296574,
-"is_music": true,
-"id": "2d620bcf94fa",
-"first_seen": "2026-09-07"
 },
 {
 "title": "Luca Fattorini invite Antonin Tri-Hoang, au 38Riv Jazz Club",
@@ -1044,7 +994,7 @@
 "time": null,
 "url": "https://www.accorarena.com/fr/programmation",
 "ticket_url": null,
-"price": "À partir de 56,50 €",
+"price": "À partir de : 56,50 €",
 "free": false,
 "sold_out": true,
 "cancelled": false,
@@ -1061,7 +1011,7 @@
 "lon": 2.3786,
 "is_music": true,
 "id": "7b1aea9b7a11",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "BINGO DRAG SOLIDAIRE",
@@ -1742,7 +1692,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "fe67c82d734a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "The Orielles",
@@ -2320,7 +2270,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "f9a9f2397dd8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Café-Concert : Ma Sané",
@@ -2342,14 +2292,14 @@
 "soul-rnb"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Ma Sané",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "e48b71cd22a6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Palmarès les Trophées du Sunside 🏆",
@@ -2563,7 +2513,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "DRAFT — Malter + Liouba + gt1boiavantcsurr",
+"title": "DRAFT - Malter + Liouba + gt1boiavantcsurr",
 "date": "2026-09-11",
 "venue": "FGO-Barbara",
 "venue_slug": "fgo-barbara",
@@ -3087,7 +3037,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "60e7751b4756",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Panteros666 présente 100% Eurotrance – Paris",
@@ -3114,33 +3064,6 @@
 "lon": 2.3323,
 "is_music": true,
 "id": "1d20649ca52c",
-"first_seen": "2026-09-07"
-},
-{
-"title": "SALSA ESPECIAL avec Yemayá La Banda",
-"date": "2026-09-11",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"latin"
-],
-"genre_source": "llm",
-"description": "Yemayá La Banda",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "f68f53d024f6",
 "first_seen": "baseline"
 },
 {
@@ -3824,14 +3747,14 @@
 "blues"
 ],
 "genre_source": "llm",
-"description": "Josh Smith en concert à Paris le 12 Septembre 2026 !",
+"description": "Josh Smith",
 "image": "https://cdn.paris.fr/qfapv4/2026/04/16/huge-dd9bf4861ea6f839bc473e151533c8b0.jpg",
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "7e1d40217cd0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Roda Gira - Marina Gomes",
@@ -4161,7 +4084,7 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "9fa23fe55597",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Le Village de La Tresse",
@@ -4186,7 +4109,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "76cf0b7e1475",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "88 Ménilmontant : Atelier Pizza Sérigraphie",
@@ -4211,7 +4134,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "e7f65f4ddfe2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Match d’impro : LIP",
@@ -4236,7 +4159,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "242f29daace1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Café-Concert : Kalala",
@@ -4257,14 +4180,14 @@
 "world"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Kalala",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "dd56761dba00",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Un été Latino",
@@ -4291,7 +4214,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "28af04698bee",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "WET FOR ME – the queer season starts here !",
@@ -4318,59 +4241,6 @@
 "lon": 2.3323,
 "is_music": true,
 "id": "99d7395f1c91",
-"first_seen": "2026-09-07"
-},
-{
-"title": "Atelier de Sophrologie",
-"date": "2026-09-12",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": false,
-"id": "7bec0d524349",
-"first_seen": "baseline"
-},
-{
-"title": "Hello Montreuil , Demolisha vs Hello Panam : After Party Rixe Club",
-"date": "2026-09-12",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"hip-hop"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "b93c93f47937",
 "first_seen": "baseline"
 },
 {
@@ -4442,7 +4312,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"experimental"
+"experimental",
+"electro"
 ],
 "genre_source": "llm",
 "description": null,
@@ -4937,7 +4808,8 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz"
+"jazz",
+"electro"
 ],
 "genre_source": "llm",
 "description": "Plongez chaque dimanche dans l’énergie brute de la jam du Baiser Salé : un rendez-vous bouillonnant où les talents explosent, les styles se croisent et l’impro devient langage universel.",
@@ -4964,7 +4836,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"blues"
+"blues",
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Une Jam Session Blues animée par Lemmy’s Tribe !",
@@ -4999,7 +4872,7 @@
 "lon": 2.363,
 "is_music": false,
 "id": "8d219850604d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "After O'Clock X La Plage Open Air : Eloisa, In-Tan, Ultranoük",
@@ -5053,7 +4926,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "d5acc51e1799",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "88 Ménilmontant : Atelier yoga & écriture",
@@ -5078,7 +4951,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "1e46665af85b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "88 MÉNILMONTANT | ATELIER MARIONNETTES",
@@ -5103,7 +4976,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "809d26660c6e",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "AKRIILA",
@@ -5123,14 +4996,14 @@
 "hip-hop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Akriila",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "13e626a98ad9",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Vente de vinyles Dizonord",
@@ -5172,7 +5045,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"experimental"
+"experimental",
+"electro"
 ],
 "genre_source": "llm",
 "description": null,
@@ -5738,7 +5612,7 @@
 "lon": 2.3786,
 "is_music": true,
 "id": "8691ea7f8ab4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les évènements du conservatoire Mozart",
@@ -5795,6 +5669,34 @@
 "first_seen": "baseline"
 },
 {
+"title": "Endless Breakfast (Paula Sanchez, Gabby Fluke-Mogul & Mariá Portugal) + Pascal Battus & Bertrand Gauguet",
+"date": "2026-09-15",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/endless-breakfast-paula-sanchez-gabby-fluke-mogul-maria-portugalpascal-battus-bertrand-gauguet/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"jazz"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/c-Cristina-Marx_Photomusix-1075_optimized-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "34dd96649f70",
+"first_seen": "baseline"
+},
+{
 "title": "Soirée de Lancement : Le Phénomène Chemsex",
 "date": "2026-09-15",
 "venue": "La Bellevilloise",
@@ -5817,7 +5719,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "916653ff0b10",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SPORT & YOGA + METAL - PASS 2 SEANCES",
@@ -5871,7 +5773,7 @@
 "lon": 2.3708,
 "is_music": false,
 "id": "e813744f39c2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "francis of delirium",
@@ -6063,7 +5965,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "9bdeccbbfd9d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Mario Canonge et Michel Zenino – Duo jazz",
@@ -6080,8 +5982,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -6563,7 +6464,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "4c6553a79f65",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Masterclass Production Musicale : Rencontre avec piaconcept",
@@ -6590,37 +6491,10 @@
 "lon": 2.3323,
 "is_music": false,
 "id": "5bc8e2655e4c",
-"first_seen": "2026-09-07"
-},
-{
-"title": "IAMX",
-"date": "2026-09-16",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro"
-],
-"genre_source": "llm",
-"description": "IAMX",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "e2b11e119c52",
 "first_seen": "baseline"
 },
 {
-"title": "Erdal est parti",
+"title": "Simon Roth - Erdal est parti",
 "date": "2026-09-16",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -6635,14 +6509,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Simon Roth",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "ecd1e656a91e",
-"first_seen": "2026-09-07"
+"id": "a3410e319d6c",
+"first_seen": "baseline"
 },
 {
 "title": "Livepeace",
@@ -6775,33 +6649,6 @@
 "lon": 2.3693,
 "is_music": false,
 "id": "a7f8ff02c2c0",
-"first_seen": "baseline"
-},
-{
-"title": "Alyona Alyona",
-"date": "2026-09-17",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "19:00",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"hip-hop"
-],
-"genre_source": "llm",
-"description": "Alyona Alyona",
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": true,
-"id": "0fe431ccc521",
 "first_seen": "baseline"
 },
 {
@@ -6946,7 +6793,7 @@
 "lon": 2.36970702296574,
 "is_music": true,
 "id": "81d373f7508a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Carte blanche à Camille Bertault, au 38Riv Jazz Club",
@@ -7344,14 +7191,14 @@
 "time": null,
 "url": "https://www.accorarena.com/fr/programmation",
 "ticket_url": null,
-"price": "À partir de 60,20 €",
+"price": "À partir de : 60,20 €",
 "free": false,
 "sold_out": false,
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"rock",
-"metal"
+"metal",
+"rock"
 ],
 "genre_source": "llm",
 "description": "Evanescence",
@@ -7361,7 +7208,7 @@
 "lon": 2.3786,
 "is_music": true,
 "id": "9b7a92dd9bd5",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CLUB — LA CH!CK: TUMBLR RAVE",
@@ -7405,8 +7252,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"rock",
-"indie"
+"rock"
 ],
 "genre_source": "llm",
 "description": "Roman Candle",
@@ -7416,33 +7262,6 @@
 "lon": 2.3877,
 "is_music": true,
 "id": "5b31a2ea99a3",
-"first_seen": "baseline"
-},
-{
-"title": "RELEASE PARTY NO BITCHES – PÉTASSE ENGAGÉE",
-"date": "2026-09-17",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"punk"
-],
-"genre_source": "llm",
-"description": "No Bitches",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "969a9579863b",
 "first_seen": "baseline"
 },
 {
@@ -7475,7 +7294,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "Erdal est parti",
+"title": "Simon Roth - Erdal est parti",
 "date": "2026-09-17",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -7490,14 +7309,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Simon Roth",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "be1fb8fa9de7",
-"first_seen": "2026-09-07"
+"id": "60eefc275806",
+"first_seen": "baseline"
 },
 {
 "title": "Fred Alie",
@@ -8127,7 +7946,7 @@
 "lon": 2.3104281,
 "is_music": true,
 "id": "93bc44687dbb",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Gospel Hélios, profitez d'un concert à l’Église de Saint Philippe du Roule",
@@ -8307,7 +8126,7 @@
 "time": null,
 "url": "https://www.accorarena.com/fr/programmation",
 "ticket_url": null,
-"price": "À partir de 49,00 €",
+"price": "À partir de : 49,00 €",
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -8324,7 +8143,7 @@
 "lon": 2.3786,
 "is_music": true,
 "id": "44c4ad6e03ab",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CHROCKTIKAL",
@@ -8341,8 +8160,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"rock",
-"pop"
+"pop",
+"rock"
 ],
 "genre_source": "llm",
 "description": "Chrocktikal",
@@ -8352,7 +8171,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "43541dd8e5c1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Club — Worms: Kode9, Breaka, re:ni, Shfoosja and more",
@@ -8382,6 +8201,33 @@
 "first_seen": "baseline"
 },
 {
+"title": "Marja Ahti & crys cole + L’Oriole (Stéphane Clor & Clara Levy)",
+"date": "2026-09-18",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/marja-ahti-crys-coleloriole-stephane-clor-clara-levy/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/Crys-ColeBoundaries-Fest-2023-©Victoria-Wai©-8_optimized-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "0371f02310ce",
+"first_seen": "baseline"
+},
+{
 "title": "Charles Brunet",
 "date": "2026-09-18",
 "venue": "L'Olympia",
@@ -8407,7 +8253,7 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "83d422a9d648",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "88 Ménilmontant : Atelier Séri-Sirènes",
@@ -8432,7 +8278,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "7a69bbaf2a9c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Cabaret Furieuse",
@@ -8457,7 +8303,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "88e304f28cc6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Café-Concert : Marta Domingo",
@@ -8478,14 +8324,14 @@
 "world"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Marta Domingo",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "196c9b38f676",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "AFRO HEAVEN",
@@ -8512,7 +8358,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "a4ca31cd21f0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "PUMP x LIPTEASE – Pride Edition",
@@ -8539,35 +8385,6 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "366ae626c61b",
-"first_seen": "2026-09-07"
-},
-{
-"title": "MONTREUIL CARNAVALAW #2",
-"date": "2026-09-18",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"world",
-"latin",
-"afro"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "13c9543d9ac2",
 "first_seen": "baseline"
 },
 {
@@ -8598,7 +8415,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "Erdal est parti",
+"title": "Simon Roth - Erdal est parti",
 "date": "2026-09-18",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -8613,14 +8430,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Simon Roth",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "135c6f2fdb25",
-"first_seen": "2026-09-07"
+"id": "f0afca8ce3a0",
+"first_seen": "baseline"
 },
 {
 "title": "Lauren Auder",
@@ -8975,34 +8792,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "CONNECTED - TALK + CONCERTS RAP/TRAP/RNB - La culture à l'ère des algorithmes",
-"date": "2026-09-19",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "16:30",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"hip-hop",
-"soul-rnb"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": true,
-"id": "02fe380a42e7",
-"first_seen": "baseline"
-},
-{
 "title": "Concert Olympe La Rebelle par les élèves du conservatoire Claude Debussy",
 "date": "2026-09-19",
 "venue": "Le Pavillon de la Sirène",
@@ -9031,7 +8820,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "Bal Pop'",
+"title": "Le Bal des Martine / La Bâronne de Paname - Bal Pop'",
 "date": "2026-09-19",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -9055,8 +8844,8 @@
 "lat": 48.89,
 "lon": 2.371,
 "is_music": true,
-"id": "7bbd74f928f7",
-"first_seen": "2026-09-07"
+"id": "28d35c1f3b36",
+"first_seen": "baseline"
 },
 {
 "title": "JON ONABOWU QUARTET",
@@ -9363,7 +9152,7 @@
 "lon": 2.392024,
 "is_music": true,
 "id": "c99f30d0ec21",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert Jardins d'Aspahan par Le Concert Impromptu",
@@ -9418,7 +9207,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "6aca1a7943d3",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Titi Robin",
@@ -9747,7 +9536,7 @@
 "lon": 2.3786,
 "is_music": true,
 "id": "f144978d1891",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "JOSIAH QUEEN",
@@ -9775,7 +9564,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "4cde39a0c049",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Deadbeat Dubtechno Special: Tikiman live, Neida live, re:ni",
@@ -9792,8 +9581,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"electro",
-"reggae"
+"electro"
 ],
 "genre_source": "llm",
 "description": "Deadbeat, Tikiman, Neida, re:ni",
@@ -9905,7 +9693,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "8d54cb153a14",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "The Joyful key",
@@ -9933,7 +9721,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "126db6cfe1bf",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Café-Concert : Emigrante",
@@ -9954,14 +9742,14 @@
 "world"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Emigrante",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "fa854d0dee3e",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Free Your Funk : La Nuit Habibi Funk",
@@ -9978,7 +9766,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"funk"
+"funk",
+"world"
 ],
 "genre_source": "llm",
 "description": null,
@@ -9988,7 +9777,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "38ebe84451a6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "RAWAYANA",
@@ -10181,7 +9970,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "a7abf557a8d2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Saison Méditerranée 2026 · Le Festival Food Temple Maroc au Carreau du Temple",
@@ -10823,7 +10612,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"blues"
+"blues",
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Une Jam Session Blues animée par Lemmy’s Tribe !",
@@ -10858,7 +10648,7 @@
 "lon": 2.363,
 "is_music": false,
 "id": "38f5acede3ae",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Dans les Backstages",
@@ -10935,7 +10725,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "5c35f4adae5f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jazz-Brunch : Helena Recalde",
@@ -10955,14 +10745,14 @@
 "jazz"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Helena Recalde",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": false,
 "id": "6a8585aa0fb1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Tattoo Village: Back to Ink",
@@ -10987,7 +10777,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "648f097db5d9",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Flow Expérience - Piano live | yoga | relaxation",
@@ -11014,7 +10804,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "0cf7ed7d3500",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "LiSA",
@@ -11738,7 +11528,35 @@
 "lon": 2.363,
 "is_music": true,
 "id": "e3f9c212564e",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
+},
+{
+"title": "#Quasi 2026.7 + T1518 + Raphaël Bastide + TRILLS",
+"date": "2026-09-22",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/quasi-2026-7-t1518raphael-bastidetrills/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"electro"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/QUASI-2026_A_1-e1783003002195-150x150.jpeg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "16f3f81705d7",
+"first_seen": "baseline"
 },
 {
 "title": "DEVIN TOWNSEND",
@@ -11945,8 +11763,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -12014,7 +11831,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "CÉCILE BROCAS \"THAT WAS A DREAM\"",
+"title": "Cécile Brocas \"That Was A Dream\"",
 "date": "2026-09-23",
 "venue": "Duc des Lombards",
 "venue_slug": "duc-des-lombards",
@@ -12427,7 +12244,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "332ccdf80c03",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert : BIRDS IN ROW + KARABA FC + WITHOUT SKIN",
@@ -12482,7 +12299,7 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "deac4511d52d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "88 MÉNILMONTANT | ATELIER SÉRIGRAPHIE",
@@ -12507,7 +12324,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "ef8ce1f01165",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Arte Radio : Les Cassettes du Docteur Longueville",
@@ -12532,7 +12349,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "3738c52b338a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "De l’Amour et des Slows",
@@ -12560,7 +12377,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "f4b941cfa745",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Lilyisthatyou",
@@ -12647,31 +12464,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "JIRAFE des Musiques Actuelles",
-"date": "2026-09-24",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "10:00",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"description": null,
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": false,
-"id": "3e5cc441cb92",
-"first_seen": "baseline"
-},
-{
 "title": "La terrasse éphémère Les Lionnes",
 "date": "2026-09-24",
 "venue": "Palais de la Porte Dorée",
@@ -12749,7 +12541,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "be4e690e2aca",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "#Rdv avec LE QUINT’UP",
@@ -13179,7 +12971,8 @@
 "raw_genre": "Festival",
 "genres": [
 "latin",
-"world"
+"world",
+"afro"
 ],
 "genre_source": "llm",
 "description": "Une Roda ? De Paname ? Le principe de la roda de samba, c’est que les musiciens jouent des chansons afro-brésiliennes de samba en cercle, entouré du public qui chante et tape des mains.",
@@ -13299,7 +13092,7 @@
 "lon": 2.3592185,
 "is_music": true,
 "id": "d3711b75a7e4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Trio MAÏCÉ ft. Philippe Powell",
@@ -13464,59 +13257,6 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "26a5c0eb4bd5",
-"first_seen": "2026-09-07"
-},
-{
-"title": "Rencontre-signature animée par Cécile Strouk",
-"date": "2026-09-24",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": false,
-"id": "6c01f21c52ed",
-"first_seen": "baseline"
-},
-{
-"title": "SOAD + ASSAFIR & MORE",
-"date": "2026-09-24",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz",
-"rock"
-],
-"genre_source": "llm",
-"description": "SOAD, Assafir",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "0887366b856d",
 "first_seen": "baseline"
 },
 {
@@ -13631,31 +13371,6 @@
 "lon": 2.3445,
 "is_music": true,
 "id": "202c36deae82",
-"first_seen": "baseline"
-},
-{
-"title": "JIRAFE des Musiques Actuelles",
-"date": "2026-09-25",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "10:00",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"description": null,
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": false,
-"id": "6a5d54773d81",
 "first_seen": "baseline"
 },
 {
@@ -14511,7 +14226,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "3742cd710086",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Club — Rinse: Hyas, Naomi b2b Saari, Sottoh",
@@ -14558,14 +14273,14 @@
 "rock"
 ],
 "genre_source": "llm",
-"description": "Nirvana UK",
+"description": "NIRVANA UK",
 "image": null,
 "address": "28 boulevard des Capucines, 75009 Paris",
 "lat": 48.8703,
 "lon": 2.3283,
 "is_music": true,
 "id": "2b1501dddde6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Drag Attack Wrestling | Back To Slay !",
@@ -14590,7 +14305,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "609136669122",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "88 Ménilmontant : Brooklyn Bodega",
@@ -14606,19 +14321,16 @@
 "sold_out": false,
 "cancelled": false,
 "raw_genre": null,
-"genres": [
-"hip-hop",
-"funk"
-],
-"genre_source": "llm",
+"genres": [],
+"genre_source": null,
 "description": null,
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
-"is_music": true,
+"is_music": false,
 "id": "3a0b1823ccd4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "MULAA JOANS",
@@ -14646,7 +14358,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "631aca7c3558",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Mixity Fait son show !",
@@ -14671,7 +14383,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "4d4f06734d19",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Café-Concert : Iara Kelly",
@@ -14692,41 +14404,13 @@
 "latin"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Iara Kelly",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "50efc802281e",
-"first_seen": "2026-09-07"
-},
-{
-"title": "Aterciopelados : La Pipa de la Paz Tour",
-"date": "2026-09-25",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"latin"
-],
-"genre_source": "llm",
-"description": "Aterciopelados",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "7f61fbaf3cd0",
 "first_seen": "baseline"
 },
 {
@@ -14754,7 +14438,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "5854f1907a53",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SAAZBUZZ JAZZ FESTIVAL",
@@ -15216,34 +14900,6 @@
 "lon": 2.3564829781449,
 "is_music": true,
 "id": "8771b244bdfa",
-"first_seen": "baseline"
-},
-{
-"title": "BATBAT",
-"date": "2026-09-26",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "19:30",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": "Gratuit sur réservation",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"pop"
-],
-"genre_source": "llm",
-"description": "BATBAT",
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": true,
-"id": "364e601d399b",
 "first_seen": "baseline"
 },
 {
@@ -15799,7 +15455,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "30aae76425b2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert – Holy Fuck",
@@ -15817,8 +15473,8 @@
 "raw_genre": null,
 "genres": [
 "rock",
-"experimental",
-"electro"
+"electro",
+"experimental"
 ],
 "genre_source": "llm",
 "description": "Holy Fuck",
@@ -15937,7 +15593,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "1a8123781807",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Mixity Fait son show !",
@@ -15962,7 +15618,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "fdba62d4e989",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Café-Concert : Wambo",
@@ -15983,14 +15639,14 @@
 "world"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Wambo",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "1dcabb676a66",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "La Mona avec Coflo",
@@ -16010,40 +15666,13 @@
 "electro"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Coflo",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "ea67ec3e31d5",
-"first_seen": "2026-09-07"
-},
-{
-"title": "WEIGHTLESS REMIXES – RELEASE PARTY – LUXIE (live) + bdstf, Hyas, Stresshead, Swooh",
-"date": "2026-09-26",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro"
-],
-"genre_source": "llm",
-"description": "Luxie, bdstf, Hyas, Stresshead, Swooh",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "8dcbe85d34a2",
 "first_seen": "baseline"
 },
 {
@@ -16071,7 +15700,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "7f055ed0c64a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "AJNA",
@@ -16453,31 +16082,6 @@
 "lon": 2.35376296674542,
 "is_music": true,
 "id": "4d3ca8fb2027",
-"first_seen": "baseline"
-},
-{
-"title": "Book Club Des Affranchies \"Nouveau départ\"",
-"date": "2026-09-27",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "16:00",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"description": null,
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": false,
-"id": "a452cb64b4fd",
 "first_seen": "baseline"
 },
 {
@@ -16934,7 +16538,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"blues"
+"blues",
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Une Jam Session Blues animée par Lemmy’s Tribe !",
@@ -16969,7 +16574,7 @@
 "lon": 2.363,
 "is_music": false,
 "id": "9e3284441ed0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "After O'Clock X La Plage Open Air x TIMIT",
@@ -17024,7 +16629,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "2f8b8f52d66d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "22CORP",
@@ -17052,7 +16657,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "dd8eaf223fe6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les P'tits Baudets, la prog famille des Trois Baudets !",
@@ -17092,7 +16697,7 @@
 "free": true,
 "sold_out": false,
 "cancelled": false,
-"raw_genre": null,
+"raw_genre": "Festival",
 "genres": [
 "indie",
 "rock"
@@ -17106,34 +16711,6 @@
 "is_music": true,
 "id": "881a7470c010",
 "first_seen": "baseline"
-},
-{
-"title": "DICE",
-"date": "2026-09-28",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/dice-109995",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"indie",
-"rock"
-],
-"genre_source": "llm",
-"description": "Cette soirée plaira aux fans de… Circa Waves, Inhaler & The Snuts",
-"image": "https://cdn.paris.fr/qfapv4/2025/04/01/huge-1a36116a70371f334ef1ec169ac72a13.png",
-"address": "9 Rue Biscornet, 75012, Paris",
-"lat": 48.8502469839762,
-"lon": 2.36970702296574,
-"is_music": true,
-"id": "23102843046b",
-"first_seen": "2026-09-07"
 },
 {
 "title": "Montana, Adsuar, Renard, Recording Sessions au 38Riv Jazz Club",
@@ -17294,7 +16871,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "d942789c977c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Dating littéraire Marcel",
@@ -17319,7 +16896,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "4d21da536fd4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Emergenza Live Festival",
@@ -17531,7 +17108,7 @@
 "raw_genre": null,
 "genres": [
 "funk",
-"afro"
+"soul-rnb"
 ],
 "genre_source": "llm",
 "description": "Keziah Jones",
@@ -17541,7 +17118,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "fa176238896a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Bjorn Ingelstam 4tet",
@@ -17669,7 +17246,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"punk"
+"punk",
+"metal"
 ],
 "genre_source": "llm",
 "description": "Loma Prieta",
@@ -17803,8 +17381,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -18175,34 +17752,6 @@
 "lon": 2.3564829781449,
 "is_music": true,
 "id": "93567db05bbd",
-"first_seen": "baseline"
-},
-{
-"title": "PROHIBITION + GUESTS : BEN SHEMIE (of SUUNS) + MOSSAÏ MOSSAÏ",
-"date": "2026-09-30",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"indie"
-],
-"genre_source": "llm",
-"description": "Prohibition, Ben Shemie, Mossaï Mossaï",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "8b37db68aaed",
 "first_seen": "baseline"
 },
 {
@@ -18886,7 +18435,7 @@
 "lon": 2.3283,
 "is_music": false,
 "id": "341e208973be",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Seedhe Maut : SMX",
@@ -18906,41 +18455,13 @@
 "hip-hop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Seedhe Maut",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "70aa07c35c9c",
-"first_seen": "2026-09-07"
-},
-{
-"title": "FANTAZIO PEUPLE FICTION – RELEASE PARTY + GUESTS",
-"date": "2026-10-01",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"jazz"
-],
-"genre_source": "llm",
-"description": "Fantazio",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "ad1cee8b94c0",
 "first_seen": "baseline"
 },
 {
@@ -19107,7 +18628,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "6e3cb2befbbe",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "ĠENN • Dirty Rodeo • FLOAT",
@@ -19136,34 +18657,6 @@
 "lon": 2.3706,
 "is_music": true,
 "id": "495f6d907cca",
-"first_seen": "baseline"
-},
-{
-"title": "T'AS LA REF #PARTY !",
-"date": "2026-10-02",
-"venue": "FGO-Barbara",
-"venue_slug": "fgo-barbara",
-"source": "llm",
-"time": "19:30",
-"url": "https://www.fgo-barbara.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"hip-hop",
-"electro"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "1 rue de Fleury, 75018 Paris",
-"lat": 48.885,
-"lon": 2.354,
-"is_music": true,
-"id": "513e555fccbb",
 "first_seen": "baseline"
 },
 {
@@ -19636,7 +19129,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "28e71e90285d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Otha & more",
@@ -19707,8 +19200,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"jazz",
-"funk"
+"jazz"
 ],
 "genre_source": "llm",
 "description": null,
@@ -19735,8 +19227,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"punk",
-"metal"
+"metal",
+"punk"
 ],
 "genre_source": "llm",
 "description": "Integrity",
@@ -19746,6 +19238,34 @@
 "lon": 2.3877,
 "is_music": true,
 "id": "015e1b90b050",
+"first_seen": "baseline"
+},
+{
+"title": "Ensemble Dedalus + Créations d’Anthony Pateras, Clara de Asís et Karl Naegelen",
+"date": "2026-10-02",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/ensemble-dedaluscreations-danthony-pateras-clara-de-asiset-karl-naegelen/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"classical",
+"experimental"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/Dedalus-optimized-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "4c39d54287ea",
 "first_seen": "baseline"
 },
 {
@@ -19771,35 +19291,6 @@
 "lon": 2.3283,
 "is_music": false,
 "id": "fd556d164f43",
-"first_seen": "2026-09-07"
-},
-{
-"title": "BIRKLEYN SOUND FESTIVAL #2",
-"date": "2026-10-02",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"reggae",
-"electro",
-"world"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "22b7d5884920",
 "first_seen": "baseline"
 },
 {
@@ -20324,7 +19815,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "c4f82a9cc67d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Uptight",
@@ -20450,14 +19941,17 @@
 "sold_out": false,
 "cancelled": false,
 "raw_genre": null,
-"genres": [],
-"genre_source": null,
+"genres": [
+"rock",
+"chanson"
+],
+"genre_source": "llm",
 "description": "Les Fatals Picards",
 "image": null,
 "address": "4 rue des Labours, 77700 Magny-le-Hongre",
 "lat": 48.863,
 "lon": 2.811,
-"is_music": false,
+"is_music": true,
 "id": "623c935244d6",
 "first_seen": "baseline"
 },
@@ -20477,7 +19971,6 @@
 "raw_genre": null,
 "genres": [
 "rock",
-"chanson",
 "punk"
 ],
 "genre_source": "llm",
@@ -20513,7 +20006,7 @@
 "lon": 2.3283,
 "is_music": false,
 "id": "fdc200e5f5f6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Philolive! Le festival de philosophie à Paris",
@@ -20538,33 +20031,6 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "11dc1f8298a4",
-"first_seen": "2026-09-07"
-},
-{
-"title": "LE BAL RITAL – Télàmuré x Zinharua x Disco Rital",
-"date": "2026-10-03",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro"
-],
-"genre_source": "llm",
-"description": "Télàmuré, Zinharua, Disco Rital",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "46bbb142417c",
 "first_seen": "baseline"
 },
 {
@@ -20837,7 +20303,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "c14dd7471a8d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert-Promenade : « Fabulettes » d’Anne Sylvestre",
@@ -21158,7 +20624,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"blues"
+"blues",
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Une Jam Session Blues animée par Lemmy’s Tribe !",
@@ -21195,7 +20662,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "aae0626b8198",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert : HEXIS – VIOLENCE",
@@ -21249,7 +20716,7 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "d292688cbc1c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "The Pin-Up Games",
@@ -21274,7 +20741,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "0bb69abff58f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "ERIC CHRISTIAN",
@@ -21572,7 +21039,7 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "f0b1c6cafd01",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Mary in the Junkyard",
@@ -21593,41 +21060,13 @@
 "rock"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Mary in the Junkyard",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "210d420d85ac",
-"first_seen": "2026-09-07"
-},
-{
-"title": "LAURA MISCH",
-"date": "2026-10-05",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz",
-"experimental"
-],
-"genre_source": "llm",
-"description": "Laura Misch",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "ac370dcc886f",
 "first_seen": "baseline"
 },
 {
@@ -22040,40 +21479,13 @@
 "indie"
 ],
 "genre_source": "llm",
-"description": "Father Of Peace",
+"description": "Father of Peace",
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
 "id": "89f5b660fb4b",
-"first_seen": "2026-09-07"
-},
-{
-"title": "BANNED FROM UTOPIA",
-"date": "2026-10-06",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock"
-],
-"genre_source": "llm",
-"description": "Banned From Utopia",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "de408052dd74",
 "first_seen": "baseline"
 },
 {
@@ -22198,8 +21610,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"metal",
-"rock"
+"metal"
 ],
 "genre_source": "llm",
 "description": "I Prevail",
@@ -22515,7 +21926,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "02166523a888",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "JB Rannou 4tet : \"Couleur Soleil\"",
@@ -22650,7 +22061,35 @@
 "lon": 2.363,
 "is_music": true,
 "id": "58c5679e227a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
+},
+{
+"title": "Circuit Breath (Isabelle Duthoit, Alen Sinkauz & Nenad Sinkauz) + Marion Coutts & Andy Moor",
+"date": "2026-10-07",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/circuit-breathisabelle-duthoit-alen-sinkauz-nenad-sinkauzmarion-coutts-andy-moor/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"jazz"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/Marion_Coutts_Andy_Moor-e1784646039916-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "3bac236687eb",
+"first_seen": "baseline"
 },
 {
 "title": "Sortir de l’ombre",
@@ -22677,7 +22116,7 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "80593cb3fb12",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Michel Alibo",
@@ -23234,7 +22673,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "f636eae6ea94",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jalen Ngonda",
@@ -23261,38 +22700,10 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "112b9b05e140",
-"first_seen": "2026-09-07"
-},
-{
-"title": "Les soirées lalala",
-"date": "2026-10-08",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"pop"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "ee51a644e0e9",
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-08",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -23307,14 +22718,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "7ca2f6652f4d",
-"first_seen": "2026-09-07"
+"id": "eb90f10f1d25",
+"first_seen": "baseline"
 },
 {
 "title": "BILL CALLAHAN",
@@ -24028,8 +23439,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"pop",
-"electro"
+"pop"
 ],
 "genre_source": "llm",
 "description": "TEDAAK, Jasmine not Jafar",
@@ -24069,6 +23479,35 @@
 "first_seen": "baseline"
 },
 {
+"title": "Wolf Eyes + Cuntroaches",
+"date": "2026-10-09",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/wolf-eyescuntroaches/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"punk",
+"rock"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/wolf-eyes-e1779205355419-150x150.png",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "bfe4329a929d",
+"first_seen": "baseline"
+},
+{
 "title": "PANCHIKO",
 "date": "2026-10-09",
 "venue": "La Cigale",
@@ -24095,35 +23534,6 @@
 "lon": 2.34,
 "is_music": true,
 "id": "940bf69d10fb",
-"first_seen": "baseline"
-},
-{
-"title": "BIRKLEYN SOUND FESTIVAL #2",
-"date": "2026-10-09",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"reggae",
-"electro",
-"world"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "3df06025f920",
 "first_seen": "baseline"
 },
 {
@@ -24155,7 +23565,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-09",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -24170,17 +23580,17 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "7bc9d3318312",
-"first_seen": "2026-09-07"
+"id": "c0f68222bb99",
+"first_seen": "baseline"
 },
 {
-"title": "LOUNGE",
+"title": "Marga Alfeirão - LOUNGE",
 "date": "2026-10-09",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -24195,14 +23605,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Marga Alfeirão",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "8170eea19bca",
-"first_seen": "2026-09-07"
+"id": "dc1f17836c75",
+"first_seen": "baseline"
 },
 {
 "title": "SURPRISE + 1ère partie : Jane et Les Autres",
@@ -24501,7 +23911,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "a9eff7880974",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SIMON SPANG HANSSEN & EAR WITNESS",
@@ -25075,8 +24485,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"indie",
-"rock"
+"indie"
 ],
 "genre_source": "llm",
 "description": "Paris Jackson",
@@ -25086,7 +24495,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "f30b664db35d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert – Mateus Asato [SOLD OUT]",
@@ -25131,17 +24540,17 @@
 "raw_genre": null,
 "genres": [
 "rock",
-"pop"
+"indie"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Paris Jackson",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "7848ebd99e81",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "GIBRAN ALCOCER",
@@ -25171,7 +24580,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-10",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -25186,17 +24595,17 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "3f00449fb36f",
-"first_seen": "2026-09-07"
+"id": "dbe9c404ccf8",
+"first_seen": "baseline"
 },
 {
-"title": "LOUNGE",
+"title": "Marga Alfeirão - LOUNGE",
 "date": "2026-10-10",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -25211,14 +24620,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Marga Alfeirão",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "c8b52dd44568",
-"first_seen": "2026-09-07"
+"id": "da4a815ed8d4",
+"first_seen": "baseline"
 },
 {
 "title": "WU LYF",
@@ -25368,8 +24777,7 @@
 "raw_genre": null,
 "genres": [
 "reggae",
-"soul-rnb",
-"funk"
+"soul-rnb"
 ],
 "genre_source": "llm",
 "description": "Fat Freddy's Drop",
@@ -25444,22 +24852,23 @@
 "source": "tribe",
 "time": "11:00",
 "url": "https://www.sunset-sunside.com/concert/jazz-gouter-fete-disney-en-karaoke-4/",
-"ticket_url": null,
+"ticket_url": "https://www.sunset-sunside.com/agenda/",
 "price": "10,00€ à 16,00€",
 "free": false,
 "sold_out": false,
 "cancelled": false,
-"raw_genre": null,
+"raw_genre": "Enfants, Festival",
 "genres": [
-"jazz"
+"jazz",
+"pop"
 ],
-"genre_source": "rules",
+"genre_source": "llm",
 "description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
 "lat": 48.8595,
 "lon": 2.3474,
-"is_music": false,
+"is_music": true,
 "id": "ce2b4e89ed01",
 "first_seen": "baseline"
 },
@@ -25544,7 +24953,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "27894ff97e42",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Maria del Mar Bonet",
@@ -25572,7 +24981,7 @@
 "lon": 2.3283,
 "is_music": false,
 "id": "e48b247cd73d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Sunday Tribute – Fontaines D.C.",
@@ -25756,7 +25165,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"blues"
+"blues",
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Une Jam Session Blues animée par Lemmy’s Tribe !",
@@ -25791,7 +25201,7 @@
 "lon": 2.363,
 "is_music": false,
 "id": "766792afa1e3",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert : SANG FROID + SURE + TRAIT D'UNION",
@@ -25843,7 +25253,7 @@
 "lon": 2.3905,
 "is_music": false,
 "id": "323d4449503d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "DAVID DUCHOVNY",
@@ -25874,7 +25284,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-11",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -25889,17 +25299,17 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "c21262b8f7ea",
-"first_seen": "2026-09-07"
+"id": "74396b1d810c",
+"first_seen": "baseline"
 },
 {
-"title": "LOUNGE",
+"title": "Marga Alfeirão - LOUNGE",
 "date": "2026-10-11",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -25914,14 +25324,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Marga Alfeirão",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "e5624ddbfe27",
-"first_seen": "2026-09-07"
+"id": "d6361800af4d",
+"first_seen": "baseline"
 },
 {
 "title": "HASAN HATES RONNY | RONNY HATES HASAN",
@@ -26028,33 +25438,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "Jazz & goûter : toute la programmation",
-"date": "2026-10-11",
-"venue": "Sunset / Sunside",
-"venue_slug": "sunset-sunside",
-"source": "opendata",
-"time": null,
-"url": "https://www.paris.fr/evenements/jazz-gouter-toute-la-programmtion-de-fevrier-53682",
-"ticket_url": "https://www.sunset-sunside.com/agenda/",
-"price": "payant",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Enfants, Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"description": "Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour! Vous avez le choix entre trois séances : 11h, 15h ou 17h. Dès 2 ans",
-"image": "https://cdn.paris.fr/qfapv4/2024/02/02/huge-42810f06bed92e405095359736ee0cff.jpg",
-"address": "60, rue des Lombards, 75001, Paris",
-"lat": 48.8598650083225,
-"lon": 2.34773101394424,
-"is_music": false,
-"id": "eaac129f6252",
-"first_seen": "baseline"
-},
-{
 "title": "Glorious",
 "date": "2026-10-11",
 "venue": "Zénith Paris",
@@ -26069,7 +25452,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"pop"
+"pop",
+"rock"
 ],
 "genre_source": "llm",
 "description": "Glorious",
@@ -26300,7 +25684,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-12",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -26315,14 +25699,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "82c2bdfb8260",
-"first_seen": "2026-09-07"
+"id": "c324b55df604",
+"first_seen": "baseline"
 },
 {
 "title": "JACK SAVORETTI",
@@ -26423,8 +25807,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"afro",
 "soul-rnb",
+"afro",
 "pop"
 ],
 "genre_source": "llm",
@@ -26710,34 +26094,6 @@
 "lon": 2.363,
 "is_music": true,
 "id": "ee452ffbeaee",
-"first_seen": "2026-09-07"
-},
-{
-"title": "SONGHOY BLUES",
-"date": "2026-10-13",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"world",
-"blues"
-],
-"genre_source": "llm",
-"description": "Songhoy Blues",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "1a86eb1e8122",
 "first_seen": "baseline"
 },
 {
@@ -26768,7 +26124,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-13",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -26783,14 +26139,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "0e302f36a531",
-"first_seen": "2026-09-07"
+"id": "5e5bd9874768",
+"first_seen": "baseline"
 },
 {
 "title": "Lakecia Benjamin",
@@ -26942,8 +26298,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -27176,7 +26531,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "211126097815",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Simone Prattico Trio",
@@ -27452,7 +26807,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "9149d9f79acd",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert – DZIDZIO",
@@ -27482,6 +26837,34 @@
 "first_seen": "baseline"
 },
 {
+"title": "Leila Bordreuil, Michael Foster & Chris Corsano + Greg Malcolm",
+"date": "2026-10-14",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/leila-bordreuil-michael-foster-chris-corsanogreg-malcolm/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"jazz"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/LB2026-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "e84b0c21243a",
+"first_seen": "baseline"
+},
+{
 "title": "SIX60",
 "date": "2026-10-14",
 "venue": "La Bellevilloise",
@@ -27499,14 +26882,14 @@
 "pop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "SIX60",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "cf72a3bd426d",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "AUTECHRE",
@@ -27537,7 +26920,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-14",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -27552,14 +26935,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "f7caac84b975",
-"first_seen": "2026-09-07"
+"id": "3669c4b42d5d",
+"first_seen": "baseline"
 },
 {
 "title": "Lyre Le Temps",
@@ -28226,34 +27609,6 @@
 "lon": 2.3905,
 "is_music": true,
 "id": "0770ba64772e",
-"first_seen": "2026-09-07"
-},
-{
-"title": "¡ Surréaliste !",
-"date": "2026-10-15",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"pop"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "22500793e6a8",
 "first_seen": "baseline"
 },
 {
@@ -28285,7 +27640,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-15",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -28300,14 +27655,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Lukas Dana",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "305f97191190",
-"first_seen": "2026-09-07"
+"id": "931f0ecd82fa",
+"first_seen": "baseline"
 },
 {
 "title": "Azymuth",
@@ -28891,7 +28246,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "e337e08cc4ca",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert – Alastair Lane Presents « Love Is The Answer »",
@@ -28908,7 +28263,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"electro"
+"electro",
+"soul-rnb"
 ],
 "genre_source": "llm",
 "description": "Alastair Lane",
@@ -28938,40 +28294,13 @@
 "pop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Jared Benjamin",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "78e46593db66",
-"first_seen": "2026-09-07"
-},
-{
-"title": "QUAL + PSYCHE",
-"date": "2026-10-16",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro"
-],
-"genre_source": "llm",
-"description": "QUAL, Psyche",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "32573e7e0d11",
 "first_seen": "baseline"
 },
 {
@@ -29110,7 +28439,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "25903242001f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Carnaval",
@@ -29416,7 +28745,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "a2b83e15d8ac",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Maddy Orsinet Quartet",
@@ -29738,8 +29067,6 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"metal",
-"punk",
 "rock"
 ],
 "genre_source": "llm",
@@ -29990,8 +29317,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"pop",
-"world"
+"pop"
 ],
 "genre_source": "llm",
 "description": "Konstantinos Argiros",
@@ -30001,7 +29327,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "34aa678b9fff",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Sunday Tribute – 80’s Frontwomen",
@@ -30220,7 +29546,7 @@
 "lon": 2.363,
 "is_music": false,
 "id": "d1ab2b53dca6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Sexteto Cristal",
@@ -30240,40 +29566,13 @@
 "latin"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Sexteto Cristal",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "2f6e179755da",
-"first_seen": "2026-09-07"
-},
-{
-"title": "El Mastodonte – Pico soundsytem à La Marbrerie",
-"date": "2026-10-18",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"world"
-],
-"genre_source": "llm",
-"description": "El Mastodonte",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "56a181f31fce",
 "first_seen": "baseline"
 },
 {
@@ -30294,14 +29593,14 @@
 "classical"
 ],
 "genre_source": "llm",
-"description": "Havasi",
+"description": "HAVASI",
 "image": null,
 "address": "Île Seguin, 92100 Boulogne-Billancourt",
 "lat": 48.8264,
 "lon": 2.23,
 "is_music": true,
 "id": "d9d1a37088f4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SLAYYYTER",
@@ -30832,7 +30131,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "9c440e14ed87",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Julie Saury 4tet",
@@ -30960,8 +30259,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"punk",
-"hip-hop"
+"punk"
 ],
 "genre_source": "llm",
 "description": "Codefendants",
@@ -30988,18 +30286,17 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"indie",
-"pop"
+"indie"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Panicbaby",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "063bca74d2c6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Leïla Duclos",
@@ -31155,7 +30452,7 @@
 "free": true,
 "sold_out": false,
 "cancelled": false,
-"raw_genre": null,
+"raw_genre": "Festival",
 "genres": [
 "rock",
 "indie",
@@ -31170,35 +30467,6 @@
 "is_music": true,
 "id": "33e7de2b9fd7",
 "first_seen": "baseline"
-},
-{
-"title": "Lemonsuckr",
-"date": "2026-10-21",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/lemonsuckr-111456",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"rock",
-"indie",
-"punk"
-],
-"genre_source": "llm",
-"description": "Si vous êtes fan de… Fat Dog, The Strokes & Adult Dvd",
-"image": "https://cdn.paris.fr/qfapv4/2025/04/01/huge-1f63bb29327d4e2ad2202d5fb33cd36d.jpg",
-"address": "9 Rue Biscornet, 75012, Paris",
-"lat": 48.8502469839762,
-"lon": 2.36970702296574,
-"is_music": true,
-"id": "cd3750af2bca",
-"first_seen": "2026-09-07"
 },
 {
 "title": "Antoine Pierre Quartet, Standards & compositions au 38Riv Jazz Club JSS26",
@@ -31398,9 +30666,9 @@
 "date": "2026-10-21",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
-"source": "opendata",
+"source": "llm",
 "time": "21:00",
-"url": "https://www.paris.fr/evenements/lucie-antunes-mathilde-monnier-silence-115051",
+"url": "https://www.104.fr/",
 "ticket_url": "https://www.104.fr/fr/programmation/saison-2026-2027/concert/lucie-antunes-mathilde-monnier-silence",
 "price": "De 10 à 30 euros. Places accessibles PMR.",
 "free": false,
@@ -31412,13 +30680,13 @@
 "experimental"
 ],
 "genre_source": "llm",
-"description": "Né de la rencontre entre la musicienne Lucie Antunes et la chorégraphe Mathilde Monnier, Silence est un concert chorégraphié pour neuf interprètes. Musique et danse y dialoguent autour d’une même obsession : le rythme, comme force de transformation du corps et de la perception.",
+"description": "Lucie Antunes, Mathilde Monnier",
 "image": "https://cdn.paris.fr/qfapv4/2026/06/29/huge-ae3642a24ce24ca91eeb78d6d89dca02.png",
-"address": "5 Rue Curial, 75019, Paris",
-"lat": 48.889982,
-"lon": 2.37143379999998,
+"address": "5 rue Curial, 75019 Paris",
+"lat": 48.89,
+"lon": 2.371,
 "is_music": true,
-"id": "bdaf1bb18315",
+"id": "7f573f84dc47",
 "first_seen": "baseline"
 },
 {
@@ -31502,7 +30770,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "18f43488a8af",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Simia @Badaboum",
@@ -31547,8 +30815,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"metal",
-"experimental"
+"metal"
 ],
 "genre_source": "llm",
 "description": "Wolvennest",
@@ -31578,14 +30845,14 @@
 "rock"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Des Rocs",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "57780df65ff6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "VERKA SERDUCHKA & BAND",
@@ -31614,34 +30881,6 @@
 "is_music": true,
 "id": "c1abf80f9e4f",
 "first_seen": "baseline"
-},
-{
-"title": "Silence",
-"date": "2026-10-21",
-"venue": "Le Centquatre",
-"venue_slug": "le-104",
-"source": "llm",
-"time": null,
-"url": "https://www.104.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"experimental"
-],
-"genre_source": "llm",
-"description": "Lucie Antunes, Mathilde Monnier",
-"image": null,
-"address": "5 rue Curial, 75019 Paris",
-"lat": 48.89,
-"lon": 2.371,
-"is_music": true,
-"id": "e0da3c46b523",
-"first_seen": "2026-09-07"
 },
 {
 "title": "Gaidaa",
@@ -32182,9 +31421,9 @@
 "date": "2026-10-22",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
-"source": "opendata",
+"source": "llm",
 "time": "21:00",
-"url": "https://www.paris.fr/evenements/lucie-antunes-mathilde-monnier-silence-115051",
+"url": "https://www.104.fr/",
 "ticket_url": "https://www.104.fr/fr/programmation/saison-2026-2027/concert/lucie-antunes-mathilde-monnier-silence",
 "price": "De 10 à 30 euros. Places accessibles PMR.",
 "free": false,
@@ -32196,13 +31435,13 @@
 "experimental"
 ],
 "genre_source": "llm",
-"description": "Né de la rencontre entre la musicienne Lucie Antunes et la chorégraphe Mathilde Monnier, Silence est un concert chorégraphié pour neuf interprètes. Musique et danse y dialoguent autour d’une même obsession : le rythme, comme force de transformation du corps et de la perception.",
+"description": "Lucie Antunes, Mathilde Monnier",
 "image": "https://cdn.paris.fr/qfapv4/2026/06/29/huge-ae3642a24ce24ca91eeb78d6d89dca02.png",
-"address": "5 Rue Curial, 75019, Paris",
-"lat": 48.889982,
-"lon": 2.37143379999998,
+"address": "5 rue Curial, 75019 Paris",
+"lat": 48.89,
+"lon": 2.371,
 "is_music": true,
-"id": "d13bf2173d8f",
+"id": "73279f1c0b02",
 "first_seen": "baseline"
 },
 {
@@ -32286,7 +31525,35 @@
 "lon": 2.363,
 "is_music": true,
 "id": "0c5673fb7cab",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
+},
+{
+"title": "Vice de Forme #18 + SMR.TNI + XOMO + Andrea Pensado",
+"date": "2026-10-22",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/vice-de-forme-18smr-tnixomoandrea-pensado/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"electro"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/WEBAndrea_Pensado-2-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "4a029d504d2f",
+"first_seen": "baseline"
 },
 {
 "title": "BEWHY",
@@ -32314,34 +31581,6 @@
 "is_music": true,
 "id": "1dd496a628e0",
 "first_seen": "baseline"
-},
-{
-"title": "Silence",
-"date": "2026-10-22",
-"venue": "Le Centquatre",
-"venue_slug": "le-104",
-"source": "llm",
-"time": null,
-"url": "https://www.104.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"experimental"
-],
-"genre_source": "llm",
-"description": "Lucie Antunes, Mathilde Monnier",
-"image": null,
-"address": "5 rue Curial, 75019 Paris",
-"lat": 48.89,
-"lon": 2.371,
-"is_music": true,
-"id": "54edf59ac272",
-"first_seen": "2026-09-07"
 },
 {
 "title": "MERCURY REV",
@@ -32620,7 +31859,7 @@
 "lon": 2.3767058313332,
 "is_music": true,
 "id": "be12f681038f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Katerina Pipili",
@@ -32904,9 +32143,9 @@
 "date": "2026-10-23",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
-"source": "opendata",
+"source": "llm",
 "time": "21:00",
-"url": "https://www.paris.fr/evenements/lucie-antunes-mathilde-monnier-silence-115051",
+"url": "https://www.104.fr/",
 "ticket_url": "https://www.104.fr/fr/programmation/saison-2026-2027/concert/lucie-antunes-mathilde-monnier-silence",
 "price": "De 10 à 30 euros. Places accessibles PMR.",
 "free": false,
@@ -32918,13 +32157,13 @@
 "experimental"
 ],
 "genre_source": "llm",
-"description": "Né de la rencontre entre la musicienne Lucie Antunes et la chorégraphe Mathilde Monnier, Silence est un concert chorégraphié pour neuf interprètes. Musique et danse y dialoguent autour d’une même obsession : le rythme, comme force de transformation du corps et de la perception.",
+"description": "Lucie Antunes, Mathilde Monnier",
 "image": "https://cdn.paris.fr/qfapv4/2026/06/29/huge-ae3642a24ce24ca91eeb78d6d89dca02.png",
-"address": "5 Rue Curial, 75019, Paris",
-"lat": 48.889982,
-"lon": 2.37143379999998,
+"address": "5 rue Curial, 75019 Paris",
+"lat": 48.89,
+"lon": 2.371,
 "is_music": true,
-"id": "987f5b373063",
+"id": "21d120cda0d1",
 "first_seen": "baseline"
 },
 {
@@ -33095,67 +32334,10 @@
 "lon": 2.363,
 "is_music": true,
 "id": "a195c1b47c60",
-"first_seen": "2026-09-07"
-},
-{
-"title": "ALUNE WADE + AGON",
-"date": "2026-10-23",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz",
-"afro",
-"folk"
-],
-"genre_source": "llm",
-"description": "Alune Wade, Agon",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "6d97fdaf2076",
 "first_seen": "baseline"
 },
 {
-"title": "Silence",
-"date": "2026-10-23",
-"venue": "Le Centquatre",
-"venue_slug": "le-104",
-"source": "llm",
-"time": null,
-"url": "https://www.104.fr/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"experimental"
-],
-"genre_source": "llm",
-"description": "Lucie Antunes, Mathilde Monnier",
-"image": null,
-"address": "5 rue Curial, 75019 Paris",
-"lat": 48.89,
-"lon": 2.371,
-"is_music": true,
-"id": "d4ed75dab312",
-"first_seen": "2026-09-07"
-},
-{
-"title": "Festival of (in)gratitude",
+"title": "Walid Raad - Festival of (in)gratitude",
 "date": "2026-10-23",
 "venue": "Le Centquatre",
 "venue_slug": "le-104",
@@ -33170,14 +32352,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Walid Raad",
+"description": null,
 "image": null,
 "address": "5 rue Curial, 75019 Paris",
 "lat": 48.89,
 "lon": 2.371,
 "is_music": false,
-"id": "e1b8259779c0",
-"first_seen": "2026-09-07"
+"id": "f3c811b7b49d",
+"first_seen": "baseline"
 },
 {
 "title": "BIANCA COSTA",
@@ -33280,8 +32462,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"world",
-"reggae"
+"world"
 ],
 "genre_source": "llm",
 "description": "Keros-N",
@@ -33812,8 +32993,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"blues",
-"rock"
+"rock",
+"blues"
 ],
 "genre_source": "llm",
 "description": "Walter Trout",
@@ -33823,7 +33004,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "67157b9766b0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "BAG’SHOW 2026",
@@ -34232,7 +33413,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "fbb04364ebd1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Dan Whitlam",
@@ -34252,14 +33433,14 @@
 "indie"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Dan Whitlam",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "c135f2abc41a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Deloraine",
@@ -34305,7 +33486,7 @@
 "raw_genre": null,
 "genres": [
 "soul-rnb",
-"afro"
+"world"
 ],
 "genre_source": "llm",
 "description": "Dena Mwana",
@@ -34616,7 +33797,7 @@
 "lon": 2.36970702296574,
 "is_music": true,
 "id": "f16fad3d335b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "KABEAUSHÉ",
@@ -34839,7 +34020,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "0e4b65ca16c8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert – Mykki Blanco",
@@ -34870,6 +34051,34 @@
 "first_seen": "baseline"
 },
 {
+"title": "#Quasi 2026.8 + Olivier Lasson + Niloofar Asghary & Paul Bonnet + Varvalia Lodenko",
+"date": "2026-10-27",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/quasi2026-8olivier-lassonniloofar-asghary-paul-bonnetcringe/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"electro"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/QUASI-2026_A_1-e1783003002195-150x150.jpeg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "af8e26f08e35",
+"first_seen": "baseline"
+},
+{
 "title": "Nectar Woode",
 "date": "2026-10-27",
 "venue": "La Bellevilloise",
@@ -34887,14 +34096,14 @@
 "soul-rnb"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Nectar Woode",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "22bad3e86a54",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "FREDZ",
@@ -35051,8 +34260,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -35118,7 +34326,7 @@
 "lon": 2.36970702296574,
 "is_music": true,
 "id": "fa8099253357",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Deconfin/Nyberg/Bäckman en concert au 38Riv Jazz Club",
@@ -35391,7 +34599,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "2af22b6e7002",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Lane 8",
@@ -35697,7 +34905,7 @@
 "lon": 2.36970702296574,
 "is_music": true,
 "id": "febf1fbfacc1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Carte blanche à Camille Bertault, Jazz & compositions au 38Riv Jazz Club",
@@ -35964,9 +35172,9 @@
 "cancelled": false,
 "raw_genre": "Coming Soon",
 "genres": [
+"chanson",
 "world",
-"jazz",
-"chanson"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Erella chantera les chansons originales de son prochain album « Héritages », accompagnée de son piano et des sons envoûtants du oud, de la trompette, de la contrebasse et des percussions. Inspirée de ses héritages multiples, sa musique nous emporte dans un univers coloré où Orient et Occident, poésie et sonorités méditerranéennes s’entremêlent avec naturel et authenticité. Un voyage unique et sens",
@@ -36030,7 +35238,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "24b148a1202f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SARAH ÀLAINN",
@@ -36060,34 +35268,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "SPORTS",
-"date": "2026-10-29",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"indie",
-"pop"
-],
-"genre_source": "llm",
-"description": "Sports",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "aaee996c7d9c",
-"first_seen": "baseline"
-},
-{
 "title": "Anne Sila & Yvan Cassar",
 "date": "2026-10-29",
 "venue": "La Seine Musicale",
@@ -36103,7 +35283,7 @@
 "raw_genre": null,
 "genres": [
 "jazz",
-"pop"
+"world"
 ],
 "genre_source": "llm",
 "description": "Anne Sila, Yvan Cassar",
@@ -36113,7 +35293,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "96114d311ff0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "LESLIE ODOM, JR.",
@@ -36588,7 +35768,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "e7aa063ec433",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Loukeman",
@@ -36663,14 +35843,14 @@
 "chanson"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Boris M",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "77d7a2c7cfa5",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Akasaki",
@@ -36691,40 +35871,13 @@
 "pop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Akasaki",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "3a5353140a00",
-"first_seen": "2026-09-07"
-},
-{
-"title": "FELABRATION – LA KOSSA x FABE BEAUREL BAMBI x AFREEBOAT",
-"date": "2026-10-30",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"afro"
-],
-"genre_source": "llm",
-"description": "La Kossa, Fabe Beaurel Bambi, Afreeboat",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "00fada2082a0",
 "first_seen": "baseline"
 },
 {
@@ -36743,7 +35896,7 @@
 "raw_genre": null,
 "genres": [
 "jazz",
-"pop"
+"world"
 ],
 "genre_source": "llm",
 "description": "Anne Sila, Yvan Cassar",
@@ -36753,7 +35906,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "75c25a42a317",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "La Cage aux folles",
@@ -36778,7 +35931,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "f9adbc583d65",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "MARCUS GAD",
@@ -37223,33 +36376,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "LE BAL & LA BÊTE II – HORROR VACUI + PILORI + ALTA ROSSA + MIDSUMMER BLAZE + LIVGONE",
-"date": "2026-10-31",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"metal"
-],
-"genre_source": "llm",
-"description": "Horror Vacui, Pilori, Alta Rossa, Midsummer Blaze, Livgone",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "834c0f50f436",
-"first_seen": "baseline"
-},
-{
 "title": "La Cage aux folles",
 "date": "2026-10-31",
 "venue": "La Seine Musicale",
@@ -37272,7 +36398,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "3f29d2b177d0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "PIERRE-EMMANUEL BARRE",
@@ -37561,7 +36687,8 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz"
+"jazz",
+"electro"
 ],
 "genre_source": "llm",
 "description": "Plongez chaque dimanche dans l’énergie brute de la jam du Baiser Salé : un rendez-vous bouillonnant où les talents explosent, les styles se croisent et l’impro devient langage universel.",
@@ -37627,7 +36754,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "388f4bcbaf71",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert : THE OBSESSED",
@@ -37658,34 +36785,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "MESSA + THE NIGHT ETERNAL",
-"date": "2026-11-01",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"metal",
-"rock"
-],
-"genre_source": "llm",
-"description": "Messa, The Night Eternal",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "fa5167f2394f",
-"first_seen": "baseline"
-},
-{
 "title": "La Cage aux folles",
 "date": "2026-11-01",
 "venue": "La Seine Musicale",
@@ -37708,7 +36807,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "97364fa333e1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "L'Atelier de Jean-François",
@@ -37735,7 +36834,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "0cab2f24357c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Déplacé à la Marbrerie :",
@@ -37870,7 +36969,7 @@
 "lon": 2.37776999472536,
 "is_music": true,
 "id": "3bbb7eeace20",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CAMILLE YEMBE",
@@ -38006,7 +37105,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "87c1d849a5e3",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Nils Landgren Funk Unit",
@@ -38052,7 +37151,6 @@
 "raw_genre": null,
 "genres": [
 "hip-hop",
-"soul-rnb",
 "world"
 ],
 "genre_source": "llm",
@@ -38310,7 +37408,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "0464ff296e60",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Square Noon",
@@ -38445,7 +37543,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "46dc101647f4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Panique en régie !",
@@ -38470,7 +37568,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "038bd5e9e99b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "EVE",
@@ -38599,8 +37697,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -38778,7 +37875,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "7a9aa1b4f736",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jody Sternberg 4tet",
@@ -38940,7 +38037,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "75e40849f87a",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Isaiah Collier",
@@ -39244,7 +38341,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "74b902135214",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Very Blue Quartet",
@@ -39356,7 +38453,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "e6274ec6142f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Pitchfork Avant-Garde",
@@ -39373,8 +38470,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"experimental",
-"indie"
+"experimental"
 ],
 "genre_source": "llm",
 "description": null,
@@ -39414,6 +38510,35 @@
 "first_seen": "baseline"
 },
 {
+"title": "Moor Mother",
+"date": "2026-11-05",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/moor-mother/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"hip-hop",
+"jazz"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/WEBMM-Fetish-Bones-cover-150x150.jpg",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "1d87acbc1bdf",
+"first_seen": "baseline"
+},
+{
 "title": "Tokyo Tea Room",
 "date": "2026-11-05",
 "venue": "La Bellevilloise",
@@ -39431,42 +38556,13 @@
 "indie"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Tokyo Tea Room",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "1376405e3414",
-"first_seen": "2026-09-07"
-},
-{
-"title": "THE EX & BRASS UNBOUND",
-"date": "2026-11-05",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"jazz",
-"experimental"
-],
-"genre_source": "llm",
-"description": "The Ex, Brass Unbound",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "5cc94bdcfb50",
 "first_seen": "baseline"
 },
 {
@@ -39492,7 +38588,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "4fd420984ec8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "YVNNIS",
@@ -39631,7 +38727,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "352d0f960505",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "That’s the Way the Cookie Crumbles - Émilie Franco",
@@ -39824,7 +38920,7 @@
 "lon": 2.3104281,
 "is_music": true,
 "id": "d4f60907f419",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Gospel Hélios, profitez d'un concert à l’Église de Saint Philippe du Roule",
@@ -39936,7 +39032,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "369effd631f2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Pitchfork Avant-Garde",
@@ -39953,8 +39049,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"experimental",
-"indie"
+"experimental"
 ],
 "genre_source": "llm",
 "description": null,
@@ -39981,8 +39076,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"rock",
-"punk"
+"metal"
 ],
 "genre_source": "llm",
 "description": "Lagrimas",
@@ -39992,34 +39086,6 @@
 "lon": 2.3877,
 "is_music": true,
 "id": "4c9975ed5459",
-"first_seen": "baseline"
-},
-{
-"title": "ALEXIS CADENAS ET L’ENSEMBLE RECOVECO – 30 ANS !",
-"date": "2026-11-06",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"latin",
-"world"
-],
-"genre_source": "llm",
-"description": "Alexis Cadenas, Ensemble Recoveco",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "e6336253f446",
 "first_seen": "baseline"
 },
 {
@@ -40045,7 +39111,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "79b56c864524",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "DIGITALISM",
@@ -40293,7 +39359,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "b311aaf8cb60",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "THE TEMPERANCE MOVEMENT",
@@ -40447,8 +39513,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"experimental",
-"indie"
+"experimental"
 ],
 "genre_source": "llm",
 "description": null,
@@ -40479,40 +39544,13 @@
 "pop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Duncan Dhu",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "a4d46548596c",
-"first_seen": "2026-09-07"
-},
-{
-"title": "ULTRA SUNN + SYDNEY VALETTE + SAD MADONA",
-"date": "2026-11-07",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro"
-],
-"genre_source": "llm",
-"description": "Ultra Sunn, Sydney Valette, Sad Madona",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "754d73c16c97",
 "first_seen": "baseline"
 },
 {
@@ -40538,7 +39576,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "0b84b9cced47",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Bébé Concert - Ballerine",
@@ -40565,7 +39603,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "d7fbcacaf0f3",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Cerise au pays de l’opéra",
@@ -40592,7 +39630,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "2d4ed6771691",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SETH GUEKO",
@@ -40665,8 +39703,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"world",
-"afro"
+"afro",
+"world"
 ],
 "genre_source": "llm",
 "description": "Djelykaba Bintou",
@@ -40703,7 +39741,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "51cbfa3942b4",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jazz & goûter fête Les Beatles",
@@ -40787,7 +39825,7 @@
 "lon": 2.33446309999999,
 "is_music": false,
 "id": "5575dd063c9f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "L'Héritage Goldman - L'Aventure Continue",
@@ -40870,7 +39908,7 @@
 "lon": 2.34305610000001,
 "is_music": true,
 "id": "7248543850e1",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Hommage à Carmen McRae avec Cecil L. Recchia + Jam Vocale",
@@ -40953,7 +39991,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "c6237e0176ad",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "WAÏV",
@@ -41089,7 +40127,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "c0715dc0f25b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Cerise au pays de l’opéra",
@@ -41116,7 +40154,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "5b93090f043b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "RAZORLIGHT",
@@ -41241,7 +40279,7 @@
 "free": true,
 "sold_out": false,
 "cancelled": false,
-"raw_genre": null,
+"raw_genre": "Festival",
 "genres": [
 "punk",
 "rock"
@@ -41255,34 +40293,6 @@
 "is_music": true,
 "id": "73b08e3e74e5",
 "first_seen": "baseline"
-},
-{
-"title": "Shoreline",
-"date": "2026-11-09",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/shoreline-108974",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"punk",
-"rock"
-],
-"genre_source": "llm",
-"description": "Si vous êtes fan de… Twenty One Pilot, Thrice & The All American Rejects",
-"image": "https://cdn.paris.fr/qfapv4/2025/04/01/huge-1f63bb29327d4e2ad2202d5fb33cd36d.jpg",
-"address": "9 Rue Biscornet, 75012, Paris",
-"lat": 48.8502469839762,
-"lon": 2.36970702296574,
-"is_music": true,
-"id": "66b335b6ce39",
-"first_seen": "2026-09-07"
 },
 {
 "title": "SHANNON",
@@ -41340,6 +40350,34 @@
 "first_seen": "baseline"
 },
 {
+"title": "Horse Lords (1er soir) + Julien Claire",
+"date": "2026-11-09",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/horse-lords-091126/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"rock"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/horse-lords-e1780580876665-150x150.png",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "691a2f75ad16",
+"first_seen": "baseline"
+},
+{
 "title": "La Cage aux folles",
 "date": "2026-11-09",
 "venue": "La Seine Musicale",
@@ -41362,7 +40400,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "2e89080e5cf0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "THE KID LAROI",
@@ -41502,7 +40540,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "24e576b5aa6f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Benin’S Fever",
@@ -41750,7 +40788,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "5cf8fdf991b6",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jam Session Funk au 38Riv, animée par Pierre Gibbe",
@@ -41805,7 +40843,35 @@
 "lon": 2.363,
 "is_music": true,
 "id": "f86dbdf4179f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
+},
+{
+"title": "Horse Lords (2ème soir) + Lise Barkas",
+"date": "2026-11-10",
+"venue": "Instants Chavirés",
+"venue_slug": "instants-chavires",
+"source": "instantschavires",
+"time": null,
+"url": "https://www.instantschavires.com/horse-lords-2eme-soir/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"experimental",
+"rock"
+],
+"genre_source": "llm",
+"description": null,
+"image": "https://www.instantschavires.com/wp-content/uploads/horse-lords-e1780580876665-150x150.png",
+"address": "7 rue Richard Lenoir, 93100 Montreuil",
+"lat": 48.8567,
+"lon": 2.4292,
+"is_music": true,
+"id": "851bdaa965a4",
+"first_seen": "baseline"
 },
 {
 "title": "La Cage aux folles",
@@ -41830,7 +40896,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "9e36a2ddc747",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CŒUR DE PIRATE + 1ère partie : Suzanne Belaubre",
@@ -41847,8 +40913,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"chanson",
-"pop"
+"pop",
+"chanson"
 ],
 "genre_source": "llm",
 "description": "Cœur de Pirate, Suzanne Belaubre",
@@ -41986,8 +41052,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -42081,7 +41146,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "d5ef90b20bdc",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Delfeayo Marsalis Quintet ft. Eric Alexander",
@@ -42263,41 +41328,13 @@
 "pop"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Jack & Jack",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "ac91047e2cea",
-"first_seen": "2026-09-07"
-},
-{
-"title": "RICARDO MOYANO",
-"date": "2026-11-11",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"world",
-"latin"
-],
-"genre_source": "llm",
-"description": "Ricardo Moyano",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "d0fffda194ad",
 "first_seen": "baseline"
 },
 {
@@ -42323,7 +41360,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "09d9e53241ac",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "MILANO",
@@ -42536,8 +41573,7 @@
 "raw_genre": "Festival",
 "genres": [
 "jazz",
-"afro",
-"world"
+"afro"
 ],
 "genre_source": "llm",
 "description": "Seul à la guitare acoustique et au chant, parfois accompagné d’un(e) ou deux invités instrumentistes ou voix complices, Etienne Mbappé vous invite à passer une Petite Heure avec lui…",
@@ -42661,7 +41697,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "8157529f9102",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Delfeayo Marsalis Quintet ft. Eric Alexander",
@@ -42848,14 +41884,14 @@
 "pop"
 ],
 "genre_source": "llm",
-"description": "Haute, Freddy",
+"description": "Haute & Freddy",
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
 "id": "65a0df4342db",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "La Cage aux folles",
@@ -42880,7 +41916,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "4366f37be659",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Schumann / Mendelssohn",
@@ -42907,7 +41943,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "4067c0fc3883",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "ARTEMAS",
@@ -43101,7 +42137,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "ac13e0215726",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les 4 Saisons de Vivaldi Intégrale & Petite Musique de Nuit de Mozart",
@@ -43296,7 +42332,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "659a7a160a0b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "LUCAS SEB",
@@ -43326,34 +42362,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "ROADRUNNERS",
-"date": "2026-11-13",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"blues"
-],
-"genre_source": "llm",
-"description": "Roadrunners",
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "4c7f712a6c19",
-"first_seen": "baseline"
-},
-{
 "title": "La Cage aux folles",
 "date": "2026-11-13",
 "venue": "La Seine Musicale",
@@ -43376,7 +42384,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "860b13089b38",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Myles Sanko",
@@ -43449,8 +42457,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"afro",
-"soul-rnb"
+"afro"
 ],
 "genre_source": "llm",
 "description": "Omah Lay",
@@ -43624,7 +42631,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "14fd6cc760c0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CONCERT ENSEMBLE",
@@ -43784,14 +42791,14 @@
 "punk"
 ],
 "genre_source": "llm",
-"description": "Walls Of Jericho",
+"description": "Walls of Jericho",
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
 "id": "4a4343835e74",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert : THE VINTAGE CARAVAN",
@@ -43839,14 +42846,14 @@
 "electro"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Another Taste, DJ Spinna",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "4d6a0eac2630",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "La Cage aux folles",
@@ -43871,7 +42878,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "9111f621ed39",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Schumann / Mendelssohn",
@@ -43898,7 +42905,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "a5098280ee26",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "MARLON MAGNEE",
@@ -44038,7 +43045,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "de754c82894c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jazz & goûter fête les divas du jazz : Nina Simone, Billie Holiday et Ella Fitzgerald",
@@ -44145,7 +43152,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "cdd87b9504d9",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Sunday Tribute – Pop Punk",
@@ -44201,7 +43208,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "4a580323a73f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Pierre Manetti Bastien Ribot quartet",
@@ -44555,7 +43562,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "540d9caacb03",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "NEMZZZ",
@@ -44666,7 +43673,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "58a6fbaa45f8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CONVERGE",
@@ -44776,7 +43783,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "9db6543a6ac5",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "BILAL HASSANI",
@@ -44887,7 +43894,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "900be5a86e8c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "FEEBLE LITTLE HORSE",
@@ -44904,17 +43911,18 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"indie"
+"indie",
+"rock"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Feeble Little Horse",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "1165e67ea264",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "CURRENTS + ERRA",
@@ -45121,8 +44129,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -45160,7 +44167,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "a102f405705b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jazzycolors présente : Flow Rea",
@@ -45318,14 +44325,14 @@
 "raw_genre": null,
 "genres": [],
 "genre_source": null,
-"description": "Trevor Wallace",
+"description": null,
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": false,
 "id": "0b1c018c9896",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Louis Matute",
@@ -45521,7 +44528,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "1becc2f4134c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Germain Cornet Quintet",
@@ -45703,7 +44710,7 @@
 "raw_genre": null,
 "genres": [
 "jazz",
-"blues"
+"experimental"
 ],
 "genre_source": "llm",
 "description": "Sam Gendel, Sam Wilkes",
@@ -45713,7 +44720,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "c3d5fdf80e09",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Maria Arnal",
@@ -45909,7 +44916,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "bed30dc66a91",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Take Me Out : Au Pairs en concert à Paris (Les Femmes S'en Mêlent)",
@@ -45937,7 +44944,7 @@
 "lon": 2.3767058313332,
 "is_music": true,
 "id": "5c6b0a4d0ec2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les 4 saisons de Vivaldi, Ave Maria et célèbres concertos",
@@ -45981,8 +44988,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"classical",
-"world"
+"classical"
 ],
 "genre_source": "llm",
 "description": null,
@@ -45992,7 +44998,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "97f1d7ddda5b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Tamarae en concert (côté Records)",
@@ -46078,7 +45084,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "ee171f9a11cc",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "A2H",
@@ -46233,8 +45239,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"hip-hop",
-"punk"
+"hip-hop"
 ],
 "genre_source": "llm",
 "description": "Kneecap",
@@ -46381,7 +45386,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "119a19c022c7",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Hommage à Boris Vian",
@@ -46438,7 +45443,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "3edff4ce4e60",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concerts à l'occasion de la Fête de la Sainte Cécile par La Sirène de Paris",
@@ -46826,7 +45831,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "fada15b66034",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Jam Session Blues au 38Riv, animée par Lemmy’s Tribe",
@@ -47078,7 +46083,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "5e197a0e23d2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "LAGUI",
@@ -47180,14 +46185,14 @@
 "chanson"
 ],
 "genre_source": "llm",
-"description": "La Promesse Brel",
+"description": null,
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
 "id": "462423f17c34",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert — Chloé Slater",
@@ -47327,7 +46332,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "e96abfef491e",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "GREGFEST",
@@ -47438,7 +46443,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "5ef77b0d42ff",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Panique en régie !",
@@ -47463,7 +46468,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "7792fc09ad34",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "JOSE GONZALEZ",
@@ -47591,8 +46596,7 @@
 "cancelled": false,
 "raw_genre": "Festival",
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Mario Canonge et Michel Zenino font revivre chaque mercredi au Baiser Salé leur résidence jazz, où improvisation, virtuosité et métissage musical se rencontrent.",
@@ -47658,7 +46662,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "86848035c65b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "TÉTÉ",
@@ -47712,7 +46716,7 @@
 "lon": 2.23,
 "is_music": true,
 "id": "f21618460adb",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "JOYA X TC.KYLIE — “Somewhere Between”",
@@ -47821,7 +46825,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "e72c1d8f2111",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "LE SACRE DU TYMPAN « SEXTET »",
@@ -48153,7 +47157,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "7d4463e11381",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Depuis là-bas distinguent-ils ce qui s'écaille de ce qui brille?",
@@ -48252,9 +47256,9 @@
 "cancelled": false,
 "raw_genre": "Coming Soon",
 "genres": [
+"chanson",
 "world",
-"jazz",
-"chanson"
+"jazz"
 ],
 "genre_source": "llm",
 "description": "Erella chantera les chansons originales de son prochain album « Héritages », accompagnée de son piano et des sons envoûtants du oud, de la trompette, de la contrebasse et des percussions. Inspirée de ses héritages multiples, sa musique nous emporte dans un univers coloré où Orient et Occident, poésie et sonorités méditerranéennes s’entremêlent avec naturel et authenticité. Un voyage unique et sens",
@@ -48318,7 +47322,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "df1ce92d4d4c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Karpatt",
@@ -48335,17 +47339,18 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"chanson"
+"chanson",
+"folk"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Karpatt",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "3bdd944081e0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "MAMMOTH",
@@ -48538,7 +47543,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "45c6f11a252c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Depuis là-bas distinguent-ils ce qui s'écaille de ce qui brille?",
@@ -48789,7 +47794,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "a69978a718fe",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "EsDeeKid",
@@ -48816,7 +47821,7 @@
 "lon": 2.3283,
 "is_music": true,
 "id": "98057ff3dbac",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "PARIS PALOMA",
@@ -49249,14 +48254,14 @@
 "latin"
 ],
 "genre_source": "llm",
-"description": "French Latino",
+"description": null,
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
 "id": "a6e55dd17773",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Gang of Youths",
@@ -49277,14 +48282,14 @@
 "indie"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Gang of Youths",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "760c236b5e3f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "BENNY SINGS",
@@ -49509,7 +48514,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "2ce5877a2125",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SENYSS",
@@ -49664,8 +48669,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"folk",
-"latin"
+"latin",
+"folk"
 ],
 "genre_source": "llm",
 "description": "Hermanos Gutiérrez",
@@ -49730,7 +48735,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "b954e76d4064",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "EDIS",
@@ -50195,7 +49200,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "3a23821ef59e",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "MAUVAISE BOUCHE",
@@ -50298,14 +49303,14 @@
 "funk"
 ],
 "genre_source": "llm",
-"description": "Tank and The Bangas",
+"description": "Tank and the Bangas",
 "image": null,
 "address": "21 rue Yves Toudic, 75010 Paris",
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
 "id": "77083167a41f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Kat Eaton",
@@ -50576,7 +49581,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "8912ac813be9",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Superphosphate",
@@ -50878,7 +49883,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "b86f850bc101",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les Odyssées de SIGNES à L'OEIL, Volet \"En toute légèreté\"",
@@ -51429,7 +50434,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "95939cef9e57",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les 4 Saisons de Vivaldi, Ave Maria et Célèbres Adagios",
@@ -51761,7 +50766,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "211b75586378",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Eric Serra Live, le spectacle immersif à l'Accor Arena",
@@ -51800,8 +50805,8 @@
 "source": "cigale",
 "time": "20:00",
 "url": "https://lacigale.fr/evenements/shaarghot-2/",
-"ticket_url": null,
-"price": null,
+"ticket_url": "https://www.gdp.fr/fr/artistes/shaarghot",
+"price": "à partir de 37 euros",
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -51812,7 +50817,7 @@
 "rock"
 ],
 "genre_source": "site",
-"description": null,
+"description": "Shaârghot donne rendez-vous aux amateurs de metal et de musique industrielle le 6 décembre 2026 à La Cigale, à Paris. Une date qui s’annonce particulièrement intense et qui viendra s’inscrire dans une tournée à travers toute la France.",
 "image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "lat": 48.8823,
@@ -51820,35 +50825,6 @@
 "is_music": true,
 "id": "4989d52dfd1b",
 "first_seen": "baseline"
-},
-{
-"title": "Shaârghot : rendez-vous à La Cigale le 6 décembre 2026 pour les fans de métal",
-"date": "2026-12-06",
-"venue": "La Cigale",
-"venue_slug": "la-cigale",
-"source": "opendata",
-"time": "20:00",
-"url": "https://www.paris.fr/evenements/shaarghot-rendez-vous-a-la-cigale-le-6-decembre-2026-pour-les-fans-de-metal-123165",
-"ticket_url": "https://www.gdp.fr/fr/artistes/shaarghot",
-"price": "à partir de 37 euros",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"metal",
-"electro",
-"experimental"
-],
-"genre_source": "llm",
-"description": "Shaârghot donne rendez-vous aux amateurs de metal et de musique industrielle le 6 décembre 2026 à La Cigale, à Paris. Une date qui s’annonce particulièrement intense et qui viendra s’inscrire dans une tournée à travers toute la France.",
-"image": "https://cdn.paris.fr/qfapv4/2026/09/04/huge-495486ac65115242c717c82269639c30.jpg",
-"address": "120 Boulevard de Rochechouart, 75018, Paris",
-"lat": 48.8823118,
-"lon": 2.34028520000004,
-"is_music": true,
-"id": "c5767adf10ef",
-"first_seen": "2026-09-07"
 },
 {
 "title": "#LaJamDuDimanche de Sotiris Tsolis",
@@ -52099,7 +51075,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "2f2fd1bc71b8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "The Dire Straits Experience le lundi 7 décembre à Paris !",
@@ -52144,17 +51120,17 @@
 "raw_genre": null,
 "genres": [
 "pop",
-"indie"
+"jazz"
 ],
 "genre_source": "llm",
-"description": null,
+"description": "Marco Castello",
 "image": null,
 "address": "19-21 rue Boyer, 75020 Paris",
 "lat": 48.8688,
 "lon": 2.3905,
 "is_music": true,
 "id": "f1665e1478c7",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "The Dire Straits Experience",
@@ -52209,7 +51185,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "6a244e95f371",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Les 4 Saisons de Vivaldi Intégrale & Petite Musique de Nuit de Mozart",
@@ -52401,7 +51377,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "0d71c7045ee9",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "WAMEN",
@@ -52499,7 +51475,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"soul-rnb"
+"soul-rnb",
+"funk"
 ],
 "genre_source": "llm",
 "description": "Gotts Street Park",
@@ -52509,7 +51486,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "e2ddfb96b342",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Polyphia: BE NOT AFRAID World Tour",
@@ -52527,7 +51504,6 @@
 "raw_genre": null,
 "genres": [
 "rock",
-"metal",
 "experimental"
 ],
 "genre_source": "llm",
@@ -53030,7 +52006,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "e3359d41a833",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Tiens",
@@ -53242,7 +52218,6 @@
 "raw_genre": null,
 "genres": [
 "pop",
-"rock",
 "indie"
 ],
 "genre_source": "llm",
@@ -53253,34 +52228,6 @@
 "lon": 2.363,
 "is_music": true,
 "id": "543cc05dbc4a",
-"first_seen": "2026-09-07"
-},
-{
-"title": "Psycho attack over Montreuil #2",
-"date": "2026-12-11",
-"venue": "La Marbrerie",
-"venue_slug": "la-marbrerie",
-"source": "llm",
-"time": null,
-"url": "https://www.lamarbrerie.fr/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"punk",
-"rock"
-],
-"genre_source": "llm",
-"description": null,
-"image": null,
-"address": "21 rue Alexis Lepère, 93100 Montreuil",
-"lat": 48.8623,
-"lon": 2.4382,
-"is_music": true,
-"id": "28c130b202ff",
 "first_seen": "baseline"
 },
 {
@@ -53472,7 +52419,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "048d62b9b320",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "SHENG",
@@ -53607,7 +52554,7 @@
 "lon": 2.363,
 "is_music": true,
 "id": "7a711b6925c8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Bilal",
@@ -53880,7 +52827,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "ac4b2c1ee437",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "#LaJamDuDimanche DE MAXENCE LEROY",
@@ -53960,7 +52907,7 @@
 "lon": 2.363,
 "is_music": false,
 "id": "bc7b5f3716f8",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Olivier Rocabois",
@@ -54097,7 +53044,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "211071e86950",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "GREEN LUNG",
@@ -54316,7 +53263,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "c2284ad4e243",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Midi en musique - Les déjeuners musicaux du 10e",
@@ -54452,7 +53399,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "ca4b72e6b0e2",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Une chorale pop participative où tout le monde donne de la voix !",
@@ -55155,8 +54102,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"world",
-"afro"
+"afro",
+"world"
 ],
 "genre_source": "llm",
 "description": "Habib Fatako",
@@ -55276,7 +54223,7 @@
 "lon": 2.3906,
 "is_music": true,
 "id": "6296858f9203",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concerto de Noël de Corelli & Les 4 Saisons de Vivaldi",
@@ -55574,7 +54521,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "124b71b1402f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Mario Canonge et Michel Zenino – DUO JAZZ",
@@ -55680,7 +54627,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "e4e1434cb035",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert intimiste Paris 17",
@@ -55762,7 +54709,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "e0adb155671c",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Concert Gospel Hélios à l’Église Saint Philippe du Roule",
@@ -55790,7 +54737,7 @@
 "lon": 2.3104281,
 "is_music": true,
 "id": "c1738c86796b",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Gospel Hélios, profitez d'un concert à l’Église de Saint Philippe du Roule",
@@ -55843,7 +54790,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "3bc684bf8933",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Grand Concert de Chants Traditionnels de Noël",
@@ -55922,7 +54869,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "08b10d04389f",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Mustapha El Atrassi",
@@ -56054,7 +55001,7 @@
 "lon": 2.23,
 "is_music": false,
 "id": "6b00835db1b0",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Dounia Batma",
@@ -56071,8 +55018,7 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"world",
-"pop"
+"world"
 ],
 "genre_source": "llm",
 "description": "Dounia Batma",
@@ -56436,7 +55382,7 @@
 "lon": 2.3104281,
 "is_music": true,
 "id": "9cde232f16ea",
-"first_seen": "2026-09-07"
+"first_seen": "baseline"
 },
 {
 "title": "Gospel Hélios, profitez d'un concert à l’Église de Saint Philippe du Roule",

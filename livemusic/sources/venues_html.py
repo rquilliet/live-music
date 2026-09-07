@@ -210,6 +210,25 @@ def hasardludique(venue, ctx):
     return events
 
 
+# ------------------------------------------------------------------ Instants Chavirés (WordPress posts, one per concert)
+
+def instantschavires(venue, ctx):
+    html = get(venue["url"])
+    events = []
+    for b in _blocks(html, r'<article id="post-'):
+        url = _first(r'<span class="dates_evenements"><a href="([^"]+)"', b)
+        date = parse_fr_date(_first(r'<span class="dates_evenements"><a[^>]*>(.*?)</a>', b) or "")
+        raw = _first(r'<h2 class="entry-title"><a[^>]*>(.*?)</a>', b) or ""
+        raw = re.sub(r"<br\s*/?>\s*(?=[(&+])", " ", raw)   # line break inside a line-up: keep it one act
+        title = clean_text(re.sub(r"<br\s*/?>", " + ", raw))  # line break between acts
+        img = _first(r'<img[^>]+src="([^"]+)"', b)
+        if not title or not date:
+            continue
+        events.append(Event(title=title, date=date, venue=venue["name"], venue_slug=venue["slug"],
+                            source="instantschavires", url=url, image=img))
+    return events
+
+
 # ------------------------------------------------------------------ New Morning (JSON-LD, but not valid JSON)
 
 def newmorning(venue, ctx):

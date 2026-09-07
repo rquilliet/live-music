@@ -13,5 +13,6 @@ STRATEGIES = {
     "cafedeladanse": venues_html.cafedeladanse,
     "hasardludique": venues_html.hasardludique,
     "newmorning": venues_html.newmorning,
+    "instantschavires": venues_html.instantschavires,
     "llm": llm.scrape,
 }

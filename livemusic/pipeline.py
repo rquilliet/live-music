@@ -3,6 +3,8 @@ import datetime as dt
 import json
 import math
 import os
+import re
+import time
 import traceback
 
 from . import genres as G
@@ -39,24 +41,28 @@ def load_venues(path=None):
 
 
 def run(only=None, use_llm=True, log=print):
+    started = time.time()
+    plain = log
+
+    def log(msg):  # every line carries the elapsed time: the run takes minutes with the LLM on
+        plain(f"[{int(time.time() - started) // 60:02d}:{int(time.time() - started) % 60:02d}] {msg}")
+
     today = today_paris()
     ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log}
     venues = load_venues()
     by_slug = {v["slug"]: v for v in venues}
     state = load_state()
     events, report = [], []
+    todo = [v for v in venues if v["strategy"] != "none" and not (v["strategy"] == "llm" and not use_llm)
+            and (not only or v["slug"] in only or v["strategy"] in only)]
+    log(f"{len(todo)} sources to scrape, today is {today}")
 
-    for v in venues:
-        if only and v["slug"] not in only and v["strategy"] not in only:
-            continue
-        if v["strategy"] == "none":  # metadata-only entry (address, coordinates)
-            continue
+    for i, v in enumerate(todo, 1):
         fn = STRATEGIES.get(v["strategy"])
         if not fn:
             log(f"  {v['name']}: unknown strategy {v['strategy']}")
             continue
-        if v["strategy"] == "llm" and not use_llm:
-            continue
+        log(f"  ({i}/{len(todo)}) {v['name']} [{v['strategy']}] ...")
         try:
             got = fn(v, ctx)
         except FetchError as e:
@@ -112,7 +118,8 @@ def run(only=None, use_llm=True, log=print):
     os.makedirs(WEB, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=0)
-    log(f"wrote {len(events)} events -> {os.path.relpath(OUT_PATH, ROOT)}")
+    fresh = sum(1 for e in events if first_seen.get(e.id) == today.isoformat())
+    log(f"wrote {len(events)} events -> {os.path.relpath(OUT_PATH, ROOT)} ({fresh} newly announced today)")
     return out
 
 
@@ -165,6 +172,12 @@ def _title_tokens(t):
     return set(w for w in norm_title(t).split() if len(w) > 2)
 
 
+def _headliner(title: str) -> str:
+    """'Jaguar Sun • Thala' and 'Jaguar Sun • Sean Nicholas Savage • Yes Please!' share a headliner."""
+    first = re.split(r"\s*(?:•|\+|/|\||,|&| x | vs\.? | feat\.? | w/ | - | – |:)\s*", title, maxsplit=1)[0]
+    return norm_title(first)
+
+
 def _same_show(a, b) -> bool:
     ta, tb = _title_tokens(a.title), _title_tokens(b.title)
     na, nb = norm_title(a.title), norm_title(b.title)
@@ -173,7 +186,11 @@ def _same_show(a, b) -> bool:
     if not ta or not tb:
         return False
     shared = len(ta & tb)
-    return shared / max(len(ta), len(tb)) >= 0.6 or (shared >= 2 and (na in nb or nb in na))
+    if shared / max(len(ta), len(tb)) >= 0.6 or (shared >= 2 and (na in nb or nb in na)):
+        return True
+    # same night, same start time, same headliner: the line-up text just differs between sources
+    ha, hb = _headliner(a.title), _headliner(b.title)
+    return bool(ha) and ha == hb and len(ha) > 3 and (a.time == b.time or not a.time or not b.time)
 
 
 def merge(events, log=print):
@@ -241,16 +258,17 @@ def load_state():
 def track_seen(events, today, state, report):
     """Remember when each event id was first seen so the UI can show 'newly announced'.
 
-    * A venue scraped for the first time (new in venues.json) gets 'baseline': its whole programme
-      is not "newly announced".
+    * A venue scraped for the first time *by a given source* (new in venues.json, or an LLM venue
+      that only had open-data events before) gets 'baseline': its whole programme is not "new".
     * Only events whose date is past are pruned, so a source failing one day does not make its
       programme look new the next day.
     """
     ids, known = state["ids"], set(state["venues"])
     stamp = today.isoformat()
     for e in events:
+        key = f"{e.source}:{e.venue_slug}"
         if e.id not in ids:
-            ids[e.id] = {"first_seen": stamp if e.venue_slug in known else "baseline", "date": e.date}
+            ids[e.id] = {"first_seen": stamp if key in known else "baseline", "date": e.date}
         else:
             ids[e.id]["date"] = e.date
     cutoff = today.isoformat()
@@ -259,7 +277,7 @@ def track_seen(events, today, state, report):
     for r in report:
         if r["ok"]:
             counts[r["venue"]] = r["count"]
-    venues = sorted(known | {e.venue_slug for e in events})
+    venues = sorted(known | {f"{e.source}:{e.venue_slug}" for e in events})
     os.makedirs(DATA, exist_ok=True)
     with open(SEEN_PATH, "w", encoding="utf-8") as f:
         json.dump({"ids": ids, "venues": venues, "counts": counts}, f, indent=0)

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live in Paris — 3 pistes de design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Display:wght@500;700;900&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Archivo,system-ui,sans-serif;background:#e9e7e2;color:#1a1a1a}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+/* switcher */
+.switch{position:sticky;top:0;z-index:50;display:flex;gap:6px;padding:10px 16px;background:#1a1a1a;color:#fff;align-items:center;font-size:13px}
+.switch span{opacity:.6;margin-right:8px}
+.switch button{padding:6px 12px;border-radius:999px;border:1px solid #444}
+.switch button[aria-selected=true]{background:#fff;color:#1a1a1a;border-color:#fff}
+.panel{display:none}.panel.on{display:block}
+:focus-visible{outline:2px solid #ffb800;outline-offset:2px}
+
+/* =========================================================
+   PISTE A — PROGRAMME : agenda hebdo, papier, colonnes par jour
+   ========================================================= */
+.a{background:#f3efe6;color:#17140f;min-height:100vh;font-family:Archivo,sans-serif}
+.a header{display:flex;align-items:baseline;justify-content:space-between;padding:28px 32px 12px;border-bottom:2px solid #17140f}
+.a h1{font-family:"Big Shoulders Display",sans-serif;font-weight:900;font-size:56px;line-height:.9;letter-spacing:-.01em}
+.a h1 small{display:block;font-family:Archivo;font-weight:400;font-size:14px;letter-spacing:0;margin-top:8px;color:#5f584c}
+.a .search{display:flex;gap:8px;align-items:center}
+.a .search input{border:1.5px solid #17140f;background:#fff;padding:9px 12px;border-radius:0;width:220px;font:inherit}
+.a .search button{border:1.5px solid #17140f;padding:9px 14px;font-weight:500}
+.a .weeknav{display:flex;align-items:center;gap:16px;padding:14px 32px;font-size:14px}
+.a .weeknav strong{font-family:"Big Shoulders Display";font-size:22px;font-weight:700}
+.a .weeknav .arrows button{width:32px;height:32px;border:1.5px solid #17140f;margin-right:-1.5px}
+.a .weeknav .genres{margin-left:auto;display:flex;gap:6px}
+.a .weeknav .genres button{padding:5px 10px;border:1.5px solid #c9c2b2;font-size:13px}
+.a .weeknav .genres button.on{background:#17140f;color:#f3efe6;border-color:#17140f}
+.a .grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:1.5px solid #17140f;border-left:1.5px solid #17140f;margin:0 32px 32px}
+.a .day{border-right:1.5px solid #17140f;border-bottom:1.5px solid #17140f;min-height:520px;display:flex;flex-direction:column}
+.a .day h2{font-family:"Big Shoulders Display";font-weight:700;font-size:20px;padding:10px 12px;border-bottom:1.5px solid #17140f;display:flex;justify-content:space-between;align-items:baseline}
+.a .day h2 em{font-style:normal;font-weight:500;font-size:13px;font-family:Archivo;color:#5f584c}
+.a .day.today h2{background:#17140f;color:#f3efe6}
+.a .day.today h2 em{color:#c9c2b2}
+.a .gig{padding:10px 12px;border-bottom:1px dashed #c9c2b2;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:start}
+.a .gig:hover{background:#fff}
+.a .gig time{font-family:"Big Shoulders Display";font-weight:700;font-size:22px;line-height:1;grid-row:span 3}
+.a .gig .who{font-weight:700;font-size:14px;line-height:1.2}
+.a .gig .who span{display:block;font-weight:400}
+.a .gig .where{font-size:12px;color:#5f584c}
+.a .gig .tag{font-size:11px;display:inline-block;padding:1px 6px;border:1px solid #17140f;margin-top:4px;margin-right:4px}
+.a .gig .tag.free{background:#d8f56a;border-color:#d8f56a}
+.a .day .empty{padding:24px 12px;font-size:12px;color:#8a8273;font-style:italic}
+
+/* =========================================================
+   PISTE B — AFFICHE : sombre, typographie de flyer, un bloc par soir
+   ========================================================= */
+.b{background:#0d0a0f;color:#f2ecff;min-height:100vh;font-family:Archivo,sans-serif}
+.b header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px}
+.b .logo{font-family:Anton,sans-serif;font-size:28px;letter-spacing:.04em;text-transform:uppercase}
+.b .logo i{font-style:normal;color:#ff4d79}
+.b nav{display:flex;gap:4px;background:#1d1722;padding:4px;border-radius:999px}
+.b nav button{padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;color:#b9aecb}
+.b nav button.on{background:#f2ecff;color:#0d0a0f}
+.b .filters{display:flex;gap:8px;padding:8px 40px 24px;flex-wrap:wrap;font-size:13px}
+.b .filters button{padding:6px 12px;border:1px solid #3a2f44;border-radius:999px;color:#b9aecb}
+.b .filters button b{color:#f2ecff;font-weight:500;margin-left:6px}
+.b .filters button.on{border-color:#ff4d79;color:#ff4d79}
+.b .night{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:36px 40px;border-top:1px solid #2a2230}
+.b .night .date{font-family:Anton;text-transform:uppercase;line-height:.9;position:sticky;top:60px;align-self:start}
+.b .night .date b{display:block;font-size:96px;font-weight:400;letter-spacing:-.02em}
+.b .night .date span{display:block;font-size:20px;color:#ff4d79;letter-spacing:.06em}
+.b .night .date small{display:block;margin-top:14px;font-family:Archivo;font-size:13px;color:#8d81a0;text-transform:none;letter-spacing:0;line-height:1.4}
+.b .bills{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.b .bill{position:relative;padding:22px 22px 20px;border:1px solid #2a2230;border-radius:6px;background:linear-gradient(180deg,#171220,#0d0a0f);display:flex;flex-direction:column;min-height:230px;transition:transform .12s}
+.b .bill:hover{transform:translateY(-2px);border-color:#5a4a6a}
+.b .bill .headliner{font-family:Anton;font-size:34px;line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+.b .bill .support{font-family:Anton;font-size:18px;text-transform:uppercase;color:#b9aecb;line-height:1.15;margin-top:6px;letter-spacing:.02em}
+.b .bill .meta{margin-top:auto;padding-top:18px;display:flex;justify-content:space-between;align-items:flex-end;font-size:13px}
+.b .bill .meta .venue{color:#f2ecff;font-weight:500}
+.b .bill .meta .venue small{display:block;color:#8d81a0;font-weight:400;margin-top:2px}
+.b .bill .price{font-family:Anton;font-size:22px;color:#d8f56a}
+.b .bill .price.paid{color:#f2ecff}
+.b .bill .genre{position:absolute;top:14px;right:14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8d81a0}
+.b .bill.hot{border-color:#ff4d79}
+.b .bill.hot .genre{color:#ff4d79}
+
+/* =========================================================
+   PISTE C — GUIDE : chaleureux, lignes billet, carte à droite
+   ========================================================= */
+.c{background:#fbf7f1;color:#2b1f1a;min-height:100vh;font-family:Archivo,sans-serif}
+.c header{padding:26px 36px 0;display:flex;justify-content:space-between;align-items:flex-end}
+.c h1{font-family:Fraunces,serif;font-weight:700;font-size:38px;letter-spacing:-.02em;font-variation-settings:"opsz" 144}
+.c h1 small{display:block;font-family:Archivo;font-size:14px;font-weight:400;color:#7a6a60;margin-top:2px}
+.c .seg{display:flex;border:1.5px solid #2b1f1a;border-radius:8px;overflow:hidden}
+.c .seg button{padding:8px 14px;font-size:14px;border-right:1.5px solid #2b1f1a}
+.c .seg button:last-child{border-right:0}
+.c .seg button.on{background:#2b1f1a;color:#fbf7f1}
+.c .wrap{display:grid;grid-template-columns:1fr 340px;gap:32px;padding:20px 36px 40px}
+.c .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;font-size:13px}
+.c .chips button{padding:6px 11px;border-radius:8px;background:#efe7db;color:#5a4a40}
+.c .chips button.on{background:#e0512f;color:#fff}
+.c .chips button.ghost{background:none;border:1.5px dashed #c8b9a9}
+.c .dayhead{font-family:Fraunces,serif;font-size:22px;font-weight:600;margin:26px 0 8px;position:sticky;top:40px;background:#fbf7f1;padding:8px 0;display:flex;align-items:baseline;gap:10px;z-index:2}
+.c .dayhead span{font-family:Archivo;font-size:13px;font-weight:400;color:#7a6a60}
+.c .row{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border-radius:12px;background:#fff;border:1px solid #eee4d8;margin-bottom:8px}
+.c .row:hover{border-color:#e0512f}
+.c .row time{font-family:Fraunces,serif;font-size:26px;font-weight:600;font-variation-settings:"opsz" 144;line-height:1}
+.c .row .who{font-weight:700;font-size:16px;line-height:1.25}
+.c .row .who span{display:block;font-weight:400;color:#5a4a40;font-size:14px;margin-top:2px}
+.c .row .venue{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;color:#5a4a40}
+.c .row .venue i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.c .row .right{text-align:right;font-size:13px;color:#7a6a60}
+.c .row .right b{display:block;font-size:16px;color:#2b1f1a;font-family:Fraunces,serif;font-weight:600}
+.c .row .right .free{color:#1f8a4c}
+.c .row .right .save{margin-top:8px;display:inline-block;padding:5px 10px;border-radius:6px;border:1.5px solid #2b1f1a;font-size:12px;font-weight:500}
+.c aside{position:sticky;top:60px;align-self:start}
+.c .map{height:300px;border-radius:14px;background:
+  radial-gradient(circle at 62% 45%,#e0512f 0 6px,transparent 7px),
+  radial-gradient(circle at 40% 62%,#2e6fd9 0 6px,transparent 7px),
+  radial-gradient(circle at 70% 70%,#1f8a4c 0 6px,transparent 7px),
+  radial-gradient(circle at 30% 30%,#b8862d 0 6px,transparent 7px),
+  repeating-linear-gradient(45deg,#f1e9de 0 14px,#ece2d4 14px 16px),#f1e9de;
+  border:1px solid #eee4d8;position:relative}
+.c .map em{position:absolute;bottom:10px;left:12px;font-size:12px;color:#7a6a60;font-style:normal;background:#fff;padding:3px 8px;border-radius:6px}
+.c .legend{margin-top:14px;font-size:13px}
+.c .legend h3{font-family:Fraunces,serif;font-size:16px;font-weight:600;margin-bottom:8px}
+.c .legend li{list-style:none;display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #eee4d8}
+.c .legend li i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:8px}
+.c .legend li span{color:#7a6a60}
+
+@media (max-width:900px){
+  .a .grid{grid-template-columns:1fr 1fr}.a .day{min-height:0}
+  .b .night{grid-template-columns:1fr}.b .night .date{position:static}.b .night .date b{font-size:64px}
+  .c .wrap{grid-template-columns:1fr}.c aside{position:static}
+}
+@media (prefers-reduced-motion:reduce){.b .bill{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="switch" role="tablist">
+  <span>Piste :</span>
+  <button role="tab" aria-selected="true" data-p="a">A · Programme</button>
+  <button role="tab" aria-selected="false" data-p="b">B · Affiche</button>
+  <button role="tab" aria-selected="false" data-p="c">C · Guide</button>
+</div>
+
+<!-- ============================ A ============================ -->
+<section class="panel a on" id="pa">
+  <header>
+    <h1>Live in Paris<small>92 concerts cette semaine · mis à jour lundi 23:00</small></h1>
+    <div class="search"><input placeholder="Artiste, salle…"><button>Près de moi</button></div>
+  </header>
+  <div class="weeknav">
+    <div class="arrows"><button aria-label="Semaine précédente">‹</button><button aria-label="Semaine suivante">›</button></div>
+    <strong>7 – 13 septembre</strong>
+    <div class="genres">
+      <button class="on">Tout</button><button>Rock</button><button>Indie</button><button>Electro</button><button>Expérimental</button><button>Gratuit</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="day today"><h2>Lun 7<em>3 concerts</em></h2>
+      <div class="gig"><time>19h</time><div class="who">Jaguar Sun<span>Sean Nicholas Savage, Yes Please!</span></div><div class="where">Supersonic · Bastille</div><div><span class="tag free">Gratuit</span><span class="tag">Indie</span></div></div>
+      <div class="gig"><time>20h</time><div class="who">Kokoroko<span></span></div><div class="where">Le Trabendo · Villette</div><div><span class="tag">28 €</span><span class="tag">Jazz</span></div></div>
+      <div class="gig"><time>20h30</time><div class="who">Klub des Loosers<span>Bagarre</span></div><div class="where">Petit Bain · 13e</div><div><span class="tag">18 €</span><span class="tag">Chanson</span></div></div>
+    </div>
+    <div class="day"><h2>Mar 8<em>2 concerts</em></h2>
+      <div class="gig"><time>19h</time><div class="who">Headsend<span>Serratella, Sound of Lies</span></div><div class="where">Supersonic · Bastille</div><div><span class="tag free">Gratuit</span><span class="tag">Rock</span></div></div>
+      <div class="gig"><time>20h</time><div class="who">Ditz<span>Frankie & The Witch Fingers</span></div><div class="where">La Maroquinerie · Ménilmontant</div><div><span class="tag">24 €</span><span class="tag">Punk</span></div></div>
+    </div>
+    <div class="day"><h2>Mer 9<em>2 concerts</em></h2>
+      <div class="gig"><time>19h</time><div class="who">Playlunch<span>Wild Pink, Empty Full Space</span></div><div class="where">Supersonic · Bastille</div><div><span class="tag free">Gratuit</span><span class="tag">Indie</span></div></div>
+      <div class="gig"><time>21h</time><div class="who">Moin<span></span></div><div class="where">Point Éphémère · Canal</div><div><span class="tag">16 €</span><span class="tag">Expérimental</span></div></div>
+    </div>
+    <div class="day"><h2>Jeu 10<em>1 concert</em></h2>
+      <div class="gig"><time>20h</time><div class="who">Yard Act<span></span></div><div class="where">La Cigale · Pigalle</div><div><span class="tag">32 €</span><span class="tag">Rock</span></div></div>
+    </div>
+    <div class="day"><h2>Ven 11<em>1 concert</em></h2>
+      <div class="gig"><time>23h</time><div class="who">Nuit Electro<span>Rone (dj set)</span></div><div class="where">Sacré · 10e</div><div><span class="tag">15 €</span><span class="tag">Electro</span></div></div>
+    </div>
+    <div class="day"><h2>Sam 12<em>1 concert</em></h2>
+      <div class="gig"><time>19h</time><div class="who">Bar Italia<span></span></div><div class="where">Le Trabendo · Villette</div><div><span class="tag">27 €</span><span class="tag">Indie</span></div></div>
+    </div>
+    <div class="day"><h2>Dim 13<em>—</em></h2><div class="empty">Rien d'annoncé. Voir la semaine suivante ›</div></div>
+  </div>
+</section>
+
+<!-- ============================ B ============================ -->
+<section class="panel b" id="pb">
+  <header>
+    <div class="logo">Live <i>in</i> Paris</div>
+    <nav><button class="on">Ce soir</button><button>Cette semaine</button><button>Week-end</button><button>30 jours</button><button>Tout</button></nav>
+    <div style="font-size:13px;color:#8d81a0">92 concerts</div>
+  </header>
+  <div class="filters">
+    <button class="on">Tout <b>92</b></button><button>Rock <b>67</b></button><button>Indie <b>70</b></button><button>Expérimental <b>12</b></button><button>Electro <b>6</b></button><button>Gratuit <b>31</b></button><button>Près de moi</button>
+  </div>
+
+  <div class="night">
+    <div class="date"><span>Lundi</span><b>7</b><span>Sept.</span><small>3 concerts<br>dont 1 gratuit</small></div>
+    <div class="bills">
+      <article class="bill hot"><span class="genre">Indie</span><div class="headliner">Jaguar Sun</div><div class="support">Sean Nicholas Savage<br>Yes Please!</div><div class="meta"><div class="venue">Supersonic<small>19:00 · Bastille</small></div><div class="price">Gratuit</div></div></article>
+      <article class="bill"><span class="genre">Jazz</span><div class="headliner">Kokoroko</div><div class="support">&nbsp;</div><div class="meta"><div class="venue">Le Trabendo<small>20:00 · Villette</small></div><div class="price paid">28 €</div></div></article>
+      <article class="bill"><span class="genre">Chanson</span><div class="headliner">Klub des Loosers</div><div class="support">Bagarre</div><div class="meta"><div class="venue">Petit Bain<small>20:30 · 13e</small></div><div class="price paid">18 €</div></div></article>
+    </div>
+  </div>
+  <div class="night">
+    <div class="date"><span>Mardi</span><b>8</b><span>Sept.</span><small>2 concerts</small></div>
+    <div class="bills">
+      <article class="bill"><span class="genre">Rock</span><div class="headliner">Headsend</div><div class="support">Serratella<br>Sound of Lies</div><div class="meta"><div class="venue">Supersonic<small>19:00 · Bastille</small></div><div class="price">Gratuit</div></div></article>
+      <article class="bill"><span class="genre">Punk</span><div class="headliner">Ditz</div><div class="support">Frankie & The Witch Fingers</div><div class="meta"><div class="venue">La Maroquinerie<small>20:00 · Ménilmontant</small></div><div class="price paid">24 €</div></div></article>
+    </div>
+  </div>
+  <div class="night">
+    <div class="date"><span>Mercredi</span><b>9</b><span>Sept.</span><small>2 concerts</small></div>
+    <div class="bills">
+      <article class="bill"><span class="genre">Indie</span><div class="headliner">Playlunch</div><div class="support">Wild Pink<br>Empty Full Space</div><div class="meta"><div class="venue">Supersonic<small>19:00 · Bastille</small></div><div class="price">Gratuit</div></div></article>
+      <article class="bill"><span class="genre">Expérimental</span><div class="headliner">Moin</div><div class="support">&nbsp;</div><div class="meta"><div class="venue">Point Éphémère<small>21:00 · Canal St-Martin</small></div><div class="price paid">16 €</div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ C ============================ -->
+<section class="panel c" id="pc">
+  <header>
+    <h1>Live in Paris<small>Concerts à venir · 92 dates · mis à jour lundi soir</small></h1>
+    <div class="seg"><button class="on">Cette semaine</button><button>Semaine pro</button><button>30 jours</button><button>Tout</button></div>
+  </header>
+  <div class="wrap">
+    <main>
+      <div class="chips">
+        <button class="on">Tous les genres</button><button>Rock</button><button>Indie</button><button>Electro</button><button>Expérimental</button><button>Gratuit</button><button class="ghost">+ Salle</button><button class="ghost">Près de moi</button>
+      </div>
+
+      <div class="dayhead">Lundi 7 septembre <span>aujourd'hui · 3 concerts</span></div>
+      <div class="row"><time>19h</time><div><div class="who">Jaguar Sun<span>avec Sean Nicholas Savage, Yes Please!</span></div><div class="venue"><i style="background:#e0512f"></i>Supersonic · Bastille · 12 min</div></div><div class="right"><b class="free">Gratuit</b>Rock, indie<br><span class="save">Enregistrer</span></div></div>
+      <div class="row"><time>20h</time><div><div class="who">Kokoroko</div><div class="venue"><i style="background:#2e6fd9"></i>Le Trabendo · Villette · 25 min</div></div><div class="right"><b>28 €</b>Jazz<br><span class="save">Enregistrer</span></div></div>
+      <div class="row"><time>20h30</time><div><div class="who">Klub des Loosers<span>avec Bagarre</span></div><div class="venue"><i style="background:#1f8a4c"></i>Petit Bain · 13e · 18 min</div></div><div class="right"><b>18 €</b>Chanson<br><span class="save">Enregistrer</span></div></div>
+
+      <div class="dayhead">Mardi 8 septembre <span>2 concerts</span></div>
+      <div class="row"><time>19h</time><div><div class="who">Headsend<span>avec Serratella, Sound of Lies</span></div><div class="venue"><i style="background:#e0512f"></i>Supersonic · Bastille · 12 min</div></div><div class="right"><b class="free">Gratuit</b>Rock, indie<br><span class="save">Enregistrer</span></div></div>
+      <div class="row"><time>20h</time><div><div class="who">Ditz<span>avec Frankie & The Witch Fingers</span></div><div class="venue"><i style="background:#b8862d"></i>La Maroquinerie · Ménilmontant · 9 min</div></div><div class="right"><b>24 €</b>Punk<br><span class="save">Enregistrer</span></div></div>
+
+      <div class="dayhead">Mercredi 9 septembre <span>2 concerts</span></div>
+      <div class="row"><time>19h</time><div><div class="who">Playlunch<span>avec Wild Pink, Empty Full Space</span></div><div class="venue"><i style="background:#e0512f"></i>Supersonic · Bastille · 12 min</div></div><div class="right"><b class="free">Gratuit</b>Rock, indie<br><span class="save">Enregistrer</span></div></div>
+      <div class="row"><time>21h</time><div><div class="who">Moin</div><div class="venue"><i style="background:#2e6fd9"></i>Point Éphémère · Canal Saint-Martin · 20 min</div></div><div class="right"><b>16 €</b>Expérimental<br><span class="save">Enregistrer</span></div></div>
+    </main>
+    <aside>
+      <div class="map"><em>Salles de la semaine · carte</em></div>
+      <div class="legend">
+        <h3>Par salle</h3>
+        <ul>
+          <li><span style="color:#2b1f1a"><i style="background:#e0512f"></i>Supersonic</span><span>3 · 12 min</span></li>
+          <li><span style="color:#2b1f1a"><i style="background:#2e6fd9"></i>Le Trabendo</span><span>2 · 25 min</span></li>
+          <li><span style="color:#2b1f1a"><i style="background:#b8862d"></i>La Maroquinerie</span><span>1 · 9 min</span></li>
+          <li><span style="color:#2b1f1a"><i style="background:#1f8a4c"></i>Petit Bain</span><span>1 · 18 min</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.switch button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id==='p'+b.dataset.p));
+  window.scrollTo(0,0);
+}));
+</script>
+</body>
+</html>
