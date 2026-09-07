@@ -69,7 +69,8 @@ def bataclan(venue, ctx):
         events.append(Event(
             title=full_title, date=date, venue=venue["name"], venue_slug=venue["slug"], source="bataclan",
             url=venue["url"], ticket_url=ticket, raw_genre=cat or None, image=img, sold_out=sold_out,
-            is_music="CONCERT" in cat.upper() or "FESTIVAL" in cat.upper(),
+            # only an explicit non-concert category (HUMOUR, SPECTACLE, SPORT) excludes an event
+            is_music=not cat or "CONCERT" in cat.upper() or "FESTIVAL" in cat.upper(),
         ))
     return events
 
@@ -96,13 +97,17 @@ def trianon(venue, ctx):
 
 def maroquinerie(venue, ctx):
     base = "https://www.lamaroquinerie.fr"
-    events = []
-    for offset in (0, 50, 100):
-        html = get(f"{base}/fr/agenda/results/?offset={offset}&limit=50")
-        n = 0
+    events, seen_urls = [], set()
+    for offset in range(0, 400, 50):  # the agenda's infinite scroll pages with ?of=<offset>
+        html = get(f"{base}/fr/agenda/results/?of={offset}")
+        n, new = 0, 0
         for b in _blocks(html, r'<li class="event">'):
             n += 1
             url = _abs(base, _first(r'<a href="([^"]+)"', b))
+            if url in seen_urls:
+                continue
+            seen_urls.add(url)
+            new += 1
             title = clean_text(_first(r"<h2[^>]*>(.*?)</h2>", b) or "")
             date = parse_fr_date(_first(r'<h3 class="date">(.*?)</h3>', b) or "", ctx["today"])
             time = parse_time(_first(r'<div class="time">(.*?)</div>', b) or "")
@@ -114,7 +119,7 @@ def maroquinerie(venue, ctx):
             title = re.sub(r"\s*[-–]\s*complet\s*$", "", title, flags=re.I)
             events.append(Event(title=title, date=date, time=time, venue=venue["name"], venue_slug=venue["slug"],
                                 source="maroquinerie", url=url, ticket_url=ticket, image=img, sold_out=sold_out))
-        if n < 50:
+        if n < 50 or new == 0:
             break
     return events
 

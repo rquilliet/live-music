@@ -25,6 +25,7 @@ def main():
     failed = [r for r in out["report"] if not r["ok"]]
     if failed:
         print(f"{len(failed)} source(s) failed: " + ", ".join(r["venue"] for r in failed), file=sys.stderr)
+        sys.exit(1)  # let cron / launchd notice
 
 
 if __name__ == "__main__":

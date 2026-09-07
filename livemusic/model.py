@@ -1,9 +1,26 @@
 """The normalised event record every source produces."""
 import datetime as dt
+import re
 from dataclasses import dataclass, field, asdict
 from typing import List, Optional
 
 from .util import event_id, clean_text
+
+_HOST = re.compile(r"^[a-z0-9.-]+\.[a-z]{2,}(/|$)", re.I)
+
+
+def clean_url(u: Optional[str]) -> Optional[str]:
+    """Only http(s) links survive (scraped data feeds hrefs); a bare host gets https://."""
+    if not u:
+        return None
+    u = clean_text(u).replace(" ", "%20")
+    if u.startswith("//"):
+        u = "https:" + u
+    if re.match(r"^https?://", u, re.I):
+        return u[:500]
+    if _HOST.match(u):
+        return "https://" + u[:500]
+    return None
 
 
 @dataclass
@@ -35,6 +52,7 @@ class Event:
         self.title = clean_text(self.title)[:200]
         if self.description:
             self.description = clean_text(self.description)[:400]
+        self.url, self.ticket_url, self.image = map(clean_url, (self.url, self.ticket_url, self.image))
         if not self.id:
             self.id = event_id(self.venue_slug, self.date, self.title)
 

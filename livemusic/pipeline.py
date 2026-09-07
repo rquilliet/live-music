@@ -1,14 +1,14 @@
 """Run every source, merge duplicates, tag genres, track first-seen dates, write web/events.json."""
 import datetime as dt
 import json
+import math
 import os
-import re
 import traceback
 
 from . import genres as G
 from .fetch import FetchError
 from .sources import STRATEGIES
-from .util import norm_title, slugify
+from .util import norm_title, slugify, strip_accents
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -18,6 +18,16 @@ GENRE_CACHE = os.path.join(DATA, "genre_cache.json")
 OUT_PATH = os.path.join(WEB, "events.json")
 HORIZON_DAYS = 120
 NEW_WINDOW_DAYS = 7
+VENUE_MATCH_KM = 0.15
+
+
+def today_paris() -> dt.date:
+    """Calendar date in Paris whatever the machine's timezone (a UTC server at 00:30 is still 'today')."""
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.datetime.now(ZoneInfo("Europe/Paris")).date()
+    except Exception:  # no tz database available
+        return dt.date.today()
 
 
 def load_venues(path=None):
@@ -29,10 +39,11 @@ def load_venues(path=None):
 
 
 def run(only=None, use_llm=True, log=print):
-    today = dt.date.today()
+    today = today_paris()
     ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log}
     venues = load_venues()
     by_slug = {v["slug"]: v for v in venues}
+    state = load_state()
     events, report = [], []
 
     for v in venues:
@@ -58,9 +69,16 @@ def run(only=None, use_llm=True, log=print):
             report.append({"venue": v["name"], "ok": False, "error": repr(e)})
             continue
         kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
+        previous = state["counts"].get(v["name"], 0)
+        if not kept and previous:
+            # a 200 page with nothing in it is a broken parser or a bot wall, not an empty programme
+            log(f"  {v['name']}: 0 events (had {previous}) -> treated as failure")
+            report.append({"venue": v["name"], "ok": False, "error": f"0 events parsed (was {previous})"})
+            continue
         log(f"  {v['name']}: {len(kept)} events" + (f" ({len(got) - len(kept)} outside window/invalid)" if len(got) != len(kept) else ""))
         report.append({"venue": v["name"], "ok": True, "count": len(kept)})
         for e in kept:
+            canonical_venue(e, venues)
             _fill_venue_meta(e, by_slug.get(e.venue_slug) or v)
         events.extend(kept)
 
@@ -70,7 +88,7 @@ def run(only=None, use_llm=True, log=print):
     for e in events:
         vconf = by_slug.get(e.venue_slug, {})
         G.apply_rules(e, vconf.get("genres"))
-        if e.is_music and G.looks_non_music(f"{e.raw_genre or ''} {e.title}"):
+        if e.is_music and G.looks_non_music(f"{e.raw_genre or ''} {e.title}", e.venue):
             e.is_music = False
     if use_llm and G.llm_available():
         try:
@@ -80,7 +98,7 @@ def run(only=None, use_llm=True, log=print):
     elif use_llm:
         log("  LLM tagging skipped: set ANTHROPIC_API_KEY to enable")
 
-    first_seen = track_seen(events, today)
+    first_seen = track_seen(events, today, state, report)
     events.sort(key=lambda e: (e.date, e.time or "99:99", e.venue))
     out = {
         "generated_at": dt.datetime.now().isoformat(timespec="seconds"),
@@ -98,6 +116,41 @@ def run(only=None, use_llm=True, log=print):
     return out
 
 
+# ------------------------------------------------------------------ venue identity
+
+def _norm_venue(name: str) -> str:
+    n = strip_accents(name.lower())
+    n = n.replace("'", " ").replace("’", " ")
+    for w in ("le ", "la ", "les ", "l ", "the "):
+        if n.startswith(w):
+            n = n[len(w):]
+    return " ".join(n.replace("-", " ").split())
+
+
+def _km(lat1, lon1, lat2, lon2):
+    p = math.pi / 180
+    a = 0.5 - math.cos((lat2 - lat1) * p) / 2 + math.cos(lat1 * p) * math.cos(lat2 * p) * (1 - math.cos((lon2 - lon1) * p)) / 2
+    return 12742 * math.asin(math.sqrt(a))
+
+
+def canonical_venue(e, venues):
+    """Map an open-data venue ('Philharmonie de Paris', 'L'Olympia - Bruno Coquatrix') onto the
+    configured venue with the same name or within 150 m, so cross-source merging can work."""
+    if e.source != "opendata":
+        return
+    n = _norm_venue(e.venue)
+    for v in venues:
+        vn = _norm_venue(v["name"])
+        if n == vn or n.startswith(vn + " ") or vn.startswith(n + " "):
+            e.venue, e.venue_slug = v["name"], v["slug"]
+            return
+    if e.lat is not None and e.lon is not None:
+        for v in venues:
+            if v.get("lat") is not None and _km(e.lat, e.lon, v["lat"], v["lon"]) <= VENUE_MATCH_KM:
+                e.venue, e.venue_slug = v["name"], v["slug"]
+                return
+
+
 def _fill_venue_meta(e, v):
     if not v:
         return
@@ -106,46 +159,57 @@ def _fill_venue_meta(e, v):
     e.lon = e.lon if e.lon is not None else v.get("lon")
 
 
+# ------------------------------------------------------------------ merge
+
 def _title_tokens(t):
     return set(w for w in norm_title(t).split() if len(w) > 2)
 
 
+def _same_show(a, b) -> bool:
+    ta, tb = _title_tokens(a.title), _title_tokens(b.title)
+    na, nb = norm_title(a.title), norm_title(b.title)
+    if na and na == nb:
+        return True
+    if not ta or not tb:
+        return False
+    shared = len(ta & tb)
+    return shared / max(len(ta), len(tb)) >= 0.6 or (shared >= 2 and (na in nb or nb in na))
+
+
 def merge(events, log=print):
-    """Collapse the same concert reported by several sources (venue site + open data)."""
+    """Collapse the same concert reported by several sources (venue site + open data).
+
+    Events from the same source never merge unless they are literally the same record: a venue with
+    two rooms can host "Jam session" and "Jam session vocal" on the same night.
+    """
     priority = {"opendata": 0, "llm": 1}  # lower = weaker; hand parsers / tribe win
     events.sort(key=lambda e: -priority.get(e.source, 5))
     buckets = {}
     for e in events:
         buckets.setdefault((e.venue_slug, e.date), []).append(e)
     merged, dropped = [], 0
-    for (_, _), group in buckets.items():
+    for group in buckets.values():
         kept = []
         for e in group:
-            toks = _title_tokens(e.title)
             dup = None
             for k in kept:
-                kt = _title_tokens(k.title)
-                if not toks or not kt:
+                if k.source == e.source:
+                    if k.id == e.id:
+                        dup = k
+                        break
                     continue
-                overlap = len(toks & kt) / min(len(toks), len(kt))
-                if overlap >= 0.6 or norm_title(e.title) in norm_title(k.title) or norm_title(k.title) in norm_title(e.title):
+                if _same_show(e, k):
                     dup = k
                     break
             if dup:
                 dropped += 1
-                dup.raw_genre = dup.raw_genre or e.raw_genre
-                dup.genres = dup.genres or e.genres
-                dup.genre_source = dup.genre_source or e.genre_source
-                dup.description = dup.description or e.description
-                dup.image = dup.image or e.image
-                dup.time = dup.time or e.time
-                dup.price = dup.price or e.price
+                for attr in ("raw_genre", "genres", "genre_source", "description", "image", "time",
+                             "price", "ticket_url", "url", "address"):
+                    if not getattr(dup, attr):
+                        setattr(dup, attr, getattr(e, attr))
                 dup.free = dup.free or e.free
-                dup.ticket_url = dup.ticket_url or e.ticket_url
-                dup.url = dup.url or e.url
-                dup.lat = dup.lat if dup.lat is not None else e.lat
-                dup.lon = dup.lon if dup.lon is not None else e.lon
-                dup.address = dup.address or e.address
+                if dup.lat is None:
+                    dup.lat, dup.lon = e.lat, e.lon
             else:
                 kept.append(e)
         merged.extend(kept)
@@ -154,28 +218,49 @@ def merge(events, log=print):
     return merged
 
 
-def track_seen(events, today):
-    """Remember when each event id was first seen so the UI can show 'newly announced'.
+# ------------------------------------------------------------------ first-seen tracking
 
-    A venue scraped for the first time (new in venues.json, or failing on the previous run) gets
-    'baseline' for all its events: its whole programme is not "newly announced".
-    """
-    seen, known_venues = {}, set()
+def load_state():
+    """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date}},
+    "venues": [slugs ever scraped], "counts": {venue name: events last time it succeeded}}."""
+    state = {"ids": {}, "venues": [], "counts": {}}
     if os.path.exists(SEEN_PATH):
         with open(SEEN_PATH, "r", encoding="utf-8") as f:
             saved = json.load(f)
         if "ids" in saved:
-            seen, known_venues = saved["ids"], set(saved.get("venues", []))
-        else:  # first file format: a flat id -> date map
-            seen = saved
+            ids = saved["ids"]
+            # older format stored a bare date string per id
+            state["ids"] = {k: (v if isinstance(v, dict) else {"first_seen": v, "date": "9999-12-31"}) for k, v in ids.items()}
+            state["venues"] = saved.get("venues", [])
+            state["counts"] = saved.get("counts", {})
+        else:  # very first format: flat id -> date
+            state["ids"] = {k: {"first_seen": v, "date": "9999-12-31"} for k, v in saved.items()}
+    return state
+
+
+def track_seen(events, today, state, report):
+    """Remember when each event id was first seen so the UI can show 'newly announced'.
+
+    * A venue scraped for the first time (new in venues.json) gets 'baseline': its whole programme
+      is not "newly announced".
+    * Only events whose date is past are pruned, so a source failing one day does not make its
+      programme look new the next day.
+    """
+    ids, known = state["ids"], set(state["venues"])
     stamp = today.isoformat()
     for e in events:
-        if e.id not in seen:
-            seen[e.id] = stamp if e.venue_slug in known_venues else "baseline"
-    ids = {e.id for e in events}
-    seen = {k: v for k, v in seen.items() if k in ids}  # prune events that are gone
-    venues = sorted(known_venues | {e.venue_slug for e in events})
+        if e.id not in ids:
+            ids[e.id] = {"first_seen": stamp if e.venue_slug in known else "baseline", "date": e.date}
+        else:
+            ids[e.id]["date"] = e.date
+    cutoff = today.isoformat()
+    ids = {k: v for k, v in ids.items() if v.get("date", "9999") >= cutoff}
+    counts = dict(state["counts"])
+    for r in report:
+        if r["ok"]:
+            counts[r["venue"]] = r["count"]
+    venues = sorted(known | {e.venue_slug for e in events})
     os.makedirs(DATA, exist_ok=True)
     with open(SEEN_PATH, "w", encoding="utf-8") as f:
-        json.dump({"ids": seen, "venues": venues}, f, indent=0)
-    return seen
+        json.dump({"ids": ids, "venues": venues, "counts": counts}, f, indent=0)
+    return {k: v["first_seen"] for k, v in ids.items()}

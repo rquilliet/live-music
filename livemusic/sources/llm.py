@@ -1,7 +1,6 @@
 """Generic extractor: fetch the venue's programme page(s), turn them into text, and let Claude
 pull out the concerts.  Used for venues without a hand-written parser.  Needs ANTHROPIC_API_KEY.
 """
-import json
 import os
 from typing import List, Optional
 
@@ -10,7 +9,8 @@ from ..genres import llm_available, TAGS
 from ..model import Event
 from ..util import html_to_text
 
-MAX_CHARS = 60000
+CHUNK_CHARS = 30000     # one Claude call per chunk of page text
+MAX_CHUNKS = 4          # 120k chars of programme per venue is plenty
 
 
 def scrape(venue, ctx):
@@ -18,7 +18,7 @@ def scrape(venue, ctx):
         ctx["log"](f"  {venue['name']}: skipped (LLM extraction needs ANTHROPIC_API_KEY)")
         return []
     import anthropic
-    from pydantic import BaseModel
+    from pydantic import BaseModel, ValidationError
 
     class Extracted(BaseModel):
         title: str
@@ -41,9 +41,10 @@ def scrape(venue, ctx):
             texts.append(f"### {u}\n" + html_to_text(get(u)))
         except FetchError as e:
             ctx["log"](f"  {venue['name']}: fetch failed: {e}")
-    text = "\n\n".join(texts)[:MAX_CHARS]
+    text = "\n\n".join(texts)
     if len(text) < 200:
         return []
+    chunks = _chunks(text, CHUNK_CHARS)[:MAX_CHUNKS]
 
     client = anthropic.Anthropic()
     model = os.environ.get("LIVEMUSIC_MODEL", "claude-opus-5")
@@ -54,34 +55,56 @@ def scrape(venue, ctx):
         "navigation, and anything that is not an event. Mark comedy, theatre, talks, exhibitions and "
         "similar as is_music=false. Keep titles as printed (headliner + support acts). "
         f"Genres must come from: {', '.join(TAGS)} (1-3 per event, or empty if unknown). "
-        "Absolute URLs only; leave url empty if unsure."
+        "Absolute URLs only; leave url empty if unsure. The text may be one part of a longer page."
     )
-    try:
-        resp = client.messages.parse(
-            model=model,
-            max_tokens=16000,
-            system=system,
-            messages=[{"role": "user", "content": f"Venue: {venue['name']}\n\n{text}"}],
-            output_format=ExtractedList,
-        )
-    except anthropic.APIStatusError as e:
-        ctx["log"](f"  {venue['name']}: API error {e.status_code}: {e.message}")
-        return []
-    except anthropic.APIConnectionError as e:
-        ctx["log"](f"  {venue['name']}: connection error: {e}")
-        return []
-    result = resp.parsed_output
-    if result is None:
-        return []
-    events = []
-    for x in result.events:
-        if not x.title or len(x.date) != 10:
+    events, seen = [], set()
+    for n, chunk in enumerate(chunks, 1):
+        try:
+            resp = client.messages.parse(
+                model=model,
+                max_tokens=16000,
+                system=system,
+                messages=[{"role": "user", "content": f"Venue: {venue['name']} (part {n}/{len(chunks)})\n\n{chunk}"}],
+                output_format=ExtractedList,
+            )
+        except anthropic.APIStatusError as e:
+            ctx["log"](f"  {venue['name']}: API error {e.status_code}: {e.message}")
+            return events
+        except anthropic.APIConnectionError as e:
+            ctx["log"](f"  {venue['name']}: connection error: {e}")
+            return events
+        except (ValidationError, ValueError) as e:  # truncated / malformed JSON
+            ctx["log"](f"  {venue['name']}: unparseable answer for part {n}: {str(e)[:120]}")
             continue
-        genres = [g for g in x.genres if g in TAGS][:3]
-        events.append(Event(
-            title=x.title, date=x.date, time=x.time or None, venue=venue["name"], venue_slug=venue["slug"],
-            source="llm", url=x.url or venue["url"], price=x.price, genres=genres,
-            genre_source="llm" if genres else None, is_music=x.is_music, sold_out=x.sold_out,
-            description=", ".join(x.artists) if x.artists else None,
-        ))
+        if resp.stop_reason == "max_tokens":
+            ctx["log"](f"  {venue['name']}: part {n} truncated (max_tokens); results partial")
+        result = resp.parsed_output
+        if result is None:
+            continue
+        for x in result.events:
+            if not x.title or len(x.date) != 10 or (x.title, x.date) in seen:
+                continue
+            seen.add((x.title, x.date))
+            genres = [g for g in x.genres if g in TAGS][:3]
+            events.append(Event(
+                title=x.title, date=x.date, time=x.time or None, venue=venue["name"], venue_slug=venue["slug"],
+                source="llm", url=x.url or venue["url"], price=x.price, genres=genres,
+                genre_source="llm" if genres else None, is_music=x.is_music, sold_out=x.sold_out,
+                description=", ".join(x.artists) if x.artists else None,
+            ))
     return events
+
+
+def _chunks(text: str, size: int) -> List[str]:
+    """Split on line boundaries so an event is not cut in half."""
+    out, cur = [], []
+    n = 0
+    for line in text.split("\n"):
+        if n + len(line) > size and cur:
+            out.append("\n".join(cur))
+            cur, n = [], 0
+        cur.append(line)
+        n += len(line) + 1
+    if cur:
+        out.append("\n".join(cur))
+    return out

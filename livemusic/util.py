@@ -112,17 +112,17 @@ def parse_fr_date(s: str, today: dt.date = None) -> str:
         d, mo = int(m.group(1)), int(m.group(2))
         if 1 <= mo <= 12 and 1 <= d <= 31:
             return f"{infer_year(mo, d, today)}-{mo:02d}-{d:02d}"
-    m = re.search(r"\b(\d{1,2})\s+([a-z]+)\.?(?:\s+(\d{4}))?", t)
-    if m:
+    for m in re.finditer(r"\b(\d{1,2})\s+([a-z]+)\.?(?:\s+(\d{4}))?", t):  # "du 12 au 15 septembre"
         d = int(m.group(1))
         mo = FR_MONTHS.get(m.group(2)) or EN_MONTHS.get(m.group(2))
-        if mo:
-            year = int(m.group(3)) if m.group(3) else infer_year(mo, d, today)
-            try:
-                dt.date(year, mo, d)
-            except ValueError:
-                return None
-            return f"{year}-{mo:02d}-{d:02d}"
+        if not mo:
+            continue
+        year = int(m.group(3)) if m.group(3) else infer_year(mo, d, today)
+        try:
+            dt.date(year, mo, d)
+        except ValueError:
+            return None
+        return f"{year}-{mo:02d}-{d:02d}"
     return None
 
 

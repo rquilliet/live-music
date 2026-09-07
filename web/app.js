@@ -18,10 +18,16 @@
 
   // ------------------------------------------------------------ helpers
   function load(def) {
-    try { return Object.assign(def, JSON.parse(localStorage.getItem("lip-state") || "{}")); } catch { return def; }
+    let s = def;
+    try { s = Object.assign(def, JSON.parse(localStorage.getItem("lip-state") || "{}")); } catch { /* keep defaults */ }
+    if (!["week", "nextweek", "month", "new", "all"].includes(s.tab)) s.tab = "week";
+    if (!Array.isArray(s.genres)) s.genres = [];
+    return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
-  function isoDate(d) { return d.toISOString().slice(0, 10); }
+  // Local calendar date, never toISOString (UTC would shift Paris midnight to the previous day).
+  function isoDate(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
+  function safeUrl(u) { return u && /^https?:\/\//i.test(u) ? u : null; }
   function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
   function parseISO(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
   function fmtDay(s) { const d = parseISO(s); return `${DAYS[d.getDay()]} ${d.getDate()} ${MONTHS[d.getMonth()]}`; }
@@ -147,11 +153,12 @@
     $("#hero-text").innerHTML = `<div class="when">${fmtDay(e.date)}${e.time ? " · " + e.time : ""}</div>
       <h2>${esc(e.title)}</h2><div class="where">${esc(e.venue)}${e.address ? " · " + esc(e.address) : ""}</div>`;
     const artists = splitArtists(e.title);
-    const link = e.ticket_url || e.url;
+    const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
+    const link = ticket || page;
     $("#detail-body").innerHTML = `
       <div class="actions">
-        ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${e.ticket_url ? "Billets" : "Page de la salle"} ↗</a>` : ""}
-        ${e.ticket_url && e.url ? `<a class="secondary" href="${esc(e.url)}" target="_blank" rel="noopener">Page de la salle ↗</a>` : ""}
+        ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${ticket ? "Billets" : "Page de la salle"} ↗</a>` : ""}
+        ${ticket && page ? `<a class="secondary" href="${esc(page)}" target="_blank" rel="noopener">Page de la salle ↗</a>` : ""}
         ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
       </div>
       <div class="muted">${tagHtml(e)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price && !e.free ? "· " + esc(e.price) : ""} ${badges(e)}</div>
@@ -189,7 +196,7 @@
     box.innerHTML = `
       <h3>${esc(name)}</h3>
       ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : `<p class="muted">Pas de fiche Wikipédia trouvée.</p>`}
-      ${dz ? `<div class="player" style="margin-top:12px"><iframe title="Deezer" src="https://widget.deezer.com/widget/dark/artist/${dz.id}/top_tracks" allow="encrypted-media; clipboard-write"></iframe></div>` : ""}
+      ${dz ? `<div class="player" style="margin-top:12px"><iframe title="Deezer" src="https://widget.deezer.com/widget/dark/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe></div>` : ""}
       <div class="links" style="margin-top:10px">
         <a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener">Spotify</a>
         <a href="https://bandcamp.com/search?q=${q}" target="_blank" rel="noopener">Bandcamp</a>
@@ -201,7 +208,7 @@
       const rel = await deezerRelated(dz.id).catch(() => []);
       if (rel.length) {
         $("#similar").innerHTML = `<h3 style="margin-top:16px">Artistes similaires</h3><div class="similar">${rel.slice(0, 10).map(a =>
-          `<a href="${esc(a.link)}" target="_blank" rel="noopener"><img src="${esc(a.picture_medium)}" alt="">${esc(a.name)}</a>`).join("")}</div>`;
+          `<a href="${esc(safeUrl(a.link) || "#")}" target="_blank" rel="noopener"><img src="${esc(safeUrl(a.picture_medium) || "")}" alt="">${esc(a.name)}</a>`).join("")}</div>`;
       }
     }
   }
@@ -278,7 +285,11 @@
   }
 
   // ------------------------------------------------------------ boot
-  fetch("events.json?" + Date.now()).then(r => r.json()).then(d => {
+  fetch("events.json?" + Date.now()).then(r => r.json()).catch(() => {
+    $("#list").innerHTML = '<div class="empty">events.json introuvable — lance <code>python scrape.py</code> puis <code>python serve.py</code>.</div>';
+    return null;
+  }).then(d => {
+    if (!d) return;
     DATA = d;
     state.near = false; // ask for the position again on each visit
     $("#meta").textContent = `${d.events.length} événements · mis à jour ${new Date(d.generated_at).toLocaleString("fr-FR", { dateStyle: "short", timeStyle: "short" })}`;
@@ -286,5 +297,5 @@
     const m = location.hash.match(/^#e=([a-f0-9]+)/);   // shareable link straight to a concert
     const linked = m && d.events.find(x => x.id === m[1]);
     if (linked) openDetail(linked);
-  }).catch(() => { $("#list").innerHTML = '<div class="empty">events.json introuvable — lance <code>python scrape.py</code> puis <code>python serve.py</code>.</div>'; });
+  });
 })();
