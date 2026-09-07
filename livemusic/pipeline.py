@@ -93,10 +93,12 @@ def run(only=None, use_llm=True, log=print):
         if not e.headliner:
             e.headliner, e.support = split_lineup(e.title)
 
-    # genres: site tags -> rules -> venue default, then LLM for the weak ones
+    # genres: site tags -> rules -> venue default, then LLM for the weak ones;
+    # sub-genres: the venue's own descriptors first, Claude for the rest
     for e in events:
         vconf = by_slug.get(e.venue_slug, {})
         G.apply_rules(e, vconf.get("genres"))
+        e.subgenres = G.merge_subgenres(G.subgenres_from_site(e.raw_genre), e.subgenres)
         if e.is_music and G.looks_non_music(f"{e.raw_genre or ''} {e.title}", e.venue):
             e.is_music = False
     if use_llm and G.llm_available():
@@ -264,7 +266,7 @@ def merge(events, log=print):
                     break
             if dup:
                 dropped += 1
-                for attr in ("raw_genre", "genres", "genre_source", "description", "image", "time",
+                for attr in ("raw_genre", "genres", "genre_source", "subgenres", "description", "image", "time",
                              "price", "ticket_url", "url", "address"):
                     if not getattr(dup, attr):
                         setattr(dup, attr, getattr(e, attr))

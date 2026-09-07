@@ -120,7 +120,7 @@
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
     if (state.q) {
       const q = norm(state.q);
-      if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${e.description || ""}`).includes(q)) return false;
+      if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""}`).includes(q)) return false;
     }
     if (state.near && me) {
       if (e.lat == null || e.lon == null) return false;
@@ -167,6 +167,10 @@
   function genreTags(e) {
     return e.genres.map(g => `<span class="tag src-${e.genre_source || ""}" title="source : ${e.genre_source || "?"}">${TAG_LABELS[g] || g}</span>`).join("");
   }
+  // Fine-grained labels next to the coarse tags; clicking one searches for it (search matches sub-genres).
+  function subHtml(e, max = 2) {
+    return (e.subgenres || []).slice(0, max).map(s => `<button class="tag sub" type="button" data-sub="${esc(s)}" title="Chercher « ${esc(s)} »">${esc(s)}</button>`).join("");
+  }
   function statusTags(e) {
     const b = [];
     if (isNew(e)) b.push('<span class="tag new">Nouveau</span>');
@@ -184,7 +188,7 @@
       <time>${fmtTime(e.time)}</time>
       <div class="who">${esc(head)}${sup.length ? `<span>${esc(sup.join(", "))}</span>` : ""}</div>
       <div class="where">${esc([e.venue, e.area, walk(e)].filter(Boolean).join(" · "))}</div>
-      <div class="tags">${price}${genre ? `<span class="tag">${TAG_LABELS[genre] || genre}</span>` : ""}${statusTags(e)}</div>
+      <div class="tags">${price}${genre ? `<span class="tag">${TAG_LABELS[genre] || genre}</span>` : ""}${subHtml(e)}${statusTags(e)}</div>
     </div>`;
   }
   // One calendar week, Monday to Sunday. `from`/`to` bound the current view; days before today are "past".
@@ -265,7 +269,7 @@
         ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
         <button id="savebtn" type="button"></button>
       </div>
-      <div class="muted">${genreTags(e)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price ? "· " + esc(e.price) : ""} ${statusTags(e)}</div>
+      <div class="muted tagline">${genreTags(e)}${subHtml(e, 99)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price ? "· " + esc(e.price) : ""} ${statusTags(e)}</div>
       ${e.description ? `<p>${esc(e.description)}</p>` : ""}
       ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
       <div id="artist"></div>`;
@@ -389,13 +393,17 @@
       state.near = true; syncInputs(); render();
     }, () => { syncInputs(); alert("Position refusée"); }, { timeout: 10000 });
   };
+  function searchSub(label) { state.q = label; syncInputs(); render(); }
   $("#list").onclick = ev => {
     if (ev.target.closest("[data-next]")) { goWeek(state.week + 1); return; }
+    const sub = ev.target.closest(".tag.sub");
+    if (sub) { searchSub(sub.dataset.sub); return; }
     const row = ev.target.closest(".gig"); if (!row) return;
     const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
   };
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
+  detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); searchSub(sub.dataset.sub); } });
   document.addEventListener("keydown", ev => {
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
     if (!detail.hidden || /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName) || state.tab !== "week") return;

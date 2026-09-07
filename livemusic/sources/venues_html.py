@@ -200,13 +200,14 @@ def hasardludique(venue, ctx):
         kind = _first(r'<a class="event_card ([a-z_-]*)"', b) or ""
         url = _abs(base, _first(r'href="([^"]+)"', b))
         tags = clean_text(_first(r"<div>\s*<span>(.*?)</span>", b) or "")
+        tags = ", ".join(t.strip() for t in tags.split("#") if t.strip())   # "#pop #indie #alt" -> "pop, indie, alt"
         title = clean_text(_first(r"<h3>(.*?)</h3>", b) or "")
         date = parse_fr_date(_first(r"<strong>(.*?)</strong>", b) or "")
         img = _first(r"background-image: url\('([^']+)'\)", b)
         if not title or not date:
             continue
         events.append(Event(title=title, date=date, venue=venue["name"], venue_slug=venue["slug"], source="hasardludique",
-                            url=url, raw_genre=tags.replace("#", " ").strip() or None, image=img,
+                            url=url, raw_genre=tags or None, image=img,
                             is_music=kind == "concert"))
     return events
 

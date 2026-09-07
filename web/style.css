@@ -83,6 +83,9 @@ select.btn { padding: 8px 10px; }
 .tag.cancel { background: var(--ink); color: var(--paper); }
 .tag.other { border-style: dashed; border-color: var(--line); color: var(--muted); }
 .tag.saved { background: var(--gold); border-color: var(--gold); color: #fff; }
+.tag.sub { font: inherit; font-size: 11px; line-height: 1.5; background: none; border: 1px dashed var(--line); color: var(--muted); cursor: pointer; }
+.tag.sub:hover { border-color: var(--ink); color: var(--ink); }
+.tagline { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
 .list > .empty { color: var(--muted); padding: 60px 0; text-align: center; font-style: italic; }
 .report { color: var(--muted); font-size: 12px; padding: 20px 0; }
 .report summary { cursor: pointer; }
