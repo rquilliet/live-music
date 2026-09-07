@@ -9660,7 +9660,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop"
+"pop",
+"chanson"
 ],
 "artists": [
 "Céline Dion"
@@ -9745,8 +9746,8 @@
 "url": null,
 "price": null,
 "genres": [
-"afro",
-"pop"
+"pop",
+"world"
 ],
 "artists": [
 "Joé Dwèt Filé"
@@ -9920,8 +9921,7 @@
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"world"
+"jazz"
 ],
 "artists": [
 "Ibrahim Maalouf"
@@ -9968,7 +9968,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop"
+"pop",
+"chanson"
 ],
 "artists": [
 "Céline Dion"

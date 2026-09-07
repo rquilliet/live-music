@@ -10935,6 +10935,10 @@
 "554b01c35cfe": {
 "first_seen": "baseline",
 "date": "2026-11-30"
+},
+"eaac129f6252": {
+"first_seen": "baseline",
+"date": "2026-10-11"
 }
 },
 "venues": [
@@ -11116,6 +11120,7 @@
 "opendata:salle-pleyel",
 "opendata:studio-de-l-ermitage",
 "opendata:studio-raspail",
+"opendata:sunset-sunside",
 "opendata:supersonic",
 "opendata:theatre-de-la-concorde",
 "opendata:theatre-du-chatelet",

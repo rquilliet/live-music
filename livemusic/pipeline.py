@@ -10,7 +10,7 @@ import traceback
 from . import genres as G
 from .fetch import FetchError
 from .sources import STRATEGIES
-from .util import norm_title, slugify, strip_accents
+from .util import norm_title, slugify, split_lineup, strip_accents
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -89,6 +89,9 @@ def run(only=None, use_llm=True, log=print):
         events.extend(kept)
 
     events = merge(events, log)
+    for e in events:
+        if not e.headliner:
+            e.headliner, e.support = split_lineup(e.title)
 
     # genres: site tags -> rules -> venue default, then LLM for the weak ones
     for e in events:
@@ -174,11 +177,38 @@ def canonical_venue(e, venues):
 
 
 def _fill_venue_meta(e, v):
-    if not v:
-        return
-    e.address = e.address or v.get("address")
-    e.lat = e.lat if e.lat is not None else v.get("lat")
-    e.lon = e.lon if e.lon is not None else v.get("lon")
+    if v:
+        e.address = e.address or v.get("address")
+        e.lat = e.lat if e.lat is not None else v.get("lat")
+        e.lon = e.lon if e.lon is not None else v.get("lon")
+        e.area = e.area or v.get("area")
+    e.area = e.area or area_from_address(e.address)
+
+
+_POSTCODE = re.compile(r"\b(\d{5})\b[\s,]*([^\d,]*)")
+
+
+def area_from_address(address):
+    """'7 port de la Gare, 75013 Paris' -> '13e'; '21 rue Alexis Lepère, 93100 Montreuil' -> 'Montreuil'.
+
+    Curated venues carry a nicer neighbourhood in venues.json ("Bastille"); this is the fallback
+    for the hundreds of open-data venues.
+    """
+    if not address:
+        return None
+    matches = _POSTCODE.findall(address)   # the last 5-digit group is the postcode (a street number may come first)
+    if not matches:
+        return None
+    postcode, town = matches[-1]
+    if postcode.startswith("75"):
+        n = 16 if postcode == "75116" else int(postcode[2:])
+        if 1 <= n <= 20:
+            return "1er" if n == 1 else f"{n}e"
+        return None
+    town = re.split(r"\s+[-–/(]|\s+(?:cedex|france)\b", town, flags=re.I)[0].strip(" .-")
+    if town:
+        return town.title() if town.isupper() else town[:40]
+    return None
 
 
 # ------------------------------------------------------------------ merge
@@ -189,8 +219,7 @@ def _title_tokens(t):
 
 def _headliner(title: str) -> str:
     """'Jaguar Sun • Thala' and 'Jaguar Sun • Sean Nicholas Savage • Yes Please!' share a headliner."""
-    first = re.split(r"\s*(?:•|\+|/|\||,|&| x | vs\.? | feat\.? | w/ | - | – |:)\s*", title, maxsplit=1)[0]
-    return norm_title(first)
+    return norm_title(split_lineup(title)[0])
 
 
 def _same_show(a, b) -> bool:
