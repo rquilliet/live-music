@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live in Paris</title>
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Live <span>in Paris</span></h1>
+    <div class="meta" id="meta"></div>
+  </div>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Artiste, salle…" autocomplete="off">
+    <button id="near" class="btn" title="Trier par distance">📍 Près de moi</button>
+    <select id="radius" class="btn" hidden>
+      <option value="2">2 km</option><option value="5" selected>5 km</option>
+      <option value="10">10 km</option><option value="25">25 km</option><option value="1000">Tout</option>
+    </select>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="week">Cette semaine <b></b></button>
+  <button data-tab="nextweek">Semaine pro <b></b></button>
+  <button data-tab="month">30 jours <b></b></button>
+  <button data-tab="new">Nouveautés <b></b></button>
+  <button data-tab="all">Tout <b></b></button>
+</nav>
+
+<section class="filters">
+  <div class="chips" id="genres"></div>
+  <div class="row">
+    <select id="venue"><option value="">Toutes les salles</option></select>
+    <label class="toggle"><input type="checkbox" id="free"> Gratuit</label>
+    <label class="toggle"><input type="checkbox" id="others"> Inclure les non-concerts</label>
+    <button id="reset" class="link">Réinitialiser</button>
+  </div>
+</section>
+
+<main id="list" class="list"></main>
+
+<div id="detail" class="detail" hidden>
+  <div class="sheet">
+    <button class="close" id="close" aria-label="Fermer">✕</button>
+    <div class="hero" id="hero"><div class="hero-text" id="hero-text"></div></div>
+    <div class="body" id="detail-body"></div>
+  </div>
+</div>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>
