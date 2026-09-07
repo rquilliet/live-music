@@ -167,12 +167,16 @@ _STYLE_WORD = re.compile(
     r"choral|lieder|symphon|orchestr|qawwali|maloya|kabyle|persan|\bturc|indien|contemporain|\bworld|electroni|"
     r"hardcore|shoegaze|crust|\balt\b|alternati|\bbass\b|\bbreaks\b|\bjungle\b|footwork|\bbounce\b|ballroom"
 )
-_SPLIT = re.compile(r"\s*(?:,|/|;|\||•|\+|\bet\b|\band\b(?! bass))\s*", re.I)
+_SPLIT = re.compile(r"\s*(?:,|/|;|\||•|\+|\bet\b|\band\b(?! (?:bass|roll)))\s*", re.I)
+_FORMAT_PREFIX = re.compile(r"^(tribute|hommage|soiree|nuit|special|spéciale?)\b")   # "tribute beatles", "soirée électro"
 
 
 def _sub_key(label: str) -> str:
     """Comparison key: accent-free, lowercase, punctuation-free ("Post-Punk" == "post punk")."""
     return re.sub(r"[^a-z0-9&']+", " ", _norm(label)).strip()
+
+
+_COARSE_KEYS = {_sub_key(w) for w in COARSE_WORDS} | {_sub_key(w).replace(" ", "") for w in COARSE_WORDS}
 
 
 def _canon_subgenre(label: str) -> Optional[str]:
@@ -183,7 +187,9 @@ def _canon_subgenre(label: str) -> Optional[str]:
     key = re.sub(r"\s+et assimiles$", "", key)
     label = SUBGENRE_ALIASES.get(key) or SUBGENRE_ALIASES.get(key.replace(" ", "")) or label.lower()
     key = _sub_key(label)
-    if not key or len(key) < 3 or len(label) > 32 or key in COARSE_WORDS or key.replace(" ", "") in COARSE_WORDS:
+    if not key or len(key) < 3 or len(label) > 32 or key in _COARSE_KEYS or key.replace(" ", "") in _COARSE_KEYS:
+        return None
+    if _FORMAT_PREFIX.match(key):
         return None
     return label
 
@@ -261,13 +267,15 @@ def _cache_key(ev) -> str:
 
 
 def _apply_hit(ev, genres, is_music, subgenres=()):
-    """Merge an LLM answer into the event: keep the weaker tags when Claude returned none, and never
-    overwrite tags the venue itself published (those events are only asked for sub-genres)."""
+    """Merge an LLM answer into the event: keep the weaker tags when Claude returned none.  Events whose
+    tags come from the venue ('site') or from the page extraction ('llm', which saw the whole page) are
+    only asked for sub-genres: their genres and is_music are left alone."""
     genres = [g for g in genres if g in TAGS][:3]
-    if genres and ev.genre_source != "site":
-        ev.genres, ev.genre_source = genres, "llm"
+    if ev.genre_source not in ("site", "llm"):
+        if genres:
+            ev.genres, ev.genre_source = genres, "llm"
+        ev.is_music = ev.is_music and bool(is_music)
     ev.subgenres = merge_subgenres(ev.subgenres, subgenres)
-    ev.is_music = ev.is_music and bool(is_music)
 
 
 def _needs_llm(ev) -> bool:

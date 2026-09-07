@@ -19,6 +19,8 @@ class SubgenreTests(unittest.TestCase):
                     "Pianissimo Vol XXI, Coming Soon", "Makhtaverskan", "marché, braderie, vinyle", None, ""):
             self.assertEqual(G.subgenres_from_site(raw), [], raw)
         self.assertEqual(G.subgenres_from_site("Hyperpop et Club"), ["hyperpop"])
+        self.assertEqual(G.subgenres_from_site("Rock and Roll, Tribute Beatles, Soirée électro"), ["rock and roll"])
+        self.assertEqual(G.normalize_subgenres(["soul-rnb", "soul/r&b", "Hip Hop", "dj set", "neo-soul"]), ["neo-soul"])
         self.assertEqual(G.subgenres_from_site("Variété internationale (pop, soul, nouvelles esthétiques, RnB)"), [])
 
     def test_normalize_unifies_spellings_and_caps(self):
@@ -33,9 +35,14 @@ class SubgenreTests(unittest.TestCase):
         ev = Event(title="X", date="2026-09-10", venue="V", venue_slug="v", source="cigale", genres=["hip-hop"], genre_source="site")
         G._apply_hit(ev, ["pop"], True, ["boom bap", "hip-hop"])
         self.assertEqual((ev.genres, ev.genre_source, ev.subgenres), (["hip-hop"], "site", ["boom bap"]))
+        G._apply_hit(ev, [], False, [])
+        self.assertTrue(ev.is_music)  # a venue-published concert is not demoted by Claude
         weak = Event(title="Y", date="2026-09-10", venue="V", venue_slug="v", source="opendata", genres=["jazz"], genre_source="venue")
         G._apply_hit(weak, ["soul-rnb"], True, ["neo-soul"])
         self.assertEqual((weak.genres, weak.genre_source, weak.subgenres), (["soul-rnb"], "llm", ["neo-soul"]))
+        extracted = Event(title="Z", date="2026-09-10", venue="V", venue_slug="v", source="llm", genres=["jazz"], genre_source="llm")
+        G._apply_hit(extracted, ["experimental"], True, ["free jazz"])
+        self.assertEqual((extracted.genres, extracted.subgenres), (["jazz"], ["free jazz"]))  # page extraction saw more than the title
 
     def test_needs_llm(self):
         mk = lambda src, subs: Event(title="T", date="2026-09-10", venue="V", venue_slug="v", source="s", genres=["rock"], genre_source=src, subgenres=subs)
