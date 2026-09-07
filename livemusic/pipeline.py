@@ -155,20 +155,27 @@ def merge(events, log=print):
 
 
 def track_seen(events, today):
-    """Remember when each event id was first seen so the UI can show 'newly announced'."""
-    seen = {}
+    """Remember when each event id was first seen so the UI can show 'newly announced'.
+
+    A venue scraped for the first time (new in venues.json, or failing on the previous run) gets
+    'baseline' for all its events: its whole programme is not "newly announced".
+    """
+    seen, known_venues = {}, set()
     if os.path.exists(SEEN_PATH):
         with open(SEEN_PATH, "r", encoding="utf-8") as f:
-            seen = json.load(f)
-    baseline = not seen  # first ever run: nothing is "new"
+            saved = json.load(f)
+        if "ids" in saved:
+            seen, known_venues = saved["ids"], set(saved.get("venues", []))
+        else:  # first file format: a flat id -> date map
+            seen = saved
     stamp = today.isoformat()
     for e in events:
         if e.id not in seen:
-            seen[e.id] = "baseline" if baseline else stamp
-    # prune ids of events that are gone for good
+            seen[e.id] = stamp if e.venue_slug in known_venues else "baseline"
     ids = {e.id for e in events}
-    seen = {k: v for k, v in seen.items() if k in ids}
+    seen = {k: v for k, v in seen.items() if k in ids}  # prune events that are gone
+    venues = sorted(known_venues | {e.venue_slug for e in events})
     os.makedirs(DATA, exist_ok=True)
     with open(SEEN_PATH, "w", encoding="utf-8") as f:
-        json.dump(seen, f, indent=0)
+        json.dump({"ids": seen, "venues": venues}, f, indent=0)
     return seen
