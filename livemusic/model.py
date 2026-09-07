@@ -40,6 +40,7 @@ class Event:
     raw_genre: Optional[str] = None   # genre text as published by the venue / source
     genres: List[str] = field(default_factory=list)   # canonical tags
     genre_source: Optional[str] = None                # site | rules | llm | venue
+    subgenres: List[str] = field(default_factory=list)   # fine-grained labels (free text, lowercase)
     description: Optional[str] = None
     image: Optional[str] = None
     address: Optional[str] = None

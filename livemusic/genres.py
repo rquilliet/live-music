@@ -125,6 +125,111 @@ def apply_rules(ev, venue_default: Optional[List[str]] = None):
         ev.genres, ev.genre_source = list(venue_default), "venue"
 
 
+# --------------------------------------------------------------------------- sub-genres
+# Fine-grained labels ("stoner rock", "shoegaze", "bossa nova") shown next to the coarse tags.  They are
+# free text, so they are only lightly canonicalised: enough for the venue's "#indiepop" and Claude's
+# "indie pop" to be one label, and for a label that merely repeats a coarse tag to be dropped.
+
+MAX_SUBGENRES = 4
+SUBGENRE_ALIASES = {
+    "indiepop": "indie pop", "darkpop": "dark pop", "electronicrock": "electronic rock", "bossanova": "bossa nova",
+    "synth pop": "synth-pop", "synthpop": "synth-pop", "post punk": "post-punk", "postpunk": "post-punk",
+    "post rock": "post-rock", "postrock": "post-rock", "post hardcore": "post-hardcore", "post metal": "post-metal",
+    "trip hop": "trip-hop", "triphop": "trip-hop", "neo soul": "neo-soul", "neosoul": "neo-soul", "nu jazz": "nu-jazz",
+    "nu metal": "nu-metal", "lo fi": "lo-fi", "lofi": "lo-fi", "drum and bass": "drum & bass", "drum n bass": "drum & bass",
+    "drum'n'bass": "drum & bass", "dnb": "drum & bass", "d'n'b": "drum & bass", "psyche rock": "psychedelic rock",
+    "psych rock": "psychedelic rock", "psyche": "psychedelic", "psych": "psychedelic", "kpop": "k-pop", "jpop": "j-pop",
+    "rock alternatif": "alternative rock", "alt rock": "alternative rock", "afro beat": "afrobeat",
+    "chanson realiste": "chanson réaliste", "rap francais": "rap français", "pop francaise": "pop française",
+    "musique contemporaine": "contemporain", "musiques improvisees": "impro", "musique improvisee": "impro",
+}
+# A "sub-genre" that only repeats a coarse tag, or names an event format rather than a style, is dropped.
+COARSE_WORDS = {
+    "club", "clubbing", "dj set", "djset", "dj", "tribute", "showcase", "release party", "jam session", "jam",
+    "open mic", "karaoke", "soiree", "party", "gig",
+    "rock", "indie", "pop", "metal", "punk", "electro", "electronic", "electronica", "electronique", "electronic music",
+    "musiques electroniques", "musique electronique", "hip-hop", "hip hop", "hiphop", "rap", "soul", "rnb", "r&b",
+    "r'n'b", "soul-rnb", "soul/r&b", "funk", "jazz", "blues", "folk", "chanson", "chanson francaise", "world", "world music",
+    "musiques du monde", "musique du monde", "musiques traditionnelles", "musique traditionnelle", "traditionnel",
+    "latin", "latino", "afro", "reggae", "classical", "classique", "musique classique", "experimental", "experimentale",
+    "variete", "variete francaise", "variete internationale", "alt", "alternative", "alternatif", "concert", "concerts", "festival", "live", "musique", "music",
+}
+# Venue tags are also artist names, festival names and event types: keep only what looks like a style.
+_STYLE_WORD = re.compile(
+    r"pop|rock|punk|metal|core\b|wave\b|gaze\b|jazz|\bsoul|funk|folk|blues|hop\b|\brap\b|\btrap\b|house\b|techno|"
+    r"electro|ambient|drone|noise|psych|garage|\bsurf|indie|\bemo\b|\bska\b|\bdub|reggae|cumbia|bossa|samba|salsa|"
+    r"tango|afro|latin|chanson|variete|classique|baroque|opera|trance|disco|boogie|groove|grunge|stoner|doom|sludge|"
+    r"thrash|\bdeath\b|grind|dream|synth|kraut|lo-?fi|acousti|americana|bluegrass|country|gospel|klezmer|fado|"
+    r"flamenco|manouche|swing|bebop|experiment|impro|k-?pop|j-?pop|\bdnb\b|dubstep|breakbeat|\bacid\b|\bidm\b|"
+    r"\bedm\b|\brave\b|ragga|dancehall|rocksteady|zouk|kizomba|amapiano|highlife|gnawa|balkan|celti|tzigane|oriental|"
+    r"traditionnel|musette|yeye|industrial|goth|\bprog|batucada|forro|mariachi|reggaeton|bachata|kompa|\bsega\b|"
+    r"fusion|\btrad|beat|musique|\brnb\b|r&b|r'n'b|\bdrill\b|\bgrime\b|\bneo|chill|downtempo|minimal|chamber|"
+    r"choral|lieder|symphon|orchestr|qawwali|maloya|kabyle|persan|\bturc|indien|contemporain|\bworld|electroni|"
+    r"hardcore|shoegaze|crust|\balt\b|alternati|\bbass\b|\bbreaks\b|\bjungle\b|footwork|\bbounce\b|ballroom"
+)
+_SPLIT = re.compile(r"\s*(?:,|/|;|\||•|\+|\bet\b|\band\b(?! bass))\s*", re.I)
+
+
+def _sub_key(label: str) -> str:
+    """Comparison key: accent-free, lowercase, punctuation-free ("Post-Punk" == "post punk")."""
+    return re.sub(r"[^a-z0-9&']+", " ", _norm(label)).strip()
+
+
+def _canon_subgenre(label: str) -> Optional[str]:
+    label = clean_text_light(label)
+    if not label:
+        return None
+    key = _sub_key(label)
+    key = re.sub(r"\s+et assimiles$", "", key)
+    label = SUBGENRE_ALIASES.get(key) or SUBGENRE_ALIASES.get(key.replace(" ", "")) or label.lower()
+    key = _sub_key(label)
+    if not key or len(key) < 3 or len(label) > 32 or key in COARSE_WORDS or key.replace(" ", "") in COARSE_WORDS:
+        return None
+    return label
+
+
+def clean_text_light(s: str) -> str:
+    s = re.sub(r"\(.*?\)", " ", s or "")           # "Variété internationale (pop, soul, RnB)"
+    s = s.replace("#", " ").strip(" .-–—:*")
+    return " ".join(s.split())
+
+
+def normalize_subgenres(labels) -> List[str]:
+    """Canonical spelling, no duplicates, no coarse-tag repeats, at most MAX_SUBGENRES."""
+    out, seen = [], set()
+    for raw in labels or []:
+        if not isinstance(raw, str):
+            continue
+        label = _canon_subgenre(raw)
+        if not label:
+            continue
+        key = _sub_key(label).replace(" ", "").replace("-", "")
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(label)
+        if len(out) >= MAX_SUBGENRES:
+            break
+    return out
+
+
+def subgenres_from_site(raw_genre: Optional[str]) -> List[str]:
+    """Fine-grained labels out of the genre text published by the venue.
+
+    'Metal, Punk, Heavy Metal, Hard Rock et assimilés' -> ['heavy metal', 'hard rock'];
+    'pop, indie, alt' -> []; 'Coming Soon' / 'Makhtaverskan' (an artist) -> [].
+    """
+    if not raw_genre:
+        return []
+    parts = [p for p in _SPLIT.split(clean_text_light(raw_genre)) if p]
+    return normalize_subgenres([p for p in parts if _STYLE_WORD.search(_norm(p))])
+
+
+def merge_subgenres(*lists) -> List[str]:
+    """Earlier lists win (venue descriptors before Claude's)."""
+    return normalize_subgenres([x for lst in lists for x in (lst or [])])
+
+
 # --------------------------------------------------------------------------- LLM tagging
 
 def llm_available() -> bool:
@@ -155,19 +260,25 @@ def _cache_key(ev) -> str:
     return f"{ev.venue_slug}|{norm_title(ev.title)}"
 
 
-def _apply_hit(ev, genres, is_music):
-    """Merge an LLM answer into the event: keep the weaker tags when Claude returned none."""
+def _apply_hit(ev, genres, is_music, subgenres=()):
+    """Merge an LLM answer into the event: keep the weaker tags when Claude returned none, and never
+    overwrite tags the venue itself published (those events are only asked for sub-genres)."""
     genres = [g for g in genres if g in TAGS][:3]
-    if genres:
+    if genres and ev.genre_source != "site":
         ev.genres, ev.genre_source = genres, "llm"
+    ev.subgenres = merge_subgenres(ev.subgenres, subgenres)
     ev.is_music = ev.is_music and bool(is_music)
 
 
-def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
-    """Ask Claude for genres of events whose tags came from weak sources.
+def _needs_llm(ev) -> bool:
+    """Weakly tagged music events, plus well-tagged ones that still lack a fine-grained label."""
+    return ev.is_music and (ev.genre_source not in ("site", "llm") or not ev.subgenres)
 
-    Only music events with genre_source in (None, 'venue', 'rules') are sent; results are cached by
-    venue+title so re-runs are free.  Needs ANTHROPIC_API_KEY.
+
+def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
+    """Ask Claude for genres and sub-genres of events whose tags came from weak sources, or that have no
+    sub-genre yet.  Results are cached by venue+title so re-runs are free (entries written before
+    sub-genres existed are refreshed once).  Needs ANTHROPIC_API_KEY.
     """
     import anthropic
     from pydantic import BaseModel, ValidationError
@@ -175,6 +286,7 @@ def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
     class Tagged(BaseModel):
         id: str
         genres: List[str]
+        subgenres: List[str] = []
         is_music: bool
 
     class TaggedList(BaseModel):
@@ -183,11 +295,11 @@ def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
     cache = _cache_load(cache_path)
     todo = []
     for ev in events:
-        if not ev.is_music or ev.genre_source in ("site", "llm"):
+        if not _needs_llm(ev):
             continue
-        key = _cache_key(ev)
-        if key in cache:
-            _apply_hit(ev, cache[key].get("genres", []), cache[key].get("is_music", True))
+        hit = cache.get(_cache_key(ev))
+        if hit and "subgenres" in hit:
+            _apply_hit(ev, hit.get("genres", []), hit.get("is_music", True), hit["subgenres"])
         else:
             todo.append(ev)
     if not todo:
@@ -201,7 +313,12 @@ def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
         f"Allowed genre tags (use 1 to 3 per event, most specific first): {', '.join(TAGS)}.\n"
         "Use your knowledge of the artists when the title names them. 'is_music' is false for "
         "comedy, theatre, talks, exhibitions, sport, workshops, kids' shows and other non-concert "
-        "events. Return every id you were given exactly once."
+        "events.\n"
+        "'subgenres': 0 to 3 fine-grained styles as short lowercase free text, most characteristic "
+        "first (stoner rock, shoegaze, post-grindcore, drone, neo-soul, boom bap, bossa nova, free jazz, "
+        "baroque, rap français...). Use the usual English name, or French for French-specific styles. "
+        "Never repeat a coarse tag as a sub-genre; leave the list empty rather than guessing.\n"
+        "Return every id you were given exactly once."
     )
     log(f"  LLM: tagging {len(todo)} events with {model} in batches of {batch_size}")
     for i in range(0, len(todo), batch_size):
@@ -237,7 +354,8 @@ def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
             ev = by_id.get(t.id)
             if not ev:
                 continue
-            _apply_hit(ev, t.genres, t.is_music)
-            cache[_cache_key(ev)] = {"genres": [g for g in t.genres if g in TAGS][:3], "is_music": bool(t.is_music)}
+            _apply_hit(ev, t.genres, t.is_music, t.subgenres)
+            cache[_cache_key(ev)] = {"genres": [g for g in t.genres if g in TAGS][:3], "is_music": bool(t.is_music),
+                                     "subgenres": normalize_subgenres(t.subgenres)}
         _cache_save(cache_path, cache)
         log(f"  LLM: {min(i + batch_size, len(todo))}/{len(todo)} done")

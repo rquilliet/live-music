@@ -73,7 +73,7 @@
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
     if (state.q) {
       const q = norm(state.q);
-      if (!norm(`${e.title} ${e.venue} ${e.raw_genre || ""} ${e.description || ""}`).includes(q)) return false;
+      if (!norm(`${e.title} ${e.venue} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""}`).includes(q)) return false;
     }
     if (state.near && me) {
       if (e.lat == null || e.lon == null) return false;
@@ -105,6 +105,10 @@
   function tagHtml(e) {
     return e.genres.map(g => `<span class="tag src-${e.genre_source || ""}" title="source : ${e.genre_source || "?"}">${TAG_LABELS[g] || g}</span>`).join("");
   }
+  // Fine-grained labels next to the coarse tags; clicking one searches for it (search matches sub-genres).
+  function subHtml(e, max = 3) {
+    return (e.subgenres || []).slice(0, max).map(s => `<button class="tag sub" data-sub="${esc(s)}" title="Chercher « ${esc(s)} »">${esc(s)}</button>`).join("");
+  }
   function badges(e) {
     const b = [];
     if (isNew(e)) b.push('<span class="badge new">nouveau</span>');
@@ -132,7 +136,7 @@
           <div class="title">${esc(e.title)}</div>
           <div class="sub"><span>${esc(e.venue)}${dist}</span>${e.price && !e.free ? `<span>${esc(e.price)}</span>` : ""}${badges(e)}</div>
         </div>
-        <div class="tags">${tagHtml(e)}</div>
+        <div class="tags">${tagHtml(e)}${subHtml(e)}</div>
       </div>`;
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
@@ -161,7 +165,7 @@
         ${ticket && page ? `<a class="secondary" href="${esc(page)}" target="_blank" rel="noopener">Page de la salle ↗</a>` : ""}
         ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
       </div>
-      <div class="muted">${tagHtml(e)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price && !e.free ? "· " + esc(e.price) : ""} ${badges(e)}</div>
+      <div class="muted tagline">${tagHtml(e)}${subHtml(e, 99)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price && !e.free ? "· " + esc(e.price) : ""} ${badges(e)}</div>
       ${e.description ? `<p>${esc(e.description)}</p>` : ""}
       ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
       <div id="artist"></div>`;
@@ -272,7 +276,14 @@
       state.near = true; syncInputs(); render();
     }, () => { $("#near").textContent = "📍 Près de moi"; alert("Position refusée"); }, { timeout: 10000 });
   };
-  $("#list").onclick = ev => { const row = ev.target.closest(".ev"); if (!row) return; const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e); };
+  function searchSub(label) { state.q = label; syncInputs(); render(); }
+  $("#list").onclick = ev => {
+    const sub = ev.target.closest(".tag.sub");
+    if (sub) { searchSub(sub.dataset.sub); return; }
+    const row = ev.target.closest(".ev"); if (!row) return;
+    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
+  };
+  detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); searchSub(sub.dataset.sub); } });
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
   document.addEventListener("keydown", ev => { if (ev.key === "Escape" && !detail.hidden) closeDetail(); });

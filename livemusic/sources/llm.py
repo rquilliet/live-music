@@ -7,7 +7,7 @@ import os
 from typing import List, Optional
 
 from ..fetch import get, FetchError
-from ..genres import llm_available, TAGS
+from ..genres import llm_available, normalize_subgenres, TAGS
 from ..model import Event
 from ..util import html_to_text
 
@@ -29,6 +29,7 @@ def scrape(venue, ctx):
         url: Optional[str] = None
         price: Optional[str] = None
         genres: List[str] = []
+        subgenres: List[str] = []
         artists: List[str] = []
         is_music: bool = True
         sold_out: bool = False
@@ -67,6 +68,9 @@ def scrape(venue, ctx):
         "navigation, and anything that is not an event. Mark comedy, theatre, talks, exhibitions and "
         "similar as is_music=false. Keep titles as printed (headliner + support acts). "
         f"Genres must come from: {', '.join(TAGS)} (1-3 per event, or empty if unknown). "
+        "Add 0-3 'subgenres': fine-grained styles as short lowercase free text (stoner rock, shoegaze, "
+        "drone, neo-soul, boom bap, bossa nova, free jazz, baroque, rap français...), using the page's own "
+        "descriptors and your knowledge of the artists; never repeat a coarse genre, leave it empty if unsure. "
         "Absolute URLs only; leave url empty if unsure. The text may be one part of a longer page."
     )
     events, seen = [], set()
@@ -106,6 +110,7 @@ def scrape(venue, ctx):
 def _to_event(x: dict, venue) -> Event:
     genres = [g for g in x.get("genres", []) if g in TAGS][:3]
     return Event(
+        subgenres=normalize_subgenres(x.get("subgenres", [])),
         title=x["title"], date=x["date"], time=x.get("time") or None, venue=venue["name"], venue_slug=venue["slug"],
         source="llm", url=x.get("url") or venue["url"], price=x.get("price"), genres=genres,
         genre_source="llm" if genres else None, is_music=x.get("is_music", True), sold_out=x.get("sold_out", False),
