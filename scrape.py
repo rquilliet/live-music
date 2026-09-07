@@ -10,9 +10,11 @@ import argparse
 import sys
 
 from livemusic import fetch, pipeline
+from livemusic.config import load_dotenv
 
 
 def main():
+    load_dotenv()
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--only", nargs="*", help="venue slugs or strategy names to run")
     p.add_argument("--no-llm", action="store_true", help="never call the Claude API")
