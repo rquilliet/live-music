@@ -64,6 +64,20 @@ def norm_title(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+# Separators between acts on a bill. "&" is deliberately absent: "Frankie & The Witch Fingers" is one band.
+_LINEUP_SEP = re.compile(r"\s*(?:•|·\s|\+|\s/\s|\s\|\s|,|\s(?:x|vs\.?|feat\.?|ft\.?|w/|invite|avec)\s|\s[-–—]\s|:(?=\s))\s*", re.I)
+
+
+def split_lineup(title: str):
+    """'Jaguar Sun • Sean Nicholas Savage • Yes Please!' -> ('Jaguar Sun', ['Sean Nicholas Savage', 'Yes Please!'])."""
+    parts = [p.strip(" -–—:•·") for p in _LINEUP_SEP.split(clean_text(title))]
+    parts = [p for p in parts if len(p) > 1]
+    if not parts:
+        return clean_text(title), []
+    # a lowercase part after the separator is a description ("au 38Riv Jazz Club", "jam"), not an act
+    return parts[0], [p for p in parts[1:] if not p[0].islower()][:6]
+
+
 def slugify(s: str) -> str:
     s = strip_accents(s.lower())
     s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")

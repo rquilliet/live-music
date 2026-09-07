@@ -8031,6 +8031,74 @@
 "52c4bb3e4b25": {
 "first_seen": "baseline",
 "date": "2027-01-02"
+},
+"eaac129f6252": {
+"first_seen": "baseline",
+"date": "2026-10-11"
+},
+"2448fa0813d5": {
+"first_seen": "baseline",
+"date": "2026-09-12"
+},
+"37393121c67d": {
+"first_seen": "baseline",
+"date": "2026-10-31"
+},
+"9f36ef589fe6": {
+"first_seen": "baseline",
+"date": "2026-11-21"
+},
+"e308bea109de": {
+"first_seen": "baseline",
+"date": "2026-11-22"
+},
+"f935b3cf2862": {
+"first_seen": "baseline",
+"date": "2026-11-27"
+},
+"a488f9d2f7de": {
+"first_seen": "baseline",
+"date": "2026-11-28"
+},
+"d7c9415dbb84": {
+"first_seen": "baseline",
+"date": "2026-11-29"
+},
+"9466f7c9ba9a": {
+"first_seen": "baseline",
+"date": "2026-12-05"
+},
+"9a1a7b73b2f9": {
+"first_seen": "baseline",
+"date": "2026-12-12"
+},
+"bae81a15d52a": {
+"first_seen": "baseline",
+"date": "2026-12-13"
+},
+"f8752f8f69df": {
+"first_seen": "baseline",
+"date": "2026-12-16"
+},
+"96e4e0f06c33": {
+"first_seen": "baseline",
+"date": "2026-12-17"
+},
+"12d984585560": {
+"first_seen": "baseline",
+"date": "2026-12-19"
+},
+"af14fce121d0": {
+"first_seen": "baseline",
+"date": "2026-12-20"
+},
+"8b5da033984c": {
+"first_seen": "baseline",
+"date": "2026-12-26"
+},
+"47d18e936b99": {
+"first_seen": "baseline",
+"date": "2026-12-27"
 }
 },
 "venues": [
@@ -8055,6 +8123,7 @@
 "llm:le-plan",
 "llm:mains-d-oeuvres",
 "llm:olympia",
+"llm:paris-la-defense-arena",
 "llm:zenith-paris",
 "maroquinerie:la-maroquinerie",
 "newmorning:new-morning",
@@ -8189,6 +8258,7 @@
 "opendata:salle-pleyel",
 "opendata:studio-de-l-ermitage",
 "opendata:studio-raspail",
+"opendata:sunset-sunside",
 "opendata:supersonic",
 "opendata:theatre-de-la-concorde",
 "opendata:theatre-du-chatelet",
@@ -8241,6 +8311,7 @@
 "Philharmonie de Paris": 0,
 "La Clef": 0,
 "Les Disquaires": 0,
-"FGO-Barbara": 1
+"FGO-Barbara": 1,
+"Paris La D\u00e9fense Arena": 16
 }
 }
