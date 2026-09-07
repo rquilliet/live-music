@@ -41,6 +41,8 @@ def scrape(venue, ctx):
             texts.append(f"### {u}\n" + html_to_text(get(u)))
         except FetchError as e:
             ctx["log"](f"  {venue['name']}: fetch failed: {e}")
+    if not texts:
+        raise FetchError(f"no page could be fetched for {venue['name']}")
     text = "\n\n".join(texts)
     if len(text) < 200:
         return []
