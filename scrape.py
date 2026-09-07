@@ -14,6 +14,7 @@ from livemusic.config import load_dotenv
 
 
 def main():
+    sys.stdout.reconfigure(line_buffering=True)  # readable progress when piped to a log file
     load_dotenv()
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--only", nargs="*", help="venue slugs or strategy names to run")

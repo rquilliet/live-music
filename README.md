@@ -5,10 +5,19 @@ genre, browsable by *this week / next week / next 30 days / newly announced*.
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-ant-...      # optional: Claude tags genres + extracts venues without a parser
+cp .env.example .env                     # put your Anthropic API key in there (console.anthropic.com -> API Keys)
 .venv/bin/python scrape.py               # -> web/events.json  (add --no-llm to skip Claude)
 .venv/bin/python serve.py                # http://localhost:8765
 ```
+
+Without a key the scraper still works with the venues that have a parser; Claude adds genre tagging
+and the venues marked `"strategy": "llm"` in `venues.json`.
+
+## Tooling
+
+- `.mcp.json` declares Linear's MCP server so Claude Code can read and create backlog tickets from
+  this project (approve the server and log in to Linear when prompted).
+- `.claude/launch.json` lets Claude Code start the dev server for screenshots.
 
 ## How it works
 
