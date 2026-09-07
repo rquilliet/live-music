@@ -14,5 +14,6 @@ STRATEGIES = {
     "hasardludique": venues_html.hasardludique,
     "newmorning": venues_html.newmorning,
     "instantschavires": venues_html.instantschavires,
+    "boulenoire": venues_html.boulenoire,
     "llm": llm.scrape,
 }

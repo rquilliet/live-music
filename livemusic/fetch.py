@@ -3,6 +3,8 @@ import gzip
 import hashlib
 import json
 import os
+import ssl
+import subprocess
 import time
 import urllib.error
 import urllib.request
@@ -53,10 +55,39 @@ def get(url: str, accept: str = "text/html,application/xhtml+xml,application/jso
             last = FetchError(f"HTTP {e.code} for {url}")
             if e.code in (403, 404, 406, 410):
                 break
-        except Exception as e:  # timeouts, DNS, TLS
+        except (ssl.SSLError, urllib.error.URLError) as e:
+            if not isinstance(e, ssl.SSLError) and "SSL" not in str(e):
+                last = FetchError(f"{type(e).__name__}: {e} for {url}")
+            else:
+                # Python's TLS stack is refused by a few hosts (La Place, Plenitude Arena): let curl talk to them
+                body = _curl(url, timeout)
+                if body is not None:
+                    with open(path, "w", encoding="utf-8") as f:
+                        f.write(body)
+                    return body
+                last = FetchError(f"TLS refused by the server and curl fallback failed for {url}")
+                break
+        except Exception as e:  # timeouts, DNS
             last = FetchError(f"{type(e).__name__}: {e} for {url}")
         time.sleep(1.5 * (attempt + 1))
     raise last
+
+
+def _curl(url: str, timeout: int):
+    """Fetch with the system curl (its TLS stack differs from Python's).
+
+    None when curl is missing, times out, or the server answers an HTTP error (-f), so a 404 page
+    is never cached as a programme."""
+    try:
+        p = subprocess.run(["curl", "-sSfL", "--compressed", "-m", str(timeout), "-A", UA,
+                            "-H", "Accept: text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+                            "-H", "Accept-Language: fr-FR,fr;q=0.9,en;q=0.8", url],
+                           capture_output=True, timeout=timeout + 5)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if p.returncode != 0 or not p.stdout:
+        return None
+    return p.stdout.decode("utf-8", errors="replace")
 
 
 def get_json(url: str, **kw):

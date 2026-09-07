@@ -64,6 +64,30 @@ def norm_title(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+# Separators between acts on a bill. "&" is deliberately absent: "Frankie & The Witch Fingers" is one band.
+_LINEUP_SEP = re.compile(r"\s*(?:•|·\s|\+|\s/\s|\s\|\s|,|\s(?:x|vs\.?|feat\.?|ft\.?|w/|invite|avec)\s|\s[-–—]\s|:(?=\s))\s*", re.I)
+
+
+# "Concert : Kokoroko" -> the act is after the colon, not before
+_GENERIC_LEAD = re.compile(r"^(?:concerts?|caf[ée][ -]concert|ap[ée]ro[ -]concert|club|jazz club|soir[ée]e|live|showcase|"
+                           r"jam(?: session)?|programmation|musique|spectacle|release party)$", re.I)
+# parts that are status / time / stage directions, never an act
+_LINEUP_NOISE = re.compile(r"^(?:complet|sold ?out|annul[ée]e?|report[ée]e?|nouvelle date|guests?|1[eè]re partie|"
+                           r"premi[eè]re partie|first part|\d{1,2}\s*[h:]\s*\d{0,2})$", re.I)
+
+
+def split_lineup(title: str):
+    """'Jaguar Sun • Sean Nicholas Savage • Yes Please!' -> ('Jaguar Sun', ['Sean Nicholas Savage', 'Yes Please!'])."""
+    parts = [p.strip(" -–—:•·") for p in _LINEUP_SEP.split(clean_text(title))]
+    parts = [p for p in parts if len(p) > 1 and not _LINEUP_NOISE.match(p)]
+    if len(parts) > 1 and _GENERIC_LEAD.match(parts[0]):
+        parts = parts[1:]
+    if not parts:
+        return clean_text(title), []
+    # a lowercase part after the separator is a description ("au 38Riv Jazz Club", "jam"), not an act
+    return parts[0], [p for p in parts[1:] if not p[0].islower()][:6]
+
+
 def slugify(s: str) -> str:
     s = strip_accents(s.lower())
     s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")

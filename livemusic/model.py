@@ -44,6 +44,9 @@ class Event:
     description: Optional[str] = None
     image: Optional[str] = None
     address: Optional[str] = None
+    area: Optional[str] = None        # neighbourhood / arrondissement / town shown next to the venue
+    headliner: Optional[str] = None   # first act of the bill (from the title)
+    support: List[str] = field(default_factory=list)  # the other acts
     lat: Optional[float] = None
     lon: Optional[float] = None
     is_music: bool = True
