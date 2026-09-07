@@ -181,17 +181,17 @@ def area_from_address(address):
     """
     if not address:
         return None
-    m = _POSTCODE.search(address)
-    if not m:
+    matches = _POSTCODE.findall(address)   # the last 5-digit group is the postcode (a street number may come first)
+    if not matches:
         return None
-    postcode, town = m.group(1), m.group(2).strip(" .-")
+    postcode, town = matches[-1]
     if postcode.startswith("75"):
         n = 16 if postcode == "75116" else int(postcode[2:])
         if 1 <= n <= 20:
             return "1er" if n == 1 else f"{n}e"
         return None
+    town = re.split(r"\s+[-–/(]|\s+(?:cedex|france)\b", town, flags=re.I)[0].strip(" .-")
     if town:
-        town = town.split(" cedex")[0].strip()
         return town.title() if town.isupper() else town[:40]
     return None
 

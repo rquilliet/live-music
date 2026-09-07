@@ -57,7 +57,7 @@ select.btn { padding: 8px 10px; }
 .weekhead { font-family: var(--display); font-size: 22px; font-weight: 700; margin: 26px 0 8px; display: flex; align-items: baseline; gap: 10px; }
 .weekhead em { font-style: normal; font-family: var(--body); font-weight: 400; font-size: 13px; color: var(--muted); }
 .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1.5px solid var(--rule); border-left: 1.5px solid var(--rule); background: var(--paper); }
-.day { border-right: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); min-height: 220px; display: flex; flex-direction: column; min-width: 0; }
+.day { border-right: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); min-height: 320px; display: flex; flex-direction: column; min-width: 0; }
 .day h2 { font-family: var(--display); font-weight: 700; font-size: 20px; margin: 0; padding: 10px 12px; border-bottom: 1.5px solid var(--rule);
   display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
 .day h2 em { font-style: normal; font-weight: 500; font-size: 13px; font-family: var(--body); color: var(--muted); white-space: nowrap; }
@@ -92,7 +92,7 @@ code { background: var(--paper2); padding: 1px 4px; }
 .detail { position: fixed; inset: 0; background: rgba(23, 20, 15, .55); z-index: 20; display: flex; justify-content: flex-end; }
 .detail[hidden] { display: none; }
 .sheet { position: relative; width: min(640px, 100%); height: 100%; overflow-y: auto; background: var(--paper); border-left: 2px solid var(--ink); }
-.close { position: absolute; top: 12px; right: 12px; z-index: 2; background: var(--paper); color: var(--ink); border: 1.5px solid var(--ink);
+.close { position: fixed; top: 12px; right: 12px; z-index: 2; background: var(--paper); color: var(--ink); border: 1.5px solid var(--ink);
   width: 36px; height: 36px; font-size: 16px; }
 .close:hover { background: var(--ink); color: var(--paper); }
 .hero { position: relative; min-height: 280px; background: var(--plum) center/cover no-repeat; display: flex; align-items: flex-end; color: #f2ecff; }
@@ -122,13 +122,11 @@ code { background: var(--paper2); padding: 1px 4px; }
 .links a { color: var(--muted); }
 
 /* ---------- responsive ---------- */
-@media (max-width: 1100px) {
-  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
 @media (max-width: 900px) {
   .top, .weeknav, .filters, .list { padding-left: 16px; padding-right: 16px; }
   .top h1 { font-size: 44px; }
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); border-right: 1.5px solid var(--rule); }
+  .day:nth-child(2n) { border-right: 0; }
   .day { min-height: 0; }
   .views { margin-left: 0; width: 100%; }
 }

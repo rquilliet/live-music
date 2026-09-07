@@ -26,7 +26,7 @@
     try { s = Object.assign(def, JSON.parse(localStorage.getItem("lip-state") || "{}")); } catch { /* keep defaults */ }
     if (s.tab === "nextweek") { s.tab = "week"; s.week = 1; }   // tab from the previous UI
     if (!TABS.includes(s.tab)) s.tab = "week";
-    if (!Number.isInteger(s.week) || s.week < 0) s.week = 0;
+    s.week = 0;   // always land on the current week; the offset is only kept while browsing
     if (!Array.isArray(s.genres)) s.genres = [];
     return s;
   }
@@ -47,10 +47,15 @@
   function monday(d) { return addDays(d, -((d.getDay() + 6) % 7)); }
   function fmtDay(s) { const d = parseISO(s); return `${DAYS[d.getDay()]} ${d.getDate()} ${MONTHS[d.getMonth()]}`; }
   function fmtShort(d) { return `${d.getDate()} ${MONTHS[d.getMonth()]}`; }
-  function fmtTime(t) { if (!t) return "—"; const [h, m] = t.split(":"); return m === "00" ? `${+h}h` : `${+h}h${m}`; }
+  function fmtTime(t) {
+    const m = /^(\d{1,2})\s*[:h]\s*(\d{2})?/.exec(t || "");
+    if (!m) return t || "—";
+    return !m[2] || m[2] === "00" ? `${+m[1]}h` : `${+m[1]}h${m[2]}`;
+  }
   function weekLabel(mon) {
     const sun = addDays(mon, 6);
-    return mon.getMonth() === sun.getMonth() ? `${mon.getDate()} – ${sun.getDate()} ${MONTHS[mon.getMonth()]}` : `${fmtShort(mon)} – ${fmtShort(sun)}`;
+    const year = sun.getFullYear() !== today0().getFullYear() ? ` ${sun.getFullYear()}` : "";
+    return (mon.getMonth() === sun.getMonth() ? `${mon.getDate()} – ${sun.getDate()} ${MONTHS[mon.getMonth()]}` : `${fmtShort(mon)} – ${fmtShort(sun)}`) + year;
   }
   function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
   function km(a, b) {
@@ -83,10 +88,12 @@
     const parts = splitArtists(e.title);
     return parts.length ? parts : [e.title];
   }
-  // "De 6 à 9 euros." -> "6–9 €", "Tarif plein : 10 EUR" -> "10 €", "payant" -> "payant", nothing usable -> null
+  // "De 6 à 9 euros." -> "6–9 €", "Tarif plein : 10 EUR" -> "10 €", "payant" -> "payant", nothing usable -> null.
+  // Only amounts followed by a currency word count (or the low end of "6 à 9 euros"): dates, ages and "1 consommation" do not.
+  const AMOUNT = /\d+(?:[.,]\d+)?(?=\s*(?:€|euros?\b|eur\b)|\s*(?:à|-|–|\/)\s*\d+(?:[.,]\d+)?\s*(?:€|euros?\b|eur\b))/gi;
   function shortPrice(p) {
     if (!p) return null;
-    const nums = (p.match(/\d+(?:[.,]\d+)?/g) || []).map(x => parseFloat(x.replace(",", "."))).filter(n => n > 0 && n < 1000);
+    const nums = (p.match(AMOUNT) || []).map(x => parseFloat(x.replace(",", "."))).filter(n => n > 0 && n < 1000);
     if (!nums.length) return /payant/i.test(p) ? "payant" : null;
     const f = n => Number.isInteger(n) ? String(n) : n.toFixed(2).replace(".", ",");
     const lo = Math.min(...nums), hi = Math.max(...nums);
@@ -263,7 +270,7 @@
       ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
       <div id="artist"></div>`;
     renderSaveButton();
-    $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); renderGenres(); renderList(); };
+    $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); render(); };
     $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
       $$(".artist-pick button", detail).forEach(x => x.classList.remove("on")); b.classList.add("on");
       loadArtist(artists[Number(b.dataset.i)], e);
@@ -392,7 +399,7 @@
   document.addEventListener("keydown", ev => {
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
     if (!detail.hidden || /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName) || state.tab !== "week") return;
-    if (ev.key === "ArrowLeft") goWeek(state.week - 1);
+    if (ev.key === "ArrowLeft" && state.week > 0) goWeek(state.week - 1);
     if (ev.key === "ArrowRight") goWeek(state.week + 1);
   });
 
