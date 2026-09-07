@@ -11,5 +11,6 @@ The backlog now lives in Linear (team **Remi Quilliet**, `REM`) — this file is
 | [REM-9](https://linear.app/remi-quilliet/issue/REM-9) | "Artists I should dig" filter from Spotify likes (optional login) |
 | [REM-10](https://linear.app/remi-quilliet/issue/REM-10) | Persistent player footer (keeps playing while browsing) |
 | [REM-11](https://linear.app/remi-quilliet/issue/REM-11) | Searchable multi-select venue filter (replace the dropdown) |
+| [REM-12](https://linear.app/remi-quilliet/issue/REM-12) | Reskin app with attached HTML file (3 design directions, mock in `design/`) |
 
 Add new ideas as Linear issues, not here.
