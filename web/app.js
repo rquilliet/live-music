@@ -16,10 +16,13 @@
   const WALK_KMH = 4.5;
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ tab: "week", week: 0, genres: [], styles: [], venue: "", free: false, saved: false, others: false, q: "", near: false, radius: 5 });
+  let state = load({ tab: "week", week: 0, genres: [], styles: [], venues: [], free: false, saved: false, others: false, q: "", near: false, radius: 5 });
   let saved = loadSaved(); // ids of concerts the user bookmarked ("Enregistrer")
   let me = null; // {lat, lon}
   let stylesOpen = false; // "+N autres" expanded (not persisted)
+  let venueOpen = false; // venue picker popover (not persisted)
+  let venueHi = null;    // venue name highlighted with the arrow keys in the picker
+  let venueShown = [];   // venues currently listed in the picker, in display order
 
   // ------------------------------------------------------------ helpers
   function load(def) {
@@ -30,6 +33,10 @@
     s.week = 0;   // always land on the current week; the offset is only kept while browsing
     if (!Array.isArray(s.genres)) s.genres = [];
     if (!Array.isArray(s.styles)) s.styles = [];
+    if (!Array.isArray(s.venues)) s.venues = [];
+    s.venues = s.venues.filter(v => typeof v === "string" && v);
+    if (typeof s.venue === "string" && s.venue && !s.venues.length) s.venues = [s.venue];   // single-venue dropdown from the previous UI
+    delete s.venue;
     return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
@@ -116,7 +123,7 @@
   }
   function baseFilter(e) {
     if (!state.others && !e.is_music) return false;
-    if (state.venue && e.venue !== state.venue) return false;
+    if (state.venues.length && !state.venues.includes(e.venue)) return false;
     if (state.free && !e.free) return false;
     if (state.saved && !saved.has(e.id)) return false;
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
@@ -187,10 +194,72 @@
     state.styles = state.styles.includes(s) ? state.styles.filter(x => x !== s) : [...state.styles, s];
     render();
   }
+  // Venue picker: a chip-like trigger + a popover with a search box and one checkbox per venue. Several venues
+  // can be picked at once (state.venues, OR between them); each pick is also a removable chip next to the trigger.
+  // Counts follow the current tab like the genre chips do.
   function renderVenues() {
-    const sel = $("#venue");
-    const cur = state.venue;
-    sel.innerHTML = '<option value="">Toutes les salles</option>' + DATA.venues.map(v => `<option ${v === cur ? "selected" : ""}>${esc(v)}</option>`).join("");
+    const n = state.venues.length, btn = $("#venue");
+    btn.textContent = !n ? "Toutes les salles" : n === 1 ? state.venues[0] : `${n} salles`;
+    btn.title = n > 1 ? state.venues.join(", ") : "";
+    btn.classList.toggle("on", n > 0);
+    btn.setAttribute("aria-expanded", String(venueOpen));
+    $("#venuesel").innerHTML = state.venues.map(v => `<button type="button" class="chip on" data-rm="${esc(v)}" title="Retirer « ${esc(v)} »">${esc(v)}<b aria-hidden="true">×</b></button>`).join("");
+    $("#venuepop").hidden = !venueOpen;
+    $("#venue-clear").hidden = !n;
+    if (venueOpen) renderVenueList();
+  }
+  // "maroq" -> La Maroquinerie, "38" -> 38Riv Jazz Club, "petit bain" / "bain petit" -> Petit Bain: accent/case-insensitive
+  // substring anywhere in the name, or every typed word is the prefix of some word of the name.
+  function matchVenue(name, q) {
+    const n = norm(name);
+    if (!q || n.includes(q)) return true;
+    const words = n.split(/[^a-z0-9]+/).filter(Boolean);
+    return q.split(/\s+/).every(w => words.some(x => x.startsWith(w)));
+  }
+  // Selected venues first, then the ones with concerts in the current view, then the empty ones (still selectable).
+  // Only the list is rebuilt, so the search text and its focus survive; a focused checkbox is re-focused by name.
+  function renderVenueList() {
+    const list = $("#venuelist"), input = $("#venue-q"), q = norm(input.value.trim());
+    const focused = document.activeElement && document.activeElement.closest("#venuelist") ? document.activeElement.dataset.v : null;
+    const counts = {};
+    DATA.events.filter(e => inTab(e, state.tab) && (state.others || e.is_music)).forEach(e => counts[e.venue] = (counts[e.venue] || 0) + 1);
+    const sel = v => state.venues.includes(v);
+    venueShown = DATA.venues.filter(v => matchVenue(v, q))
+      .sort((a, b) => sel(b) - sel(a) || !!counts[b] - !!counts[a]);   // stable: keeps the alphabetical order within each group
+    if (!venueShown.includes(venueHi)) venueHi = null;
+    list.innerHTML = venueShown.length ? venueShown.map((v, i) =>
+      `<label id="vo-${i}" role="option" class="${counts[v] ? "" : "zero"}${v === venueHi ? " hi" : ""}" aria-selected="${v === venueHi}" aria-checked="${sel(v)}">
+        <input type="checkbox" tabindex="-1" data-v="${esc(v)}" ${sel(v) ? "checked" : ""}><span>${esc(v)}</span><small>${counts[v] || 0}</small></label>`).join("")
+      : '<div class="none">Aucune salle ne correspond.</div>';
+    const hi = $("label.hi", list);
+    if (hi) { hi.scrollIntoView({ block: "nearest" }); input.setAttribute("aria-activedescendant", hi.id); } else input.removeAttribute("aria-activedescendant");
+    if (focused != null) { const cb = $$("input", list).find(x => x.dataset.v === focused); if (cb) cb.focus(); }
+  }
+  function openVenues() { if (venueOpen) return; venueOpen = true; venueHi = null; renderVenues(); $("#venue-q").focus(); }
+  function closeVenues(refocus) {
+    if (!venueOpen) return;
+    venueOpen = false; venueHi = null; $("#venue-q").value = "";
+    renderVenues();
+    if (refocus) $("#venue").focus();
+  }
+  function toggleVenue(v) {
+    state.venues = state.venues.includes(v) ? state.venues.filter(x => x !== v) : [...state.venues, v];
+    render();
+  }
+  // Arrows move the highlight, Enter toggles it (or the only match), Backspace on an empty search drops the last pick.
+  function venueKeys(ev) {
+    const input = $("#venue-q"), n = venueShown.length, i = venueShown.indexOf(venueHi);
+    const move = j => { if (!n) return; venueHi = venueShown[Math.max(0, Math.min(n - 1, j))]; renderVenueList(); };
+    switch (ev.key) {
+      case "ArrowDown": move(i + 1); break;
+      case "ArrowUp": move(i < 0 ? n - 1 : i - 1); break;
+      case "Home": if (ev.target === input && input.value) return; move(0); break;
+      case "End": if (ev.target === input && input.value) return; move(n - 1); break;
+      case "Enter": { const v = ev.target.dataset.v || (i >= 0 ? venueHi : n === 1 ? venueShown[0] : null); if (v) toggleVenue(v); break; }
+      case "Backspace": if (ev.target === input && !input.value && state.venues.length) { state.venues = state.venues.slice(0, -1); render(); } return;
+      default: return;
+    }
+    ev.preventDefault();
   }
   function genreTags(e) {
     return e.genres.map(g => `<span class="tag src-${e.genre_source || ""}" title="source : ${e.genre_source || "?"}">${TAG_LABELS[g] || g}</span>`).join("");
@@ -273,7 +342,7 @@
     const upd = new Date(d.generated_at);
     $("#meta").textContent = `${plural(week, "concert")} cette semaine · ${d.events.length} à venir · mis à jour ${DAYS[upd.getDay()]} ${String(upd.getHours()).padStart(2, "0")}:${String(upd.getMinutes()).padStart(2, "0")}`;
   }
-  function render() { renderNav(); renderGenres(); renderList(); save(); }
+  function render() { renderNav(); renderGenres(); renderVenues(); renderList(); save(); }
 
   // ------------------------------------------------------------ detail sheet
   const detail = $("#detail");
@@ -413,10 +482,18 @@
   };
   $("#free").onclick = () => { state.free = !state.free; render(); };
   $("#saved").onclick = () => { state.saved = !state.saved; render(); };
-  $("#venue").onchange = ev => { state.venue = ev.target.value; render(); };
+  $("#venue").onclick = () => venueOpen ? closeVenues() : openVenues();
+  $("#venue").onkeydown = ev => { if (ev.key === "ArrowDown" && !venueOpen) { ev.preventDefault(); openVenues(); } };
+  $("#venuepop").onkeydown = venueKeys;
+  $("#venue-q").oninput = () => { venueHi = null; renderVenueList(); };
+  $("#venuelist").onchange = ev => { const cb = ev.target.closest("input[data-v]"); if (cb) toggleVenue(cb.dataset.v); };
+  $("#venuelist").onmousemove = ev => { const row = ev.target.closest("label[role=option]"); if (row && !row.classList.contains("hi")) { venueHi = $("input", row).dataset.v; renderVenueList(); } };
+  $("#venue-clear").onclick = () => { state.venues = []; render(); $("#venue-q").focus(); };
+  $("#venuesel").onclick = ev => { const b = ev.target.closest("[data-rm]"); if (b) toggleVenue(b.dataset.rm); };
+  document.addEventListener("click", ev => { if (venueOpen && !ev.target.closest("#venuepick")) closeVenues(); });
   $("#others").onchange = ev => { state.others = ev.target.checked; render(); };
   $("#search").oninput = ev => { state.q = ev.target.value.trim(); render(); };
-  $("#reset").onclick = () => { state = { ...state, genres: [], styles: [], venue: "", free: false, saved: false, others: false, q: "", near: false }; syncInputs(); render(); };
+  $("#reset").onclick = () => { state = { ...state, genres: [], styles: [], venues: [], free: false, saved: false, others: false, q: "", near: false }; closeVenues(); syncInputs(); render(); };
   $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
   $("#near").onclick = () => {
     if (state.near) { state.near = false; syncInputs(); render(); return; }
@@ -438,6 +515,7 @@
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
   detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); } });
   document.addEventListener("keydown", ev => {
+    if (ev.key === "Escape" && venueOpen) { closeVenues(true); return; }
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
     if (!detail.hidden || /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName) || state.tab !== "week") return;
     if (ev.key === "ArrowLeft" && state.week > 0) goWeek(state.week - 1);
@@ -445,7 +523,7 @@
   });
 
   function syncInputs() {
-    $("#venue").value = state.venue; $("#others").checked = state.others;
+    $("#others").checked = state.others;
     $("#search").value = state.q; $("#radius").value = state.radius;
     $("#near").classList.toggle("on", state.near); $("#near").textContent = state.near ? "Près de moi ✓" : "Près de moi";
     $("#radius").hidden = !state.near;
@@ -459,7 +537,7 @@
     if (!d) return;
     DATA = d;
     state.near = false; // ask for the position again on each visit
-    renderMeta(); renderVenues(); syncInputs(); render();
+    renderMeta(); syncInputs(); render();
     const m = location.hash.match(/^#e=([a-f0-9]+)/);   // shareable link straight to a concert
     const linked = m && d.events.find(x => x.id === m[1]);
     if (linked) openDetail(linked);

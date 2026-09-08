@@ -42,7 +42,18 @@
   <div class="row">
     <button class="chip flag" id="free" data-flag="free">Gratuit</button>
     <button class="chip flag" id="saved" data-flag="saved">★ Enregistrés <small></small></button>
-    <select id="venue" aria-label="Salle"><option value="">Toutes les salles</option></select>
+    <div class="venuepick" id="venuepick">
+      <button type="button" class="chip" id="venue" aria-haspopup="listbox" aria-expanded="false" aria-controls="venuepop">Toutes les salles</button>
+      <div class="venuepop" id="venuepop" hidden>
+        <div class="head">
+          <input id="venue-q" type="search" placeholder="Chercher une salle…" autocomplete="off" aria-label="Chercher une salle"
+                 role="combobox" aria-expanded="true" aria-controls="venuelist" aria-autocomplete="list">
+          <button type="button" id="venue-clear" class="link" hidden>Tout effacer</button>
+        </div>
+        <div class="venuelist" id="venuelist" role="listbox" aria-multiselectable="true" aria-label="Salles"></div>
+      </div>
+    </div>
+    <div class="chips venuesel" id="venuesel"></div>
     <label class="toggle"><input type="checkbox" id="others"> Inclure les non-concerts</label>
     <button id="reset" class="link">Réinitialiser</button>
   </div>
