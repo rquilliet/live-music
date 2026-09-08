@@ -9,6 +9,7 @@ import traceback
 
 from . import genres as G
 from . import players as P
+from . import summaries as S
 from .fetch import FetchError
 from .sources import STRATEGIES
 from .util import norm_title, slugify, split_lineup, strip_accents
@@ -110,6 +111,11 @@ def run(only=None, use_llm=True, players=True, log=print):
             log(f"  LLM tagging failed: {e}")
     elif use_llm:
         log("  LLM tagging skipped: set ANTHROPIC_API_KEY to enable")
+    # event-page summaries for concerts the venue gave no text for (cached; Claude only for new ones)
+    try:
+        S.enrich(events, llm=use_llm, generic_urls=[u for v in venues for u in [v.get("url"), *v.get("urls", [])] if u], log=log)
+    except Exception as e:
+        log(f"  summaries failed: {e}")
 
     # players: Bandcamp page + embeddable release, Spotify artist id (optional key) for the detail sheet
     if players:

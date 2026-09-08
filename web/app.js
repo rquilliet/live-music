@@ -171,7 +171,7 @@
     if (state.styles.length && !(e.subgenres || []).some(s => state.styles.includes(s))) return false;
     if (state.q) {
       const q = norm(state.q);
-      if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""}`).includes(q)) return false;
+      if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""} ${e.summary || ""}`).includes(q)) return false;
     }
     if (state.near && me) {
       if (e.lat == null || e.lon == null) return false;
@@ -410,16 +410,34 @@
         <button id="savebtn" type="button"></button>
       </div>
       <div class="muted tagline">${genreTags(e)}${subHtml(e, 99)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price ? "· " + esc(e.price) : ""} ${statusTags(e)}</div>
-      ${e.description ? `<p>${esc(e.description)}</p>` : ""}
+      ${blurbHtml(e)}
       ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
       <div id="artist"></div>`;
     renderSaveButton();
     $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); render(); };
+    const more = $(".blurb [data-more]", detail);
+    if (more) more.onclick = () => {   // "lire la suite" / "réduire" swaps the text in place
+      const open = more.textContent !== "lire la suite";
+      $(".blurb .txt", detail).textContent = open ? BLURB_CUT(blurb(e)) : blurb(e);
+      more.textContent = open ? "lire la suite" : "réduire";
+    };
     $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
       $$(".artist-pick button", detail).forEach(x => x.classList.remove("on")); b.classList.add("on");
       loadArtist(artists[Number(b.dataset.i)], e);
     });
     if (artists.length) loadArtist(artists[0], e);
+  }
+  // What the venue says about the show: the scraped description, else Claude's summary of the event page
+  // (see livemusic/summaries.py). Wikipedia is only fetched when both are empty (loadArtist).
+  function blurb(e) { return (e.description || e.summary || "").trim(); }
+  const BLURB_MAX = 260, BLURB_CUT = t => t.slice(0, 240).replace(/\s+\S*$/, "") + "…";
+  function blurbHtml(e) {
+    const text = blurb(e);
+    if (!text) return "";
+    const long = text.length > BLURB_MAX, page = safeUrl(e.url);
+    let domain = "";
+    try { domain = page ? new URL(page).hostname.replace(/^www\./, "") : ""; } catch { /* no attribution */ }
+    return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>lire la suite</button>' : ""}${domain ? ` <a class="muted" href="${esc(page)}" target="_blank" rel="noopener">source : ${esc(domain)} ↗</a>` : ""}</p>`;
   }
   function renderSaveButton() {
     const b = $("#savebtn"); if (!b || !current) return;
@@ -459,8 +477,8 @@
   async function loadArtist(name, e) {
     const box = $("#artist");
     box.innerHTML = `<div class="muted">Recherche de « ${esc(name)} »…</div>`;
-    const key = norm(name);
-    if (!cache[key]) cache[key] = Promise.all([deezerArtist(name), wikiSummary(name)]).catch(() => [null, null]);
+    const key = norm(name) + (blurb(e) ? "|nowiki" : "");   // Wikipedia only as a fallback when the event page gave nothing
+    if (!cache[key]) cache[key] = Promise.all([deezerArtist(name).catch(() => null), blurb(e) ? null : wikiSummary(name)]).catch(() => [null, null]);
     const [dz, wiki] = await cache[key];
     if ($(".artist-pick .on", detail) && $(".artist-pick .on", detail).textContent !== name) return; // user switched
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
@@ -469,7 +487,7 @@
     const player = playerHtml(p, dz);
     box.innerHTML = `
       <h3>${esc(name)}</h3>
-      ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : `<p class="muted">Pas de fiche Wikipédia trouvée.</p>`}
+      ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : ""}
       ${player ? `<div style="margin-top:12px">${player}</div>` : ""}
       <div class="links" style="margin-top:10px">
         <a href="${p.bandcamp ? esc(p.bandcamp.url) : `https://bandcamp.com/search?q=${q}`}" target="_blank" rel="noopener">Bandcamp</a>
