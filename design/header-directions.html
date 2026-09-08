@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live in Paris — header & filtres : 3 directions (REM-22)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
+<style>
+/* Maquettes statiques pour REM-22 « Header & filtres : simplifier au maximum ». Trois directions, chacune en desktop
+   (1280 px : header + première rangée de la grille) et mobile (390 px : au repos, puis l'état « recherche »).
+   Même palette / mêmes fontes que web/style.css ; la grille n'est pas restylée (mêmes règles que .grid/.day/.gig).
+   Données réelles de web/events.json au 8 septembre 2026 (2772 concerts à venir, 176 salles, 19 genres, 807 styles).
+   Rien n'est branché : c'est du papier. */
+:root {
+  --paper: #f3efe6; --paper2: #ece2d4; --white: #fff;
+  --ink: #17140f; --muted: #5f584c; --faint: #8a8273; --line: #c9c2b2; --rule: #17140f;
+  --orange: #e0512f; --lime: #d8f56a; --gold: #b8862d; --blue: #2e6fd9;
+  --plum: #171220; --plum2: #0d0a0f;
+  --glass: rgba(243, 239, 230, .72); --glass2: rgba(255, 255, 255, .8);
+  --gloss: rgba(255, 255, 255, .55); --gloss2: rgba(255, 255, 255, .8); --shade: rgba(23, 20, 15, .16);
+  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body: Archivo, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #e6e2d9; color: var(--ink); font: 14px/1.45 var(--body); }
+a { color: inherit; text-decoration: none; }
+b, strong { font-weight: 700; }
+svg.i { width: 18px; height: 18px; display: block; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- chrome de la page (hors maquette) ---------- */
+.intro { padding: 32px 40px 22px; border-bottom: 2px solid var(--ink); background: var(--paper); display: grid; grid-template-columns: 300px 1fr 1fr; gap: 40px; align-items: start; }
+.intro h1 { font-family: var(--display); font-weight: 900; font-size: 46px; line-height: .9; letter-spacing: -.01em; }
+.intro h1 small { display: block; font-family: var(--body); font-weight: 400; font-size: 14px; margin-top: 8px; color: var(--muted); letter-spacing: 0; }
+.intro .ctx { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.intro .ctx b { color: var(--ink); font-weight: 600; }
+.intro .ctx p + p { margin-top: 8px; }
+.intro em.k { font-style: normal; font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); display: block; margin-bottom: 4px; }
+.audit { width: 100%; border-collapse: collapse; font-size: 12px; line-height: 1.35; }
+.audit th, .audit td { text-align: left; padding: 4px 8px 4px 0; vertical-align: top; border-bottom: 1px dashed var(--line); }
+.audit th { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+.audit td:first-child { font-weight: 600; white-space: nowrap; }
+.audit .d { font-weight: 700; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; white-space: nowrap; }
+.audit .keep { background: var(--lime); } .audit .drop { background: var(--ink); color: var(--paper); } .audit .merge { background: var(--gold); color: #fff; } .audit .move { border: 1px solid var(--ink); }
+.audit td:last-child { color: var(--muted); }
+
+.dir { padding: 34px 40px 10px; }
+.dir > h2 { font-family: var(--display); font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: -.005em; display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+.dir > h2 .letter { display: inline-grid; place-items: center; width: 44px; height: 44px; background: var(--ink); color: var(--paper); font-size: 30px; align-self: center; }
+.dir > h2 span.sub { font-family: var(--body); font-weight: 400; font-size: 13px; color: var(--faint); letter-spacing: .06em; text-transform: uppercase; }
+.dir > h2 .reco { font-family: var(--body); font-weight: 600; font-size: 11px; color: var(--ink); background: var(--lime); padding: 3px 8px; letter-spacing: .06em; text-transform: uppercase; align-self: center; }
+.dir .rat { max-width: 1100px; font-size: 14px; line-height: 1.5; margin-bottom: 18px; }
+.pair { display: flex; gap: 28px; align-items: flex-start; }
+.col { flex: none; }
+.lbl { font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; margin: 0 0 6px 2px; display: flex; gap: 8px; align-items: center; }
+.lbl i { font-style: normal; color: var(--ink); background: var(--paper2); padding: 1px 6px; letter-spacing: .04em; }
+.desk { position: relative; width: 1280px; height: 760px; overflow: hidden; background: var(--paper); border: 1.5px solid var(--ink); box-shadow: 4px 4px 0 var(--paper2); }
+.phone { position: relative; width: 390px; height: 760px; overflow: hidden; background: var(--paper); border: 1.5px solid var(--ink); box-shadow: 4px 4px 0 var(--paper2); }
+.phone.short { height: 680px; }
+.phone + .lbl, .desk + .lbl, .state + .lbl { margin-top: 22px; }
+.state { position: relative; width: 1280px; background: var(--paper); border: 1px solid var(--line); padding: 14px 16px 16px; }
+.leg { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 18px; padding-top: 12px; border-top: 1.5px solid var(--ink); font-size: 12.5px; line-height: 1.45; max-width: 1698px; }
+.leg dt { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; line-height: 1; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.leg dt::before { content: "+"; font-weight: 900; font-size: 22px; line-height: .8; }
+.leg .minus dt::before { content: ""; width: 12px; height: 3px; background: var(--orange); margin: 0 2px; }
+.leg .minus dt { color: var(--orange); }
+.leg .rm dt::before { content: "✕"; font-size: 14px; }
+.leg .rm dt { color: var(--muted); }
+.leg dd { color: var(--muted); padding-left: 10px; text-indent: -10px; }
+.leg dd::before { content: "· "; color: var(--faint); }
+.leg dd + dd { margin-top: 3px; }
+.leg b { color: var(--ink); font-weight: 600; }
+.reco-box { margin: 30px 40px 60px; padding: 18px 22px; border: 1.5px solid var(--ink); background: var(--paper); max-width: 1000px; font-size: 14px; line-height: 1.5; box-shadow: 4px 4px 0 var(--paper2); }
+.reco-box h3 { font-family: var(--display); font-weight: 900; font-size: 26px; line-height: 1; margin-bottom: 8px; }
+
+/* ---------- vocabulaire commun aux maquettes ---------- */
+.art { color: var(--ink); font: 14px/1.4 var(--body); }
+.art .pad { padding-left: 32px; padding-right: 32px; }
+.phone .pad { padding-left: 16px; padding-right: 16px; }
+.wm { font-family: var(--display); font-weight: 900; line-height: .9; letter-spacing: -.01em; }
+.meta { font-size: 12.5px; color: var(--muted); }
+/* barre de recherche « verre » */
+.sbar { position: relative; display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 16px 0 18px; border-radius: 999px; border: 1.5px solid var(--ink);
+  background: linear-gradient(180deg, var(--gloss), transparent 60%), var(--glass2); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--gloss2), 0 10px 26px -14px rgba(23, 20, 15, .45); }
+.sbar.focus { box-shadow: inset 0 1px 0 var(--gloss2), 0 0 0 3px rgba(216, 245, 106, .9), 0 10px 26px -14px rgba(23, 20, 15, .45); }
+.sbar .q { flex: 1; font-size: 16px; color: var(--ink); display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap; overflow: hidden; }
+.sbar .q.ph { color: var(--faint); }
+.caret { display: inline-block; width: 1.5px; height: 1.1em; background: var(--ink); vertical-align: -3px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.kbd { font: 600 11px/1 var(--body); color: var(--muted); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 3px 5px; background: var(--white); white-space: nowrap; }
+.chipin { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 6px 0 11px; border-radius: 999px; background: var(--lime); color: var(--ink); font-size: 13px; font-weight: 600; white-space: nowrap; }
+.chipin small { font-weight: 400; color: var(--muted); font-size: 11px; }
+.chipin .x { width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; background: rgba(23, 20, 15, .12); }
+/* pills (état actif = lime, le seul accent du header) */
+.pill { display: inline-flex; align-items: center; gap: 7px; height: 40px; padding: 0 15px; border-radius: 999px; border: 1.5px solid var(--ink); font-weight: 500; font-size: 14px; white-space: nowrap;
+  background: linear-gradient(180deg, var(--gloss), transparent 70%), var(--glass2); box-shadow: inset 0 1px 0 var(--gloss2); }
+.pill small { font-weight: 400; color: var(--faint); font-size: 12px; }
+.pill.on { background: var(--lime); }
+.pill.on small { color: var(--muted); }
+.pill.quiet { border-color: var(--line); }
+.pill.sm { height: 34px; padding: 0 12px; font-size: 13px; }
+.pill .car { font-size: 11px; color: var(--faint); margin-left: -2px; }
+/* bandeau semaine : libellé surdimensionné, flèches rondes */
+.wk { display: flex; align-items: center; gap: 14px; }
+.wk .arr { display: flex; gap: 4px; }
+.wk .arr span { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; font-size: 20px; line-height: 1; padding-bottom: 2px; }
+.wk .arr span.off { border-color: var(--line); color: var(--line); }
+.wk .big { font-family: var(--display); font-weight: 700; font-size: 44px; line-height: .9; letter-spacing: -.01em; }
+.wk em { font-style: normal; font-size: 13px; color: var(--muted); align-self: flex-end; padding-bottom: 3px; }
+.wk .link { font-size: 13px; color: var(--muted); text-decoration: underline; }
+/* résultats groupés (typeahead / palette) */
+.ta { color: var(--ink); background: linear-gradient(180deg, var(--gloss), transparent 30%), var(--glass2); border: 1.5px solid var(--ink); -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--gloss2), 6px 6px 0 var(--line); overflow: hidden; }
+.ta .grp h4 { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 12px 16px 4px; display: flex; justify-content: space-between; }
+.ta .grp h4 small { font-family: var(--body); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 11.5px; color: var(--faint); }
+.ta .grp + .grp { border-top: 1px dashed var(--line); }
+.ta .row { display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: center; padding: 7px 16px; font-size: 14px; }
+.ta .row.hi { background: var(--lime); }
+.ta .row b { font-weight: 600; display: block; line-height: 1.2; }
+.ta .row small { display: block; color: var(--muted); font-size: 12px; line-height: 1.3; }
+.ta .row .type { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); font-weight: 600; }
+.ta .row.hi .type { color: var(--muted); }
+.th { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font: 700 11px/1 var(--display); letter-spacing: .02em; color: #f2ecff; }
+.th.av1 { background: radial-gradient(circle at 30% 25%, #7a5a9e, #171220 70%); }
+.th.av2 { background: radial-gradient(circle at 70% 30%, #c98a3a, #3a2412 70%); }
+.th.av3 { background: radial-gradient(circle at 30% 70%, #3f7a8a, #0d1a20 70%); }
+.th.av4 { background: radial-gradient(circle at 50% 20%, #b0454f, #2a0d14 70%); }
+.th.gl { background: var(--white); border: 1.5px solid var(--ink); color: var(--ink); }
+.th.gen { background: var(--ink); color: var(--paper); }
+.th.sty { background: none; border: 1.5px dashed var(--ink); color: var(--ink); }
+.ta .foot { display: flex; gap: 14px; align-items: center; padding: 9px 16px; border-top: 1.5px solid var(--ink); font-size: 12px; color: var(--muted); background: rgba(243, 239, 230, .6); }
+.ta .foot .kbd { margin-right: 2px; }
+.ta .foot .free { margin-left: auto; }
+/* panneau genres (A) */
+.gpanel { width: 720px; background: linear-gradient(180deg, var(--gloss), transparent 30%), var(--glass2); border: 1.5px solid var(--ink); border-radius: 22px; padding: 18px 20px 20px; box-shadow: inset 0 1px 0 var(--gloss2), 6px 6px 0 var(--line); }
+.gpanel h4 { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.gpanel h4 .link { font-family: var(--body); font-weight: 400; font-size: 12px; text-transform: none; letter-spacing: 0; text-decoration: underline; }
+.gpanel .gs { display: flex; flex-wrap: wrap; gap: 6px; }
+.gpanel .g { height: 34px; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--line); display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; background: var(--white); }
+.gpanel .g small { color: var(--faint); font-size: 11.5px; font-weight: 400; }
+.gpanel .g.on { background: var(--lime); border-color: var(--ink); }
+.gpanel .sty { margin-top: 16px; padding-top: 14px; border-top: 1.5px solid var(--ink); }
+.gpanel .sty .gs .g { height: 28px; font-size: 12.5px; padding: 0 10px; border-style: dashed; }
+.gpanel .sty .gs .g.on { border-style: solid; }
+.gpanel .sty input { border: 0; border-bottom: 1.5px solid var(--line); background: none; font: inherit; font-size: 13px; padding: 4px 0; width: 200px; color: var(--faint); }
+/* ambiances (B) */
+.moods { display: flex; gap: 8px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 90%, transparent); mask-image: linear-gradient(90deg, #000 90%, transparent); }
+.mood { flex: none; display: inline-flex; align-items: baseline; gap: 8px; height: 50px; padding: 0 20px; border-radius: 999px; border: 1.5px solid var(--ink); font-family: var(--display); font-weight: 700; font-size: 24px; letter-spacing: .01em; text-transform: uppercase; line-height: 50px;
+  background: linear-gradient(180deg, var(--gloss), transparent 70%), var(--glass2); box-shadow: inset 0 1px 0 var(--gloss2); }
+.mood small { font-family: var(--body); font-weight: 400; font-size: 12px; color: var(--faint); letter-spacing: 0; text-transform: none; }
+.mood.on { background: var(--lime); }
+.mood.on small { color: var(--muted); }
+.phone .mood { height: 40px; line-height: 40px; font-size: 19px; padding: 0 14px; }
+.srow { display: flex; align-items: center; gap: 6px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+.srow .cap { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 8px; white-space: nowrap; }
+.srow .cap b { color: var(--ink); }
+.srow .s { flex: none; height: 30px; padding: 0 11px; border-radius: 999px; border: 1.5px dashed var(--line); display: inline-flex; align-items: center; gap: 6px; font-size: 13px; background: var(--white); white-space: nowrap; }
+.srow .s small { color: var(--faint); font-size: 11px; }
+.srow .s.on { background: var(--lime); border: 1.5px solid var(--ink); font-weight: 600; }
+.srow .s.on small { color: var(--muted); }
+/* barre fine + chips (C) */
+.bar { display: flex; align-items: center; gap: 12px; height: 56px; border-bottom: 1.5px solid var(--ink);
+  background: linear-gradient(180deg, var(--gloss) 0, transparent 60%), var(--glass); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); box-shadow: inset 0 1px 0 var(--gloss2), 0 1px 0 var(--shade); }
+.kfield { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px 0 12px; border-radius: 10px; border: 1.5px solid var(--line); background: rgba(255, 255, 255, .6); color: var(--faint); font-size: 13.5px; }
+.kfield .kbd { margin-left: auto; }
+.chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.chips .cap { font-size: 12px; color: var(--faint); margin-right: 4px; }
+.chips .link { font-size: 12px; color: var(--muted); text-decoration: underline; margin-left: 6px; }
+.veil { position: absolute; inset: 0; background: rgba(23, 20, 15, .38); }
+.pal { position: absolute; left: 50%; transform: translateX(-50%); width: 660px; border-radius: 18px; }
+.pal .in { display: flex; align-items: center; gap: 12px; height: 54px; padding: 0 16px; border-bottom: 1.5px solid var(--ink); font-size: 17px; }
+.pal .in .kbd { margin-left: auto; }
+
+/* ---------- la grille (copie des règles de web/style.css, non restylée) ---------- */
+.grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1.5px solid var(--rule); border-left: 1.5px solid var(--rule); background: var(--paper); }
+.phone .grid { grid-template-columns: 1fr; border-right: 1.5px solid var(--rule); }
+.day { border-right: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); min-height: 300px; display: flex; flex-direction: column; min-width: 0; }
+.phone .day { min-height: 0; border-right: 0; }
+.day h2 { font-family: var(--display); font-weight: 700; font-size: 20px; margin: 0; padding: 10px 12px; border-bottom: 1.5px solid var(--rule); display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+.day h2 em { font-style: normal; font-weight: 500; font-size: 13px; font-family: var(--body); color: var(--muted); white-space: nowrap; }
+.day.today h2 { background: var(--ink); color: var(--paper); }
+.day.today h2 em { color: var(--line); }
+.day.past { background: var(--paper2); min-height: 0; }
+.day.past h2 { color: var(--faint); }
+.day .empty { padding: 24px 12px; font-size: 12px; color: var(--faint); font-style: italic; }
+.day .empty u { color: var(--faint); }
+.gig { padding: 10px 12px; border-bottom: 1px dashed var(--line); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 3px 10px; align-items: start; }
+.gig time { font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1; grid-row: span 3; min-width: 34px; }
+.gig .who { font-weight: 700; font-size: 14px; line-height: 1.2; overflow-wrap: anywhere; }
+.gig .who span { display: block; font-weight: 400; margin-top: 1px; }
+.gig .where { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.gig .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.tag { font-size: 11px; display: inline-block; padding: 1px 6px; border: 1px solid var(--ink); white-space: nowrap; line-height: 1.5; }
+.tag.free { background: var(--lime); border-color: var(--lime); color: #17140f; }
+.tag.sub { border: 1px dashed var(--line); color: var(--muted); }
+.tag.sub.on { background: var(--ink); border: 1px solid var(--ink); color: var(--paper); }
+.tag.new { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+/* ---------- A « Barre unique » ---------- */
+.a .mast { display: flex; align-items: flex-end; justify-content: space-between; padding-top: 22px; }
+.a .mast .wm { font-size: 34px; }
+.a .hero { display: flex; align-items: center; gap: 8px; margin-top: 18px; position: relative; }
+.a .hero .sbar { width: 620px; }
+.a .hero .right { margin-left: auto; display: flex; gap: 8px; }
+.a .wk { margin-top: 22px; padding-bottom: 16px; }
+.a .hero .ta { position: absolute; top: 64px; left: 0; width: 620px; border-radius: 22px; z-index: 5; }
+.a .grid { margin-top: 0; }
+/* A mobile */
+.a.m .mast { padding-top: 14px; align-items: baseline; }
+.a.m .mast .wm { font-size: 30px; }
+.a.m .sbar { height: 48px; margin-top: 12px; padding: 0 12px 0 14px; }
+.a.m .sbar .q { font-size: 15px; }
+.a.m .pills { display: flex; gap: 6px; margin-top: 10px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+.a.m .pills .pill { height: 34px; padding: 0 12px; font-size: 13px; flex: none; }
+.a.m .wk { margin-top: 16px; padding-bottom: 12px; gap: 10px; }
+.a.m .wk .big { font-size: 34px; }
+.a.m .wk .arr span { width: 32px; height: 32px; font-size: 18px; }
+.sheet { position: absolute; inset: 0; background: var(--paper); display: flex; flex-direction: column; }
+.sheet .top { display: flex; align-items: center; gap: 10px; padding: 12px 12px 10px 8px; border-bottom: 1.5px solid var(--ink); }
+.sheet .top .back { width: 36px; height: 36px; display: grid; place-items: center; font-size: 22px; }
+.sheet .top .sbar { flex: 1; height: 44px; padding: 0 12px; }
+.sheet .ta { border: 0; box-shadow: none; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; flex: 1; min-height: 0; overflow: hidden; }
+.sheet .foot, .sheet .kb { flex: none; }
+.sheet .ta .row { padding: 9px 16px; }
+.sheet .foot { padding: 10px 16px; border-top: 1.5px solid var(--ink); font-size: 12px; color: var(--muted); }
+.sheet .kb { height: 170px; background: #d9d5cc; border-top: 1px solid #c4bfb4; display: grid; place-items: center; color: #8a8273; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+
+/* ---------- B « Ambiances » ---------- */
+.b .mast { display: flex; align-items: center; justify-content: space-between; padding-top: 20px; gap: 12px; }
+.b .mast .wm { font-size: 34px; }
+.b .mast .meta { margin-left: 16px; margin-right: auto; align-self: flex-end; padding-bottom: 2px; }
+.b .mast .sbar { width: 320px; height: 44px; padding: 0 12px 0 14px; }
+.b .mast .sbar .q { font-size: 14px; }
+.b .moods { margin-top: 20px; }
+.b .srow { margin-top: 12px; }
+.b .wk { margin-top: 20px; padding-bottom: 14px; }
+.b .wk .tog { display: flex; gap: 6px; margin-right: 10px; }
+.b .wk .sum { margin-left: auto; font-size: 13px; color: var(--muted); display: flex; gap: 12px; align-items: center; }
+.b .wk .sum .link { color: var(--muted); }
+.b.m .mast { padding-top: 14px; }
+.b.m .mast .wm { font-size: 30px; }
+.b.m .ico { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; background: var(--glass2); }
+.b.m .moods { margin-top: 14px; }
+.b.m .srow { margin-top: 10px; }
+.b.m .tog { display: flex; gap: 6px; margin-top: 14px; }
+.b.m .wk { margin-top: 10px; padding-bottom: 12px; gap: 10px; }
+.b.m .wk .big { font-size: 34px; }
+.b.m .wk .arr span { width: 32px; height: 32px; font-size: 18px; }
+
+/* ---------- C « Palette » ---------- */
+.c .bar .wm { font-size: 26px; margin-right: 8px; }
+.c .bar .kfield { width: 440px; }
+.c .bar .right { margin-left: auto; display: flex; gap: 6px; }
+.c .under { display: flex; align-items: center; gap: 14px; padding-top: 16px; padding-bottom: 14px; }
+.c .under .chips { margin-left: auto; }
+.c .pal { top: 70px; }
+.c.m .bar { height: 52px; gap: 8px; }
+.c.m .bar .wm { font-size: 22px; margin-right: 0; }
+.c.m .bar .kfield { flex: 1; height: 34px; }
+.c.m .bar .ico { width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; }
+.c.m .row2 { display: flex; gap: 6px; margin-top: 12px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent); mask-image: linear-gradient(90deg, #000 92%, transparent); }
+.c.m .row2 .pill { flex: none; }
+.c.m .chips { margin-top: 10px; }
+.c.m .wk { margin-top: 14px; padding-bottom: 12px; gap: 10px; }
+.c.m .wk .big { font-size: 34px; }
+.c.m .wk .arr span { width: 32px; height: 32px; font-size: 18px; }
+</style>
+</head>
+<body>
+
+<header class="intro">
+  <h1>Header &amp; filtres<small>REM-22 · 3 directions · maquettes statiques · 8 sept. 2026</small></h1>
+  <div class="ctx">
+    <em class="k">Le brief</em>
+    <p>« Le header de la page principale est brouillon. Simplifier au maximum, rendre plus joli (2026). » <b>On enlève</b>&nbsp;: Semaine / 30 jours / Tout, Gratuit, « Inclure les non-concerts ». <b>On garde</b>&nbsp;: Nouveautés et Mes concerts au même niveau, « Près de moi ». <b>Une seule barre</b> artiste / salle / genre avec des résultats typés (et vignette). <b>Genres / styles</b>&nbsp;: quelque chose de plus élégant que 19 chips + une rangée de styles.</p>
+    <p><em class="k">Ce qui remplace le sélecteur de vue</em>La grille de la semaine avec ‹ › et « Cette semaine » est la seule vue. <b>Nouveautés</b> et <b>Mes concerts</b> sont des <b>toggles</b> (cumulables entre eux et avec les autres filtres), pas des vues&nbsp;: quand l'un est actif, le cadre temporel s'élargit à « tout ce qui vient » (semaines empilées, comme l'actuel Nouveautés) parce que 4 concerts enregistrés sur trois mois dans une fenêtre de 7 jours ne serviraient à rien. Même règle pour une recherche libre validée (Entrée)&nbsp;: on cherche un artiste, pas une semaine. Un genre / style / salle, lui, garde le cadre semaine&nbsp;: on flâne.</p>
+    <p><em class="k">Polish commun</em>Identité « Programme » conservée (Big Shoulders + Archivo, filets noirs, papier) ; la barre de recherche devient un objet en verre arrondi, le libellé de semaine passe en 44 px, <b>un seul accent</b> (le lime) pour tout état actif du header, beaucoup plus d'air. La grille n'est pas touchée.</p>
+  </div>
+  <div class="ctx">
+    <em class="k">Audit de l'existant</em>
+    <table class="audit">
+      <tr><th>Élément</th><th>Décision</th><th>Pourquoi</th></tr>
+      <tr><td>Wordmark + meta</td><td><span class="d keep">garder</span></td><td>plus petit (34 px) : la barre devient le héros, pas le titre</td></tr>
+      <tr><td>#search « Artiste, salle… »</td><td><span class="d merge">fusionner</span></td><td>devient l'unique barre : artistes, salles, genres, styles, résultats typés</td></tr>
+      <tr><td>Près de moi + rayon</td><td><span class="d keep">garder</span></td><td>pill ; le rayon (5 km ▾) n'apparaît qu'une fois actif</td></tr>
+      <tr><td>‹ › + libellé semaine + Cette semaine</td><td><span class="d keep">garder</span></td><td>la seule navigation temporelle, libellé surdimensionné</td></tr>
+      <tr><td>Onglets Semaine / 30 jours / Tout</td><td><span class="d drop">supprimer</span></td><td>brief ; la semaine + ‹ › couvrent le besoin, la recherche élargit d'elle-même</td></tr>
+      <tr><td>Onglet Nouveautés</td><td><span class="d move">déplacer</span></td><td>toggle au même niveau que Mes concerts (élargit à « tout ce qui vient »)</td></tr>
+      <tr><td>19 chips genres + « Tout »</td><td><span class="d merge">fusionner</span></td><td>A : panneau « Genres ▾ » · B : 9 ambiances · C : via la barre + libellés des cartes</td></tr>
+      <tr><td>Rangée styles (12 + « N autres »)</td><td><span class="d merge">fusionner</span></td><td>dans le panneau (A), seconde rangée contextuelle (B), résultats typés (C)</td></tr>
+      <tr><td>Gratuit</td><td><span class="d drop">supprimer</span></td><td>brief ; le tag « Gratuit » reste sur les cartes</td></tr>
+      <tr><td>Mes concerts</td><td><span class="d keep">garder</span></td><td>toggle avec compteur, à côté de Nouveautés</td></tr>
+      <tr><td>Toutes les salles ▾ (REM-11)</td><td><span class="d merge">fusionner</span></td><td>les salles sont un groupe de la barre ; le picker multi-salles disparaît, les salles choisies deviennent des chips</td></tr>
+      <tr><td>Inclure les non-concerts</td><td><span class="d drop">supprimer</span></td><td>brief ; les non-concerts ne sont plus affichés</td></tr>
+      <tr><td>Réinitialiser</td><td><span class="d move">déplacer</span></td><td>« Tout effacer » à côté des chips actifs, visible seulement s'il y a quelque chose à effacer</td></tr>
+    </table>
+  </div>
+</header>
+
+<!-- ===================================================================== A -->
+<section class="dir" id="dirA">
+  <h2><span class="letter">A</span>Barre unique <span class="sub">une barre en héros · genres dans un panneau</span> <span class="reco">recommandée</span></h2>
+  <p class="rat">La barre de recherche devient l'objet principal de la page (Dice, RA, Songkick font pareil) ; trois pills à sa droite pour les trois intentions qui ne sont pas une recherche (Nouveautés, Mes concerts, Près de moi) ; la taxonomie se replie derrière une pill « Genres ▾ » qui ouvre un panneau où les 19 genres et leurs styles cohabitent. Tout ce qui est choisi remonte dans la barre sous forme de chips retirables.</p>
+  <div class="pair">
+    <div class="col">
+      <div class="lbl">Desktop 1280 <i>état : « jaz » tapé, résultats ouverts</i></div>
+      <div class="desk art a">
+        <div class="mast pad">
+          <div class="wm">Live in Paris</div>
+          <div class="meta">2772 concerts à venir · 199 cette semaine · mis à jour mardi 22:04</div>
+        </div>
+        <div class="hero pad">
+          <div class="sbar focus">
+            <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <div class="q">jaz<span class="caret"></span></div>
+            <span class="kbd">esc</span>
+          </div>
+          <span class="pill">Genres <span class="car">▾</span></span>
+          <div class="right">
+            <span class="pill">Nouveautés <small>163</small></span>
+            <span class="pill">Mes concerts <small>4</small></span>
+            <span class="pill"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Près de moi</span>
+          </div>
+          <div class="ta"><div class="slot" data-t="t-ta-art t-ta-ven t-ta-gen t-ta-foot"></div></div>
+        </div>
+        <div class="wk pad">
+          <div class="arr"><span class="off">‹</span><span>›</span></div>
+          <div class="big">7 – 13 septembre</div>
+          <em>199 concerts</em>
+        </div>
+        <div class="pad"><div class="slot" data-t="t-grid"></div></div>
+      </div>
+
+      <div class="lbl">État <i>panneau « Genres ▾ » ouvert · Jazz choisi → ses styles dans le même panneau · le choix remonte en chip dans la barre</i></div>
+      <div class="state art a">
+        <div class="hero" style="margin-top:0">
+          <div class="sbar">
+            <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span class="chipin">Jazz <small>64</small><span class="x">✕</span></span>
+            <div class="q ph">Artiste, salle, genre…</div>
+            <span class="kbd">⌘K</span>
+          </div>
+          <span class="pill on">Genres <small>1</small> <span class="car">▴</span></span>
+          <div class="right">
+            <span class="pill">Nouveautés <small>163</small></span>
+            <span class="pill">Mes concerts <small>4</small></span>
+            <span class="pill">Près de moi</span>
+          </div>
+        </div>
+        <div class="gpanel" style="margin-top:12px">
+          <h4>Genres <span class="link">Tout effacer</span></h4>
+          <div class="gs">
+            <span class="g on">Jazz <small>64</small></span><span class="g">Rock <small>30</small></span><span class="g">Indie <small>16</small></span><span class="g">Pop <small>25</small></span><span class="g">Electro <small>40</small></span><span class="g">Hip-hop <small>9</small></span><span class="g">Soul / R&amp;B <small>14</small></span><span class="g">Funk <small>12</small></span><span class="g">World <small>19</small></span><span class="g">Latin <small>13</small></span><span class="g">Classique <small>12</small></span><span class="g">Chanson <small>7</small></span><span class="g">Punk <small>8</small></span><span class="g">Folk <small>4</small></span><span class="g">Afro <small>6</small></span><span class="g">Blues <small>3</small></span><span class="g">Metal <small>1</small></span><span class="g">Reggae <small>2</small></span><span class="g">Expérimental <small>9</small></span>
+          </div>
+          <div class="sty">
+            <h4>Styles de Jazz <input value="Filtrer les 240 styles…" readonly></h4>
+            <div class="gs">
+              <span class="g">vocal jazz <small>83</small></span><span class="g">swing <small>65</small></span><span class="g">contemporary jazz <small>59</small></span><span class="g on">hard bop <small>51</small></span><span class="g">groove <small>46</small></span><span class="g">bebop <small>35</small></span><span class="g">piano trio <small>28</small></span><span class="g">gypsy jazz <small>28</small></span><span class="g">spiritual jazz <small>25</small></span><span class="g">standards <small>24</small></span><span class="g">modern jazz <small>20</small></span><span class="g">jazz caribéen <small>15</small></span><span class="g">big band <small>12</small></span><span class="g">bossa nova <small>11</small></span><span class="g" style="border-color:transparent;color:var(--muted);text-decoration:underline">+ 226 autres</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="lbl">Mobile 390 <i>au repos</i></div>
+      <div class="phone art a m">
+        <div class="mast pad">
+          <div class="wm">Live in Paris</div>
+          <div class="meta">199 cette semaine</div>
+        </div>
+        <div class="pad">
+          <div class="sbar">
+            <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <div class="q ph">Artiste, salle, genre…</div>
+          </div>
+          <div class="pills">
+            <span class="pill">Genres <span class="car">▾</span></span>
+            <span class="pill">Nouveautés <small>163</small></span>
+            <span class="pill">Mes concerts <small>4</small></span>
+            <span class="pill">Près de moi</span>
+          </div>
+          <div class="wk">
+            <div class="arr"><span class="off">‹</span><span>›</span></div>
+            <div class="big">7 – 13 sept.</div>
+          </div>
+          <div class="slot" data-t="t-mgrid"></div>
+        </div>
+      </div>
+
+      <div class="lbl">Mobile 390 <i>barre touchée → feuille plein écran</i></div>
+      <div class="phone short art a m">
+        <div class="sheet">
+          <div class="top">
+            <span class="back">‹</span>
+            <div class="sbar focus">
+              <div class="q">jaz<span class="caret"></span></div>
+              <span class="x" style="color:var(--faint)">✕</span>
+            </div>
+          </div>
+          <div class="ta"><div class="slot" data-t="t-ta-art-m t-ta-ven t-ta-gen-m"></div></div>
+          <div class="foot">↵ chercher « jaz » dans tout le programme</div>
+          <div class="kb">clavier</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <dl class="leg">
+    <div><dt>Ce que ça apporte</dt>
+      <dd><b>Une seule zone de saisie</b>, celle que 2026 attend : artiste, salle, genre, style — résultats groupés et typés, vignette ronde quand l'événement a une <code>image</code> (1745 sur 2772), initiales sinon.</dd>
+      <dd><b>Le panneau Genres</b> remplace 19 chips permanents + une rangée de styles par un objet à la demande où genres et styles se lisent ensemble (multi-sélection, compteurs de la semaine).</dd>
+      <dd><b>Chips dans la barre</b> : l'état des filtres se lit en un coup d'œil et s'efface d'un tap ; ⌘K / « / » focalise la barre.</dd>
+      <dd>Mobile : le header passe de ~580 px à ~230 px avant la grille.</dd></div>
+    <div class="minus"><dt>Ce que ça coûte</dt>
+      <dd>Les genres sont à un clic (la pill « Genres ▾ ») au lieu d'être visibles : à compenser par les suggestions à vide de la barre (« Essayez : Jazz · Électro · Rap français »).</dd>
+      <dd>Sur un 13" la ligne héros est pleine (barre 620 px + 4 pills) : la barre doit pouvoir rétrécir à 480 px.</dd>
+      <dd>Il faut un vrai index de recherche floue côté client (accents, préfixes de mots, ~3 000 titres + 176 salles + 826 libellés) : ~80 lignes de JS, rien d'externe.</dd></div>
+    <div class="rm"><dt>Ce que ça enlève</dt>
+      <dd>Onglets Semaine / 30 jours / Tout · Gratuit · Inclure les non-concerts · Réinitialiser (devient « Tout effacer » dans la barre).</dd>
+      <dd>Les 19 chips genres et la rangée styles (→ panneau) · le picker « Toutes les salles ▾ » (→ groupe Salles de la barre, chips pour les salles choisies).</dd></div>
+  </dl>
+</section>
+
+<!-- ===================================================================== B -->
+<section class="dir" id="dirB">
+  <h2><span class="letter">B</span>Ambiances <span class="sub">la taxonomie devient une rangée de grands pills · styles en seconde rangée</span></h2>
+  <p class="rat">Pour qui ne sait pas encore ce qu'il cherche : neuf « ambiances » en gros caractères d'affiche défilent horizontalement (Le Bonbon, Time Out, Spotify « moods »). Une ambiance regroupe des genres (Rock &amp; indie = rock + indie + punk + metal) ; la toucher déplie ses styles en seconde rangée. La recherche reste là, compacte, en haut à droite, avec le même typeahead qu'en A. Nouveautés et Mes concerts vivent au bord gauche du bandeau semaine.</p>
+  <div class="pair">
+    <div class="col">
+      <div class="lbl">Desktop 1280 <i>état : Jazz &amp; blues → hard bop (2 tapes) · la grille se réduit à 4 concerts</i></div>
+      <div class="desk art b">
+        <div class="mast pad">
+          <div class="wm">Live in Paris</div>
+          <div class="meta">2772 concerts à venir · mis à jour mardi 22:04</div>
+          <div class="sbar">
+            <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <div class="q ph">Artiste, salle, genre…</div>
+            <span class="kbd">⌘K</span>
+          </div>
+          <span class="pill"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Près de moi</span>
+        </div>
+        <div class="moods pad">
+          <span class="mood">Tout <small>199</small></span>
+          <span class="mood on">Jazz &amp; blues <small>66</small></span>
+          <span class="mood">Rock &amp; indie <small>41</small></span>
+          <span class="mood">Électro <small>40</small></span>
+          <span class="mood">World &amp; latin <small>34</small></span>
+          <span class="mood">Hip-hop &amp; R&amp;B <small>28</small></span>
+          <span class="mood">Pop <small>25</small></span>
+          <span class="mood">Classique <small>12</small></span>
+          <span class="mood">Chanson &amp; folk <small>10</small></span>
+          <span class="mood">Expérimental <small>9</small></span>
+        </div>
+        <div class="srow pad">
+          <span class="cap">Styles · <b>Jazz &amp; blues</b></span>
+          <span class="s">tous</span><span class="s">vocal jazz <small>83</small></span><span class="s">swing <small>65</small></span><span class="s">contemporary jazz <small>59</small></span><span class="s on">hard bop <small>51</small></span><span class="s">groove <small>46</small></span><span class="s">bebop <small>35</small></span><span class="s">piano trio <small>28</small></span><span class="s">gypsy jazz <small>28</small></span><span class="s">spiritual jazz <small>25</small></span><span class="s">standards <small>24</small></span><span class="s">modern jazz <small>20</small></span><span class="s">jazz caribéen <small>15</small></span><span class="s">big band <small>12</small></span><span class="s">bossa nova <small>11</small></span><span class="s">blues rock <small>9</small></span>
+        </div>
+        <div class="wk pad">
+          <div class="tog"><span class="pill sm">Nouveautés <small>163</small></span><span class="pill sm">Mes concerts <small>4</small></span></div>
+          <div class="arr"><span class="off">‹</span><span>›</span></div>
+          <div class="big">7 – 13 septembre</div>
+          <em>4 concerts · hard bop</em>
+          <div class="sum"><span>Jazz &amp; blues › hard bop</span><span class="link">Tout effacer</span></div>
+        </div>
+        <div class="pad"><div class="slot" data-t="t-grid-hb"></div></div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="lbl">Mobile 390 <i>au repos</i></div>
+      <div class="phone art b m">
+        <div class="mast pad">
+          <div class="wm">Live in Paris</div>
+          <div style="display:flex;gap:6px">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <span class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span>
+          </div>
+        </div>
+        <div class="moods pad">
+          <span class="mood on">Tout <small>199</small></span>
+          <span class="mood">Jazz &amp; blues <small>66</small></span>
+          <span class="mood">Rock &amp; indie <small>41</small></span>
+          <span class="mood">Électro <small>40</small></span>
+          <span class="mood">World</span>
+        </div>
+        <div class="pad">
+          <div class="tog"><span class="pill sm">Nouveautés <small>163</small></span><span class="pill sm">Mes concerts <small>4</small></span></div>
+          <div class="wk">
+            <div class="arr"><span class="off">‹</span><span>›</span></div>
+            <div class="big">7 – 13 sept.</div>
+          </div>
+          <div class="slot" data-t="t-mgrid"></div>
+        </div>
+      </div>
+
+      <div class="lbl">Mobile 390 <i>Jazz &amp; blues touché → styles dépliés → hard bop</i></div>
+      <div class="phone short art b m">
+        <div class="mast pad">
+          <div class="wm">Live in Paris</div>
+          <div style="display:flex;gap:6px">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <span class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span>
+          </div>
+        </div>
+        <div class="moods pad">
+          <span class="mood on">Jazz &amp; blues <small>66</small></span>
+          <span class="mood">Rock &amp; indie <small>41</small></span>
+          <span class="mood">Électro <small>40</small></span>
+          <span class="mood">World &amp; latin</span>
+        </div>
+        <div class="srow pad">
+          <span class="s">tous</span><span class="s">vocal jazz <small>83</small></span><span class="s">swing <small>65</small></span><span class="s on">hard bop <small>51</small></span><span class="s">contemporary jazz</span>
+        </div>
+        <div class="pad">
+          <div class="wk" style="margin-top:14px">
+            <div class="arr"><span class="off">‹</span><span>›</span></div>
+            <div class="big">7 – 13 sept.</div>
+            <em>4 concerts</em>
+          </div>
+          <div class="slot" data-t="t-mgrid-hb"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <dl class="leg">
+    <div><dt>Ce que ça apporte</dt>
+      <dd><b>Flâner</b> devient possible sans rien taper : 9 ambiances lisibles à trois mètres au lieu de 19 chips grises ; la typographie d'affiche porte l'identité « Programme » au lieu de la subir.</dd>
+      <dd><b>Deux tapes</b> pour aller de Jazz à hard bop, les styles restant contextuels (jamais 807 à l'écran).</dd>
+      <dd>La recherche (même typeahead qu'en A) reste disponible pour l'intention précise.</dd></div>
+    <div class="minus"><dt>Ce que ça coûte</dt>
+      <dd>Le regroupement est une opinion à maintenir (punk seul, blues seul, soul sans hip-hop… ne sont plus filtrables sauf via la barre) ; ambiance ≠ genre du scraper, il faut une table de mapping.</dd>
+      <dd>Une rangée de plus qu'en A dès qu'une ambiance est choisie ; scroll horizontal peu découvrable sur desktop (le dégradé de bord aide, mais).</dd>
+      <dd>Deux zones de « toggles » (ambiances, puis Nouveautés / Mes concerts) : hiérarchie moins évidente qu'en A.</dd></div>
+    <div class="rm"><dt>Ce que ça enlève</dt>
+      <dd>Comme A : onglets Semaine / 30 jours / Tout · Gratuit · non-concerts · picker salles · Réinitialiser.</dd>
+      <dd>Les 19 genres en tant que tels (→ 9 ambiances + la barre).</dd></div>
+  </dl>
+</section>
+
+<!-- ===================================================================== C -->
+<section class="dir" id="dirC">
+  <h2><span class="letter">C</span>Palette <span class="sub">une barre fine collante · aucune taxonomie visible · tout passe par ⌘K et les cartes</span></h2>
+  <p class="rat">La plus radicale : une barre de 56 px (logo, champ ⌘K, Nouveautés, Mes concerts, Près de moi) et rien d'autre au-dessus de la semaine. Genres, styles, salles et artistes se choisissent dans la palette de commandes — taper « jazz » propose le genre, ses styles, les artistes et les salles qui matchent — ou en touchant un libellé de style sur une carte (déjà cliquables aujourd'hui). Les filtres actifs vivent en chips sous la barre.</p>
+  <div class="pair">
+    <div class="col">
+      <div class="lbl">Desktop 1280 <i>état : Jazz + hard bop actifs · la palette ouverte (⌘K) sur « jazz »</i></div>
+      <div class="desk art c">
+        <div class="bar pad">
+          <div class="wm">Live in Paris</div>
+          <div class="kfield"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Artiste, salle, genre, style… <span class="kbd">⌘K</span></div>
+          <div class="right">
+            <span class="pill sm">Nouveautés <small>163</small></span>
+            <span class="pill sm">Mes concerts <small>4</small></span>
+            <span class="pill sm"><svg class="i" viewBox="0 0 24 24" style="width:15px;height:15px"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Près de moi</span>
+          </div>
+        </div>
+        <div class="under pad">
+          <div class="wk">
+            <div class="arr"><span class="off">‹</span><span>›</span></div>
+            <div class="big">7 – 13 septembre</div>
+            <em>4 concerts</em>
+          </div>
+          <div class="chips">
+            <span class="cap">Filtres</span>
+            <span class="chipin">Jazz <small>genre</small><span class="x">✕</span></span>
+            <span class="chipin">hard bop <small>style</small><span class="x">✕</span></span>
+            <span class="link">Tout effacer</span>
+          </div>
+        </div>
+        <div class="pad"><div class="slot" data-t="t-grid-hb"></div></div>
+        <div class="veil"></div>
+        <div class="pal ta">
+          <div class="in"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>jazz<span class="caret"></span><span class="kbd">esc</span></div>
+          <div class="slot" data-t="t-ta-gen-c t-ta-art t-ta-ven t-ta-act t-ta-foot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="lbl">Mobile 390 <i>au repos, deux filtres actifs</i></div>
+      <div class="phone art c m">
+        <div class="bar pad">
+          <div class="wm">Live in Paris</div>
+          <div class="kfield"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Rechercher…</div>
+          <span class="ico"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span>
+        </div>
+        <div class="pad">
+          <div class="row2">
+            <span class="pill sm">Nouveautés <small>163</small></span>
+            <span class="pill sm">Mes concerts <small>4</small></span>
+            <span class="pill sm">Près de moi</span>
+          </div>
+          <div class="chips">
+            <span class="chipin">Jazz <small>genre</small><span class="x">✕</span></span>
+            <span class="chipin">hard bop <small>style</small><span class="x">✕</span></span>
+            <span class="link">Tout effacer</span>
+          </div>
+          <div class="wk">
+            <div class="arr"><span class="off">‹</span><span>›</span></div>
+            <div class="big">7 – 13 sept.</div>
+            <em>4 concerts</em>
+          </div>
+          <div class="slot" data-t="t-mgrid-hb"></div>
+        </div>
+      </div>
+
+      <div class="lbl">Mobile 390 <i>palette en feuille plein écran</i></div>
+      <div class="phone short art c m">
+        <div class="sheet">
+          <div class="top">
+            <span class="back">‹</span>
+            <div class="sbar focus">
+              <div class="q">jazz<span class="caret"></span></div>
+              <span class="x" style="color:var(--faint)">✕</span>
+            </div>
+          </div>
+          <div class="ta"><div class="slot" data-t="t-ta-gen-c t-ta-art-m t-ta-ven"></div></div>
+          <div class="kb">clavier</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <dl class="leg">
+    <div><dt>Ce que ça apporte</dt>
+      <dd><b>L'écran le plus calme</b> : la grille commence à 130 px sur desktop, 190 px sur mobile ; la barre reste collée en haut au scroll (aujourd'hui c'est le bandeau semaine).</dd>
+      <dd><b>La palette fait tout</b>, y compris les actions (« Voir les nouveautés », « Autour de moi ») : clavier d'abord, une seule mécanique à apprendre, extensible sans toucher au header.</dd>
+      <dd>Les libellés de style sur les cartes deviennent le vrai moyen de naviguer par proximité (« post-punk » sur une carte → toute la semaine post-punk) : ils existent déjà.</dd></div>
+    <div class="minus"><dt>Ce que ça coûte</dt>
+      <dd><b>Découvrabilité</b> : un nouveau venu ne voit pas qu'on peut filtrer par genre. À compenser par la palette à vide (« Genres populaires cette semaine », « Salles proches ») — ce qui réintroduit une taxonomie, un cran plus loin.</dd>
+      <dd>Repose entièrement sur la qualité de la recherche floue ; un « jazz » qui ne trouverait pas « JASS CLUB » décrédibilise le tout.</dd>
+      <dd>Sur mobile, tout est à deux gestes (ouvrir la feuille, choisir) ; la promesse « ⌘K » n'a pas d'équivalent tactile.</dd></div>
+    <div class="rm"><dt>Ce que ça enlève</dt>
+      <dd>Tout ce qu'enlèvent A et B, plus la pill Genres (A) / les ambiances (B) : zéro taxonomie visible au repos.</dd>
+      <dd>Le wordmark en héros (26 px dans la barre) et la ligne meta (→ pied de page).</dd></div>
+  </dl>
+</section>
+
+<div class="reco-box">
+  <h3>Recommandation : A « Barre unique »</h3>
+  <p>C'est la direction qui honore chaque ligne du brief avec le moins de risque : une seule barre typée, Nouveautés et Mes concerts au même niveau, une taxonomie élégante mais toujours à portée de main (la pill « Genres ▾ », que C supprime au prix de la découvrabilité, et que B remplace par un regroupement à maintenir). Deux emprunts sans coût : le raccourci ⌘K / « / » de C ouvre la même barre, et le panneau Genres de A peut adopter la typographie d'affiche des ambiances de B pour ses 19 genres.</p>
+</div>
+
+<!-- ===================================================================== gabarits partagés (clonés dans les .slot par le script en bas) -->
+<template id="t-grid">
+<div class="grid">
+  <div class="day past"><h2>Lun 7<em>passé</em></h2></div>
+  <div class="day today"><h2>Mar 8<em>23 concerts</em></h2>
+    <div class="gig"><time>19h</time><div class="who">Headsend<span>Serratella, Sound of Lies</span></div><div class="where">Supersonic · Bastille</div><div class="tags"><span class="tag free">Gratuit</span><span class="tag">Punk</span><span class="tag sub">post-hardcore</span><span class="tag sub">noise rock</span></div></div>
+    <div class="gig"><time>19h30</time><div class="who">Luca Fattorini<span>Antonin Tri-Hoang</span></div><div class="where">38Riv Jazz Club · 4e</div><div class="tags"><span class="tag">19–24 €</span><span class="tag">Jazz</span><span class="tag sub">vocal jazz</span></div></div>
+  </div>
+  <div class="day"><h2>Mer 9<em>24 concerts</em></h2>
+    <div class="gig"><time>19h</time><div class="who">#LaPetiteHeure by… Le Ninon Valder Ensemble</div><div class="where">Le Baiser Salé · Châtelet</div><div class="tags"><span class="tag">13–18 €</span><span class="tag">Jazz</span><span class="tag sub">tango</span><span class="tag sub">groove</span></div></div>
+    <div class="gig"><time>19h</time><div class="who">Daamia</div><div class="where">Peniche Marcounet · 4e</div><div class="tags"><span class="tag">5–8 €</span><span class="tag">World</span></div></div>
+  </div>
+  <div class="day"><h2>Jeu 10<em>29 concerts</em></h2>
+    <div class="gig"><time>0h</time><div class="who">Resurrection #1</div><div class="where">Nouveau Casino · Oberkampf</div><div class="tags"><span class="tag">Hip-hop</span><span class="tag sub">trap</span></div></div>
+    <div class="gig"><time>17h30</time><div class="who">Pop Princess Party<span>Billie, Zara Edition</span></div><div class="where">La Java · Belleville</div><div class="tags"><span class="tag">Pop</span><span class="tag sub">dark pop</span></div></div>
+  </div>
+  <div class="day"><h2>Ven 11<em>43 concerts</em></h2>
+    <div class="gig"><time>0h</time><div class="who">Amplifie ta rentrée !</div><div class="where">Nouveau Casino · Oberkampf</div><div class="tags"><span class="tag">Electro</span><span class="tag sub">baile funk</span><span class="tag sub">ghettotech</span></div></div>
+    <div class="gig"><time>0h</time><div class="who">Palmarès les Trophées du Sunside 🏆</div><div class="where">Sunset / Sunside · Châtelet</div><div class="tags"><span class="tag">Jazz</span></div></div>
+  </div>
+  <div class="day"><h2>Sam 12<em>53 concerts</em></h2>
+    <div class="gig"><time>0h</time><div class="who">La Malafamera</div><div class="where">Nouveau Casino · Oberkampf</div><div class="tags"><span class="tag">Latin</span><span class="tag sub">reggaeton</span></div></div>
+    <div class="gig"><time>14h</time><div class="who">⚡ FTV UNPLUGGED<span>GRANDMA'S ASHES ⚡</span></div><div class="where">Point Éphémère · Canal Saint-Martin</div><div class="tags"><span class="tag">Rock</span><span class="tag sub">progressive rock</span></div></div>
+  </div>
+  <div class="day"><h2>Dim 13<em>27 concerts</em></h2>
+    <div class="gig"><time>11h</time><div class="who">PARIS VINTAGE LEGEND</div><div class="where">Cirque Electrique · Porte des Lilas</div><div class="tags"><span class="tag">5–18 €</span><span class="tag">Rock</span><span class="tag sub">rock'n'roll</span></div></div>
+    <div class="gig"><time>14h</time><div class="who">NOIZE MAGAZINE<span>VOL. 3 LAUNCH FESTIVAL</span></div><div class="where">Point Éphémère · Canal Saint-Martin</div><div class="tags"><span class="tag">Rock</span></div></div>
+  </div>
+</div>
+</template>
+
+<template id="t-grid-hb">
+<div class="grid">
+  <div class="day past"><h2>Lun 7<em>passé</em></h2></div>
+  <div class="day today"><h2>Mar 8<em>1 concert</em></h2>
+    <div class="gig"><time>—</time><div class="who">Mardi Jazz!<span>Essaïe Cid, Clément Trimouille, Kim Baiunco…</span></div><div class="where">PopUp! · 12e</div><div class="tags"><span class="tag">Jazz</span><span class="tag sub on">hard bop</span><span class="tag sub">bebop</span></div></div>
+  </div>
+  <div class="day"><h2>Mer 9<em>2 concerts</em></h2>
+    <div class="gig"><time>19h30</time><div class="who">Haba</div><div class="where">38Riv Jazz Club · 4e</div><div class="tags"><span class="tag">19–22 €</span><span class="tag">Jazz</span><span class="tag sub on">hard bop</span><span class="tag sub">modern jazz</span></div></div>
+    <div class="gig"><time>20h</time><div class="who">THE BLAKETTES</div><div class="where">Le Son de la Terre · 5e</div><div class="tags"><span class="tag">25 €</span><span class="tag">Jazz</span><span class="tag sub on">hard bop</span></div></div>
+  </div>
+  <div class="day"><h2>Jeu 10<em>—</em></h2><div class="empty">Rien d'annoncé. <u>Voir la semaine suivante ›</u></div></div>
+  <div class="day"><h2>Ven 11<em>—</em></h2><div class="empty">Rien d'annoncé.</div></div>
+  <div class="day"><h2>Sam 12<em>1 concert</em></h2>
+    <div class="gig"><time>23h</time><div class="who">Zoot « late » sessions<span>Heritage jazz</span></div><div class="where">38Riv Jazz Club · 4e</div><div class="tags"><span class="tag">20 €</span><span class="tag">Jazz</span><span class="tag sub on">hard bop</span><span class="tag sub">swing</span></div></div>
+  </div>
+  <div class="day"><h2>Dim 13<em>—</em></h2><div class="empty">Rien d'annoncé.</div></div>
+</div>
+</template>
+
+<template id="t-mgrid">
+<div class="grid">
+  <div class="day today"><h2>Mar 8<em>23 concerts</em></h2>
+    <div class="gig"><time>19h</time><div class="who">Headsend<span>Serratella, Sound of Lies</span></div><div class="where">Supersonic · Bastille</div><div class="tags"><span class="tag free">Gratuit</span><span class="tag">Punk</span><span class="tag sub">post-hardcore</span><span class="tag sub">noise rock</span></div></div>
+    <div class="gig"><time>19h30</time><div class="who">Luca Fattorini<span>Antonin Tri-Hoang</span></div><div class="where">38Riv Jazz Club · 4e</div><div class="tags"><span class="tag">19–24 €</span><span class="tag">Jazz</span><span class="tag sub">vocal jazz</span></div></div>
+    <div class="gig"><time>19h30</time><div class="who">ROSTAM</div><div class="where">La Maroquinerie · Ménilmontant</div><div class="tags"><span class="tag">Indie</span><span class="tag sub">indie pop</span><span class="tag sub">art pop</span></div></div>
+    <div class="gig"><time>20h</time><div class="who">THE SONGS OF JEFF BUCKLEY</div><div class="where">La Cigale · Pigalle</div><div class="tags"><span class="tag">Rock</span><span class="tag sub">singer-songwriter</span></div></div>
+    <div class="gig"><time>20h</time><div class="who">la joujou</div><div class="where">Point Éphémère · Canal Saint-Martin</div><div class="tags"><span class="tag">Electro</span><span class="tag">Pop</span></div></div>
+  </div>
+</div>
+</template>
+
+<template id="t-mgrid-hb">
+<div class="grid">
+  <div class="day today"><h2>Mar 8<em>1 concert</em></h2>
+    <div class="gig"><time>—</time><div class="who">Mardi Jazz!<span>Essaïe Cid, Clément Trimouille, Kim Baiunco…</span></div><div class="where">PopUp! · 12e</div><div class="tags"><span class="tag">Jazz</span><span class="tag sub on">hard bop</span><span class="tag sub">bebop</span></div></div>
+  </div>
+  <div class="day"><h2>Mer 9<em>2 concerts</em></h2>
+    <div class="gig"><time>19h30</time><div class="who">Haba</div><div class="where">38Riv Jazz Club · 4e</div><div class="tags"><span class="tag">19–22 €</span><span class="tag">Jazz</span><span class="tag sub on">hard bop</span><span class="tag sub">modern jazz</span></div></div>
+    <div class="gig"><time>20h</time><div class="who">THE BLAKETTES</div><div class="where">Le Son de la Terre · 5e</div><div class="tags"><span class="tag">25 €</span><span class="tag">Jazz</span><span class="tag sub on">hard bop</span></div></div>
+  </div>
+</div>
+</template>
+
+<!-- groupes du typeahead : requête « jaz » -->
+<template id="t-ta-art">
+<div class="grp"><h4>Artistes <small>103 · les 3 plus proches</small></h4>
+  <div class="row hi"><span class="th av1">TJ</span><span><b>Tango Jazz Quartet</b><small>mar 8 · 20h30 · Sunset / Sunside · Châtelet</small></span><span class="type">Artiste</span></div>
+  <div class="row"><span class="th av2">VJ</span><span><b>Venice Jazz Quartet</b><small>mer 9 · 21h30 · Sunset / Sunside · Châtelet</small></span><span class="type">Artiste</span></div>
+  <div class="row"><span class="th av4">JS</span><span><b>Jam Session Groove &amp; Jazz</b><small>sam 12 · JASS CLUB PARIS · 13e</small></span><span class="type">Artiste</span></div>
+</div>
+</template>
+<template id="t-ta-art-m">
+<div class="grp"><h4>Artistes <small>103</small></h4>
+  <div class="row hi"><span class="th av1">TJ</span><span><b>Tango Jazz Quartet</b><small>mar 8 · Sunset / Sunside</small></span><span class="type">Artiste</span></div>
+  <div class="row"><span class="th av2">VJ</span><span><b>Venice Jazz Quartet</b><small>mer 9 · Sunset / Sunside</small></span><span class="type">Artiste</span></div>
+  <div class="row"><span class="th av3">CC</span><span><b>Chloé Cassandre &amp; Primetime Jazz</b><small>ven 11 · Sunset / Sunside</small></span><span class="type">Artiste</span></div>
+</div>
+</template>
+<template id="t-ta-ven">
+<div class="grp"><h4>Salles</h4>
+  <div class="row"><span class="th gl"><svg class="i" viewBox="0 0 24 24" style="width:15px;height:15px"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span><span><b>38Riv Jazz Club</b><small>4e · 174 concerts à venir</small></span><span class="type">Salle</span></div>
+  <div class="row"><span class="th gl"><svg class="i" viewBox="0 0 24 24" style="width:15px;height:15px"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span><span><b>JASS CLUB PARIS</b><small>13e · 27 concerts à venir</small></span><span class="type">Salle</span></div>
+</div>
+</template>
+<template id="t-ta-gen">
+<div class="grp"><h4>Genres &amp; styles</h4>
+  <div class="row"><span class="th gen">♪</span><span><b>Jazz</b><small>713 concerts à venir · 64 cette semaine · 240 styles</small></span><span class="type">Genre</span></div>
+  <div class="row"><span class="th sty">♪</span><span><b>vocal jazz</b><small>83 · dans Jazz</small></span><span class="type">Style</span></div>
+  <div class="row"><span class="th sty">♪</span><span><b>contemporary jazz</b><small>59 · dans Jazz</small></span><span class="type">Style</span></div>
+  <div class="row"><span class="th sty">♪</span><span><b>gypsy jazz</b><small>28 · dans Jazz</small></span><span class="type">Style</span></div>
+</div>
+</template>
+<template id="t-ta-gen-m">
+<div class="grp"><h4>Genres &amp; styles</h4>
+  <div class="row"><span class="th gen">♪</span><span><b>Jazz</b><small>64 cette semaine · 240 styles</small></span><span class="type">Genre</span></div>
+  <div class="row"><span class="th sty">♪</span><span><b>vocal jazz</b><small>83 · dans Jazz</small></span><span class="type">Style</span></div>
+</div>
+</template>
+<template id="t-ta-gen-c">
+<div class="grp"><h4>Genres &amp; styles</h4>
+  <div class="row hi"><span class="th gen">♪</span><span><b>Jazz</b><small>déjà actif · 64 cette semaine · 240 styles</small></span><span class="type">Genre ✓</span></div>
+  <div class="row"><span class="th sty">♪</span><span><b>vocal jazz</b><small>83 · dans Jazz</small></span><span class="type">Style</span></div>
+  <div class="row"><span class="th sty">♪</span><span><b>contemporary jazz</b><small>59 · dans Jazz</small></span><span class="type">Style</span></div>
+</div>
+</template>
+<template id="t-ta-act">
+<div class="grp"><h4>Actions</h4>
+  <div class="row"><span class="th gl">→</span><span><b>Voir tous les concerts jazz à venir</b><small>713 · élargit à toutes les semaines</small></span><span class="type">Action</span></div>
+</div>
+</template>
+<template id="t-ta-foot">
+<div class="foot"><span><span class="kbd">↑</span><span class="kbd">↓</span> naviguer</span><span><span class="kbd">↵</span> choisir</span><span><span class="kbd">esc</span> fermer</span><span class="free">↵ sur le texte : rechercher « jaz » partout</span></div>
+</template>
+
+<script>
+// Clone les gabarits partagés (grille, groupes du typeahead) dans chaque emplacement.
+document.querySelectorAll('.slot').forEach(s => {
+  const frag = document.createDocumentFragment();
+  s.dataset.t.split(/\s+/).forEach(id => frag.appendChild(document.getElementById(id).content.cloneNode(true)));
+  s.replaceWith(frag);
+});
+</script>
+</body>
+</html>
