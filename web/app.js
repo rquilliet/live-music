@@ -17,7 +17,8 @@
 
   let DATA = { events: [], tags: [], venues: [] };
   let state = load({ tab: "week", week: 0, genres: [], styles: [], venues: [], free: false, saved: false, others: false, q: "", near: false, radius: 5 });
-  let saved = loadSaved(); // ids of concerts the user bookmarked ("Enregistrer")
+  const STATUS = { interested: { icon: "☆", label: "Intéressé" }, going: { icon: "✓", label: "J'y vais" } };
+  let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Intéressé ? / J'y vais"
   let me = null; // {lat, lon}
   let stylesOpen = false; // "+N autres" expanded (not persisted)
   let venueOpen = false; // venue picker popover (not persisted)
@@ -61,13 +62,30 @@
     return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
-  function loadSaved() {
-    try { const a = JSON.parse(localStorage.getItem("lip-saved") || "[]"); return new Set(Array.isArray(a) ? a : []); } catch { return new Set(); }
+  // Status per concert, kept in localStorage "lip-status". The previous UI stored a plain list of bookmarked ids in
+  // "lip-saved" ("Enregistrer"): on first load those become "interested" and the old key is dropped.
+  function loadStatus() {
+    let s = {};
+    try { s = JSON.parse(localStorage.getItem("lip-status") || "{}"); } catch { /* fresh start */ }
+    if (!s || typeof s !== "object" || Array.isArray(s)) s = {};
+    s = Object.fromEntries(Object.entries(s).filter(([, v]) => v in STATUS));
+    try {
+      const old = JSON.parse(localStorage.getItem("lip-saved") || "null");
+      if (Array.isArray(old)) {
+        old.forEach(id => { if (typeof id === "string" && !s[id]) s[id] = "interested"; });
+        localStorage.setItem("lip-status", JSON.stringify(s));
+        localStorage.removeItem("lip-saved");
+      }
+    } catch { /* nothing to migrate */ }
+    return s;
   }
-  function toggleSaved(id) {
-    if (saved.has(id)) saved.delete(id); else saved.add(id);
-    try { localStorage.setItem("lip-saved", JSON.stringify([...saved])); } catch {}
+  function getStatus(id) { return status[id] || null; }
+  function setStatus(id, s) {
+    if (s in STATUS) status[id] = s; else delete status[id];
+    try { localStorage.setItem("lip-status", JSON.stringify(status)); } catch {}
   }
+  // "Mes concerts" count: upcoming events with a status (past ones linger in storage but are not counted).
+  function statusCount() { const t = isoDate(today0()); return DATA.events.filter(e => status[e.id] && e.date >= t).length; }
   // Local calendar date, never toISOString (UTC would shift Paris midnight to the previous day).
   function isoDate(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
   function safeUrl(u) { return u && /^https?:\/\//i.test(u) ? u : null; }
@@ -187,7 +205,7 @@
     if (!state.others && !e.is_music) return false;
     if (state.venues.length && !state.venues.includes(e.venue)) return false;
     if (state.free && !e.free) return false;
-    if (state.saved && !saved.has(e.id)) return false;
+    if (state.saved && !status[e.id]) return false;
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
     if (state.styles.length && !(e.subgenres || []).some(s => state.styles.includes(s))) return false;
     if (state.q) {
@@ -229,7 +247,7 @@
       `<button class="chip ${state.genres.includes(t) ? "on" : ""}" data-g="${t}">${TAG_LABELS[t] || t}<small>${counts[t] || 0}</small></button>`).join("");
     $("#free").classList.toggle("on", state.free);
     $("#saved").classList.toggle("on", state.saved);
-    $("#saved small").textContent = saved.size || "";
+    $("#saved small").textContent = statusCount() || "";
     renderStyles();
   }
   // Fine-grained styles, shown only in context: once a coarse genre is picked (or a style is active), the
@@ -325,9 +343,6 @@
     }
     ev.preventDefault();
   }
-  function genreTags(e) {
-    return e.genres.map(g => `<span class="tag src-${e.genre_source || ""}" title="source : ${e.genre_source || "?"}">${TAG_LABELS[g] || g}</span>`).join("");
-  }
   // Fine-grained labels next to the coarse tags; clicking one toggles that style filter. Active styles come first.
   function subHtml(e, max = 2) {
     const subs = (e.subgenres || []).slice().sort((a, b) => state.styles.includes(b) - state.styles.includes(a));
@@ -339,7 +354,8 @@
     if (e.sold_out) b.push('<span class="tag sold">Complet</span>');
     if (e.cancelled) b.push('<span class="tag cancel">Annulé</span>');
     if (!e.is_music) b.push('<span class="tag other">Non-concert</span>');
-    if (saved.has(e.id)) b.push('<span class="tag saved">★ Enregistré</span>');
+    const s = getStatus(e.id);
+    if (s) b.push(`<span class="tag status ${s}" title="${STATUS[s].label}" aria-label="${STATUS[s].label}">${STATUS[s].icon}</span>`);
     return b.join("");
   }
   function gigHtml(e) {
@@ -412,6 +428,7 @@
   const detail = $("#detail"), sheet = $(".sheet", detail), hero = $("#hero");
   let current = null;
   let closing = false;   // exit animation (or the closing view transition) in flight
+  let menuOpen = false;  // status menu under the "Intéressé ?" tile (REM-18)
   // `row` is the .gig the user clicked: with the View Transitions API its time morphs into the hero date while the
   // sheet springs in; otherwise (no API, reduced motion, deep link) the CSS animations on .detail/.sheet play.
   function openDetail(e, row) {
@@ -432,41 +449,92 @@
     const list = $("#list");   // recede around the middle of the viewport, so a long page doesn't slide
     list.style.transformOrigin = `50% ${Math.round(scrollY - list.offsetTop + innerHeight / 2)}px`;
     list.classList.add("receded");
-    sheet.scrollTop = 0; hero.style.transform = "";
+    sheet.scrollTop = 0; hero.style.transform = ""; menuOpen = false;
     hero.style.backgroundImage = e.image ? `url("${e.image}")` : "";
     const [head, ...sup] = lineup(e);
+    const page = safeUrl(e.url), domain = page ? hostOf(page) : "";
+    // The title is the link to the event page (REM-13): dotted underline + a small ↗, nothing when the url is unusable.
+    const title = page ? `<a href="${esc(page)}" target="_blank" rel="noopener" title="Page de l'événement sur ${esc(domain)}">${esc(head)}<span class="ext" aria-hidden="true">↗</span></a>` : esc(head);
     $("#hero-text").innerHTML = `<div class="when">${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}</div>
-      <h2>${esc(head)}</h2>${sup.length ? `<div class="support">avec ${esc(sup.join(", "))}</div>` : ""}
-      <div class="where">${esc([e.venue, e.area, e.address].filter(Boolean).join(" · "))}${walk(e) ? " · " + walk(e) : ""}</div>`;
+      <h2>${title}</h2>${sup.length ? `<div class="support">avec ${esc(sup.join(", "))}</div>` : ""}`;
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
-    const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
+    const price = e.free ? "Gratuit" : shortPrice(e.price);
+    const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Itinéraire ↗</a>` : "";
+    const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
+    const meta = [ticketTile(e).ticket ? "" : price ? esc(price) : "", subHtml(e, 4)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
       <div class="actions">
-        ${ticket ? `<a href="${esc(ticket)}" target="_blank" rel="noopener">Billets ↗</a>` : ""}
-        ${page ? `<a${ticket ? ' class="secondary"' : ""} href="${esc(page)}" title="${esc(hostOf(page))}" target="_blank" rel="noopener">Page de l'événement ↗</a>` : ""}
-        ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
-        <a class="secondary" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener">Agenda Google</a>
-        <a class="secondary" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener">WhatsApp</a>
-        <button id="savebtn" type="button"></button>
+        ${ticketTile(e).html}
+        <div class="status" id="status">
+          <button id="statusbtn" class="tile" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="statusmenu"></button>
+          <div class="statusmenu" id="statusmenu" role="menu" aria-label="Mon statut" hidden></div>
+        </div>
+        <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Ajouter à Google Agenda">Agenda</a>
+        <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Partager sur WhatsApp">WhatsApp</a>
       </div>
-      <div class="muted tagline">${genreTags(e)}${subHtml(e, 99)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price ? "· " + esc(e.price) : ""} ${statusTags(e)}</div>
+      <div class="venue"><b>${esc(e.venue)}</b>${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
+      ${meta ? `<div class="muted meta">${meta}</div>` : ""}
       ${blurbHtml(e)}
-      ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
       <div id="artist"></div>`;
-    renderSaveButton();
-    $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); replay($("#savebtn"), "pop"); render(); };
+    renderStatus();
     const more = $(".blurb [data-more]", detail);
     if (more) more.onclick = () => {   // "lire la suite" / "réduire" swaps the text in place
       const open = more.textContent !== "lire la suite";
       $(".blurb .txt", detail).textContent = open ? BLURB_CUT(blurb(e)) : blurb(e);
       more.textContent = open ? "lire la suite" : "réduire";
     };
-    $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
-      if (b.classList.contains("on")) return;
-      $$(".artist-pick button", detail).forEach(x => x.classList.remove("on")); b.classList.add("on");
-      swapArtist(artists[Number(b.dataset.i)], e);
-    });
-    if (artists.length) loadArtist(artists[0], e);
+    if (artists.length) loadArtist(artists[0], e, artists);
+  }
+  // Tile 1 of the action row. `ticket` says whether the price is already on it (else the meta line shows it).
+  function ticketTile(e) {
+    const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
+    const price = e.free ? "Gratuit" : shortPrice(e.price);
+    if (e.cancelled) return { html: '<button class="tile off" type="button" disabled>Annulé</button>' };
+    if (e.sold_out) return { html: '<button class="tile off" type="button" disabled>Complet</button>' };
+    if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Billets ↗</small>` : "Billets ↗"}</a>` };
+    if (page) return { html: `<a class="tile" href="${esc(page)}" target="_blank" rel="noopener" title="${esc(page)}">Voir sur<small>${esc(hostOf(page))} ↗</small></a>` };
+    return { html: `<span class="tile off" aria-disabled="true">${price ? esc(price) : "Billets"}</span>` };
+  }
+  // ---- status tile + menu (REM-18): "Intéressé ? ▾" opens a small menu; once set, the tile shows the status and the
+  // menu gains "Retirer". One menu at a time, closed on outside click / Escape (before the sheet's Escape).
+  function renderStatus() {
+    const b = $("#statusbtn"), m = $("#statusmenu"); if (!b || !current) return;
+    const s = getStatus(current.id);
+    b.classList.toggle("on", !!s);
+    b.setAttribute("aria-expanded", String(menuOpen));
+    b.innerHTML = s ? `<span class="star">${STATUS[s].icon}</span> ${STATUS[s].label}` : 'Intéressé ?<span class="caret" aria-hidden="true">▾</span>';
+    m.innerHTML = Object.entries(STATUS).map(([k, v]) =>
+      `<button type="button" role="menuitemradio" aria-checked="${s === k}" data-status="${k}"><span class="star">${v.icon}</span>${v.label}</button>`).join("") +
+      (s ? '<button type="button" role="menuitem" class="rm" data-status="">Retirer</button>' : "");
+    if (menuOpen) { cancelExit(m); m.hidden = false; }
+    else if (!m.hidden && !m._exit) exitThen(m, "out", 120, () => { m.hidden = true; });
+  }
+  function openMenu() {
+    if (menuOpen || !current) return;
+    menuOpen = true; renderStatus();
+    ($("#statusmenu [aria-checked=true]") || $("#statusmenu button")).focus();
+  }
+  function closeMenu(refocus) {
+    if (!menuOpen) return;
+    menuOpen = false; renderStatus();
+    if (refocus) $("#statusbtn").focus();
+  }
+  function pickStatus(s) {
+    setStatus(current.id, s); menuOpen = false;
+    renderStatus(); replay($("#statusbtn"), "pop"); $("#statusbtn").focus();
+    render();   // grid badge + "Mes concerts" count
+  }
+  function menuKeys(ev) {
+    const items = $$("#statusmenu button"), i = items.indexOf(document.activeElement);
+    switch (ev.key) {
+      case "ArrowDown": items[(i + 1) % items.length].focus(); break;
+      case "ArrowUp": items[(i - 1 + items.length) % items.length].focus(); break;
+      case "Home": items[0].focus(); break;
+      case "End": items[items.length - 1].focus(); break;
+      case "Tab": closeMenu(); return;   // let the focus move on
+      default: return;
+    }
+    ev.preventDefault();
   }
   // What the venue says about the show: the scraped description, else Claude's summary of the event page
   // (see livemusic/summaries.py). Wikipedia is only fetched when both are empty (loadArtist).
@@ -480,24 +548,18 @@
     try { domain = page ? new URL(page).hostname.replace(/^www\./, "") : ""; } catch { /* no attribution */ }
     return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>lire la suite</button>' : ""}${domain ? ` <a class="muted" href="${esc(page)}" target="_blank" rel="noopener">source : ${esc(domain)} ↗</a>` : ""}</p>`;
   }
-  function renderSaveButton() {
-    const b = $("#savebtn"); if (!b || !current) return;
-    const on = saved.has(current.id);
-    b.classList.toggle("on", on);
-    b.innerHTML = `<span class="star">${on ? "★" : "☆"}</span> ${on ? "Enregistré" : "Enregistrer"}`;
-  }
   // Cross-fade #artist: fade out, swap the content at the mid-point, fade in.
-  function swapArtist(name, e) {
+  function swapArtist(name, e, artists) {
     const box = $("#artist");
-    if (!motionOK()) { loadArtist(name, e); return; }
+    if (!motionOK()) { loadArtist(name, e, artists); return; }
     replay(box, "swap");
-    setTimeout(() => loadArtist(name, e), 110);
+    setTimeout(() => loadArtist(name, e, artists), 110);
   }
   // Closing reverses the opening motion; #detail is hidden once it ends. The state (current, hash, body scroll)
   // is reset synchronously, so a second call or a click during the exit is a no-op.
   function closeDetail() {
     if (detail.hidden || closing) return;
-    const e = current; current = null; closing = true;
+    const e = current; current = null; closing = true; menuOpen = false;
     document.body.style.overflow = ""; history.replaceState(null, "", location.pathname);
     $("#list").classList.remove("receded");
     const hide = () => { closing = false; if (current) return; detail.hidden = true; hero.style.transform = ""; };   // unless reopened meanwhile
@@ -545,34 +607,42 @@
     if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
     return "";
   }
+  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Écouter <act>" + player · the other
+  // acts as text buttons (swap the player) · "Dans le même esprit" (Deezer related, names only) · search links.
+  // A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed meanwhile) is dropped.
   const cache = {};
-  async function loadArtist(name, e) {
+  let artistShown = null;
+  async function loadArtist(name, e, artists = [name]) {
     const box = $("#artist");
-    box.innerHTML = `<div class="muted">Recherche de « ${esc(name)} »…</div>`;
+    artistShown = name;
+    box.innerHTML = '<div class="skel" aria-hidden="true"></div>';
     const key = norm(name) + (blurb(e) ? "|nowiki" : "");   // Wikipedia only as a fallback when the event page gave nothing
     if (!cache[key]) cache[key] = Promise.all([deezerArtist(name).catch(() => null), blurb(e) ? null : wikiSummary(name)]).catch(() => [null, null]);
     const [dz, wiki] = await cache[key];
-    if ($(".artist-pick .on", detail) && $(".artist-pick .on", detail).textContent !== name) return; // user switched
+    const stale = () => current !== e || artistShown !== name;
+    if (stale()) return;
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
     const q = encodeURIComponent(name);
     const p = playersOf(e, name);
     const player = playerHtml(p, dz);
+    const others = artists.filter(a => a !== name);
     box.innerHTML = `
-      <h3>${esc(name)}</h3>
       ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : ""}
-      ${player ? `<div style="margin-top:12px">${player}</div>` : ""}
-      <div class="links" style="margin-top:10px">
+      ${player ? `<h3>Écouter ${esc(name)}</h3>${player}` : ""}
+      ${others.length ? `<div class="acts muted">Écouter aussi : ${others.map(a => `<button type="button" class="link" data-act="${esc(a)}">${esc(a)}</button>`).join(" · ")}</div>` : ""}
+      <div class="esprit muted" id="esprit"></div>
+      <div class="links">
         <a href="${p.bandcamp ? esc(p.bandcamp.url) : `https://bandcamp.com/search?q=${q}`}" target="_blank" rel="noopener">Bandcamp</a>
         <a href="${p.spotify && safeUrl(p.spotify.url) ? esc(p.spotify.url) : `https://open.spotify.com/search/${q}`}" target="_blank" rel="noopener">Spotify</a>
-        ${dz && safeUrl(dz.link) ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
         <a href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">YouTube</a>
-      </div>
-      <div id="similar"></div>`;
+        ${dz && safeUrl(dz.link) ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
+      </div>`;
+    $$(".acts [data-act]", box).forEach(b => b.onclick = () => swapArtist(b.dataset.act, e, artists));
     if (dz) {
-      const rel = await deezerRelated(dz.id).catch(() => []);
-      if (rel.length) {
-        $("#similar").innerHTML = `<h3 style="margin-top:16px">Artistes similaires</h3><div class="similar">${rel.slice(0, 10).map(a =>
-          `<a href="${esc(safeUrl(a.link) || "#")}" target="_blank" rel="noopener"><img src="${esc(safeUrl(a.picture_medium) || "")}" alt="">${esc(a.name)}</a>`).join("")}</div>`;
+      const rel = (await deezerRelated(dz.id).catch(() => [])).filter(a => a && a.name).slice(0, 6);
+      if (rel.length && !stale()) {
+        $("#esprit").innerHTML = "Dans le même esprit : " + rel.map(a =>
+          safeUrl(a.link) ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.name)}</a>` : esc(a.name)).join(", ");
       }
     }
   }
@@ -643,7 +713,10 @@
   $("#venuelist").onmousemove = ev => { const row = ev.target.closest("label[role=option]"); if (row && !row.classList.contains("hi")) { venueHi = $("input", row).dataset.v; renderVenueList(); } };
   $("#venue-clear").onclick = () => { state.venues = []; render(); $("#venue-q").focus(); };
   $("#venuesel").onclick = ev => { const b = ev.target.closest("[data-rm]"); if (b) toggleVenue(b.dataset.rm); };
-  document.addEventListener("click", ev => { if (venueOpen && !ev.target.closest("#venuepick")) closeVenues(); });
+  document.addEventListener("click", ev => {
+    if (venueOpen && !ev.target.closest("#venuepick")) closeVenues();
+    if (menuOpen && !ev.target.closest("#status")) closeMenu();
+  });
   $("#others").onchange = ev => { state.others = ev.target.checked; render(); };
   $("#search").oninput = ev => { state.q = ev.target.value.trim(); render(); };
   $("#reset").onclick = () => { state = { ...state, genres: [], styles: [], venues: [], free: false, saved: false, others: false, q: "", near: false }; closeVenues(); syncInputs(); render(); };
@@ -666,9 +739,18 @@
   };
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
-  detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); } });
+  detail.addEventListener("click", ev => {
+    const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); return; }
+    if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
+    const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
+  });
+  detail.addEventListener("keydown", ev => {
+    if (ev.target.closest("#statusmenu")) { menuKeys(ev); return; }
+    if (ev.target.closest("#statusbtn") && ev.key === "ArrowDown" && !menuOpen) { ev.preventDefault(); openMenu(); }
+  });
   document.addEventListener("keydown", ev => {
     if (ev.key === "Escape" && venueOpen) { closeVenues(true); return; }
+    if (ev.key === "Escape" && menuOpen) { closeMenu(true); return; }
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
     if (!detail.hidden || /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName) || state.tab !== "week") return;
     if (ev.key === "ArrowLeft" && state.week > 0) goWeek(state.week - 1);
