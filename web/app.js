@@ -24,6 +24,27 @@
   let venueHi = null;    // venue name highlighted with the arrow keys in the picker
   let venueShown = [];   // venues currently listed in the picker, in display order
 
+  // ------------------------------------------------------------ motion (REM-15)
+  // Everything animates in CSS; JS only sequences it. Reduced motion: CSS keeps 120ms fades, JS skips the
+  // View Transitions morph and the parallax.
+  const MOTION = matchMedia("(prefers-reduced-motion: reduce)");
+  const motionOK = () => !MOTION.matches;
+  const canVT = () => motionOK() && typeof document.startViewTransition === "function";
+  // Exit animation: add `cls`, hide when it ends (a timer backs up animationend). cancelExit() aborts a pending one.
+  function exitThen(el, cls, ms, then) {
+    cancelExit(el);
+    const done = () => { cancelExit(el); then(); };
+    el._exit = { cls, t: setTimeout(done, ms + 80), h: ev => { if (ev.target === el) done(); } };
+    el.classList.add(cls);
+    el.addEventListener("animationend", el._exit.h);
+  }
+  function cancelExit(el) {
+    if (!el._exit) return;
+    clearTimeout(el._exit.t); el.removeEventListener("animationend", el._exit.h); el.classList.remove(el._exit.cls); el._exit = null;
+  }
+  // Restart a one-shot CSS animation class (remove, reflow, add).
+  function replay(el, cls) { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
+
   // ------------------------------------------------------------ helpers
   function load(def) {
     let s = def;
@@ -245,7 +266,9 @@
     btn.classList.toggle("on", n > 0);
     btn.setAttribute("aria-expanded", String(venueOpen));
     $("#venuesel").innerHTML = state.venues.map(v => `<button type="button" class="chip on" data-rm="${esc(v)}" title="Retirer « ${esc(v)} »">${esc(v)}<b aria-hidden="true">×</b></button>`).join("");
-    $("#venuepop").hidden = !venueOpen;
+    const pop = $("#venuepop");
+    if (venueOpen) { cancelExit(pop); pop.hidden = false; }
+    else if (!pop.hidden && !pop._exit) exitThen(pop, "out", 120, () => { pop.hidden = true; });
     $("#venue-clear").hidden = !n;
     if (venueOpen) renderVenueList();
   }
@@ -386,14 +409,31 @@
   function render() { renderNav(); renderGenres(); renderVenues(); renderList(); save(); }
 
   // ------------------------------------------------------------ detail sheet
-  const detail = $("#detail");
+  const detail = $("#detail"), sheet = $(".sheet", detail), hero = $("#hero");
   let current = null;
-  function openDetail(e) {
+  let closing = false;   // exit animation (or the closing view transition) in flight
+  // `row` is the .gig the user clicked: with the View Transitions API its time morphs into the hero date while the
+  // sheet springs in; otherwise (no API, reduced motion, deep link) the CSS animations on .detail/.sheet play.
+  function openDetail(e, row) {
+    cancelExit(detail); closing = false;
+    const t = row && canVT() && detail.hidden ? $("time", row) : null;
+    detail.classList.toggle("vt", !!t);
+    if (!t) { fillDetail(e); return; }
+    t.style.viewTransitionName = "gig-date";   // old state: the row's time; new state: the hero date (names must not coexist)
+    const vt = document.startViewTransition(() => { t.style.viewTransitionName = ""; fillDetail(e); $(".hero-text .when").style.viewTransitionName = "gig-date"; });
+    const done = () => { const w = $(".hero-text .when"); if (w) w.style.viewTransitionName = ""; };
+    vt.finished.then(done, done);   // finished rejects when the transition is skipped
+  }
+  function fillDetail(e) {
     current = e;
     detail.hidden = false;
     history.replaceState(null, "", "#e=" + e.id);
     document.body.style.overflow = "hidden";
-    $("#hero").style.backgroundImage = e.image ? `url("${e.image}")` : "";
+    const list = $("#list");   // recede around the middle of the viewport, so a long page doesn't slide
+    list.style.transformOrigin = `50% ${Math.round(scrollY - list.offsetTop + innerHeight / 2)}px`;
+    list.classList.add("receded");
+    sheet.scrollTop = 0; hero.style.transform = "";
+    hero.style.backgroundImage = e.image ? `url("${e.image}")` : "";
     const [head, ...sup] = lineup(e);
     $("#hero-text").innerHTML = `<div class="when">${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}</div>
       <h2>${esc(head)}</h2>${sup.length ? `<div class="support">avec ${esc(sup.join(", "))}</div>` : ""}
@@ -414,7 +454,7 @@
       ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
       <div id="artist"></div>`;
     renderSaveButton();
-    $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); render(); };
+    $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); replay($("#savebtn"), "pop"); render(); };
     const more = $(".blurb [data-more]", detail);
     if (more) more.onclick = () => {   // "lire la suite" / "réduire" swaps the text in place
       const open = more.textContent !== "lire la suite";
@@ -422,8 +462,9 @@
       more.textContent = open ? "lire la suite" : "réduire";
     };
     $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
+      if (b.classList.contains("on")) return;
       $$(".artist-pick button", detail).forEach(x => x.classList.remove("on")); b.classList.add("on");
-      loadArtist(artists[Number(b.dataset.i)], e);
+      swapArtist(artists[Number(b.dataset.i)], e);
     });
     if (artists.length) loadArtist(artists[0], e);
   }
@@ -443,9 +484,40 @@
     const b = $("#savebtn"); if (!b || !current) return;
     const on = saved.has(current.id);
     b.classList.toggle("on", on);
-    b.textContent = on ? "★ Enregistré" : "☆ Enregistrer";
+    b.innerHTML = `<span class="star">${on ? "★" : "☆"}</span> ${on ? "Enregistré" : "Enregistrer"}`;
   }
-  function closeDetail() { detail.hidden = true; current = null; document.body.style.overflow = ""; history.replaceState(null, "", location.pathname); }
+  // Cross-fade #artist: fade out, swap the content at the mid-point, fade in.
+  function swapArtist(name, e) {
+    const box = $("#artist");
+    if (!motionOK()) { loadArtist(name, e); return; }
+    replay(box, "swap");
+    setTimeout(() => loadArtist(name, e), 110);
+  }
+  // Closing reverses the opening motion; #detail is hidden once it ends. The state (current, hash, body scroll)
+  // is reset synchronously, so a second call or a click during the exit is a no-op.
+  function closeDetail() {
+    if (detail.hidden || closing) return;
+    const e = current; current = null; closing = true;
+    document.body.style.overflow = ""; history.replaceState(null, "", location.pathname);
+    $("#list").classList.remove("receded");
+    const hide = () => { closing = false; if (current) return; detail.hidden = true; hero.style.transform = ""; };   // unless reopened meanwhile
+    const row = e && detail.classList.contains("vt") && canVT() ? $(`.gig[data-id="${e.id}"]`) : null;
+    if (!row) { detail.classList.remove("vt"); exitThen(detail, "closing", 300, hide); return; }
+    const t = $("time", row), w = $(".hero-text .when");   // old state: the hero date; new state: the row's time
+    w.style.viewTransitionName = "gig-date";
+    const done = () => { t.style.viewTransitionName = ""; };
+    document.startViewTransition(() => { hide(); w.style.viewTransitionName = ""; t.style.viewTransitionName = "gig-date"; }).finished.then(done, done);
+  }
+  // Hero parallax: the picture scrolls at a third of the sheet's speed and the body slides over it.
+  let heroRaf = 0;
+  sheet.addEventListener("scroll", () => {
+    if (heroRaf || !motionOK()) return;
+    heroRaf = requestAnimationFrame(() => {
+      heroRaf = 0;
+      const y = Math.min(sheet.scrollTop, hero.offsetHeight);
+      hero.style.transform = y > 0 ? `translateY(${Math.round(y * .35)}px)` : "";
+    });
+  }, { passive: true });
 
   // "Jaguar Sun • Sean Nicholas Savage • Yes Please!" -> ["Jaguar Sun", "Sean Nicholas Savage", "Yes Please!"]
   function splitArtists(title) {
@@ -546,7 +618,10 @@
   $("#prev").onclick = () => goWeek(state.week - 1);
   $("#next").onclick = () => goWeek(state.week + 1);
   $("#thisweek").onclick = () => goWeek(0);
-  $("#tabs").onclick = ev => { const b = ev.target.closest("button"); if (!b) return; state.tab = b.dataset.tab; render(); };
+  $("#tabs").onclick = ev => {
+    const b = ev.target.closest("button"); if (!b || b.dataset.tab === state.tab) return;
+    state.tab = b.dataset.tab; render(); replay($("#list"), "swap");
+  };
   $("#genres").onclick = ev => {
     const b = ev.target.closest(".chip"); if (!b) return;
     const g = b.dataset.g;
@@ -587,7 +662,7 @@
     const sub = ev.target.closest(".tag.sub");
     if (sub) { toggleStyle(sub.dataset.sub); return; }
     const row = ev.target.closest(".gig"); if (!row) return;
-    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
+    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e, row);
   };
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
