@@ -16,9 +16,10 @@
   const WALK_KMH = 4.5;
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ tab: "week", week: 0, genres: [], venue: "", free: false, saved: false, others: false, q: "", near: false, radius: 5 });
+  let state = load({ tab: "week", week: 0, genres: [], styles: [], venue: "", free: false, saved: false, others: false, q: "", near: false, radius: 5 });
   let saved = loadSaved(); // ids of concerts the user bookmarked ("Enregistrer")
   let me = null; // {lat, lon}
+  let stylesOpen = false; // "+N autres" expanded (not persisted)
 
   // ------------------------------------------------------------ helpers
   function load(def) {
@@ -28,6 +29,7 @@
     if (!TABS.includes(s.tab)) s.tab = "week";
     s.week = 0;   // always land on the current week; the offset is only kept while browsing
     if (!Array.isArray(s.genres)) s.genres = [];
+    if (!Array.isArray(s.styles)) s.styles = [];
     return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
@@ -118,6 +120,7 @@
     if (state.free && !e.free) return false;
     if (state.saved && !saved.has(e.id)) return false;
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
+    if (state.styles.length && !(e.subgenres || []).some(s => state.styles.includes(s))) return false;
     if (state.q) {
       const q = norm(state.q);
       if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""}`).includes(q)) return false;
@@ -158,6 +161,31 @@
     $("#free").classList.toggle("on", state.free);
     $("#saved").classList.toggle("on", state.saved);
     $("#saved small").textContent = saved.size || "";
+    renderStyles();
+  }
+  // Fine-grained styles, shown only in context: once a coarse genre is picked (or a style is active), the
+  // styles found in the current view for those genres, most frequent first, top STYLES_SHOWN + "N autres".
+  const STYLES_SHOWN = 12;
+  function renderStyles() {
+    const box = $("#styles");
+    const show = state.genres.length || state.styles.length;
+    box.hidden = !show;
+    if (!show) { box.innerHTML = ""; return; }
+    const counts = {};
+    DATA.events.filter(e => inTab(e, state.tab) && (state.others || e.is_music) && (!state.genres.length || e.genres.some(g => state.genres.includes(g))))
+      .forEach(e => (e.subgenres || []).forEach(s => counts[s] = (counts[s] || 0) + 1));
+    state.styles.forEach(s => counts[s] = counts[s] || 0);   // keep an active style visible even if the view has none left
+    const all = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, "fr"));
+    const head = new Set([...all.slice(0, STYLES_SHOWN), ...state.styles]);
+    const shown = stylesOpen ? all : all.filter(s => head.has(s));
+    const rest = all.length - shown.length;
+    const chip = s => `<button class="chip style ${state.styles.includes(s) ? "on" : ""}" data-s="${esc(s)}">${esc(s)}<small>${counts[s]}</small></button>`;
+    box.innerHTML = `<span class="lbl">Styles</span>` + (all.length ? shown.map(chip).join("") : '<span class="none">aucun style connu</span>') +
+      (rest > 0 ? `<button class="link" data-more>+ ${rest} autres</button>` : stylesOpen && all.length > STYLES_SHOWN ? '<button class="link" data-more>réduire</button>' : "");
+  }
+  function toggleStyle(s) {
+    state.styles = state.styles.includes(s) ? state.styles.filter(x => x !== s) : [...state.styles, s];
+    render();
   }
   function renderVenues() {
     const sel = $("#venue");
@@ -167,9 +195,10 @@
   function genreTags(e) {
     return e.genres.map(g => `<span class="tag src-${e.genre_source || ""}" title="source : ${e.genre_source || "?"}">${TAG_LABELS[g] || g}</span>`).join("");
   }
-  // Fine-grained labels next to the coarse tags; clicking one searches for it (search matches sub-genres).
+  // Fine-grained labels next to the coarse tags; clicking one toggles that style filter. Active styles come first.
   function subHtml(e, max = 2) {
-    return (e.subgenres || []).slice(0, max).map(s => `<button class="tag sub" type="button" data-sub="${esc(s)}" title="Chercher « ${esc(s)} »">${esc(s)}</button>`).join("");
+    const subs = (e.subgenres || []).slice().sort((a, b) => state.styles.includes(b) - state.styles.includes(a));
+    return subs.slice(0, max).map(s => `<button class="tag sub ${state.styles.includes(s) ? "on" : ""}" type="button" data-sub="${esc(s)}" title="${state.styles.includes(s) ? "Retirer le style" : "Filtrer sur"} « ${esc(s)} »">${esc(s)}</button>`).join("");
   }
   function statusTags(e) {
     const b = [];
@@ -375,14 +404,19 @@
     const b = ev.target.closest(".chip"); if (!b) return;
     const g = b.dataset.g;
     state.genres = !g ? [] : state.genres.includes(g) ? state.genres.filter(x => x !== g) : [...state.genres, g];
+    if (!g) state.styles = [];
     render();
+  };
+  $("#styles").onclick = ev => {
+    if (ev.target.closest("[data-more]")) { stylesOpen = !stylesOpen; renderStyles(); return; }
+    const b = ev.target.closest(".chip.style"); if (b) toggleStyle(b.dataset.s);
   };
   $("#free").onclick = () => { state.free = !state.free; render(); };
   $("#saved").onclick = () => { state.saved = !state.saved; render(); };
   $("#venue").onchange = ev => { state.venue = ev.target.value; render(); };
   $("#others").onchange = ev => { state.others = ev.target.checked; render(); };
   $("#search").oninput = ev => { state.q = ev.target.value.trim(); render(); };
-  $("#reset").onclick = () => { state = { ...state, genres: [], venue: "", free: false, saved: false, others: false, q: "", near: false }; syncInputs(); render(); };
+  $("#reset").onclick = () => { state = { ...state, genres: [], styles: [], venue: "", free: false, saved: false, others: false, q: "", near: false }; syncInputs(); render(); };
   $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
   $("#near").onclick = () => {
     if (state.near) { state.near = false; syncInputs(); render(); return; }
@@ -393,17 +427,16 @@
       state.near = true; syncInputs(); render();
     }, () => { syncInputs(); alert("Position refusée"); }, { timeout: 10000 });
   };
-  function searchSub(label) { state.q = label; syncInputs(); render(); }
   $("#list").onclick = ev => {
     if (ev.target.closest("[data-next]")) { goWeek(state.week + 1); return; }
     const sub = ev.target.closest(".tag.sub");
-    if (sub) { searchSub(sub.dataset.sub); return; }
+    if (sub) { toggleStyle(sub.dataset.sub); return; }
     const row = ev.target.closest(".gig"); if (!row) return;
     const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
   };
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
-  detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); searchSub(sub.dataset.sub); } });
+  detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); } });
   document.addEventListener("keydown", ev => {
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
     if (!detail.hidden || /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName) || state.tab !== "week") return;

@@ -32,7 +32,7 @@ and the venues marked `"strategy": "llm"` in `venues.json`.
 | Genres | `livemusic/genres.py` | 1. tags published by the venue, 2. keyword rules on title/description, 3. venue default, 4. Claude for whatever is still weak (cached in `data/genre_cache.json`). |
 | Sub-genres | `livemusic/genres.py` | Free-text labels ("stoner rock", "bossa nova") shown next to the coarse tags, never used as filters: the venue's own descriptors first (`subgenres_from_site`), then Claude's `subgenres` for every music event that has none. Clicking a label searches for it. |
 | New | `data/seen.json` | First-seen date per event; "Nouveautés" = first seen in the last 7 days. The very first run is a baseline and shows nothing as new. |
-| UI | `web/` | Static page reading `events.json`. Tabs, genre chips, venue filter, search, "près de moi" (browser geolocation + venue coordinates), detail sheet with artist blurb (Wikipedia), player and similar artists (Deezer, no key). |
+| UI | `web/` | Static page reading `events.json`. Tabs, genre chips (with a contextual row of fine-grained style chips once a genre is picked), venue filter, search, "près de moi" (browser geolocation + venue coordinates), detail sheet with artist blurb (Wikipedia), player and similar artists (Deezer, no key). |
 
 Pages are cached 6 h in `data/cache/` (`--fresh` to bypass). Run `scrape.py` daily (cron / launchd) so
 "newly announced" means something.
