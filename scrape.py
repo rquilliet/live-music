@@ -3,6 +3,7 @@
 
   python scrape.py                 # all venues, LLM tagging if ANTHROPIC_API_KEY is set
   python scrape.py --no-llm        # skip Claude (genres from site tags + keyword rules only)
+  python scrape.py --no-players    # skip the Bandcamp / Spotify artist lookups
   python scrape.py --only cigale bataclan opendata   # subset (venue slugs or strategy names)
   python scrape.py --fresh         # ignore the 6h page cache
 """
@@ -19,10 +20,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--only", nargs="*", help="venue slugs or strategy names to run")
     p.add_argument("--no-llm", action="store_true", help="never call the Claude API")
+    p.add_argument("--no-players", action="store_true", help="skip the Bandcamp / Spotify artist lookups")
     p.add_argument("--fresh", action="store_true", help="bypass the HTTP cache")
     a = p.parse_args()
     fetch.FRESH = a.fresh
-    out = pipeline.run(only=set(a.only) if a.only else None, use_llm=not a.no_llm)
+    out = pipeline.run(only=set(a.only) if a.only else None, use_llm=not a.no_llm, players=not a.no_players)
     failed = [r for r in out["report"] if not r["ok"]]
     if failed:
         print(f"{len(failed)} source(s) failed: " + ", ".join(r["venue"] for r in failed), file=sys.stderr)

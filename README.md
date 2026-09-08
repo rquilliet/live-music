@@ -31,8 +31,10 @@ and the venues marked `"strategy": "llm"` in `venues.json`.
 | Merge | `pipeline.merge` | Same venue + same date + similar title → one event (venue site wins over open data). |
 | Genres | `livemusic/genres.py` | 1. tags published by the venue, 2. keyword rules on title/description, 3. venue default, 4. Claude for whatever is still weak (cached in `data/genre_cache.json`). |
 | Sub-genres | `livemusic/genres.py` | Free-text labels ("stoner rock", "bossa nova") shown next to the coarse tags and usable as a second-level filter ("Styles" row): the venue's own descriptors first (`subgenres_from_site`), then Claude's `subgenres` for every music event that has none. Clicking a label toggles that style filter. |
+| Players | `livemusic/players.py` | For every act of a music event (headliner + support), the scraper looks for the artist's own Bandcamp page (public autocomplete, exact name match, then the page's `bc-page-properties` gives an album/track to embed) and, when `SPOTIFY_CLIENT_ID` / `SPOTIFY_CLIENT_SECRET` are set, the Spotify artist id. Written on the event as `players`; the detail sheet embeds Bandcamp > Spotify > Deezer. Cached per artist in `data/player_cache.json`, misses included (re-checked after 30 days); at most 300 new artists per run, soonest concerts first. `--no-players` skips it. |
+| Summaries | `livemusic/summaries.py` | Text shown on the event sheet: the venue's own description when the scraper found one; otherwise Claude reads the event page (`url`) and writes 1–2 French sentences on who plays and what kind of show it is (`summary`, cached per event in `data/summary_cache.json`, at most 200 new pages per run; urls shared by more than 3 events are programme pages and are skipped). The UI falls back to the artist's Wikipedia summary only when both are empty, and shows nothing rather than a placeholder. |
 | New | `data/seen.json` | First-seen date per event; "Nouveautés" = first seen in the last 7 days. The very first run is a baseline and shows nothing as new. |
-| UI | `web/` | Static page reading `events.json`. Tabs, genre chips (with a contextual row of fine-grained style chips once a genre is picked), venue filter, search, "près de moi" (browser geolocation + venue coordinates), detail sheet with artist blurb (Wikipedia), player and similar artists (Deezer, no key). |
+| UI | `web/` | Static page reading `events.json`. Tabs, genre chips (with a contextual row of fine-grained style chips once a genre is picked), searchable multi-venue filter, search, "près de moi" (browser geolocation + venue coordinates), "Mes concerts" filter. Lean concert sheet ("Affiche"): a short hero whose title links to the event page, four action tiles (Billets + price, "Intéressé ?" → *Intéressé* / *J'y vais* status kept in the browser, Agenda Google, WhatsApp), venue + itinéraire, price + styles, the venue's text about the show (description or Claude summary, "lire la suite" when long, Wikipedia as fallback), the player right below it (Bandcamp, else Spotify, else Deezer; other acts one tap away), "Dans le même esprit" (Deezer related artists, names only) and search links. |
 
 Pages are cached 6 h in `data/cache/` (`--fresh` to bypass). Run `scrape.py` daily (cron / launchd) so
 "newly announced" means something.
@@ -53,3 +55,9 @@ if you want it to work without the API key. `genres` on a venue is the default t
 ## Model
 
 Claude calls use `claude-opus-5` by default; set `LIVEMUSIC_MODEL` to change it.
+
+## Spotify (optional)
+
+Bandcamp needs no key. To also resolve Spotify artists, create an app on the Spotify developer dashboard and
+put `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` in `.env` (client-credentials flow, no user login).
+Without them the lookup is skipped silently and the sheet falls back to Deezer when the act is not on Bandcamp.

@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <header class="top">
@@ -41,8 +41,19 @@
   <div class="chips styles" id="styles" hidden></div>
   <div class="row">
     <button class="chip flag" id="free" data-flag="free">Gratuit</button>
-    <button class="chip flag" id="saved" data-flag="saved">★ Enregistrés <small></small></button>
-    <select id="venue" aria-label="Salle"><option value="">Toutes les salles</option></select>
+    <button class="chip flag" id="saved" data-flag="saved">Mes concerts <small></small></button>
+    <div class="venuepick" id="venuepick">
+      <button type="button" class="chip" id="venue" aria-haspopup="listbox" aria-expanded="false" aria-controls="venuepop">Toutes les salles</button>
+      <div class="venuepop" id="venuepop" hidden>
+        <div class="head">
+          <input id="venue-q" type="search" placeholder="Chercher une salle…" autocomplete="off" aria-label="Chercher une salle"
+                 role="combobox" aria-expanded="true" aria-controls="venuelist" aria-autocomplete="list">
+          <button type="button" id="venue-clear" class="link" hidden>Tout effacer</button>
+        </div>
+        <div class="venuelist" id="venuelist" role="listbox" aria-multiselectable="true" aria-label="Salles"></div>
+      </div>
+    </div>
+    <div class="chips venuesel" id="venuesel"></div>
     <label class="toggle"><input type="checkbox" id="others"> Inclure les non-concerts</label>
     <button id="reset" class="link">Réinitialiser</button>
   </div>
@@ -58,6 +69,6 @@
   </div>
 </div>
 
-<script src="app.js?v=5"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>

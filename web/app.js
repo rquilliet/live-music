@@ -16,10 +16,35 @@
   const WALK_KMH = 4.5;
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ tab: "week", week: 0, genres: [], styles: [], venue: "", free: false, saved: false, others: false, q: "", near: false, radius: 5 });
-  let saved = loadSaved(); // ids of concerts the user bookmarked ("Enregistrer")
+  let state = load({ tab: "week", week: 0, genres: [], styles: [], venues: [], free: false, saved: false, others: false, q: "", near: false, radius: 5 });
+  const STATUS = { interested: { icon: "☆", label: "Intéressé" }, going: { icon: "✓", label: "J'y vais" } };
+  let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Intéressé ? / J'y vais"
   let me = null; // {lat, lon}
   let stylesOpen = false; // "+N autres" expanded (not persisted)
+  let venueOpen = false; // venue picker popover (not persisted)
+  let venueHi = null;    // venue name highlighted with the arrow keys in the picker
+  let venueShown = [];   // venues currently listed in the picker, in display order
+
+  // ------------------------------------------------------------ motion (REM-15)
+  // Everything animates in CSS; JS only sequences it. Reduced motion: CSS keeps 120ms fades, JS skips the
+  // View Transitions morph and the parallax.
+  const MOTION = matchMedia("(prefers-reduced-motion: reduce)");
+  const motionOK = () => !MOTION.matches;
+  const canVT = () => motionOK() && typeof document.startViewTransition === "function";
+  // Exit animation: add `cls`, hide when it ends (a timer backs up animationend). cancelExit() aborts a pending one.
+  function exitThen(el, cls, ms, then) {
+    cancelExit(el);
+    const done = () => { cancelExit(el); then(); };
+    el._exit = { cls, t: setTimeout(done, ms + 80), h: ev => { if (ev.target === el) done(); } };
+    el.classList.add(cls);
+    el.addEventListener("animationend", el._exit.h);
+  }
+  function cancelExit(el) {
+    if (!el._exit) return;
+    clearTimeout(el._exit.t); el.removeEventListener("animationend", el._exit.h); el.classList.remove(el._exit.cls); el._exit = null;
+  }
+  // Restart a one-shot CSS animation class (remove, reflow, add).
+  function replay(el, cls) { el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls); }
 
   // ------------------------------------------------------------ helpers
   function load(def) {
@@ -30,19 +55,41 @@
     s.week = 0;   // always land on the current week; the offset is only kept while browsing
     if (!Array.isArray(s.genres)) s.genres = [];
     if (!Array.isArray(s.styles)) s.styles = [];
+    if (!Array.isArray(s.venues)) s.venues = [];
+    s.venues = s.venues.filter(v => typeof v === "string" && v);
+    if (typeof s.venue === "string" && s.venue && !s.venues.length) s.venues = [s.venue];   // single-venue dropdown from the previous UI
+    delete s.venue;
     return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
-  function loadSaved() {
-    try { const a = JSON.parse(localStorage.getItem("lip-saved") || "[]"); return new Set(Array.isArray(a) ? a : []); } catch { return new Set(); }
+  // Status per concert, kept in localStorage "lip-status". The previous UI stored a plain list of bookmarked ids in
+  // "lip-saved" ("Enregistrer"): on first load those become "interested" and the old key is dropped.
+  function loadStatus() {
+    let s = {};
+    try { s = JSON.parse(localStorage.getItem("lip-status") || "{}"); } catch { /* fresh start */ }
+    if (!s || typeof s !== "object" || Array.isArray(s)) s = {};
+    s = Object.fromEntries(Object.entries(s).filter(([, v]) => v in STATUS));
+    try {
+      const old = JSON.parse(localStorage.getItem("lip-saved") || "null");
+      if (Array.isArray(old)) {
+        old.forEach(id => { if (typeof id === "string" && !s[id]) s[id] = "interested"; });
+        localStorage.setItem("lip-status", JSON.stringify(s));
+        localStorage.removeItem("lip-saved");
+      }
+    } catch { /* nothing to migrate */ }
+    return s;
   }
-  function toggleSaved(id) {
-    if (saved.has(id)) saved.delete(id); else saved.add(id);
-    try { localStorage.setItem("lip-saved", JSON.stringify([...saved])); } catch {}
+  function getStatus(id) { return status[id] || null; }
+  function setStatus(id, s) {
+    if (s in STATUS) status[id] = s; else delete status[id];
+    try { localStorage.setItem("lip-status", JSON.stringify(status)); } catch {}
   }
+  // "Mes concerts" count: upcoming events with a status (past ones linger in storage but are not counted).
+  function statusCount() { const t = isoDate(today0()); return DATA.events.filter(e => status[e.id] && e.date >= t).length; }
   // Local calendar date, never toISOString (UTC would shift Paris midnight to the previous day).
   function isoDate(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
   function safeUrl(u) { return u && /^https?:\/\//i.test(u) ? u : null; }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } }
   function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
   function parseISO(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
   function today0() { const t = new Date(); t.setHours(0, 0, 0, 0); return t; }
@@ -107,6 +154,46 @@
     return min <= 90 ? `${min} min à pied` : `${d.toFixed(d < 10 ? 1 : 0)} km`;
   }
 
+  // "Agenda Google" link: floating local time in Europe/Paris, 2h30 long, or an all-day event when the time is unknown.
+  function gcalUrl(e) {
+    const [head, ...sup] = lineup(e);
+    const d = parseISO(e.date), pad = n => String(n).padStart(2, "0");
+    const ymd = x => `${x.getFullYear()}${pad(x.getMonth() + 1)}${pad(x.getDate())}`;
+    const m = /^(\d{1,2})\s*[:h]\s*(\d{2})?/.exec(e.time || "");
+    let dates;
+    if (m) {
+      const start = new Date(d); start.setHours(+m[1], +(m[2] || 0), 0, 0);
+      const end = new Date(start.getTime() + 150 * 60000);
+      const stamp = x => `${ymd(x)}T${pad(x.getHours())}${pad(x.getMinutes())}00`;
+      dates = `${stamp(start)}/${stamp(end)}`;
+    } else {
+      dates = `${ymd(d)}/${ymd(addDays(d, 1))}`;
+    }
+    const link = safeUrl(e.ticket_url) || safeUrl(e.url);
+    const details = [e.price, link, shareLink(e)].filter(Boolean).join("\n");
+    const q = {
+      action: "TEMPLATE",
+      text: `${head}${sup.length ? " avec " + sup.join(", ") : ""} @ ${e.venue}`,
+      dates, details,
+      location: [e.venue, e.address || e.area].filter(Boolean).join(", "),
+      ctz: "Europe/Paris",
+    };
+    return "https://calendar.google.com/calendar/render?" + Object.entries(q).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+  }
+  // "WhatsApp" link: short French message, one line per fact, links last so the app previews them.
+  function whatsappUrl(e) {
+    const [head, ...sup] = lineup(e);
+    const link = safeUrl(e.ticket_url) || safeUrl(e.url);
+    const lines = [
+      `🎵 ${head}${sup.length ? " avec " + sup.join(", ") : ""}`,
+      `📅 ${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}`,
+      `📍 ${e.venue}${e.area ? " (" + e.area + ")" : ""}`,
+      link, shareLink(e),
+    ].filter(Boolean);
+    return "https://wa.me/?text=" + encodeURIComponent(lines.join("\n"));
+  }
+  function shareLink(e) { return location.origin + location.pathname + "#e=" + e.id; }
+
   // ------------------------------------------------------------ filtering
   function inTab(e, tab) {
     const [a, b] = ranges()[tab];
@@ -116,14 +203,14 @@
   }
   function baseFilter(e) {
     if (!state.others && !e.is_music) return false;
-    if (state.venue && e.venue !== state.venue) return false;
+    if (state.venues.length && !state.venues.includes(e.venue)) return false;
     if (state.free && !e.free) return false;
-    if (state.saved && !saved.has(e.id)) return false;
+    if (state.saved && !status[e.id]) return false;
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
     if (state.styles.length && !(e.subgenres || []).some(s => state.styles.includes(s))) return false;
     if (state.q) {
       const q = norm(state.q);
-      if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""}`).includes(q)) return false;
+      if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""} ${e.summary || ""}`).includes(q)) return false;
     }
     if (state.near && me) {
       if (e.lat == null || e.lon == null) return false;
@@ -160,7 +247,7 @@
       `<button class="chip ${state.genres.includes(t) ? "on" : ""}" data-g="${t}">${TAG_LABELS[t] || t}<small>${counts[t] || 0}</small></button>`).join("");
     $("#free").classList.toggle("on", state.free);
     $("#saved").classList.toggle("on", state.saved);
-    $("#saved small").textContent = saved.size || "";
+    $("#saved small").textContent = statusCount() || "";
     renderStyles();
   }
   // Fine-grained styles, shown only in context: once a coarse genre is picked (or a style is active), the
@@ -187,13 +274,74 @@
     state.styles = state.styles.includes(s) ? state.styles.filter(x => x !== s) : [...state.styles, s];
     render();
   }
+  // Venue picker: a chip-like trigger + a popover with a search box and one checkbox per venue. Several venues
+  // can be picked at once (state.venues, OR between them); each pick is also a removable chip next to the trigger.
+  // Counts follow the current tab like the genre chips do.
   function renderVenues() {
-    const sel = $("#venue");
-    const cur = state.venue;
-    sel.innerHTML = '<option value="">Toutes les salles</option>' + DATA.venues.map(v => `<option ${v === cur ? "selected" : ""}>${esc(v)}</option>`).join("");
+    const n = state.venues.length, btn = $("#venue");
+    btn.textContent = !n ? "Toutes les salles" : n === 1 ? state.venues[0] : `${n} salles`;
+    btn.title = n > 1 ? state.venues.join(", ") : "";
+    btn.classList.toggle("on", n > 0);
+    btn.setAttribute("aria-expanded", String(venueOpen));
+    $("#venuesel").innerHTML = state.venues.map(v => `<button type="button" class="chip on" data-rm="${esc(v)}" title="Retirer « ${esc(v)} »">${esc(v)}<b aria-hidden="true">×</b></button>`).join("");
+    const pop = $("#venuepop");
+    if (venueOpen) { cancelExit(pop); pop.hidden = false; }
+    else if (!pop.hidden && !pop._exit) exitThen(pop, "out", 120, () => { pop.hidden = true; });
+    $("#venue-clear").hidden = !n;
+    if (venueOpen) renderVenueList();
   }
-  function genreTags(e) {
-    return e.genres.map(g => `<span class="tag src-${e.genre_source || ""}" title="source : ${e.genre_source || "?"}">${TAG_LABELS[g] || g}</span>`).join("");
+  // "maroq" -> La Maroquinerie, "38" -> 38Riv Jazz Club, "petit bain" / "bain petit" -> Petit Bain: accent/case-insensitive
+  // substring anywhere in the name, or every typed word is the prefix of some word of the name.
+  function matchVenue(name, q) {
+    const n = norm(name);
+    if (!q || n.includes(q)) return true;
+    const words = n.split(/[^a-z0-9]+/).filter(Boolean);
+    return q.split(/\s+/).every(w => words.some(x => x.startsWith(w)));
+  }
+  // Selected venues first, then the ones with concerts in the current view, then the empty ones (still selectable).
+  // Only the list is rebuilt, so the search text and its focus survive; a focused checkbox is re-focused by name.
+  function renderVenueList() {
+    const list = $("#venuelist"), input = $("#venue-q"), q = norm(input.value.trim());
+    const focused = document.activeElement && document.activeElement.closest("#venuelist") ? document.activeElement.dataset.v : null;
+    const counts = {};
+    DATA.events.filter(e => inTab(e, state.tab) && (state.others || e.is_music)).forEach(e => counts[e.venue] = (counts[e.venue] || 0) + 1);
+    const sel = v => state.venues.includes(v);
+    venueShown = DATA.venues.filter(v => matchVenue(v, q))
+      .sort((a, b) => sel(b) - sel(a) || !!counts[b] - !!counts[a]);   // stable: keeps the alphabetical order within each group
+    if (!venueShown.includes(venueHi)) venueHi = null;
+    list.innerHTML = venueShown.length ? venueShown.map((v, i) =>
+      `<label id="vo-${i}" role="option" class="${counts[v] ? "" : "zero"}${v === venueHi ? " hi" : ""}" aria-selected="${v === venueHi}" aria-checked="${sel(v)}">
+        <input type="checkbox" tabindex="-1" data-v="${esc(v)}" ${sel(v) ? "checked" : ""}><span>${esc(v)}</span><small>${counts[v] || 0}</small></label>`).join("")
+      : '<div class="none">Aucune salle ne correspond.</div>';
+    const hi = $("label.hi", list);
+    if (hi) { hi.scrollIntoView({ block: "nearest" }); input.setAttribute("aria-activedescendant", hi.id); } else input.removeAttribute("aria-activedescendant");
+    if (focused != null) { const cb = $$("input", list).find(x => x.dataset.v === focused); if (cb) cb.focus(); }
+  }
+  function openVenues() { if (venueOpen) return; venueOpen = true; venueHi = null; renderVenues(); $("#venue-q").focus(); }
+  function closeVenues(refocus) {
+    if (!venueOpen) return;
+    venueOpen = false; venueHi = null; $("#venue-q").value = "";
+    renderVenues();
+    if (refocus) $("#venue").focus();
+  }
+  function toggleVenue(v) {
+    state.venues = state.venues.includes(v) ? state.venues.filter(x => x !== v) : [...state.venues, v];
+    render();
+  }
+  // Arrows move the highlight, Enter toggles it (or the only match), Backspace on an empty search drops the last pick.
+  function venueKeys(ev) {
+    const input = $("#venue-q"), n = venueShown.length, i = venueShown.indexOf(venueHi);
+    const move = j => { if (!n) return; venueHi = venueShown[Math.max(0, Math.min(n - 1, j))]; renderVenueList(); };
+    switch (ev.key) {
+      case "ArrowDown": move(i + 1); break;
+      case "ArrowUp": move(i < 0 ? n - 1 : i - 1); break;
+      case "Home": if (ev.target === input && input.value) return; move(0); break;
+      case "End": if (ev.target === input && input.value) return; move(n - 1); break;
+      case "Enter": { const v = ev.target.dataset.v || (i >= 0 ? venueHi : n === 1 ? venueShown[0] : null); if (v) toggleVenue(v); break; }
+      case "Backspace": if (ev.target === input && !input.value && state.venues.length) { state.venues = state.venues.slice(0, -1); render(); } return;
+      default: return;
+    }
+    ev.preventDefault();
   }
   // Fine-grained labels next to the coarse tags; clicking one toggles that style filter. Active styles come first.
   function subHtml(e, max = 2) {
@@ -206,7 +354,8 @@
     if (e.sold_out) b.push('<span class="tag sold">Complet</span>');
     if (e.cancelled) b.push('<span class="tag cancel">Annulé</span>');
     if (!e.is_music) b.push('<span class="tag other">Non-concert</span>');
-    if (saved.has(e.id)) b.push('<span class="tag saved">★ Enregistré</span>');
+    const s = getStatus(e.id);
+    if (s) b.push(`<span class="tag status ${s}" title="${STATUS[s].label}" aria-label="${STATUS[s].label}">${STATUS[s].icon}</span>`);
     return b.join("");
   }
   function gigHtml(e) {
@@ -273,50 +422,164 @@
     const upd = new Date(d.generated_at);
     $("#meta").textContent = `${plural(week, "concert")} cette semaine · ${d.events.length} à venir · mis à jour ${DAYS[upd.getDay()]} ${String(upd.getHours()).padStart(2, "0")}:${String(upd.getMinutes()).padStart(2, "0")}`;
   }
-  function render() { renderNav(); renderGenres(); renderList(); save(); }
+  function render() { renderNav(); renderGenres(); renderVenues(); renderList(); save(); }
 
   // ------------------------------------------------------------ detail sheet
-  const detail = $("#detail");
+  const detail = $("#detail"), sheet = $(".sheet", detail), hero = $("#hero");
   let current = null;
-  function openDetail(e) {
+  let closing = false;   // exit animation (or the closing view transition) in flight
+  let menuOpen = false;  // status menu under the "Intéressé ?" tile (REM-18)
+  // `row` is the .gig the user clicked: with the View Transitions API its time morphs into the hero date while the
+  // sheet springs in; otherwise (no API, reduced motion, deep link) the CSS animations on .detail/.sheet play.
+  function openDetail(e, row) {
+    cancelExit(detail); closing = false;
+    const t = row && canVT() && detail.hidden ? $("time", row) : null;
+    detail.classList.toggle("vt", !!t);
+    if (!t) { fillDetail(e); return; }
+    t.style.viewTransitionName = "gig-date";   // old state: the row's time; new state: the hero date (names must not coexist)
+    const vt = document.startViewTransition(() => { t.style.viewTransitionName = ""; fillDetail(e); $(".hero-text .when").style.viewTransitionName = "gig-date"; });
+    const done = () => { const w = $(".hero-text .when"); if (w) w.style.viewTransitionName = ""; };
+    vt.finished.then(done, done);   // finished rejects when the transition is skipped
+  }
+  function fillDetail(e) {
     current = e;
     detail.hidden = false;
     history.replaceState(null, "", "#e=" + e.id);
     document.body.style.overflow = "hidden";
-    $("#hero").style.backgroundImage = e.image ? `url("${e.image}")` : "";
+    const list = $("#list");   // recede around the middle of the viewport, so a long page doesn't slide
+    list.style.transformOrigin = `50% ${Math.round(scrollY - list.offsetTop + innerHeight / 2)}px`;
+    list.classList.add("receded");
+    sheet.scrollTop = 0; hero.style.transform = ""; menuOpen = false;
+    hero.style.backgroundImage = e.image ? `url("${e.image}")` : "";
     const [head, ...sup] = lineup(e);
+    const page = safeUrl(e.url), domain = page ? hostOf(page) : "";
+    // The title is the link to the event page (REM-13): dotted underline + a small ↗, nothing when the url is unusable.
+    const title = page ? `<a href="${esc(page)}" target="_blank" rel="noopener" title="Page de l'événement sur ${esc(domain)}">${esc(head)}<span class="ext" aria-hidden="true">↗</span></a>` : esc(head);
     $("#hero-text").innerHTML = `<div class="when">${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}</div>
-      <h2>${esc(head)}</h2>${sup.length ? `<div class="support">avec ${esc(sup.join(", "))}</div>` : ""}
-      <div class="where">${esc([e.venue, e.area, e.address].filter(Boolean).join(" · "))}${walk(e) ? " · " + walk(e) : ""}</div>`;
+      <h2>${title}</h2>${sup.length ? `<div class="support">avec ${esc(sup.join(", "))}</div>` : ""}`;
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
-    const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
-    const link = ticket || page;
+    const price = e.free ? "Gratuit" : shortPrice(e.price);
+    const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Itinéraire ↗</a>` : "";
+    const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
+    const meta = [ticketTile(e).ticket ? "" : price ? esc(price) : "", subHtml(e, 4)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
       <div class="actions">
-        ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${ticket ? "Billets" : "Page de la salle"} ↗</a>` : ""}
-        ${ticket && page ? `<a class="secondary" href="${esc(page)}" target="_blank" rel="noopener">Page de la salle ↗</a>` : ""}
-        ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
-        <button id="savebtn" type="button"></button>
+        ${ticketTile(e).html}
+        <div class="status" id="status">
+          <button id="statusbtn" class="tile" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="statusmenu"></button>
+          <div class="statusmenu" id="statusmenu" role="menu" aria-label="Mon statut" hidden></div>
+        </div>
+        <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Ajouter à Google Agenda">Agenda</a>
+        <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Partager sur WhatsApp">WhatsApp</a>
       </div>
-      <div class="muted tagline">${genreTags(e)}${subHtml(e, 99)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price ? "· " + esc(e.price) : ""} ${statusTags(e)}</div>
-      ${e.description ? `<p>${esc(e.description)}</p>` : ""}
-      ${artists.length > 1 ? `<div class="artist-pick">${artists.map((a, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(a)}</button>`).join("")}</div>` : ""}
+      <div class="venue"><b>${esc(e.venue)}</b>${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
+      ${meta ? `<div class="muted meta">${meta}</div>` : ""}
+      ${blurbHtml(e)}
       <div id="artist"></div>`;
-    renderSaveButton();
-    $("#savebtn").onclick = () => { toggleSaved(e.id); renderSaveButton(); render(); };
-    $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
-      $$(".artist-pick button", detail).forEach(x => x.classList.remove("on")); b.classList.add("on");
-      loadArtist(artists[Number(b.dataset.i)], e);
+    renderStatus();
+    const more = $(".blurb [data-more]", detail);
+    if (more) more.onclick = () => {   // "lire la suite" / "réduire" swaps the text in place
+      const open = more.textContent !== "lire la suite";
+      $(".blurb .txt", detail).textContent = open ? BLURB_CUT(blurb(e)) : blurb(e);
+      more.textContent = open ? "lire la suite" : "réduire";
+    };
+    if (artists.length) loadArtist(artists[0], e, artists);
+  }
+  // Tile 1 of the action row. `ticket` says whether the price is already on it (else the meta line shows it).
+  function ticketTile(e) {
+    const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
+    const price = e.free ? "Gratuit" : shortPrice(e.price);
+    if (e.cancelled) return { html: '<button class="tile off" type="button" disabled>Annulé</button>' };
+    if (e.sold_out) return { html: '<button class="tile off" type="button" disabled>Complet</button>' };
+    if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Billets ↗</small>` : "Billets ↗"}</a>` };
+    if (page) return { html: `<a class="tile" href="${esc(page)}" target="_blank" rel="noopener" title="${esc(page)}">Voir sur<small>${esc(hostOf(page))} ↗</small></a>` };
+    return { html: `<span class="tile off" aria-disabled="true">${price ? esc(price) : "Billets"}</span>` };
+  }
+  // ---- status tile + menu (REM-18): "Intéressé ? ▾" opens a small menu; once set, the tile shows the status and the
+  // menu gains "Retirer". One menu at a time, closed on outside click / Escape (before the sheet's Escape).
+  function renderStatus() {
+    const b = $("#statusbtn"), m = $("#statusmenu"); if (!b || !current) return;
+    const s = getStatus(current.id);
+    b.classList.toggle("on", !!s);
+    b.setAttribute("aria-expanded", String(menuOpen));
+    b.innerHTML = s ? `<span class="star">${STATUS[s].icon}</span> ${STATUS[s].label}` : 'Intéressé ?<span class="caret" aria-hidden="true">▾</span>';
+    m.innerHTML = Object.entries(STATUS).map(([k, v]) =>
+      `<button type="button" role="menuitemradio" aria-checked="${s === k}" data-status="${k}"><span class="star">${v.icon}</span>${v.label}</button>`).join("") +
+      (s ? '<button type="button" role="menuitem" class="rm" data-status="">Retirer</button>' : "");
+    if (menuOpen) { cancelExit(m); m.hidden = false; }
+    else if (!m.hidden && !m._exit) exitThen(m, "out", 120, () => { m.hidden = true; });
+  }
+  function openMenu() {
+    if (menuOpen || !current) return;
+    menuOpen = true; renderStatus();
+    ($("#statusmenu [aria-checked=true]") || $("#statusmenu button")).focus();
+  }
+  function closeMenu(refocus) {
+    if (!menuOpen) return;
+    menuOpen = false; renderStatus();
+    if (refocus) $("#statusbtn").focus();
+  }
+  function pickStatus(s) {
+    setStatus(current.id, s); menuOpen = false;
+    renderStatus(); replay($("#statusbtn"), "pop"); $("#statusbtn").focus();
+    render();   // grid badge + "Mes concerts" count
+  }
+  function menuKeys(ev) {
+    const items = $$("#statusmenu button"), i = items.indexOf(document.activeElement);
+    switch (ev.key) {
+      case "ArrowDown": items[(i + 1) % items.length].focus(); break;
+      case "ArrowUp": items[(i - 1 + items.length) % items.length].focus(); break;
+      case "Home": items[0].focus(); break;
+      case "End": items[items.length - 1].focus(); break;
+      case "Tab": closeMenu(); return;   // let the focus move on
+      default: return;
+    }
+    ev.preventDefault();
+  }
+  // What the venue says about the show: the scraped description, else Claude's summary of the event page
+  // (see livemusic/summaries.py). Wikipedia is only fetched when both are empty (loadArtist).
+  function blurb(e) { return (e.description || e.summary || "").trim(); }
+  const BLURB_MAX = 260, BLURB_CUT = t => t.slice(0, 240).replace(/\s+\S*$/, "") + "…";
+  function blurbHtml(e) {
+    const text = blurb(e);
+    if (!text) return "";
+    const long = text.length > BLURB_MAX, page = safeUrl(e.url);
+    let domain = "";
+    try { domain = page ? new URL(page).hostname.replace(/^www\./, "") : ""; } catch { /* no attribution */ }
+    return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>lire la suite</button>' : ""}${domain ? ` <a class="muted" href="${esc(page)}" target="_blank" rel="noopener">source : ${esc(domain)} ↗</a>` : ""}</p>`;
+  }
+  // Cross-fade #artist: fade out, swap the content at the mid-point, fade in.
+  function swapArtist(name, e, artists) {
+    const box = $("#artist");
+    if (!motionOK()) { loadArtist(name, e, artists); return; }
+    replay(box, "swap");
+    setTimeout(() => loadArtist(name, e, artists), 110);
+  }
+  // Closing reverses the opening motion; #detail is hidden once it ends. The state (current, hash, body scroll)
+  // is reset synchronously, so a second call or a click during the exit is a no-op.
+  function closeDetail() {
+    if (detail.hidden || closing) return;
+    const e = current; current = null; closing = true; menuOpen = false;
+    document.body.style.overflow = ""; history.replaceState(null, "", location.pathname);
+    $("#list").classList.remove("receded");
+    const hide = () => { closing = false; if (current) return; detail.hidden = true; hero.style.transform = ""; };   // unless reopened meanwhile
+    const row = e && detail.classList.contains("vt") && canVT() ? $(`.gig[data-id="${e.id}"]`) : null;
+    if (!row) { detail.classList.remove("vt"); exitThen(detail, "closing", 300, hide); return; }
+    const t = $("time", row), w = $(".hero-text .when");   // old state: the hero date; new state: the row's time
+    w.style.viewTransitionName = "gig-date";
+    const done = () => { t.style.viewTransitionName = ""; };
+    document.startViewTransition(() => { hide(); w.style.viewTransitionName = ""; t.style.viewTransitionName = "gig-date"; }).finished.then(done, done);
+  }
+  // Hero parallax: the picture scrolls at a third of the sheet's speed and the body slides over it.
+  let heroRaf = 0;
+  sheet.addEventListener("scroll", () => {
+    if (heroRaf || !motionOK()) return;
+    heroRaf = requestAnimationFrame(() => {
+      heroRaf = 0;
+      const y = Math.min(sheet.scrollTop, hero.offsetHeight);
+      hero.style.transform = y > 0 ? `translateY(${Math.round(y * .35)}px)` : "";
     });
-    if (artists.length) loadArtist(artists[0], e);
-  }
-  function renderSaveButton() {
-    const b = $("#savebtn"); if (!b || !current) return;
-    const on = saved.has(current.id);
-    b.classList.toggle("on", on);
-    b.textContent = on ? "★ Enregistré" : "☆ Enregistrer";
-  }
-  function closeDetail() { detail.hidden = true; current = null; document.body.style.overflow = ""; history.replaceState(null, "", location.pathname); }
+  }, { passive: true });
 
   // "Jaguar Sun • Sean Nicholas Savage • Yes Please!" -> ["Jaguar Sun", "Sean Nicholas Savage", "Yes Please!"]
   function splitArtists(title) {
@@ -327,33 +590,59 @@
     return parts.slice(0, 5);
   }
 
-  // Wikipedia (FR then EN) for the blurb, Deezer (JSONP, no key) for picture, player and similar artists.
+  // Wikipedia (FR then EN) for the blurb, Deezer (JSONP, no key) for picture and similar artists.
+  // Player: the artist's own Bandcamp page, else Spotify, else Deezer's top tracks (`players` is resolved
+  // by the scraper per artist name; older events.json files have none and fall back to Deezer).
+  const BC_EMBED = /^https:\/\/bandcamp\.com\/EmbeddedPlayer\/(album|track)=\d+\//;
+  function playersOf(e, name) {
+    const all = (e && e.players) || {};
+    const p = all[name] || all[Object.keys(all).find(k => norm(k) === norm(name))] || {};
+    const bc = p.bandcamp && safeUrl(p.bandcamp.url) ? p.bandcamp : null;
+    const sp = p.spotify && /^[A-Za-z0-9]{8,64}$/.test(p.spotify.id || "") ? p.spotify : null;
+    return { bandcamp: bc, bandcampEmbed: bc && BC_EMBED.test(bc.embed || "") ? bc.embed : null, spotify: sp };
+  }
+  function playerHtml(p, dz) {
+    if (p.bandcampEmbed) return `<div class="player bandcamp"><iframe title="Bandcamp" src="${esc(p.bandcampEmbed)}" seamless loading="lazy"></iframe><div class="muted via">via Bandcamp</div></div>`;
+    if (p.spotify) return `<div class="player spotify"><iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="muted via">via Spotify</div></div>`;
+    if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
+    return "";
+  }
+  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Écouter <act>" + player · the other
+  // acts as text buttons (swap the player) · "Dans le même esprit" (Deezer related, names only) · search links.
+  // A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed meanwhile) is dropped.
   const cache = {};
-  async function loadArtist(name, e) {
+  let artistShown = null;
+  async function loadArtist(name, e, artists = [name]) {
     const box = $("#artist");
-    box.innerHTML = `<div class="muted">Recherche de « ${esc(name)} »…</div>`;
-    const key = norm(name);
-    if (!cache[key]) cache[key] = Promise.all([deezerArtist(name), wikiSummary(name)]).catch(() => [null, null]);
+    artistShown = name;
+    box.innerHTML = '<div class="skel" aria-hidden="true"></div>';
+    const key = norm(name) + (blurb(e) ? "|nowiki" : "");   // Wikipedia only as a fallback when the event page gave nothing
+    if (!cache[key]) cache[key] = Promise.all([deezerArtist(name).catch(() => null), blurb(e) ? null : wikiSummary(name)]).catch(() => [null, null]);
     const [dz, wiki] = await cache[key];
-    if ($(".artist-pick .on", detail) && $(".artist-pick .on", detail).textContent !== name) return; // user switched
+    const stale = () => current !== e || artistShown !== name;
+    if (stale()) return;
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
     const q = encodeURIComponent(name);
+    const p = playersOf(e, name);
+    const player = playerHtml(p, dz);
+    const others = artists.filter(a => a !== name);
     box.innerHTML = `
-      <h3>${esc(name)}</h3>
-      ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : `<p class="muted">Pas de fiche Wikipédia trouvée.</p>`}
-      ${dz ? `<div class="player" style="margin-top:12px"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe></div>` : ""}
-      <div class="links" style="margin-top:10px">
-        <a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener">Spotify</a>
-        <a href="https://bandcamp.com/search?q=${q}" target="_blank" rel="noopener">Bandcamp</a>
+      ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : ""}
+      ${player ? `<h3>Écouter ${esc(name)}</h3>${player}` : ""}
+      ${others.length ? `<div class="acts muted">Écouter aussi : ${others.map(a => `<button type="button" class="link" data-act="${esc(a)}">${esc(a)}</button>`).join(" · ")}</div>` : ""}
+      <div class="esprit muted" id="esprit"></div>
+      <div class="links">
+        <a href="${p.bandcamp ? esc(p.bandcamp.url) : `https://bandcamp.com/search?q=${q}`}" target="_blank" rel="noopener">Bandcamp</a>
+        <a href="${p.spotify && safeUrl(p.spotify.url) ? esc(p.spotify.url) : `https://open.spotify.com/search/${q}`}" target="_blank" rel="noopener">Spotify</a>
         <a href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">YouTube</a>
-        ${dz ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
-      </div>
-      <div id="similar"></div>`;
+        ${dz && safeUrl(dz.link) ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
+      </div>`;
+    $$(".acts [data-act]", box).forEach(b => b.onclick = () => swapArtist(b.dataset.act, e, artists));
     if (dz) {
-      const rel = await deezerRelated(dz.id).catch(() => []);
-      if (rel.length) {
-        $("#similar").innerHTML = `<h3 style="margin-top:16px">Artistes similaires</h3><div class="similar">${rel.slice(0, 10).map(a =>
-          `<a href="${esc(safeUrl(a.link) || "#")}" target="_blank" rel="noopener"><img src="${esc(safeUrl(a.picture_medium) || "")}" alt="">${esc(a.name)}</a>`).join("")}</div>`;
+      const rel = (await deezerRelated(dz.id).catch(() => [])).filter(a => a && a.name).slice(0, 6);
+      if (rel.length && !stale()) {
+        $("#esprit").innerHTML = "Dans le même esprit : " + rel.map(a =>
+          safeUrl(a.link) ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.name)}</a>` : esc(a.name)).join(", ");
       }
     }
   }
@@ -399,7 +688,10 @@
   $("#prev").onclick = () => goWeek(state.week - 1);
   $("#next").onclick = () => goWeek(state.week + 1);
   $("#thisweek").onclick = () => goWeek(0);
-  $("#tabs").onclick = ev => { const b = ev.target.closest("button"); if (!b) return; state.tab = b.dataset.tab; render(); };
+  $("#tabs").onclick = ev => {
+    const b = ev.target.closest("button"); if (!b || b.dataset.tab === state.tab) return;
+    state.tab = b.dataset.tab; render(); replay($("#list"), "swap");
+  };
   $("#genres").onclick = ev => {
     const b = ev.target.closest(".chip"); if (!b) return;
     const g = b.dataset.g;
@@ -413,10 +705,21 @@
   };
   $("#free").onclick = () => { state.free = !state.free; render(); };
   $("#saved").onclick = () => { state.saved = !state.saved; render(); };
-  $("#venue").onchange = ev => { state.venue = ev.target.value; render(); };
+  $("#venue").onclick = () => venueOpen ? closeVenues() : openVenues();
+  $("#venue").onkeydown = ev => { if (ev.key === "ArrowDown" && !venueOpen) { ev.preventDefault(); openVenues(); } };
+  $("#venuepop").onkeydown = venueKeys;
+  $("#venue-q").oninput = () => { venueHi = null; renderVenueList(); };
+  $("#venuelist").onchange = ev => { const cb = ev.target.closest("input[data-v]"); if (cb) toggleVenue(cb.dataset.v); };
+  $("#venuelist").onmousemove = ev => { const row = ev.target.closest("label[role=option]"); if (row && !row.classList.contains("hi")) { venueHi = $("input", row).dataset.v; renderVenueList(); } };
+  $("#venue-clear").onclick = () => { state.venues = []; render(); $("#venue-q").focus(); };
+  $("#venuesel").onclick = ev => { const b = ev.target.closest("[data-rm]"); if (b) toggleVenue(b.dataset.rm); };
+  document.addEventListener("click", ev => {
+    if (venueOpen && !ev.target.closest("#venuepick")) closeVenues();
+    if (menuOpen && !ev.target.closest("#status")) closeMenu();
+  });
   $("#others").onchange = ev => { state.others = ev.target.checked; render(); };
   $("#search").oninput = ev => { state.q = ev.target.value.trim(); render(); };
-  $("#reset").onclick = () => { state = { ...state, genres: [], styles: [], venue: "", free: false, saved: false, others: false, q: "", near: false }; syncInputs(); render(); };
+  $("#reset").onclick = () => { state = { ...state, genres: [], styles: [], venues: [], free: false, saved: false, others: false, q: "", near: false }; closeVenues(); syncInputs(); render(); };
   $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
   $("#near").onclick = () => {
     if (state.near) { state.near = false; syncInputs(); render(); return; }
@@ -432,12 +735,22 @@
     const sub = ev.target.closest(".tag.sub");
     if (sub) { toggleStyle(sub.dataset.sub); return; }
     const row = ev.target.closest(".gig"); if (!row) return;
-    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
+    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e, row);
   };
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
-  detail.addEventListener("click", ev => { const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); } });
+  detail.addEventListener("click", ev => {
+    const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); return; }
+    if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
+    const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
+  });
+  detail.addEventListener("keydown", ev => {
+    if (ev.target.closest("#statusmenu")) { menuKeys(ev); return; }
+    if (ev.target.closest("#statusbtn") && ev.key === "ArrowDown" && !menuOpen) { ev.preventDefault(); openMenu(); }
+  });
   document.addEventListener("keydown", ev => {
+    if (ev.key === "Escape" && venueOpen) { closeVenues(true); return; }
+    if (ev.key === "Escape" && menuOpen) { closeMenu(true); return; }
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
     if (!detail.hidden || /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName) || state.tab !== "week") return;
     if (ev.key === "ArrowLeft" && state.week > 0) goWeek(state.week - 1);
@@ -445,7 +758,7 @@
   });
 
   function syncInputs() {
-    $("#venue").value = state.venue; $("#others").checked = state.others;
+    $("#others").checked = state.others;
     $("#search").value = state.q; $("#radius").value = state.radius;
     $("#near").classList.toggle("on", state.near); $("#near").textContent = state.near ? "Près de moi ✓" : "Près de moi";
     $("#radius").hidden = !state.near;
@@ -459,7 +772,7 @@
     if (!d) return;
     DATA = d;
     state.near = false; // ask for the position again on each visit
-    renderMeta(); renderVenues(); syncInputs(); render();
+    renderMeta(); syncInputs(); render();
     const m = location.hash.match(/^#e=([a-f0-9]+)/);   // shareable link straight to a concert
     const linked = m && d.events.find(x => x.id === m[1]);
     if (linked) openDetail(linked);

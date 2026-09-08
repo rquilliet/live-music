@@ -42,11 +42,13 @@ class Event:
     genre_source: Optional[str] = None                # site | rules | llm | venue
     subgenres: List[str] = field(default_factory=list)   # fine-grained labels (free text, lowercase)
     description: Optional[str] = None
+    summary: Optional[str] = None     # Claude's 1-2 sentence summary of the event page when the venue gave no text
     image: Optional[str] = None
     address: Optional[str] = None
     area: Optional[str] = None        # neighbourhood / arrondissement / town shown next to the venue
     headliner: Optional[str] = None   # first act of the bill (from the title)
     support: List[str] = field(default_factory=list)  # the other acts
+    players: dict = field(default_factory=dict)       # artist name -> {"bandcamp": {url, embed}, "spotify": {url, id}}
     lat: Optional[float] = None
     lon: Optional[float] = None
     is_music: bool = True
@@ -56,6 +58,8 @@ class Event:
         self.title = clean_text(self.title)[:200]
         if self.description:
             self.description = clean_text(self.description)[:400]
+        if self.summary:
+            self.summary = clean_text(self.summary)[:400]
         self.url, self.ticket_url, self.image = map(clean_url, (self.url, self.ticket_url, self.image))
         if not self.id:
             self.id = event_id(self.venue_slug, self.date, self.title)
