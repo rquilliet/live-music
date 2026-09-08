@@ -43,6 +43,7 @@
   // Local calendar date, never toISOString (UTC would shift Paris midnight to the previous day).
   function isoDate(d) { return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; }
   function safeUrl(u) { return u && /^https?:\/\//i.test(u) ? u : null; }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } }
   function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
   function parseISO(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
   function today0() { const t = new Date(); t.setHours(0, 0, 0, 0); return t; }
@@ -330,11 +331,10 @@
       <div class="where">${esc([e.venue, e.area, e.address].filter(Boolean).join(" · "))}${walk(e) ? " · " + walk(e) : ""}</div>`;
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
     const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
-    const link = ticket || page;
     $("#detail-body").innerHTML = `
       <div class="actions">
-        ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${ticket ? "Billets" : "Page de la salle"} ↗</a>` : ""}
-        ${ticket && page ? `<a class="secondary" href="${esc(page)}" target="_blank" rel="noopener">Page de la salle ↗</a>` : ""}
+        ${ticket ? `<a href="${esc(ticket)}" target="_blank" rel="noopener">Billets ↗</a>` : ""}
+        ${page ? `<a${ticket ? ' class="secondary"' : ""} href="${esc(page)}" title="${esc(hostOf(page))}" target="_blank" rel="noopener">Page de l'événement ↗</a>` : ""}
         ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
         <a class="secondary" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener">Agenda Google</a>
         <a class="secondary" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener">WhatsApp</a>
