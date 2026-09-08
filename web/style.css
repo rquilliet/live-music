@@ -145,7 +145,10 @@ code { background: var(--paper2); padding: 1px 4px; }
 .actions a, .actions button { border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); text-decoration: none; padding: 8px 14px; font-weight: 500; }
 .actions a.secondary, .actions button { background: none; color: var(--ink); }
 .actions button.on { background: var(--gold); border-color: var(--gold); color: #fff; }
-.player iframe { width: 100%; height: 300px; border: 1.5px solid var(--ink); background: var(--white); }
+.player iframe { display: block; width: 100%; height: 300px; border: 1.5px solid var(--ink); background: var(--white); }
+.player.bandcamp iframe { height: 120px; }   /* EmbeddedPlayer size=large, tracklist=false, artwork=small */
+.player.spotify iframe { height: 352px; }
+.player .via { margin-top: 4px; font-size: 11px; }
 .similar { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; }
 .similar a { flex: 0 0 96px; text-align: center; text-decoration: none; font-size: 12px; }
 .similar img { width: 96px; height: 96px; object-fit: cover; background: var(--paper2); display: block; margin-bottom: 6px; border: 1.5px solid var(--ink); }

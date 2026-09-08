@@ -438,7 +438,23 @@
     return parts.slice(0, 5);
   }
 
-  // Wikipedia (FR then EN) for the blurb, Deezer (JSONP, no key) for picture, player and similar artists.
+  // Wikipedia (FR then EN) for the blurb, Deezer (JSONP, no key) for picture and similar artists.
+  // Player: the artist's own Bandcamp page, else Spotify, else Deezer's top tracks (`players` is resolved
+  // by the scraper per artist name; older events.json files have none and fall back to Deezer).
+  const BC_EMBED = /^https:\/\/bandcamp\.com\/EmbeddedPlayer\/(album|track)=\d+\//;
+  function playersOf(e, name) {
+    const all = (e && e.players) || {};
+    const p = all[name] || all[Object.keys(all).find(k => norm(k) === norm(name))] || {};
+    const bc = p.bandcamp && safeUrl(p.bandcamp.url) ? p.bandcamp : null;
+    const sp = p.spotify && /^[A-Za-z0-9]{8,64}$/.test(p.spotify.id || "") ? p.spotify : null;
+    return { bandcamp: bc, bandcampEmbed: bc && BC_EMBED.test(bc.embed || "") ? bc.embed : null, spotify: sp };
+  }
+  function playerHtml(p, dz) {
+    if (p.bandcampEmbed) return `<div class="player bandcamp"><iframe title="Bandcamp" src="${esc(p.bandcampEmbed)}" seamless loading="lazy"></iframe><div class="muted via">via Bandcamp</div></div>`;
+    if (p.spotify) return `<div class="player spotify"><iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="muted via">via Spotify</div></div>`;
+    if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
+    return "";
+  }
   const cache = {};
   async function loadArtist(name, e) {
     const box = $("#artist");
@@ -449,15 +465,17 @@
     if ($(".artist-pick .on", detail) && $(".artist-pick .on", detail).textContent !== name) return; // user switched
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
     const q = encodeURIComponent(name);
+    const p = playersOf(e, name);
+    const player = playerHtml(p, dz);
     box.innerHTML = `
       <h3>${esc(name)}</h3>
       ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : `<p class="muted">Pas de fiche Wikipédia trouvée.</p>`}
-      ${dz ? `<div class="player" style="margin-top:12px"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe></div>` : ""}
+      ${player ? `<div style="margin-top:12px">${player}</div>` : ""}
       <div class="links" style="margin-top:10px">
-        <a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener">Spotify</a>
-        <a href="https://bandcamp.com/search?q=${q}" target="_blank" rel="noopener">Bandcamp</a>
+        <a href="${p.bandcamp ? esc(p.bandcamp.url) : `https://bandcamp.com/search?q=${q}`}" target="_blank" rel="noopener">Bandcamp</a>
+        <a href="${p.spotify && safeUrl(p.spotify.url) ? esc(p.spotify.url) : `https://open.spotify.com/search/${q}`}" target="_blank" rel="noopener">Spotify</a>
+        ${dz && safeUrl(dz.link) ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
         <a href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">YouTube</a>
-        ${dz ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
       </div>
       <div id="similar"></div>`;
     if (dz) {

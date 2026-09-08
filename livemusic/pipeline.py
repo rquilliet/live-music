@@ -1,4 +1,4 @@
-"""Run every source, merge duplicates, tag genres, track first-seen dates, write web/events.json."""
+"""Run every source, merge duplicates, tag genres, resolve players, track first-seen dates, write web/events.json."""
 import datetime as dt
 import json
 import math
@@ -8,6 +8,7 @@ import time
 import traceback
 
 from . import genres as G
+from . import players as P
 from .fetch import FetchError
 from .sources import STRATEGIES
 from .util import norm_title, slugify, split_lineup, strip_accents
@@ -17,6 +18,7 @@ DATA = os.path.join(ROOT, "data")
 WEB = os.path.join(ROOT, "web")
 SEEN_PATH = os.path.join(DATA, "seen.json")
 GENRE_CACHE = os.path.join(DATA, "genre_cache.json")
+PLAYER_CACHE = os.path.join(DATA, "player_cache.json")
 OUT_PATH = os.path.join(WEB, "events.json")
 HORIZON_DAYS = 120
 NEW_WINDOW_DAYS = 7
@@ -40,7 +42,7 @@ def load_venues(path=None):
     return venues
 
 
-def run(only=None, use_llm=True, log=print):
+def run(only=None, use_llm=True, players=True, log=print):
     started = time.time()
     plain = log
 
@@ -108,6 +110,14 @@ def run(only=None, use_llm=True, log=print):
             log(f"  LLM tagging failed: {e}")
     elif use_llm:
         log("  LLM tagging skipped: set ANTHROPIC_API_KEY to enable")
+
+    # players: Bandcamp page + embeddable release, Spotify artist id (optional key) for the detail sheet
+    if players:
+        try:
+            P.resolve(events, PLAYER_CACHE, today=today, log=log)
+        except Exception as e:  # never let a lookup problem lose the day's programme
+            log(f"  players failed: {e}")
+            traceback.print_exc()
 
     first_seen = track_seen(events, today, state, report)
     events.sort(key=lambda e: (e.date, e.time or "99:99", e.venue))
