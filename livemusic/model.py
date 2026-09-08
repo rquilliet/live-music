@@ -47,6 +47,7 @@ class Event:
     area: Optional[str] = None        # neighbourhood / arrondissement / town shown next to the venue
     headliner: Optional[str] = None   # first act of the bill (from the title)
     support: List[str] = field(default_factory=list)  # the other acts
+    players: dict = field(default_factory=dict)       # artist name -> {"bandcamp": {url, embed}, "spotify": {url, id}}
     lat: Optional[float] = None
     lon: Optional[float] = None
     is_music: bool = True
