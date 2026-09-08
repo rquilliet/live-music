@@ -107,6 +107,46 @@
     return min <= 90 ? `${min} min à pied` : `${d.toFixed(d < 10 ? 1 : 0)} km`;
   }
 
+  // "Agenda Google" link: floating local time in Europe/Paris, 2h30 long, or an all-day event when the time is unknown.
+  function gcalUrl(e) {
+    const [head, ...sup] = lineup(e);
+    const d = parseISO(e.date), pad = n => String(n).padStart(2, "0");
+    const ymd = x => `${x.getFullYear()}${pad(x.getMonth() + 1)}${pad(x.getDate())}`;
+    const m = /^(\d{1,2})\s*[:h]\s*(\d{2})?/.exec(e.time || "");
+    let dates;
+    if (m) {
+      const start = new Date(d); start.setHours(+m[1], +(m[2] || 0), 0, 0);
+      const end = new Date(start.getTime() + 150 * 60000);
+      const stamp = x => `${ymd(x)}T${pad(x.getHours())}${pad(x.getMinutes())}00`;
+      dates = `${stamp(start)}/${stamp(end)}`;
+    } else {
+      dates = `${ymd(d)}/${ymd(addDays(d, 1))}`;
+    }
+    const link = safeUrl(e.ticket_url) || safeUrl(e.url);
+    const details = [e.price, link, shareLink(e)].filter(Boolean).join("\n");
+    const q = {
+      action: "TEMPLATE",
+      text: `${head}${sup.length ? " avec " + sup.join(", ") : ""} @ ${e.venue}`,
+      dates, details,
+      location: [e.venue, e.address || e.area].filter(Boolean).join(", "),
+      ctz: "Europe/Paris",
+    };
+    return "https://calendar.google.com/calendar/render?" + Object.entries(q).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
+  }
+  // "WhatsApp" link: short French message, one line per fact, links last so the app previews them.
+  function whatsappUrl(e) {
+    const [head, ...sup] = lineup(e);
+    const link = safeUrl(e.ticket_url) || safeUrl(e.url);
+    const lines = [
+      `🎵 ${head}${sup.length ? " avec " + sup.join(", ") : ""}`,
+      `📅 ${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}`,
+      `📍 ${e.venue}${e.area ? " (" + e.area + ")" : ""}`,
+      link, shareLink(e),
+    ].filter(Boolean);
+    return "https://wa.me/?text=" + encodeURIComponent(lines.join("\n"));
+  }
+  function shareLink(e) { return location.origin + location.pathname + "#e=" + e.id; }
+
   // ------------------------------------------------------------ filtering
   function inTab(e, tab) {
     const [a, b] = ranges()[tab];
@@ -296,6 +336,8 @@
         ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${ticket ? "Billets" : "Page de la salle"} ↗</a>` : ""}
         ${ticket && page ? `<a class="secondary" href="${esc(page)}" target="_blank" rel="noopener">Page de la salle ↗</a>` : ""}
         ${e.lat != null ? `<a class="secondary" href="https://www.google.com/maps?q=${e.lat},${e.lon}" target="_blank" rel="noopener">Itinéraire</a>` : ""}
+        <a class="secondary" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener">Agenda Google</a>
+        <a class="secondary" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener">WhatsApp</a>
         <button id="savebtn" type="button"></button>
       </div>
       <div class="muted tagline">${genreTags(e)}${subHtml(e, 99)} ${e.raw_genre ? "· " + esc(e.raw_genre) : ""} ${e.price ? "· " + esc(e.price) : ""} ${statusTags(e)}</div>
