@@ -128,6 +128,8 @@ code { background: var(--paper2); padding: 1px 4px; }
 .artist-pick button { border: 1.5px solid var(--line); background: none; padding: 4px 10px; font-size: 12px; }
 .artist-pick button.on { border-color: var(--ink); background: var(--ink); color: var(--paper); }
 .muted { color: var(--muted); font-size: 13px; }
+.blurb .link, .blurb .muted { font-size: 13px; white-space: nowrap; }
+.blurb .link { font-style: italic; }
 .muted .tag { margin-right: 4px; }
 .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
 .links a { color: var(--muted); }
