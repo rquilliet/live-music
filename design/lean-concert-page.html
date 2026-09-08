@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live in Paris — page concert « lean » : 3 pistes (REM-19)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
+<style>
+/* Maquettes statiques pour REM-19. Même palette / mêmes fontes que web/style.css (direction A « Programme »).
+   Données réelles de web/events.json : c28e428e5232 (Weird Nightmare + Cold Beaches, Point Éphémère)
+   et 01c9f9fc1963 (Isabel Van Gelder, La Maroquinerie, complet). Rien ici n'est branché : c'est du papier. */
+:root {
+  --paper: #f3efe6; --paper2: #ece2d4; --white: #fff;
+  --ink: #17140f; --muted: #5f584c; --faint: #8a8273; --line: #c9c2b2;
+  --orange: #e0512f; --lime: #d8f56a; --gold: #b8862d; --blue: #2e6fd9;
+  --plum: #171220; --plum2: #0d0a0f;
+  --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --body: Archivo, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --keep: #17140f; --tap: #b8862d; --drop: #e0512f;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #e6e2d9; color: var(--ink); font: 14px/1.45 var(--body); }
+a { color: inherit; text-decoration: none; }
+svg.icon { width: 18px; height: 18px; display: block; }
+
+/* ---------- page chrome (hors maquette) ---------- */
+.intro { padding: 32px 40px 18px; border-bottom: 2px solid var(--ink); background: var(--paper); display: flex; gap: 40px; align-items: flex-end; flex-wrap: wrap; }
+.intro h1 { font-family: var(--display); font-weight: 900; font-size: 46px; line-height: .9; letter-spacing: -.01em; }
+.intro h1 small { display: block; font-family: var(--body); font-weight: 400; font-size: 14px; margin-top: 8px; color: var(--muted); letter-spacing: 0; }
+.intro .ctx { max-width: 620px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.intro .ctx b { color: var(--ink); font-weight: 600; }
+.key { list-style: none; display: flex; gap: 18px; font-size: 13px; margin-left: auto; align-self: flex-end; }
+.key li { display: flex; align-items: center; gap: 7px; }
+.key i { width: 12px; height: 12px; border: 1.5px solid var(--ink); display: inline-block; }
+.key .k-keep { background: var(--keep); }
+.key .k-tap { background: var(--tap); border-color: var(--tap); }
+.key .k-drop { background: var(--paper); border-color: var(--drop); border-style: dashed; }
+
+.boards { display: flex; gap: 28px; padding: 28px 40px 12px; align-items: flex-start; flex-wrap: nowrap; overflow-x: auto; }
+.board { flex: 0 0 390px; width: 390px; }
+.board.ref { opacity: .92; }
+.board figcaption { padding: 14px 2px 0; }
+.board figcaption h2 { font-family: var(--display); font-weight: 900; font-size: 30px; line-height: 1; letter-spacing: -.005em; display: flex; align-items: baseline; gap: 10px; }
+.board figcaption h2 span { font-family: var(--body); font-weight: 400; font-size: 12px; color: var(--faint); letter-spacing: .06em; text-transform: uppercase; }
+.board figcaption h2 .reco { font-family: var(--body); font-weight: 600; font-size: 11px; color: var(--paper); background: var(--ink); padding: 2px 7px; letter-spacing: .06em; text-transform: uppercase; }
+.board .rat { margin-top: 6px; font-size: 13px; line-height: 1.45; color: var(--ink); }
+.leg { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1.5px solid var(--ink); font-size: 12px; line-height: 1.4; }
+.leg dt { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+.leg dt i { width: 10px; height: 10px; border: 1.5px solid var(--ink); display: inline-block; }
+.leg .keep dt i { background: var(--keep); }
+.leg .tap dt i { background: var(--tap); border-color: var(--tap); }
+.leg .drop dt i { border-color: var(--drop); border-style: dashed; }
+.leg dd { color: var(--muted); }
+.leg dd + dd { margin-top: 2px; }
+.leg .drop dd { text-decoration: line-through; text-decoration-color: var(--drop); }
+.note { font-size: 12px; color: var(--faint); font-style: italic; margin-top: 8px; }
+
+/* ---------- l'écran (390 px, hauteur d'un viewport mobile ≈ 760 px) ---------- */
+.phone { position: relative; width: 390px; height: 760px; overflow: hidden; background: var(--paper); color: var(--ink);
+  border: 1.5px solid var(--ink); box-shadow: 4px 4px 0 var(--paper2); font: 14px/1.4 var(--body); }
+.phone.tall { height: auto; }
+.fold { position: absolute; left: 0; right: 0; top: 760px; border-top: 1.5px dashed var(--orange); z-index: 5; pointer-events: none; }
+.fold::after { content: "pli mobile · 760 px"; position: absolute; right: 8px; top: -9px; font: 600 10px/1.5 var(--body); background: var(--orange); color: #fff; padding: 0 6px; letter-spacing: .06em; text-transform: uppercase; }
+.x { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: 1.5px solid var(--ink); background: var(--paper); color: var(--ink); display: grid; place-items: center; font-size: 15px; z-index: 3; }
+.x.onhero { background: rgba(23,20,15,.55); color: #f2ecff; border-color: #f2ecff; }
+
+/* hero (0 et A). L'image réelle en 1re couche ; si elle ne charge pas, l'aplat prune rayé prend le relais. */
+.hero { position: relative; background-color: var(--plum); background-size: cover; background-position: center; color: #f2ecff; display: flex; align-items: flex-end; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,10,15,.05) 0%, rgba(13,10,15,.35) 45%, rgba(13,10,15,.92) 100%); }
+.hero > div { position: relative; padding: 20px; width: 100%; }
+.hero .when { color: var(--lime); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+.hero h2 { margin: 6px 0 2px; font-family: var(--display); font-weight: 900; font-size: 38px; line-height: .95; letter-spacing: -.01em; }
+.hero .support { font-size: 14px; color: #d9d0e6; }
+.hero .where { color: #b9aecb; margin-top: 8px; font-size: 12px; }
+.img-wn { background-image: url("https://images.prismic.io/pointf/aYm8r90YXLCxVm2O_WN-POINTEPHEMEREPARIS1080X1035.jpeg?auto=format&w=800&q=60&fm=webp"),
+  repeating-linear-gradient(135deg, #2a2036 0 14px, #171220 14px 28px); }
+.img-ivg { background-image: url("https://www.lamaroquinerie.fr/files/event_thumbnail_2208.png"),
+  repeating-linear-gradient(45deg, #2a2036 0 14px, #171220 14px 28px); }
+
+/* typo commune du contenu */
+.body { padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 14px; }
+.body p { line-height: 1.5; }
+.src { color: var(--faint); font-size: 12px; }
+.more { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; font-size: 13px; }
+.kicker { font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
+h2.title { font-family: var(--display); font-weight: 900; line-height: .95; letter-spacing: -.01em; }
+.support { font-size: 15px; }
+.venue { font-size: 13px; color: var(--muted); line-height: 1.45; }
+.venue b { color: var(--ink); font-weight: 600; }
+.venue a { text-decoration: underline; text-underline-offset: 2px; }
+.meta { font-size: 13px; color: var(--muted); }
+.meta b { color: var(--ink); font-weight: 600; }
+.tag { font-size: 11px; display: inline-block; padding: 1px 6px; border: 1px solid var(--ink); white-space: nowrap; line-height: 1.5; vertical-align: 1px; }
+.tag.sold { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tag.sub { border: 1px dashed var(--line); color: var(--muted); }
+.tag.grey { border-color: var(--line); color: var(--faint); text-decoration: line-through; }
+.foot { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.foot a { text-decoration: underline; text-underline-offset: 2px; }
+.foot .sep { color: var(--line); margin: 0 5px; }
+hr.rule { border: 0; border-top: 1.5px solid var(--ink); }
+hr.dash { border: 0; border-top: 1px dashed var(--line); }
+
+/* play row : le lecteur replié en une ligne (tap → iframe Bandcamp/Spotify/Deezer à la place de la ligne) */
+.playrow { display: flex; align-items: center; gap: 10px; border: 1.5px solid var(--ink); padding: 8px 10px; background: var(--white); }
+.playrow .pb { width: 30px; height: 30px; background: var(--ink); color: var(--paper); display: grid; place-items: center; flex: 0 0 30px; }
+.playrow .pb svg { width: 16px; height: 16px; }
+.playrow span { font-weight: 600; font-size: 13px; }
+.playrow small { color: var(--faint); font-size: 11px; display: block; font-weight: 400; }
+
+/* ---------- 0 · AUJOURD'HUI (référence, reproduit web/style.css) ---------- */
+.p0 .hero { min-height: 220px; }
+.p0 .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.p0 .actions a, .p0 .actions button { border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); padding: 8px 14px; font: inherit; font-weight: 500; }
+.p0 .actions .secondary, .p0 .actions button { background: none; color: var(--ink); }
+.p0 .tagline { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; color: var(--muted); font-size: 13px; }
+.p0 .pick { display: flex; gap: 6px; flex-wrap: wrap; }
+.p0 .pick span { border: 1.5px solid var(--line); padding: 4px 10px; font-size: 12px; }
+.p0 .pick span.on { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.p0 h3 { font-family: var(--display); font-size: 18px; font-weight: 700; letter-spacing: .01em; margin-bottom: 8px; }
+.p0 .muted { color: var(--muted); font-size: 13px; }
+.p0 .player { height: 300px; border: 1.5px solid var(--ink); background: #12121a; color: #eee; padding: 12px; font-size: 12px; display: flex; flex-direction: column; gap: 8px; }
+.p0 .player .hd { display: flex; align-items: center; gap: 10px; padding-bottom: 8px; border-bottom: 1px solid #333; }
+.p0 .player .hd i { width: 44px; height: 44px; background: #3a2f44; display: block; }
+.p0 .player .tr { display: flex; justify-content: space-between; color: #bbb; padding: 4px 0; border-bottom: 1px solid #222; }
+.p0 .player .lg { margin-top: auto; text-align: right; font-weight: 700; color: #a238ff; letter-spacing: .1em; font-size: 11px; }
+.p0 .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.p0 .similar { display: flex; gap: 12px; overflow: hidden; }
+.p0 .similar div { flex: 0 0 96px; text-align: center; font-size: 12px; }
+.p0 .similar i { display: block; width: 96px; height: 96px; border: 1.5px solid var(--ink); background: repeating-linear-gradient(45deg, var(--paper2) 0 8px, #e2d7c5 8px 16px); margin-bottom: 6px; }
+
+/* ---------- A · AFFICHE ---------- */
+.pa .hero { min-height: 210px; }
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px solid var(--ink); background: var(--paper); }
+.tile { padding: 10px 4px 9px; text-align: center; border-left: 1.5px solid var(--ink); font-weight: 500; font-size: 11.5px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-height: 66px; line-height: 1.15; }
+.tile:first-child { border-left: 0; }
+.tile.primary { background: var(--ink); color: var(--paper); }
+.tile.primary b { font-family: var(--display); font-size: 20px; font-weight: 700; line-height: 1; }
+.tile.primary small { font-weight: 500; font-size: 11.5px; }
+.tile svg { width: 20px; height: 20px; }
+.tile.alert { background: var(--gold); border-color: var(--gold); color: #fff; }
+details.plus { border-top: 1.5px solid var(--ink); }
+details.plus summary { list-style: none; cursor: pointer; padding: 10px 0; font-family: var(--display); font-weight: 700; font-size: 16px; letter-spacing: .06em; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; }
+details.plus summary::-webkit-details-marker { display: none; }
+details.plus summary em { font: italic 11px var(--body); color: var(--faint); letter-spacing: 0; text-transform: none; }
+.plus .row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 13px; }
+.plus .row span:last-child { color: var(--muted); font-size: 12px; text-align: right; max-width: 58%; }
+.plus .row .lbl { font-weight: 500; }
+
+/* ---------- B · FICHE ---------- */
+.pb-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 0 20px; }
+.pb-head .kicker { color: var(--ink); }
+.pb-head a { font-size: 12px; color: var(--muted); text-decoration: underline; text-underline-offset: 2px; margin-right: 46px; }
+.pb-title { display: grid; grid-template-columns: 1fr 84px; gap: 14px; align-items: start; padding: 8px 20px 0; }
+.pb-title h2 { font-size: 42px; }
+.pb-title .support { margin-top: 6px; color: var(--muted); }
+.stamp { width: 84px; height: 84px; border: 1.5px solid var(--ink); background-color: var(--plum); background-size: cover; background-position: center; box-shadow: 3px 3px 0 var(--paper2); }
+.pb .body { padding-top: 14px; padding-bottom: 76px; }
+.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.bar { position: absolute; left: 0; right: 0; bottom: 0; display: flex; border-top: 1.5px solid var(--ink); background: var(--paper); height: 60px; z-index: 4; }
+.bar .primary { flex: 1; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600; font-size: 15px; }
+.bar .primary b { font-family: var(--display); font-size: 22px; font-weight: 700; }
+.bar .primary.alert { background: var(--gold); }
+.bar .ico { width: 64px; border-left: 1.5px solid var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 10px; font-weight: 500; letter-spacing: .01em; }
+.bar .ico svg { width: 19px; height: 19px; }
+.esprit { font-size: 12px; color: var(--muted); }
+.esprit a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- C · MINIMAL ---------- */
+.pc .body { padding: 22px 22px 22px; gap: 0; }
+.pc .kicker { color: var(--muted); }
+.pc h2.title { font-size: 48px; margin: 8px 0 4px; }
+.pc .support { color: var(--muted); margin-bottom: 10px; }
+.cta { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; background: var(--ink); color: var(--paper); padding: 14px 16px; font-weight: 600; font-size: 16px; }
+.cta b { font-family: var(--display); font-size: 24px; font-weight: 700; }
+.cta.alert { background: var(--gold); }
+.iconrow { display: flex; margin-top: 8px; border: 1.5px solid var(--ink); }
+.iconrow div { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 9px 0 8px; font-size: 11px; font-weight: 500; border-left: 1px dashed var(--line); }
+.iconrow div:first-child { border-left: 0; }
+.iconrow svg { width: 18px; height: 18px; }
+.pc p.blurb { margin-top: 18px; }
+.pc .foot { margin-top: 16px; padding-top: 10px; border-top: 1px dashed var(--line); }
+
+/* ---------- états de la zone d'actions ---------- */
+.states { padding: 20px 40px 8px; }
+.states h2, .audit h2 { font-family: var(--display); font-weight: 900; font-size: 30px; line-height: 1; margin-bottom: 4px; }
+.states p, .audit p { color: var(--muted); font-size: 13px; max-width: 760px; }
+.stgrid { display: grid; grid-template-columns: 110px repeat(3, 330px); gap: 14px 22px; align-items: center; margin-top: 16px; }
+.stgrid .h { font-family: var(--display); font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
+.stgrid .h.col { color: var(--muted); font-size: 13px; }
+.stgrid .h small { display: block; font: 400 11px/1.3 var(--body); color: var(--faint); letter-spacing: 0; text-transform: none; }
+.mini { background: var(--paper); border: 1px solid var(--line); padding: 12px; }
+.mini .bar { position: static; height: 56px; border: 1.5px solid var(--ink); }
+.mini .cta { margin-top: 0; }
+.mini .iconrow { margin-top: 6px; }
+
+/* ---------- audit ---------- */
+.audit { padding: 26px 40px 60px; }
+table { border-collapse: collapse; margin-top: 14px; font-size: 13px; background: var(--paper); }
+th, td { text-align: left; padding: 7px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; border-bottom: 1.5px solid var(--ink); }
+td.n { font-family: var(--display); font-weight: 700; font-size: 18px; line-height: 1; text-align: center; }
+td .v { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border: 1.5px solid var(--ink); white-space: nowrap; }
+td .v.keep { background: var(--ink); color: var(--paper); }
+td .v.tap { background: var(--gold); border-color: var(--gold); color: #fff; }
+td .v.drop { border-color: var(--drop); color: var(--drop); border-style: dashed; }
+td .v.coll { background: none; }
+td.why { color: var(--muted); max-width: 520px; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 6 6.5.8-4.8 4.5 1.3 6.5L12 17.4l-5.8 3.2 1.3-6.5L2.7 9.6l6.5-.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5.2 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 8.3c0 3.7 3 6.7 6.7 6.7l1-1.7-2.1-1-1 .9a5.2 5.2 0 0 1-2.8-2.8l.9-1-1-2.1z" fill="currentColor"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.6 2H4.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 20.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z" fill="currentColor"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2" fill="currentColor"/></symbol>
+</svg>
+
+<header class="intro">
+  <h1>Page concert « lean »<small>REM-19 · 3 pistes + variante « complet » · maquettes papier, largeur mobile 390 px · sept. 2026</small></h1>
+  <p class="ctx">Même concert dans toutes les pistes pour comparer à armes égales : <b>Weird Nightmare + Cold Beaches</b>, Point Éphémère, mer 10 sept, 20 h, 20 € (billet Dice, texte et image de la page source). Variante « complet » : <b>Isabel Van Gelder</b>, La Maroquinerie (pas de billet, pas de prix, pas de texte). Le trait orange marque le pli d'un écran de téléphone.</p>
+  <ul class="key"><li><i class="k-keep"></i>garde</li><li><i class="k-tap"></i>à un tap</li><li><i class="k-drop"></i>retiré</li></ul>
+</header>
+
+<section class="boards">
+
+<!-- ============================ 0 · AUJOURD'HUI ============================ -->
+<figure class="board ref" id="b0">
+  <div class="phone p0 tall">
+    <div class="x onhero">✕</div>
+    <div class="hero img-wn"><div>
+      <div class="when">Mer 10 sept · 20h</div>
+      <h2>WEIRD NIGHTMARE</h2>
+      <div class="support">avec COLD BEACHES</div>
+      <div class="where">Point Éphémère · Canal Saint-Martin · 200 quai de Valmy, 75010 Paris</div>
+    </div></div>
+    <div class="body">
+      <div class="actions"><a>Billets ↗</a><a class="secondary">Page de la salle ↗</a><a class="secondary">Itinéraire</a><button>☆ Enregistrer</button></div>
+      <div class="tagline"><span class="tag">Rock</span><span class="tag">Indie</span><span class="tag sub">power pop</span><span class="tag sub">noise pop</span> · Festival · Regular : 20 EUR</div>
+      <p>Sous le nom de Weird Nightmare se cache Alex Edkins, chanteur et guitariste du groupe METZ, explore une facette plus lumineuse et mélodique de son univers sans jamais renoncer à la distorsion.</p>
+      <div class="pick"><span class="on">WEIRD NIGHTMARE</span><span>COLD BEACHES</span></div>
+      <div>
+        <h3>WEIRD NIGHTMARE</h3>
+        <p class="muted">Pas de fiche Wikipédia trouvée.</p>
+        <div class="player" style="margin-top:12px">
+          <div class="hd"><i></i><div><b>Weird Nightmare</b><br><span style="color:#999">Top titres</span></div></div>
+          <div class="tr"><span>1 &nbsp;Searching for You</span><span>3:12</span></div>
+          <div class="tr"><span>2 &nbsp;Lusitania</span><span>2:58</span></div>
+          <div class="tr"><span>3 &nbsp;Wrecked</span><span>3:40</span></div>
+          <div class="tr"><span>4 &nbsp;Darkroom</span><span>3:05</span></div>
+          <div class="tr"><span>5 &nbsp;So Far Gone</span><span>2:47</span></div>
+          <div class="lg">deezer</div>
+        </div>
+        <div class="links" style="margin-top:10px"><span>Spotify</span><span>Bandcamp</span><span>YouTube</span><span>Deezer</span></div>
+        <h3 style="margin-top:16px">Artistes similaires</h3>
+        <div class="similar"><div><i></i>METZ</div><div><i></i>Preoccupations</div><div><i></i>Cloud Nothings</div><div><i></i>Protomartyr</div></div>
+      </div>
+    </div>
+    <div class="fold"></div>
+  </div>
+  <figcaption>
+    <h2>0 <span>référence · aujourd'hui</span></h2>
+    <p class="rat">Ce que la feuille affiche actuellement, à la même largeur. Onze blocs, ~1 300 px, un iframe tiers à chaque ouverture ; les actions passent sous le pli dès que le texte fait trois lignes, et « Pas de fiche Wikipédia » est le message le plus fréquent de la page.</p>
+  </figcaption>
+</figure>
+
+<!-- ============================ A · AFFICHE ============================ -->
+<figure class="board" id="ba">
+  <div class="phone pa">
+    <div class="x onhero">✕</div>
+    <div class="hero img-wn"><div>
+      <div class="when">Mer 10 sept · 20h</div>
+      <h2>Weird Nightmare</h2>
+      <div class="support">avec Cold Beaches</div>
+    </div></div>
+    <div class="body">
+      <div class="tiles">
+        <div class="tile primary"><b>20 €</b><small>Billets ↗</small></div>
+        <div class="tile"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div>
+        <div class="tile"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div>
+        <div class="tile"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div>
+      </div>
+      <div class="venue"><b>Point Éphémère</b> · Canal Saint-Martin<br>200 quai de Valmy, 10e · <a>Itinéraire ↗</a> · 12 min à pied</div>
+      <p>Sous le nom de Weird Nightmare se cache Alex Edkins, chanteur et guitariste du groupe METZ, explore une facette plus lumineuse et mélodique de son univers sans jamais renoncer à la distorsion. <span class="src">— Point Éphémère</span></p>
+      <details class="plus" open>
+        <summary>Plus <em>(déplié pour la maquette)</em></summary>
+        <div class="row"><span class="lbl">▶ Écouter Weird Nightmare</span><span>Bandcamp</span></div>
+        <div class="row"><span class="lbl">Ajouter à l'agenda Google</span><span>mer 10 sept, 20h</span></div>
+        <div class="row"><span class="lbl">Page de l'événement ↗</span><span>pointephemere.org</span></div>
+        <div class="row"><span class="lbl">Dans le même esprit</span><span>METZ, Preoccupations, Cloud Nothings</span></div>
+        <div class="row" style="border-bottom:0"><span class="lbl">Chercher sur</span><span>Bandcamp · Spotify · YouTube</span></div>
+      </details>
+    </div>
+  </div>
+  <figcaption>
+    <h2>A <span>Affiche</span></h2>
+    <p class="rat">L'affiche d'abord : l'image, le nom, quatre tuiles d'action. Tout le reste tient derrière un seul « Plus ». On garde l'émotion du visuel sans lui laisser repousser les actions sous le pli.</p>
+    <dl class="leg">
+      <div class="keep"><dt><i></i>Garde</dt><dd>Hero réduit (210 px) avec date, titre, 1re partie</dd><dd>4 tuiles : Billets + prix, Intéressé, J'y vais, WhatsApp</dd><dd>Salle · quartier · adresse · itinéraire</dd><dd>Un paragraphe (page source, sinon Wikipédia) + source</dd></div>
+      <div class="tap"><dt><i></i>À un tap</dt><dd>« Plus » : écouter (lecteur replié en ligne), agenda Google, page de l'événement, dans le même esprit (noms seuls), liens de recherche</dd><dd>Complet → la tuile prix devient « Alerte billets »</dd></div>
+      <div class="drop"><dt><i></i>Retiré</dt><dd>Chips genre, « Festival », statut en tags</dd><dd>Sélecteur d'artiste</dd><dd>Bloc Wikipédia séparé et ses « non trouvé »</dd><dd>Iframe chargé à l'ouverture</dd><dd>Vignettes d'artistes similaires</dd></div>
+    </dl>
+  </figcaption>
+</figure>
+
+<!-- ============================ B · FICHE ============================ -->
+<figure class="board" id="bb">
+  <div class="phone pb">
+    <div class="x">✕</div>
+    <div class="pb-head"><span class="kicker">Mer 10 sept · 20h</span><a>+ Agenda</a></div>
+    <div class="pb-title">
+      <div><h2 class="title">Weird Nightmare</h2><div class="support">avec Cold Beaches</div></div>
+      <div class="stamp img-wn" aria-hidden="true"></div>
+    </div>
+    <div class="body">
+      <div class="venue"><b>Point Éphémère</b> · Canal Saint-Martin<br>200 quai de Valmy, 75010 · <a>Itinéraire ↗</a> · 12 min à pied</div>
+      <div class="meta"><b>20 €</b> · power pop, noise pop</div>
+      <hr class="rule">
+      <div>
+        <p class="clamp">Sous le nom de Weird Nightmare se cache Alex Edkins, chanteur et guitariste du groupe METZ, explore une facette plus lumineuse et mélodique de son univers sans jamais renoncer à la distorsion.</p>
+        <div style="margin-top:4px"><a class="more">lire la suite</a> <span class="src">· Point Éphémère</span></div>
+      </div>
+      <div class="playrow"><div class="pb"><svg class="icon"><use href="#i-play"/></svg></div><div><span>Écouter Weird Nightmare</span><small>Bandcamp · 5 titres</small></div></div>
+      <div class="esprit">Dans le même esprit : <a>METZ</a>, <a>Preoccupations</a>, <a>Cloud Nothings</a></div>
+      <hr class="dash">
+      <div class="foot"><a>Page de l'événement ↗</a><span class="sep">·</span><a>Bandcamp</a><span class="sep">·</span><a>Spotify</a><span class="sep">·</span><a>YouTube</a></div>
+    </div>
+    <div class="bar">
+      <div class="primary"><b>20 €</b> Billets ↗</div>
+      <div class="ico"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div>
+      <div class="ico"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div>
+      <div class="ico"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div>
+    </div>
+  </div>
+  <figcaption>
+    <h2>B <span>Fiche</span> <span class="reco">recommandée</span></h2>
+    <p class="rat">Une fiche de programme : texte d'abord, un timbre 84 px au lieu du hero, et les quatre actions dans une barre collée en bas, donc toujours à un tap même en cours de lecture. Le lecteur est une ligne « Écouter » qui ne charge rien avant le tap.</p>
+    <dl class="leg">
+      <div class="keep"><dt><i></i>Garde</dt><dd>Date + agenda, titre, 1re partie, timbre image</dd><dd>Salle · adresse · itinéraire · minutes à pied</dd><dd>Prix + styles fins en une ligne</dd><dd>Paragraphe 3 lignes + « lire la suite » + source</dd><dd>Barre : Billets + prix, Intéressé, J'y vais, WhatsApp</dd><dd>Page de l'événement + liens en pied</dd></div>
+      <div class="tap"><dt><i></i>À un tap</dt><dd>Lecteur (ligne ▶ → iframe Bandcamp / Spotify / Deezer)</dd><dd>Suite du texte</dd><dd>« Dans le même esprit » : noms seuls, sous le pli</dd><dd>Complet → la barre devient « Alerte billets »</dd></div>
+      <div class="drop"><dt><i></i>Retiré</dt><dd>Hero pleine largeur</dd><dd>Chips genre, « Festival », statut en tags</dd><dd>Sélecteur d'artiste</dd><dd>Bloc Wikipédia séparé et ses « non trouvé »</dd><dd>Iframe chargé à l'ouverture</dd><dd>Vignettes d'artistes similaires</dd></div>
+    </dl>
+  </figcaption>
+</figure>
+
+<!-- ============================ C · MINIMAL ============================ -->
+<figure class="board" id="bc">
+  <div class="phone pc">
+    <div class="x">✕</div>
+    <div class="body">
+      <div class="kicker">Mercredi 10 septembre · 20h</div>
+      <h2 class="title">Weird Nightmare</h2>
+      <div class="support">avec Cold Beaches</div>
+      <div class="venue"><b>Point Éphémère</b>, Canal Saint-Martin · <a>Itinéraire ↗</a></div>
+      <div class="cta"><span>Billets ↗</span><b>20 €</b></div>
+      <div class="iconrow">
+        <div><svg class="icon"><use href="#i-star"/></svg>Intéressé</div>
+        <div><svg class="icon"><use href="#i-check"/></svg>J'y vais</div>
+        <div><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div>
+        <div><svg class="icon"><use href="#i-cal"/></svg>Agenda</div>
+      </div>
+      <p class="blurb">Sous le nom de Weird Nightmare se cache Alex Edkins, chanteur et guitariste du groupe METZ, explore une facette plus lumineuse et mélodique de son univers sans jamais renoncer à la distorsion. <span class="src">— Point Éphémère</span></p>
+      <div class="foot"><a>Page de l'événement ↗</a><span class="sep">·</span>Écouter sur <a>Bandcamp</a>, <a>Spotify</a>, <a>YouTube</a></div>
+    </div>
+  </div>
+  <figcaption>
+    <h2>C <span>Minimal</span></h2>
+    <p class="rat">Le strict nécessaire pour décider et y aller : qui, quand, où, combien, un bouton, une rangée d'icônes, un paragraphe. Pas d'image, pas de lecteur, pas de similaires. La page tient dans un demi-écran.</p>
+    <dl class="leg">
+      <div class="keep"><dt><i></i>Garde</dt><dd>Date, titre, 1re partie, salle + itinéraire</dd><dd>Un CTA plein : Billets + prix</dd><dd>Rangée : Intéressé, J'y vais, WhatsApp, Agenda</dd><dd>Un paragraphe + source</dd><dd>Page de l'événement + liens d'écoute en pied</dd></div>
+      <div class="tap"><dt><i></i>À un tap</dt><dd>Écouter = lien sortant (Bandcamp / Spotify)</dd><dd>Complet → le CTA devient « Alerte billets »</dd></div>
+      <div class="drop"><dt><i></i>Retiré</dt><dd>Image (hero et timbre)</dd><dd>Adresse postale (dans Itinéraire)</dd><dd>Chips genre, styles, statut en tags</dd><dd>Sélecteur d'artiste</dd><dd>Wikipédia séparé</dd><dd>Lecteur embarqué</dd><dd>Artistes similaires</dd></div>
+    </dl>
+  </figcaption>
+</figure>
+
+<!-- ============================ B · COMPLET ============================ -->
+<figure class="board" id="bbs">
+  <div class="phone pb">
+    <div class="x">✕</div>
+    <div class="pb-head"><span class="kicker">Mer 10 sept · 19h30</span><a>+ Agenda</a></div>
+    <div class="pb-title">
+      <div><h2 class="title">Isabel Van Gelder</h2></div>
+      <div class="stamp img-ivg" aria-hidden="true"></div>
+    </div>
+    <div class="body">
+      <div class="venue"><b>La Maroquinerie</b> · Ménilmontant<br>23 rue Boyer, 75020 · <a>Itinéraire ↗</a> · 9 min à pied</div>
+      <div class="meta"><span class="tag sold">Complet</span> · singer-songwriter</div>
+      <hr class="rule">
+      <div class="playrow"><div class="pb"><svg class="icon"><use href="#i-play"/></svg></div><div><span>Écouter Isabel Van Gelder</span><small>Spotify</small></div></div>
+      <hr class="dash">
+      <div class="foot"><a>Page de l'événement ↗</a><span class="sep">·</span><a>Bandcamp</a><span class="sep">·</span><a>Spotify</a><span class="sep">·</span><a>YouTube</a></div>
+    </div>
+    <div class="bar">
+      <div class="primary alert"><svg class="icon"><use href="#i-bell"/></svg> Alerte billets</div>
+      <div class="ico"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div>
+      <div class="ico"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div>
+      <div class="ico"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div>
+    </div>
+  </div>
+  <figcaption>
+    <h2>B <span>variante « complet »</span></h2>
+    <p class="rat">Cas réel sans billet, sans prix, sans texte source ni fiche Wikipédia : la page ne s'excuse pas. Aucun « non trouvé », le prix laisse place au tag <b>Complet</b>, la barre garde ses quatre places et le bouton principal devient l'alerte billets (emplacement réservé pour la future feature). Même logique pour « pas encore en vente ».</p>
+    <p class="note">Le lecteur retombe sur Spotify quand il n'y a pas de page Bandcamp (REM-5 : Bandcamp › Spotify › Deezer).</p>
+  </figcaption>
+</figure>
+
+</section>
+
+<!-- ============================ ÉTATS ============================ -->
+<section class="states">
+  <h2>Zone d'actions selon l'état du billet</h2>
+  <p>Les quatre actions à un tap ne bougent jamais de place ; seule la première change de sens. Quand il n'y a ni billet ni page d'achat, elle renvoie vers la page de l'événement.</p>
+  <div class="stgrid">
+    <div></div>
+    <div class="h col">En vente<small>ticket_url présent</small></div>
+    <div class="h col">Complet<small>sold_out = true</small></div>
+    <div class="h col">Pas encore en vente<small>ni billet ni prix, date lointaine</small></div>
+
+    <div class="h">A</div>
+    <div class="mini"><div class="tiles"><div class="tile primary"><b>20 €</b><small>Billets ↗</small></div><div class="tile"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div class="tile"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div class="tile"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div></div></div>
+    <div class="mini"><div class="tiles"><div class="tile alert"><svg class="icon"><use href="#i-bell"/></svg>Alerte billets</div><div class="tile"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div class="tile"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div class="tile"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div></div></div>
+    <div class="mini"><div class="tiles"><div class="tile alert"><svg class="icon"><use href="#i-bell"/></svg>Prévenir à la vente</div><div class="tile"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div class="tile"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div class="tile"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div></div></div>
+
+    <div class="h">B</div>
+    <div class="mini"><div class="bar"><div class="primary"><b>20 €</b> Billets ↗</div><div class="ico"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div class="ico"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div class="ico"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div></div></div>
+    <div class="mini"><div class="bar"><div class="primary alert"><svg class="icon"><use href="#i-bell"/></svg> Alerte billets</div><div class="ico"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div class="ico"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div class="ico"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div></div></div>
+    <div class="mini"><div class="bar"><div class="primary alert"><svg class="icon"><use href="#i-bell"/></svg> Prévenir à la vente</div><div class="ico"><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div class="ico"><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div class="ico"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div></div></div>
+
+    <div class="h">C</div>
+    <div class="mini"><div class="cta"><span>Billets ↗</span><b>20 €</b></div><div class="iconrow"><div><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div><div><svg class="icon"><use href="#i-cal"/></svg>Agenda</div></div></div>
+    <div class="mini"><div class="cta alert"><span>Alerte billets</span><svg class="icon"><use href="#i-bell"/></svg></div><div class="iconrow"><div><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div><div><svg class="icon"><use href="#i-cal"/></svg>Agenda</div></div></div>
+    <div class="mini"><div class="cta alert"><span>Prévenir à la mise en vente</span><svg class="icon"><use href="#i-bell"/></svg></div><div class="iconrow"><div><svg class="icon"><use href="#i-star"/></svg>Intéressé</div><div><svg class="icon"><use href="#i-check"/></svg>J'y vais</div><div><svg class="icon"><use href="#i-wa"/></svg>WhatsApp</div><div><svg class="icon"><use href="#i-cal"/></svg>Agenda</div></div></div>
+  </div>
+</section>
+
+<!-- ============================ AUDIT ============================ -->
+<section class="audit">
+  <h2>Audit de la feuille actuelle</h2>
+  <p>Utilité de 1 (jamais) à 5 (à chaque ouverture), estimée pour l'usage réel : on a cliqué un nom dans la grille, on veut savoir si on y va. Verdict commun aux trois pistes sauf mention.</p>
+  <table>
+    <tr><th>Élément</th><th>Utilité</th><th>Verdict</th><th>Pourquoi</th></tr>
+    <tr><td>Date · heure</td><td class="n">5</td><td><span class="v keep">garde</span></td><td class="why">La question n°1. Reste en tête de page, plus « + Agenda » à côté (REM-7).</td></tr>
+    <tr><td>Titre (tête d'affiche)</td><td class="n">5</td><td><span class="v keep">garde</span></td><td class="why">Identité de la page.</td></tr>
+    <tr><td>Billets / page d'achat</td><td class="n">5</td><td><span class="v keep">garde</span></td><td class="why">Seul CTA plein. Le prix vit dedans (« 20 € · Billets »), il n'a plus besoin d'une ligne à lui.</td></tr>
+    <tr><td>Intéressé / J'y vais (remplace ☆ Enregistrer, REM-18)</td><td class="n">5</td><td><span class="v keep">garde</span></td><td class="why">Deux boutons distincts à un tap, pas un cycle sur un seul bouton.</td></tr>
+    <tr><td>Partager WhatsApp (REM-7)</td><td class="n">4</td><td><span class="v keep">garde</span></td><td class="why">C'est comme ça qu'on décide d'y aller à plusieurs.</td></tr>
+    <tr><td>Alerte billets (complet / pas en vente)</td><td class="n">4</td><td><span class="v keep">garde</span></td><td class="why">Prend la place du bouton Billets quand celui-ci n'a pas de sens ; jamais un 5e bouton.</td></tr>
+    <tr><td>Salle · quartier</td><td class="n">5</td><td><span class="v keep">garde</span></td><td class="why">Deuxième question. L'adresse complète est utile, l'itinéraire en lien inline suffit (C la retire).</td></tr>
+    <tr><td>Première partie</td><td class="n">4</td><td><span class="v keep">garde</span></td><td class="why">Une ligne « avec … », pas de sélecteur.</td></tr>
+    <tr><td>Prix</td><td class="n">5</td><td><span class="v keep">garde</span></td><td class="why">Décisif ; version courte (shortPrice) dans le CTA, détail complet dans le texte si besoin.</td></tr>
+    <tr><td>Description de la page source</td><td class="n">4</td><td><span class="v keep">garde</span></td><td class="why">Le vrai « c'est quoi ». Un paragraphe, 3 lignes + « lire la suite », attribution (REM-14).</td></tr>
+    <tr><td>Page de l'événement (REM-13)</td><td class="n">3</td><td><span class="v keep">garde</span></td><td class="why">Lien texte explicite, pas un bouton : sert quand notre résumé ne suffit pas.</td></tr>
+    <tr><td>Image (hero 280 px)</td><td class="n">3</td><td><span class="v coll">réduit / timbre / retiré</span></td><td class="why">Donne l'ambiance mais ne fait pas décider, coûte un tiers d'écran et souvent absente (aplat prune). A : 210 px ; B : timbre 84 px ; C : rien.</td></tr>
+    <tr><td>Styles fins (« power pop, noise pop »)</td><td class="n">3</td><td><span class="v keep">garde (B)</span></td><td class="why">Renseignent sur le son, contrairement aux genres larges. En mots gris, pas en chips.</td></tr>
+    <tr><td>Lecteur Deezer (iframe 300 px)</td><td class="n">3</td><td><span class="v tap">à un tap</span></td><td class="why">Utile pour un groupe inconnu, mais lourd et chargé à chaque ouverture. Une ligne « ▶ Écouter » qui devient le lecteur au tap (A, B) ; lien sortant (C).</td></tr>
+    <tr><td>Résumé Wikipédia</td><td class="n">2</td><td><span class="v coll">fusionné</span></td><td class="why">Repli quand la page source n'a pas de texte (REM-14). Plus de bloc « Pas de fiche trouvée ».</td></tr>
+    <tr><td>Liens Spotify · Bandcamp · YouTube · Deezer</td><td class="n">2</td><td><span class="v tap">pied de page</span></td><td class="why">Des recherches, pas des pages : une ligne grise en bas suffit.</td></tr>
+    <tr><td>Chips genre (Rock, Indie)</td><td class="n">2</td><td><span class="v drop">retiré</span></td><td class="why">On vient de filtrer dessus dans la liste ; redondant ici.</td></tr>
+    <tr><td>Genre brut de la salle (« Festival »)</td><td class="n">1</td><td><span class="v drop">retiré</span></td><td class="why">Bruit de scraping.</td></tr>
+    <tr><td>Tags de statut (Nouveau, ★ Enregistré, Non-concert)</td><td class="n">2</td><td><span class="v drop">retiré</span></td><td class="why">Seul « Complet » / « Annulé » comptent et prennent la place du prix. Le reste est déjà dans la grille ou dans l'état des boutons.</td></tr>
+    <tr><td>Sélecteur d'artiste (tête / 1re partie)</td><td class="n">1</td><td><span class="v drop">retiré</span></td><td class="why">Rarement touché, fait clignoter la page. La 1re partie reste un nom en clair.</td></tr>
+    <tr><td>Artistes similaires (vignettes Deezer)</td><td class="n">1</td><td><span class="v coll">noms seuls / retiré</span></td><td class="why">Sort de l'app vers Deezer, ne renvoie vers aucun concert. A/B : une ligne de noms sous le pli ; C : rien.</td></tr>
+    <tr><td>« Recherche de … », « Pas de fiche … »</td><td class="n">0</td><td><span class="v drop">retiré</span></td><td class="why">Aucun placeholder : ce qui manque n'apparaît pas.</td></tr>
+  </table>
+</section>
+
+</body>
+</html>
