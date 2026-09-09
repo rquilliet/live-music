@@ -39,6 +39,19 @@ and the venues marked `"strategy": "llm"` in `venues.json`.
 Pages are cached 6 h in `data/cache/` (`--fresh` to bypass). Run `scrape.py` daily (cron / launchd) so
 "newly announced" means something.
 
+## Deployment
+
+The site is static: GitHub Pages serves `web/` at `https://rquilliet.github.io/live-music/`.
+
+- `.github/workflows/pages.yml` publishes `web/` on every push to `main`.
+- `.github/workflows/scrape.yml` runs `scrape.py` every morning, commits `web/events.json` and the caches in
+  `data/`, and redeploys. It needs the repository secret `ANTHROPIC_API_KEY` (Claude tagging, summaries, LLM
+  venues) and, optionally, `SPOTIFY_CLIENT_ID` / `SPOTIFY_CLIENT_SECRET`. Run it by hand from the Actions tab
+  ("Run workflow") after adding the secrets.
+
+If Pages is not enabled automatically by the first run, pick **GitHub Actions** as the source in
+Settings → Pages once.
+
 ## Coverage check
 
 The end of every run lists the venues whose own site yielded fewer than 3 events (`low coverage`): that is
