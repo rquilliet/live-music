@@ -34,7 +34,8 @@ def main():
         from livemusic import pipeline
         pipeline.run()
     handler = functools.partial(Handler, directory=WEB)
-    Handler.extensions_map[".js"] = "application/javascript"
+    for ext, mime in {".js": "application/javascript", ".html": "text/html", ".css": "text/css", ".json": "application/json"}.items():
+        Handler.extensions_map[ext] = mime + "; charset=utf-8"  # the stdlib default omits the charset
     srv, port = None, a.port
     for port in range(a.port, a.port + 10):  # the requested port may be held by a previous run
         try:
