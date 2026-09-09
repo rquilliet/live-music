@@ -6,19 +6,48 @@
 <title>Live in Paris</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <header class="top">
-  <h1>Live in Paris<small id="meta"></small></h1>
-  <div class="tools">
-    <input id="search" type="search" placeholder="Artiste, salle…" autocomplete="off" aria-label="Rechercher">
-    <button id="near" class="btn" title="Trier par distance à pied">Près de moi</button>
-    <select id="radius" class="btn" hidden aria-label="Rayon">
-      <option value="2">2 km</option><option value="5" selected>5 km</option>
-      <option value="10">10 km</option><option value="25">25 km</option><option value="1000">Tout</option>
-    </select>
+  <div class="mast">
+    <h1>Live in Paris</h1>
+    <small id="meta"></small>
+  </div>
+  <div class="hrow" id="hrow">
+    <div class="sbar" id="sbar">
+      <div class="srow" id="srow">
+        <button type="button" class="back" id="sback" aria-label="Fermer la recherche">‹</button>
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <div class="field" id="field">
+          <span id="chips"></span>
+          <input id="search" type="text" placeholder="Artiste, salle, genre…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"
+                 aria-label="Rechercher un artiste, une salle, un genre ou un style" role="combobox" aria-expanded="false" aria-controls="ta" aria-autocomplete="list" aria-haspopup="listbox">
+        </div>
+        <button type="button" id="sclear" class="x" aria-label="Effacer le texte" hidden>✕</button>
+        <kbd class="kbd" id="skbd" aria-hidden="true">⌘K</kbd>
+      </div>
+      <div class="ta" id="ta" role="listbox" aria-label="Suggestions" hidden></div>
+    </div>
+    <div class="pills" id="pills">
+      <button type="button" class="pill" id="gbtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="gpanel">Genres <small></small><span class="car" aria-hidden="true">▾</span></button>
+      <button type="button" class="pill" id="newonly" aria-pressed="false" title="Concerts annoncés ces derniers jours">Nouveautés <small></small></button>
+      <button type="button" class="pill" id="mine" aria-pressed="false" title="Les concerts marqués Intéressé ou J'y vais">Mes concerts <small></small></button>
+      <button type="button" class="pill" id="near" aria-pressed="false" title="Salles à distance de marche"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg><span>Près de moi</span></button>
+      <select id="radius" class="pill" hidden aria-label="Rayon">
+        <option value="2">2 km</option><option value="5" selected>5 km</option>
+        <option value="10">10 km</option><option value="25">25 km</option><option value="1000">Tout</option>
+      </select>
+    </div>
+    <div class="gpanel" id="gpanel" role="dialog" aria-label="Genres et styles" hidden>
+      <h4>Genres <button type="button" class="link" id="gclear" hidden>Tout effacer</button></h4>
+      <div class="gs" id="glist"></div>
+      <div class="sty" id="gsty" hidden>
+        <h4><span id="gstitle">Styles</span><input id="gsq" type="text" placeholder="Filtrer les styles…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Filtrer les styles"></h4>
+        <div class="gs" id="slist"></div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -27,37 +56,9 @@
     <button id="prev" aria-label="Semaine précédente">‹</button><button id="next" aria-label="Semaine suivante">›</button>
   </div>
   <strong id="weeklabel"></strong>
-  <button id="thisweek" class="link" hidden>‹ Cette semaine</button>
-  <div class="views" id="tabs" role="tablist">
-    <button data-tab="week">Semaine <b></b></button>
-    <button data-tab="month">30 jours <b></b></button>
-    <button data-tab="new">Nouveautés <b></b></button>
-    <button data-tab="all">Tout <b></b></button>
-  </div>
+  <em id="weekcount"></em>
+  <button id="thisweek" class="link" hidden>Cette semaine</button>
 </nav>
-
-<section class="filters">
-  <div class="chips" id="genres"></div>
-  <div class="chips styles" id="styles" hidden></div>
-  <div class="row">
-    <button class="chip flag" id="free" data-flag="free">Gratuit</button>
-    <button class="chip flag" id="saved" data-flag="saved">Mes concerts <small></small></button>
-    <div class="venuepick" id="venuepick">
-      <button type="button" class="chip" id="venue" aria-haspopup="listbox" aria-expanded="false" aria-controls="venuepop">Toutes les salles</button>
-      <div class="venuepop" id="venuepop" hidden>
-        <div class="head">
-          <input id="venue-q" type="search" placeholder="Chercher une salle…" autocomplete="off" aria-label="Chercher une salle"
-                 role="combobox" aria-expanded="true" aria-controls="venuelist" aria-autocomplete="list">
-          <button type="button" id="venue-clear" class="link" hidden>Tout effacer</button>
-        </div>
-        <div class="venuelist" id="venuelist" role="listbox" aria-multiselectable="true" aria-label="Salles"></div>
-      </div>
-    </div>
-    <div class="chips venuesel" id="venuesel"></div>
-    <label class="toggle"><input type="checkbox" id="others"> Inclure les non-concerts</label>
-    <button id="reset" class="link">Réinitialiser</button>
-  </div>
-</section>
 
 <main id="list" class="list"></main>
 
