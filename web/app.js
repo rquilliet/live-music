@@ -170,7 +170,7 @@
       dates = `${ymd(d)}/${ymd(addDays(d, 1))}`;
     }
     const link = safeUrl(e.ticket_url) || safeUrl(e.url);
-    const details = [e.price, link, shareLink(e)].filter(Boolean).join("\n");
+    const details = [shareLink(e), link, e.price].filter(Boolean).join("\n");
     const q = {
       action: "TEMPLATE",
       text: `${head}${sup.length ? " avec " + sup.join(", ") : ""} @ ${e.venue}`,
@@ -180,15 +180,18 @@
     };
     return "https://calendar.google.com/calendar/render?" + Object.entries(q).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
   }
-  // "WhatsApp" link: short French message, one line per fact, links last so the app previews them.
+  // "WhatsApp" link: French recommendation, our deep link first (WhatsApp previews the first URL),
+  // then the facts, the ticket/venue link last. Emoji as escapes so no editor/encoding can mangle them.
   function whatsappUrl(e) {
     const [head, ...sup] = lineup(e);
-    const link = safeUrl(e.ticket_url) || safeUrl(e.url);
+    const ticket = safeUrl(e.ticket_url), link = ticket || safeUrl(e.url);
     const lines = [
-      `🎵 ${head}${sup.length ? " avec " + sup.join(", ") : ""}`,
-      `📅 ${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}`,
-      `📍 ${e.venue}${e.area ? " (" + e.area + ")" : ""}`,
-      link, shareLink(e),
+      "Voici un concert qui pourrait t'int\u00e9resser \u{1F440}",
+      shareLink(e),
+      `${head}${sup.length ? " avec " + sup.join(", ") : ""}`,
+      `${fmtDay(e.date)}${e.time ? " \u00b7 " + fmtTime(e.time) : ""}`,
+      `${e.venue}${e.area ? " (" + e.area + ")" : ""}`,
+      link ? `${ticket ? "Billets" : "Infos"} : ${link}` : "",
     ].filter(Boolean);
     return "https://wa.me/?text=" + encodeURIComponent(lines.join("\n"));
   }
