@@ -21,7 +21,7 @@
 
   let DATA = { events: [], tags: [], venues: [] };
   let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false });
-  const STATUS = { interested: { icon: "☆", label: "Intéressé" }, going: { icon: "✓", label: "J'y vais" } };
+  const STATUS = { interested: { icon: "☆", svg: "star", label: "Intéressé" }, going: { icon: "✓", svg: "check", label: "J'y vais" } };
   let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Intéressé ? / J'y vais"
   let me = null; // {lat, lon}
   let stylesOpen = false;  // "+N autres" expanded in the Genres panel (not persisted)
@@ -34,11 +34,9 @@
   const MAC = /Mac|iPhone|iPad/.test(navigator.platform || "");
 
   // ------------------------------------------------------------ motion (REM-15)
-  // Everything animates in CSS; JS only sequences it. Reduced motion: CSS keeps 120ms fades, JS skips the
-  // View Transitions morph and the parallax.
+  // Everything animates in CSS; JS only sequences it. Reduced motion: CSS keeps 120ms fades, JS skips the parallax.
   const MOTION = matchMedia("(prefers-reduced-motion: reduce)");
   const motionOK = () => !MOTION.matches;
-  const canVT = () => motionOK() && typeof document.startViewTransition === "function";
   // Exit animation: add `cls`, hide when it ends (a timer backs up animationend). cancelExit() aborts a pending one.
   function exitThen(el, cls, ms, then) {
     cancelExit(el);
@@ -617,28 +615,32 @@
   // ------------------------------------------------------------ detail sheet
   const detail = $("#detail"), sheet = $(".sheet", detail), hero = $("#hero");
   let current = null;
-  let closing = false;   // exit animation (or the closing view transition) in flight
+  let closing = false;   // exit animation in flight
   let menuOpen = false;  // status menu under the "Intéressé ?" tile (REM-18)
-  // `row` is the .gig the user clicked: with the View Transitions API its time morphs into the hero date while the
-  // sheet springs in; otherwise (no API, reduced motion, deep link) the CSS animations on .detail/.sheet play.
-  function openDetail(e, row) {
+  // Line icons of the action tiles and the status menu (the mockup's symbols): 24px grid, stroke 1.75, currentColor.
+  const ICONS = {
+    star: '<path d="M12 2.8l2.8 6 6.5.8-4.8 4.5 1.3 6.5L12 17.4l-5.8 3.2 1.3-6.5L2.7 9.6l6.5-.8z"/>',
+    check: '<path d="M4 12.5l5.2 5L20 6.5" stroke-width="2.2"/>',
+    cal: '<rect x="3.5" y="5" width="17" height="15.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/>',
+    wa: '<path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.3c0 3.7 3 6.7 6.7 6.7l1-1.7-2.1-1-1 .9a5.2 5.2 0 0 1-2.8-2.8l.9-1-1-2.1z" fill="currentColor" stroke="none"/>',
+    ticket: '<path d="M3.5 7.5h17v3.2a1.8 1.8 0 0 0 0 3.6v3.2h-17v-3.2a1.8 1.8 0 0 0 0-3.6z"/><path d="M9.5 7.5v10" stroke-dasharray="2 2.2"/>',
+    chevron: '<path d="M6 9.5l6 6 6-6" stroke-width="2"/>',
+    x: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
+  };
+  const icon = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
+  // Open: fill, unhide — the CSS animations play (veil fade, sheet slide); .moving keeps a compositor layer on the
+  // sheet only while it slides. Deep links and grid clicks take the same path.
+  function openDetail(e) {
     cancelExit(detail); closing = false;
-    const t = row && canVT() && detail.hidden ? $("time", row) : null;
-    detail.classList.toggle("vt", !!t);
-    if (!t) { fillDetail(e); return; }
-    t.style.viewTransitionName = "gig-date";   // old state: the row's time; new state: the hero date (names must not coexist)
-    const vt = document.startViewTransition(() => { t.style.viewTransitionName = ""; fillDetail(e); $(".hero-text .when").style.viewTransitionName = "gig-date"; });
-    const done = () => { const w = $(".hero-text .when"); if (w) w.style.viewTransitionName = ""; };
-    vt.finished.then(done, done);   // finished rejects when the transition is skipped
+    const fresh = detail.hidden;
+    fillDetail(e);
+    if (fresh && motionOK()) exitThen(sheet, "moving", 320, () => {});
   }
   function fillDetail(e) {
     current = e;
     detail.hidden = false;
     history.replaceState(null, "", "#e=" + e.id);
     document.body.style.overflow = "hidden";
-    const list = $("#list");   // recede around the middle of the viewport, so a long page doesn't slide
-    list.style.transformOrigin = `50% ${Math.round(scrollY - list.offsetTop + innerHeight / 2)}px`;
-    list.classList.add("receded");
     sheet.scrollTop = 0; hero.style.transform = ""; menuOpen = false;
     hero.style.backgroundImage = e.image ? `url("${e.image}")` : "";
     const [head, ...sup] = lineup(e);
@@ -659,14 +661,22 @@
           <button id="statusbtn" class="tile" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="statusmenu"></button>
           <div class="statusmenu" id="statusmenu" role="menu" aria-label="Mon statut" hidden></div>
         </div>
-        <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Ajouter à Google Agenda">Agenda</a>
-        <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Partager sur WhatsApp">WhatsApp</a>
+        <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Ajouter à Google Agenda">${icon("cal")}<span class="lbl">Agenda</span></a>
+        <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Partager sur WhatsApp">${icon("wa")}<span class="lbl">WhatsApp</span></a>
       </div>
       <div class="venue"><b>${esc(e.venue)}</b>${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
       ${meta ? `<div class="muted meta">${meta}</div>` : ""}
       ${blurbHtml(e)}
+      ${artists.length > 1 ? `<div class="listen"><h3>Écouter</h3><div class="artist-pick" role="group" aria-label="Artiste">${artists.map((a, i) =>
+        `<button type="button" class="${i ? "" : "on"}" aria-pressed="${!i}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}
       <div id="artist"></div>`;
     renderStatus();
+    // Multi-artist show: the pills switch the player (cross-fade), the active one is filled.
+    $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
+      if (b.classList.contains("on")) return;
+      $$(".artist-pick button", detail).forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      swapArtist(artists[Number(b.dataset.i)], e, artists);
+    });
     const more = $(".blurb [data-more]", detail);
     if (more) more.onclick = () => {   // "lire la suite" / "réduire" swaps the text in place
       const open = more.textContent !== "lire la suite";
@@ -679,11 +689,11 @@
   function ticketTile(e) {
     const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
     const price = e.free ? "Gratuit" : shortPrice(e.price);
-    if (e.cancelled) return { html: '<button class="tile off" type="button" disabled>Annulé</button>' };
-    if (e.sold_out) return { html: '<button class="tile off" type="button" disabled>Complet</button>' };
-    if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Billets ↗</small>` : "Billets ↗"}</a>` };
-    if (page) return { html: `<a class="tile" href="${esc(page)}" target="_blank" rel="noopener" title="${esc(page)}">Voir sur<small>${esc(hostOf(page))} ↗</small></a>` };
-    return { html: `<span class="tile off" aria-disabled="true">${price ? esc(price) : "Billets"}</span>` };
+    if (e.cancelled) return { html: '<button class="tile off" type="button" disabled><b>Annulé</b><small>Billets</small></button>' };
+    if (e.sold_out) return { html: '<button class="tile off" type="button" disabled><b>Complet</b><small>Billets</small></button>' };
+    if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Billets ↗</small>` : `${icon("ticket")}<span class="lbl">Billets ↗</span>`}</a>` };
+    if (page) return { html: `<a class="tile" href="${esc(page)}" target="_blank" rel="noopener" title="${esc(page)}"><span class="lbl">Voir sur</span><small>${esc(hostOf(page))} ↗</small></a>` };
+    return { html: `<span class="tile off" aria-disabled="true">${price ? `<b>${esc(price)}</b><small>Billets</small>` : `${icon("ticket")}<span class="lbl">Billets</span>`}</span>` };
   }
   // ---- status tile + menu (REM-18): "Intéressé ? ▾" opens a small menu; once set, the tile shows the status and the
   // menu gains "Retirer". One menu at a time, closed on outside click / Escape (before the sheet's Escape).
@@ -692,10 +702,13 @@
     const s = getStatus(current.id);
     b.classList.toggle("on", !!s);
     b.setAttribute("aria-expanded", String(menuOpen));
-    b.innerHTML = s ? `<span class="star">${STATUS[s].icon}</span> ${STATUS[s].label}` : 'Intéressé ?<span class="caret" aria-hidden="true">▾</span>';
+    // Rewrite the tile only when its content changes: the click that opens the menu is still bubbling, and replacing
+    // the icon/label would detach its target, which the document's outside-click handler would then read as "outside".
+    const html = `${icon(s ? STATUS[s].svg : "star")}<span class="lbl">${s ? STATUS[s].label : "Intéressé ?"}${icon("chevron", "chev")}</span>`;
+    if (b._html !== html) { b.innerHTML = html; b._html = html; }
     m.innerHTML = Object.entries(STATUS).map(([k, v]) =>
-      `<button type="button" role="menuitemradio" aria-checked="${s === k}" data-status="${k}"><span class="star">${v.icon}</span>${v.label}</button>`).join("") +
-      (s ? '<button type="button" role="menuitem" class="rm" data-status="">Retirer</button>' : "");
+      `<button type="button" role="menuitemradio" aria-checked="${s === k}" data-status="${k}">${icon(v.svg)}${v.label}</button>`).join("") +
+      (s ? `<button type="button" role="menuitem" class="rm" data-status="">${icon("x")}Retirer</button>` : "");
     if (menuOpen) { cancelExit(m); m.hidden = false; }
     else if (!m.hidden && !m._exit) exitThen(m, "out", 120, () => { m.hidden = true; });
   }
@@ -745,20 +758,15 @@
     replay(box, "swap");
     setTimeout(() => loadArtist(name, e, artists), 110);
   }
-  // Closing reverses the opening motion; #detail is hidden once it ends. The state (current, hash, body scroll)
-  // is reset synchronously, so a second call or a click during the exit is a no-op.
+  // Closing reverses the opening motion (veil fades out, sheet slides back); #detail is hidden once it ends. The
+  // state (current, hash, body scroll) is reset synchronously, so a second call or a click during the exit is a no-op.
   function closeDetail() {
     if (detail.hidden || closing) return;
-    const e = current; current = null; closing = true; menuOpen = false;
+    current = null; closing = true; menuOpen = false;
     document.body.style.overflow = ""; history.replaceState(null, "", location.pathname);
-    $("#list").classList.remove("receded");
     const hide = () => { closing = false; if (current) return; detail.hidden = true; hero.style.transform = ""; };   // unless reopened meanwhile
-    const row = e && detail.classList.contains("vt") && canVT() ? $(`.gig[data-id="${e.id}"]`) : null;
-    if (!row) { detail.classList.remove("vt"); exitThen(detail, "closing", 300, hide); return; }
-    const t = $("time", row), w = $(".hero-text .when");   // old state: the hero date; new state: the row's time
-    w.style.viewTransitionName = "gig-date";
-    const done = () => { t.style.viewTransitionName = ""; };
-    document.startViewTransition(() => { hide(); w.style.viewTransitionName = ""; t.style.viewTransitionName = "gig-date"; }).finished.then(done, done);
+    if (motionOK()) exitThen(sheet, "moving", 200, () => {});
+    exitThen(detail, "closing", 200, hide);
   }
   // Hero parallax: the picture scrolls at a third of the sheet's speed and the body slides over it.
   let heroRaf = 0;
@@ -797,8 +805,8 @@
     if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
     return "";
   }
-  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Écouter <act>" + player · the other
-  // acts as text buttons (swap the player) · "Dans le même esprit" (Deezer related, names only) · search links.
+  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Écouter <act>" + player (with several
+  // acts the heading and the pills sit above, in .listen) · "Dans le même esprit" (Deezer related, names only) · search links.
   // A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed meanwhile) is dropped.
   const cache = {};
   let artistShown = null;
@@ -815,11 +823,9 @@
     const q = encodeURIComponent(name);
     const p = playersOf(e, name);
     const player = playerHtml(p, dz);
-    const others = artists.filter(a => a !== name);
     box.innerHTML = `
       ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : ""}
-      ${player ? `<h3>Écouter ${esc(name)}</h3>${player}` : ""}
-      ${others.length ? `<div class="acts muted">Écouter aussi : ${others.map(a => `<button type="button" class="link" data-act="${esc(a)}">${esc(a)}</button>`).join(" · ")}</div>` : ""}
+      ${player ? `${artists.length > 1 ? "" : `<h3>Écouter ${esc(name)}</h3>`}${player}` : ""}
       <div class="esprit muted" id="esprit"></div>
       <div class="links">
         <a href="${p.bandcamp ? esc(p.bandcamp.url) : `https://bandcamp.com/search?q=${q}`}" target="_blank" rel="noopener">Bandcamp</a>
@@ -827,7 +833,6 @@
         <a href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">YouTube</a>
         ${dz && safeUrl(dz.link) ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
       </div>`;
-    $$(".acts [data-act]", box).forEach(b => b.onclick = () => swapArtist(b.dataset.act, e, artists));
     if (dz) {
       const rel = (await deezerRelated(dz.id).catch(() => [])).filter(a => a && a.name).slice(0, 6);
       if (rel.length && !stale()) {
@@ -938,7 +943,7 @@
     const sub = ev.target.closest(".tag.sub");
     if (sub) { toggleStyle(sub.dataset.sub); return; }
     const row = ev.target.closest(".gig"); if (!row) return;
-    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e, row);
+    const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
   };
   $("#close").onclick = closeDetail;
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
