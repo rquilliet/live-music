@@ -1,0 +1,58 @@
+# Daily scrape: refresh web/events.json and the caches, commit them to main, redeploy the site.
+# Secrets (Settings → Secrets and variables → Actions):
+#   ANTHROPIC_API_KEY       genre tagging, sub-genres, event-page summaries, LLM venues (optional but recommended)
+#   SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET   Spotify player ids (optional)
+name: Daily scrape
+
+on:
+  schedule:
+    - cron: "30 4 * * *"   # 06:30 Paris in summer, 05:30 in winter
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Scrape
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+        # scrape.py exits 1 when a source fails; the programme is still written, so publish it anyway.
+        run: python scrape.py || echo "::warning::some sources failed (see log above)"
+      - name: Commit data
+        run: |
+          git config user.name "live-music bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add web/events.json data/*.json
+          if git diff --cached --quiet; then echo "no data change"; else
+            git commit -m "Data: daily scrape $(date -u +%F)"
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: deployment
+        uses: actions/deploy-pages@v4
