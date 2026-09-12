@@ -1,6 +1,6 @@
 {
-"generated_at": "2026-09-11T09:14:27",
-"today": "2026-09-11",
+"generated_at": "2026-09-12T08:59:07",
+"today": "2026-09-12",
 "new_window_days": 7,
 "tags": [
 "rock",
@@ -31,13 +31,13 @@
 "Alhambra",
 "Atelier BASFROI",
 "Badaboum",
-"Base 217 du Plessis-Pâté",
 "Bateau El Alamein",
 "Bibliothèque André Malraux",
 "Bibliothèque Buffon",
 "Bibliothèque Jacqueline de Romilly",
 "Bibliothèque Louise Michel",
 "Bibliothèque Rainer Maria Rilke",
+"Bibliothèque Robert Sabatier",
 "Bibliothèque des Batignolles",
 "Bibliothèque musicale Lagrange-Fleuret",
 "Cabaret Sauvage",
@@ -56,6 +56,7 @@
 "Communale Saint-Ouen",
 "Conservatoire Municipal Claude Debussy - site Courcelles",
 "Conservatoire Municipal Darius Milhaud",
+"Conservatoire Municipal Erik Satie",
 "Conservatoire Municipal Frédéric Chopin",
 "Conservatoire Municipal Jean-Philippe Rameau",
 "Conservatoire Municipal Nadia et Lili Boulanger",
@@ -127,6 +128,7 @@
 "MPAA/Saint-Germain",
 "Mairie de Paris Centre",
 "Mairie du 10e arrondissement",
+"Mairie du 7e arrondissement",
 "Mairie du 8e arrondissement",
 "Maison Le Kinff",
 "Marché Réunion",
@@ -145,6 +147,7 @@
 "Oratoire du Louvre",
 "Palais de la Porte Dorée",
 "Pan Piper Paris",
+"Pavillon Carré de Baudouin",
 "Peniche Marcounet",
 "Peniche anako",
 "Petit Bain",
@@ -192,7 +195,7 @@
 {
 "venue": "Paris open data (Que faire à Paris ?)",
 "ok": true,
-"count": 1004
+"count": 1012
 },
 {
 "venue": "Le Bataclan",
@@ -207,7 +210,7 @@
 {
 "venue": "La Boule Noire",
 "ok": true,
-"count": 89
+"count": 88
 },
 {
 "venue": "Le Trianon",
@@ -217,27 +220,27 @@
 {
 "venue": "Élysée Montmartre",
 "ok": true,
-"count": 42
+"count": 41
 },
 {
 "venue": "La Maroquinerie",
 "ok": true,
-"count": 89
+"count": 88
 },
 {
 "venue": "Petit Bain",
 "ok": true,
-"count": 57
+"count": 58
 },
 {
 "venue": "Point Éphémère",
 "ok": true,
-"count": 64
+"count": 63
 },
 {
 "venue": "Café de la Danse",
 "ok": true,
-"count": 16
+"count": 17
 },
 {
 "venue": "Le Hasard Ludique",
@@ -247,7 +250,7 @@
 {
 "venue": "New Morning",
 "ok": true,
-"count": 70
+"count": 69
 },
 {
 "venue": "Instants Chavirés",
@@ -257,12 +260,12 @@
 {
 "venue": "Supersonic",
 "ok": true,
-"count": 86
+"count": 83
 },
 {
 "venue": "Sunset / Sunside",
 "ok": true,
-"count": 168
+"count": 167
 },
 {
 "venue": "Accor Arena",
@@ -472,1007 +475,6 @@
 ],
 "events": [
 {
-"title": "Palmarès les Trophées du Sunside 🏆",
-"date": "2026-09-11",
-"venue": "Sunset / Sunside",
-"venue_slug": "sunset-sunside",
-"source": "tribe",
-"time": "00:00",
-"url": "https://www.sunset-sunside.com/concert/palmares-les-trophees-du-sunside-%f0%9f%8f%86/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Coming Soon",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Palmarès des Trophées du Sunside 2026 Catégorie du meilleur groupe 🥇1er groupe : Jean Saint Loubert Trio 🥈2ème groupe : Bettina Martinez Trio Catégorie du/de la meilleur.e soliste : 🥇1er prix de soliste : Bettina Martinez 🥈2ème prix de soliste : Tom Fillatreau Catégorie de la meilleure composition : 🥇1er prix : JB Rannou Quartet 🥈2ème prix : Sofiane François-Elie Quintet Mention spéciale du jury ✨",
-"summary": null,
-"image": "https://www.sunset-sunside.com/app/uploads/2025/11/Capture-decran-2026-09-04-a-10.22.32.webp",
-"address": "60 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "Palmarès les Trophées du Sunside 🏆",
-"support": [],
-"players": {},
-"lat": 48.8595,
-"lon": 2.3474,
-"is_music": true,
-"id": "62dc3e3e23c7",
-"first_seen": "baseline"
-},
-{
-"title": "Master classes, ateliers, rencontres, restitutions et conférences",
-"date": "2026-09-11",
-"venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
-"venue_slug": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
-"source": "opendata",
-"time": "14:00",
-"url": "https://www.paris.fr/evenements/master-classes-ateliers-rencontres-restitutions-et-conferences-92346",
-"ticket_url": "https://www.paris.fr/crr",
-"price": "Entrée libre dans la limite des places disponibles",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Assistez à ces moments de rencontres avec des personnalités artistiques invité·es dans les domaines de la musique, de la danse et du théâtre",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2025/09/10/huge-99b963b872c4075473fe4238e4616742.jpg",
-"address": "14, rue de Madrid, 75008, Paris",
-"area": "8e",
-"headliner": "Master classes",
-"support": [],
-"players": {},
-"lat": 48.8785160001733,
-"lon": 2.32069904092731,
-"is_music": true,
-"id": "3bba134742ae",
-"first_seen": "baseline"
-},
-{
-"title": "La terrasse éphémère Les Lionnes",
-"date": "2026-09-11",
-"venue": "Palais de la Porte Dorée",
-"venue_slug": "palais-de-la-porte-doree",
-"source": "opendata",
-"time": "17:00",
-"url": "https://www.paris.fr/evenements/la-terrasse-ephemere-les-lionnes-113141",
-"ticket_url": "https://www.palais-portedoree.fr/informations-pratiques/la-terrasse-ephemere-les-lionnes",
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Atelier, Loisirs",
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Avec les beaux jours, une toute nouvelle terrasse éphémère imaginée par La Bellevilloise s’installe sur le parvis du Palais de la Porte Dorée.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/06/04/huge-53a1393307083eb2393aa3a855f7d34d.jpg",
-"address": "293 avenue Daumesnil, 75012, Paris",
-"area": "12e",
-"headliner": "La terrasse éphémère Les Lionnes",
-"support": [],
-"players": {},
-"lat": 48.856578,
-"lon": 2.351828,
-"is_music": false,
-"id": "098a94be6477",
-"first_seen": "baseline"
-},
-{
-"title": "Soirée déconnexion au Musée Bourdelle",
-"date": "2026-09-11",
-"venue": "Musée Bourdelle",
-"venue_slug": "musee-bourdelle",
-"source": "opendata",
-"time": "18:00",
-"url": "https://www.paris.fr/evenements/soiree-deconnexion-au-musee-bourdelle-123187",
-"ticket_url": "https://www.bourdelle.paris.fr/visiter/preparer-sa-visite/agenda/soiree-deconnexion-11-septembre-2026-de-18h-21h",
-"price": "De 5 à 7 euros.",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Atelier, Expo",
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Vous n’avez pas envie de replonger dans le rythme effréné de la rentrée ? Profitez encore un peu de la douceur estivale en vous offrant une parenthèse hors du temps au musée Bourdelle.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/09/04/huge-afa3bcaebeb5d8931ceac4c908aae0cd.jpg",
-"address": "18, rue Antoine Bourdelle, 75015, Paris",
-"area": "15e",
-"headliner": "Soirée déconnexion au Musée Bourdelle",
-"support": [],
-"players": {},
-"lat": 48.842975,
-"lon": 2.318588,
-"is_music": false,
-"id": "f9e6dbc6cc65",
-"first_seen": "baseline"
-},
-{
-"title": "Soirée d’ouverture de saison de la Maison des Métallos",
-"date": "2026-09-11",
-"venue": "La Maison des Métallos",
-"venue_slug": "la-maison-des-metallos",
-"source": "opendata",
-"time": "18:30",
-"url": "https://www.paris.fr/evenements/soiree-d-ouverture-de-saison-de-la-maison-des-metallos-114113",
-"ticket_url": "https://maisondesmetallos-billetterie.mapado.com/event/707298-soiree-douverture-inauguration-de-la-saison-2026-27",
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Nuit, Théâtre",
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "La Maison des Métallos vous ouvre grand ses portes pour démarrer ensemble la saison 2026-2027 et vous présenter sa nouvelle programmation : un moment joyeux, festif et collectif à son image !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/06/16/huge-4ac8a36b96c78a036b00e9c503223536.jpg",
-"address": "94, rue Jean-Pierre Timbaud, 75011, Paris",
-"area": "11e",
-"headliner": "Soirée d’ouverture de saison de la Maison des Métallos",
-"support": [],
-"players": {},
-"lat": 48.867741,
-"lon": 2.377855,
-"is_music": false,
-"id": "8f399500274c",
-"first_seen": "baseline"
-},
-{
-"title": "#RDV avec… Benjamin Sanz Trio",
-"date": "2026-09-11",
-"venue": "Le Baiser Salé",
-"venue_slug": "le-baiser-sale",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/rdv-avec-benjamin-sanz-trio-117545",
-"ticket_url": "https://www.billetweb.fr/rdvavec-rdvavec-benjamin-sanz-trio-benjamin-sanz-rob-clearfield-yoni-zelnik",
-"price": "De 23 à 33 euros.",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Batteur, compositeur et infatigable passeur d'idées.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/08/11/huge-81043dd6071f15ef198deee430f1b7ed.jpeg",
-"address": "58 Rue des Lombards, 75001, Paris",
-"area": "Châtelet",
-"headliner": "#RDV avec… Benjamin Sanz Trio",
-"support": [],
-"players": {},
-"lat": 48.8598354,
-"lon": 2.3478728,
-"is_music": true,
-"id": "a0a18a881c0e",
-"first_seen": "baseline"
-},
-{
-"title": "Concrete Vehicles • DIIVAGUE • Longue Ride",
-"date": "2026-09-11",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "tribe",
-"time": "19:00",
-"url": "https://supersonic-club.fr/event/concrete-vehicles-lobsterbomb-longue-ride/",
-"ticket_url": null,
-"price": "Gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"indie"
-],
-"genre_source": "venue",
-"subgenres": [],
-"description": "Cette soirée plaira aux fans de… Deadletter, Fat Dog & Gurriers",
-"summary": null,
-"image": "https://supersonic-club.fr/wp-content/uploads/2026/07/namethumb_w600px_img_event_b9eba84f-944c-48aa-be44-774cb89954da-1.jpg",
-"address": "9 rue Biscornet, 75012 Paris",
-"area": "Bastille",
-"headliner": "Concrete Vehicles",
-"support": [
-"DIIVAGUE",
-"Longue Ride"
-],
-"players": {
-"Concrete Vehicles": {
-"bandcamp": {
-"url": "https://concretevehicles.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2086590265/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-}
-},
-"DIIVAGUE": {
-"bandcamp": {
-"url": "https://diivague.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=286095473/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-}
-},
-"Longue Ride": {
-"bandcamp": {
-"url": "https://longue-ride.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3843072999/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-}
-}
-},
-"lat": 48.8514,
-"lon": 2.3706,
-"is_music": true,
-"id": "cd9e13ef651e",
-"first_seen": "2026-09-08"
-},
-{
-"title": "BenArt invite Céline Bonacina, Jazz fusion au 38Riv Jazz Club",
-"date": "2026-09-11",
-"venue": "38Riv Jazz Club",
-"venue_slug": "38riv-jazz-club",
-"source": "opendata",
-"time": "19:30",
-"url": "https://www.paris.fr/evenements/benart-invite-celine-bonacina-jazz-fusion-au-38riv-jazz-club-116236",
-"ticket_url": "https://38riv.com/concerts/benart-invite-celine-bonacina",
-"price": "Tarif en ligne : 26€ à 29€ Tarif sur place : 29€ à 32€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Jazz fusion, groove — Benoit Artuphel, bassiste producteur, s'unit à la talentueuse Céline Bonacina pour une soirée d'improvisations vibrantes, mêlant jazz et influences du monde.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/07/28/huge-b43d7b1570526f60cda6b62782caca09.jpg",
-"address": "38, rue de Rivoli, 75004, Paris",
-"area": "4e",
-"headliner": "BenArt",
-"support": [
-"Céline Bonacina",
-"Jazz fusion au 38Riv Jazz Club"
-],
-"players": {},
-"lat": 48.856427003097,
-"lon": 2.3564829781449,
-"is_music": true,
-"id": "e223244d127f",
-"first_seen": "baseline"
-},
-{
-"title": "Zoot Fest #4 / Le collectif fête ses 10 ans !",
-"date": "2026-09-11",
-"venue": "JASS CLUB PARIS",
-"venue_slug": "jass-club-paris",
-"source": "opendata",
-"time": "19:30",
-"url": "https://www.paris.fr/evenements/zoot-fest-4-le-collectif-fete-ses-10-ans-116901",
-"ticket_url": "https://billetterie.jassclub.paris/agenda/624",
-"price": "Prévente : 10 EUR Tarif réduit : 15 EUR Tarif plein : 19 EUR",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Pour cette 4ème édition du Zoot Fest, le collectif vous donne rendez-vous dans les clubs emblématiques de Paris : 10 soirées exceptionnelles, avec une ouverture au JASS Club !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/07/23/huge-b446f4bd3768a65168bdd342c0649754.jpeg",
-"address": "141 Rue de Tolbiac, 75013, Paris",
-"area": "13e",
-"headliner": "Zoot Fest #4",
-"support": [
-"Le collectif fête ses 10 ans !"
-],
-"players": {},
-"lat": 48.8259553,
-"lon": 2.3592185,
-"is_music": true,
-"id": "7c644992f65c",
-"first_seen": "baseline"
-},
-{
-"title": "OLGA MYKO",
-"date": "2026-09-11",
-"venue": "La Boule Noire",
-"venue_slug": "la-boule-noire",
-"source": "boulenoire",
-"time": "19:30",
-"url": "https://laboule-noire.fr/olga-myko/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/OM-1080x1080-1-1024x1024.jpg",
-"address": "120 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "OLGA MYKO",
-"support": [],
-"players": {},
-"lat": 48.8823,
-"lon": 2.34,
-"is_music": true,
-"id": "7de01437125c",
-"first_seen": "baseline"
-},
-{
-"title": "RYON",
-"date": "2026-09-11",
-"venue": "La Maroquinerie",
-"venue_slug": "la-maroquinerie",
-"source": "maroquinerie",
-"time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2255/ryon/?of=0",
-"ticket_url": "https://shotgun.live/fr/events/ryon-paris",
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://www.lamaroquinerie.fr/files/event_thumbnail_2255.jpg",
-"address": "23 rue Boyer, 75020 Paris",
-"area": "Ménilmontant",
-"headliner": "RYON",
-"support": [],
-"players": {},
-"lat": 48.8686,
-"lon": 2.3906,
-"is_music": true,
-"id": "ec2861fd555a",
-"first_seen": "baseline"
-},
-{
-"title": "Chloé Cassandre & Primetime Jazz",
-"date": "2026-09-11",
-"venue": "Sunset / Sunside",
-"venue_slug": "sunset-sunside",
-"source": "tribe",
-"time": "19:30",
-"url": "https://www.sunset-sunside.com/concert/chloe-cassandre-primetime-jazz/",
-"ticket_url": null,
-"price": "15,00€ à 25,00€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Coming Soon",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Chloé Cassandre et Primetime Jazz Trio rendent hommage à la chanson française avec un regard frais, contemporain et hybride. Leur nouvel album « rêves fous » rassemble des arrangements originaux de grands classiques de la chanson française dans un subtil mélange de swing, musique latine et soul. On y retrouve des invités de marques tels que Julien Alour et Thomas Savy. Chloé Cassandre signe des pa",
-"summary": null,
-"image": "https://www.sunset-sunside.com/app/uploads/2026/07/chloe-.webp",
-"address": "60 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "Chloé Cassandre & Primetime Jazz",
-"support": [],
-"players": {},
-"lat": 48.8595,
-"lon": 2.3474,
-"is_music": true,
-"id": "50825a254022",
-"first_seen": "baseline"
-},
-{
-"title": "Le Pokpok Show - Goes Live !",
-"date": "2026-09-11",
-"venue": "Point Éphémère",
-"venue_slug": "point-ephemere",
-"source": "pointephemere",
-"time": "20:00",
-"url": "https://www.pointephemere.org/event/le-pokpok-show---goes-live-",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://images.prismic.io/pointf/6In-lzgtUUgvxGSD_11.09-POKPOKSHOWcopie.jpg?auto=format&w=200&q=25&fm=webp",
-"address": "200 quai de Valmy, 75010 Paris",
-"area": "Canal Saint-Martin",
-"headliner": "Le Pokpok Show",
-"support": [
-"Goes Live !"
-],
-"players": {},
-"lat": 48.8797,
-"lon": 2.3693,
-"is_music": true,
-"id": "eff2fa32d81f",
-"first_seen": "baseline"
-},
-{
-"title": "Bleech 9:3 en concert (côté Records)",
-"date": "2026-09-11",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "tribe",
-"time": "20:00",
-"url": "https://supersonic-club.fr/event/bleech-93-en-concert-cote-records/",
-"ticket_url": null,
-"price": "21.50€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"indie"
-],
-"genre_source": "venue",
-"subgenres": [],
-"description": "Retrouvez Bleech 9:3 en concert au Supersonic Records le 11 septembre prochain !",
-"summary": null,
-"image": "https://supersonic-club.fr/wp-content/uploads/2026/04/namethumb_w600px_img_event_c2383214-802b-4b87-a842-e5c6d9921ae7.jpg",
-"address": "9 rue Biscornet, 75012 Paris",
-"area": "Bastille",
-"headliner": "Bleech 9:3 en concert (côté Records)",
-"support": [],
-"players": {},
-"lat": 48.8514,
-"lon": 2.3706,
-"is_music": true,
-"id": "4d638fddf749",
-"first_seen": "baseline"
-},
-{
-"title": "Tio Manuel",
-"date": "2026-09-11",
-"venue": "La Dame de Canton",
-"venue_slug": "la-dame-de-canton",
-"source": "opendata",
-"time": "20:30",
-"url": "https://www.paris.fr/evenements/tio-manuel-114576",
-"ticket_url": "https://www.billetweb.fr/tio-manuel1",
-"price": "Sur place : 14 EUR Prévente : 12 EUR",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"rock",
-"blues"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "On croise Tio Manuel sur les scènes de festivals blues, rock ou roots, la Gretsch en bandoulière et le sourire cabossé.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/06/22/huge-86c226722fbfeeda7bb5adec14c18a06.jpeg",
-"address": "Quai François Mauriac, 75013, Paris",
-"area": "13e",
-"headliner": "Tio Manuel",
-"support": [],
-"players": {
-"Tio Manuel": {
-"bandcamp": {
-"url": "https://tiomanuel.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1739500076/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-}
-}
-},
-"lat": 48.8337007097739,
-"lon": 2.37785419904316,
-"is_music": true,
-"id": "6421fa9badad",
-"first_seen": "baseline"
-},
-{
-"title": "Adrien Moignard Quartet",
-"date": "2026-09-11",
-"venue": "Sunset / Sunside",
-"venue_slug": "sunset-sunside",
-"source": "tribe",
-"time": "20:30",
-"url": "https://www.sunset-sunside.com/concert/adrien-moignard-quartet-2/",
-"ticket_url": null,
-"price": "22,00€ à 32,00€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Coming Soon",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Adrien Moignard, figure incontournable de la scène jazz actuelle, présente son nouveau projet : Adrien Moignard Gipsy 4tet. Il a accompagné des artistes majeurs comme Didier Lockwood, et partage aujourd’hui la scène avec Richard Galliano et la chanteuse Cyrille Aimée. Il est suivi par un public fidèle et enthousiaste, séduit par son jeu virtuose et sa modernité. Entouré de Benji Winterstein et Jul",
-"summary": null,
-"image": "https://www.sunset-sunside.com/app/uploads/2025/11/Adrien-Moignard.webp",
-"address": "60 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "Adrien Moignard Quartet",
-"support": [],
-"players": {},
-"lat": 48.8595,
-"lon": 2.3474,
-"is_music": true,
-"id": "553114409176",
-"first_seen": "baseline"
-},
-{
-"title": "Les Grands Airs d'Opéra",
-"date": "2026-09-11",
-"venue": "Eglise Saint Sulpice",
-"venue_slug": "eglise-saint-sulpice",
-"source": "opendata",
-"time": "20:45",
-"url": "https://www.paris.fr/evenements/les-grands-airs-d-opera-88793",
-"ticket_url": null,
-"price": "De 20 à 60 euros.",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Spectacle musical",
-"genres": [
-"classical"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Ne manquez pas l'incroyable performance de l'orchestre Hélios !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2025/06/30/huge-1c88201bfc76a5d703a80a79ea4f5a58.jpg",
-"address": "Place Saint-Sulpice, 75006, Paris",
-"area": "6e",
-"headliner": "Les Grands Airs d'Opéra",
-"support": [],
-"players": {},
-"lat": 48.8512377,
-"lon": 2.3332143,
-"is_music": true,
-"id": "c9068717466b",
-"first_seen": "baseline"
-},
-{
-"title": "Laurent Maur 4tet",
-"date": "2026-09-11",
-"venue": "Le Melville",
-"venue_slug": "le-melville",
-"source": "opendata",
-"time": "21:00",
-"url": "https://www.paris.fr/evenements/laurent-maur-4tet-114875",
-"ticket_url": "https://lemelville.fr/?p=6017",
-"price": "Tarif plein : 10 EUR",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Laurent Maur, harmoniciste au parcours atypique, brille après des années de métro. Son nouvel album mixe jazz français et international, soutenu par un trio explosif. Un régal pour tous !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/06/25/huge-8a9f14981e55076c1eb79a5d623fbccf.png",
-"address": "28 Rue Jean Mermoz, 75008, Paris",
-"area": "8e",
-"headliner": "Laurent Maur 4tet",
-"support": [],
-"players": {},
-"lat": 48.8713718,
-"lon": 2.3121803,
-"is_music": true,
-"id": "9160e60b8e57",
-"first_seen": "baseline"
-},
-{
-"title": "Etienne Guéreau Trio",
-"date": "2026-09-11",
-"venue": "Sunset / Sunside",
-"venue_slug": "sunset-sunside",
-"source": "tribe",
-"time": "21:30",
-"url": "https://www.sunset-sunside.com/concert/etienne-guereau-trio-10/",
-"ticket_url": null,
-"price": "20,00€ à 30,00€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Coming Soon, Pianissimo Vol XXI",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "« Il y a aussi, pour me plaire, ce constant échange entre la délicatesse et la détermination, entre les réminiscences et les explorations, dont Bill Evans, je crois, vous aurait félicité. Et puis vous savez faire rêver la musique, ce qui offre à d’autres le privilège de rêver d’elle. Votre monde ne se satisfait pas d’un seul univers. Surtout, j’entends que sa porte reste ouverte. Vous dites beauco",
-"summary": null,
-"image": "https://www.sunset-sunside.com/app/uploads/2026/05/Format-carre-27-1.webp",
-"address": "60 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "Etienne Guéreau Trio",
-"support": [],
-"players": {},
-"lat": 48.8595,
-"lon": 2.3474,
-"is_music": true,
-"id": "1b1fe55479e2",
-"first_seen": "baseline"
-},
-{
-"title": "JASS Session / Jam Jazz",
-"date": "2026-09-11",
-"venue": "JASS CLUB PARIS",
-"venue_slug": "jass-club-paris",
-"source": "opendata",
-"time": "22:30",
-"url": "https://www.paris.fr/evenements/jass-session-jam-jazz-118346",
-"ticket_url": "https://billetterie.jassclub.paris/agenda/626",
-"price": "Tarif : 5 EUR Musicien·nes : 0 EUR",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "À partir de 22h30 tous les vendredis soirs au club, RDV Jam session Jazz !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/09/01/huge-001b40f3e8b4dd3591b519036173d97e.jpeg",
-"address": "141 Rue de Tolbiac, 75013, Paris",
-"area": "13e",
-"headliner": "JASS Session",
-"support": [
-"Jam Jazz"
-],
-"players": {},
-"lat": 48.8259553,
-"lon": 2.3592185,
-"is_music": true,
-"id": "71ca848f7c0b",
-"first_seen": "baseline"
-},
-{
-"title": "Apollo « late » sessions, Groove & spirited jazz, late show et jam session au 38Riv Jazz Club",
-"date": "2026-09-11",
-"venue": "38Riv Jazz Club",
-"venue_slug": "38riv-jazz-club",
-"source": "opendata",
-"time": "23:00",
-"url": "https://www.paris.fr/evenements/copie-de-apollo-late-sessions-groove-spirited-jazz-late-show-et-jam-session-au-38riv-jazz-club-100507",
-"ticket_url": "https://38riv.com/concerts?search=apollo&category=80",
-"price": "20 euros.",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Inspiré par des artistes comme Yussef Dayes, Braxton Cook, Marcus Miller ou encore Kiefer, Apollo Sessions puise dans le jazz contemporain, le hip-hop et le funk pour créer une matière sonore expressive, transcendante, ancrée dans le présent.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2024/08/13/huge-1a24c18e4d449bdd13fd4efc95c6677b.jpeg",
-"address": "38, rue de rivoli, 75004, Paris",
-"area": "4e",
-"headliner": "Apollo « late » sessions",
-"support": [
-"Groove & spirited jazz"
-],
-"players": {},
-"lat": 48.856427003097,
-"lon": 2.3564829781449,
-"is_music": true,
-"id": "f15ea9f1dc18",
-"first_seen": "baseline"
-},
-{
-"title": "#JamVocale / OpenMic de Thalie Bernard",
-"date": "2026-09-11",
-"venue": "Le Baiser Salé",
-"venue_slug": "le-baiser-sale",
-"source": "opendata",
-"time": "23:00",
-"url": "https://www.paris.fr/evenements/jamvocale-openmic-de-thalie-bernard-117835",
-"ticket_url": null,
-"price": "gratuit sous condition",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"soul-rnb",
-"pop"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Le vendredi soir, le Baiser Salé passe en mode Pop & Soul !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/08/21/huge-8e3650c7e601787fb68fbb9d1dbf84db.jpeg",
-"address": "58 Rue des Lombards, 75001, Paris",
-"area": "Châtelet",
-"headliner": "#JamVocale",
-"support": [
-"OpenMic de Thalie Bernard"
-],
-"players": {},
-"lat": 48.8598354,
-"lon": 2.3478728,
-"is_music": true,
-"id": "61de5b817d6c",
-"first_seen": "baseline"
-},
-{
-"title": "Ultra Suave 3rd Anniversary",
-"date": "2026-09-11",
-"venue": "Point Éphémère",
-"venue_slug": "point-ephemere",
-"source": "pointephemere",
-"time": "23:00",
-"url": "https://www.pointephemere.org/event/ultra-suave-3rd-anniversary",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://images.prismic.io/pointf/iB4k8yzzr_5CcIgG_IMG_8322copie.png?auto=format&w=200&q=25&fm=webp",
-"address": "200 quai de Valmy, 75010 Paris",
-"area": "Canal Saint-Martin",
-"headliner": "Ultra Suave 3rd Anniversary",
-"support": [],
-"players": {},
-"lat": 48.8797,
-"lon": 2.3693,
-"is_music": true,
-"id": "fa465e0b5d65",
-"first_seen": "baseline"
-},
-{
-"title": "Where Is My Mind? / Nuit Rock 90’s",
-"date": "2026-09-11",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "tribe",
-"time": "23:00",
-"url": "https://supersonic-club.fr/event/where-is-my-mind-nuit-rock-90s-8/",
-"ticket_url": null,
-"price": "10€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Clubbing",
-"genres": [
-"electro"
-],
-"genre_source": "site",
-"subgenres": [],
-"description": "WELCOME TO SUPERSONIC Concerts gratuits, et nuits rock à Paris !",
-"summary": null,
-"image": "https://supersonic-club.fr/wp-content/uploads/2026/08/namethumb_w600px_img_event_1e3eff45-b78f-4cad-b665-aa4e3dd94996.jpg",
-"address": "9 rue Biscornet, 75012 Paris",
-"area": "Bastille",
-"headliner": "Where Is My Mind?",
-"support": [
-"Nuit Rock 90’s"
-],
-"players": {},
-"lat": 48.8514,
-"lon": 2.3706,
-"is_music": true,
-"id": "2e5e58037935",
-"first_seen": "baseline"
-},
-{
-"title": "La fête de l'Humanité",
-"date": "2026-09-11",
-"venue": "Base 217 du Plessis-Pâté",
-"venue_slug": "base-217-du-plessis-pate",
-"source": "opendata",
-"time": null,
-"url": "https://www.paris.fr/evenements/la-fete-de-l-humanite-35483",
-"ticket_url": null,
-"price": "payant",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Organisé par le journal du même nom, ce rendez-vous associe musique et politique, avec des conférences et prises de parole tout le long du week-end.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2023/04/18/huge-747617ccc1d8df1d72d5c4b0b41c2f40.jpg",
-"address": "Le Plessis-Pâte, 91000, Bretigny sur Orge",
-"area": "Bretigny sur Orge",
-"headliner": "La fête de l'Humanité",
-"support": [],
-"players": {},
-"lat": 48.5960000000001,
-"lon": 2.33200000000005,
-"is_music": true,
-"id": "caf8a7c45d7c",
-"first_seen": "baseline"
-},
-{
-"title": "Sonido Gallo Negro",
-"date": "2026-09-11",
-"venue": "Le Hasard Ludique",
-"venue_slug": "le-hasard-ludique",
-"source": "hasardludique",
-"time": null,
-"url": "https://www.lehasardludique.paris/concert/2026-05-19/sonido-gallo-negro",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "cumbia",
-"genres": [
-"latin"
-],
-"genre_source": "site",
-"subgenres": [
-"cumbia"
-],
-"description": null,
-"summary": null,
-"image": "https://s3.eu-central-1.amazonaws.com/lehasardludique/images/14842/SGN_._2024_._ALTA_.__daviddbarajas-13.jpg",
-"address": "128 avenue de Saint-Ouen, 75018 Paris",
-"area": "Porte de Saint-Ouen",
-"headliner": "Sonido Gallo Negro",
-"support": [],
-"players": {
-"Sonido Gallo Negro": {
-"bandcamp": {
-"url": "https://sonido-gallo-negro.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3890871436/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-}
-}
-},
-"lat": 48.8969,
-"lon": 2.3277,
-"is_music": true,
-"id": "70ac9d4e4d31",
-"first_seen": "baseline"
-},
-{
-"title": "A Stevie Wonder Celebration, Songs In The Key Of Life 50th Anniversary",
-"date": "2026-09-11",
-"venue": "New Morning",
-"venue_slug": "new-morning",
-"source": "newmorning",
-"time": null,
-"url": "https://www.newmorning.com/20260911-7789-a-stevie-wonder-celebration-songs-in-the-key-of-life-50th-anniversary.html",
-"ticket_url": null,
-"price": "21.00 €",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"soul-rnb"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "A Stevie Wonder Celebration, Songs In The Key Of Life 50th Anniversary : Pour démarrer cette rentrée en beauté, le New Morning met à l'honneur le répertoire légendaire de Stevie Wonder, tout dernier monstre sacré de la Soul Music et pilier de la musique populaire mondiale depuis plus de 60 ans !",
-"summary": null,
-"image": "http://www.newmorning.com/photos/evenements/formations/800/8497.jpg",
-"address": "7-9 rue des Petites Écuries, 75010 Paris",
-"area": "Château d'Eau",
-"headliner": "A Stevie Wonder Celebration",
-"support": [
-"Songs In The Key Of Life 50th Anniversary"
-],
-"players": {},
-"lat": 48.8731,
-"lon": 2.3533,
-"is_music": true,
-"id": "7b2f1f47c8f6",
-"first_seen": "baseline"
-},
-{
-"title": "La Coka Nostra",
-"date": "2026-09-11",
-"venue": "Petit Bain",
-"venue_slug": "petit-bain",
-"source": "petitbain",
-"time": null,
-"url": "https://petitbain.org/evenement/la-coka-nostra/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "concerts",
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://petitbain.org/wp-content/uploads/2026/06/la-coka-nostra-post-500x500.jpeg",
-"address": "7 port de la Gare, 75013 Paris",
-"area": "13e",
-"headliner": "La Coka Nostra",
-"support": [],
-"players": {
-"La Coka Nostra": {
-"bandcamp": {
-"url": "https://lacokanostra.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1960471706/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-}
-}
-},
-"lat": 48.8326,
-"lon": 2.3773,
-"is_music": true,
-"id": "8fc2b9c6a1a5",
-"first_seen": "baseline"
-},
-{
-"title": "Bain de Minuit :",
-"date": "2026-09-11",
-"venue": "Petit Bain",
-"venue_slug": "petit-bain",
-"source": "petitbain",
-"time": null,
-"url": "https://petitbain.org/evenement/bdm-raviolis/",
-"ticket_url": null,
-"price": null,
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "cantine, club, gratuit",
-"genres": [
-"electro"
-],
-"genre_source": "site",
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://petitbain.org/wp-content/uploads/2026/08/raviolis-portrait-500x500.png",
-"address": "7 port de la Gare, 75013 Paris",
-"area": "13e",
-"headliner": "Bain de Minuit",
-"support": [],
-"players": {},
-"lat": 48.8326,
-"lon": 2.3773,
-"is_music": true,
-"id": "c319a27631c3",
-"first_seen": "baseline"
-},
-{
 "title": "La terrasse éphémère Les Lionnes",
 "date": "2026-09-12",
 "venue": "Palais de la Porte Dorée",
@@ -1569,8 +571,8 @@
 "players": {
 "Velours": {
 "bandcamp": {
-"url": "https://veloursofficial.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2261122156/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2261122156/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://veloursofficial.bandcamp.com"
 }
 }
 },
@@ -1614,8 +616,8 @@
 "players": {
 "NSDOS": {
 "bandcamp": {
-"url": "https://nsdos-official.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3550621067/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3550621067/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://nsdos-official.bandcamp.com"
 }
 }
 },
@@ -1718,8 +720,8 @@
 "players": {
 "Clem Léa": {
 "bandcamp": {
-"url": "https://clemlea.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=2006223831/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=2006223831/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://clemlea.bandcamp.com"
 }
 }
 },
@@ -1827,8 +829,8 @@
 "players": {
 "Sullivan Coredo": {
 "bandcamp": {
-"url": "https://sullivancoredo.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=609832687/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=609832687/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://sullivancoredo.bandcamp.com"
 }
 }
 },
@@ -1979,8 +981,8 @@
 },
 "CATHY": {
 "bandcamp": {
-"url": "https://cathy1.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1851732943/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1851732943/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://cathy1.bandcamp.com"
 }
 }
 },
@@ -2075,7 +1077,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/03/Essosa-03-EP-118FOR-RETOUCH-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/03/Essosa-03-EP-118FOR-RETOUCH-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ESSOSA",
@@ -2094,7 +1096,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2278/ecca-vandal-complet/?of=1",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2278/ecca-vandal-complet/?of=0",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -2114,8 +1116,8 @@
 "players": {
 "ECCA VANDAL": {
 "bandcamp": {
-"url": "https://eccavandal.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=833837195/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=833837195/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://eccavandal.bandcamp.com"
 }
 }
 },
@@ -2154,8 +1156,8 @@
 "players": {
 "Nik West": {
 "bandcamp": {
-"url": "https://nikwest.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4135312698/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4135312698/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://nikwest.bandcamp.com"
 }
 }
 },
@@ -2256,8 +1258,8 @@
 "players": {
 "Josh Smith": {
 "bandcamp": {
-"url": "https://joshsmithguitar.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2343928586/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2343928586/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://joshsmithguitar.bandcamp.com"
 }
 }
 },
@@ -2299,8 +1301,8 @@
 "players": {
 "Marina Gomes": {
 "bandcamp": {
-"url": "https://marinagomes.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4264236172/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4264236172/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://marinagomes.bandcamp.com"
 }
 }
 },
@@ -2350,9 +1352,9 @@
 "venue_slug": "eglise-saint-sulpice",
 "source": "opendata",
 "time": "20:45",
-"url": "https://www.paris.fr/evenements/les-4-saisons-de-vivaldi-ave-maria-et-celebres-concertos-118341",
+"url": "https://www.paris.fr/evenements/les-4-saisons-de-vivaldi-ave-maria-et-celebres-concertos-99370",
 "ticket_url": "https://www.orchestrehelios.com/concerts",
-"price": "réduction (étudiants, chômeurs) : 20 EUR tarif normal : 30 E",
+"price": "De 0 à 60 euros.",
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -2364,7 +1366,7 @@
 "subgenres": [],
 "description": "Retrouvez la magie de la musique classique à travers ce concert réunissant les œuvres les plus célèbres du répertoire.",
 "summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/09/01/huge-908e811b9238d12507f67c77d8fad099.jpeg",
+"image": "https://cdn.paris.fr/qfapv4/2025/10/15/huge-f259bbdd201aaebbafaf802d3441d0e5.jpg",
 "address": "Place Saint-Sulpice, 75006, Paris",
 "area": "6e",
 "headliner": "Les 4 Saisons de Vivaldi",
@@ -2678,6 +1680,46 @@
 "first_seen": "baseline"
 },
 {
+"title": "EUROSTAR",
+"date": "2026-09-12",
+"venue": "Petit Bain",
+"venue_slug": "petit-bain",
+"source": "petitbain",
+"time": null,
+"url": "https://petitbain.org/evenement/eurostar/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "club",
+"genres": [
+"electro"
+],
+"genre_source": "site",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://petitbain.org/wp-content/uploads/2026/09/eurostar-portrait-500x500.jpg",
+"address": "7 port de la Gare, 75013 Paris",
+"area": "13e",
+"headliner": "EUROSTAR",
+"support": [],
+"players": {
+"EUROSTAR": {
+"bandcamp": {
+"url": "https://eurostar.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=521088710/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
+"lat": 48.8326,
+"lon": 2.3773,
+"is_music": true,
+"id": "c424eacbc395",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Le Festival des Places fait sa rentrée !",
 "date": "2026-09-12",
 "venue": "Théâtre de la Ville – Sarah Bernhardt",
@@ -2868,8 +1910,8 @@
 "players": {
 "Cotonete": {
 "bandcamp": {
-"url": "https://cotonete.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1256438/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1256438/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://cotonete.bandcamp.com"
 }
 }
 },
@@ -3083,7 +2125,7 @@
 "venue_slug": "le-barapapa",
 "source": "opendata",
 "time": "17:00",
-"url": "https://www.paris.fr/evenements/baraplaya-sunday-tropical-vibes-au-barapapa-123535",
+"url": "https://www.paris.fr/evenements/baraplaya-sunday-tropical-vibes-au-barapapa-123537",
 "ticket_url": "https://shotgun.live/es/events/baraplaya-13-9",
 "price": "gratuit",
 "free": true,
@@ -3209,8 +2251,8 @@
 "players": {
 "AC/DC": {
 "bandcamp": {
-"url": "https://gabrielogwuche01.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=886187784/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=886187784/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://gabrielogwuche01.bandcamp.com"
 }
 }
 },
@@ -3274,7 +2316,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/09/photo-site-2-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/09/photo-site-2-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BEKA GYAL",
@@ -3517,8 +2559,8 @@
 "players": {
 "Flamin' Groovies": {
 "bandcamp": {
-"url": "https://flamingroovies.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=348096599/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=348096599/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://flamingroovies.bandcamp.com"
 }
 }
 },
@@ -3561,14 +2603,14 @@
 "players": {
 "Shallowater": {
 "bandcamp": {
-"url": "https://shallowater.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1382428333/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1382428333/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://shallowater.bandcamp.com"
 }
 },
 "Midscale": {
 "bandcamp": {
-"url": "https://midscale.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=780343358/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=780343358/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://midscale.bandcamp.com"
 }
 }
 },
@@ -3633,7 +2675,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/RennyAmp-1024x1024.jpeg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/RennyAmp-1024x1024.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RENNY CONTI",
@@ -3641,8 +2683,8 @@
 "players": {
 "RENNY CONTI": {
 "bandcamp": {
-"url": "https://rennyconti.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=4182938492/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4182938492/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rennyconti.bandcamp.com"
 }
 }
 },
@@ -3716,8 +2758,8 @@
 "players": {
 "AYO": {
 "bandcamp": {
-"url": "https://ayoambient.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1146368558/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1146368558/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ayoambient.bandcamp.com"
 }
 }
 },
@@ -3761,6 +2803,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "L'agenda du Conservatoire Erik Satie",
+"date": "2026-09-14",
+"venue": "Conservatoire Municipal Erik Satie",
+"venue_slug": "conservatoire-municipal-erik-satie",
+"source": "opendata",
+"time": null,
+"url": "https://www.paris.fr/evenements/l-agenda-du-conservatoire-erik-satie-99419",
+"ticket_url": null,
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Danse, Théâtre",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Retrouvez tous les évènements, rendez-vous, temps forts du conservatoire du 7e arrondissement de Paris.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/10/16/huge-c5772e00feb1b60fb0dfb67fea995469.jpg",
+"address": "135 Bis rue de l’Université, 75007, Paris",
+"area": "7e",
+"headliner": "L'agenda du Conservatoire Erik Satie",
+"support": [],
+"players": {},
+"lat": 48.86106,
+"lon": 2.307581,
+"is_music": false,
+"id": "9766deb09619",
+"first_seen": "baseline"
+},
+{
 "title": "Holy Wave",
 "date": "2026-09-14",
 "venue": "Petit Bain",
@@ -3787,8 +2860,8 @@
 "players": {
 "Holy Wave": {
 "bandcamp": {
-"url": "https://holywave.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3802476923/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3802476923/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://holywave.bandcamp.com"
 }
 }
 },
@@ -3825,8 +2898,8 @@
 "players": {
 "Oh": {
 "bandcamp": {
-"url": "https://music.olitunes.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3865070700/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3865070700/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://music.olitunes.com"
 }
 }
 },
@@ -3898,8 +2971,8 @@
 "players": {
 "FOY VANCE": {
 "bandcamp": {
-"url": "https://foyvance.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3207449321/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3207449321/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://foyvance.bandcamp.com"
 }
 }
 },
@@ -3942,20 +3015,20 @@
 "players": {
 "33 Dogs": {
 "bandcamp": {
-"url": "https://33dogs.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2490930994/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2490930994/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://33dogs.bandcamp.com"
 }
 },
 "IRENE": {
 "bandcamp": {
-"url": "https://irenemusique.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3512395963/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3512395963/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://irenemusique.bandcamp.com"
 }
 },
 "Ligne10": {
 "bandcamp": {
-"url": "https://ligne10.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=451488538/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=451488538/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ligne10.bandcamp.com"
 }
 }
 },
@@ -4064,8 +3137,8 @@
 "players": {
 "Kanza": {
 "bandcamp": {
-"url": "https://kanza1.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1493202415/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1493202415/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://kanza1.bandcamp.com"
 }
 }
 },
@@ -4171,8 +3244,8 @@
 "players": {
 "Rotem Sivan": {
 "bandcamp": {
-"url": "https://rotemsivan.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2526922314/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2526922314/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rotemsivan.bandcamp.com"
 }
 }
 },
@@ -4337,7 +3410,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/SITE-1000x1000-3.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/SITE-1000x1000-3.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RADIANCE 2026",
@@ -4347,42 +3420,6 @@
 "lon": 2.34,
 "is_music": true,
 "id": "42f35a389286",
-"first_seen": "baseline"
-},
-{
-"title": "SPORT & YOGA + METAL - PASS 1 SEANCE",
-"date": "2026-09-15",
-"venue": "Le Bataclan",
-"venue_slug": "bataclan",
-"source": "bataclan",
-"time": null,
-"url": "https://www.bataclan.fr/programmation",
-"ticket_url": "https://billetterie.bataclan.fr/fr/manifestation/786/sport_yoga_metal_pass_1_seance",
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"metal"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://bataclan-medias.s3.eu-west-3.amazonaws.com/list_photo_00_1080_1080_6a18d5e04a.jpg",
-"address": "50 boulevard Voltaire, 75011 Paris",
-"area": "Oberkampf",
-"headliner": "SPORT & YOGA",
-"support": [
-"METAL",
-"PASS 1 SEANCE"
-],
-"players": {},
-"lat": 48.8631,
-"lon": 2.3708,
-"is_music": false,
-"id": "e813744f39c2",
 "first_seen": "baseline"
 },
 {
@@ -4422,6 +3459,42 @@
 "first_seen": "baseline"
 },
 {
+"title": "SPORT & YOGA + METAL - PASS 1 SEANCE",
+"date": "2026-09-15",
+"venue": "Le Bataclan",
+"venue_slug": "bataclan",
+"source": "bataclan",
+"time": null,
+"url": "https://www.bataclan.fr/programmation",
+"ticket_url": "https://billetterie.bataclan.fr/fr/manifestation/786/sport_yoga_metal_pass_1_seance",
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"metal"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://bataclan-medias.s3.eu-west-3.amazonaws.com/list_photo_00_1080_1080_6a18d5e04a.jpg",
+"address": "50 boulevard Voltaire, 75011 Paris",
+"area": "Oberkampf",
+"headliner": "SPORT & YOGA",
+"support": [
+"METAL",
+"PASS 1 SEANCE"
+],
+"players": {},
+"lat": 48.8631,
+"lon": 2.3708,
+"is_music": false,
+"id": "e813744f39c2",
+"first_seen": "baseline"
+},
+{
 "title": "francis of delirium",
 "date": "2026-09-15",
 "venue": "Le Hasard Ludique",
@@ -4450,8 +3523,8 @@
 "players": {
 "francis of delirium": {
 "bandcamp": {
-"url": "https://francisofdelirium.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2832679499/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2832679499/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://francisofdelirium.bandcamp.com"
 }
 }
 },
@@ -4585,8 +3658,8 @@
 "players": {
 "Ëda Diaz": {
 "bandcamp": {
-"url": "https://edadiaz.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3603566531/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3603566531/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://edadiaz.bandcamp.com"
 }
 }
 },
@@ -4695,14 +3768,14 @@
 "players": {
 "untitled (halo)": {
 "bandcamp": {
-"url": "https://untitledhalo.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1249528349/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1249528349/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://untitledhalo.bandcamp.com"
 }
 },
 "Lal Tuna": {
 "bandcamp": {
-"url": "https://laltuna.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=919520046/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=919520046/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://laltuna.bandcamp.com"
 }
 }
 },
@@ -4819,7 +3892,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2201/mona-guba-complet/?of=2",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2201/mona-guba-complet/?of=1",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -4873,14 +3946,14 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 },
 "Antimatter": {
 "bandcamp": {
-"url": "https://antimatter-uk.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2501764962/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2501764962/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://antimatter-uk.bandcamp.com"
 }
 }
 },
@@ -4990,8 +4063,8 @@
 "players": {
 "Rémi Wassim Chabanel": {
 "bandcamp": {
-"url": "https://remiwassim.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1377311765/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1377311765/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://remiwassim.bandcamp.com"
 }
 }
 },
@@ -5065,8 +4138,8 @@
 "players": {
 "Nefesh": {
 "bandcamp": {
-"url": "https://nefesh.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2130292635/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2130292635/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://nefesh.bandcamp.com"
 }
 }
 },
@@ -5108,8 +4181,8 @@
 "players": {
 "Chinwezz": {
 "bandcamp": {
-"url": "https://chinwezz.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=739115844/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=739115844/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://chinwezz.bandcamp.com"
 }
 }
 },
@@ -5204,7 +4277,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/SITE-1000x1000-3.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/SITE-1000x1000-3.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RADIANCE 2026",
@@ -5616,7 +4689,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2310/mad-tsai-complet/?of=3",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2310/mad-tsai-complet/?of=2",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -6026,7 +5099,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/SITE-1000x1000-3.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/SITE-1000x1000-3.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RADIANCE 2026",
@@ -6399,14 +5472,14 @@
 "players": {
 "Kyssinger": {
 "bandcamp": {
-"url": "https://kyssinger.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=890751530/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=890751530/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://kyssinger.bandcamp.com"
 }
 },
 "The Reefs": {
 "bandcamp": {
-"url": "https://thereefsbeachpunk.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2240908823/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2240908823/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://thereefsbeachpunk.bandcamp.com"
 }
 }
 },
@@ -6490,7 +5563,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2198/asgeir-complet/?of=4",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2198/asgeir-complet/?of=3",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -6709,8 +5782,8 @@
 "players": {
 "Piège à Rêves": {
 "bandcamp": {
-"url": "https://piegeareves.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2613816529/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2613816529/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://piegeareves.bandcamp.com"
 }
 }
 },
@@ -6788,14 +5861,14 @@
 "players": {
 "Ravel": {
 "bandcamp": {
-"url": "https://ravelatl.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=633606638/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=633606638/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ravelatl.bandcamp.com"
 }
 },
 "Mozart": {
 "bandcamp": {
-"url": "https://wolfgang-amadeus-mozart.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://wolfgang-amadeus-mozart.bandcamp.com"
 }
 }
 },
@@ -7045,6 +6118,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "SORUN",
+"date": "2026-09-18",
+"venue": "Point Éphémère",
+"venue_slug": "point-ephemere",
+"source": "pointephemere",
+"time": "23:00",
+"url": "https://www.pointephemere.org/event/sorun",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://images.prismic.io/pointf/mxNXoHZCPCx5bhiN_Photo22_22.png?auto=format&w=200&q=25&fm=webp",
+"address": "200 quai de Valmy, 75010 Paris",
+"area": "Canal Saint-Martin",
+"headliner": "SORUN",
+"support": [],
+"players": {},
+"lat": 48.8797,
+"lon": 2.3693,
+"is_music": true,
+"id": "01d33b296ccd",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Pavillonn Label Soirée Club",
 "date": "2026-09-18",
 "venue": "Gambetta Club",
@@ -7211,6 +6315,42 @@
 "is_music": true,
 "id": "8cda49639527",
 "first_seen": "baseline"
+},
+{
+"title": "BAIN DE MINUIT : CHIPIE NIGHT X BABE 2 BABE",
+"date": "2026-09-18",
+"venue": "Petit Bain",
+"venue_slug": "petit-bain",
+"source": "petitbain",
+"time": null,
+"url": "https://petitbain.org/evenement/bdm-chipie/",
+"ticket_url": null,
+"price": null,
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "cantine, club, gratuit",
+"genres": [
+"electro"
+],
+"genre_source": "site",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://petitbain.org/wp-content/uploads/2026/09/chipie-portrait-500x500.jpg",
+"address": "7 port de la Gare, 75013 Paris",
+"area": "13e",
+"headliner": "BAIN DE MINUIT",
+"support": [
+"CHIPIE NIGHT",
+"BABE 2 BABE"
+],
+"players": {},
+"lat": 48.8326,
+"lon": 2.3773,
+"is_music": true,
+"id": "5e57560a3f1f",
+"first_seen": "2026-09-12"
 },
 {
 "title": "EXPOSITION BURNING - MONDE(S) IMPOSSIBLE(S)",
@@ -7629,8 +6769,8 @@
 "players": {
 "Linos": {
 "bandcamp": {
-"url": "https://linoswav.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3439093352/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3439093352/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://linoswav.bandcamp.com"
 }
 }
 },
@@ -7902,20 +7042,20 @@
 "players": {
 "Hank": {
 "bandcamp": {
-"url": "https://hankbandhank.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4137098736/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4137098736/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://hankbandhank.bandcamp.com"
 }
 },
 "Bad Wave": {
 "bandcamp": {
-"url": "https://baadwaave.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=4206693126/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4206693126/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://baadwaave.bandcamp.com"
 }
 },
 "Violet Noise": {
 "bandcamp": {
-"url": "https://violetnoisemusic.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=4150648278/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4150648278/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://violetnoisemusic.bandcamp.com"
 }
 }
 },
@@ -7959,39 +7099,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "Magic Malik Jazz Association",
-"date": "2026-09-19",
-"venue": "JASS CLUB PARIS",
-"venue_slug": "jass-club-paris",
-"source": "opendata",
-"time": "19:30",
-"url": "https://www.paris.fr/evenements/magic-malik-jazz-association-116303",
-"ticket_url": "https://billetterie.jassclub.paris/agenda/608",
-"price": "De 10 à 19 euros.",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Wayne Shorter, Sonny Rollins, Clifford Brown… Pour la toute première fois, Magic Malik s’attelle au répertoire du jazz moderne !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/07/15/huge-26fb9e716a34c372866afc8aa38b0a0e.jpeg",
-"address": "141 Rue de Tolbiac, 75013, Paris",
-"area": "13e",
-"headliner": "Magic Malik Jazz Association",
-"support": [],
-"players": {},
-"lat": 48.8259553,
-"lon": 2.3592185,
-"is_music": true,
-"id": "0cbb9f1bb09f",
-"first_seen": "baseline"
-},
-{
 "title": "TOMMY BARLOW",
 "date": "2026-09-19",
 "venue": "La Boule Noire",
@@ -8010,7 +7117,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/Format-Site-Barlow-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/Format-Site-Barlow-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TOMMY BARLOW",
@@ -8018,8 +7125,8 @@
 "players": {
 "TOMMY BARLOW": {
 "bandcamp": {
-"url": "https://tommybarlow8.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1518925879/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1518925879/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://tommybarlow8.bandcamp.com"
 }
 }
 },
@@ -8036,7 +7143,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2293/shitkid/?of=5",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2293/shitkid/?of=4",
 "ticket_url": "https://shotgun.live/events/shitkid",
 "price": null,
 "free": false,
@@ -8056,8 +7163,8 @@
 "players": {
 "SHITKID": {
 "bandcamp": {
-"url": "https://shitkid.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3984592370/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3984592370/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://shitkid.bandcamp.com"
 }
 }
 },
@@ -8096,8 +7203,8 @@
 "players": {
 "EINAR SOLBERG": {
 "bandcamp": {
-"url": "https://einarsolberg.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=875808085/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=875808085/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://einarsolberg.bandcamp.com"
 }
 }
 },
@@ -8205,8 +7312,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -8454,6 +7561,39 @@
 "first_seen": "baseline"
 },
 {
+"title": "Magic Malik Jazz Association",
+"date": "2026-09-19",
+"venue": "JASS CLUB PARIS",
+"venue_slug": "jass-club-paris",
+"source": "opendata",
+"time": "21:30",
+"url": "https://www.paris.fr/evenements/magic-malik-jazz-association-116302",
+"ticket_url": "https://billetterie.jassclub.paris/agenda/608",
+"price": "De 10 à 19 euros.",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Festival",
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Wayne Shorter, Sonny Rollins, Clifford Brown… Pour la toute première fois, Magic Malik s’attelle au répertoire du jazz moderne !",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/07/15/huge-7b0534a8185b3309d58d0a1c6096940f.jpeg",
+"address": "141 Rue de Tolbiac, 75013, Paris",
+"area": "13e",
+"headliner": "Magic Malik Jazz Association",
+"support": [],
+"players": {},
+"lat": 48.8259553,
+"lon": 2.3592185,
+"is_music": true,
+"id": "0cbb9f1bb09f",
+"first_seen": "baseline"
+},
+{
 "title": "André Villéger Quartet avec Alain Jean Marie",
 "date": "2026-09-19",
 "venue": "Sunset / Sunside",
@@ -8622,8 +7762,8 @@
 "players": {
 "Electric Feel": {
 "bandcamp": {
-"url": "https://electricfeel.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=158258026/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=158258026/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://electricfeel.bandcamp.com"
 }
 }
 },
@@ -8691,8 +7831,8 @@
 "players": {
 "RAWAYANA": {
 "bandcamp": {
-"url": "https://rawayana.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1840330338/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1840330338/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rawayana.bandcamp.com"
 }
 }
 },
@@ -8732,8 +7872,8 @@
 "players": {
 "Mamas Gun": {
 "bandcamp": {
-"url": "https://mamasgun.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2233587123/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2233587123/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://mamasgun.bandcamp.com"
 }
 }
 },
@@ -8770,8 +7910,8 @@
 "players": {
 "Aephanemer": {
 "bandcamp": {
-"url": "https://music.aephanemer.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1135332806/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1135332806/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://music.aephanemer.com"
 }
 }
 },
@@ -9574,7 +8714,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/BN-site-web-1800x1800px-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/BN-site-web-1800x1800px-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SINTO PAP",
@@ -9717,7 +8857,14 @@
 "support": [
 "Never Ending Stairs"
 ],
-"players": {},
+"players": {
+"Lucky": {
+"bandcamp": {
+"url": "https://luckymusic.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=347007589/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -9776,12 +8923,19 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/Format-Site-Barlow-2-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/Format-Site-Barlow-2-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TISMA",
 "support": [],
-"players": {},
+"players": {
+"TISMA": {
+"bandcamp": {
+"url": "https://tismamusic.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1143338620/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -9944,7 +9098,14 @@
 "area": "13e",
 "headliner": "Havok",
 "support": [],
-"players": {},
+"players": {
+"Havok": {
+"bandcamp": {
+"url": "https://havok253.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1824480605/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8326,
 "lon": 2.3773,
 "is_music": true,
@@ -9981,7 +9142,20 @@
 "Whoman",
 "Riva Sinistra"
 ],
-"players": {},
+"players": {
+"Girls in Hawaii": {
+"bandcamp": {
+"url": "https://girlsinhawaiii.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=234085101/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Whoman": {
+"bandcamp": {
+"url": "https://whomantheband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2543962287/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -10030,7 +9204,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2219/the-lanskies/?of=6",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2219/the-lanskies/?of=5",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/the-lanskies-billet/idmanif/652704/idseance/4294423/idtier/38743526",
 "price": null,
 "free": false,
@@ -10047,7 +9221,14 @@
 "area": "Ménilmontant",
 "headliner": "THE LANSKIES",
 "support": [],
-"players": {},
+"players": {
+"THE LANSKIES": {
+"bandcamp": {
+"url": "https://thelanskies.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=30457026/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8686,
 "lon": 2.3906,
 "is_music": true,
@@ -10119,8 +9300,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -10158,7 +9339,14 @@
 "support": [
 "Jessica Paradis et Malin G Thunell"
 ],
-"players": {},
+"players": {
+"Paysages nordiques": {
+"bandcamp": {
+"url": "https://paysagesnordiques.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=320039679/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8723990129644,
 "lon": 2.3124140325526,
 "is_music": true,
@@ -10395,7 +9583,20 @@
 "Gilles Coquard",
 "Arnaud Dolmen"
 ],
-"players": {},
+"players": {
+"Line Kruse": {
+"bandcamp": {
+"url": "https://linekruse.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1739111298/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Arnaud Dolmen": {
+"bandcamp": {
+"url": "https://arnauddolmen.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1411864517/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -10463,7 +9664,14 @@
 "area": "Châtelet",
 "headliner": "Resolute Trio",
 "support": [],
-"players": {},
+"players": {
+"Resolute Trio": {
+"bandcamp": {
+"url": "https://resolutetrio.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3962089754/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -10534,7 +9742,20 @@
 "Raphaël Bastide",
 "TRILLS"
 ],
-"players": {},
+"players": {
+"Raphaël Bastide": {
+"bandcamp": {
+"url": "https://raphaelbastide.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4155880413/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"TRILLS": {
+"bandcamp": {
+"url": "https://trills.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=131662647/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8567,
 "lon": 2.4292,
 "is_music": true,
@@ -10565,7 +9786,14 @@
 "area": "Oberkampf",
 "headliner": "DEVIN TOWNSEND",
 "support": [],
-"players": {},
+"players": {
+"DEVIN TOWNSEND": {
+"bandcamp": {
+"url": "https://devintownsend.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3222707444/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
@@ -10599,7 +9827,14 @@
 "area": "Porte de Saint-Ouen",
 "headliner": "Jesca Hoop",
 "support": [],
-"players": {},
+"players": {
+"Jesca Hoop": {
+"bandcamp": {
+"url": "https://jescahoop.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=572416677/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8969,
 "lon": 2.3277,
 "is_music": true,
@@ -10636,7 +9871,20 @@
 "John Coltrane",
 "Oscar Brown & more"
 ],
-"players": {},
+"players": {
+"Miles Davis": {
+"bandcamp": {
+"url": "https://milesdavis.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=589059306/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"John Coltrane": {
+"bandcamp": {
+"url": "https://johncoltrane.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3910546594/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8731,
 "lon": 2.3533,
 "is_music": true,
@@ -10733,7 +9981,14 @@
 "support": [
 "Lancement de résidence antivalidiste Partie 1"
 ],
-"players": {},
+"players": {
+"Nous": {
+"bandcamp": {
+"url": "https://nousband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=901999514/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8962979982124,
 "lon": 2.39582696109815,
 "is_music": true,
@@ -10767,7 +10022,14 @@
 "area": "5e",
 "headliner": "BJAM",
 "support": [],
-"players": {},
+"players": {
+"BJAM": {
+"bandcamp": {
+"url": "https://bjam-0.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2443673550/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.842069012505,
 "lon": 2.35357202699109,
 "is_music": true,
@@ -10840,7 +10102,14 @@
 "Jelly Dive",
 "Electric Spanish"
 ],
-"players": {},
+"players": {
+"Daytime TV": {
+"bandcamp": {
+"url": "https://daytimetvofficial.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1295142445/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -10875,7 +10144,14 @@
 "support": [
 "Roman Reidid en concert au 38Riv Jazz Club"
 ],
-"players": {},
+"players": {
+"PEAKS": {
+"bandcamp": {
+"url": "https://peaks7.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1070676022/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856578,
 "lon": 2.351828,
 "is_music": true,
@@ -10967,12 +10243,19 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/Photos-Xam-1800_1800-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/Photos-Xam-1800_1800-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "XAM",
 "support": [],
-"players": {},
+"players": {
+"XAM": {
+"bandcamp": {
+"url": "https://xamhki.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1053739862/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -10986,7 +10269,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2196/voxtrot/?of=7",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2196/voxtrot/?of=6",
 "ticket_url": "https://www.aegpresents.fr/event/voxtrot/",
 "price": null,
 "free": false,
@@ -11003,7 +10286,14 @@
 "area": "Ménilmontant",
 "headliner": "VOXTROT",
 "support": [],
-"players": {},
+"players": {
+"VOXTROT": {
+"bandcamp": {
+"url": "https://voxtrot.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1299720627/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8686,
 "lon": 2.3906,
 "is_music": true,
@@ -11081,6 +10371,46 @@
 "first_seen": "baseline"
 },
 {
+"title": "STRAWBERRY GUY",
+"date": "2026-09-23",
+"venue": "Café de la Danse",
+"venue_slug": "cafe-de-la-danse",
+"source": "cafedeladanse",
+"time": "20:00",
+"url": "https://www.cafedeladanse.com/event/strawberry-guy/",
+"ticket_url": null,
+"price": "à partir de 27 €",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Folk",
+"genres": [
+"folk"
+],
+"genre_source": "site",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": null,
+"address": "5 passage Louis-Philippe, 75011 Paris",
+"area": "Bastille",
+"headliner": "STRAWBERRY GUY",
+"support": [],
+"players": {
+"STRAWBERRY GUY": {
+"bandcamp": {
+"url": "https://strawberryguy.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2604840277/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
+"lat": 48.8538,
+"lon": 2.3719,
+"is_music": true,
+"id": "edd8fde26f59",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Concert : Julie Campiche innove à la harpe",
 "date": "2026-09-23",
 "venue": "Centre culturel suisse Paris",
@@ -11137,7 +10467,14 @@
 "area": "Pigalle",
 "headliner": "SAÏF",
 "support": [],
-"players": {},
+"players": {
+"SAÏF": {
+"bandcamp": {
+"url": "https://nobodysaif.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=16220279/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -11234,7 +10571,14 @@
 "area": "8e",
 "headliner": "Family Affair",
 "support": [],
-"players": {},
+"players": {
+"Family Affair": {
+"bandcamp": {
+"url": "https://family-affair.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2251750410/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8713718,
 "lon": 2.3121803,
 "is_music": true,
@@ -11268,7 +10612,14 @@
 "area": "Châtelet",
 "headliner": "Johanna Saint-Pierre",
 "support": [],
-"players": {},
+"players": {
+"Johanna Saint-Pierre": {
+"bandcamp": {
+"url": "https://johannasaintpierre.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=819407476/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -11502,7 +10853,14 @@
 "area": "13e",
 "headliner": "Marta",
 "support": [],
-"players": {},
+"players": {
+"Marta": {
+"bandcamp": {
+"url": "https://martatheband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=904161985/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8326,
 "lon": 2.3773,
 "is_music": true,
@@ -11599,7 +10957,14 @@
 "support": [
 "LE QUINT’UP"
 ],
-"players": {},
+"players": {
+"#Rdv": {
+"bandcamp": {
+"url": "https://rdvtheband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=316365808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8598354,
 "lon": 2.3478728,
 "is_music": true,
@@ -11704,7 +11069,26 @@
 "Rumeur",
 "Teenage Role Models"
 ],
-"players": {},
+"players": {
+"Wax Jaw": {
+"bandcamp": {
+"url": "https://wax-jaw.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=283628257/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Rumeur": {
+"bandcamp": {
+"url": "https://rumeur-punk.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=454065098/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Teenage Role Models": {
+"bandcamp": {
+"url": "https://teenagerolemodels.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=628044236/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -11796,7 +11180,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/1800X1800-LINE-UP-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/1800X1800-LINE-UP-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PERNOD RICARD LIVE MUSIC",
@@ -11815,7 +11199,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2199/justeniels-complet/?of=8",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2199/justeniels-complet/?of=7",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -11863,7 +11247,14 @@
 "area": "1er",
 "headliner": "LUTE",
 "support": [],
-"players": {},
+"players": {
+"LUTE": {
+"bandcamp": {
+"url": "https://lute.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2418948029/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.861819,
 "lon": 2.347644,
 "is_music": true,
@@ -11963,7 +11354,14 @@
 "area": "Châtelet",
 "headliner": "Nocuts",
 "support": [],
-"players": {},
+"players": {
+"Nocuts": {
+"bandcamp": {
+"url": "https://nocuts.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1562479689/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -12095,7 +11493,14 @@
 "support": [
 "Jazz tribute to Stevie Wonder"
 ],
-"players": {},
+"players": {
+"Master Blaster": {
+"bandcamp": {
+"url": "https://masterblaster.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4264153597/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.851503,
 "lon": 2.351091,
 "is_music": true,
@@ -12295,7 +11700,14 @@
 "support": [
 "Philippe Powell"
 ],
-"players": {},
+"players": {
+"Philippe Powell": {
+"bandcamp": {
+"url": "https://philippepowell.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1488034525/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -12426,7 +11838,20 @@
 "support": [
 "Lynn Adib"
 ],
-"players": {},
+"players": {
+"Kamilya Jubran & Werner Hasler": {
+"bandcamp": {
+"url": "https://kamilyajubranwernerhasler.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=2004249925/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Lynn Adib": {
+"bandcamp": {
+"url": "https://lynnadib.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3347617043/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8731,
 "lon": 2.3533,
 "is_music": true,
@@ -12457,7 +11882,14 @@
 "area": "13e",
 "headliner": "Cory Hanson",
 "support": [],
-"players": {},
+"players": {
+"Cory Hanson": {
+"bandcamp": {
+"url": "https://coryhanson.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3171448046/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8326,
 "lon": 2.3773,
 "is_music": true,
@@ -12488,7 +11920,14 @@
 "area": "Pigalle",
 "headliner": "LA MAISON TELLIER",
 "support": [],
-"players": {},
+"players": {
+"LA MAISON TELLIER": {
+"bandcamp": {
+"url": "https://lamaisontellier.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1012507001/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8826,
 "lon": 2.3445,
 "is_music": true,
@@ -12686,6 +12125,40 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-09-25",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "fb587cf7050d",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Daily J • Vivienne • Lost Solar Dust",
 "date": "2026-09-25",
 "venue": "Supersonic",
@@ -12715,7 +12188,26 @@
 "Vivienne",
 "Lost Solar Dust"
 ],
-"players": {},
+"players": {
+"Daily J": {
+"bandcamp": {
+"url": "https://dailyj.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1528085898/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Vivienne": {
+"bandcamp": {
+"url": "https://vivienneart.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2572302817/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Lost Solar Dust": {
+"bandcamp": {
+"url": "https://lostsolardust.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3819354000/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -12750,7 +12242,14 @@
 "support": [
 "Joe Sanders en concert au 38Riv Jazz Club"
 ],
-"players": {},
+"players": {
+"Alexis Valet": {
+"bandcamp": {
+"url": "https://kingofpandaa.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3142022023/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856427003097,
 "lon": 2.3564829781449,
 "is_music": true,
@@ -12823,37 +12322,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "MULAA JOANS",
-"date": "2026-09-25",
-"venue": "La Boule Noire",
-"venue_slug": "la-boule-noire",
-"source": "boulenoire",
-"time": "19:30",
-"url": "https://laboule-noire.fr/mulaa-joans/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/PRESS-SHOT-LISTINGS-scaled-e1779092947390-954x1024.jpg",
-"address": "120 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "MULAA JOANS",
-"support": [],
-"players": {},
-"lat": 48.8823,
-"lon": 2.34,
-"is_music": true,
-"id": "1e8031b22e42",
-"first_seen": "baseline"
-},
-{
 "title": "JOSH LEVI",
 "date": "2026-09-25",
 "venue": "La Boule Noire",
@@ -12872,7 +12340,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/08/Josh-Levi_1080x1080-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/08/Josh-Levi_1080x1080-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JOSH LEVI",
@@ -12882,6 +12350,37 @@
 "lon": 2.34,
 "is_music": true,
 "id": "03b5a4930d3c",
+"first_seen": "baseline"
+},
+{
+"title": "MULAA JOANS",
+"date": "2026-09-25",
+"venue": "La Boule Noire",
+"venue_slug": "la-boule-noire",
+"source": "boulenoire",
+"time": "19:30",
+"url": "https://laboule-noire.fr/mulaa-joans/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/PRESS-SHOT-LISTINGS-scaled-e1779092947390-954x1024.jpg.webp",
+"address": "120 boulevard de Rochechouart, 75018 Paris",
+"area": "Pigalle",
+"headliner": "MULAA JOANS",
+"support": [],
+"players": {},
+"lat": 48.8823,
+"lon": 2.34,
+"is_music": true,
+"id": "1e8031b22e42",
 "first_seen": "baseline"
 },
 {
@@ -12926,7 +12425,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2216/lime-garden/?of=9",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2216/lime-garden/?of=8",
 "ticket_url": "https://link.dice.fm/ua18fb87c3c2",
 "price": null,
 "free": false,
@@ -12943,7 +12442,14 @@
 "area": "Ménilmontant",
 "headliner": "LIME GARDEN",
 "support": [],
-"players": {},
+"players": {
+"LIME GARDEN": {
+"bandcamp": {
+"url": "https://limegarden.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1958054772/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8686,
 "lon": 2.3906,
 "is_music": true,
@@ -13206,7 +12712,14 @@
 "area": "Villette",
 "headliner": "Roomful of Teeth",
 "support": [],
-"players": {},
+"players": {
+"Roomful of Teeth": {
+"bandcamp": {
+"url": "https://roomfulofteeth.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=37581449/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8891921088251,
 "lon": 2.39355686595773,
 "is_music": true,
@@ -13240,7 +12753,26 @@
 "BREAKOUT",
 "BELEK"
 ],
-"players": {},
+"players": {
+"LION'S LAW": {
+"bandcamp": {
+"url": "https://lionslaw.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=263776837/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"BREAKOUT": {
+"bandcamp": {
+"url": "https://breakoutpunx.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=516483144/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"BELEK": {
+"bandcamp": {
+"url": "https://belek1312.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2470690300/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8797,
 "lon": 2.3693,
 "is_music": true,
@@ -13304,7 +12836,14 @@
 "area": "19e",
 "headliner": "BAZAR",
 "support": [],
-"players": {},
+"players": {
+"BAZAR": {
+"bandcamp": {
+"url": "https://bazarmusique.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2317341634/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8875133,
 "lon": 2.37621720000004,
 "is_music": true,
@@ -13339,7 +12878,14 @@
 "support": [
 "Coltrane Centenary « Year 1963 »"
 ],
-"players": {},
+"players": {
+"Tommy Smith": {
+"bandcamp": {
+"url": "https://tommysmithsaxophonist.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=897780096/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -13616,7 +13162,14 @@
 "Nuit Pop 90’s",
 "00’s"
 ],
-"players": {},
+"players": {
+"00’s": {
+"bandcamp": {
+"url": "https://the00s.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=334676544/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -13650,7 +13203,26 @@
 "Feuille",
 "Ciseaux"
 ],
-"players": {},
+"players": {
+"Pierre": {
+"bandcamp": {
+"url": "https://pierreband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2264227483/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Feuille": {
+"bandcamp": {
+"url": "https://feuille.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3179665932/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Ciseaux": {
+"bandcamp": {
+"url": "https://ciseaux.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=363951857/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856578,
 "lon": 2.351828,
 "is_music": true,
@@ -13716,7 +13288,14 @@
 "area": "Château d'Eau",
 "headliner": "Black Milk",
 "support": [],
-"players": {},
+"players": {
+"Black Milk": {
+"bandcamp": {
+"url": "https://blackmilk.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3957200031/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8731,
 "lon": 2.3533,
 "is_music": true,
@@ -13747,7 +13326,14 @@
 "area": "13e",
 "headliner": "Alea Jacta Est",
 "support": [],
-"players": {},
+"players": {
+"Alea Jacta Est": {
+"bandcamp": {
+"url": "https://aleajactaest.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4235258363/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8326,
 "lon": 2.3773,
 "is_music": true,
@@ -13976,8 +13562,8 @@
 "players": {
 "Velours": {
 "bandcamp": {
-"url": "https://veloursofficial.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2261122156/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2261122156/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://veloursofficial.bandcamp.com"
 }
 }
 },
@@ -14051,7 +13637,14 @@
 "support": [
 "Roman Candles"
 ],
-"players": {},
+"players": {
+"Roman Candles": {
+"bandcamp": {
+"url": "https://romancandlesruleok.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2086996788/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.836807,
 "lon": 2.303481,
 "is_music": true,
@@ -14090,6 +13683,40 @@
 "is_music": true,
 "id": "60d9bbc08813",
 "first_seen": "baseline"
+},
+{
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-09-26",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "a6efb9fad953",
+"first_seen": "2026-09-12"
 },
 {
 "title": "ELIKYA, un concert narratif qui célèbre les femmes afrodescendantes",
@@ -14220,7 +13847,14 @@
 "support": [
 "Joe Sanders en concert au 38Riv Jazz Club"
 ],
-"players": {},
+"players": {
+"Alexis Valet": {
+"bandcamp": {
+"url": "https://kingofpandaa.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3142022023/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856427003097,
 "lon": 2.3564829781449,
 "is_music": true,
@@ -14282,7 +13916,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/03/JOLINA-LOUISE-press-pic-@_paulinegen_-1-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/03/JOLINA-LOUISE-press-pic-@_paulinegen_-1-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JOLINA LOUISE",
@@ -14301,7 +13935,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2325/la-808e-nuit/?of=10",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2325/la-808e-nuit/?of=9",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/la-808eme-nuit-billet/idmanif/659331",
 "price": null,
 "free": false,
@@ -14585,7 +14219,14 @@
 "area": "Tremblay-en-France",
 "headliner": "The Bongo Hop",
 "support": [],
-"players": {},
+"players": {
+"The Bongo Hop": {
+"bandcamp": {
+"url": "https://thebongohop.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4200380831/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.9429567044053,
 "lon": 2.56928698133869,
 "is_music": true,
@@ -14651,7 +14292,14 @@
 "support": [
 "Coltrane Centenary « Year 1963 »"
 ],
-"players": {},
+"players": {
+"Tommy Smith": {
+"bandcamp": {
+"url": "https://tommysmithsaxophonist.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=897780096/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -15021,7 +14669,14 @@
 "area": "Oberkampf",
 "headliner": "AJNA",
 "support": [],
-"players": {},
+"players": {
+"AJNA": {
+"bandcamp": {
+"url": "https://ajna1.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1046524196/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
@@ -15785,7 +15440,14 @@
 "support": [
 "The Rolling Stones"
 ],
-"players": {},
+"players": {
+"The Rolling Stones": {
+"bandcamp": {
+"url": "https://theerollingstones.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=875890577/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -15882,12 +15544,19 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/euposterbackground-819x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/euposterbackground-819x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAY WE RAN",
 "support": [],
-"players": {},
+"players": {
+"DAY WE RAN": {
+"bandcamp": {
+"url": "https://dayweran.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=617498354/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -15901,7 +15570,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2318/bleood/?of=11",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2318/bleood/?of=10",
 "ticket_url": "https://www.aegpresents.fr/event/bleood/",
 "price": null,
 "free": false,
@@ -15918,7 +15587,14 @@
 "area": "Ménilmontant",
 "headliner": "BLEOOD",
 "support": [],
-"players": {},
+"players": {
+"BLEOOD": {
+"bandcamp": {
+"url": "https://bleood.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1269015800/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8686,
 "lon": 2.3906,
 "is_music": true,
@@ -15951,7 +15627,14 @@
 "area": "Pigalle",
 "headliner": "YANN MULLER",
 "support": [],
-"players": {},
+"players": {
+"YANN MULLER": {
+"bandcamp": {
+"url": "https://yannmuller.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3809053006/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -15986,7 +15669,14 @@
 "support": [
 "CALOÉ"
 ],
-"players": {},
+"players": {
+"CALOÉ": {
+"bandcamp": {
+"url": "https://caloe.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1282483136/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8598354,
 "lon": 2.3478728,
 "is_music": true,
@@ -16088,7 +15778,14 @@
 "support": [
 "Concert"
 ],
-"players": {},
+"players": {
+"Concert": {
+"bandcamp": {
+"url": "https://concert.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1114447568/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.863992,
 "lon": 2.361532,
 "is_music": true,
@@ -16125,7 +15822,25 @@
 "The Velvet Club",
 "Monitors"
 ],
-"players": {},
+"players": {
+"DICE": {
+"bandcamp": {
+"url": "https://dice-the-band.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1734309250/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"The Velvet Club": {
+"bandcamp": {
+"url": "https://thevelvetclub.bandcamp.com"
+}
+},
+"Monitors": {
+"bandcamp": {
+"url": "https://monitorsofficial.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=696430311/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -16162,7 +15877,20 @@
 "Renard",
 "Recording Sessions au 38Riv Jazz Club"
 ],
-"players": {},
+"players": {
+"Montana": {
+"bandcamp": {
+"url": "https://music-montana.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3454712183/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Renard": {
+"bandcamp": {
+"url": "https://renard.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4151491772/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856578,
 "lon": 2.351828,
 "is_music": true,
@@ -16188,7 +15916,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/Format-Site-theory-of-a-deadman-2-1-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/Format-Site-theory-of-a-deadman-2-1-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MAUREEN VALET",
@@ -16426,7 +16154,26 @@
 "Fluzz",
 "Petrichör"
 ],
-"players": {},
+"players": {
+"Annabelle Chairlegs": {
+"bandcamp": {
+"url": "https://annabellechairlegs.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=562146588/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Fluzz": {
+"bandcamp": {
+"url": "https://fluzz.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1903122315/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Petrichör": {
+"bandcamp": {
+"url": "https://petrichor-us.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=403811739/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -16463,7 +16210,20 @@
 "Renard",
 "Recording Sessions au 38Riv Jazz Club"
 ],
-"players": {},
+"players": {
+"Montana": {
+"bandcamp": {
+"url": "https://music-montana.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3454712183/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Renard": {
+"bandcamp": {
+"url": "https://renard.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4151491772/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856578,
 "lon": 2.351828,
 "is_music": true,
@@ -16489,12 +16249,19 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/1800x1800-3-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/1800x1800-3-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HEROE",
 "support": [],
-"players": {},
+"players": {
+"HEROE": {
+"bandcamp": {
+"url": "https://heroe.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3273919561/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -16508,7 +16275,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2279/adame/?of=12",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2279/adame/?of=11",
 "ticket_url": "https://link.dice.fm/Nd168a3cc152",
 "price": null,
 "free": false,
@@ -16525,7 +16292,14 @@
 "area": "Ménilmontant",
 "headliner": "ADAMÉ",
 "support": [],
-"players": {},
+"players": {
+"ADAMÉ": {
+"bandcamp": {
+"url": "https://adamenoise.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4028166690/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8686,
 "lon": 2.3906,
 "is_music": true,
@@ -16558,7 +16332,14 @@
 "area": "Châtelet",
 "headliner": "Maurizio Minardi Trio",
 "support": [],
-"players": {},
+"players": {
+"Maurizio Minardi Trio": {
+"bandcamp": {
+"url": "https://mauriziominarditrio.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=2921319311/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -16724,7 +16505,14 @@
 "area": "Châtelet",
 "headliner": "Jazzlab Orchestra",
 "support": [],
-"players": {},
+"players": {
+"Jazzlab Orchestra": {
+"bandcamp": {
+"url": "https://jlorchestra.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4037558740/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
@@ -16824,11 +16612,51 @@
 "area": "Château d'Eau",
 "headliner": "Stelios Petrakis",
 "support": [],
-"players": {},
+"players": {
+"Stelios Petrakis": {
+"bandcamp": {
+"url": "https://steliospetrakis.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2685097530/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8731,
 "lon": 2.3533,
 "is_music": true,
 "id": "533c9f762a35",
+"first_seen": "baseline"
+},
+{
+"title": "Belleville Danse - 2026",
+"date": "2026-09-30",
+"venue": "Pavillon Carré de Baudouin",
+"venue_slug": "pavillon-carre-de-baudouin",
+"source": "opendata",
+"time": "14:00",
+"url": "https://www.paris.fr/evenements/belleville-danse-2026-112101",
+"ticket_url": "https://www.instagram.com/lahaltegarderie/",
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Danse, Spectacle musical",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Belleville Danse est un bal chorégraphié inclusif, intergénérationnel, participatif et gratuit réunissant seniors, enfants, habitant·es et artistes autour de la danse, de la musique et du partage.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/05/21/huge-0d210b3510863a32f42ca60624f9f26c.jpg",
+"address": "121 rue de Ménilmontant, 75020, Paris",
+"area": "20e",
+"headliner": "Belleville Danse",
+"support": [
+"2026"
+],
+"players": {},
+"lat": 48.8699690154148,
+"lon": 2.39410095959627,
+"is_music": true,
+"id": "fe5f3efccf51",
 "first_seen": "baseline"
 },
 {
@@ -16958,7 +16786,20 @@
 "REDD.",
 "Flying Melons"
 ],
-"players": {},
+"players": {
+"REDD.": {
+"bandcamp": {
+"url": "https://redd4.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1922012589/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Flying Melons": {
+"bandcamp": {
+"url": "https://flyingmelons.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3958930456/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8514,
 "lon": 2.3706,
 "is_music": true,
@@ -16995,7 +16836,20 @@
 "Renard",
 "Recording Sessions au 38Riv Jazz Club"
 ],
-"players": {},
+"players": {
+"Montana": {
+"bandcamp": {
+"url": "https://music-montana.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3454712183/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Renard": {
+"bandcamp": {
+"url": "https://renard.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4151491772/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.856578,
 "lon": 2.351828,
 "is_music": true,
@@ -17031,7 +16885,14 @@
 "support": [
 "Let the parade begin!"
 ],
-"players": {},
+"players": {
+"MEGAFAUNE": {
+"bandcamp": {
+"url": "https://lamegafaune.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3122762870/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8259553,
 "lon": 2.3592185,
 "is_music": true,
@@ -17057,7 +16918,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/1800-x-1800-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/1800-x-1800-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ALEXIS MURATTI",
@@ -17076,7 +16937,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2266/louve/?of=13",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2266/louve/?of=12",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -17093,7 +16954,14 @@
 "area": "Ménilmontant",
 "headliner": "LOUVE",
 "support": [],
-"players": {},
+"players": {
+"LOUVE": {
+"bandcamp": {
+"url": "https://lalouve.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1652480906/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8686,
 "lon": 2.3906,
 "is_music": true,
@@ -17196,7 +17064,26 @@
 "Paris",
 "Lima"
 ],
-"players": {},
+"players": {
+"YÛMA": {
+"bandcamp": {
+"url": "https://yuma0728.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2912474113/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Berlin": {
+"bandcamp": {
+"url": "https://berlinofficialband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2978148308/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+},
+"Lima": {
+"bandcamp": {
+"url": "https://lima-traqs.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=2859854576/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.851503,
 "lon": 2.351091,
 "is_music": true,
@@ -17427,7 +17314,14 @@
 "area": "Pigalle",
 "headliner": "AMENRA",
 "support": [],
-"players": {},
+"players": {
+"AMENRA": {
+"bandcamp": {
+"url": "https://amenra.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1437344313/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8826,
 "lon": 2.3436,
 "is_music": true,
@@ -17493,7 +17387,14 @@
 "support": [
 "Lancement de résidence antivalidiste Partie 2"
 ],
-"players": {},
+"players": {
+"Nous": {
+"bandcamp": {
+"url": "https://nousband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=901999514/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8739849947737,
 "lon": 2.39541800804224,
 "is_music": true,
@@ -17788,7 +17689,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/AFAR-2-©AFAR-1024x687.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/AFAR-2-©AFAR-1024x687.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "AFAR",
@@ -17807,7 +17708,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2105/yse/?of=14",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2105/yse/?of=13",
 "ticket_url": "https://my.weezevent.com/yse-la-maroquinerie-paris",
 "price": null,
 "free": false,
@@ -18162,6 +18063,39 @@
 "first_seen": "baseline"
 },
 {
+"title": "Cabaret Malika",
+"date": "2026-10-01",
+"venue": "Le Hasard Ludique",
+"venue_slug": "le-hasard-ludique",
+"source": "hasardludique",
+"time": null,
+"url": "https://www.lehasardludique.paris/soir%C3%A9e/2026-08-27/cabaret-malika",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "cabaret, performances",
+"genres": [
+"chanson"
+],
+"genre_source": "site",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://s3.eu-central-1.amazonaws.com/lehasardludique/images/16129/header_site_hl.jpg",
+"address": "128 avenue de Saint-Ouen, 75018 Paris",
+"area": "Porte de Saint-Ouen",
+"headliner": "Cabaret Malika",
+"support": [],
+"players": {},
+"lat": 48.8969,
+"lon": 2.3277,
+"is_music": false,
+"id": "b1211724433c",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Mario Canonge",
 "date": "2026-10-01",
 "venue": "New Morning",
@@ -18257,6 +18191,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "Master classes, ateliers, rencontres, restitutions et conférences",
+"date": "2026-10-02",
+"venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
+"venue_slug": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
+"source": "opendata",
+"time": "14:00",
+"url": "https://www.paris.fr/evenements/master-classes-ateliers-rencontres-restitutions-et-conferences-92346",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "Entrée libre dans la limite des places disponibles",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Assistez à ces moments de rencontres avec des personnalités artistiques invité·es dans les domaines de la musique, de la danse et du théâtre",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/09/10/huge-99b963b872c4075473fe4238e4616742.jpg",
+"address": "14, rue de Madrid, 75008, Paris",
+"area": "8e",
+"headliner": "Master classes",
+"support": [],
+"players": {},
+"lat": 48.8785160001733,
+"lon": 2.32069904092731,
+"is_music": true,
+"id": "506963de5a6d",
+"first_seen": "2026-09-12"
+},
+{
 "title": "ĠENN • Dirty Rodeo • FLOAT",
 "date": "2026-10-02",
 "venue": "Supersonic",
@@ -18347,7 +18312,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/08/Josh-Levi_1080x1080-1024x1024.png",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/08/Josh-Levi_1080x1080-1024x1024.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JOSH LEVI",
@@ -18366,7 +18331,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2137/sumac-dub/?of=15",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2137/sumac-dub/?of=14",
 "ticket_url": "https://shotgun.live/events/sumac-dub-la-maroquinerie",
 "price": null,
 "free": false,
@@ -19094,6 +19059,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "Master classes, ateliers, rencontres, restitutions et conférences",
+"date": "2026-10-03",
+"venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
+"venue_slug": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
+"source": "opendata",
+"time": "14:00",
+"url": "https://www.paris.fr/evenements/master-classes-ateliers-rencontres-restitutions-et-conferences-92346",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "Entrée libre dans la limite des places disponibles",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Assistez à ces moments de rencontres avec des personnalités artistiques invité·es dans les domaines de la musique, de la danse et du théâtre",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/09/10/huge-99b963b872c4075473fe4238e4616742.jpg",
+"address": "14, rue de Madrid, 75008, Paris",
+"area": "8e",
+"headliner": "Master classes",
+"support": [],
+"players": {},
+"lat": 48.8785160001733,
+"lon": 2.32069904092731,
+"is_music": true,
+"id": "4409b60dbd0d",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Melissa Lesnie - Gershwin’s Sister, au 38Riv Jazz Club",
 "date": "2026-10-03",
 "venue": "38Riv Jazz Club",
@@ -19159,8 +19155,8 @@
 "players": {
 "MOZART": {
 "bandcamp": {
-"url": "https://wolfgang-amadeus-mozart.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://wolfgang-amadeus-mozart.bandcamp.com"
 }
 }
 },
@@ -19394,7 +19390,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/1080x1080-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/07/1080x1080-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JETLAG",
@@ -19450,7 +19446,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2218/unprocessed/?of=16",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2218/unprocessed/?of=15",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/unprocessed-billet/idmanif/651340/idtier/10331237",
 "price": null,
 "free": false,
@@ -20154,7 +20150,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/1080x1350-e1775836098268-1024x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/1080x1350-e1775836098268-1024x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EMMA HARNER",
@@ -20173,7 +20169,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2257/the-surfrajettes-guest/?of=17",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2257/the-surfrajettes-guest/?of=16",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/the-surfrajettes-billet/idmanif/658083/idtier/38743526",
 "price": null,
 "free": false,
@@ -20415,7 +20411,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/065664bd_benellis-whereshegoes-3-819x1024.jpg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/065664bd_benellis-whereshegoes-3-819x1024.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BEN ELLIS",
@@ -20434,7 +20430,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2237/little-barrie/?of=18",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2237/little-barrie/?of=17",
 "ticket_url": "https://link.dice.fm/Y46d6c2b77ad",
 "price": null,
 "free": false,
@@ -20783,7 +20779,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/Chrissy_2_1-1024x1024.jpeg",
+"image": "https://laboule-noire.fr/wp-content/uploads/2026/05/Chrissy_2_1-1024x1024.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CHRISSY CHLAPECKA",
@@ -20802,7 +20798,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2305/father-of-peace/?of=19",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2305/father-of-peace/?of=18",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -21357,44 +21353,13 @@
 "first_seen": "baseline"
 },
 {
-"title": "TIANA MAJOR9",
-"date": "2026-10-07",
-"venue": "La Boule Noire",
-"venue_slug": "la-boule-noire",
-"source": "boulenoire",
-"time": "19:30",
-"url": "https://laboule-noire.fr/tiana-major9/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/06/Format-Site-Tiana-major-1024x1024.png",
-"address": "120 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "TIANA MAJOR9",
-"support": [],
-"players": {},
-"lat": 48.8823,
-"lon": 2.34,
-"is_music": true,
-"id": "b42616cd21fb",
-"first_seen": "baseline"
-},
-{
 "title": "VANILLE",
 "date": "2026-10-07",
 "venue": "La Maroquinerie",
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2098/vanille/?of=20",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2098/vanille/?of=19",
 "ticket_url": "https://my.weezevent.com/vanille-la-maroquinerie",
 "price": null,
 "free": false,
@@ -21968,7 +21933,7 @@
 ],
 "genre_source": "rules",
 "subgenres": [],
-"description": "À travers 4 œuvres majeures, ce concert retrace le parcours créateur de Dmitri Chostakovitch. Du Prélude n° 1 pour piano, à l’écriture libre et presque improvisée, au sarcastique Prélude n° 24, construit comme une gavotte, ce programme fait également entendre la Sonate pour violoncelle et piano et le bouleversant Trio n° 2, composé à la mémoire de son ami Ivan Sollertinski.",
+"description": "Le premier prélude pour piano d’écriture quasi improvisé ; la sonate pour violoncelle et piano, sortie de deux nuits d’insomnie ; le trio bouleversant en mémoire de l’ami le plus proche qui venait de mourir d’une crise cardiaque ; puis le dernier prélude, la gavotte sarcastique pour clore ce programme autour d’un des plus grands compositeurs du XXe siècle, à la fois l’homme du régime et l’ennemi d",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-dc48085c00278380573551245bd8a4ba.jpg",
 "address": "222 rue de Courcelles, 75017, Paris",
@@ -22020,7 +21985,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2295/diskay/?of=21",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2295/diskay/?of=20",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/diskay-billet/idmanif/662259",
 "price": null,
 "free": false,
@@ -22211,8 +22176,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -22757,7 +22722,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2230/flox/?of=22",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2230/flox/?of=21",
 "ticket_url": "https://www.fnacspectacles.com/event/flox-la-maroquinerie-paris-20-21419891/?affiliate=QYC&utm_source=QYC&utm_medium=dp&utm_campaign=frbandsintown",
 "price": null,
 "free": false,
@@ -23556,8 +23521,8 @@
 "players": {
 "'Velours": {
 "bandcamp": {
-"url": "https://veloursofficial.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2261122156/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2261122156/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://veloursofficial.bandcamp.com"
 }
 }
 },
@@ -23566,6 +23531,39 @@
 "is_music": true,
 "id": "9603462c361c",
 "first_seen": "baseline"
+},
+{
+"title": "Conte musical : La chèvre de Monsieur Seguin",
+"date": "2026-10-10",
+"venue": "Conservatoire Municipal Claude Debussy - site Courcelles",
+"venue_slug": "conservatoire-municipal-claude-debussy-site-courcelles",
+"source": "opendata",
+"time": "15:00",
+"url": "https://www.paris.fr/evenements/conte-musical-la-chevre-de-monsieur-seguin-123656",
+"ticket_url": null,
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Enfants, Littérature",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "L'Ensemble Pluralis vous propose de découvrir une relecture captivante de \"La Chèvre de Monsieur Seguin\" dans une version conte musical composée par Olivier Penard.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-6eb74edabaf646148e496ccb4dd5c444.png",
+"address": "222 rue de Courcelles, 75017, Paris 17e arr.",
+"area": "17e",
+"headliner": "Conte musical",
+"support": [
+"La chèvre de Monsieur Seguin"
+],
+"players": {},
+"lat": 48.8883719867507,
+"lon": 2.29422203371965,
+"is_music": true,
+"id": "645f9f9810e6",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Images italiennes : de la scène au grand écran",
@@ -23875,7 +23873,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2238/monolord-dopelord/?of=23",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2238/monolord-dopelord/?of=22",
 "ticket_url": "https://www.facebook.com/events/1162577382556290/",
 "price": null,
 "free": false,
@@ -24937,7 +24935,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2195/igo/?of=24",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2195/igo/?of=23",
 "ticket_url": "https://shotgun.live/fr/events/igo-la-maroquinerie",
 "price": null,
 "free": false,
@@ -25466,7 +25464,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2317/felhur-andro-complet/?of=25",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2317/felhur-andro-complet/?of=24",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -25719,8 +25717,8 @@
 "players": {
 "Mozart": {
 "bandcamp": {
-"url": "https://wolfgang-amadeus-mozart.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://wolfgang-amadeus-mozart.bandcamp.com"
 }
 }
 },
@@ -25759,6 +25757,37 @@
 "lon": 2.33328899477297,
 "is_music": true,
 "id": "7d06af0034e4",
+"first_seen": "baseline"
+},
+{
+"title": "\"Sonates\" de Françis Poulenc",
+"date": "2026-10-13",
+"venue": "Mairie du 7e arrondissement",
+"venue_slug": "mairie-du-7e-arrondissement",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/sonates-de-francis-poulenc-123718",
+"ticket_url": null,
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Pour le lancement de la saison culturelle 2026-2027, le conservatoire Erik Satie et ses professeurs ont le plaisir de vous convier à participer au concert \"Sonates\" de Francis Poulenc, mardi 13 octobre à 19h, dans la salle des fêtes de la Mairie du 7e arrondissement.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/11/huge-ddfae9af510bfc25f516925884c78f4c.jpg",
+"address": "116 rue de Grenelle, 75007, Paris",
+"area": "7e",
+"headliner": "\"Sonates\" de Françis Poulenc",
+"support": [],
+"players": {},
+"lat": 48.856866,
+"lon": 2.320044,
+"is_music": true,
+"id": "9bab175a5968",
 "first_seen": "baseline"
 },
 {
@@ -25834,7 +25863,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2174/il-est-vilaine-complet/?of=26",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2174/il-est-vilaine-complet/?of=25",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -26218,8 +26247,8 @@
 "players": {
 "Mozart": {
 "bandcamp": {
-"url": "https://wolfgang-amadeus-mozart.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://wolfgang-amadeus-mozart.bandcamp.com"
 }
 }
 },
@@ -26408,7 +26437,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2125/les-negresses-vertes-complet/?of=27",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2125/les-negresses-vertes-complet/?of=26",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -26563,39 +26592,6 @@
 "is_music": true,
 "id": "d238e62bb7a3",
 "first_seen": "baseline"
-},
-{
-"title": "ISABELLE’S CABARET ORCHESTRA",
-"date": "2026-10-14",
-"venue": "Café de la Danse",
-"venue_slug": "cafe-de-la-danse",
-"source": "cafedeladanse",
-"time": "20:30",
-"url": "https://www.cafedeladanse.com/event/isabelles-cabaret-orchestra/",
-"ticket_url": null,
-"price": "30€ €",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Jazz",
-"genres": [
-"jazz"
-],
-"genre_source": "site",
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": null,
-"address": "5 passage Louis-Philippe, 75011 Paris",
-"area": "Bastille",
-"headliner": "ISABELLE’S CABARET ORCHESTRA",
-"support": [],
-"players": {},
-"lat": 48.8538,
-"lon": 2.3719,
-"is_music": true,
-"id": "0fe997e5693f",
-"first_seen": "2026-09-11"
 },
 {
 "title": "Jozeph x Jude Aston",
@@ -27381,7 +27377,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2367/les-negresses-vertes-complet/?of=28",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2367/les-negresses-vertes-complet/?of=27",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -27841,6 +27837,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "King Woman",
+"date": "2026-10-15",
+"venue": "Petit Bain",
+"venue_slug": "petit-bain",
+"source": "petitbain",
+"time": null,
+"url": "https://petitbain.org/evenement/king-woman/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "concerts",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://petitbain.org/wp-content/uploads/2026/09/postguest-500x500.png",
+"address": "7 port de la Gare, 75013 Paris",
+"area": "13e",
+"headliner": "King Woman",
+"support": [],
+"players": {},
+"lat": 48.8326,
+"lon": 2.3773,
+"is_music": true,
+"id": "ded5eed2f350",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Master classes, ateliers, rencontres, restitutions et conférences",
 "date": "2026-10-16",
 "venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
@@ -28085,7 +28112,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2102/the-narrator/?of=29",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2102/the-narrator/?of=28",
 "ticket_url": "https://bit.ly/TheNarrator_Paris26",
 "price": null,
 "free": false,
@@ -28515,6 +28542,39 @@
 "is_music": true,
 "id": "f16e4d8da064",
 "first_seen": "baseline"
+},
+{
+"title": "HONNE",
+"date": "2026-10-16",
+"venue": "Café de la Danse",
+"venue_slug": "cafe-de-la-danse",
+"source": "cafedeladanse",
+"time": null,
+"url": "https://www.cafedeladanse.com/event/honne-2/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Alternatif",
+"genres": [
+"indie"
+],
+"genre_source": "site",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": null,
+"address": "5 passage Louis-Philippe, 75011 Paris",
+"area": "Bastille",
+"headliner": "HONNE",
+"support": [],
+"players": {},
+"lat": 48.8538,
+"lon": 2.3719,
+"is_music": true,
+"id": "9bc1ac703acb",
+"first_seen": "2026-09-12"
 },
 {
 "title": "MaMA Music & Convention 2026",
@@ -29018,7 +29078,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2227/the-buttshakers-xxl/?of=30",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2227/the-buttshakers-xxl/?of=29",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/the-buttshakers-billet/idmanif/653071/idtier/38743526",
 "price": null,
 "free": false,
@@ -29887,7 +29947,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2217/ulrika-spacek/?of=31",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2217/ulrika-spacek/?of=30",
 "ticket_url": "https://link.dice.fm/W207af5024a4",
 "price": null,
 "free": false,
@@ -30308,7 +30368,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2267/my-new-band-believe/?of=32",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2267/my-new-band-believe/?of=31",
 "ticket_url": "https://link.dice.fm/c5512cc025e0",
 "price": null,
 "free": false,
@@ -30537,7 +30597,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2288/static-dress/?of=33",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2288/static-dress/?of=32",
 "ticket_url": "https://www.aegpresents.fr/event/static-dress/",
 "price": null,
 "free": false,
@@ -30970,7 +31030,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2253/zed-yun-pavarotti/?of=34",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2253/zed-yun-pavarotti/?of=33",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/zed-yun-pavarotti-billet/idmanif/656758",
 "price": null,
 "free": false,
@@ -31596,7 +31656,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2282/dov-e-liana-complet/?of=35",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2282/dov-e-liana-complet/?of=34",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -32288,6 +32348,40 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-10-23",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "32ab9156652c",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Makthaverskan",
 "date": "2026-10-23",
 "venue": "Supersonic",
@@ -32394,7 +32488,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2328/dov-e-liana/?of=36",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2328/dov-e-liana/?of=35",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -32484,8 +32578,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -32859,7 +32953,7 @@
 "first_seen": "baseline"
 },
 {
-"title": "Bojan Z « Solobsession » + invité mystère !",
+"title": "Bojan Z & Henri Texier « Solobsession »",
 "date": "2026-10-23",
 "venue": "Sunset / Sunside",
 "venue_slug": "sunset-sunside",
@@ -32882,14 +32976,14 @@
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/BZ-2-©-Laetitia-Dumez-scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
 "area": "Châtelet",
-"headliner": "Bojan Z « Solobsession »",
+"headliner": "Bojan Z & Henri Texier « Solobsession »",
 "support": [],
 "players": {},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
-"id": "57f367c35463",
-"first_seen": "baseline"
+"id": "5224ac8a9ce6",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Minino Garay / Lucas Dorado / Pablo Vergara « Trio Argentina »",
@@ -33225,6 +33319,40 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-10-24",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "83367ef15600",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Julian Pollack « J3PO » Trio",
 "date": "2026-10-24",
 "venue": "Sunset / Sunside",
@@ -33363,7 +33491,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2335/dov-e-liana/?of=37",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2335/dov-e-liana/?of=36",
 "ticket_url": "https://shotgun.live/fr/events/dov-e-liana-la-maroquinerie-3",
 "price": null,
 "free": false,
@@ -34053,13 +34181,44 @@
 "first_seen": "baseline"
 },
 {
+"title": "Gs",
+"date": "2026-10-25",
+"venue": "La Boule Noire",
+"venue_slug": "la-boule-noire",
+"source": "boulenoire",
+"time": "19:30",
+"url": "https://laboule-noire.fr/gs/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": null,
+"address": "120 boulevard de Rochechouart, 75018 Paris",
+"area": "Pigalle",
+"headliner": "Gs",
+"support": [],
+"players": {},
+"lat": 48.8823,
+"lon": 2.34,
+"is_music": true,
+"id": "aaa5ca915e60",
+"first_seen": "2026-09-12"
+},
+{
 "title": "ENOLA COX",
 "date": "2026-10-25",
 "venue": "La Maroquinerie",
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2220/enola-cox-complet/?of=38",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2220/enola-cox-complet/?of=37",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -34111,7 +34270,14 @@
 "support": [
 "CALOÉ"
 ],
-"players": {},
+"players": {
+"CALOÉ": {
+"bandcamp": {
+"url": "https://caloe.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1282483136/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8598354,
 "lon": 2.3478728,
 "is_music": true,
@@ -34293,7 +34459,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2364/typhee/?of=39",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2364/typhee/?of=38",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/typhee-billet/idmanif/671194/idseance/4402830/attribauto/idtier/38743526",
 "price": null,
 "free": false,
@@ -34686,7 +34852,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2271/kabeaushe/?of=40",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2271/kabeaushe/?of=39",
 "ticket_url": "https://link.dice.fm/V43caa334778",
 "price": null,
 "free": false,
@@ -35281,7 +35447,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2233/cardinals/?of=41",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2233/cardinals/?of=40",
 "ticket_url": "https://tix.to/cardinals-2026SL/hlfgy",
 "price": null,
 "free": false,
@@ -35437,6 +35603,39 @@
 "is_music": true,
 "id": "88b2a9b1a17d",
 "first_seen": "baseline"
+},
+{
+"title": "Trio Escualo",
+"date": "2026-10-28",
+"venue": "Sunset / Sunside",
+"venue_slug": "sunset-sunside",
+"source": "tribe",
+"time": "20:30",
+"url": "https://www.sunset-sunside.com/concert/trio-escualo/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Découvrez l’âme vibrante de l’Amérique latine à travers les mélodies envoûtantes de ce trio peu commun. Le mélange particulier du violon, du bandolim et de la contrebasse permet à ces 3 musiciens d’explorer de nouvelles sonorités et de revisiter les trésors musicaux latino-américain avec passion, créativité et virtuosité.",
+"summary": null,
+"image": "https://www.sunset-sunside.com/app/uploads/2026/09/LucieBascoul_TrioEscualo_7-scaled.webp",
+"address": "60 rue des Lombards, 75001 Paris",
+"area": "Châtelet",
+"headliner": "Trio Escualo",
+"support": [],
+"players": {},
+"lat": 48.8595,
+"lon": 2.3474,
+"is_music": true,
+"id": "de30febfbb76",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Lisa Berri Quartet - « Odyssée »",
@@ -35940,7 +36139,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2202/marius/?of=42",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2202/marius/?of=41",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -36538,7 +36737,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2332/yvnnis-complet/?of=43",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2332/yvnnis-complet/?of=42",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -37239,7 +37438,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2294/mietze-conte/?of=44",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2294/mietze-conte/?of=43",
 "ticket_url": "https://shotgun.live/fr/events/mietze-conte-la-maroquinerie",
 "price": null,
 "free": false,
@@ -37703,7 +37902,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2304/web/?of=45",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2304/web/?of=44",
 "ticket_url": "https://spectacles.bleucitron.net/reserver/web-maroquinerie-paris/9933",
 "price": null,
 "free": false,
@@ -38323,7 +38522,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2300/ryan-beatty-complet/?of=46",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2300/ryan-beatty-complet/?of=45",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -38447,8 +38646,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -38685,37 +38884,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "CHARLOTTE ADIGÉRY & BOLIS PUPUL",
-"date": "2026-11-03",
-"venue": "Élysée Montmartre",
-"venue_slug": "elysee-montmartre",
-"source": "trianon",
-"time": null,
-"url": "https://www.elyseemontmartre.com/fr/programmation/charlotte-adigery-bolis-pupul/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://www.elyseemontmartre.com/wp-content/uploads/sites/2/charlotte-adigery-bolis-pupul-elysee-montmartre-700x700.jpg",
-"address": "72 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "CHARLOTTE ADIGÉRY & BOLIS PUPUL",
-"support": [],
-"players": {},
-"lat": 48.8826,
-"lon": 2.3445,
-"is_music": true,
-"id": "fc4eba1ab284",
-"first_seen": "baseline"
-},
-{
 "title": "Mario Canonge et Michel Zenino – Duo jazz",
 "date": "2026-11-04",
 "venue": "Le Baiser Salé",
@@ -38823,7 +38991,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2290/rikas-complet/?of=47",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2290/rikas-complet/?of=46",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -39208,7 +39376,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2211/talisco/?of=48",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2211/talisco/?of=47",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/talisco-billet/idmanif/650782/idtier/38743526",
 "price": null,
 "free": false,
@@ -39361,7 +39529,14 @@
 "area": "Pigalle",
 "headliner": "GIRLS IN HAWAII",
 "support": [],
-"players": {},
+"players": {
+"GIRLS IN HAWAII": {
+"bandcamp": {
+"url": "https://girlsinhawaiii.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=234085101/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -39666,7 +39841,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2256/de-staat/?of=49",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2256/de-staat/?of=48",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/de-staat-billet/idmanif/657540",
 "price": null,
 "free": false,
@@ -40285,6 +40460,39 @@
 "first_seen": "baseline"
 },
 {
+"title": "Estelle Perrault Quintet",
+"date": "2026-11-07",
+"venue": "Sunset / Sunside",
+"venue_slug": "sunset-sunside",
+"source": "tribe",
+"time": "19:00",
+"url": "https://www.sunset-sunside.com/concert/estelle-perrault-quintet-3/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Coming Soon",
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Taïwan a de multiples visages de multiples identités et autant de façons de se voir de s’entendre et d’être taïwanais. Il n’existe pas une seule manière de l’être. Sides of Formosa célèbre cette pluralité en réunissant des musiciens aux parcours taïwanais métissés et internationaux pour explorer un Taïwan multiple en mouvement impossible à réduire à une seule définition",
+"summary": null,
+"image": "https://www.sunset-sunside.com/app/uploads/2026/09/estelle-perrault-.webp",
+"address": "60 rue des Lombards, 75001 Paris",
+"area": "Châtelet",
+"headliner": "Estelle Perrault Quintet",
+"support": [],
+"players": {},
+"lat": 48.8595,
+"lon": 2.3474,
+"is_music": true,
+"id": "87ed6f112403",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Le cycle musical de Paul Serri au Théâtre de la Concorde !",
 "date": "2026-11-07",
 "venue": "Théâtre de la Concorde",
@@ -40355,7 +40563,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2312/saults/?of=0",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2312/saults/?of=49",
 "ticket_url": "https://my.weezevent.com/saults-2",
 "price": null,
 "free": false,
@@ -40411,6 +40619,40 @@
 "is_music": true,
 "id": "d506668f7ab9",
 "first_seen": "baseline"
+},
+{
+"title": "Monte le Son 2026 \"Ô féminins\" | Amari Natura - Live Session \"DIVINA\"",
+"date": "2026-11-07",
+"venue": "Médiathèque musicale de Paris – Christiane Eda-Pierre",
+"venue_slug": "mediatheque-musicale-de-paris-christiane-eda-pierre",
+"source": "opendata",
+"time": "20:00",
+"url": "https://www.paris.fr/evenements/melodrape-l-habit-fait-la-musique-performance-par-snake-hebi-123506",
+"ticket_url": null,
+"price": "Dans la limite des places disponibles",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Danse",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Pour démarrer en beauté le festival Monte le Son \"Ô féminins\" et dans la continuité du cycle \"Musiques et exil\", la Médiathèque Musicale de Paris Christiane Eda-Pierre donne carte blanche à l'artiste vénézuélienne Amari Natura pour cette soirée. Venez danser, vibrer, vous sentir libre et célébrer qui vous êtes, sans frontières, avec elle!",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-5798d1d6437c2746ada779c84494fc1c.jpg",
+"address": "8 porte Saint Eustache, 75001, Paris",
+"area": "1er",
+"headliner": "Monte le Son 2026 \"Ô féminins\"",
+"support": [
+"Amari Natura",
+"Live Session \"DIVINA\""
+],
+"players": {},
+"lat": 48.862798,
+"lon": 2.345658,
+"is_music": true,
+"id": "828556f51aec",
+"first_seen": "2026-09-12"
 },
 {
 "title": "FRENCH KISS",
@@ -40808,8 +41050,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -40929,7 +41171,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2326/sons-of-legion-complet/?of=1",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2326/sons-of-legion-complet/?of=0",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -41516,7 +41758,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2212/allt/?of=2",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2212/allt/?of=1",
 "ticket_url": "https://bit.ly/Allt_Paris26",
 "price": null,
 "free": false,
@@ -42109,7 +42351,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2254/napa/?of=3",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2254/napa/?of=2",
 "ticket_url": "http://link.dice.fm/bb7f1a11c378",
 "price": null,
 "free": false,
@@ -42727,7 +42969,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2222/arthur-fu-bandini/?of=4",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2222/arthur-fu-bandini/?of=3",
 "ticket_url": "https://shotgun.live/fr/events/arthur-fu-bandini-en-concert-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -43264,7 +43506,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2214/the-veils/?of=5",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2214/the-veils/?of=4",
 "ticket_url": "https://link.dice.fm/qacd7abfda19",
 "price": "Billet : 27.29 EUR",
 "free": false,
@@ -43353,8 +43595,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -43791,7 +44033,14 @@
 "support": [
 "LE QUINT’UP"
 ],
-"players": {},
+"players": {
+"#Rdv": {
+"bandcamp": {
+"url": "https://rdvtheband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=316365808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8598354,
 "lon": 2.3478728,
 "is_music": true,
@@ -43871,7 +44120,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/1980/deelee-s/?of=6",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/1980/deelee-s/?of=5",
 "ticket_url": "https://dice.fm/event/53qxew-deelee-s-14th-dec-la-maroquinerie-paris-tickets",
 "price": null,
 "free": false,
@@ -44206,7 +44455,7 @@
 "ticket_url": null,
 "price": null,
 "free": false,
-"sold_out": false,
+"sold_out": true,
 "cancelled": false,
 "raw_genre": null,
 "genres": [],
@@ -44468,7 +44717,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2231/chinchilla/?of=7",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2231/chinchilla/?of=6",
 "ticket_url": "https://www.livenation.fr/chinchilla-tickets-adp1304513",
 "price": null,
 "free": false,
@@ -44880,7 +45129,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2258/hollysiz/?of=8",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2258/hollysiz/?of=7",
 "ticket_url": "https://www.concert-auguri.fr/fr/manifestation/4698/hollysiz",
 "price": null,
 "free": false,
@@ -44969,8 +45218,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -45150,7 +45399,7 @@
 "ticket_url": null,
 "price": null,
 "free": false,
-"sold_out": false,
+"sold_out": true,
 "cancelled": false,
 "raw_genre": null,
 "genres": [],
@@ -45177,7 +45426,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2259/hollysiz/?of=9",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2259/hollysiz/?of=8",
 "ticket_url": "https://www.concert-auguri.fr/fr/manifestation/4698/hollysiz",
 "price": null,
 "free": false,
@@ -45700,7 +45949,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2260/hollysiz/?of=10",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2260/hollysiz/?of=9",
 "ticket_url": "https://www.concert-auguri.fr/fr/manifestation/4698/hollysiz",
 "price": null,
 "free": false,
@@ -46199,7 +46448,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2264/death-valley-girls/?of=11",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2264/death-valley-girls/?of=10",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/death-valley-girls-billet/idmanif/658213/idtier/38743526",
 "price": null,
 "free": false,
@@ -46551,12 +46800,53 @@
 "support": [
 "ISAIAS ALVES"
 ],
-"players": {},
+"players": {
+"#Rdv": {
+"bandcamp": {
+"url": "https://rdvtheband.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=316365808/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+}
+}
+},
 "lat": 48.8598354,
 "lon": 2.3478728,
 "is_music": true,
 "id": "3d6d6a0ad6b0",
 "first_seen": "baseline"
+},
+{
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-11-20",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "1c346fc676d5",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Récital de piano : Vanessa Wagner",
@@ -46666,7 +46956,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2142/zebrahead/?of=12",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2142/zebrahead/?of=11",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -46722,8 +47012,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -47297,7 +47587,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2180/horskh/?of=13",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2180/horskh/?of=12",
 "ticket_url": "https://billetterie.seetickets.fr/horskh-la-maroquinerie-paris-21-novembre-2026-css5-baseproductions-pg101-ri11609683.html",
 "price": null,
 "free": false,
@@ -47819,7 +48109,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2316/ulysse/?of=14",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2316/ulysse/?of=13",
 "ticket_url": "https://shotgun.live/fr/events/ulysse-la-maroquinerie",
 "price": null,
 "free": false,
@@ -48107,7 +48397,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2262/izae/?of=15",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2262/izae/?of=14",
 "ticket_url": "https://www.billetweb.fr/izae-la-maroquinerie",
 "price": null,
 "free": false,
@@ -48364,7 +48654,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2274/thomas-kahn/?of=16",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2274/thomas-kahn/?of=15",
 "ticket_url": "https://caramba.trium.fr/fr/t/-/event/67711",
 "price": null,
 "free": false,
@@ -48723,7 +49013,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2303/anais-rosso/?of=17",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2303/anais-rosso/?of=16",
 "ticket_url": "https://www.billetweb.fr/anais-rosso-maroquinerie",
 "price": null,
 "free": false,
@@ -49206,7 +49496,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2281/bardix-le-gaulois/?of=18",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2281/bardix-le-gaulois/?of=17",
 "ticket_url": "https://shotgun.live/events/bardix-le-gaulois-la-maroquinerie",
 "price": null,
 "free": false,
@@ -49328,7 +49618,7 @@
 "first_seen": "2026-09-08"
 },
 {
-"title": "Antoine Boyer + special Guest",
+"title": "Antoine Boyer & Mattéo Mancuso",
 "date": "2026-11-26",
 "venue": "Sunset / Sunside",
 "venue_slug": "sunset-sunside",
@@ -49352,14 +49642,14 @@
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Antoine-Boyer-©Antje_kroeger--scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
 "area": "Châtelet",
-"headliner": "Antoine Boyer",
+"headliner": "Antoine Boyer & Mattéo Mancuso",
 "support": [],
 "players": {},
 "lat": 48.8595,
 "lon": 2.3474,
 "is_music": true,
-"id": "acfad7c0da2e",
-"first_seen": "baseline"
+"id": "df828a9c192f",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Erella « Héritages »",
@@ -49687,6 +49977,40 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-11-27",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "9efa8d029ad1",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Seb Lowe • Kate Couriel • Bay Haven",
 "date": "2026-11-27",
 "venue": "Supersonic",
@@ -49761,7 +50085,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2203/chest/?of=19",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2203/chest/?of=18",
 "ticket_url": "https://link.dice.fm/B65cf7dc547a",
 "price": null,
 "free": false,
@@ -50268,6 +50592,39 @@
 "first_seen": "baseline"
 },
 {
+"title": "Billie Brelok",
+"date": "2026-11-28",
+"venue": "Bibliothèque Robert Sabatier",
+"venue_slug": "bibliotheque-robert-sabatier",
+"source": "opendata",
+"time": "18:00",
+"url": "https://www.paris.fr/evenements/billie-brelok-123712",
+"ticket_url": null,
+"price": "Inscriptions sur Billetweb",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"electro"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "La bibliothèque Robert Sabatier recevra la rappeuse Billie Brelok accompagné de DJ Junkaz Lou aux patines",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/11/huge-9a057db96d55c46bc06a85741357c757.jpg",
+"address": "29 rue Hermel, 75018, Paris",
+"area": "18e",
+"headliner": "Billie Brelok",
+"support": [],
+"players": {},
+"lat": 48.891536,
+"lon": 2.344436,
+"is_music": true,
+"id": "4a975a0d0602",
+"first_seen": "baseline"
+},
+{
 "title": "Concert de Souad Massi",
 "date": "2026-11-28",
 "venue": "L'Institut du Monde Arabe",
@@ -50300,6 +50657,40 @@
 "is_music": true,
 "id": "c359288ba943",
 "first_seen": "baseline"
+},
+{
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-11-28",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "f9b86a36ebd0",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Antoine Boyer Solo",
@@ -50813,7 +51204,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2299/crc/?of=20",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2299/crc/?of=19",
 "ticket_url": "https://link.dice.fm/Se14428cdfa3",
 "price": null,
 "free": false,
@@ -51071,7 +51462,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2241/julia-wolf/?of=21",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2241/julia-wolf/?of=20",
 "ticket_url": "https://www.livenation.fr/julia-wolf-tickets-adp1569646?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnpObblEpPdTiaZKguAF6Yrq3CYO4SyvmuVyMIN2KSYNEj5e2vZhZ54_W4r7c_aem_AQTfD25dR5d988YdWq-Yhg",
 "price": null,
 "free": false,
@@ -51657,7 +52048,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2334/modestep/?of=22",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2334/modestep/?of=21",
 "ticket_url": "https://shotgun.live/fr/events/modestep-la-maroquinerie",
 "price": null,
 "free": false,
@@ -52114,7 +52505,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2149/changeline-complet/?of=23",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2149/changeline-complet/?of=22",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -52203,6 +52594,39 @@
 "is_music": true,
 "id": "75cdc7ee41e0",
 "first_seen": "baseline"
+},
+{
+"title": "Clémence de Tournemire",
+"date": "2026-12-03",
+"venue": "Sunset / Sunside",
+"venue_slug": "sunset-sunside",
+"source": "tribe",
+"time": "21:30",
+"url": "https://www.sunset-sunside.com/concert/clemence-de-tournemire/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Coming Soon",
+"genres": [
+"soul-rnb"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "« A Tribute to Nina » : L’héritage de la High Priestess of Soul, revisité Clémence de Tournemire rend hommage à Nina Simone avec justesse et singularité. Pas de copie, mais une interprétation vivante, où chaque note résonne comme un dialogue entre hier et aujourd’hui. Sur scène, une alchimie rare : des mélodies qui s’enflamment et des silences qui parlent… Un concert où l’âme de Nina Simone trouve",
+"summary": null,
+"image": "https://www.sunset-sunside.com/app/uploads/2026/09/CLEMENCE-DE-TOURNEMIRE-.webp",
+"address": "60 rue des Lombards, 75001 Paris",
+"area": "Châtelet",
+"headliner": "Clémence de Tournemire",
+"support": [],
+"players": {},
+"lat": 48.8595,
+"lon": 2.3474,
+"is_music": true,
+"id": "39fb3e2ea5a7",
+"first_seen": "2026-09-12"
 },
 {
 "title": "Jam Session Jazz au 38Riv, Les jeudis du CNSMDP",
@@ -52474,7 +52898,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2209/edgar/?of=24",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2209/edgar/?of=23",
 "ticket_url": "https://my.weezevent.com/edgar-la-maroquinerie-paris",
 "price": null,
 "free": false,
@@ -53090,6 +53514,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "Nous sommes le vent, un concert autour des compositions de Rozann Bézier au Théâtre Silvia Monfort",
+"date": "2026-12-05",
+"venue": "Théâtre Silvia Monfort",
+"venue_slug": "theatre-silvia-monfort",
+"source": "opendata",
+"time": "18:00",
+"url": "https://www.paris.fr/evenements/nous-sommes-le-vent-un-concert-autour-des-compositions-de-rozann-bezier-au-theatre-silvia-monfort-115130",
+"ticket_url": "https://theatresilviamonfort.mapado.com/event/752553-nous-sommes-le-vent",
+"price": "Prix libre entre 5€ et 20€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Une bourrasque musicale déferle sur le Théâtre Silvia Monfort, menée tambour battant par l’orchestre d’harmonie de La Sirène de Paris.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/06/29/huge-9008695d9ee7fdba5600e29f14f70a62.jpg",
+"address": "106 RUE BRANCION, 75015, Paris",
+"area": "15e",
+"headliner": "Nous sommes le vent",
+"support": [],
+"players": {},
+"lat": 48.830303,
+"lon": 2.301819,
+"is_music": true,
+"id": "879cdc93374b",
+"first_seen": "baseline"
+},
+{
 "title": "Concert Nous Sommes le Vent par l'harmonie de La Sirène et Hormê",
 "date": "2026-12-05",
 "venue": "Théâtre Silvia Monfort",
@@ -53120,37 +53575,6 @@
 "lon": 2.3018189716627,
 "is_music": true,
 "id": "4291a6117490",
-"first_seen": "baseline"
-},
-{
-"title": "Nous sommes le vent, un concert autour des compositions de Rozann Bézier au Théâtre Silvia Monfort",
-"date": "2026-12-05",
-"venue": "Théâtre Silvia Monfort",
-"venue_slug": "theatre-silvia-monfort",
-"source": "opendata",
-"time": "18:00",
-"url": "https://www.paris.fr/evenements/nous-sommes-le-vent-un-concert-autour-des-compositions-de-rozann-bezier-au-theatre-silvia-monfort-115130",
-"ticket_url": "https://theatresilviamonfort.mapado.com/event/752553-nous-sommes-le-vent",
-"price": "Prix libre entre 5€ et 20€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Une bourrasque musicale déferle sur le Théâtre Silvia Monfort, menée tambour battant par l’orchestre d’harmonie de La Sirène de Paris.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/06/29/huge-9008695d9ee7fdba5600e29f14f70a62.jpg",
-"address": "106 RUE BRANCION, 75015, Paris",
-"area": "15e",
-"headliner": "Nous sommes le vent",
-"support": [],
-"players": {},
-"lat": 48.830303,
-"lon": 2.301819,
-"is_music": true,
-"id": "879cdc93374b",
 "first_seen": "baseline"
 },
 {
@@ -53195,7 +53619,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2252/triggerfinger/?of=25",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2252/triggerfinger/?of=24",
 "ticket_url": "https://bit.ly/Triggerfinger_Paris26",
 "price": null,
 "free": false,
@@ -53626,7 +54050,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2250/nobodylikesbirdie/?of=26",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2250/nobodylikesbirdie/?of=25",
 "ticket_url": "https://shotgun.live/fr/events/nobodylikesbirdie-la-maroquinerie",
 "price": null,
 "free": false,
@@ -53980,7 +54404,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2292/oathbreaker/?of=27",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2292/oathbreaker/?of=26",
 "ticket_url": "https://link.dice.fm/Ia923b9f20f9",
 "price": null,
 "free": false,
@@ -54073,7 +54497,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2297/minitel/?of=28",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2297/minitel/?of=27",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/minitel-billet/idmanif/663193/idtier/38743526",
 "price": null,
 "free": false,
@@ -54262,6 +54686,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "Auditions 26-27",
+"date": "2026-12-09",
+"venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
+"venue_slug": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
+"source": "opendata",
+"time": "18:30",
+"url": "https://www.paris.fr/evenements/auditions-25-26-92345",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Retrouvez nos élèves et en concerts de classes instrumentales, vocales, et musique d'ensembles lors de ces rendez-vous réguliers.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/09/10/huge-ca46794bcd60f69a830999c685ddad41.jpg",
+"address": "14, rue de Madrid, 75008, Paris",
+"area": "8e",
+"headliner": "Auditions 26-27",
+"support": [],
+"players": {},
+"lat": 48.8785160001733,
+"lon": 2.32069904092731,
+"is_music": true,
+"id": "72ed6836ed2f",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Mario Canonge et Michel Zenino – DUO JAZZ",
 "date": "2026-12-09",
 "venue": "Le Baiser Salé",
@@ -54334,7 +54789,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2289/lemofil-complet/?of=29",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2289/lemofil-complet/?of=28",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -55047,8 +55502,8 @@
 "players": {
 "Take Me Out": {
 "bandcamp": {
-"url": "https://takemeout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3410140362/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://takemeout.bandcamp.com"
 }
 }
 },
@@ -55096,7 +55551,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2244/maddy-street/?of=30",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2244/maddy-street/?of=29",
 "ticket_url": "https://shotgun.live/fr/events/maddy-street-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -55291,7 +55746,7 @@
 "venue_slug": "eglise-de-la-madeleine",
 "source": "opendata",
 "time": "20:45",
-"url": "https://www.paris.fr/evenements/copie-de-le-messie-de-haendel-106978",
+"url": "https://www.paris.fr/evenements/le-messie-de-haendel-106885",
 "ticket_url": "https://www.orchestrehelios.com/concerts",
 "price": "DE 60 à 20 €",
 "free": false,
@@ -55552,7 +56007,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2308/jeanne-complet/?of=31",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2308/jeanne-complet/?of=30",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -55982,7 +56437,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2270/maustetytot/?of=32",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2270/maustetytot/?of=31",
 "ticket_url": "https://billetterie.seetickets.fr/maustetytot-la-maroquinerie-paris-13-decembre-2026-css5-baseproductions-pg101-ri11763649.html",
 "price": null,
 "free": false,
@@ -56241,7 +56696,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2291/youv-dee/?of=33",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2291/youv-dee/?of=32",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -56562,7 +57017,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": null,
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2223/barbara-carlotti/?of=34",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2223/barbara-carlotti/?of=33",
 "ticket_url": "https://barbaracarlotti.lnk.to/Maroquinerie",
 "price": null,
 "free": false,
@@ -56790,7 +57245,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2221/adele-robin/?of=35",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2221/adele-robin/?of=34",
 "ticket_url": "https://spectacles.bleucitron.net/reserver/adele-et-robin-maroquinerie-paris/8909",
 "price": null,
 "free": false,
@@ -57211,6 +57666,49 @@
 "first_seen": "baseline"
 },
 {
+"title": "FEUX D'ARTIFICES | HAENDEL | MOZART",
+"date": "2026-12-17",
+"venue": "Théâtre des Champs-Elysées",
+"venue_slug": "theatre-des-champs-elysees",
+"source": "opendata",
+"time": "20:00",
+"url": "https://www.paris.fr/evenements/feux-d-artifices-haendel-mozart-123626",
+"ticket_url": "https://www.orchestredechambredeparis.com/concert/feux-dartifices/",
+"price": "De 10 à 64€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Et si vous terminiez l’année par un feu d’artifice… musical ? Le jeudi 17 décembre au Théâtre des Champs-Elysées.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-d788bf27be64d639e2142bfbbbbd6c37.jpg",
+"address": "15 avenue Montaigne, 75008, Paris",
+"area": "8e",
+"headliner": "FEUX D'ARTIFICES",
+"support": [
+"HAENDEL",
+"MOZART"
+],
+"players": {
+"MOZART": {
+"bandcamp": {
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=812920267/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://wolfgang-amadeus-mozart.bandcamp.com"
+}
+}
+},
+"lat": 48.8656719908424,
+"lon": 2.30327901537683,
+"is_music": true,
+"id": "c633154c6fe5",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Anne Paceo",
 "date": "2026-12-17",
 "venue": "conservatoire Léo Delibes",
@@ -57509,6 +58007,40 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-12-18",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "2d5df64e3b41",
+"first_seen": "2026-09-12"
+},
+{
 "title": "BRARDA",
 "date": "2026-12-18",
 "venue": "La Boule Noire",
@@ -57705,6 +58237,37 @@
 "first_seen": "baseline"
 },
 {
+"title": "ORIENT-EXPRESS",
+"date": "2026-12-19",
+"venue": "Salle Cortot",
+"venue_slug": "salle-cortot",
+"source": "opendata",
+"time": "15:00",
+"url": "https://www.paris.fr/evenements/orient-express-123627",
+"ticket_url": "https://www.orchestredechambredeparis.com/concert/orient-express/",
+"price": "De 5 à 20€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "ORIENT-EXPRESS à la Salle Cortot : un voyage musical de Paris à Istanbul",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-fbcaa08632053fc91641e954f10c04d6.png",
+"address": "78 rue Cardinet, 75017, Paris",
+"area": "17e",
+"headliner": "ORIENT-EXPRESS",
+"support": [],
+"players": {},
+"lat": 48.8842040015777,
+"lon": 2.30925900037832,
+"is_music": true,
+"id": "1daf6128c676",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Un mois avec Bach : Comme Bach",
 "date": "2026-12-19",
 "venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
@@ -57774,6 +58337,40 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les soirées cabaret du Bal Blomet",
+"date": "2026-12-19",
+"venue": "Le Bal Blomet",
+"venue_slug": "le-bal-blomet",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/les-soirees-cabaret-du-bal-blomet-123575",
+"ticket_url": "https://www.balblomet.fr",
+"price": "26/16€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Humour, Spectacle musical",
+"genres": [
+"chanson",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le rendez vous incontournable des amoureux de la chanson introuvable, oubliée, décalée, interprétée par un orchestre de haut vol et des chanteurs tous plus uniques les uns que les autres.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-ddacb2e6833590b36fe88d295b97f986.jpg",
+"address": "33 Rue Blomet, 75015, Paris",
+"area": "15e",
+"headliner": "Les soirées cabaret du Bal Blomet",
+"support": [],
+"players": {},
+"lat": 48.8427399838542,
+"lon": 2.30613598707419,
+"is_music": true,
+"id": "4f26c4a9670d",
+"first_seen": "2026-09-12"
+},
+{
 "title": "Hommage à Charles Trenet",
 "date": "2026-12-19",
 "venue": "Sunset / Sunside",
@@ -57814,7 +58411,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2245/nassi/?of=36",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2245/nassi/?of=35",
 "ticket_url": "https://link.dice.fm/sc8dab797740",
 "price": null,
 "free": false,
@@ -59246,7 +59843,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2287/vernis-rouge/?of=37",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2287/vernis-rouge/?of=36",
 "ticket_url": "https://my.weezevent.com/vernis-rouge-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -59597,7 +60194,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2243/lost-in-kyiv/?of=38",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2243/lost-in-kyiv/?of=37",
 "ticket_url": "https://found.ee/910Xp8",
 "price": null,
 "free": false,
@@ -59722,6 +60319,138 @@
 "is_music": true,
 "id": "00b1922611a6",
 "first_seen": "2026-09-11"
+},
+{
+"title": "Célébration du Bicentenaire de Beethoven",
+"date": "2027-01-10",
+"venue": "Théâtre du Châtelet",
+"venue_slug": "theatre-du-chatelet",
+"source": "opendata",
+"time": "11:00",
+"url": "https://www.paris.fr/evenements/celebration-du-bicentenaire-de-beethoven-113771",
+"ticket_url": "https://www.chatelet.com/programmation/26-27/celebration-du-bicentenaire-de-beethoven/",
+"price": "De 5 à 35 euros.",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Dans le cadre des Concerts du Dimanche Matin.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/05/26/huge-927ec815dd6cb8b31ee5c16817259d89.png",
+"address": "1 place du Châtelet, 75001, Paris",
+"area": "1er",
+"headliner": "Célébration du Bicentenaire de Beethoven",
+"support": [],
+"players": {},
+"lat": 48.857614,
+"lon": 2.346758,
+"is_music": true,
+"id": "015442f5ee31",
+"first_seen": "2026-09-12"
+},
+{
+"title": "Concert Doudou & Magie « Edou et le Lac des Cygnes »",
+"date": "2027-01-10",
+"venue": "Salle Gaveau",
+"venue_slug": "salle-gaveau",
+"source": "opendata",
+"time": "11:30",
+"url": "https://www.paris.fr/evenements/concert-doudou-magie-edou-et-le-lac-des-cygnes-114044",
+"ticket_url": "https://www.orchestrecolonne.fr/edou-et-le-lac-des-cygnes/",
+"price": "20€ / 10€ (réduit)",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "De 0 à 5 ans, le concert Doudou et Magie propose une expérience douce, sensorielle et ludique, parfaitement adaptée aux tout-petits. A travers les aventures d’Édou le doudou joyeux et malicieux, ils pourront découvrir la musique classique, chanter des comptines et s’émerveiller devant de petits tours de magie, pour un moment d’éveil unique et inoubliable, partagé avec leurs parents.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/06/15/huge-e2a3fe4eae33c56adf455a60d999111d.jpg",
+"address": "45 rue la Boétie, 75008, Paris",
+"area": "8e",
+"headliner": "Concert Doudou & Magie « Edou et le Lac des Cygnes »",
+"support": [],
+"players": {},
+"lat": 48.8735280134126,
+"lon": 2.31419501933931,
+"is_music": true,
+"id": "6fff98083f48",
+"first_seen": "2026-09-12"
+},
+{
+"title": "« Tchaïkovsky, Le Lac des Cygnes» par l'Orchestre Colonne",
+"date": "2027-01-10",
+"venue": "Salle Gaveau",
+"venue_slug": "salle-gaveau",
+"source": "opendata",
+"time": "16:00",
+"url": "https://www.paris.fr/evenements/tchaikovsky-le-lac-des-cygnes-par-l-orchestre-colonne-114042",
+"ticket_url": "https://www.orchestrecolonne.fr/tchaikovsky-le-lac-des-cygnes/",
+"price": "50€ / 40€ / 30€ / 20€ / 10€ (réduit)",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Le Lac des cygnes rayonne au cœur d’un programme qui fait dialoguer ballet, imagination et virtuosité dans un même concert.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/05/26/huge-6ddfe68e920ad55ec2f66cc889d76d1c.jpg",
+"address": "45 rue la Boétie, 75008, Paris",
+"area": "8e",
+"headliner": "« Tchaïkovsky",
+"support": [
+"Le Lac des Cygnes» par l'Orchestre Colonne"
+],
+"players": {},
+"lat": 48.8735280134126,
+"lon": 2.31419501933931,
+"is_music": true,
+"id": "c0210b620c2d",
+"first_seen": "2026-09-12"
+},
+{
+"title": "#LaJamDuDimanche DE MAXENCE LEROY",
+"date": "2027-01-10",
+"venue": "Le Baiser Salé",
+"venue_slug": "le-baiser-sale",
+"source": "opendata",
+"time": "20:30",
+"url": "https://www.paris.fr/evenements/lajamdudimanche-de-maxence-leroy-114901",
+"ticket_url": null,
+"price": "gratuit sous condition",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Festival",
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Entre standards revisités, grooves spontanés et dialogues musicaux inattendus, La jam de Maxence promet un jazz vivant, accessible et tourné vers l’avenir.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/06/25/huge-dfde84057d5455d620be90c2e026bd22.jpeg",
+"address": "58 Rue des Lombards, 75001, Paris",
+"area": "Châtelet",
+"headliner": "#LaJamDuDimanche DE MAXENCE LEROY",
+"support": [],
+"players": {},
+"lat": 48.8598354,
+"lon": 2.3478728,
+"is_music": true,
+"id": "f5af67b8a4a0",
+"first_seen": "2026-09-12"
 }
 ]
 }
