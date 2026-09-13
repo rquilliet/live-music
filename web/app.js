@@ -198,22 +198,29 @@
     };
     return "https://calendar.google.com/calendar/render?" + Object.entries(q).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
   }
-  // "WhatsApp" link: French recommendation, our deep link first (WhatsApp previews the first URL),
-  // then the facts, the ticket/venue link last. Emoji as escapes so no editor/encoding can mangle them.
+  // "WhatsApp" link (REM-24, REM-29): a French recommendation, the facts, the ticket/venue link, our deep link last.
+  // The desktop app received only our link out of the previous message (REM-29); nothing documents why, so every
+  // suspect is avoided at once: api.whatsapp.com/send rather than wa.me (one redirect and one re-encoding fewer),
+  // no emoji and no URL on the first line, both links at the end, the hash-free ?e= form of the deep link (a "#"
+  // that WhatsApp re-decodes into its whatsapp://send?text= URL would cut the message there). encodeURIComponent
+  // keeps the newlines as %0A and the "#" of any ticket URL as %23.
   function whatsappUrl(e) {
     const [head, ...sup] = lineup(e);
     const ticket = safeUrl(e.ticket_url), link = ticket || safeUrl(e.url);
     const lines = [
-      "Voici un concert qui pourrait t'int\u00e9resser \u{1F440}",
-      shareLink(e),
+      "Un concert qui pourrait t'int\u00e9resser :",
       `${head}${sup.length ? " avec " + sup.join(", ") : ""}`,
       `${fmtDay(e.date)}${e.time ? " \u00b7 " + fmtTime(e.time) : ""}`,
       `${e.venue}${e.area ? " (" + e.area + ")" : ""}`,
       link ? `${ticket ? "Billets" : "Infos"} : ${link}` : "",
+      shareLink(e),
     ].filter(Boolean);
-    return "https://wa.me/?text=" + encodeURIComponent(lines.join("\n"));
+    return "https://api.whatsapp.com/send?text=" + encodeURIComponent(lines.join("\n"));
   }
-  function shareLink(e) { return location.origin + location.pathname + "#e=" + e.id; }
+  // The link we hand out (WhatsApp, Agenda): ?e=<id> — a query survives the messengers' re-encoding where a #fragment
+  // may not, and it reaches the server (a per-concert preview becomes possible). The page itself keeps #e=<id> in the
+  // address bar (fillDetail): opening a sheet must not reload the page, and both forms open the sheet at boot.
+  function shareLink(e) { return location.origin + location.pathname + "?e=" + e.id; }
 
   // ------------------------------------------------------------ filtering
   // The toggles (Nouveautés, Mes concerts, Mes salles, Mes artistes) narrow the programme before the genre / style / venue picks.
@@ -870,7 +877,7 @@
   function fillDetail(e) {
     current = e;
     detail.hidden = false;
-    history.replaceState(null, "", "#e=" + e.id);
+    history.replaceState(null, "", location.pathname + "#e=" + e.id);   // drops a ?e= the visitor came in with
     document.body.style.overflow = "hidden";
     sheet.scrollTop = 0; hero.style.transform = ""; menuOpen = false;
     hero.style.backgroundImage = e.image ? `url("${e.image}")` : "";
@@ -1265,7 +1272,8 @@
     DATA = d;
     state.near = false; // ask for the position again on each visit
     buildIndex(); renderMeta(); render(); renderTa();
-    const m = location.hash.match(/^#e=([a-f0-9]+)/);   // shareable link straight to a concert
+    // Shareable link straight to a concert: ?e=<id> (what we hand out since REM-29) or the older #e=<id>.
+    const m = /[?&]e=([a-f0-9]+)/.exec(location.search) || /^#e=([a-f0-9]+)/.exec(location.hash);
     const linked = m && d.events.find(x => x.id === m[1]);
     if (linked) openDetail(linked);
   });
