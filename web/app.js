@@ -8,21 +8,22 @@
     rock: "Rock", indie: "Indie", pop: "Pop", metal: "Metal", punk: "Punk", electro: "Electro",
     "hip-hop": "Hip-hop", "soul-rnb": "Soul / R&B", funk: "Funk", jazz: "Jazz", blues: "Blues",
     folk: "Folk", chanson: "Chanson", world: "World", latin: "Latin", afro: "Afro", reggae: "Reggae",
-    classical: "Classique", experimental: "Expérimental",
+    classical: "Classical", experimental: "Experimental",
   };
-  const DAYS = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
-  const DAYS_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-  const MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
-  const MONTHS_SHORT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+  const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const DAYS_SHORT = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const WALK_KMH = 4.5;
-  // Extra words the search bar accepts for the coarse genres ("rap" -> Hip-hop, "techno" -> Electro, "classical" -> Classique).
-  const TAG_ALIASES = { "hip-hop": "rap hip hop", "soul-rnb": "soul rnb r&b", electro: "électronique techno house", classical: "classical",
-    experimental: "experimental noise", world: "musiques du monde", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
+  // Extra words the search bar accepts for the coarse genres ("rap" -> Hip-hop, "techno" -> Electro, "classique" -> Classical): the French
+  // names stay searchable now that the labels are English (REM-32).
+  const TAG_ALIASES = { "hip-hop": "rap hip hop", "soul-rnb": "soul rnb r&b", electro: "électronique techno house", classical: "classique classical",
+    experimental: "expérimental noise", world: "musiques du monde world music", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
 
   let DATA = { events: [], tags: [], venues: [] };
   let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false, myArtists: false });
-  const STATUS = { interested: { icon: "☆", svg: "star", label: "Intéressé" }, going: { icon: "✓", svg: "check", label: "J'y vais" } };
-  let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Intéressé ? / J'y vais"
+  const STATUS = { interested: { icon: "☆", svg: "star", label: "Interested" }, going: { icon: "✓", svg: "check", label: "Going" } };
+  let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Interested? / Going"
   let favVenues = loadFavs(); // favourite venue names (★ on the sheet), localStorage "lip-venues" — REM-28 "Mes salles"
   let me = null; // {lat, lon}
   let stylesOpen = false;  // "+N autres" expanded in the Genres panel (not persisted)
@@ -117,7 +118,7 @@
   function fmtTime(t) {
     const m = /^(\d{1,2})\s*[:h]\s*(\d{2})?/.exec(t || "");
     if (!m) return t || "—";
-    return !m[2] || m[2] === "00" ? `${+m[1]}h` : `${+m[1]}h${m[2]}`;
+    return `${+m[1]}:${m[2] || "00"}`;
   }
   function weekLabel(mon, short = false) {
     const sun = addDays(mon, 6), M = short ? MONTHS_SHORT : MONTHS, f = d => `${d.getDate()} ${M[d.getMonth()]}`;
@@ -155,21 +156,21 @@
     const parts = splitArtists(e.title);
     return parts.length ? parts : [e.title];
   }
-  // "De 6 à 9 euros." -> "6–9 €", "Tarif plein : 10 EUR" -> "10 €", "payant" -> "payant", nothing usable -> null.
+  // "De 6 à 9 euros." -> "6–9 €", "Tarif plein : 10 EUR" -> "10 €", "payant" (paid, no amount) -> "paid", nothing usable -> null.
   // Only amounts followed by a currency word count (or the low end of "6 à 9 euros"): dates, ages and "1 consommation" do not.
   const AMOUNT = /\d+(?:[.,]\d+)?(?=\s*(?:€|euros?\b|eur\b)|\s*(?:à|-|–|\/)\s*\d+(?:[.,]\d+)?\s*(?:€|euros?\b|eur\b))/gi;
   function shortPrice(p) {
     if (!p) return null;
     const nums = (p.match(AMOUNT) || []).map(x => parseFloat(x.replace(",", "."))).filter(n => n > 0 && n < 1000);
-    if (!nums.length) return /payant/i.test(p) ? "payant" : null;
-    const f = n => Number.isInteger(n) ? String(n) : n.toFixed(2).replace(".", ",");
+    if (!nums.length) return /payant/i.test(p) ? "paid" : null;
+    const f = n => Number.isInteger(n) ? String(n) : n.toFixed(2);
     const lo = Math.min(...nums), hi = Math.max(...nums);
     return lo === hi ? `${f(lo)} €` : `${f(lo)}–${f(hi)} €`;
   }
   function walk(e) {
     if (!(state.near && me && e.lat != null)) return "";
     const d = km(me, e), min = Math.round(d / WALK_KMH * 60);
-    return min <= 90 ? `${min} min à pied` : `${d.toFixed(d < 10 ? 1 : 0)} km`;
+    return min <= 90 ? `${min} min walk` : `${d.toFixed(d < 10 ? 1 : 0)} km`;
   }
 
   // "Agenda Google" link: floating local time in Europe/Paris, 2h30 long, or an all-day event when the time is unknown.
@@ -191,14 +192,14 @@
     const details = [shareLink(e), link, e.price].filter(Boolean).join("\n");
     const q = {
       action: "TEMPLATE",
-      text: `${head}${sup.length ? " avec " + sup.join(", ") : ""} @ ${e.venue}`,
+      text: `${head}${sup.length ? " with " + sup.join(", ") : ""} @ ${e.venue}`,
       dates, details,
       location: [e.venue, e.address || e.area].filter(Boolean).join(", "),
       ctz: "Europe/Paris",
     };
     return "https://calendar.google.com/calendar/render?" + Object.entries(q).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
   }
-  // "WhatsApp" link (REM-24, REM-29): a French recommendation, the facts, the ticket/venue link, our deep link last.
+  // "WhatsApp" link (REM-24, REM-29): a recommendation, the facts, the ticket/venue link, our deep link last.
   // The desktop app received only our link out of the previous message (REM-29); nothing documents why, so every
   // suspect is avoided at once: api.whatsapp.com/send rather than wa.me (one redirect and one re-encoding fewer),
   // no emoji and no URL on the first line, both links at the end, the hash-free ?e= form of the deep link (a "#"
@@ -208,11 +209,11 @@
     const [head, ...sup] = lineup(e);
     const ticket = safeUrl(e.ticket_url), link = ticket || safeUrl(e.url);
     const lines = [
-      "Un concert qui pourrait t'int\u00e9resser :",
-      `${head}${sup.length ? " avec " + sup.join(", ") : ""}`,
+      "A concert you might like:",
+      `${head}${sup.length ? " with " + sup.join(", ") : ""}`,
       `${fmtDay(e.date)}${e.time ? " \u00b7 " + fmtTime(e.time) : ""}`,
       `${e.venue}${e.area ? " (" + e.area + ")" : ""}`,
-      link ? `${ticket ? "Billets" : "Infos"} : ${link}` : "",
+      link ? `${ticket ? "Tickets" : "Info"}: ${link}` : "",
       shareLink(e),
     ].filter(Boolean);
     return "https://api.whatsapp.com/send?text=" + encodeURIComponent(lines.join("\n"));
@@ -261,7 +262,7 @@
   // ------------------------------------------------------------ rendering
   function renderNav() {
     const all = frame() === "all";
-    $("#weeklabel").textContent = all ? "Tout ce qui vient" : weekLabel(addDays(monday(today0()), 7 * state.week), MOBILE.matches);
+    $("#weeklabel").textContent = all ? "Everything upcoming" : weekLabel(addDays(monday(today0()), 7 * state.week), MOBILE.matches);
     $("#weekcount").textContent = plural(visible().length, "concert");
     $("#arrows").hidden = all;
     $("#prev").disabled = state.week === 0;
@@ -279,7 +280,7 @@
     g.classList.toggle("on", nG > 0); g.setAttribute("aria-expanded", String(genresOpen));
     $("small", g).textContent = nG || ""; $(".car", g).textContent = genresOpen ? "▴" : "▾";
     const near = $("#near");
-    near.classList.toggle("on", state.near); near.setAttribute("aria-pressed", String(state.near)); $("span", near).textContent = "Près de moi";
+    near.classList.toggle("on", state.near); near.setAttribute("aria-pressed", String(state.near)); $("span", near).textContent = "Near me";
     $("#radius").hidden = !state.near; $("#radius").value = state.radius;
     renderGenrePanel();
   }
@@ -306,7 +307,7 @@
       (e.subgenres || []).forEach(x => counts[x] = (counts[x] || 0) + 1);
     });
     state.styles.forEach(x => counts[x] = counts[x] || 0);   // an active style stays visible even when the frame has none left
-    const all = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, "fr"));
+    const all = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b, "en"));
     const q = norm($("#gsq").value.trim());
     let shown, rest = 0;
     if (q) shown = all.filter(x => fuzzy(norm(x), q) >= 0);
@@ -314,14 +315,14 @@
       const head = new Set([...all.slice(0, STYLES_SHOWN), ...state.styles]);
       shown = stylesOpen ? all : all.filter(x => head.has(x)); rest = all.length - shown.length;
     }
-    $("#gstitle").textContent = picked.length ? `Styles de ${picked.map(g => TAG_LABELS[g] || g).join(", ")}` : "Styles";
-    $("#gsq").placeholder = `Filtrer les ${all.length} styles…`;
+    $("#gstitle").textContent = picked.length ? `Styles of ${picked.map(g => TAG_LABELS[g] || g).join(", ")}` : "Styles";
+    $("#gsq").placeholder = `Filter the ${all.length} styles…`;
     const chip = x => `<button type="button" class="g${state.styles.includes(x) ? " on" : ""}" data-s="${esc(x)}" aria-pressed="${state.styles.includes(x)}">${esc(x)}<small>${counts[x]}</small></button>`;
     let more = "";
-    if (rest > 0) more = `<button type="button" class="link" data-more>+ ${rest} autres</button>`;
-    else if (!q && stylesOpen && all.length > STYLES_SHOWN) more = '<button type="button" class="link" data-more>réduire</button>';
+    if (rest > 0) more = `<button type="button" class="link" data-more>+ ${rest} more</button>`;
+    else if (!q && stylesOpen && all.length > STYLES_SHOWN) more = '<button type="button" class="link" data-more>show less</button>';
     $("#slist").innerHTML = shown.length ? shown.map(chip).join("") + more
-      : `<span class="none">${all.length ? "Aucun style ne correspond." : "aucun style connu"}</span>`;
+      : `<span class="none">${all.length ? "No style matches." : "no known style"}</span>`;
   }
   // Puts the panel under the "Genres ▾" pill, pulled left when it would overflow the row (the phone stretches it in CSS).
   function placePanel() {
@@ -330,19 +331,19 @@
     p.style.top = `${Math.round(b.bottom - r.top + 8)}px`;
     p.style.left = `${Math.round(Math.max(0, Math.min(b.left - r.left, r.width - p.offsetWidth)))}px`;
   }
-  // The active filters as chips inside the bar (lime, name + count + ×), "Tout effacer" after them.
+  // The active filters as chips inside the bar (lime, name + count + ×), "Clear all" after them.
   let chipCount = 0;
   function renderChips() {
     const c = scopeCounts();
     // A venue chip also carries the ★ of "Mes salles" (REM-31): the favourite can be set from the bar, without opening a sheet.
-    const chip = (kind, key, label, n) => `<span class="chipin"><span>${esc(label)}</span>${n == null ? "" : `<small>${n}</small>`}${kind === "venue" ? favBtn(key) : ""}<button type="button" class="x" data-rm="${kind}" data-key="${esc(key)}" aria-label="Retirer ${esc(label)}">✕</button></span>`;
+    const chip = (kind, key, label, n) => `<span class="chipin"><span>${esc(label)}</span>${n == null ? "" : `<small>${n}</small>`}${kind === "venue" ? favBtn(key) : ""}<button type="button" class="x" data-rm="${kind}" data-key="${esc(key)}" aria-label="Remove ${esc(label)}">✕</button></span>`;
     const chips = [
       ...state.genres.map(g => chip("genre", g, TAG_LABELS[g] || g, c.genre[g] || 0)),
       ...state.styles.map(x => chip("style", x, x, c.style[x] || 0)),
       ...state.venues.map(v => chip("venue", v, v, c.venue[v] || 0)),
-      ...(state.q ? [chip("q", state.q, `« ${state.q} »`, null)] : []),
+      ...(state.q ? [chip("q", state.q, `“${state.q}”`, null)] : []),
     ];
-    $("#chips").innerHTML = chips.join("") + (chips.length ? '<button type="button" class="link" id="clearall">Tout effacer</button>' : "");
+    $("#chips").innerHTML = chips.join("") + (chips.length ? '<button type="button" class="link" id="clearall">Clear all</button>' : "");
     if (chips.length > chipCount) { const last = $$("#chips .chipin").pop(); if (last) last.classList.add("pop"); }   // only the new one springs in
     chipCount = chips.length;
   }
@@ -357,13 +358,13 @@
   // Fine-grained labels next to the coarse tags; clicking one toggles that style filter. Active styles come first.
   function subHtml(e, max = 2) {
     const subs = (e.subgenres || []).slice().sort((a, b) => state.styles.includes(b) - state.styles.includes(a));
-    return subs.slice(0, max).map(s => `<button class="tag sub ${state.styles.includes(s) ? "on" : ""}" type="button" data-sub="${esc(s)}" title="${state.styles.includes(s) ? "Retirer le style" : "Filtrer sur"} « ${esc(s)} »">${esc(s)}</button>`).join("");
+    return subs.slice(0, max).map(s => `<button class="tag sub ${state.styles.includes(s) ? "on" : ""}" type="button" data-sub="${esc(s)}" title="${state.styles.includes(s) ? "Remove the style" : "Filter on"} “${esc(s)}”">${esc(s)}</button>`).join("");
   }
   function statusTags(e) {
     const b = [];
-    if (isNew(e)) b.push('<span class="tag new">Nouveau</span>');
-    if (e.sold_out) b.push('<span class="tag sold">Complet</span>');
-    if (e.cancelled) b.push('<span class="tag cancel">Annulé</span>');
+    if (isNew(e)) b.push('<span class="tag new">New</span>');
+    if (e.sold_out) b.push('<span class="tag sold">Sold out</span>');
+    if (e.cancelled) b.push('<span class="tag cancel">Cancelled</span>');
     const s = getStatus(e.id);
     if (s) b.push(`<span class="tag status ${s}" title="${STATUS[s].label}" aria-label="${STATUS[s].label}">${STATUS[s].icon}</span>`);
     return b.join("");
@@ -371,7 +372,7 @@
   function gigHtml(e) {
     const [head, ...sup] = lineup(e);
     const genre = e.genres.find(g => state.genres.includes(g)) || e.genres[0];
-    const price = e.free ? '<span class="tag free">Gratuit</span>' : (p => p ? `<span class="tag">${esc(p)}</span>` : "")(shortPrice(e.price));
+    const price = e.free ? '<span class="tag free">Free</span>' : (p => p ? `<span class="tag">${esc(p)}</span>` : "")(shortPrice(e.price));
     return `<div class="gig${e.cancelled ? " cancelled" : ""}" data-id="${e.id}">
       <time>${fmtTime(e.time)}</time>
       <div class="who">${esc(head)}${sup.length ? `<span>${esc(sup.join(", "))}</span>` : ""}</div>
@@ -386,10 +387,10 @@
       const d = addDays(mon, i), iso = isoDate(d), evs = byDay[iso] || [];
       const past = iso < o.today, out = !past && (iso < o.from || iso > o.to);
       const cls = ["day", iso === o.today && "today", past && "past", out && "out"].filter(Boolean).join(" ");
-      const note = past ? "passé" : out ? "" : evs.length ? plural(evs.length, "concert") : "—";
+      const note = past ? "past" : out ? "" : evs.length ? plural(evs.length, "concert") : "—";
       h += `<div class="${cls}"><h2>${DAYS_SHORT[d.getDay()]} ${d.getDate()}<em>${note}</em></h2>`;
       if (evs.length) h += evs.map(gigHtml).join("");
-      else if (!past && !out) h += `<div class="empty">Rien d'annoncé.${o.nav ? ' <button class="link" data-next>Voir la semaine suivante ›</button>' : ""}</div>`;
+      else if (!past && !out) h += `<div class="empty">Nothing announced.${o.nav ? ' <button class="link" data-next>See next week ›</button>' : ""}</div>`;
       h += "</div>";
     }
     return h + "</div>";
@@ -401,7 +402,7 @@
     evs = evs.slice().sort((a, b) => a.date.localeCompare(b.date) || (state.near && me ? km(me, a) - km(me, b) : byTime(a, b)));
     const list = $("#list");
     if (!DATA.events.length) {
-      list.innerHTML = '<div class="empty">Aucun événement. Lance <code>python scrape.py</code> pour remplir le programme.</div>';
+      list.innerHTML = '<div class="empty">No events. Run <code>python scrape.py</code> to fill the programme.</div>';
       return;
     }
     const byDay = {};
@@ -413,7 +414,7 @@
       html += weekGrid(addDays(monday(today0()), 7 * state.week), byDay, { today, from, to, nav: true });
     } else {
       const mondays = [...new Set(evs.map(e => isoDate(monday(parseISO(e.date)))))].sort();
-      if (!mondays.length) html += `<div class="empty">${state.myArtists ? "Aucun concert de vos artistes pour l'instant." : state.myVenues && !favVenues.length ? "Ajoutez des salles avec ★ sur la fiche d'un concert." : "Rien pour ces filtres."}</div>`;
+      if (!mondays.length) html += `<div class="empty">${state.myArtists ? "No concert by your artists for now." : state.myVenues && !favVenues.length ? "Add venues with ★ on a concert or on a venue chip." : "Nothing for these filters."}</div>`;
       for (const m of mondays) {
         const mon = parseISO(m), n = evs.filter(e => isoDate(monday(parseISO(e.date))) === m).length;
         html += `<h3 class="weekhead">${weekLabel(mon)}<em>${plural(n, "concert")}</em></h3>` + weekGrid(mon, byDay, { today, from, to, nav: false });
@@ -421,7 +422,7 @@
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
-      html += `<details class="report"><summary>${failed.length} source(s) en erreur au dernier scraping</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}</div>`).join("")}</details>`;
+      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}</div>`).join("")}</details>`;
     }
     list.innerHTML = html;
   }
@@ -432,7 +433,7 @@
     const music = d.events.filter(e => e.is_music && e.date >= a);
     const week = music.filter(e => e.date <= b).length;
     const upd = new Date(d.generated_at);
-    $("#meta").innerHTML = `<span class="d">${plural(music.length, "concert")} à venir · </span>${week} cette semaine<span class="d"> · mis à jour ${DAYS[upd.getDay()]} ${String(upd.getHours()).padStart(2, "0")}:${String(upd.getMinutes()).padStart(2, "0")}</span>`;
+    $("#meta").innerHTML = `<span class="d">${plural(music.length, "concert")} upcoming · </span>${week} this week<span class="d"> · updated ${DAYS[upd.getDay()]} ${String(upd.getHours()).padStart(2, "0")}:${String(upd.getMinutes()).padStart(2, "0")}</span>`;
   }
   let lastFrame = null;
   function render() {
@@ -496,7 +497,7 @@
     if (!q) {
       const c = scopeCounts().genre;
       const gs = IDX.genres.filter(g => c[g.tag]).sort((a, b) => c[b.tag] - c[a.tag]).slice(0, TA_MAX.gs);
-      return { q, groups: gs.length ? [{ title: "Genres & styles", note: frame() === "week" ? "les plus joués cette semaine" : "les plus joués", items: gs }] : [] };
+      return { q, groups: gs.length ? [{ title: "Genres & styles", note: frame() === "week" ? "most played this week" : "most played", items: gs }] : [] };
     }
     const rank = (list, tie) => list.map(x => [fuzzy(x.key, q), x]).filter(([sc]) => sc >= 0).sort((a, b) => a[0] - b[0] || tie(a[1], b[1])).map(([, x]) => x);
     const byCount = (a, b) => b.count - a.count;
@@ -507,8 +508,8 @@
     const groups = [];
     const G = gs.length ? { title: "Genres & styles", note: gs.length > TA_MAX.gs ? `${gs.length}` : "", items: gs.slice(0, TA_MAX.gs) } : null;
     if (G && best(gs) < best(artists)) groups.push(G);
-    if (artists.length) groups.push({ title: "Artistes", note: artists.length > TA_MAX.artists ? `${artists.length} · les ${TA_MAX.artists} plus proches` : "", items: artists.slice(0, TA_MAX.artists) });
-    if (venues.length) groups.push({ title: "Salles", note: venues.length > TA_MAX.venues ? `${venues.length}` : "", items: venues.slice(0, TA_MAX.venues) });
+    if (artists.length) groups.push({ title: "Artists", note: artists.length > TA_MAX.artists ? `${artists.length} · the ${TA_MAX.artists} soonest` : "", items: artists.slice(0, TA_MAX.artists) });
+    if (venues.length) groups.push({ title: "Venues", note: venues.length > TA_MAX.venues ? `${venues.length}` : "", items: venues.slice(0, TA_MAX.venues) });
     if (G && !groups.includes(G)) groups.push(G);
     return { q, groups };
   }
@@ -526,18 +527,18 @@
       const when = `${DAYS_SHORT[d.getDay()].toLowerCase()} ${d.getDate()}${e.time ? " · " + fmtTime(e.time) : ""}`;
       th = `<span class="th av${hue(it.key)}">${e.image && safeUrl(e.image) ? `<img src="${esc(e.image)}" alt="" loading="lazy">` : ""}${esc(initials(it.name))}</span>`;
       sub = [when, e.venue, e.area].filter(Boolean).join(" · ") + (it.events.length > 1 ? ` · ${it.events.length} dates` : "");
-      type = "Artiste";
+      type = "Artist";
     } else if (it.kind === "venue") {
       th = `<span class="th gl">${PIN}</span>`;
-      sub = [isFav(it.name) ? "★ salle favorite" : "", it.area, `${plural(it.count, "concert")} à venir`].filter(Boolean).join(" · ");
-      type = state.venues.includes(it.name) ? "Salle ✓" : "Salle";
+      sub = [isFav(it.name) ? "★ favourite venue" : "", it.area, `${plural(it.count, "concert")} upcoming`].filter(Boolean).join(" · ");
+      type = state.venues.includes(it.name) ? "Venue ✓" : "Venue";
     } else if (it.kind === "genre") {
       th = '<span class="th gen">♪</span>';
-      sub = `${plural(it.count, "concert")} à venir` + (frame() === "week" && c.genre[it.tag] ? ` · ${c.genre[it.tag]} cette semaine` : "") + ` · ${plural(it.styles, "style")}`;
+      sub = `${plural(it.count, "concert")} upcoming` + (frame() === "week" && c.genre[it.tag] ? ` · ${c.genre[it.tag]} this week` : "") + ` · ${plural(it.styles, "style")}`;
       type = state.genres.includes(it.tag) ? "Genre ✓" : "Genre";
     } else {
       th = '<span class="th sty">♪</span>';
-      sub = `${it.count ? plural(it.count, "concert") + " à venir" : "aucun concert à venir"}${it.genre ? ` · dans ${TAG_LABELS[it.genre] || it.genre}` : ""}`;
+      sub = `${it.count ? plural(it.count, "concert") + " upcoming" : "no upcoming concert"}${it.genre ? ` · in ${TAG_LABELS[it.genre] || it.genre}` : ""}`;
       type = state.styles.includes(it.name) ? "Style ✓" : "Style";
     }
     return `<div class="row${on ? " hi" : ""}" role="option" id="ta-${i}" aria-selected="${on}" data-i="${i}">${th}<span><b>${esc(it.name)}</b><small>${esc(sub)}</small></span><span class="type">${type}</span></div>`;
@@ -557,8 +558,8 @@
     if (taHi >= taItems.length) taHi = taItems.length - 1;
     let i = 0;
     ta.innerHTML = groups.map(g => `<div class="grp"><h4>${g.title}${g.note ? `<small>${esc(g.note)}</small>` : ""}</h4>${g.items.map(it => taRowHtml(it, i++, c)).join("")}</div>`).join("")
-      + (!groups.length && q ? `<div class="none">Aucun artiste, salle, genre ou style ne correspond à « ${esc(text)} ».</div>` : "")
-      + `<div class="foot"><span><kbd>↑</kbd><kbd>↓</kbd> naviguer</span><span><kbd>↵</kbd> choisir</span><span><kbd>esc</kbd> fermer</span>${q ? `<button type="button" class="free${taHi < 0 ? " hi" : ""}" data-free>↵ sur le texte : rechercher « ${esc(text)} » partout</button>` : ""}</div>`;
+      + (!groups.length && q ? `<div class="none">No artist, venue, genre or style matches “${esc(text)}”.</div>` : "")
+      + `<div class="foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> pick</span><span><kbd>esc</kbd> close</span>${q ? `<button type="button" class="free${taHi < 0 ? " hi" : ""}" data-free>↵ on the text: search “${esc(text)}” everywhere</button>` : ""}</div>`;
     const hi = $(".row.hi", ta);
     if (hi) { hi.scrollIntoView({ block: "nearest" }); input.setAttribute("aria-activedescendant", hi.id); } else input.removeAttribute("aria-activedescendant");
   }
@@ -581,7 +582,7 @@
     openTa();
   }
   // Picking: an artist opens its next concert; a venue / genre / style becomes a filter (and a chip); the text itself
-  // becomes the full-text filter (« texte » chip), which widens the frame to every upcoming week.
+  // becomes the full-text filter (“text” chip), which widens the frame to every upcoming week.
   function pick(it) {
     const input = $("#search");
     if (it.kind === "artist") {
@@ -690,7 +691,7 @@
         code_challenge_method: "S256", code_challenge: await spChallenge(verifier), state: st });
       location.assign(`${SP_AUTH}/authorize?${q}`);
     } catch {   // crypto.subtle needs a secure context (https or localhost)
-      SP.error = "Connexion impossible : la page doit être servie en https ou sur localhost."; renderSpDialog();
+      SP.error = "Cannot connect: the page must be served over https or on localhost."; renderSpDialog();
     }
   }
   async function spTokenCall(params) {
@@ -706,7 +707,7 @@
   // A usable access token: the stored one, or a silent refresh when it expires within a minute (Spotify may rotate the
   // refresh token: spTokenCall keeps the new one). A refused refresh unlinks the account.
   async function spAccess(force) {
-    if (!spLinked()) throw new Error("Spotify non connecté");
+    if (!spLinked()) throw new Error("Spotify not connected");
     if (!force && SP.tok.access_token && SP.tok.expires_at - Date.now() > 60e3) return SP.tok.access_token;
     try { return (await spTokenCall({ grant_type: "refresh_token", refresh_token: SP.tok.refresh_token })).access_token; }
     catch (err) { if (err.status === 400 || err.status === 401) spDisconnect(); throw err; }
@@ -714,7 +715,7 @@
   async function spGet(url, retry = true) {
     const r = await fetch(url, { headers: { Authorization: `Bearer ${await spAccess()}` } });
     if (r.status === 401 && retry) { await spAccess(true); return spGet(url, false); }
-    if (r.status === 401) { spDisconnect(); throw new Error("session Spotify expirée"); }
+    if (r.status === 401) { spDisconnect(); throw new Error("Spotify session expired"); }
     if (!r.ok) throw new Error(`Spotify ${r.status}`);
     return r.json();
   }
@@ -743,7 +744,7 @@
     try {
       if (SP.tok.name == null || force) await spProfile();
       if (!fresh || force) { SP.lib = await spLibrary(); spWrite("lip-spotify-artists", SP.lib); spIndex(); }
-    } catch (err) { SP.error = spLinked() ? `Spotify indisponible (${err.message}).` : "Session Spotify expirée : reconnectez-vous."; }
+    } catch (err) { SP.error = spLinked() ? `Spotify unavailable (${err.message}).` : "Spotify session expired: please reconnect."; }
     SP.busy = false; spRender();
   }
   function spDisconnect() {
@@ -759,7 +760,7 @@
     const pkce = spRead("lip-spotify-pkce"); spWrite("lip-spotify-pkce", null);
     history.replaceState(null, "", location.pathname + location.hash);
     if (q.get("error") || !q.get("code") || !pkce || pkce.state !== q.get("state")) {
-      SP.error = q.get("error") === "access_denied" ? "Connexion Spotify refusée." : `Connexion Spotify impossible (${q.get("error") || "réponse inattendue"}).`;
+      SP.error = q.get("error") === "access_denied" ? "Spotify connection refused." : `Spotify connection failed (${q.get("error") || "unexpected response"}).`;
       openSp(); return;
     }
     SP.busy = true; spRender();
@@ -767,27 +768,27 @@
       await spTokenCall({ grant_type: "authorization_code", code: q.get("code"), redirect_uri: spRedirect(), code_verifier: pkce.verifier });
       state.myArtists = true; SP.busy = false;
       await spSync(true);
-    } catch (err) { SP.busy = false; SP.error = `Connexion Spotify impossible (${err.message}).`; spRender(); openSp(); }
+    } catch (err) { SP.busy = false; SP.error = `Spotify connection failed (${err.message}).`; spRender(); openSp(); }
   }
   function spBoot() {
     spIndex();
     if (!spLinked()) state.myArtists = false;
     if (/[?&](code|error)=/.test(location.search)) spCallback(); else if (spLinked()) spSync(false);
   }
-  // ---- pill, account menu (under the pill: avatar + name, "N artistes aimés · mis à jour …", Actualiser / Déconnecter), connect dialog
+  // ---- pill, account menu (under the pill: avatar + name, "N liked artists · updated …", Refresh / Disconnect), connect dialog
   function spAgo(iso) {
     const d = new Date(iso); if (isNaN(d)) return "";
     const min = Math.round((Date.now() - d) / 60e3);
-    if (min < 1) return "à l'instant";
-    if (min < 60) return `il y a ${min} min`;
-    if (isoDate(d) === isoDate(today0())) return `aujourd'hui à ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
-    return `le ${d.getDate()} ${MONTHS_SHORT[d.getMonth()]}`;
+    if (min < 1) return "just now";
+    if (min < 60) return `${min} min ago`;
+    if (isoDate(d) === isoDate(today0())) return `today at ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+    return `on ${d.getDate()} ${MONTHS_SHORT[d.getMonth()]}`;
   }
   function renderSpPill() {
     const b = $("#myartists"), on = state.myArtists && spLinked();
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on));
     $("small", b).textContent = SP.busy ? "…" : spLinked() && DATA.events.length ? spCount() || "" : "";
-    b.title = spLinked() ? "Les concerts des artistes de mes titres likés sur Spotify (clic droit ou ↓ : mon compte)" : "Connecter Spotify pour voir les concerts des artistes de mes titres likés";
+    b.title = spLinked() ? "Concerts by the artists of my liked songs on Spotify (right-click or ↓: my account)" : "Connect Spotify to see the concerts of the artists of my liked songs";
     const me = $("#spme");
     me.hidden = !spLinked();
     if (spLinked()) { me.innerHTML = SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : "…"; me.setAttribute("aria-expanded", String(SP.menu)); }
@@ -795,10 +796,10 @@
   }
   function spAccountHtml(cls) {
     const n = ((SP.lib || {}).names || []).length, s = n > 1 ? "s" : "";
-    const sub = SP.busy ? "Lecture des titres likés…" : SP.lib ? `${n} artiste${s} aimé${s} · mis à jour ${spAgo(SP.lib.at)}` : "Titres likés pas encore lus";
-    return `<div class="spwho">${SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : `<span class="spav">${SP_ICON}</span>`}<div><b>${esc(SP.tok.name || "Compte Spotify")}</b><small>${sub}</small></div></div>
+    const sub = SP.busy ? "Reading liked songs…" : SP.lib ? `${n} liked artist${s} · updated ${spAgo(SP.lib.at)}` : "Liked songs not read yet";
+    return `<div class="spwho">${SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : `<span class="spav">${SP_ICON}</span>`}<div><b>${esc(SP.tok.name || "Spotify account")}</b><small>${sub}</small></div></div>
       ${SP.error ? `<div class="spnote err">${esc(SP.error)}</div>` : ""}
-      <div class="sprow"><button type="button" class="${cls}" role="menuitem" data-sp="sync"${SP.busy ? " disabled" : ""}>Actualiser</button><button type="button" class="${cls} sec" role="menuitem" data-sp="out">Déconnecter</button></div>`;
+      <div class="sprow"><button type="button" class="${cls}" role="menuitem" data-sp="sync"${SP.busy ? " disabled" : ""}>Refresh</button><button type="button" class="${cls} sec" role="menuitem" data-sp="out">Disconnect</button></div>`;
   }
   function renderSpMenu() {
     const m = $("#spmenu");
@@ -831,10 +832,10 @@
   function renderSpDialog() {
     const body = $("#spbody");
     if (spLinked()) { body.innerHTML = spAccountHtml("spbtn"); return; }
-    body.innerHTML = `<p>Live in Paris lit uniquement vos <b>titres likés</b> (permission <code>user-library-read</code>) pour retrouver leurs artistes dans le programme. Rien n'est écrit sur votre compte&nbsp;; les jetons restent dans ce navigateur.</p>`
+    body.innerHTML = `<p>Live in Paris only reads your <b>liked songs</b> (<code>user-library-read</code> permission) to find their artists in the programme. Nothing is written to your account; the tokens stay in this browser.</p>`
       + (SP.error ? `<div class="spnote err">${esc(SP.error)}</div>` : "")
-      + (spClientId() ? `<button type="button" class="spbtn" data-sp="login">${SP_ICON}Se connecter avec Spotify</button>`
-        : `<div class="spnote">Spotify n'est pas configuré (client id manquant dans <code>web/config.js</code>).</div>`);
+      + (spClientId() ? `<button type="button" class="spbtn" data-sp="login">${SP_ICON}Sign in with Spotify</button>`
+        : `<div class="spnote">Spotify is not configured (client id missing in <code>web/config.js</code>).</div>`);
   }
   function spAction(ev) {
     const a = ev.target.closest("[data-sp]"); if (!a) return;
@@ -855,7 +856,7 @@
   const detail = $("#detail"), sheet = $(".sheet", detail), hero = $("#hero");
   let current = null;
   let closing = false;   // exit animation in flight
-  let menuOpen = false;  // status menu under the "Intéressé ?" tile (REM-18)
+  let menuOpen = false;  // status menu under the "Interested?" tile (REM-18)
   // Line icons of the action tiles and the status menu (the mockup's symbols): 24px grid, stroke 1.75, currentColor.
   const ICONS = {
     star: '<path d="M12 2.8l2.8 6 6.5.8-4.8 4.5 1.3 6.5L12 17.4l-5.8 3.2 1.3-6.5L2.7 9.6l6.5-.8z"/>',
@@ -885,29 +886,29 @@
     const [head, ...sup] = lineup(e);
     const page = safeUrl(e.url), domain = page ? hostOf(page) : "";
     // The title is the link to the event page (REM-13): dotted underline + a small ↗, nothing when the url is unusable.
-    const title = page ? `<a href="${esc(page)}" target="_blank" rel="noopener" title="Page de l'événement sur ${esc(domain)}">${esc(head)}<span class="ext" aria-hidden="true">↗</span></a>` : esc(head);
+    const title = page ? `<a href="${esc(page)}" target="_blank" rel="noopener" title="Event page on ${esc(domain)}">${esc(head)}<span class="ext" aria-hidden="true">↗</span></a>` : esc(head);
     $("#hero-text").innerHTML = `<div class="when">${fmtDay(e.date)}${e.time ? " · " + fmtTime(e.time) : ""}</div>
-      <h2>${title}</h2>${sup.length ? `<div class="support">avec ${esc(sup.join(", "))}</div>` : ""}`;
+      <h2>${title}</h2>${sup.length ? `<div class="support">with ${esc(sup.join(", "))}</div>` : ""}`;
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
-    const price = e.free ? "Gratuit" : shortPrice(e.price);
-    const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Itinéraire ↗</a>` : "";
+    const price = e.free ? "Free" : shortPrice(e.price);
+    const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Directions ↗</a>` : "";
     const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
     const tile = ticketTile(e);
-    const meta = [tile.ticket || !price || price === "payant" ? "" : esc(price), subHtml(e, 4)].filter(Boolean).join(" · ");
+    const meta = [tile.ticket || !price || price === "paid" ? "" : esc(price), subHtml(e, 4)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
       <div class="actions${tile.html ? "" : " three"}">
         ${tile.html}
         <div class="status" id="status">
           <button id="statusbtn" class="tile" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="statusmenu"></button>
-          <div class="statusmenu" id="statusmenu" role="menu" aria-label="Mon statut" hidden></div>
+          <div class="statusmenu" id="statusmenu" role="menu" aria-label="My status" hidden></div>
         </div>
-        <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Ajouter à Google Agenda">${icon("cal")}<span class="lbl">Agenda</span></a>
-        <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Partager sur WhatsApp">${icon("wa")}<span class="lbl">WhatsApp</span></a>
+        <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Add to Google Calendar">${icon("cal")}<span class="lbl">Calendar</span></a>
+        <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Share on WhatsApp">${icon("wa")}<span class="lbl">WhatsApp</span></a>
       </div>
-      <div class="venue"><button type="button" class="vname" data-venue="${esc(e.venue)}" title="Voir les concerts de cette salle"><b>${esc(e.venue)}</b></button>${favBtn(e.venue)}${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
+      <div class="venue"><button type="button" class="vname" data-venue="${esc(e.venue)}" title="See the concerts at this venue"><b>${esc(e.venue)}</b></button>${favBtn(e.venue)}${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
       ${meta ? `<div class="muted meta">${meta}</div>` : ""}
       ${blurbHtml(e)}
-      ${artists.length > 1 ? `<div class="listen"><h3>Écouter</h3><div class="artist-pick" role="group" aria-label="Artiste">${artists.map((a, i) =>
+      ${artists.length > 1 ? `<div class="listen"><h3>Listen</h3><div class="artist-pick" role="group" aria-label="Artist">${artists.map((a, i) =>
         `<button type="button" class="${i ? "" : "on"}" aria-pressed="${!i}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}
       <div id="artist"></div>`;
     renderStatus();
@@ -918,31 +919,31 @@
       swapArtist(artists[Number(b.dataset.i)], e, artists);
     });
     const more = $(".blurb [data-more]", detail);
-    if (more) more.onclick = () => {   // "lire la suite" / "réduire" swaps the text in place
-      const open = more.textContent !== "lire la suite";
+    if (more) more.onclick = () => {   // "read more" / "show less" swaps the text in place
+      const open = more.textContent !== "read more";
       $(".blurb .txt", detail).textContent = open ? BLURB_CUT(blurb(e)) : blurb(e);
-      more.textContent = open ? "lire la suite" : "réduire";
+      more.textContent = open ? "read more" : "show less";
     };
     if (artists.length) loadArtist(artists[0], e, artists);
   }
   // ★ toggle next to the venue name (REM-28): favourite venues feed the "Mes salles" pill.
   function favBtn(venue) {
     const on = isFav(venue);
-    return `<button type="button" class="star" data-fav="${esc(venue)}" aria-pressed="${on}" aria-label="${on ? "Retirer des salles favorites" : "Ajouter aux salles favorites"}" title="${on ? "Salle favorite" : "Ajouter à mes salles"}">${on ? "★" : "☆"}</button>`;
+    return `<button type="button" class="star" data-fav="${esc(venue)}" aria-pressed="${on}" aria-label="${on ? "Remove from favourite venues" : "Add to favourite venues"}" title="${on ? "Favourite venue" : "Add to my venues"}">${on ? "★" : "☆"}</button>`;
   }
-  // Tile 1 of the action row (REM-28): only a real ticket link earns it — "Billets ↗" with the numeric price ("20 €") or
-  // "Gratuit" when there is one, never "payant" — plus the Annulé / Complet notices. Otherwise there is no tile 1: the
+  // Tile 1 of the action row (REM-28): only a real ticket link earns it — "Tickets ↗" with the numeric price ("20 €") or
+  // "Free" when there is one, never "paid" — plus the Cancelled / Sold out notices. Otherwise there is no tile 1: the
   // row stretches the three others (the title already links to the event page). `ticket` says the price is on the tile.
   function ticketTile(e) {
     const ticket = safeUrl(e.ticket_url);
-    const price = e.free ? "Gratuit" : (p => p && p !== "payant" ? p : null)(shortPrice(e.price));
-    if (e.cancelled) return { html: '<button class="tile off" type="button" disabled><b>Annulé</b><small>Billets</small></button>' };
-    if (e.sold_out) return { html: '<button class="tile off" type="button" disabled><b>Complet</b><small>Billets</small></button>' };
-    if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Billets ↗</small>` : `${icon("ticket")}<span class="lbl">Billets ↗</span>`}</a>` };
+    const price = e.free ? "Free" : (p => p && p !== "paid" ? p : null)(shortPrice(e.price));
+    if (e.cancelled) return { html: '<button class="tile off" type="button" disabled><b>Cancelled</b><small>Tickets</small></button>' };
+    if (e.sold_out) return { html: '<button class="tile off" type="button" disabled><b>Sold out</b><small>Tickets</small></button>' };
+    if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Tickets ↗</small>` : `${icon("ticket")}<span class="lbl">Tickets ↗</span>`}</a>` };
     return { html: "" };
   }
-  // ---- status tile + menu (REM-18): "Intéressé ? ▾" opens a small menu; once set, the tile shows the status and the
-  // menu gains "Retirer". One menu at a time, closed on outside click / Escape (before the sheet's Escape).
+  // ---- status tile + menu (REM-18): "Interested? ▾" opens a small menu; once set, the tile shows the status and the
+  // menu gains "Remove". One menu at a time, closed on outside click / Escape (before the sheet's Escape).
   function renderStatus() {
     const b = $("#statusbtn"), m = $("#statusmenu"); if (!b || !current) return;
     const s = getStatus(current.id);
@@ -950,11 +951,11 @@
     b.setAttribute("aria-expanded", String(menuOpen));
     // Rewrite the tile only when its content changes: the click that opens the menu is still bubbling, and replacing
     // the icon/label would detach its target, which the document's outside-click handler would then read as "outside".
-    const html = `${icon(s ? STATUS[s].svg : "star")}<span class="lbl">${s ? STATUS[s].label : "Intéressé ?"}${icon("chevron", "chev")}</span>`;
+    const html = `${icon(s ? STATUS[s].svg : "star")}<span class="lbl">${s ? STATUS[s].label : "Interested?"}${icon("chevron", "chev")}</span>`;
     if (b._html !== html) { b.innerHTML = html; b._html = html; }
     m.innerHTML = Object.entries(STATUS).map(([k, v]) =>
       `<button type="button" role="menuitemradio" aria-checked="${s === k}" data-status="${k}">${icon(v.svg)}${v.label}</button>`).join("") +
-      (s ? `<button type="button" role="menuitem" class="rm" data-status="">${icon("x")}Retirer</button>` : "");
+      (s ? `<button type="button" role="menuitem" class="rm" data-status="">${icon("x")}Remove</button>` : "");
     if (menuOpen) { cancelExit(m); m.hidden = false; }
     else if (!m.hidden && !m._exit) exitThen(m, "out", 120, () => { m.hidden = true; });
   }
@@ -994,7 +995,7 @@
     const text = blurb(e);
     if (!text) return "";
     const long = text.length > BLURB_MAX;
-    return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>lire la suite</button>' : ""}</p>`;
+    return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>read more</button>' : ""}</p>`;
   }
   // Cross-fade #artist: fade out, swap the content at the mid-point, fade in.
   function swapArtist(name, e, artists) {
@@ -1033,10 +1034,10 @@
     return parts.slice(0, 5);
   }
 
-  // Wikipedia (FR then EN) for the blurb, Deezer (JSONP, no key) for picture and similar artists.
+  // Wikipedia (EN then FR) for the blurb, Deezer (JSONP, no key) for picture and similar artists.
   // Player (REM-30): the artist's Spotify page, else its own Bandcamp release, else Deezer's top tracks (`players` is
   // resolved by the scraper per artist name; older events.json files have none and fall back to Deezer). Below it,
-  // "En live": the YouTube live video the scraper found (click-to-play thumbnail, the iframe only exists after the
+  // "Live": the YouTube live video the scraper found (click-to-play thumbnail, the iframe only exists after the
   // tap), else a link to the YouTube search.
   const BC_EMBED = /^https:\/\/bandcamp\.com\/EmbeddedPlayer\/(album|track)=\d+\//;
   const YT_ID = /^[A-Za-z0-9_-]{11}$/;
@@ -1054,16 +1055,16 @@
     if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
     return "";
   }
-  // "En live" block: a thumbnail tile (ink play glyph, title + year) that becomes the youtube-nocookie iframe on click;
+  // "Live" block: a thumbnail tile (ink play glyph, title + year) that becomes the youtube-nocookie iframe on click;
   // without a resolved video, a link to the YouTube search for "<artist> live".
   const PLAY_GLYPH = '<svg class="play" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M26 20l18 12-18 12z"/></svg>';
   function liveHtml(p, name) {
     const q = encodeURIComponent(name);
     const v = p.youtube;
-    if (!v) return `<div class="live"><h3>En live</h3><a class="ytsearch" href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">Voir les lives sur YouTube ↗</a></div>`;
+    if (!v) return `<div class="live"><h3>Live</h3><a class="ytsearch" href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">Watch live videos on YouTube ↗</a></div>`;
     const year = /^\d{4}/.test(v.publishedAt || "") ? v.publishedAt.slice(0, 4) : "";
-    return `<div class="live"><h3>En live</h3>
-      <button class="yt" type="button" data-yt="${esc(v.videoId)}" aria-label="Lire « ${esc(v.title || name)} » sur YouTube">
+    return `<div class="live"><h3>Live</h3>
+      <button class="yt" type="button" data-yt="${esc(v.videoId)}" aria-label="Play “${esc(v.title || name)}” on YouTube">
         <img src="https://i.ytimg.com/vi/${esc(v.videoId)}/hqdefault.jpg" alt="" loading="lazy">${PLAY_GLYPH}
         <span class="cap"><span class="t">${esc(v.title || name)}</span>${year ? `<span class="y">${year}</span>` : ""}</span>
       </button>
@@ -1092,8 +1093,8 @@
     const p = playersOf(e, name);
     const player = playerHtml(p, dz);
     box.innerHTML = `
-      ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : ""}
-      ${player ? `${artists.length > 1 ? "" : `<h3>Écouter ${esc(name)}</h3>`}${player}` : ""}
+      ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></p>` : ""}
+      ${player ? `${artists.length > 1 ? "" : `<h3>Listen to ${esc(name)}</h3>`}${player}` : ""}
       ${liveHtml(p, name)}
       <div class="esprit muted" id="esprit"></div>
       <div class="links">
@@ -1108,7 +1109,7 @@
     if (dz) {
       const rel = (await deezerRelated(dz.id).catch(() => [])).filter(a => a && a.name).slice(0, 6);
       if (rel.length && !stale()) {
-        $("#esprit").innerHTML = "Dans le même esprit : " + rel.map(a =>
+        $("#esprit").innerHTML = "In the same vein: " + rel.map(a =>
           safeUrl(a.link) ? `<a href="${esc(a.link)}" target="_blank" rel="noopener">${esc(a.name)}</a>` : esc(a.name)).join(", ");
       }
     }
@@ -1136,7 +1137,7 @@
     return (r && r.data) || [];
   }
   async function wikiSummary(name) {
-    for (const lang of ["fr", "en"]) {
+    for (const lang of ["en", "fr"]) {
       try {
         const s = await fetch(`https://${lang}.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(name + " musique OR groupe OR musician OR band OR chanteur OR singer OR rappeur OR DJ")}&srlimit=3&format=json&origin=*`).then(r => r.json());
         const hit = (s.query.search || []).find(h => norm(h.title).includes(norm(name).split(" ")[0]));
@@ -1213,12 +1214,12 @@
   $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
   $("#near").onclick = () => {
     if (state.near) { state.near = false; render(); return; }
-    if (!navigator.geolocation) { alert("Géolocalisation indisponible"); return; }
+    if (!navigator.geolocation) { alert("Geolocation unavailable"); return; }
     $("#near span").textContent = "…";
     navigator.geolocation.getCurrentPosition(pos => {
       me = { lat: pos.coords.latitude, lon: pos.coords.longitude };
       state.near = true; render();
-    }, () => { render(); alert("Position refusée"); }, { timeout: 10000 });
+    }, () => { render(); alert("Location denied"); }, { timeout: 10000 });
   };
   // Outside clicks close the popovers. composedPath() rather than closest(): a click on a pill re-renders it, so by the
   // time the event reaches the document the target may be detached and closest() would see it as "outside".
@@ -1273,7 +1274,7 @@
   // ------------------------------------------------------------ boot
   spBoot();   // Spotify (REM-9): sanitise the pill, handle the ?code= callback, read the liked artists when the cache is stale
   fetch("events.json?" + Date.now()).then(r => r.json()).catch(() => {
-    $("#list").innerHTML = '<div class="empty">events.json introuvable — lance <code>python scrape.py</code> puis <code>python serve.py</code>.</div>';
+    $("#list").innerHTML = '<div class="empty">events.json not found — run <code>python scrape.py</code> then <code>python serve.py</code>.</div>';
     return null;
   }).then(d => {
     if (!d) return;
