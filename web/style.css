@@ -174,7 +174,8 @@ select.pill[hidden] { display: none; }
 .tag.new { background: var(--orange); border-color: var(--orange); color: #fff; }
 .tag.sold { border-color: var(--line); color: var(--faint); text-decoration: line-through; }
 .tag.cancel { background: var(--ink); color: var(--paper); }
-.tag.status { background: var(--gold); border-color: var(--gold); color: #fff; padding: 1px 5px; font-weight: 700; }   /* ☆ intéressé · ✓ j'y vais */
+.tag.status { background: var(--gold); border-color: var(--gold); color: #fff; padding: 1px 5px; font-weight: 700; }   /* ☆ intéressé (gold) · ✓ j'y vais (lime) */
+.tag.status.going { background: var(--lime); border-color: var(--lime); color: #17140f; }
 .tag.sub { font: inherit; font-size: 11px; line-height: 1.5; background: none; border: 1px dashed var(--line); color: var(--muted); cursor: pointer; }
 .tag.sub:hover { border-color: var(--ink); color: var(--ink); }
 .tag.sub.on { background: var(--ink); border: 1px solid var(--ink); color: var(--paper); }
@@ -223,8 +224,10 @@ code { background: var(--paper2); padding: 1px 4px; }
 .body h3 { margin: 0 0 8px; font-family: var(--display); font-size: 18px; font-weight: 700; letter-spacing: .01em; }
 .body p { margin: 0; line-height: 1.5; }
 /* Action row (A' V1 "Menu"): four equal tiles in one ruled box — Billets (filled, price in the display face),
-   Intéressé ? (status menu), Agenda, WhatsApp — each a 24px line icon over a small Archivo label. */
+   Intéressé ? (status menu), Agenda, WhatsApp — each a 24px line icon over a small Archivo label.
+   Without a ticket link there is no Billets tile: the three others stretch (.three, REM-28). */
 .actions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1.5px solid var(--ink); background: var(--paper); }
+.actions.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .actions > * { min-width: 0; border-left: 1.5px solid var(--ink); }
 .actions > :first-child { border-left: 0; }
 .tile { display: grid; place-items: center; align-content: center; gap: 4px; width: 100%; height: 100%; min-height: 64px;
@@ -243,6 +246,8 @@ code { background: var(--paper2); padding: 1px 4px; }
 .tile.off, .tile.off:hover { background: var(--paper2); color: var(--faint); cursor: default; }
 .tile.on { background: var(--gold); color: #fff; }
 .tile.on:hover { background: #a97a26; }
+.tile.on.going { background: var(--lime); color: #17140f; }   /* J'y vais: the lime accent, ink text (REM-28) */
+.tile.on.going:hover { background: #cbeb52; }
 #statusbtn.pop { animation: pop .36s var(--ease-out); }
 #statusbtn.pop .i { animation: star .45s var(--spring); }
 /* Status menu (the mockup's inset): a white panel hanging under the tile, a small caret pointing up at it,
@@ -264,9 +269,17 @@ code { background: var(--paper2); padding: 1px 4px; }
 .statusmenu button[aria-checked="true"]::after { content: ""; width: 6px; height: 6px; margin-left: auto; background: currentColor; }   /* current */
 .statusmenu button.rm { color: var(--muted); }
 .statusmenu button.rm:hover, .statusmenu button.rm:focus-visible { color: var(--paper); }
-/* Venue, meta line, player block */
+/* Venue (the name filters the grid on the venue, ★ marks it as a favourite — REM-28), meta line, player block */
 .venue { line-height: 1.45; }
 .venue b { font-weight: 700; font-size: 15px; }
+.venue .vname { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; text-align: left; cursor: pointer;
+  text-decoration: underline dotted var(--line); text-decoration-thickness: 1.5px; text-underline-offset: 4px; transition: text-decoration-color .15s; }
+.venue .vname:hover { text-decoration: underline solid var(--ink); text-decoration-thickness: 1.5px; }
+.venue .star { background: none; border: 0; padding: 0 2px; margin: 0 2px 0 6px; font-size: 19px; line-height: 1; color: var(--faint); vertical-align: -2px; cursor: pointer;
+  transition: color .15s, transform .12s; }
+.venue .star:hover { color: var(--gold); }
+.venue .star[aria-pressed="true"] { color: var(--gold); }
+.venue .star.pop { animation: star .45s var(--spring); }
 .venue span { color: var(--muted); font-size: 13px; }
 .venue a { color: var(--ink); }
 .meta { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
@@ -331,6 +344,8 @@ code { background: var(--paper2); padding: 1px 4px; }
   .tile { min-height: 60px; }
   .actions > :nth-child(3) { border-left: 0; }
   .actions > :nth-child(n+3) { border-top: 1.5px solid var(--ink); }
+  .actions.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }   /* three tiles stay on one row */
+  .actions.three > :nth-child(3) { border-left: 1.5px solid var(--ink); border-top: 0; }
   /* Focusing the bar opens it as a full-screen sheet: the bar on top (‹ back), the results below, the hint at the bottom. */
   body.searching { overflow: hidden; }
   body.searching .sbar { position: fixed; inset: 0; z-index: 30; display: flex; flex-direction: column; max-width: none; background: var(--paper); }

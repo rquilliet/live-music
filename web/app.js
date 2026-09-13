@@ -20,9 +20,10 @@
     experimental: "experimental noise", world: "musiques du monde", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false });
+  let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false });
   const STATUS = { interested: { icon: "☆", svg: "star", label: "Intéressé" }, going: { icon: "✓", svg: "check", label: "J'y vais" } };
   let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Intéressé ? / J'y vais"
+  let favVenues = loadFavs(); // favourite venue names (★ on the sheet), localStorage "lip-venues" — REM-28 "Mes salles"
   let me = null; // {lat, lon}
   let stylesOpen = false;  // "+N autres" expanded in the Genres panel (not persisted)
   let genresOpen = false;  // Genres panel under the "Genres ▾" pill
@@ -65,7 +66,7 @@
     s.genres = strings(s.genres); s.styles = strings(s.styles); s.venues = strings(s.venues);
     if (typeof s.venue === "string" && s.venue && !s.venues.length) s.venues = [s.venue];   // single-venue dropdown from the previous UI
     s.q = typeof s.q === "string" ? s.q.trim() : "";
-    s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.near = s.near === true;
+    s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.myVenues = s.myVenues === true; s.near = s.near === true;
     if (![2, 5, 10, 25, 1000].includes(Number(s.radius))) s.radius = 5;
     ["tab", "free", "others", "saved", "venue"].forEach(k => delete s[k]);
     return s;
@@ -87,6 +88,14 @@
       }
     } catch { /* nothing to migrate */ }
     return s;
+  }
+  function loadFavs() {
+    try { const a = JSON.parse(localStorage.getItem("lip-venues") || "[]"); return Array.isArray(a) ? a.filter(v => typeof v === "string" && v) : []; } catch { return []; }
+  }
+  function isFav(venue) { return favVenues.includes(venue); }
+  function toggleFav(venue) {
+    favVenues = isFav(venue) ? favVenues.filter(v => v !== venue) : [...favVenues, venue];
+    try { localStorage.setItem("lip-venues", JSON.stringify(favVenues)); } catch {}
   }
   function getStatus(id) { return status[id] || null; }
   function setStatus(id, s) {
@@ -127,7 +136,7 @@
   // The time frame is the current week (+ the ‹ › offset) — unless Nouveautés, Mes concerts or a free-text search is on:
   // then it is every upcoming week, stacked (4 saved concerts over three months would be useless in a 7-day window;
   // one searches for an artist, not a week). A genre / style / venue pick keeps the week: that is browsing.
-  function frame() { return state.newOnly || state.mine || state.q ? "all" : "week"; }
+  function frame() { return state.newOnly || state.mine || state.myVenues || state.q ? "all" : "week"; }
   function range() {
     const today = today0();
     if (frame() === "all") return [isoDate(today), "9999-12-31"];
@@ -207,10 +216,13 @@
   function shareLink(e) { return location.origin + location.pathname + "#e=" + e.id; }
 
   // ------------------------------------------------------------ filtering
+  // The three toggles (Nouveautés, Mes concerts, Mes salles) narrow the programme before the genre / style / venue picks.
+  function pillsOK(e) {
+    return !(state.newOnly && !isNew(e)) && !(state.mine && !status[e.id]) && !(state.myVenues && !isFav(e.venue));
+  }
   function baseFilter(e) {
     if (!e.is_music) return false;   // expos, ateliers, conférences… are never shown
-    if (state.newOnly && !isNew(e)) return false;
-    if (state.mine && !status[e.id]) return false;
+    if (!pillsOK(e)) return false;
     if (state.venues.length && !state.venues.includes(e.venue)) return false;
     if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
     if (state.styles.length && !(e.subgenres || []).some(s => state.styles.includes(s))) return false;
@@ -230,7 +242,7 @@
   function scopeCounts() {
     const r = range(), c = { genre: {}, style: {}, venue: {}, n: 0 };
     DATA.events.forEach(e => {
-      if (!e.is_music || !inFrame(e, r) || (state.newOnly && !isNew(e)) || (state.mine && !status[e.id])) return;
+      if (!e.is_music || !inFrame(e, r) || !pillsOK(e)) return;
       c.n++;
       e.genres.forEach(g => c.genre[g] = (c.genre[g] || 0) + 1);
       (e.subgenres || []).forEach(x => c.style[x] = (c.style[x] || 0) + 1);
@@ -248,12 +260,13 @@
     $("#prev").disabled = state.week === 0;
     $("#thisweek").hidden = all || state.week === 0;
   }
-  // The pills: Genres ▾ (badge = active genres + styles), Nouveautés, Mes concerts, Près de moi (+ radius once active).
+  // The pills: Genres ▾ (badge = active genres + styles), Nouveautés, Mes concerts, Mes salles (badge = favourite venues),
+  // Près de moi (+ radius once active).
   function renderPills() {
     const t = isoDate(today0());
     const nNew = DATA.events.filter(e => e.is_music && e.date >= t && isNew(e)).length, nG = state.genres.length + state.styles.length;
     const set = (id, on, n) => { const b = $(id); b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); $("small", b).textContent = n || ""; };
-    set("#newonly", state.newOnly, nNew); set("#mine", state.mine, statusCount());
+    set("#newonly", state.newOnly, nNew); set("#mine", state.mine, statusCount()); set("#myvenues", state.myVenues, favVenues.length);
     const g = $("#gbtn");
     g.classList.toggle("on", nG > 0); g.setAttribute("aria-expanded", String(genresOpen));
     $("small", g).textContent = nG || ""; $(".car", g).textContent = genresOpen ? "▴" : "▾";
@@ -280,7 +293,7 @@
     if (!show) { $("#slist").innerHTML = ""; return; }
     const counts = {}, r = range();
     DATA.events.forEach(e => {
-      if (!e.is_music || !inFrame(e, r) || (state.newOnly && !isNew(e)) || (state.mine && !status[e.id])) return;
+      if (!e.is_music || !inFrame(e, r) || !pillsOK(e)) return;
       if (picked.length && !e.genres.some(g => picked.includes(g))) return;
       (e.subgenres || []).forEach(x => counts[x] = (counts[x] || 0) + 1);
     });
@@ -391,7 +404,7 @@
       html += weekGrid(addDays(monday(today0()), 7 * state.week), byDay, { today, from, to, nav: true });
     } else {
       const mondays = [...new Set(evs.map(e => isoDate(monday(parseISO(e.date)))))].sort();
-      if (!mondays.length) html += '<div class="empty">Rien pour ces filtres.</div>';
+      if (!mondays.length) html += `<div class="empty">${state.myVenues && !favVenues.length ? "Ajoutez des salles avec ★ sur la fiche d'un concert." : "Rien pour ces filtres."}</div>`;
       for (const m of mondays) {
         const mon = parseISO(m), n = evs.filter(e => isoDate(monday(parseISO(e.date))) === m).length;
         html += `<h3 class="weekhead">${weekLabel(mon)}<em>${plural(n, "concert")}</em></h3>` + weekGrid(mon, byDay, { today, from, to, nav: false });
@@ -507,7 +520,7 @@
       type = "Artiste";
     } else if (it.kind === "venue") {
       th = `<span class="th gl">${PIN}</span>`;
-      sub = [it.area, `${plural(it.count, "concert")} à venir`].filter(Boolean).join(" · ");
+      sub = [isFav(it.name) ? "★ salle favorite" : "", it.area, `${plural(it.count, "concert")} à venir`].filter(Boolean).join(" · ");
       type = state.venues.includes(it.name) ? "Salle ✓" : "Salle";
     } else if (it.kind === "genre") {
       th = '<span class="th gen">♪</span>';
@@ -583,7 +596,7 @@
     render();
   }
   function clearAll() {
-    state = { ...state, genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, near: false };
+    state = { ...state, genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, near: false };
     stylesOpen = false; $("#gsq").value = ""; $("#search").value = "";
     render(); renderTa();
   }
@@ -663,10 +676,11 @@
     const price = e.free ? "Gratuit" : shortPrice(e.price);
     const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Itinéraire ↗</a>` : "";
     const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
-    const meta = [ticketTile(e).ticket ? "" : price ? esc(price) : "", subHtml(e, 4)].filter(Boolean).join(" · ");
+    const tile = ticketTile(e);
+    const meta = [tile.ticket || !price || price === "payant" ? "" : esc(price), subHtml(e, 4)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
-      <div class="actions">
-        ${ticketTile(e).html}
+      <div class="actions${tile.html ? "" : " three"}">
+        ${tile.html}
         <div class="status" id="status">
           <button id="statusbtn" class="tile" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="statusmenu"></button>
           <div class="statusmenu" id="statusmenu" role="menu" aria-label="Mon statut" hidden></div>
@@ -674,7 +688,7 @@
         <a class="tile" href="${esc(gcalUrl(e))}" target="_blank" rel="noopener" title="Ajouter à Google Agenda">${icon("cal")}<span class="lbl">Agenda</span></a>
         <a class="tile" href="${esc(whatsappUrl(e))}" target="_blank" rel="noopener" title="Partager sur WhatsApp">${icon("wa")}<span class="lbl">WhatsApp</span></a>
       </div>
-      <div class="venue"><b>${esc(e.venue)}</b>${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
+      <div class="venue"><button type="button" class="vname" data-venue="${esc(e.venue)}" title="Voir les concerts de cette salle"><b>${esc(e.venue)}</b></button>${favBtn(e.venue)}${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
       ${meta ? `<div class="muted meta">${meta}</div>` : ""}
       ${blurbHtml(e)}
       ${artists.length > 1 ? `<div class="listen"><h3>Écouter</h3><div class="artist-pick" role="group" aria-label="Artiste">${artists.map((a, i) =>
@@ -695,22 +709,28 @@
     };
     if (artists.length) loadArtist(artists[0], e, artists);
   }
-  // Tile 1 of the action row. `ticket` says whether the price is already on it (else the meta line shows it).
+  // ★ toggle next to the venue name (REM-28): favourite venues feed the "Mes salles" pill.
+  function favBtn(venue) {
+    const on = isFav(venue);
+    return `<button type="button" class="star" data-fav="${esc(venue)}" aria-pressed="${on}" aria-label="${on ? "Retirer des salles favorites" : "Ajouter aux salles favorites"}" title="${on ? "Salle favorite" : "Ajouter à mes salles"}">${on ? "★" : "☆"}</button>`;
+  }
+  // Tile 1 of the action row (REM-28): only a real ticket link earns it — "Billets ↗" with the numeric price ("20 €") or
+  // "Gratuit" when there is one, never "payant" — plus the Annulé / Complet notices. Otherwise there is no tile 1: the
+  // row stretches the three others (the title already links to the event page). `ticket` says the price is on the tile.
   function ticketTile(e) {
-    const ticket = safeUrl(e.ticket_url), page = safeUrl(e.url);
-    const price = e.free ? "Gratuit" : shortPrice(e.price);
+    const ticket = safeUrl(e.ticket_url);
+    const price = e.free ? "Gratuit" : (p => p && p !== "payant" ? p : null)(shortPrice(e.price));
     if (e.cancelled) return { html: '<button class="tile off" type="button" disabled><b>Annulé</b><small>Billets</small></button>' };
     if (e.sold_out) return { html: '<button class="tile off" type="button" disabled><b>Complet</b><small>Billets</small></button>' };
     if (ticket) return { ticket: true, html: `<a class="tile primary" href="${esc(ticket)}" target="_blank" rel="noopener">${price ? `<b>${esc(price)}</b><small>Billets ↗</small>` : `${icon("ticket")}<span class="lbl">Billets ↗</span>`}</a>` };
-    if (page) return { html: `<a class="tile" href="${esc(page)}" target="_blank" rel="noopener" title="${esc(page)}"><span class="lbl">Voir sur</span><small>${esc(hostOf(page))} ↗</small></a>` };
-    return { html: `<span class="tile off" aria-disabled="true">${price ? `<b>${esc(price)}</b><small>Billets</small>` : `${icon("ticket")}<span class="lbl">Billets</span>`}</span>` };
+    return { html: "" };
   }
   // ---- status tile + menu (REM-18): "Intéressé ? ▾" opens a small menu; once set, the tile shows the status and the
   // menu gains "Retirer". One menu at a time, closed on outside click / Escape (before the sheet's Escape).
   function renderStatus() {
     const b = $("#statusbtn"), m = $("#statusmenu"); if (!b || !current) return;
     const s = getStatus(current.id);
-    b.classList.toggle("on", !!s);
+    b.classList.toggle("on", !!s); b.classList.toggle("going", s === "going");   // gold when interested, lime when going (REM-28)
     b.setAttribute("aria-expanded", String(menuOpen));
     // Rewrite the tile only when its content changes: the click that opens the menu is still bubbling, and replacing
     // the icon/label would detach its target, which the document's outside-click handler would then read as "outside".
@@ -753,13 +773,12 @@
   // (see livemusic/summaries.py). Wikipedia is only fetched when both are empty (loadArtist).
   function blurb(e) { return (e.description || e.summary || "").trim(); }
   const BLURB_MAX = 260, BLURB_CUT = t => t.slice(0, 240).replace(/\s+\S*$/, "") + "…";
+  // No "source : domain ↗" after the text (REM-28): the title already links to the event page.
   function blurbHtml(e) {
     const text = blurb(e);
     if (!text) return "";
-    const long = text.length > BLURB_MAX, page = safeUrl(e.url);
-    let domain = "";
-    try { domain = page ? new URL(page).hostname.replace(/^www\./, "") : ""; } catch { /* no attribution */ }
-    return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>lire la suite</button>' : ""}${domain ? ` <a class="muted" href="${esc(page)}" target="_blank" rel="noopener">source : ${esc(domain)} ↗</a>` : ""}</p>`;
+    const long = text.length > BLURB_MAX;
+    return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>lire la suite</button>' : ""}</p>`;
   }
   // Cross-fade #artist: fade out, swap the content at the mid-point, fade in.
   function swapArtist(name, e, artists) {
@@ -928,6 +947,7 @@
   $("#gsq").oninput = () => renderGenrePanel();
   $("#newonly").onclick = () => { state.newOnly = !state.newOnly; render(); };
   $("#mine").onclick = () => { state.mine = !state.mine; render(); };
+  $("#myvenues").onclick = () => { state.myVenues = !state.myVenues; render(); };
   $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
   $("#near").onclick = () => {
     if (state.near) { state.near = false; render(); return; }
@@ -959,6 +979,11 @@
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
   detail.addEventListener("click", ev => {
     const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); return; }
+    // The venue name filters the grid on that venue (a chip in the bar, like picking it in the typeahead); ★ toggles the favourite.
+    const vn = ev.target.closest("[data-venue]");
+    if (vn) { const v = vn.dataset.venue; closeDetail(); if (!state.venues.includes(v)) state.venues = [...state.venues, v]; render(); return; }
+    const star = ev.target.closest("[data-fav]");
+    if (star) { toggleFav(star.dataset.fav); star.outerHTML = favBtn(star.dataset.fav); replay($(".venue .star", detail), "pop"); render(); return; }
     if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
     const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
   });
