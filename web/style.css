@@ -46,6 +46,11 @@ svg.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor;
 .chipin small { font-weight: 400; color: rgba(23, 20, 15, .6); font-size: 11px; }
 .chipin .x { width: 20px; height: 20px; flex: none; border: 0; border-radius: 50%; padding: 0; display: grid; place-items: center; font-size: 10px; background: rgba(23, 20, 15, .12); color: #17140f; transition: background-color .15s, color .15s; }
 .chipin .x:hover { background: #17140f; color: var(--lime); }
+/* ★ of "Mes salles" inside a venue chip (REM-31): same size as the ✕, ink-on-lime, gold once favourite. */
+.chipin .star { width: 20px; height: 20px; flex: none; border: 0; border-radius: 50%; padding: 0; margin-left: -2px; display: grid; place-items: center; font-size: 14px; line-height: 1; background: none; color: rgba(23, 20, 15, .55); transition: background-color .15s, color .15s; }
+.chipin .star:hover { background: rgba(23, 20, 15, .12); color: #17140f; }
+.chipin .star[aria-pressed="true"] { color: var(--gold); }
+.chipin .star.pop { animation: star .45s var(--spring); }
 .field .link { font-size: 12px; white-space: nowrap; margin: 0 6px 0 2px; }
 .kbd { flex: none; font: 600 11px/1 var(--body); color: var(--muted); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 3px 5px; background: var(--white); white-space: nowrap; }
 .back, #sclear { display: none; }
