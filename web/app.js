@@ -444,8 +444,13 @@
       });
       bump(vc, e.venue);
       if (e.area) bump(va[e.venue] = va[e.venue] || {}, e.area);
+    });
+    // Styles: every label of the whole programme, past concerts included (REM-27: a style with no upcoming date is
+    // still findable, its row then says "0 concert à venir"), with its parent genres and the count of upcoming concerts.
+    DATA.events.forEach(e => {
+      if (!e.is_music) return;
       (e.subgenres || []).forEach(x => {
-        bump(sc, x);
+        sc[x] = (sc[x] || 0) + (e.date >= t ? 1 : 0);
         e.genres.forEach(g => { bump(sg[x] = sg[x] || {}, g); (gs[g] = gs[g] || new Set()).add(x); });
       });
     });
@@ -459,7 +464,9 @@
     };
   }
   // Three groups, Artistes (soonest first) / Salles / Genres & styles, capped at 3 / 3 / 6 rows. An empty query offers the
-  // genres with the most concerts in the frame as a way in.
+  // genres with the most concerts in the frame as a way in. Genres and styles are ranked together (a style that starts with
+  // the query beats a genre that merely contains it), and the group leads when its best match is closer than the best
+  // artist's (REM-27: "bop" is the style "hard bop" before an artist whose name happens to contain the word).
   const TA_MAX = { artists: 3, venues: 3, gs: 6 };
   function suggest(raw) {
     const q = norm(raw).trim().replace(/\s+/g, " ");
@@ -473,11 +480,14 @@
     const byCount = (a, b) => b.count - a.count;
     const artists = rank(IDX.artists, (a, b) => a.events[0].date.localeCompare(b.events[0].date) || b.events.length - a.events.length);
     const venues = rank(IDX.venues, byCount);
-    const gs = [...rank(IDX.genres, byCount), ...rank(IDX.styles, byCount)];
+    const gs = rank([...IDX.genres, ...IDX.styles], byCount);
+    const best = list => list.length ? fuzzy(list[0].key, q) : Infinity;   // the lists are sorted, their head is their best score
     const groups = [];
+    const G = gs.length ? { title: "Genres & styles", note: gs.length > TA_MAX.gs ? `${gs.length}` : "", items: gs.slice(0, TA_MAX.gs) } : null;
+    if (G && best(gs) < best(artists)) groups.push(G);
     if (artists.length) groups.push({ title: "Artistes", note: artists.length > TA_MAX.artists ? `${artists.length} · les ${TA_MAX.artists} plus proches` : "", items: artists.slice(0, TA_MAX.artists) });
     if (venues.length) groups.push({ title: "Salles", note: venues.length > TA_MAX.venues ? `${venues.length}` : "", items: venues.slice(0, TA_MAX.venues) });
-    if (gs.length) groups.push({ title: "Genres & styles", note: gs.length > TA_MAX.gs ? `${gs.length}` : "", items: gs.slice(0, TA_MAX.gs) });
+    if (G && !groups.includes(G)) groups.push(G);
     return { q, groups };
   }
   const PIN = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>';
@@ -505,7 +515,7 @@
       type = state.genres.includes(it.tag) ? "Genre ✓" : "Genre";
     } else {
       th = '<span class="th sty">♪</span>';
-      sub = `${plural(it.count, "concert")} à venir${it.genre ? ` · dans ${TAG_LABELS[it.genre] || it.genre}` : ""}`;
+      sub = `${it.count ? plural(it.count, "concert") + " à venir" : "aucun concert à venir"}${it.genre ? ` · dans ${TAG_LABELS[it.genre] || it.genre}` : ""}`;
       type = state.styles.includes(it.name) ? "Style ✓" : "Style";
     }
     return `<div class="row${on ? " hi" : ""}" role="option" id="ta-${i}" aria-selected="${on}" data-i="${i}">${th}<span><b>${esc(it.name)}</b><small>${esc(sub)}</small></span><span class="type">${type}</span></div>`;
