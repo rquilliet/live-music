@@ -328,6 +328,70 @@ code { background: var(--paper2); padding: 1px 4px; }
 .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
 .links a { color: var(--muted); }
 
+/* ---------- Spotify "Mes artistes" (REM-9): avatar button next to the pill, account menu, connect dialog ---------- */
+.spme { width: 30px; height: 30px; flex: none; margin-left: -2px; padding: 0; border-radius: 50%; border: 1.5px solid var(--ink); overflow: hidden;
+  display: grid; place-items: center; background: var(--white); color: var(--ink); font-size: 14px; line-height: 1; transition: box-shadow .15s, transform .12s; }
+.spme[hidden] { display: none; }
+.spme img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.spme:hover, .spme[aria-expanded="true"] { box-shadow: 0 0 0 2.5px var(--lime); }
+.spme:active { transform: scale(.94); }
+.spmenu { position: absolute; z-index: 24; width: max-content; min-width: 280px; max-width: 100%; color: var(--ink); padding: 14px 16px 16px;
+  background: linear-gradient(180deg, var(--gloss), transparent 30%) var(--glass2); border: 1.5px solid var(--ink); border-radius: 18px;
+  -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--gloss2), 6px 6px 0 var(--line); transform-origin: 40px 0; animation: pop-in .18s var(--spring) backwards; }
+.spmenu[hidden] { display: none; }
+.spmenu.out { animation: pop-out .12s ease forwards; pointer-events: none; }
+.spwho { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.spwho img, .spwho .spav { width: 40px; height: 40px; flex: none; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--white); object-fit: cover; display: grid; place-items: center; }
+.spwho .spav svg.i { width: 20px; height: 20px; }
+.spwho b { display: block; font-weight: 700; font-size: 14px; overflow-wrap: anywhere; }
+.spwho small { display: block; color: var(--muted); font-size: 12px; }
+.sprow { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.mi { height: 32px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--paper); font-size: 12.5px; font-weight: 600;
+  transition: background-color .15s, color .15s, transform .12s; }
+.mi.sec { background: none; color: var(--ink); }
+.mi:hover, .mi:focus-visible { background: var(--lime); color: #17140f; outline: none; }
+.mi:active { transform: scale(.96); }
+.mi:disabled { opacity: .5; cursor: default; }
+.spnote { margin-top: 10px; font-size: 12.5px; color: var(--muted); font-style: italic; line-height: 1.45; }
+.spnote.err { color: var(--orange); font-style: normal; }
+/* Connect dialog: a veil over the page, one glass box in the middle (full width with margins on a phone). */
+.spveil { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 16px; background: rgba(23, 20, 15, .45); animation: fade-in .18s ease backwards; }
+.spveil[hidden] { display: none; }
+.spveil.out { animation: fade-out .12s ease forwards; pointer-events: none; }
+.spbox { position: relative; width: min(440px, 100%); color: var(--ink); padding: 22px 24px 24px; border: 1.5px solid var(--ink); border-radius: 22px;
+  background: linear-gradient(180deg, var(--gloss), transparent 30%) var(--glass2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--gloss2), 6px 6px 0 var(--line); animation: pop-in .18s var(--spring) backwards; }
+.spbox h4 { margin: 0 36px 12px 0; font-family: var(--display); font-weight: 900; font-size: 28px; line-height: 1; letter-spacing: -.01em; display: flex; align-items: center; gap: 9px; }
+.spbox h4 svg.i { width: 24px; height: 24px; }
+.spbox p { margin: 0 0 14px; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+.spbox p b { color: var(--ink); }
+.spbox .x { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; padding: 0; border-radius: 50%; border: 1.5px solid var(--ink); background: none; font-size: 13px;
+  display: grid; place-items: center; transition: background-color .15s, color .15s; }
+.spbox .x:hover { background: var(--ink); color: var(--paper); }
+.spbtn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid var(--ink);
+  background: var(--ink); color: var(--paper); font-weight: 600; font-size: 14px; transition: background-color .15s, color .15s, transform .12s; }
+.spbtn:hover, .spbtn:focus-visible { background: var(--lime); color: #17140f; }
+.spbtn:active { transform: scale(.97); }
+.spbtn.sec { background: none; color: var(--ink); }
+.spbtn svg.i { width: 18px; height: 18px; }
+.spbox .spwho { margin-top: 4px; }
+.spbox .sprow { margin-top: 16px; }
+@media (max-width: 560px) {
+  .spmenu { left: 0 !important; right: 0; width: auto; min-width: 0; border-radius: 16px; }
+  .spbox { padding: 18px 18px 20px; border-radius: 18px; }
+  .spbox h4 { font-size: 24px; }
+  .spbtn { width: 100%; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .spmenu, .spbox { background: var(--white); } }
+@media (prefers-reduced-motion: reduce) {
+  .spmenu, .spbox, .spveil { animation: fade-in .12s ease backwards; }
+  .spmenu.out, .spveil.out { animation: fade-out .12s ease forwards; }
+  .spme, .mi, .spbtn, .spbox .x { transition: none; }
+  .spme:active, .mi:active, .spbtn:active { transform: none; }
+}
+
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .top, .weeknav, .list { padding-left: 16px; padding-right: 16px; }
