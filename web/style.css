@@ -131,20 +131,20 @@ select.pill[hidden] { display: none; }
 .gpanel .none { color: var(--faint); font-size: 13px; font-style: italic; }
 .gpanel .gs .link { font-size: 12.5px; margin-left: 4px; }
 
-/* ---------- week strip ---------- */
-/* The one sticky glass band: the masthead and the bar scroll away, the strip stays over the grid. */
+/* ---------- month strip (REM-35) ---------- */
+/* The one sticky glass band: the masthead and the bar scroll away, the strip stays over the grid — the month in view,
+   the total, and a button per month that jumps to its heading. */
 .weeknav { display: flex; align-items: center; gap: 14px; padding: 12px 32px 14px; margin-top: 22px; flex-wrap: wrap;
   position: sticky; top: 0; z-index: 15;
   background: linear-gradient(180deg, var(--gloss) 0, transparent 60%), var(--glass);
   -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3);
   box-shadow: inset 0 1px 0 var(--gloss2), 0 1px 0 var(--shade); }
-.arrows { display: flex; gap: 4px; }
-.arrows button { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--ink); background: none; font-size: 20px; line-height: 1; padding: 0 0 2px;
+.months { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
+.months button { height: 32px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--ink); background: none; font-size: 13px; font-weight: 600; white-space: nowrap;
   transition: background-color .15s, color .15s, transform .12s; }
-.arrows button:hover:not(:disabled) { background: var(--ink); color: var(--paper); }
-.arrows button:active:not(:disabled) { transform: scale(.94); }
-.arrows button:disabled { color: var(--line); border-color: var(--line); cursor: default; }
-.arrows[hidden] { display: none; }
+.months button:hover { background: var(--hi); }
+.months button:active { transform: scale(.96); }
+.months button.on { background: var(--ink); color: var(--paper); }
 .weeknav strong { font-family: var(--display); font-size: 44px; font-weight: 700; line-height: .9; letter-spacing: -.01em; }
 .weeknav em { font-style: normal; font-size: 13px; color: var(--muted); align-self: flex-end; padding-bottom: 3px; }
 .weeknav .link { font-size: 13px; align-self: flex-end; padding-bottom: 3px; }
@@ -152,7 +152,12 @@ select.pill[hidden] { display: none; }
 /* ---------- week grid ---------- */
 .list { padding: 0 32px 40px; }
 .list.swap { animation: fade-in .16s ease-out; }   /* the frame changed (week <-> every upcoming week) */
-.weekhead { font-family: var(--display); font-size: 22px; font-weight: 700; margin: 26px 0 8px; display: flex; align-items: baseline; gap: 10px; }
+.monthhead { font-family: var(--display); font-size: 44px; font-weight: 900; line-height: .9; letter-spacing: -.01em; margin: 40px 0 6px; padding-bottom: 8px; border-bottom: 3px solid var(--rule);
+  display: flex; align-items: baseline; gap: 10px; }
+.monthhead:first-child { margin-top: 18px; }
+.monthhead small { font-size: 18px; font-weight: 700; color: var(--muted); }
+.monthhead em { font-style: normal; font-family: var(--body); font-weight: 400; font-size: 13px; color: var(--muted); margin-left: auto; }
+.weekhead { font-family: var(--display); font-size: 22px; font-weight: 700; margin: 18px 0 8px; display: flex; align-items: baseline; gap: 10px; }
 .weekhead em { font-style: normal; font-family: var(--body); font-weight: 400; font-size: 13px; color: var(--muted); }
 .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1.5px solid var(--rule); border-left: 1.5px solid var(--rule); background: var(--paper); }
 .day { border-right: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); min-height: 320px; display: flex; flex-direction: column; min-width: 0; }
@@ -423,7 +428,12 @@ code { background: var(--paper2); padding: 1px 4px; }
   .gpanel { left: 0 !important; right: 0; width: auto; border-radius: 18px; padding: 14px 14px 16px; }
   .weeknav { margin-top: 14px; padding: 8px 16px 10px; gap: 10px; }
   .weeknav strong { font-size: 34px; }
-  .arrows button { width: 32px; height: 32px; font-size: 18px; }
+  /* the month buttons scroll in one row under the label */
+  .months { flex: 1 1 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+  .months::-webkit-scrollbar { display: none; }
+  .months button { height: 30px; padding: 0 11px; font-size: 12.5px; flex: none; }
+  .monthhead { font-size: 32px; margin-top: 30px; }
+  .monthhead small { font-size: 14px; }
   .grid { grid-template-columns: 1fr; }
   .day.past { display: none; }
   .hero-text h2 { font-size: 34px; }
@@ -473,7 +483,7 @@ code { background: var(--paper2); padding: 1px 4px; }
   .detail::before, .sheet, .ta, .gpanel, .statusmenu, .list.swap { animation: fade-in .12s ease backwards; }
   .detail.closing::before, .detail.closing .sheet, .ta.out, .gpanel.out, .statusmenu.out { animation: fade-out .12s ease forwards; }
   .hero-text > *, #statusbtn.pop, #statusbtn.pop .i, #statusbtn.pop .star, #artist.swap, .skel, .chipin.pop { animation: none; }
-  .list, .pill, .arrows button, .gpanel .g, .chipin .x, .close, .tile, .artist-pick button, .statusmenu button, .live .yt .play { transition: none; }
-  .pill:active, .arrows button:active, .gpanel .g:active, .tag.sub:active, .close:active, .tile:active { transform: none; }
+  .list, .pill, .months button, .gpanel .g, .chipin .x, .close, .tile, .artist-pick button, .statusmenu button, .live .yt .play { transition: none; }
+  .pill:active, .months button:active, .gpanel .g:active, .tag.sub:active, .close:active, .tile:active { transform: none; }
   .hero, .sheet.moving { will-change: auto; }
 }

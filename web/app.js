@@ -21,7 +21,7 @@
     experimental: "expérimental noise", world: "musiques du monde world music", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false, myArtists: false });
+  let state = load({ genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false, myArtists: false });
   const STATUS = { interested: { icon: "☆", svg: "star", label: "Interested" }, going: { icon: "✓", svg: "check", label: "Going" } };
   let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Interested? / Going"
   let favVenues = loadFavs(); // favourite venue names (★ on the sheet), localStorage "lip-venues" — REM-28 "Mes salles"
@@ -62,14 +62,13 @@
     try { s = Object.assign(def, JSON.parse(localStorage.getItem("lip-state") || "{}")); } catch { /* keep defaults */ }
     if (s.saved === true) s.mine = true;
     if (s.tab === "new") s.newOnly = true;
-    s.week = 0;   // always land on the current week; the offset is only kept while browsing
     const strings = a => (Array.isArray(a) ? a : []).filter(v => typeof v === "string" && v);
     s.genres = strings(s.genres); s.styles = strings(s.styles); s.venues = strings(s.venues);
     if (typeof s.venue === "string" && s.venue && !s.venues.length) s.venues = [s.venue];   // single-venue dropdown from the previous UI
     s.q = typeof s.q === "string" ? s.q.trim() : "";
     s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.myVenues = s.myVenues === true; s.myArtists = s.myArtists === true; s.near = s.near === true;
     if (![2, 5, 10, 25, 1000].includes(Number(s.radius))) s.radius = 5;
-    ["tab", "free", "others", "saved", "venue"].forEach(k => delete s[k]);
+    ["tab", "free", "others", "saved", "venue", "week"].forEach(k => delete s[k]);   // week: the ‹ › offset of the one-week view (gone, REM-35)
     return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
@@ -134,16 +133,8 @@
   function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
   function plural(n, w) { return `${n} ${w}${n > 1 ? "s" : ""}`; }
 
-  // The time frame is the current week (+ the ‹ › offset) — unless Nouveautés, Mes concerts or a free-text search is on:
-  // then it is every upcoming week, stacked (4 saved concerts over three months would be useless in a 7-day window;
-  // one searches for an artist, not a week). A genre / style / venue pick keeps the week: that is browsing.
-  function frame() { return state.newOnly || state.mine || state.myVenues || state.myArtists || state.q ? "all" : "week"; }
-  function range() {
-    const today = today0();
-    if (frame() === "all") return [isoDate(today), "9999-12-31"];
-    const wk = addDays(monday(today), 7 * state.week);
-    return [isoDate(state.week ? wk : today), isoDate(addDays(wk, 6))];
-  }
+  // The time frame is every upcoming week (REM-35): from today on, stacked under one heading per month (renderList).
+  function range() { return [isoDate(today0()), "9999-12-31"]; }
   function inFrame(e, r = range()) { return e.date >= r[0] && e.date <= r[1]; }
   function isNew(e) {
     if (!e.first_seen || e.first_seen === "baseline") return false;
@@ -260,13 +251,26 @@
   }
 
   // ------------------------------------------------------------ rendering
+  // The sticky strip (REM-35): the month in view as the big label, the total, and one button per month of the programme
+  // that scrolls to its heading. spy() keeps the label and the active button in step with the scroll position.
+  let months = [];   // "YYYY-MM" keys of the months listed, in order (set by renderList)
+  const yearOf = m => m.slice(0, 4) !== String(today0().getFullYear()) ? " " + m.slice(0, 4) : "";   // the year only when it is not this one
   function renderNav() {
-    const all = frame() === "all";
-    $("#weeklabel").textContent = all ? "Everything upcoming" : weekLabel(addDays(monday(today0()), 7 * state.week), MOBILE.matches);
     $("#weekcount").textContent = plural(visible().length, "concert");
-    $("#arrows").hidden = all;
-    $("#prev").disabled = state.week === 0;
-    $("#thisweek").hidden = all || state.week === 0;
+    $("#months").innerHTML = months.map(m => `<button type="button" data-m="${m}">${MONTHS_SHORT[+m.slice(5) - 1]}${yearOf(m)}</button>`).join("");
+    spy();
+  }
+  let spyRaf = 0;
+  function spy() {
+    const line = $(".weeknav").getBoundingClientRect().bottom + 2;
+    let cur = months[0] || "";
+    $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().top <= line) cur = h.dataset.m; });
+    $("#weeklabel").textContent = cur ? MONTHS[+cur.slice(5) - 1] + yearOf(cur) : "Coming up";
+    $$("#months button").forEach(b => { b.classList.toggle("on", b.dataset.m === cur); b.setAttribute("aria-current", b.dataset.m === cur ? "true" : "false"); });
+  }
+  function jumpMonth(m) {
+    const h = $$(".monthhead").find(x => x.dataset.m === m); if (!h) return;
+    window.scrollTo({ top: h.getBoundingClientRect().top + scrollY - $(".weeknav").offsetHeight + 1, behavior: motionOK() ? "smooth" : "auto" });   // tucked 1px under the strip: spy() counts it as in view
   }
   // The pills: Genres ▾ (badge = active genres + styles), Nouveautés, Mes concerts, Mes salles (badge = favourite venues),
   // Près de moi (+ radius once active).
@@ -390,12 +394,13 @@
       const note = past ? "past" : out ? "" : evs.length ? plural(evs.length, "concert") : "—";
       h += `<div class="${cls}"><h2>${DAYS_SHORT[d.getDay()]} ${d.getDate()}<em>${note}</em></h2>`;
       if (evs.length) h += evs.map(gigHtml).join("");
-      else if (!past && !out) h += `<div class="empty">Nothing announced.${o.nav ? ' <button class="link" data-next>See next week ›</button>' : ""}</div>`;
+      else if (!past && !out) h += '<div class="empty">Nothing announced.</div>';
       h += "</div>";
     }
     return h + "</div>";
   }
-  // The week grid is the only view: one week (‹ › browse it), or every upcoming week stacked when the frame is widened.
+  // Every upcoming week, stacked (REM-35), under one heading per month — a week belongs to the month of its Thursday, the
+  // ISO rule. Weeks without a concert are skipped, so a venue or artist filter starts at its first concert.
   function renderList() {
     let evs = visible();
     const byTime = (a, b) => (a.time || "99:99").localeCompare(b.time || "99:99");
@@ -410,15 +415,17 @@
     const today = isoDate(today0());
     const [from, to] = range();
     let html = "";
-    if (frame() === "week") {
-      html += weekGrid(addDays(monday(today0()), 7 * state.week), byDay, { today, from, to, nav: true });
-    } else {
-      const mondays = [...new Set(evs.map(e => isoDate(monday(parseISO(e.date)))))].sort();
-      if (!mondays.length) html += `<div class="empty">${state.myArtists ? "No concert by your artists for now." : state.myVenues && !favVenues.length ? "Add venues with ★ on a concert or on a venue chip." : "Nothing for these filters."}</div>`;
-      for (const m of mondays) {
-        const mon = parseISO(m), n = evs.filter(e => isoDate(monday(parseISO(e.date))) === m).length;
-        html += `<h3 class="weekhead">${weekLabel(mon)}<em>${plural(n, "concert")}</em></h3>` + weekGrid(mon, byDay, { today, from, to, nav: false });
-      }
+    const weekOf = e => isoDate(monday(parseISO(e.date))), monthOf = w => isoDate(addDays(parseISO(w), 3)).slice(0, 7);
+    const perWeek = {}, perMonth = {};
+    evs.forEach(e => { const w = weekOf(e), m = monthOf(w); perWeek[w] = (perWeek[w] || 0) + 1; perMonth[m] = (perMonth[m] || 0) + 1; });
+    const mondays = Object.keys(perWeek).sort();
+    months = [...new Set(mondays.map(monthOf))];
+    if (!mondays.length) html += `<div class="empty">${state.myArtists ? "No concert by your artists for now." : state.myVenues && !favVenues.length ? "Add venues with ★ on a concert or on a venue chip." : "Nothing for these filters."}</div>`;
+    let lastMonth = "";
+    for (const w of mondays) {
+      const m = monthOf(w);
+      if (m !== lastMonth) { lastMonth = m; html += `<h2 class="monthhead" data-m="${m}" id="m-${m}">${MONTHS[+m.slice(5) - 1]}<small>${m.slice(0, 4)}</small><em>${plural(perMonth[m], "concert")}</em></h2>`; }
+      html += `<h3 class="weekhead">${weekLabel(parseISO(w), MOBILE.matches)}<em>${plural(perWeek[w], "concert")}</em></h3>` + weekGrid(parseISO(w), byDay, { today, from, to });
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
@@ -435,13 +442,9 @@
     const upd = new Date(d.generated_at);
     $("#meta").innerHTML = `<span class="d">${plural(music.length, "concert")} upcoming · </span>${week} this week<span class="d"> · updated ${DAYS[upd.getDay()]} ${String(upd.getHours()).padStart(2, "0")}:${String(upd.getMinutes()).padStart(2, "0")}</span>`;
   }
-  let lastFrame = null;
   function render() {
-    const f = frame();
-    renderNav(); renderPills(); renderChips(); renderList(); save();
+    renderPills(); renderChips(); renderList(); renderNav(); save();   // the nav reads the month headings: list first
     if (genresOpen) placePanel();
-    if (lastFrame && f !== lastFrame) replay($("#list"), "swap");
-    lastFrame = f;
   }
 
   // ------------------------------------------------------------ search bar (REM-26)
@@ -497,7 +500,7 @@
     if (!q) {
       const c = scopeCounts().genre;
       const gs = IDX.genres.filter(g => c[g.tag]).sort((a, b) => c[b.tag] - c[a.tag]).slice(0, TA_MAX.gs);
-      return { q, groups: gs.length ? [{ title: "Genres & styles", note: frame() === "week" ? "most played this week" : "most played", items: gs }] : [] };
+      return { q, groups: gs.length ? [{ title: "Genres & styles", note: "most played", items: gs }] : [] };
     }
     const rank = (list, tie) => list.map(x => [fuzzy(x.key, q), x]).filter(([sc]) => sc >= 0).sort((a, b) => a[0] - b[0] || tie(a[1], b[1])).map(([, x]) => x);
     const byCount = (a, b) => b.count - a.count;
@@ -534,7 +537,7 @@
       type = state.venues.includes(it.name) ? "Venue ✓" : "Venue";
     } else if (it.kind === "genre") {
       th = '<span class="th gen">♪</span>';
-      sub = `${plural(it.count, "concert")} upcoming` + (frame() === "week" && c.genre[it.tag] ? ` · ${c.genre[it.tag]} this week` : "") + ` · ${plural(it.styles, "style")}`;
+      sub = `${plural(it.count, "concert")} upcoming · ${plural(it.styles, "style")}`;
       type = state.genres.includes(it.tag) ? "Genre ✓" : "Genre";
     } else {
       th = '<span class="th sty">♪</span>';
@@ -1152,10 +1155,8 @@
   }
 
   // ------------------------------------------------------------ events
-  function goWeek(n) { state.week = Math.max(0, n); render(); window.scrollTo({ top: 0 }); }
-  $("#prev").onclick = () => goWeek(state.week - 1);
-  $("#next").onclick = () => goWeek(state.week + 1);
-  $("#thisweek").onclick = () => goWeek(0);
+  $("#months").onclick = ev => { const b = ev.target.closest("[data-m]"); if (b) jumpMonth(b.dataset.m); };
+  addEventListener("scroll", () => { if (spyRaf) return; spyRaf = requestAnimationFrame(() => { spyRaf = 0; spy(); }); }, { passive: true });
   // search bar
   const search = $("#search"), sbar = $("#sbar");
   search.onfocus = () => { openTa(); renderTa(); };
@@ -1231,9 +1232,8 @@
     if (SP.menu && !within("myartists", "spme", "spmenu")) closeSpMenu();
   });
   addEventListener("resize", () => { if (genresOpen) placePanel(); if (SP.menu) placeSpMenu(); });
-  MOBILE.addEventListener("change", () => { if (!MOBILE.matches) document.body.classList.remove("searching"); else if (taOpen) closeTa(true); renderNav(); });
+  MOBILE.addEventListener("change", () => { if (!MOBILE.matches) document.body.classList.remove("searching"); else if (taOpen) closeTa(true); render(); });   // short / long week labels
   $("#list").onclick = ev => {
-    if (ev.target.closest("[data-next]")) { goWeek(state.week + 1); return; }
     const sub = ev.target.closest(".tag.sub");
     if (sub) { toggleStyle(sub.dataset.sub); return; }
     const row = ev.target.closest(".gig"); if (!row) return;
@@ -1255,7 +1255,7 @@
     if (ev.target.closest("#statusmenu")) { menuKeys(ev); return; }
     if (ev.target.closest("#statusbtn") && ev.key === "ArrowDown" && !menuOpen) { ev.preventDefault(); openMenu(); }
   });
-  // ⌘K / Ctrl+K / "/" focus the bar; Escape closes whatever is open (typeahead, panel, status menu, sheet); ← → browse the weeks.
+  // ⌘K / Ctrl+K / "/" focus the bar; Escape closes whatever is open (typeahead, panel, status menu, sheet).
   document.addEventListener("keydown", ev => {
     const inField = /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName);
     if ((ev.metaKey || ev.ctrlKey) && !ev.altKey && ev.key.toLowerCase() === "k") { ev.preventDefault(); focusSearch(); return; }
@@ -1265,10 +1265,7 @@
     if (ev.key === "Escape" && taOpen) { closeTa(true); return; }
     if (ev.key === "Escape" && genresOpen) { closeGenres(true); return; }
     if (ev.key === "Escape" && menuOpen) { closeMenu(true); return; }
-    if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
-    if (!detail.hidden || inField || genresOpen || SP.menu || frame() !== "week") return;
-    if (ev.key === "ArrowLeft" && state.week > 0) goWeek(state.week - 1);
-    if (ev.key === "ArrowRight") goWeek(state.week + 1);
+    if (ev.key === "Escape" && !detail.hidden) closeDetail();
   });
 
   // ------------------------------------------------------------ boot
