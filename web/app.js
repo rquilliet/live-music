@@ -334,7 +334,8 @@
   let chipCount = 0;
   function renderChips() {
     const c = scopeCounts();
-    const chip = (kind, key, label, n) => `<span class="chipin"><span>${esc(label)}</span>${n == null ? "" : `<small>${n}</small>`}<button type="button" class="x" data-rm="${kind}" data-key="${esc(key)}" aria-label="Retirer ${esc(label)}">✕</button></span>`;
+    // A venue chip also carries the ★ of "Mes salles" (REM-31): the favourite can be set from the bar, without opening a sheet.
+    const chip = (kind, key, label, n) => `<span class="chipin"><span>${esc(label)}</span>${n == null ? "" : `<small>${n}</small>`}${kind === "venue" ? favBtn(key) : ""}<button type="button" class="x" data-rm="${kind}" data-key="${esc(key)}" aria-label="Retirer ${esc(label)}">✕</button></span>`;
     const chips = [
       ...state.genres.map(g => chip("genre", g, TAG_LABELS[g] || g, c.genre[g] || 0)),
       ...state.styles.map(x => chip("style", x, x, c.style[x] || 0)),
@@ -1168,6 +1169,13 @@
   $("#chips").onclick = ev => {
     const x = ev.target.closest("[data-rm]");
     if (x) { closeTa(); removeFilter(x.dataset.rm, x.dataset.key); return; }
+    const star = ev.target.closest("[data-fav]");   // ★ on a venue chip (REM-31): toggle, re-render, keep the focus on the new star
+    if (star) {
+      toggleFav(star.dataset.fav); render();
+      const s = $$("#chips [data-fav]").find(b => b.dataset.fav === star.dataset.fav);
+      if (s) { replay(s, "pop"); s.focus(); }
+      return;
+    }
     if (ev.target.closest("#clearall")) { closeTa(); clearAll(); }
   };
   $("#ta").addEventListener("mousedown", ev => ev.preventDefault());   // keep the focus in the bar
