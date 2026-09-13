@@ -48,7 +48,15 @@ jobs:
           git add web/events.json data/*.json
           if git diff --cached --quiet; then echo "no data change"; else
             git commit -m "Data: daily scrape $(date -u +%F)"
-            git push origin HEAD:main
+            # Code pushes land on main during the ~50 min LLM scrape: rebase onto the tip before
+            # pushing (data/*.json and web/events.json are only written here), retry a few times.
+            for attempt in 1 2 3 4 5; do
+              git fetch -q origin main
+              git rebase -q origin/main || { git rebase --abort; echo "::error::rebase conflict on data files"; exit 1; }
+              if git push origin HEAD:main; then break; fi
+              [ "$attempt" = 5 ] && exit 1
+              sleep 15
+            done
           fi
       - uses: actions/configure-pages@v5
         with:
