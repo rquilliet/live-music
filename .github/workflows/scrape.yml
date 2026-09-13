@@ -2,6 +2,7 @@
 # Secrets (Settings → Secrets and variables → Actions):
 #   ANTHROPIC_API_KEY       genre tagging, sub-genres, event-page summaries, LLM venues (optional but recommended)
 #   SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET   Spotify player ids (optional)
+#   YOUTUBE_API_KEY         "En live" videos, YouTube Data API v3 (optional, 80 searches a run)
 name: Daily scrape
 
 on:
@@ -37,6 +38,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         # scrape.py exits 1 when a source fails; the programme is still written, so publish it anyway.
         run: python scrape.py || echo "::warning::some sources failed (see log above)"
       - name: Commit data

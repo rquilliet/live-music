@@ -4,14 +4,18 @@ The page is static, so it cannot ask Bandcamp (no API, no CORS) or Spotify (OAut
 looks each act up once, caches the answer in data/player_cache.json (negative answers too, re-checked
 after NEGATIVE_TTL_DAYS) and writes onto every music event::
 
-    players: {"<artist name>": {"bandcamp": {"url": ..., "embed": ...}, "spotify": {"url": ..., "id": ...}}}
+    players: {"<artist name>": {"bandcamp": {"url": ..., "embed": ...}, "spotify": {"url": ..., "id": ...},
+                                "youtube": {"videoId": ..., "title": ..., "publishedAt": ...}}}
 
 Providers that were not found are simply absent; a Bandcamp page with nothing embeddable has `url` only
-(still worth a link).  The UI picks Bandcamp (embed) > Spotify > Deezer.
+(still worth a link).  The UI picks Spotify > Bandcamp (embed) > Deezer for the music player, and shows the
+YouTube video in a separate "En live" block (a search link when there is none).
 
 * Bandcamp: public autocomplete endpoint (falls back to the HTML search page), exact normalised name
   match, then the band page's ``bc-page-properties`` meta gives an album/track id for the EmbeddedPlayer.
 * Spotify: only with SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET (client-credentials flow); skipped otherwise.
+* YouTube: only with YOUTUBE_API_KEY (Data API v3 search, 100 quota units a call, 10 000 a day), so at most
+  MAX_YT_LOOKUPS artists per run; the first embeddable "<artist> live" hit whose title names the act.
 
 No dependency beyond the standard library; network errors never propagate (logged, not cached).
 """
@@ -32,6 +36,7 @@ from .util import strip_accents
 NEGATIVE_TTL_DAYS = 30      # an act unknown to Bandcamp/Spotify is asked again after a month
 POSITIVE_TTL_DAYS = 365     # a found page is trusted for a year (ids do not move)
 MAX_LOOKUPS = 300           # new artists resolved per run; the cache fills up over the daily runs
+MAX_YT_LOOKUPS = 80         # YouTube searches per run (100 units each out of the 10 000/day quota)
 MAX_ARTISTS_PER_EVENT = 5   # headliner + 4 support acts
 MAX_CONSECUTIVE_ERRORS = 5  # a blocked host must not cost hundreds of timeouts
 BANDCAMP_PAUSE = 1.0        # seconds between Bandcamp requests
@@ -43,6 +48,8 @@ BC_EMBED = ("https://bandcamp.com/EmbeddedPlayer/{kind}={id}/size=large/bgcol=ff
             "tracklist=false/artwork=small/transparent=true/")
 SP_TOKEN = "https://accounts.spotify.com/api/token"
 SP_SEARCH = "https://api.spotify.com/v1/search?type=artist&limit=5&q={q}"
+YT_SEARCH = ("https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true"
+             "&videoSyndicated=true&order=relevance&maxResults=5&q={q}&key={key}")
 
 
 class PlayerError(Exception):
@@ -272,9 +279,65 @@ def resolve_spotify(name: str, token: str, fetch=http):
     return parse_spotify(body, name)
 
 
+# ------------------------------------------------------------------ youtube
+
+_YT_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+_LIVE_WORDS = ("live", "en concert", "concert", "session", "festival")
+
+
+def youtube_key():
+    return os.environ.get("YOUTUBE_API_KEY") or None
+
+
+_env_youtube_key = youtube_key   # resolve() takes a `youtube_key` argument that shadows the function
+
+
+def parse_youtube(payload, name: str):
+    """{"videoId", "title", "publishedAt"} of the best "live" hit for the artist, else None.
+
+    First choice: a title that names the act (accent/case-insensitive) and says live / concert / session /
+    festival.  Fallback: any item whose channel title or title names the act.  Relevance order is kept.
+    """
+    if isinstance(payload, str):
+        try:
+            payload = json.loads(payload)
+        except ValueError:
+            return None
+    items = [i for i in ((payload or {}).get("items") or []) if isinstance(i, dict)]
+    key = norm_artist(name)
+    if not key:
+        return None
+
+    def video(item):
+        vid = (item.get("id") or {}).get("videoId") if isinstance(item.get("id"), dict) else None
+        sn = item.get("snippet") or {}
+        if not isinstance(vid, str) or not _YT_ID.match(vid) or not isinstance(sn, dict):
+            return None
+        return {"videoId": vid, "title": htmllib.unescape(sn.get("title") or ""),
+                "publishedAt": (sn.get("publishedAt") or "")[:10]}
+
+    def names_act(text):
+        return key in norm_artist(text or "")
+
+    for item in items:
+        v = video(item)
+        if v and names_act(v["title"]) and any(w in norm_artist(v["title"]) for w in _LIVE_WORDS):
+            return v
+    for item in items:
+        v = video(item)
+        if v and (names_act(v["title"]) or names_act((item.get("snippet") or {}).get("channelTitle"))):
+            return v
+    return None
+
+
+def resolve_youtube(name: str, key: str, fetch=http):
+    body = fetch(YT_SEARCH.format(q=urllib.parse.quote(f"{name} live"), key=urllib.parse.quote(key)))
+    return parse_youtube(body, name)
+
+
 # ------------------------------------------------------------------ cache
 
-PROVIDERS = ("bandcamp", "spotify")
+PROVIDERS = ("bandcamp", "spotify", "youtube")
 
 
 def cache_load(path):
@@ -326,11 +389,15 @@ def artists_of(event):
 
 
 def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sleep, credentials=None,
-            max_lookups=MAX_LOOKUPS):
-    """Fill `players` on every music event.  Lookups go soonest-concert first, capped per run."""
+            max_lookups=MAX_LOOKUPS, youtube_key=None, max_yt_lookups=MAX_YT_LOOKUPS):
+    """Fill `players` on every music event.  Lookups go soonest-concert first, capped per run.
+
+    `credentials` / `youtube_key`: None reads the environment, False skips the provider.
+    """
     today = today or dt.date.today()
     cache = cache_load(cache_path)
     creds = credentials if credentials is not None else spotify_credentials()
+    yt_key = youtube_key if youtube_key is not None else _env_youtube_key()
 
     # artist -> earliest event date, so the cap favours acts that play soon
     pending = {}
@@ -338,16 +405,27 @@ def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sl
         if e.is_music:
             for n in artists_of(e):
                 pending.setdefault(norm_artist(n), n)
-    todo = [(k, n) for k, n in pending.items()
-            if needs_lookup(cache.get(k), "bandcamp", today) or (creds and needs_lookup(cache.get(k), "spotify", today))]
+    def music_todo(k):
+        return needs_lookup(cache.get(k), "bandcamp", today) or (creds and needs_lookup(cache.get(k), "spotify", today))
+
+    todo = [(k, n) for k, n in pending.items() if music_todo(k)]
     if len(todo) > max_lookups:
         log(f"  players: {len(todo)} artists to look up, doing {max_lookups} this run")
         todo = todo[:max_lookups]
     elif todo:
         log(f"  players: looking up {len(todo)} artists" + ("" if creds else " (Spotify skipped: no SPOTIFY_CLIENT_ID/SECRET)"))
+    # YouTube has its own, smaller budget (quota): soonest concerts first, independent of the music-player cap.
+    yt_todo = [(k, n) for k, n in pending.items() if yt_key and needs_lookup(cache.get(k), "youtube", today)]
+    if len(yt_todo) > max_yt_lookups:
+        log(f"  players: {len(yt_todo)} artists to look up on YouTube, doing {max_yt_lookups} this run")
+        yt_todo = yt_todo[:max_yt_lookups]
+    yt_keys = {k for k, _ in yt_todo}
+    seen = {k for k, _ in todo}
+    todo += [(k, n) for k, n in yt_todo if k not in seen]
 
     hints = bandcamp_hints(events)
-    token, bc_errors, sp_errors, found = None, 0, 0, {"bandcamp": 0, "spotify": 0}
+    token, bc_errors, sp_errors, yt_errors = None, 0, 0, 0
+    found = {"bandcamp": 0, "spotify": 0, "youtube": 0}
     if creds and todo:
         try:
             token = spotify_token(*creds, fetch=fetch)
@@ -374,14 +452,26 @@ def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sl
             except (PlayerError, ValueError) as ex:
                 sp_errors += 1
                 log(f"  players: spotify {name!r}: {ex}")
+        if key in yt_keys and yt_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "youtube", today):
+            try:
+                cache_put(entry, "youtube", resolve_youtube(name, yt_key, fetch=fetch), today)
+                yt_errors, dirty = 0, True
+                found["youtube"] += bool(entry["youtube"])
+            except (PlayerError, ValueError) as ex:
+                yt_errors += 1
+                log(f"  players: youtube {name!r}: {ex}")
+                if yt_errors >= MAX_CONSECUTIVE_ERRORS:
+                    log("  players: YouTube unreachable (bad key or quota?), giving up on it for this run")
         if dirty and i % 25 == 0:
             cache_save(cache_path, cache)  # a run killed halfway keeps what it learnt
-        if bc_errors >= MAX_CONSECUTIVE_ERRORS and (not token or sp_errors >= MAX_CONSECUTIVE_ERRORS):
+        if bc_errors >= MAX_CONSECUTIVE_ERRORS and (not token or sp_errors >= MAX_CONSECUTIVE_ERRORS) \
+                and (not yt_keys or yt_errors >= MAX_CONSECUTIVE_ERRORS):
             break
     if dirty:
         cache_save(cache_path, cache)
     if todo:
-        log(f"  players: found {found['bandcamp']} on Bandcamp, {found['spotify']} on Spotify")
+        log(f"  players: found {found['bandcamp']} on Bandcamp, {found['spotify']} on Spotify"
+            + (f", {found['youtube']} on YouTube" if yt_keys else ""))
 
     for e in events:
         e.players = {}

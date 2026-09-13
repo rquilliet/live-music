@@ -818,25 +818,48 @@
   }
 
   // Wikipedia (FR then EN) for the blurb, Deezer (JSONP, no key) for picture and similar artists.
-  // Player: the artist's own Bandcamp page, else Spotify, else Deezer's top tracks (`players` is resolved
-  // by the scraper per artist name; older events.json files have none and fall back to Deezer).
+  // Player (REM-30): the artist's Spotify page, else its own Bandcamp release, else Deezer's top tracks (`players` is
+  // resolved by the scraper per artist name; older events.json files have none and fall back to Deezer). Below it,
+  // "En live": the YouTube live video the scraper found (click-to-play thumbnail, the iframe only exists after the
+  // tap), else a link to the YouTube search.
   const BC_EMBED = /^https:\/\/bandcamp\.com\/EmbeddedPlayer\/(album|track)=\d+\//;
+  const YT_ID = /^[A-Za-z0-9_-]{11}$/;
   function playersOf(e, name) {
     const all = (e && e.players) || {};
     const p = all[name] || all[Object.keys(all).find(k => norm(k) === norm(name))] || {};
     const bc = p.bandcamp && safeUrl(p.bandcamp.url) ? p.bandcamp : null;
     const sp = p.spotify && /^[A-Za-z0-9]{8,64}$/.test(p.spotify.id || "") ? p.spotify : null;
-    return { bandcamp: bc, bandcampEmbed: bc && BC_EMBED.test(bc.embed || "") ? bc.embed : null, spotify: sp };
+    const yt = p.youtube && YT_ID.test(p.youtube.videoId || "") ? p.youtube : null;
+    return { bandcamp: bc, bandcampEmbed: bc && BC_EMBED.test(bc.embed || "") ? bc.embed : null, spotify: sp, youtube: yt };
   }
   function playerHtml(p, dz) {
-    if (p.bandcampEmbed) return `<div class="player bandcamp"><iframe title="Bandcamp" src="${esc(p.bandcampEmbed)}" seamless loading="lazy"></iframe><div class="muted via">via Bandcamp</div></div>`;
     if (p.spotify) return `<div class="player spotify"><iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="muted via">via Spotify</div></div>`;
+    if (p.bandcampEmbed) return `<div class="player bandcamp"><iframe title="Bandcamp" src="${esc(p.bandcampEmbed)}" seamless loading="lazy"></iframe><div class="muted via">via Bandcamp</div></div>`;
     if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
     return "";
   }
+  // "En live" block: a thumbnail tile (ink play glyph, title + year) that becomes the youtube-nocookie iframe on click;
+  // without a resolved video, a link to the YouTube search for "<artist> live".
+  const PLAY_GLYPH = '<svg class="play" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M26 20l18 12-18 12z"/></svg>';
+  function liveHtml(p, name) {
+    const q = encodeURIComponent(name);
+    const v = p.youtube;
+    if (!v) return `<div class="live"><h3>En live</h3><a class="ytsearch" href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">Voir les lives sur YouTube ↗</a></div>`;
+    const year = /^\d{4}/.test(v.publishedAt || "") ? v.publishedAt.slice(0, 4) : "";
+    return `<div class="live"><h3>En live</h3>
+      <button class="yt" type="button" data-yt="${esc(v.videoId)}" aria-label="Lire « ${esc(v.title || name)} » sur YouTube">
+        <img src="https://i.ytimg.com/vi/${esc(v.videoId)}/hqdefault.jpg" alt="" loading="lazy">${PLAY_GLYPH}
+        <span class="cap"><span class="t">${esc(v.title || name)}</span>${year ? `<span class="y">${year}</span>` : ""}</span>
+      </button>
+      <div class="muted via">via YouTube</div></div>`;
+  }
+  function ytIframe(id) {
+    return `<iframe title="YouTube" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+  }
   // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Écouter <act>" + player (with several
-  // acts the heading and the pills sit above, in .listen) · "Dans le même esprit" (Deezer related, names only) · search links.
-  // A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed meanwhile) is dropped.
+  // acts the heading and the pills sit above, in .listen) · "En live" · "Dans le même esprit" (Deezer related, names
+  // only) · search links. A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed
+  // meanwhile) is dropped.
   const cache = {};
   let artistShown = null;
   async function loadArtist(name, e, artists = [name]) {
@@ -855,13 +878,17 @@
     box.innerHTML = `
       ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipédia ↗</a></p>` : ""}
       ${player ? `${artists.length > 1 ? "" : `<h3>Écouter ${esc(name)}</h3>`}${player}` : ""}
+      ${liveHtml(p, name)}
       <div class="esprit muted" id="esprit"></div>
       <div class="links">
         <a href="${p.bandcamp ? esc(p.bandcamp.url) : `https://bandcamp.com/search?q=${q}`}" target="_blank" rel="noopener">Bandcamp</a>
         <a href="${p.spotify && safeUrl(p.spotify.url) ? esc(p.spotify.url) : `https://open.spotify.com/search/${q}`}" target="_blank" rel="noopener">Spotify</a>
-        <a href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">YouTube</a>
+        ${p.youtube ? `<a href="https://www.youtube.com/results?search_query=${q}+live" target="_blank" rel="noopener">YouTube</a>` : ""}
         ${dz && safeUrl(dz.link) ? `<a href="${esc(dz.link)}" target="_blank" rel="noopener">Deezer</a>` : ""}
       </div>`;
+    // The tile becomes the player on tap: the iframe is only created now (autoplay), in the same 16:9 box.
+    const tile = $(".live .yt", box);
+    if (tile) tile.onclick = () => { const id = tile.dataset.yt; if (YT_ID.test(id)) tile.outerHTML = ytIframe(id); };
     if (dz) {
       const rel = (await deezerRelated(dz.id).catch(() => [])).filter(a => a && a.name).slice(0, 6);
       if (rel.length && !stale()) {

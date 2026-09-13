@@ -40,6 +40,13 @@ SPOTIFY = json.dumps({"artists": {"items": [
     {"id": "4bWlB8v4eOgdzBIO5FSCGh", "name": "Thála", "external_urls": {"spotify": "https://open.spotify.com/artist/4bWlB8v4eOgdzBIO5FSCGh"}},
 ]}})
 SP_THALA = {"id": "4bWlB8v4eOgdzBIO5FSCGh", "url": "https://open.spotify.com/artist/4bWlB8v4eOgdzBIO5FSCGh"}
+YT_PREFIX = "https://www.googleapis.com/youtube/v3/search?"
+YOUTUBE = json.dumps({"items": [
+    {"id": {"kind": "youtube#video", "videoId": "aaaaaaaaaaa"}, "snippet": {"title": "Thala - Eyes (official video)", "channelTitle": "Thala", "publishedAt": "2024-01-02T10:00:00Z"}},
+    {"id": {"kind": "youtube#video", "videoId": "bad id"}, "snippet": {"title": "THÁLA live at Pitchfork Paris", "channelTitle": "ARTE", "publishedAt": "2025-04-01T00:00:00Z"}},
+    {"id": {"kind": "youtube#video", "videoId": "dQw4w9WgXcQ"}, "snippet": {"title": "Th&#39;ala &amp; friends — Thála Live at La Boule Noire", "channelTitle": "Boule Noire", "publishedAt": "2025-05-01T18:30:00Z"}},
+]})
+YT_THALA = {"videoId": "dQw4w9WgXcQ", "title": "Th'ala & friends — Thála Live at La Boule Noire", "publishedAt": "2025-05-01"}
 TODAY = dt.date(2026, 9, 8)
 
 
@@ -162,6 +169,32 @@ class SpotifyTests(unittest.TestCase):
         self.assertIn("q=Th%C3%A1la", http.calls[1][0])
 
 
+class YouTubeTests(unittest.TestCase):
+    def test_parse_prefers_a_live_title_naming_the_act(self):
+        self.assertEqual(P.parse_youtube(YOUTUBE, "Thala"), YT_THALA)   # the junk "bad id" live hit is skipped
+        self.assertEqual(P.parse_youtube(json.loads(YOUTUBE), "thála"), YT_THALA)
+
+    def test_parse_falls_back_to_a_title_or_channel_naming_the_act(self):
+        payload = {"items": [
+            {"id": {"videoId": "bbbbbbbbbbb"}, "snippet": {"title": "Random Festival 2025 aftermovie", "channelTitle": "Festival", "publishedAt": "2025-07-01T00:00:00Z"}},
+            {"id": {"videoId": "ccccccccccc"}, "snippet": {"title": "Eyes (official video)", "channelTitle": "Thala Official", "publishedAt": "2024-01-02T00:00:00Z"}},
+        ]}
+        self.assertEqual(P.parse_youtube(payload, "Thala")["videoId"], "ccccccccccc")
+        self.assertIsNone(P.parse_youtube(payload, "Nobody"))
+        self.assertIsNone(P.parse_youtube({"items": [{"id": {"videoId": "not-eleven-chars!"}, "snippet": {"title": "Thala live"}}]}, "Thala"))
+        self.assertIsNone(P.parse_youtube("<html>quota</html>", "Thala"))
+        self.assertIsNone(P.parse_youtube({"error": {"code": 403}}, "Thala"))
+
+    def test_search_request(self):
+        http = FakeHttp({YT_PREFIX: YOUTUBE})
+        self.assertEqual(P.resolve_youtube("Thála", "k3y", fetch=http), YT_THALA)
+        url = http.calls[0][0]
+        self.assertIn("q=Th%C3%A1la%20live", url)
+        self.assertIn("key=k3y", url)
+        self.assertIn("videoEmbeddable=true", url)
+        self.assertIn("type=video", url)
+
+
 class CacheTests(unittest.TestCase):
     def test_negative_results_expire_after_30_days(self):
         entry = {"name": "X"}
@@ -193,6 +226,7 @@ class ResolveTests(unittest.TestCase):
 
     def run_resolve(self, events, http, **kw):
         kw.setdefault("credentials", False)
+        kw.setdefault("youtube_key", False)
         return P.resolve(events, self.path, today=kw.pop("today", TODAY), log=self.logs.append, fetch=http, sleep=lambda s: None, **kw)
 
     def test_players_written_per_artist_name_and_cached(self):
@@ -247,6 +281,55 @@ class ResolveTests(unittest.TestCase):
         self.run_resolve([later, soon], http, max_lookups=1)
         self.assertEqual(http.calls[0][1]["search_text"], "Zed")
         self.assertEqual(list(P.cache_load(self.path)), ["zed"])
+
+    def test_youtube_written_per_artist_and_cached(self):
+        http = FakeHttp({P.BC_AUTOCOMPLETE: "{}", YT_PREFIX: YOUTUBE})
+        gig = mk("Thala", "Thala")
+        self.run_resolve([gig], http, youtube_key="k3y")
+        self.assertEqual(gig.players, {"Thala": {"youtube": YT_THALA}})
+        self.assertEqual(json.loads(json.dumps(gig.to_dict()))["players"], gig.players)
+        cache = P.cache_load(self.path)
+        self.assertEqual(cache["thala"]["youtube"], YT_THALA)
+        self.assertEqual(cache["thala"]["checked"]["youtube"], "2026-09-08")
+        self.assertTrue(any("1 on YouTube" in m for m in self.logs))
+        # an artist already resolved for Bandcamp/Spotify still gets its YouTube lookup on a later run with a key
+        n = len(http.calls)
+        self.run_resolve([mk("Thala", "Thala")], http, youtube_key="k3y", today=TODAY + dt.timedelta(days=1))
+        self.assertEqual(len(http.calls), n)   # cached: nothing asked again
+        P.cache_save(self.path, {"zed": {"name": "Zed", "bandcamp": None, "checked": {"bandcamp": "2026-09-08"}}})
+        zed = mk("Zed", "Zed")
+        self.run_resolve([zed], FakeHttp({YT_PREFIX: YOUTUBE.replace("Thála", "Zed").replace("Th&#39;ala", "Zed")}), youtube_key="k3y")
+        self.assertEqual(zed.players["Zed"]["youtube"]["videoId"], "dQw4w9WgXcQ")
+
+    def test_without_youtube_key_youtube_is_never_asked(self):
+        http = FakeHttp({P.BC_AUTOCOMPLETE: "{}", YT_PREFIX: YOUTUBE})
+        gig = mk("Thala", "Thala")
+        self.run_resolve([gig], http)
+        self.assertFalse(any("googleapis.com" in c[0] for c in http.calls))
+        self.assertNotIn("youtube", P.cache_load(self.path)["thala"])
+        self.assertEqual(gig.players, {})
+
+    def test_youtube_cap_is_separate_and_soonest_first(self):
+        http = FakeHttp({P.BC_AUTOCOMPLETE: "{}", YT_PREFIX: "{}"})
+        events = [mk(f"Band {i}", f"Band {i}", date=f"2026-10-{i + 1:02d}") for i in range(6)]
+        self.run_resolve(list(reversed(events)), http, youtube_key="k3y", max_yt_lookups=2, max_lookups=4)
+        yt = [c[0] for c in http.calls if c[0].startswith(YT_PREFIX)]
+        self.assertEqual(len(yt), 2)
+        self.assertIn("Band%200%20live", yt[0]); self.assertIn("Band%201%20live", yt[1])
+        self.assertEqual(sum(1 for c in http.calls if c[0].startswith(P.BC_AUTOCOMPLETE)), 4)
+        cache = P.cache_load(self.path)
+        self.assertEqual(sorted(k for k, v in cache.items() if "youtube" in v), ["band 0", "band 1"])
+        self.assertTrue(any("doing 2 this run" in m for m in self.logs))
+
+    def test_bad_youtube_key_does_not_stop_bandcamp(self):
+        http = FakeHttp({P.BC_AUTOCOMPLETE: AUTOCOMPLETE, BAND: BAND_PAGE, YT_PREFIX: P.PlayerError("HTTP 400")})
+        events = [mk("Frankie and the Witch Fingers", "Frankie and the Witch Fingers")] + [mk(f"Band {i}", f"Band {i}") for i in range(8)]
+        self.run_resolve(events, http, youtube_key="wrong")
+        self.assertIn("bandcamp", events[0].players["Frankie and the Witch Fingers"])
+        self.assertNotIn("youtube", events[0].players["Frankie and the Witch Fingers"])
+        self.assertEqual(sum(1 for c in http.calls if c[0].startswith(YT_PREFIX)), P.MAX_CONSECUTIVE_ERRORS)  # circuit breaker
+        self.assertTrue(any("YouTube unreachable" in m for m in self.logs))
+        self.assertNotIn("youtube", P.cache_load(self.path)["frankie and the witch fingers"])  # failure not cached as "none"
 
     def test_event_text_link_is_used_instead_of_the_search(self):
         http = FakeHttp({"https://thala.bandcamp.com": BAND_PAGE})
