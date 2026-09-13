@@ -20,7 +20,7 @@
     experimental: "experimental noise", world: "musiques du monde", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false });
+  let state = load({ week: 0, genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false, myArtists: false });
   const STATUS = { interested: { icon: "☆", svg: "star", label: "Intéressé" }, going: { icon: "✓", svg: "check", label: "J'y vais" } };
   let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Intéressé ? / J'y vais"
   let favVenues = loadFavs(); // favourite venue names (★ on the sheet), localStorage "lip-venues" — REM-28 "Mes salles"
@@ -66,7 +66,7 @@
     s.genres = strings(s.genres); s.styles = strings(s.styles); s.venues = strings(s.venues);
     if (typeof s.venue === "string" && s.venue && !s.venues.length) s.venues = [s.venue];   // single-venue dropdown from the previous UI
     s.q = typeof s.q === "string" ? s.q.trim() : "";
-    s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.myVenues = s.myVenues === true; s.near = s.near === true;
+    s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.myVenues = s.myVenues === true; s.myArtists = s.myArtists === true; s.near = s.near === true;
     if (![2, 5, 10, 25, 1000].includes(Number(s.radius))) s.radius = 5;
     ["tab", "free", "others", "saved", "venue"].forEach(k => delete s[k]);
     return s;
@@ -136,7 +136,7 @@
   // The time frame is the current week (+ the ‹ › offset) — unless Nouveautés, Mes concerts or a free-text search is on:
   // then it is every upcoming week, stacked (4 saved concerts over three months would be useless in a 7-day window;
   // one searches for an artist, not a week). A genre / style / venue pick keeps the week: that is browsing.
-  function frame() { return state.newOnly || state.mine || state.myVenues || state.q ? "all" : "week"; }
+  function frame() { return state.newOnly || state.mine || state.myVenues || state.myArtists || state.q ? "all" : "week"; }
   function range() {
     const today = today0();
     if (frame() === "all") return [isoDate(today), "9999-12-31"];
@@ -216,9 +216,9 @@
   function shareLink(e) { return location.origin + location.pathname + "#e=" + e.id; }
 
   // ------------------------------------------------------------ filtering
-  // The three toggles (Nouveautés, Mes concerts, Mes salles) narrow the programme before the genre / style / venue picks.
+  // The toggles (Nouveautés, Mes concerts, Mes salles, Mes artistes) narrow the programme before the genre / style / venue picks.
   function pillsOK(e) {
-    return !(state.newOnly && !isNew(e)) && !(state.mine && !status[e.id]) && !(state.myVenues && !isFav(e.venue));
+    return !(state.newOnly && !isNew(e)) && !(state.mine && !status[e.id]) && !(state.myVenues && !isFav(e.venue)) && !(state.myArtists && !spMatch(e));
   }
   function baseFilter(e) {
     if (!e.is_music) return false;   // expos, ateliers, conférences… are never shown
@@ -267,6 +267,7 @@
     const nNew = DATA.events.filter(e => e.is_music && e.date >= t && isNew(e)).length, nG = state.genres.length + state.styles.length;
     const set = (id, on, n) => { const b = $(id); b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); $("small", b).textContent = n || ""; };
     set("#newonly", state.newOnly, nNew); set("#mine", state.mine, statusCount()); set("#myvenues", state.myVenues, favVenues.length);
+    renderSpPill();   // Mes artistes (REM-9)
     const g = $("#gbtn");
     g.classList.toggle("on", nG > 0); g.setAttribute("aria-expanded", String(genresOpen));
     $("small", g).textContent = nG || ""; $(".car", g).textContent = genresOpen ? "▴" : "▾";
@@ -404,7 +405,7 @@
       html += weekGrid(addDays(monday(today0()), 7 * state.week), byDay, { today, from, to, nav: true });
     } else {
       const mondays = [...new Set(evs.map(e => isoDate(monday(parseISO(e.date)))))].sort();
-      if (!mondays.length) html += `<div class="empty">${state.myVenues && !favVenues.length ? "Ajoutez des salles avec ★ sur la fiche d'un concert." : "Rien pour ces filtres."}</div>`;
+      if (!mondays.length) html += `<div class="empty">${state.myArtists ? "Aucun concert de vos artistes pour l'instant." : state.myVenues && !favVenues.length ? "Ajoutez des salles avec ★ sur la fiche d'un concert." : "Rien pour ces filtres."}</div>`;
       for (const m of mondays) {
         const mon = parseISO(m), n = evs.filter(e => isoDate(monday(parseISO(e.date))) === m).length;
         html += `<h3 class="weekhead">${weekLabel(mon)}<em>${plural(n, "concert")}</em></h3>` + weekGrid(mon, byDay, { today, from, to, nav: false });
@@ -596,7 +597,7 @@
     render();
   }
   function clearAll() {
-    state = { ...state, genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, near: false };
+    state = { ...state, genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, myArtists: false, near: false };
     stylesOpen = false; $("#gsq").value = ""; $("#search").value = "";
     render(); renderTa();
   }
@@ -633,6 +634,213 @@
     genresOpen = false; stylesOpen = false; $("#gsq").value = "";
     renderPills();
     if (refocus) $("#gbtn").focus();
+  }
+
+  // ------------------------------------------------------------ Spotify (REM-9) — "Mes artistes"
+  // Optional Spotify login, entirely client-side (Authorization Code + PKCE, no secret, client id in web/config.js):
+  // the liked songs (`user-library-read`) give a set of artists, the "Mes artistes" pill filters the grid to their
+  // concerts. localStorage: "lip-spotify" {access_token, refresh_token, expires_at, name, avatar}, "lip-spotify-artists"
+  // {at, names, ids} (read again after a day or on "Actualiser"), "lip-spotify-pkce" {verifier, state} during the redirect.
+  const SP_AUTH = "https://accounts.spotify.com", SP_API = "https://api.spotify.com/v1", SP_SCOPE = "user-library-read";
+  const SP_TTL = 24 * 3600e3, SP_PAGES = 200;   // library cache lifetime; 200 pages of 50 = 10 000 liked songs at most
+  const SP = { tok: spRead("lip-spotify"), lib: spRead("lip-spotify-artists"), keys: new Set(), ids: new Set(), busy: false, error: "", open: false, menu: false };
+  const SP_ICON = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M6.8 9.4c3.7-1.1 7.6-.7 10.7 1.2M7.4 12.6c3-.9 6.1-.5 8.6 1M8 15.6c2.3-.7 4.6-.4 6.5.8"/></svg>';
+  function spRead(k) { try { const v = JSON.parse(localStorage.getItem(k) || "null"); return v && typeof v === "object" ? v : null; } catch { return null; } }
+  function spWrite(k, v) { try { if (v) localStorage.setItem(k, JSON.stringify(v)); else localStorage.removeItem(k); } catch {} }
+  function spClientId() { return String((window.LIP_CONFIG || {}).spotifyClientId || "").trim(); }
+  function spLinked() { return !!(SP.tok && SP.tok.refresh_token); }
+  // Must equal a redirect URI registered on the Spotify app: http://localhost:8765/ and https://rquilliet.github.io/live-music/.
+  function spRedirect() { return location.origin + location.pathname.replace(/index\.html$/, ""); }
+  // Artist names as the search index sees them (norm: lower-case, no accents), punctuation collapsed, a leading article
+  // dropped: "The Lanskies" / "LANSKIES" / "Zoé Clauzure" / "zoe clauzure" meet.
+  function artistKey(name) { return norm(name).trim().replace(/[^a-z0-9]+/g, " ").trim().replace(/^(?:the|les|le|la) /, ""); }
+  function spIndex() {
+    SP.keys = new Set(((SP.lib || {}).names || []).map(artistKey).filter(Boolean));
+    SP.ids = new Set(((SP.lib || {}).ids || []).filter(Boolean));
+  }
+  // A concert matches when an act of the lineup is a liked artist (by name, or by Spotify id when the scraper resolved one).
+  function spMatch(e) {
+    if (!SP.keys.size && !SP.ids.size) return false;
+    if (lineup(e).some(n => SP.keys.has(artistKey(n)))) return true;
+    return Object.values(e.players || {}).some(p => p && p.spotify && SP.ids.has(p.spotify.id));
+  }
+  function spCount() { const t = isoDate(today0()); return DATA.events.filter(e => e.is_music && e.date >= t && spMatch(e)).length; }
+  // ---- PKCE + tokens
+  function spRandom(n) {
+    const a = crypto.getRandomValues(new Uint8Array(n)), c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    return Array.from(a, b => c[b % c.length]).join("");
+  }
+  async function spChallenge(verifier) {
+    const d = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier));
+    return btoa(String.fromCharCode(...new Uint8Array(d))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  }
+  async function spLogin() {
+    try {
+      const verifier = spRandom(64), st = spRandom(16);
+      spWrite("lip-spotify-pkce", { verifier, state: st });
+      const q = new URLSearchParams({ client_id: spClientId(), response_type: "code", redirect_uri: spRedirect(), scope: SP_SCOPE,
+        code_challenge_method: "S256", code_challenge: await spChallenge(verifier), state: st });
+      location.assign(`${SP_AUTH}/authorize?${q}`);
+    } catch {   // crypto.subtle needs a secure context (https or localhost)
+      SP.error = "Connexion impossible : la page doit être servie en https ou sur localhost."; renderSpDialog();
+    }
+  }
+  async function spTokenCall(params) {
+    const r = await fetch(`${SP_AUTH}/api/token`, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ client_id: spClientId(), ...params }) });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok || !j.access_token) throw Object.assign(new Error(j.error_description || j.error || `Spotify ${r.status}`), { status: r.status });
+    const old = SP.tok || {};
+    SP.tok = { ...old, access_token: j.access_token, refresh_token: j.refresh_token || old.refresh_token, expires_at: Date.now() + (Number(j.expires_in) || 3600) * 1000 };
+    spWrite("lip-spotify", SP.tok);
+    return SP.tok;
+  }
+  // A usable access token: the stored one, or a silent refresh when it expires within a minute (Spotify may rotate the
+  // refresh token: spTokenCall keeps the new one). A refused refresh unlinks the account.
+  async function spAccess(force) {
+    if (!spLinked()) throw new Error("Spotify non connecté");
+    if (!force && SP.tok.access_token && SP.tok.expires_at - Date.now() > 60e3) return SP.tok.access_token;
+    try { return (await spTokenCall({ grant_type: "refresh_token", refresh_token: SP.tok.refresh_token })).access_token; }
+    catch (err) { if (err.status === 400 || err.status === 401) spDisconnect(); throw err; }
+  }
+  async function spGet(url, retry = true) {
+    const r = await fetch(url, { headers: { Authorization: `Bearer ${await spAccess()}` } });
+    if (r.status === 401 && retry) { await spAccess(true); return spGet(url, false); }
+    if (r.status === 401) { spDisconnect(); throw new Error("session Spotify expirée"); }
+    if (!r.ok) throw new Error(`Spotify ${r.status}`);
+    return r.json();
+  }
+  // ---- library
+  async function spLibrary() {
+    const names = new Set(), ids = new Set();
+    let url = `${SP_API}/me/tracks?limit=50&offset=0`, n = 0;
+    while (url && n++ < SP_PAGES) {
+      const j = await spGet(url);
+      (j.items || []).forEach(it => (((it || {}).track || {}).artists || []).forEach(a => { if (a && a.name) names.add(a.name); if (a && a.id) ids.add(a.id); }));
+      url = j.next || null;
+    }
+    return { at: new Date().toISOString(), names: [...names], ids: [...ids] };
+  }
+  async function spProfile() {
+    const me = await spGet(`${SP_API}/me`);
+    SP.tok = { ...SP.tok, name: me.display_name || me.id || "", avatar: safeUrl(((me.images || [])[0] || {}).url) || "" };
+    spWrite("lip-spotify", SP.tok);
+  }
+  // Read the liked artists (profile first, once): nothing happens while the day-old cache is fresh unless `force`.
+  async function spSync(force) {
+    if (!spLinked() || SP.busy) return;
+    const fresh = !!(SP.lib && SP.lib.at && Date.now() - Date.parse(SP.lib.at) < SP_TTL);
+    if (fresh && !force && SP.tok.name != null) return;
+    SP.busy = true; SP.error = ""; spRender();
+    try {
+      if (SP.tok.name == null || force) await spProfile();
+      if (!fresh || force) { SP.lib = await spLibrary(); spWrite("lip-spotify-artists", SP.lib); spIndex(); }
+    } catch (err) { SP.error = spLinked() ? `Spotify indisponible (${err.message}).` : "Session Spotify expirée : reconnectez-vous."; }
+    SP.busy = false; spRender();
+  }
+  function spDisconnect() {
+    SP.tok = null; SP.lib = null; SP.error = ""; SP.menu = false; spIndex();
+    ["lip-spotify", "lip-spotify-artists", "lip-spotify-pkce"].forEach(k => spWrite(k, null));
+    state.myArtists = false; spRender();
+  }
+  function spRender() { if (DATA.events.length) render(); else renderPills(); if (SP.open) renderSpDialog(); }
+  // Back from Spotify: ?code=…&state=… (or ?error=…). The URL is cleaned at once (the #e= hash survives), the code is
+  // exchanged with the stored verifier, the pill turns on and the library is read.
+  async function spCallback() {
+    const q = new URLSearchParams(location.search);
+    const pkce = spRead("lip-spotify-pkce"); spWrite("lip-spotify-pkce", null);
+    history.replaceState(null, "", location.pathname + location.hash);
+    if (q.get("error") || !q.get("code") || !pkce || pkce.state !== q.get("state")) {
+      SP.error = q.get("error") === "access_denied" ? "Connexion Spotify refusée." : `Connexion Spotify impossible (${q.get("error") || "réponse inattendue"}).`;
+      openSp(); return;
+    }
+    SP.busy = true; spRender();
+    try {
+      await spTokenCall({ grant_type: "authorization_code", code: q.get("code"), redirect_uri: spRedirect(), code_verifier: pkce.verifier });
+      state.myArtists = true; SP.busy = false;
+      await spSync(true);
+    } catch (err) { SP.busy = false; SP.error = `Connexion Spotify impossible (${err.message}).`; spRender(); openSp(); }
+  }
+  function spBoot() {
+    spIndex();
+    if (!spLinked()) state.myArtists = false;
+    if (/[?&](code|error)=/.test(location.search)) spCallback(); else if (spLinked()) spSync(false);
+  }
+  // ---- pill, account menu (under the pill: avatar + name, "N artistes aimés · mis à jour …", Actualiser / Déconnecter), connect dialog
+  function spAgo(iso) {
+    const d = new Date(iso); if (isNaN(d)) return "";
+    const min = Math.round((Date.now() - d) / 60e3);
+    if (min < 1) return "à l'instant";
+    if (min < 60) return `il y a ${min} min`;
+    if (isoDate(d) === isoDate(today0())) return `aujourd'hui à ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+    return `le ${d.getDate()} ${MONTHS_SHORT[d.getMonth()]}`;
+  }
+  function renderSpPill() {
+    const b = $("#myartists"), on = state.myArtists && spLinked();
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on));
+    $("small", b).textContent = SP.busy ? "…" : spLinked() && DATA.events.length ? spCount() || "" : "";
+    b.title = spLinked() ? "Les concerts des artistes de mes titres likés sur Spotify (clic droit ou ↓ : mon compte)" : "Connecter Spotify pour voir les concerts des artistes de mes titres likés";
+    const me = $("#spme");
+    me.hidden = !spLinked();
+    if (spLinked()) { me.innerHTML = SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : "…"; me.setAttribute("aria-expanded", String(SP.menu)); }
+    renderSpMenu();
+  }
+  function spAccountHtml(cls) {
+    const n = ((SP.lib || {}).names || []).length, s = n > 1 ? "s" : "";
+    const sub = SP.busy ? "Lecture des titres likés…" : SP.lib ? `${n} artiste${s} aimé${s} · mis à jour ${spAgo(SP.lib.at)}` : "Titres likés pas encore lus";
+    return `<div class="spwho">${SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : `<span class="spav">${SP_ICON}</span>`}<div><b>${esc(SP.tok.name || "Compte Spotify")}</b><small>${sub}</small></div></div>
+      ${SP.error ? `<div class="spnote err">${esc(SP.error)}</div>` : ""}
+      <div class="sprow"><button type="button" class="${cls}" role="menuitem" data-sp="sync"${SP.busy ? " disabled" : ""}>Actualiser</button><button type="button" class="${cls} sec" role="menuitem" data-sp="out">Déconnecter</button></div>`;
+  }
+  function renderSpMenu() {
+    const m = $("#spmenu");
+    if (!SP.menu || !spLinked()) { if (!m.hidden && !m._exit) exitThen(m, "out", 120, () => { m.hidden = true; }); return; }
+    cancelExit(m); m.hidden = false;
+    m.innerHTML = spAccountHtml("mi");
+    placeSpMenu();
+  }
+  function placeSpMenu() {
+    const m = $("#spmenu"); if (m.hidden) return;
+    const b = $("#myartists").getBoundingClientRect(), r = $("#hrow").getBoundingClientRect();
+    m.style.top = `${Math.round(b.bottom - r.top + 8)}px`;
+    m.style.left = `${Math.round(Math.max(0, Math.min(b.left - r.left, r.width - m.offsetWidth)))}px`;
+  }
+  function openSpMenu() { if (SP.menu || !spLinked()) return; SP.menu = true; closeTa(); closeGenres(); renderSpPill(); const f = $("#spmenu button"); if (f) f.focus(); }
+  function closeSpMenu(refocus) { if (!SP.menu) return; SP.menu = false; renderSpPill(); if (refocus) $("#myartists").focus(); }
+  let spFocusBack = null;
+  function openSp() {
+    if (SP.open) return;
+    SP.open = true; spFocusBack = document.activeElement; closeSpMenu(); closeTa(); closeGenres();
+    const d = $("#spdialog"); cancelExit(d); d.hidden = false; renderSpDialog();
+    ($("#spbody .spbtn") || $("#spclose")).focus();
+  }
+  function closeSp() {
+    if (!SP.open) return;
+    SP.open = false; SP.error = "";
+    const d = $("#spdialog"); exitThen(d, "out", 120, () => { d.hidden = true; });
+    if (spFocusBack && spFocusBack.focus) spFocusBack.focus();
+  }
+  function renderSpDialog() {
+    const body = $("#spbody");
+    if (spLinked()) { body.innerHTML = spAccountHtml("spbtn"); return; }
+    body.innerHTML = `<p>Live in Paris lit uniquement vos <b>titres likés</b> (permission <code>user-library-read</code>) pour retrouver leurs artistes dans le programme. Rien n'est écrit sur votre compte&nbsp;; les jetons restent dans ce navigateur.</p>`
+      + (SP.error ? `<div class="spnote err">${esc(SP.error)}</div>` : "")
+      + (spClientId() ? `<button type="button" class="spbtn" data-sp="login">${SP_ICON}Se connecter avec Spotify</button>`
+        : `<div class="spnote">Spotify n'est pas configuré (client id manquant dans <code>web/config.js</code>).</div>`);
+  }
+  function spAction(ev) {
+    const a = ev.target.closest("[data-sp]"); if (!a) return;
+    if (a.dataset.sp === "login") spLogin();
+    else if (a.dataset.sp === "sync") spSync(true);
+    else if (a.dataset.sp === "out") { spDisconnect(); closeSp(); }
+  }
+  function spMenuKeys(ev) {
+    const items = $$("#spmenu button"), i = items.indexOf(document.activeElement);
+    if (ev.key === "ArrowDown" || ev.key === "ArrowRight") items[(i + 1) % items.length].focus();
+    else if (ev.key === "ArrowUp" || ev.key === "ArrowLeft") items[(i - 1 + items.length) % items.length].focus();
+    else if (ev.key === "Tab") { closeSpMenu(); return; }
+    else return;
+    ev.preventDefault();
   }
 
   // ------------------------------------------------------------ detail sheet
@@ -948,6 +1156,18 @@
   $("#newonly").onclick = () => { state.newOnly = !state.newOnly; render(); };
   $("#mine").onclick = () => { state.mine = !state.mine; render(); };
   $("#myvenues").onclick = () => { state.myVenues = !state.myVenues; render(); };
+  // Mes artistes (REM-9): one tap toggles the filter once Spotify is linked, else opens the connect dialog; the account
+  // menu sits behind the avatar button, a right-click or ↓ on the pill.
+  $("#myartists").onclick = () => { if (!spLinked()) { openSp(); return; } state.myArtists = !state.myArtists; render(); };
+  $("#myartists").oncontextmenu = ev => { if (spLinked()) { ev.preventDefault(); SP.menu ? closeSpMenu() : openSpMenu(); } };
+  $("#myartists").onkeydown = ev => { if (ev.key === "ArrowDown" && spLinked() && !SP.menu) { ev.preventDefault(); openSpMenu(); } };
+  $("#spme").onclick = () => SP.menu ? closeSpMenu() : openSpMenu();
+  $("#spmenu").onclick = spAction; $("#spmenu").onkeydown = spMenuKeys;
+  $("#spdialog").onclick = ev => { if (ev.target.id === "spdialog" || ev.target.closest("#spclose")) closeSp(); else spAction(ev); };
+  document.addEventListener("error", ev => {   // unreachable avatar -> "…" on the button, the glyph in the menu / dialog
+    const img = ev.target; if (!(img.tagName === "IMG" && img.closest("#spme, .spwho"))) return;
+    if (img.parentElement.id === "spme") img.parentElement.textContent = "…"; else img.outerHTML = `<span class="spav">${SP_ICON}</span>`;
+  }, true);
   $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
   $("#near").onclick = () => {
     if (state.near) { state.near = false; render(); return; }
@@ -965,8 +1185,9 @@
     if (taOpen && !within("sbar")) closeTa();
     if (genresOpen && !within("gbtn", "gpanel")) closeGenres();
     if (menuOpen && !within("status")) closeMenu();
+    if (SP.menu && !within("myartists", "spme", "spmenu")) closeSpMenu();
   });
-  addEventListener("resize", () => { if (genresOpen) placePanel(); });
+  addEventListener("resize", () => { if (genresOpen) placePanel(); if (SP.menu) placeSpMenu(); });
   MOBILE.addEventListener("change", () => { if (!MOBILE.matches) document.body.classList.remove("searching"); else if (taOpen) closeTa(true); renderNav(); });
   $("#list").onclick = ev => {
     if (ev.target.closest("[data-next]")) { goWeek(state.week + 1); return; }
@@ -996,16 +1217,19 @@
     const inField = /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName);
     if ((ev.metaKey || ev.ctrlKey) && !ev.altKey && ev.key.toLowerCase() === "k") { ev.preventDefault(); focusSearch(); return; }
     if (ev.key === "/" && !inField && !ev.metaKey && !ev.ctrlKey && !ev.altKey) { ev.preventDefault(); focusSearch(); return; }
+    if (ev.key === "Escape" && SP.open) { closeSp(); return; }
+    if (ev.key === "Escape" && SP.menu) { closeSpMenu(true); return; }
     if (ev.key === "Escape" && taOpen) { closeTa(true); return; }
     if (ev.key === "Escape" && genresOpen) { closeGenres(true); return; }
     if (ev.key === "Escape" && menuOpen) { closeMenu(true); return; }
     if (ev.key === "Escape" && !detail.hidden) { closeDetail(); return; }
-    if (!detail.hidden || inField || genresOpen || frame() !== "week") return;
+    if (!detail.hidden || inField || genresOpen || SP.menu || frame() !== "week") return;
     if (ev.key === "ArrowLeft" && state.week > 0) goWeek(state.week - 1);
     if (ev.key === "ArrowRight") goWeek(state.week + 1);
   });
 
   // ------------------------------------------------------------ boot
+  spBoot();   // Spotify (REM-9): sanitise the pill, handle the ?code= callback, read the liked artists when the cache is stale
   fetch("events.json?" + Date.now()).then(r => r.json()).catch(() => {
     $("#list").innerHTML = '<div class="empty">events.json introuvable — lance <code>python scrape.py</code> puis <code>python serve.py</code>.</div>';
     return null;

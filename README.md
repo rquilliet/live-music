@@ -2,7 +2,7 @@
 
 Concerts around Paris, scraped from the venues' own websites and the city's open data, tagged by
 genre, browsable week by week with one search bar (artists, venues, genres, styles) and *Nouveautés* /
-*Mes concerts* / *Près de moi* toggles.
+*Mes concerts* / *Mes salles* / *Mes artistes* (Spotify) / *Près de moi* toggles.
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
@@ -35,7 +35,7 @@ and the venues marked `"strategy": "llm"` in `venues.json`.
 | Players | `livemusic/players.py` | For every act of a music event (headliner + support), the scraper looks for the artist's own Bandcamp page (public autocomplete, exact name match, then the page's `bc-page-properties` gives an album/track to embed) and, when `SPOTIFY_CLIENT_ID` / `SPOTIFY_CLIENT_SECRET` are set, the Spotify artist id. Written on the event as `players`; the detail sheet embeds Bandcamp > Spotify > Deezer. Cached per artist in `data/player_cache.json`, misses included (re-checked after 30 days); at most 300 new artists per run, soonest concerts first. `--no-players` skips it. |
 | Summaries | `livemusic/summaries.py` | Text shown on the event sheet: the venue's own description when the scraper found one; otherwise Claude reads the event page (`url`) and writes 1–2 French sentences on who plays and what kind of show it is (`summary`, cached per event in `data/summary_cache.json`, at most 200 new pages per run; urls shared by more than 3 events are programme pages and are skipped). The UI falls back to the artist's Wikipedia summary only when both are empty, and shows nothing rather than a placeholder. |
 | New | `data/seen.json` | First-seen date per event; "Nouveautés" = first seen in the last 7 days. The very first run is a baseline and shows nothing as new. |
-| UI | `web/` | Static page reading `events.json`. One search bar (`⌘K` / `Ctrl+K` / `/`) with typed suggestions grouped Artistes / Salles / Genres & styles — accent-insensitive prefix + substring matching over a client-side index (every style of the programme is in it, whatever its genre, with its number of upcoming concerts; a style row leads when it matches better than the artists); an artist opens its next concert, a venue / genre / style becomes a filter shown as a chip inside the bar, Enter on free text searches the whole programme (chip « texte »), "Tout effacer" clears everything. A "Genres ▾" pill opens a panel with the 19 genres (counts for the current frame) and, under a rule, the styles of the picked genres (12 + "N autres", a filter input). Four toggles: Nouveautés, Mes concerts (statuses kept in the browser), Mes salles (favourite venues, ★ on a concert sheet, kept in the browser), Près de moi (browser geolocation + venue coordinates, radius once active). The week grid is the only view (‹ › and ← → browse the weeks, "Cette semaine" comes back); Nouveautés, Mes concerts or a free-text search widen it to every upcoming week, stacked. Non-concerts are never shown. Lean concert sheet ("Affiche"): a short hero whose title links to the event page, action tiles (Billets ↗ + price or Gratuit, only when the event has a ticket link; "Intéressé ?" → *Intéressé* (gold) / *J'y vais* (lime) status kept in the browser; Agenda Google; WhatsApp), the venue (its name filters the grid on that venue, ★ adds it to *Mes salles*) + itinéraire, price + styles, the venue's text about the show (description or Claude summary, "lire la suite" when long, Wikipedia as fallback), the player right below it (Bandcamp, else Spotify, else Deezer; other acts one tap away), "Dans le même esprit" (Deezer related artists, names only) and search links. |
+| UI | `web/` | Static page reading `events.json`. One search bar (`⌘K` / `Ctrl+K` / `/`) with typed suggestions grouped Artistes / Salles / Genres & styles — accent-insensitive prefix + substring matching over a client-side index (every style of the programme is in it, whatever its genre, with its number of upcoming concerts; a style row leads when it matches better than the artists); an artist opens its next concert, a venue / genre / style becomes a filter shown as a chip inside the bar, Enter on free text searches the whole programme (chip « texte »), "Tout effacer" clears everything. A "Genres ▾" pill opens a panel with the 19 genres (counts for the current frame) and, under a rule, the styles of the picked genres (12 + "N autres", a filter input). Five toggles: Nouveautés, Mes concerts (statuses kept in the browser), Mes salles (favourite venues, ★ on a concert sheet, kept in the browser), Mes artistes (Spotify glyph: the concerts whose headliner or support is an artist of the user's liked songs — optional Spotify login, see below; the avatar next to the pill, a right-click or ↓ on it opens the account menu: Actualiser / Déconnecter), Près de moi (browser geolocation + venue coordinates, radius once active). The week grid is the only view (‹ › and ← → browse the weeks, "Cette semaine" comes back); Nouveautés, Mes concerts, Mes salles, Mes artistes or a free-text search widen it to every upcoming week, stacked. Non-concerts are never shown. Lean concert sheet ("Affiche"): a short hero whose title links to the event page, action tiles (Billets ↗ + price or Gratuit, only when the event has a ticket link; "Intéressé ?" → *Intéressé* (gold) / *J'y vais* (lime) status kept in the browser; Agenda Google; WhatsApp), the venue (its name filters the grid on that venue, ★ adds it to *Mes salles*) + itinéraire, price + styles, the venue's text about the show (description or Claude summary, "lire la suite" when long, Wikipedia as fallback), the player right below it (Bandcamp, else Spotify, else Deezer; other acts one tap away), "Dans le même esprit" (Deezer related artists, names only) and search links. |
 
 Pages are cached 6 h in `data/cache/` (`--fresh` to bypass). Run `scrape.py` daily (cron / launchd) so
 "newly announced" means something.
@@ -75,3 +75,22 @@ Claude calls use `claude-opus-5` by default; set `LIVEMUSIC_MODEL` to change it.
 Bandcamp needs no key. To also resolve Spotify artists, create an app on the Spotify developer dashboard and
 put `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` in `.env` (client-credentials flow, no user login).
 Without them the lookup is skipped silently and the sheet falls back to Deezer when the act is not on Bandcamp.
+
+## Spotify login (optional)
+
+The *Mes artistes* pill filters the programme to the artists of the user's liked songs. It uses the Authorization Code +
+PKCE flow entirely in the browser: no secret, no server, the tokens stay in the visitor's `localStorage` (`lip-spotify`,
+`lip-spotify-artists`). To enable it:
+
+1. Create an app on [developer.spotify.com](https://developer.spotify.com/dashboard) (Web API), and register these
+   two redirect URIs exactly: `http://localhost:8765/` and `https://rquilliet.github.io/live-music/`.
+2. Paste the app's **client id** in `web/config.js` (`spotifyClientId: "…"`). A client id is public by design: it can
+   be committed and deployed. No client secret is needed (PKCE), never put one there.
+
+The redirect URI the page sends is its own origin + path (`index.html` stripped), so the login only works on
+`http://localhost:8765/` (the `serve.py` default) and on the Pages site; on another port Spotify answers
+"INVALID_CLIENT: Invalid redirect URI" — add that origin to the app or use :8765. The page only asks for
+`user-library-read` (the liked songs, `GET /v1/me/tracks`, 50 per page up to 200 pages) plus the display name and avatar
+(`GET /v1/me`); nothing is written to the account. The artist set is cached for a day ("Actualiser" reads it again),
+the access token is refreshed silently. While `spotifyClientId` is empty the pill opens a note saying Spotify is not
+configured.
