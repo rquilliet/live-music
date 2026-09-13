@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false   # never cancel a running daily scrape (same group); a push just waits
 
 jobs:
   deploy:
