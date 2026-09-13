@@ -287,6 +287,25 @@ code { background: var(--paper2); padding: 1px 4px; }
 .player.bandcamp iframe { height: 120px; }   /* EmbeddedPlayer size=large, tracklist=false, artwork=small */
 .player.spotify iframe { height: 352px; }
 .player .via { margin-top: 4px; font-size: 11px; }
+/* "En live" (REM-30): a 16:9 thumbnail tile with an ink play glyph and the title in the hero style; the iframe only
+   replaces it on tap. Without a resolved video, a plain link to the YouTube search. */
+.live { display: flex; flex-direction: column; gap: 6px; }
+.live .yt { position: relative; display: block; aspect-ratio: 16 / 9; width: 100%; border: 1.5px solid var(--ink); background: var(--plum) center/cover no-repeat;
+  padding: 0; margin: 0; overflow: hidden; cursor: pointer; color: #f2ecff; text-align: left; font: inherit; border-radius: 0; }
+.live .yt img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.live .yt::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,10,15,0) 40%, rgba(13,10,15,.88) 100%); }
+.live .yt .play { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; transform: translate(-50%, -50%); transition: transform .15s; }
+.live .yt .play circle { fill: var(--ink); stroke: var(--paper); stroke-width: 2.5; }
+.live .yt .play path { fill: var(--paper); }
+.live .yt:hover .play, .live .yt:focus-visible .play { transform: translate(-50%, -50%) scale(1.08); }
+.live .yt:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+.live .yt .cap { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: baseline; gap: 10px; padding: 12px 14px; }
+.live .yt .t { font-family: var(--display); font-weight: 900; font-size: 18px; line-height: 1.05; letter-spacing: -.01em; flex: 1 1 auto; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.live .yt .y { color: var(--lime); font-weight: 700; font-size: 12px; letter-spacing: .08em; flex: none; }
+.live iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1.5px solid var(--ink); background: var(--plum); }
+.live .via { margin-top: -2px; font-size: 11px; }
+.live .ytsearch { color: var(--ink); font-size: 13px; }
 #artist { display: flex; flex-direction: column; gap: 10px; }
 #artist:empty { display: none; }
 #artist h3 { margin: 0 0 -2px; }
@@ -385,7 +404,7 @@ code { background: var(--paper2); padding: 1px 4px; }
   .detail::before, .sheet, .ta, .gpanel, .statusmenu, .list.swap { animation: fade-in .12s ease backwards; }
   .detail.closing::before, .detail.closing .sheet, .ta.out, .gpanel.out, .statusmenu.out { animation: fade-out .12s ease forwards; }
   .hero-text > *, #statusbtn.pop, #statusbtn.pop .i, #statusbtn.pop .star, #artist.swap, .skel, .chipin.pop { animation: none; }
-  .list, .pill, .arrows button, .gpanel .g, .chipin .x, .close, .tile, .artist-pick button, .statusmenu button { transition: none; }
+  .list, .pill, .arrows button, .gpanel .g, .chipin .x, .close, .tile, .artist-pick button, .statusmenu button, .live .yt .play { transition: none; }
   .pill:active, .arrows button:active, .gpanel .g:active, .tag.sub:active, .close:active, .tile:active { transform: none; }
   .hero, .sheet.moving { will-change: auto; }
 }
