@@ -1204,6 +1204,15 @@
 "ambient jazz"
 ]
 },
+"alhambra|satoshi": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "alhambra|schur": {
 "genres": [
 "rock",
@@ -2520,6 +2529,11 @@
 "contemporary r&b"
 ]
 },
+"cafe-de-la-danse|compagnie cuerpo de indias le college du corps": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "cafe-de-la-danse|d k harrell": {
 "genres": [
 "blues",
@@ -2652,6 +2666,18 @@
 "is_music": true,
 "subgenres": [
 "chanson humoristique"
+]
+},
+"cafe-de-la-danse|sananda maitreya the sugar plum pharaohs": {
+"genres": [
+"soul-rnb",
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"blue-eyed soul",
+"singer-songwriter"
 ]
 },
 "cafe-de-la-danse|sarah alainn": {
@@ -5359,9 +5385,21 @@
 "la-bellevilloise|88 menilmontant brooklyn bodega": {
 "genres": [
 "hip-hop",
-"funk"
+"electro"
 ],
-"is_music": true
+"is_music": true,
+"subgenres": [
+"old school"
+]
+},
+"la-bellevilloise|88 menilmontant cunti party": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
+]
 },
 "la-bellevilloise|afro heaven": {
 "genres": [
@@ -7422,6 +7460,14 @@
 "rap français"
 ]
 },
+"la-machine|flash cocotte": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-machine|galop galop": {
 "genres": [
 "electro"
@@ -9356,6 +9402,17 @@
 "is_music": true,
 "subgenres": []
 },
+"le-360|reine makoua afro ngoli tour": {
+"genres": [
+"afro",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"congolese",
+"afro-pop"
+]
+},
 "le-baiser-sale|anastasiia donna quartet invite joachim govin": {
 "genres": [
 "jazz"
@@ -9374,6 +9431,18 @@
 "is_music": true,
 "subgenres": [
 "caribbean jazz"
+]
+},
+"le-baiser-sale|canonge zenino": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"biguine",
+"creole jazz",
+"piano-bass duo"
 ]
 },
 "le-baiser-sale|carte blanche a natascha rogers": {
@@ -11271,6 +11340,14 @@
 "alt-pop"
 ]
 },
+"le-trabendo|new constellations": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-trabendo|pitchfork music festival bassvictim": {
 "genres": [
 "electro",
@@ -11309,6 +11386,18 @@
 "subgenres": [
 "rap français",
 "emo rap"
+]
+},
+"le-trabendo|strongboi": {
+"genres": [
+"indie",
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"indie pop",
+"synth-pop"
 ]
 },
 "le-trabendo|the meltdown": {
@@ -11722,6 +11811,26 @@
 "is_music": true,
 "subgenres": []
 },
+"le-triton|ariel tessier drumming mandalas": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"drums-led",
+"modern jazz"
+]
+},
+"le-triton|bruno angelini constellations quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz",
+"piano quartet"
+]
+},
 "le-triton|caillou": {
 "genres": [
 "jazz"
@@ -11754,6 +11863,19 @@
 "is_music": true,
 "subgenres": []
 },
+"le-triton|didier malherbe raphael didjaman invitent laure volpato shyamal maitra": {
+"genres": [
+"world",
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"didgeridoo",
+"indian music",
+"improvisation"
+]
+},
 "le-triton|henri texier essential quartet": {
 "genres": [
 "jazz"
@@ -11762,6 +11884,27 @@
 "subgenres": [
 "post-bop",
 "european jazz"
+]
+},
+"le-triton|jean marie machado keyvan chemirani la saga des vagues": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"persian percussion",
+"chamber jazz"
+]
+},
+"le-triton|levy bex goubert jazz revolution": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"free jazz",
+"organ trio"
 ]
 },
 "le-triton|lizzie desert sortie d album": {
@@ -11802,6 +11945,17 @@
 "is_music": true,
 "subgenres": [
 "free jazz"
+]
+},
+"le-triton|sortie d album label triton sylvain cathala trio kamilya jubran about": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic song",
+"contemporary jazz"
 ]
 },
 "le-triton|trio m b m happy birthday": {
@@ -13078,6 +13232,18 @@
 "modern jazz"
 ]
 },
+"nouveau-casino|city of the sun": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"instrumental",
+"post-rock",
+"flamenco guitar"
+]
+},
 "nouveau-casino|cyrille": {
 "genres": [
 "pop"
@@ -13119,6 +13285,17 @@
 "is_music": true,
 "subgenres": [
 "alternative rock"
+]
+},
+"nouveau-casino|overseas acte ii": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"rap français",
+"trap"
 ]
 },
 "nouveau-casino|pulsepair release party": {
@@ -13275,6 +13452,11 @@
 "chanson"
 ],
 "is_music": true,
+"subgenres": []
+},
+"pavillon-carre-de-baudouin|belleville danse 2026": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "peniche-anako|bazar live latino swing": {
@@ -14957,6 +15139,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"popup|goblyns": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
 },
 "popup|goblyns spooki sprint": {
 "genres": [
