@@ -222,9 +222,12 @@
   function baseFilter(e) {
     if (!e.is_music) return false;   // expos, ateliers, conférences… are never shown
     if (!pillsOK(e)) return false;
-    if (state.venues.length && !state.venues.includes(e.venue)) return false;
-    if (state.genres.length && !e.genres.some(g => state.genres.includes(g))) return false;
-    if (state.styles.length && !(e.subgenres || []).some(s => state.styles.includes(s))) return false;
+    // The genre / style / venue chips are one OR group (REM-37): a concert shows when it matches any of them. The text
+    // and the pills narrow.
+    if (state.venues.length || state.genres.length || state.styles.length) {
+      const hit = state.venues.includes(e.venue) || e.genres.some(g => state.genres.includes(g)) || (e.subgenres || []).some(x => state.styles.includes(x));
+      if (!hit) return false;
+    }
     if (state.q) {
       const q = norm(state.q);
       if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""} ${e.summary || ""}`).includes(q)) return false;
