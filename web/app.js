@@ -872,6 +872,7 @@
     ticket: '<path d="M3.5 7.5h17v3.2a1.8 1.8 0 0 0 0 3.6v3.2h-17v-3.2a1.8 1.8 0 0 0 0-3.6z"/><path d="M9.5 7.5v10" stroke-dasharray="2 2.2"/>',
     chevron: '<path d="M6 9.5l6 6 6-6" stroke-width="2"/>',
     x: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
+    play: '<path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/>',
   };
   const icon = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
   // Open: fill, unhide — the CSS animations play (veil fade, sheet slide); .moving keeps a compositor layer on the
@@ -900,6 +901,8 @@
     const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Directions ↗</a>` : "";
     const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
     const tile = ticketTile(e);
+    sheetArtists = artists;
+    const i0 = DOCK.e === e ? Math.max(0, artists.indexOf(DOCK.name)) : 0;   // reopened from the dock: start on the act playing
     const meta = [tile.ticket || !price || price === "paid" ? "" : esc(price), subHtml(e, 4)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
       <div class="actions${tile.html ? "" : " three"}">
@@ -915,7 +918,7 @@
       ${meta ? `<div class="muted meta">${meta}</div>` : ""}
       ${blurbHtml(e)}
       ${artists.length > 1 ? `<div class="listen"><h3>Listen</h3><div class="artist-pick" role="group" aria-label="Artist">${artists.map((a, i) =>
-        `<button type="button" class="${i ? "" : "on"}" aria-pressed="${!i}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}
+        `<button type="button" class="${i === i0 ? "on" : ""}" aria-pressed="${i === i0}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}
       <div id="artist"></div>`;
     renderStatus();
     // Multi-artist show: the pills switch the player (cross-fade), the active one is filled.
@@ -930,7 +933,7 @@
       $(".blurb .txt", detail).textContent = open ? BLURB_CUT(blurb(e)) : blurb(e);
       more.textContent = open ? "read more" : "show less";
     };
-    if (artists.length) loadArtist(artists[0], e, artists);
+    if (artists.length) loadArtist(artists[i0], e, artists);
   }
   // ★ toggle next to the venue name (REM-28): favourite venues feed the "Mes salles" pill.
   function favBtn(venue) {
@@ -1042,9 +1045,10 @@
 
   // Wikipedia (EN then FR) for the blurb, Deezer (JSONP, no key) for picture and similar artists.
   // Player (REM-30): the artist's Spotify page, else its own Bandcamp release, else Deezer's top tracks (`players` is
-  // resolved by the scraper per artist name; older events.json files have none and fall back to Deezer). Below it,
-  // "Live": the YouTube live video the scraper found (click-to-play thumbnail, the iframe only exists after the
-  // tap), else a link to the YouTube search.
+  // resolved by the scraper per artist name; older events.json files have none and fall back to Deezer). Since REM-10
+  // the player lives in the dock at the bottom of the page, not in the sheet. Below the sheet's blurb, "Live": the
+  // YouTube live video the scraper found (click-to-play thumbnail, the iframe only exists after the tap), else a link
+  // to the YouTube search.
   const BC_EMBED = /^https:\/\/bandcamp\.com\/EmbeddedPlayer\/(album|track)=\d+\//;
   const YT_ID = /^[A-Za-z0-9_-]{11}$/;
   function playersOf(e, name) {
@@ -1055,11 +1059,58 @@
     const yt = p.youtube && YT_ID.test(p.youtube.videoId || "") ? p.youtube : null;
     return { bandcamp: bc, bandcampEmbed: bc && BC_EMBED.test(bc.embed || "") ? bc.embed : null, spotify: sp, youtube: yt };
   }
-  function playerHtml(p, dz) {
-    if (p.spotify) return `<div class="player spotify"><iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><div class="muted via">via Spotify</div></div>`;
-    if (p.bandcampEmbed) return `<div class="player bandcamp"><iframe title="Bandcamp" src="${esc(p.bandcampEmbed)}" seamless loading="lazy"></iframe><div class="muted via">via Bandcamp</div></div>`;
-    if (dz) return `<div class="player deezer"><iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe><div class="muted via">via Deezer</div></div>`;
+  // ------------------------------------------------------------ player dock (REM-10)
+  // The player is a fixed bar at the bottom of the page, never inside the sheet: closing the sheet leaves the music
+  // playing. One dock at a time. A sheet docks its act when nothing plays yet (or when the dock already plays this
+  // concert: the act pills switch it); while another concert plays, the sheet offers a "Play X" button instead, so
+  // reading a concert never cuts the music. ✕ dismisses the dock; its title reopens the concert; ‹ › walk the acts.
+  const dock = $("#dock");
+  const DOCK = { e: null, name: null, artists: [], key: "" };
+  let sheetArtists = [];   // the acts of the open sheet, in pill order
+  function dockVia(p, dz) { return p.spotify ? "spotify" : p.bandcampEmbed ? "bandcamp" : dz ? "deezer" : ""; }
+  // Compact embeds: Spotify's 80px player, Bandcamp's slim "size=small" bar, Deezer without the track list.
+  function dockHtml(p, dz) {
+    if (p.spotify) return `<iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+    if (p.bandcampEmbed) return `<iframe title="Bandcamp" src="${esc(p.bandcampEmbed.replace(/\/size=\w+\//, "/size=small/").replace(/\/artwork=\w+\//, "/artwork=none/"))}" seamless></iframe>`;
+    if (dz) return `<iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks?tracklist=false" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe>`;
     return "";
+  }
+  const VIA = { spotify: "Spotify", bandcamp: "Bandcamp", deezer: "Deezer" };
+  function nowLine(via) { return `<div class="nowline">${icon("play")}<span>Playing in the bar at the bottom · via ${VIA[via]}</span></div>`; }
+  function dockBtn(name) { return `<button type="button" class="dockbtn" data-dockplay>${icon("play")}Play ${esc(name)}${DOCK.e && DOCK.e !== current ? ` <small>replaces ${esc(DOCK.name)}</small>` : ""}</button>`; }
+  function dockPlay(name, e, artists, p, dz) {
+    const via = dockVia(p, dz); if (!via) return false;
+    const key = `${e.id}|${norm(name)}|${via}`;
+    DOCK.e = e; DOCK.name = name; DOCK.artists = artists;
+    $("#dname").textContent = name;
+    $("#dwhen").textContent = `${e.venue} · ${fmtShort(parseISO(e.date))}${e.time ? " · " + fmtTime(e.time) : ""}`;
+    renderDockActs();
+    if (DOCK.key !== key) { DOCK.key = key; dock.dataset.src = via; $("#dframe").innerHTML = dockHtml(p, dz); }   // same act again: the iframe, and the music, stay
+    dock.hidden = false; document.body.classList.add("docked");
+    if (current === e) { const b = $("[data-dockplay]", detail); if (b) b.outerHTML = nowLine(via); }
+    return true;
+  }
+  function renderDockActs() {
+    const a = DOCK.artists, i = a.indexOf(DOCK.name);
+    $("#dacts").innerHTML = a.length > 1 ? `<button type="button" data-dact="-1" aria-label="Previous act" title="${esc(a[(i - 1 + a.length) % a.length])}">‹</button><small>${i + 1}/${a.length}</small><button type="button" data-dact="1" aria-label="Next act" title="${esc(a[(i + 1) % a.length])}">›</button>` : "";
+  }
+  async function dockLoad(name, e, artists) {
+    const p = playersOf(e, name);
+    const dz = p.spotify || p.bandcampEmbed ? null : await deezerArtist(name).catch(() => null);
+    dockPlay(name, e, artists, p, dz);
+  }
+  function dockStep(d) {
+    const a = DOCK.artists; if (a.length < 2) return;
+    const name = a[(a.indexOf(DOCK.name) + d + a.length) % a.length];
+    if (current === DOCK.e) { const b = $$(".artist-pick button", detail).find(x => a[+x.dataset.i] === name); if (b) { b.click(); return; } }   // the sheet shows it: its pill switches both
+    dockLoad(name, DOCK.e, a);
+  }
+  function dockClose() {
+    const e = DOCK.e;
+    dock.hidden = true; dock.dataset.src = ""; $("#dframe").innerHTML = "";
+    DOCK.e = null; DOCK.name = null; DOCK.artists = []; DOCK.key = "";
+    document.body.classList.remove("docked");
+    if (current && current === e) { const nl = $(".nowline", detail); if (nl) nl.outerHTML = dockBtn(artistShown); }
   }
   // "Live" block: a thumbnail tile (ink play glyph, title + year) that becomes the youtube-nocookie iframe on click;
   // without a resolved video, a link to the YouTube search for "<artist> live".
@@ -1079,9 +1130,9 @@
   function ytIframe(id) {
     return `<iframe title="YouTube" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
   }
-  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Écouter <act>" + player (with several
-  // acts the heading and the pills sit above, in .listen) · "En live" · "Dans le même esprit" (Deezer related, names
-  // only) · search links. A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed
+  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Listen to <act>" + the dock line or
+  // the "Play" button (with several acts the heading and the pills sit above, in .listen) · "Live" · "In the same
+  // vein" (Deezer related, names only) · search links. A thin skeleton line stands in while the lookups run; a stale answer (act or sheet changed
   // meanwhile) is dropped.
   const cache = {};
   let artistShown = null;
@@ -1096,8 +1147,12 @@
     if (stale()) return;
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
     const q = encodeURIComponent(name);
-    const p = playersOf(e, name);
-    const player = playerHtml(p, dz);
+    const p = playersOf(e, name), via = dockVia(p, dz);
+    // The player goes to the dock (REM-10): dock this act when nothing plays or this concert already plays; otherwise
+    // offer to take over.
+    let player = "";
+    if (via && (!DOCK.e || DOCK.e === e)) { dockPlay(name, e, artists, p, dz); player = nowLine(via); }
+    else if (via) player = dockBtn(name);
     box.innerHTML = `
       ${wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></p>` : ""}
       ${player ? `${artists.length > 1 ? "" : `<h3>Listen to ${esc(name)}</h3>`}${player}` : ""}
@@ -1243,6 +1298,10 @@
     const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
   };
   $("#close").onclick = closeDetail;
+  // player dock (REM-10)
+  $("#dinfo").onclick = () => { if (DOCK.e) openDetail(DOCK.e); };
+  $("#dclose").onclick = dockClose;
+  $("#dacts").onclick = ev => { const b = ev.target.closest("[data-dact]"); if (b) dockStep(+b.dataset.dact); };
   detail.onclick = ev => { if (ev.target === detail) closeDetail(); };
   detail.addEventListener("click", ev => {
     const sub = ev.target.closest(".tag.sub"); if (sub) { closeDetail(); toggleStyle(sub.dataset.sub); return; }
@@ -1251,6 +1310,7 @@
     if (vn) { const v = vn.dataset.venue; closeDetail(); if (!state.venues.includes(v)) state.venues = [...state.venues, v]; render(); return; }
     const star = ev.target.closest("[data-fav]");
     if (star) { toggleFav(star.dataset.fav); star.outerHTML = favBtn(star.dataset.fav); replay($(".venue .star", detail), "pop"); render(); return; }
+    if (ev.target.closest("[data-dockplay]")) { if (current) dockLoad(artistShown, current, sheetArtists); return; }   // take the dock over (REM-10)
     if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
     const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
   });
