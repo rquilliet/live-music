@@ -76,9 +76,27 @@ _LINEUP_NOISE = re.compile(r"^(?:complet|sold ?out|annul[ée]e?|report[ée]e?|no
                            r"premi[eè]re partie|first part|\d{1,2}\s*[h:]\s*\d{0,2})$", re.I)
 
 
+# Decorations venues hang on an act's name (REM-36): "KYTES en concert (côté Records)", "Horse Lords (1er soir)",
+# "#JazzDeDemain Arlet Feuillard", "Pauline Mann au Sunset". Stripped from every part so the names match Spotify's.
+_DECOR = [
+    re.compile(r"\s*\([^)]*\)"),                                  # (côté Records), (1er soir), (release party)
+    re.compile(r"^#\w+\s+(?:(?:de|by|with|avec)\.{0,3}\s+)?"),     # #JazzDeDemain …, #LaJamDuLundi de …, #LaPetiteHeure by... …
+    re.compile(r"\s+en concert\b.*$", re.I),                       # … en concert au 38Riv Jazz Club
+    re.compile(r"\s+(?:au|à la|à l'|at the|at)\s+(?=[A-Z0-9]).*$"),   # … au Sunset, at the Olympia
+]
+
+
+def strip_decor(name: str) -> str:
+    out = name
+    for rx in _DECOR:
+        out = rx.sub(" ", out)
+    out = re.sub(r"\s+", " ", out).strip(" -–—:•·")
+    return out or name
+
+
 def split_lineup(title: str):
     """'Jaguar Sun • Sean Nicholas Savage • Yes Please!' -> ('Jaguar Sun', ['Sean Nicholas Savage', 'Yes Please!'])."""
-    parts = [p.strip(" -–—:•·") for p in _LINEUP_SEP.split(clean_text(title))]
+    parts = [strip_decor(p.strip(" -–—:•·")) for p in _LINEUP_SEP.split(clean_text(title))]
     parts = [p for p in parts if len(p) > 1 and not _LINEUP_NOISE.match(p)]
     if len(parts) > 1 and _GENERIC_LEAD.match(parts[0]):
         parts = parts[1:]

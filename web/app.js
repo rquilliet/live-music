@@ -658,7 +658,7 @@
   // {at, names, ids} (read again after a day or on "Actualiser"), "lip-spotify-pkce" {verifier, state} during the redirect.
   const SP_AUTH = "https://accounts.spotify.com", SP_API = "https://api.spotify.com/v1", SP_SCOPE = "user-library-read";
   const SP_TTL = 24 * 3600e3, SP_PAGES = 200;   // library cache lifetime; 200 pages of 50 = 10 000 liked songs at most
-  const SP = { tok: spRead("lip-spotify"), lib: spRead("lip-spotify-artists"), keys: new Set(), ids: new Set(), busy: false, error: "", open: false, menu: false };
+  const SP = { tok: spRead("lip-spotify"), lib: spRead("lip-spotify-artists"), keys: new Set(), long: [], ids: new Set(), hits: new Map(), busy: false, error: "", open: false, menu: false };
   const SP_ICON = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M6.8 9.4c3.7-1.1 7.6-.7 10.7 1.2M7.4 12.6c3-.9 6.1-.5 8.6 1M8 15.6c2.3-.7 4.6-.4 6.5.8"/></svg>';
   function spRead(k) { try { const v = JSON.parse(localStorage.getItem(k) || "null"); return v && typeof v === "object" ? v : null; } catch { return null; } }
   function spWrite(k, v) { try { if (v) localStorage.setItem(k, JSON.stringify(v)); else localStorage.removeItem(k); } catch {} }
@@ -669,17 +669,44 @@
   // Artist names as the search index sees them (norm: lower-case, no accents), punctuation collapsed, a leading article
   // dropped: "The Lanskies" / "LANSKIES" / "Zoé Clauzure" / "zoe clauzure" meet.
   function artistKey(name) { return norm(name).trim().replace(/[^a-z0-9]+/g, " ").trim().replace(/^(?:the|les|le|la) /, ""); }
+  // Liked-artist names that are also plain words of a bill ("Live", "Trio", "Air"): those match a lineup name only when
+  // equal, never inside a longer one (REM-36).
+  const SP_STOP = new Set(["live", "trio", "duo", "quartet", "quintet", "band", "club", "jazz", "blues", "night", "party", "session",
+    "orchestra", "orchestre", "ensemble", "soir", "concert", "festival", "friends", "guests", "special", "music", "sound", "sounds", "paris", "release"]);
   function spIndex() {
     SP.keys = new Set(((SP.lib || {}).names || []).map(artistKey).filter(Boolean));
+    // Keys allowed to match inside a longer lineup name ("kytes en concert cote records" contains "kytes"): five letters or
+    // two words at least, and not a plain word. Padded with spaces so only whole words match.
+    SP.long = [...SP.keys].filter(k => (k.length >= 5 || k.includes(" ")) && !SP_STOP.has(k)).map(k => ` ${k} `);
     SP.ids = new Set(((SP.lib || {}).ids || []).filter(Boolean));
+    SP.hits = new Map();   // event id -> liked keys found in its lineup (memo, reset with the library)
   }
-  // A concert matches when an act of the lineup is a liked artist (by name, or by Spotify id when the scraper resolved one).
-  function spMatch(e) {
-    if (!SP.keys.size && !SP.ids.size) return false;
-    if (lineup(e).some(n => SP.keys.has(artistKey(n)))) return true;
-    return Object.values(e.players || {}).some(p => p && p.spotify && SP.ids.has(p.spotify.id));
+  // The liked artists found in a concert (REM-36): an act matches when its key equals a liked key, or when a liked key
+  // appears as whole words inside the act's name — scraped headliners carry "en concert", "(1er soir)", the venue name…
+  // A Spotify id resolved by the scraper matches on its own.
+  function spHits(e) {
+    if (!SP.keys.size && !SP.ids.size) return [];
+    let h = SP.hits.get(e.id);
+    if (h) return h;
+    h = [];
+    lineup(e).forEach(n => {
+      const k = artistKey(n); if (!k) return;
+      if (SP.keys.has(k)) { h.push(k); return; }
+      const padded = ` ${k} `;
+      SP.long.forEach(x => { if (padded.includes(x)) h.push(x.trim()); });
+    });
+    Object.values(e.players || {}).forEach(p => { if (p && p.spotify && SP.ids.has(p.spotify.id)) h.push("id:" + p.spotify.id); });
+    SP.hits.set(e.id, h);
+    return h;
   }
+  function spMatch(e) { return spHits(e).length > 0; }
   function spCount() { const t = isoDate(today0()); return DATA.events.filter(e => e.is_music && e.date >= t && spMatch(e)).length; }
+  // Liked artists with at least one upcoming concert (the account menu says "12 concerts · 7 of your artists").
+  function spArtistCount() {
+    const t = isoDate(today0()), s = new Set();
+    DATA.events.forEach(e => { if (e.is_music && e.date >= t) spHits(e).forEach(k => s.add(k)); });
+    return s.size;
+  }
   // ---- PKCE + tokens
   function spRandom(n) {
     const a = crypto.getRandomValues(new Uint8Array(n)), c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -802,7 +829,8 @@
   }
   function spAccountHtml(cls) {
     const n = ((SP.lib || {}).names || []).length, s = n > 1 ? "s" : "";
-    const sub = SP.busy ? "Reading liked songs…" : SP.lib ? `${n} liked artist${s} · updated ${spAgo(SP.lib.at)}` : "Liked songs not read yet";
+    const m = SP.lib && DATA.events.length ? spArtistCount() : 0, c = m ? spCount() : 0;
+    const sub = SP.busy ? "Reading liked songs…" : SP.lib ? `${n} liked artist${s}${m ? ` · ${plural(c, "concert")} by ${m} of them` : ""} · updated ${spAgo(SP.lib.at)}` : "Liked songs not read yet";
     return `<div class="spwho">${SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : `<span class="spav">${SP_ICON}</span>`}<div><b>${esc(SP.tok.name || "Spotify account")}</b><small>${sub}</small></div></div>
       ${SP.error ? `<div class="spnote err">${esc(SP.error)}</div>` : ""}
       <div class="sprow"><button type="button" class="${cls}" role="menuitem" data-sp="sync"${SP.busy ? " disabled" : ""}>Refresh</button><button type="button" class="${cls} sec" role="menuitem" data-sp="out">Disconnect</button></div>`;
