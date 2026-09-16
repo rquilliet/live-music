@@ -152,6 +152,16 @@
 "groove"
 ]
 },
+"38riv-jazz-club|caloe a kind of cabaret au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"cabaret"
+]
+},
 "38riv-jazz-club|carte blanche a camille bertault au 38riv jazz club": {
 "genres": [
 "jazz",
@@ -191,6 +201,15 @@
 "is_music": true,
 "subgenres": [
 "modern jazz"
+]
+},
+"38riv-jazz-club|carte blanche a gautier garrigue sirius au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "38riv-jazz-club|cine concert meli melies des 4 ans au 38riv jazz club": {
@@ -283,6 +302,17 @@
 "cabaret"
 ]
 },
+"38riv-jazz-club|elisa lecuyer raconte las mujeres del bolero concert au 38riv jazz club": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"bolero",
+"cabaret"
+]
+},
 "38riv-jazz-club|elisa lecuyer raconte mercedes sosa velours velours a kind of cabaret au 38riv": {
 "genres": [
 "latin",
@@ -293,6 +323,15 @@
 "subgenres": [
 "nueva canción",
 "cabaret"
+]
+},
+"38riv-jazz-club|emma rawicz en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "38riv-jazz-club|eric seva release party au 38riv jazz club": {
@@ -539,6 +578,13 @@
 "contemporary jazz"
 ]
 },
+"38riv-jazz-club|late session jazz mailo rakotonanahary late show et jam session au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "38riv-jazz-club|leo geller 4tet open jazz chaloupe au 38riv jazz club": {
 "genres": [
 "jazz",
@@ -550,6 +596,16 @@
 "afrobeat"
 ]
 },
+"38riv-jazz-club|liam szymonik invite pierre carbonneaux en concert au 38riv": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
+]
+},
 "38riv-jazz-club|live for gil concert hommage a gil evans au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -558,6 +614,15 @@
 "subgenres": [
 "contemporary jazz",
 "big band"
+]
+},
+"38riv-jazz-club|lluc casares paris trio en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop"
 ]
 },
 "38riv-jazz-club|luca fattorini invite antonin tri hoang au 38riv jazz club": {
@@ -827,6 +892,15 @@
 "hard bop"
 ]
 },
+"a-la-crypte-saint-andre|concert de raphael feuillatre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"classical guitar"
+]
+},
 "abbaye-saint-germain-des-pres|concert a paris ravel debussy cantemir mozart vivaldi bach doppler piazzolla waxmann": {
 "genres": [
 "classical"
@@ -920,6 +994,11 @@
 "film music",
 "orchestral"
 ]
+},
+"adidas-arena|world championships breaking hip hop freestyle": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "alhambra|amenra": {
 "genres": [
@@ -1755,6 +1834,16 @@
 "dream pop"
 ]
 },
+"badaboum|la magic live by darling deluxe karaoke bal live": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"bal"
+]
+},
 "badaboum|simia badaboum": {
 "genres": [
 "electro",
@@ -2528,6 +2617,16 @@
 "singer-songwriter"
 ]
 },
+"cafe-de-la-danse|candice": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "cafe-de-la-danse|chxrry": {
 "genres": [
 "soul-rnb",
@@ -2849,6 +2948,11 @@
 "music-hall"
 ]
 },
+"chaillot-theatre-national-de-la-danse|gagnez 2 invitations pour assister a cabarets a chaillot": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "chapelle-de-l-hopital-lariboisiere|voyage musical en compagnie de schubert et debussy lieder et melodies": {
 "genres": [
 "classical"
@@ -2960,6 +3064,16 @@
 "rockabilly",
 "fifties",
 "doo-wop"
+]
+},
+"cirque-electrique|poluxx x fools affection soiree pop rock retro pop": {
+"genres": [
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"retro pop"
 ]
 },
 "cirque-electrique|resist queer as fuck": {
@@ -3155,6 +3269,15 @@
 "is_music": true,
 "subgenres": [
 "orchestral"
+]
+},
+"conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|concert de l orchestre a vents": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"wind band"
 ]
 },
 "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|concert de l orchestre des benjamins": {
@@ -3870,6 +3993,17 @@
 "choral"
 ]
 },
+"eglise-saint-vincent-de-paul|birds on a wire": {
+"genres": [
+"folk",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"chamber folk",
+"covers"
+]
+},
 "eglise-saint-vincent-de-paul|concert de la sainte cecile": {
 "genres": [
 "classical"
@@ -4417,6 +4551,21 @@
 "cloud rap"
 ]
 },
+"espace-1789|sandra nkake elles": {
+"genres": [
+"soul-rnb",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"neo-soul"
+]
+},
+"espace-reuilly|festival de courts metrages les 12 courts de minuit": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "feuille-blanche-cafe-noir|concert french accent is cute": {
 "genres": [
 "folk"
@@ -4441,6 +4590,15 @@
 "is_music": true,
 "subgenres": [
 "brazilian"
+]
+},
+"fgo-barbara|alyona alyona": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"ukrainian rap"
 ]
 },
 "fgo-barbara|batbat": {
@@ -5619,6 +5777,14 @@
 "subgenres": [
 "afro-folk"
 ]
+},
+"la-bellevilloise|cafe concert malik diaw": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-bellevilloise|cafe concert marta domingo": {
 "genres": [
@@ -7396,6 +7562,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dame-de-canton|paco diatta": {
+"genres": [
+"world",
+"afro",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"casamance"
+]
+},
 "la-dame-de-canton|suzon x rondo": {
 "genres": [
 "pop",
@@ -8036,6 +8213,17 @@
 "subgenres": [
 "arabic",
 "oriental fusion"
+]
+},
+"la-marbrerie|soad assafir more birkleyn sound festival 2": {
+"genres": [
+"world",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"arabic",
+"anatolian"
 ]
 },
 "la-marbrerie|surrealiste": {
@@ -8994,6 +9182,26 @@
 "neo-soul"
 ]
 },
+"la-petite-halle|sidi bemol presente guellal montreal": {
+"genres": [
+"world",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"chaabi",
+"gnawa"
+]
+},
+"la-petite-halle|the dire straits experience le lundi 7 decembre a paris": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"blues rock"
+]
+},
 "la-petite-halle|uats jam 2 i 28 09 26": {
 "genres": [
 "jazz",
@@ -9209,6 +9417,13 @@
 "jazz manouche"
 ]
 },
+"la-seine-musicale|blackmany trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-seine-musicale|cerise au pays de l opera": {
 "genres": [
 "classical"
@@ -9331,6 +9546,11 @@
 "conte musical"
 ]
 },
+"la-seine-musicale|les concerts doudou magie par l orchestre colonne": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "la-seine-musicale|les sessions privees tout le monde s appelle clara": {
 "genres": [
 "pop",
@@ -9436,6 +9656,13 @@
 "subgenres": [
 "vocal jazz"
 ]
+},
+"la-station|aie des mines": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-station|ciclade devon rexi nicolini": {
 "genres": [
@@ -9686,6 +9913,16 @@
 "subgenres": [
 "congolese",
 "afro-pop"
+]
+},
+"le-360|zamora x le 360 soiree mama partenaire": {
+"genres": [
+"hip-hop",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "le-baiser-sale|anastasiia donna quartet invite joachim govin": {
@@ -10541,6 +10778,11 @@
 "psychedelic",
 "avant-pop"
 ]
+},
+"le-lucernaire|pauline paris projette son film dejeuner s du matin au lucernaire": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "le-melville|adrienne": {
 "genres": [
@@ -12324,6 +12566,16 @@
 "garage rock"
 ]
 },
+"le-truskel|the supreme night club": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"club night"
+]
+},
 "les-disquaires|bachar mar khalife joue christophe": {
 "genres": [
 "chanson",
@@ -12824,6 +13076,17 @@
 "is_music": false,
 "subgenres": [
 "literary reading"
+]
+},
+"metaxu-pantin|zocco baia release party a metaxu 93": {
+"genres": [
+"world",
+"latin",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"italo-tropical"
 ]
 },
 "mpaa-saint-germain|concert nous sommes le vent par l harmonie de la sirene et horme": {
@@ -13755,6 +14018,15 @@
 "uk drill"
 ]
 },
+"olympia|fills monkey": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"percussion"
+]
+},
 "olympia|jalen ngonda": {
 "genres": [
 "soul-rnb"
@@ -14067,6 +14339,17 @@
 "drone",
 "sludge",
 "psychedelic"
+]
+},
+"petit-bain|brama": {
+"genres": [
+"world",
+"folk",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"ukrainian folk"
 ]
 },
 "petit-bain|changement de salle humanity s last breath": {
@@ -14952,6 +15235,14 @@
 "techno"
 ]
 },
+"point-ephemere|e ritmo electro": {
+"genres": [
+"electro",
+"latin"
+],
+"is_music": true,
+"subgenres": []
+},
 "point-ephemere|elisa flores": {
 "genres": [
 "indie",
@@ -15346,6 +15637,16 @@
 "subgenres": [
 "dream pop",
 "trip-hop"
+]
+},
+"point-ephemere|sociale latin queer": {
+"genres": [
+"latin",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"reggaeton"
 ]
 },
 "point-ephemere|sorun": {
@@ -15788,6 +16089,16 @@
 "subgenres": [
 "indie rock",
 "garage pop"
+]
+},
+"popup|namesbliss": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"dream pop"
 ]
 },
 "popup|noonzy": {
@@ -16397,6 +16708,17 @@
 "bebop"
 ]
 },
+"sunset-sunside|beija jeanzac": {
+"genres": [
+"blues",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"harmonica blues",
+"swing"
+]
+},
 "sunset-sunside|big bruce the retro kids": {
 "genres": [
 "soul-rnb",
@@ -16407,6 +16729,15 @@
 "subgenres": [
 "instrumental soul",
 "groove"
+]
+},
+"sunset-sunside|bloom": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
 ]
 },
 "sunset-sunside|bojan z henri texier solobsession": {
@@ -16682,6 +17013,15 @@
 "is_music": true,
 "subgenres": [
 "flute jazz"
+]
+},
+"sunset-sunside|emma nagy quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "sunset-sunside|erella heritages": {
@@ -17566,6 +17906,15 @@
 "guitar duo"
 ]
 },
+"sunset-sunside|moeun": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
+]
+},
 "sunset-sunside|nefesh ft jonathan orland shimon gambourg": {
 "genres": [
 "jazz",
@@ -17687,6 +18036,16 @@
 "is_music": true,
 "subgenres": [
 "jazz guitar"
+]
+},
+"sunset-sunside|sacha boutros lady ellington": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"swing"
 ]
 },
 "sunset-sunside|samuel lercher trio": {
@@ -17926,6 +18285,16 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"sunset-sunside|william brunard laurent coulondre romain sarron": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano trio",
+"modern jazz"
 ]
 },
 "sunset-sunside|yann benoist des bises et des shows": {
@@ -19116,6 +19485,16 @@
 "subgenres": [
 "90s alternative",
 "grunge"
+]
+},
+"theatre-berthelot-jean-guerrin|tania chagnot dans le concerto en si de roland dyens": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"classical guitar",
+"concerto"
 ]
 },
 "theatre-de-la-concorde|le cycle musical de paul serri au theatre de la concorde": {
