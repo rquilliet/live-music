@@ -2143,6 +2143,13 @@
 "retro soul"
 ]
 },
+"bataclan|les foudres": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "bataclan|les legendes arabes": {
 "genres": [
 "world",
@@ -2441,6 +2448,21 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"bibliotheque-francois-villon|festival sido co eveil musical au son d un violon": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"bibliotheque-francois-villon|festival sido co folies voix et violoncelle": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"solo strings",
+"early music"
+]
 },
 "bibliotheque-jacqueline-de-romilly|spectacle cabaret bad biches": {
 "genres": [
@@ -3013,6 +3035,25 @@
 "mélodie française"
 ]
 },
+"cirque-electrique|almost famous presente clegane release party pray kugelblitz": {
+"genres": [
+"metal",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"sludge",
+"hardcore"
+]
+},
+"cirque-electrique|bubbles jam": {
+"genres": [
+"hip-hop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "cirque-electrique|bubbles jam par anyjam tonight avec imane agathe": {
 "genres": [
 "funk",
@@ -3508,6 +3549,16 @@
 "caribbean"
 ]
 },
+"conservatoire-municipal-charles-munch|grand concert de l orchestre enjeux": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"orchestral",
+"concerto"
+]
+},
 "conservatoire-municipal-claude-debussy-site-courcelles|cine concert chaplin en action": {
 "genres": [
 "classical"
@@ -3553,6 +3604,13 @@
 "saxophone"
 ]
 },
+"conservatoire-municipal-francis-poulenc|musiques au tournant du xixeme siecle": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": []
+},
 "conservatoire-municipal-frederic-chopin|concours international de quatuor de saxophones": {
 "genres": [
 "classical"
@@ -3577,6 +3635,15 @@
 "is_music": true,
 "subgenres": [
 "string quartet"
+]
+},
+"conservatoire-municipal-frederic-chopin|les noces de figaro de mozart": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"opera"
 ]
 },
 "conservatoire-municipal-hector-berlioz|carnaval": {
@@ -4513,6 +4580,13 @@
 "nouvelle chanson française"
 ]
 },
+"elysee-montmartre|pact": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "elysee-montmartre|portugal the man": {
 "genres": [
 "rock",
@@ -4806,6 +4880,14 @@
 "subgenres": [
 "rnb français"
 ]
+},
+"fgo-barbara|rok dudu": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": []
 },
 "fgo-barbara|saoirse dream estelle allen michele bry": {
 "genres": [
@@ -5221,6 +5303,26 @@
 "subgenres": [
 "free improvisation",
 "extended vocal technique"
+]
+},
+"instants-chavires|concretement 1 diffusion jerome noetinger hors les murs a la muse en circuit cncm alfortville": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"musique concrète",
+"electroacoustic"
+]
+},
+"instants-chavires|concretement 2 concerts performances liz racz lin e weidmann david chiesa camille emaille jerome noetinger": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"free improvisation",
+"electroacoustic"
 ]
 },
 "instants-chavires|endless breakfast paula sanchez gabby fluke mogul maria portugal pascal battus bertrand gauguet": {
@@ -7177,6 +7279,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-cigale|dma": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "la-cigale|dosseh": {
 "genres": [
 "hip-hop"
@@ -7824,6 +7935,17 @@
 "improvised music"
 ]
 },
+"la-dynamo|ar ker seb brun seismes": {
+"genres": [
+"experimental",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"noise",
+"free improvisation"
+]
+},
 "la-dynamo|do do integral": {
 "genres": [
 "jazz",
@@ -8347,6 +8469,15 @@
 "subgenres": [
 "fanfare",
 "carnival"
+]
+},
+"la-marbrerie|panam not dead 6 cockney rejects friends": {
+"genres": [
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"street punk"
 ]
 },
 "la-marbrerie|prohibition ben shemie of suuns mossai mossai": {
@@ -9054,6 +9185,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|sawyer hill": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
 "la-maroquinerie|shitkid": {
 "genres": [
 "rock",
@@ -9063,6 +9204,16 @@
 "subgenres": [
 "lo-fi",
 "garage rock"
+]
+},
+"la-maroquinerie|shobee": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap marocain",
+"trap"
 ]
 },
 "la-maroquinerie|sons of legion": {
@@ -9686,6 +9837,16 @@
 "opera"
 ]
 },
+"la-seine-musicale|concert beethoven orchestre pasdeloup": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic",
+"romantic"
+]
+},
 "la-seine-musicale|concert de lancement de saison": {
 "genres": [
 "classical"
@@ -9694,6 +9855,14 @@
 "subgenres": [
 "symphonic"
 ]
+},
+"la-seine-musicale|de michel a france": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-seine-musicale|de rameau aux caraibes": {
 "genres": [
@@ -10126,6 +10295,13 @@
 "persian music",
 "poetry and music"
 ]
+},
+"le-360|accords croises x le 360 soiree mama partenaire": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": []
 },
 "le-360|la nuit suspendue": {
 "genres": [
@@ -12849,6 +13025,17 @@
 "contemporary jazz"
 ]
 },
+"le-triton|sylvain cathala trio kamilya jubran about": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic song",
+"free improvisation"
+]
+},
 "le-triton|trio m b m happy birthday": {
 "genres": [
 "jazz"
@@ -12866,6 +13053,26 @@
 "is_music": true,
 "subgenres": [
 "improvised music"
+]
+},
+"le-triton|yumi ito": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
+"le-truskel|c llateral": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"cold wave"
 ]
 },
 "le-truskel|irene jonas elephant": {
@@ -12914,6 +13121,14 @@
 "subgenres": []
 },
 "les-trois-baudets|blandine": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"les-trois-baudets|blandine fleurdenai": {
 "genres": [
 "chanson",
 "pop"
@@ -13242,6 +13457,13 @@
 "griot music"
 ]
 },
+"mediatheque-edmond-rostand|concert ames debout jann halexander chante catherine ribeiro": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "mediatheque-francoise-sagan|discomarche brocante vinyles dj sets": {
 "genres": [],
 "is_music": false,
@@ -13251,6 +13473,25 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"mediatheque-helene-berr|aja en concert": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"dream pop"
+]
+},
+"mediatheque-helene-berr|concert alain schneider": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"jeune public"
+]
 },
 "mediatheque-helene-berr|concert la repetheque clem lea": {
 "genres": [
@@ -13368,6 +13609,27 @@
 "minimalism"
 ]
 },
+"mediatheque-musicale-de-paris-christiane-eda-pierre|concert hura mirshekari et n9ne monte le son 2026 o feminins": {
+"genres": [
+"world",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"persian"
+]
+},
+"mediatheque-musicale-de-paris-christiane-eda-pierre|concert oumou diarra et yacouba kone cycle musiques et exil": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"mandingue",
+"griot"
+]
+},
 "mediatheque-musicale-de-paris-christiane-eda-pierre|cycle musiques et exil nosferatu cine concert electronique live": {
 "genres": [
 "electro",
@@ -13406,6 +13668,17 @@
 "subgenres": [
 "ciné-concert",
 "ambient"
+]
+},
+"mediatheque-violette-leduc|astral bakers en concert esprit inde et folk brumeux": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"soft grunge",
+"atmospheric folk"
 ]
 },
 "memorial-de-la-shoah|imre kertesz par margaux eskenazi": {
@@ -14842,6 +15115,16 @@
 "techno"
 ]
 },
+"petit-bain|error festival": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"techno"
+]
+},
 "petit-bain|etran de l air": {
 "genres": [
 "world",
@@ -15538,6 +15821,15 @@
 "is_music": false,
 "subgenres": []
 },
+"point-ephemere|dalf records take over": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
+]
+},
 "point-ephemere|dazzling killmen pord": {
 "genres": [
 "rock",
@@ -15768,6 +16060,17 @@
 "post-punk"
 ]
 },
+"point-ephemere|la securite grife": {
+"genres": [
+"punk",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"art punk"
+]
+},
 "point-ephemere|le pokpok show goes live": {
 "genres": [],
 "is_music": false,
@@ -15799,6 +16102,14 @@
 "subgenres": [
 "street punk"
 ]
+},
+"point-ephemere|love letters club": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "point-ephemere|mado": {
 "genres": [
@@ -15994,6 +16305,11 @@
 "dream pop",
 "trip-hop"
 ]
+},
+"point-ephemere|selfportraits regards croises poesie et photographie": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "point-ephemere|sociale latin queer": {
 "genres": [
@@ -16215,6 +16531,16 @@
 "is_music": true,
 "subgenres": [
 "garage punk"
+]
+},
+"popup|disgusting sisters elo cotton": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage"
 ]
 },
 "popup|dj cinema quartier latin luxie": {
@@ -17058,6 +17384,16 @@
 "gypsy jazz"
 ]
 },
+"sunset-sunside|arnault cuisinier": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"poetry settings"
+]
+},
 "sunset-sunside|astor par atres": {
 "genres": [
 "latin",
@@ -17245,6 +17581,15 @@
 "vocal blues"
 ]
 },
+"sunset-sunside|claudio pallaro": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-bop"
+]
+},
 "sunset-sunside|clemence de tournemire": {
 "genres": [
 "jazz",
@@ -17364,6 +17709,15 @@
 "subgenres": [
 "afro-jazz",
 "vocal jazz"
+]
+},
+"sunset-sunside|dorado schmitt noe reinhardt william brunard django celebration 6": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz manouche"
 ]
 },
 "sunset-sunside|echoes of the jungle trio": {
@@ -18702,6 +19056,15 @@
 "subgenres": [
 "piano trio",
 "modern jazz"
+]
+},
+"sunset-sunside|xavier thollard trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano trio"
 ]
 },
 "sunset-sunside|yann benoist des bises et des shows": {
@@ -20662,6 +21025,14 @@
 "subgenres": [
 "orchestral dance"
 ]
+},
+"zenith-paris|taratata fete le zenith 1984": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
 },
 "zenith-paris|the dire straits experience": {
 "genres": [
