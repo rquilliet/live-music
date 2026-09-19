@@ -931,6 +931,15 @@
 "chamber music"
 ]
 },
+"accor-arena|big 2026": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "accor-arena|eric serra live le spectacle immersif a l accor arena": {
 "genres": [
 "electro",
@@ -1499,6 +1508,14 @@
 "skate punk",
 "rap rock"
 ]
+},
+"amaluna-restaurant|delirio tropical vol ii": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": []
 },
 "badaboum|camoufly badaboum": {
 "genres": [
@@ -2464,6 +2481,25 @@
 "early music"
 ]
 },
+"bibliotheque-historique-de-la-ville-de-paris-bhvp|concert de harpe en novembre par le conservatoire mozart de paris centre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"harp recital"
+]
+},
+"bibliotheque-historique-de-la-ville-de-paris-bhvp|concert la nouvelle athenes": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"romantic",
+"fortepiano"
+]
+},
 "bibliotheque-jacqueline-de-romilly|spectacle cabaret bad biches": {
 "genres": [
 "chanson",
@@ -2481,6 +2517,16 @@
 "is_music": true,
 "subgenres": [
 "baroque"
+]
+},
+"bibliotheque-naguib-mahfouz|voyage musical en orient avec le trio samarah": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic music",
+"oud"
 ]
 },
 "bibliotheque-publique-d-information|enregistrement public de l emission metaclassique": {
@@ -2941,6 +2987,28 @@
 "tropical grooves"
 ]
 },
+"centre-culturel-armenien-alex-manoogian|jazzmazz louis matute gabi hartmann": {
+"genres": [
+"jazz",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"bossa nova",
+"vocal jazz"
+]
+},
+"centre-culturel-armenien-alex-manoogian|jazzmazz zeit zeitoun presente son nouvel album soukoun": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"levantine music",
+"mediterranean"
+]
+},
 "centre-culturel-canadien-a-paris|paysages nordiques jessica paradis et malin g thunell": {
 "genres": [
 "folk",
@@ -3146,6 +3214,17 @@
 "is_music": true,
 "subgenres": [
 "garage rock"
+]
+},
+"cirque-electrique|megateuf coolschnock wiljahelmaz": {
+"genres": [
+"punk",
+"rock",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"noise rock"
 ]
 },
 "cirque-electrique|musique enchienne par sucre d orge": {
@@ -3380,6 +3459,15 @@
 "subgenres": [
 "choral",
 "vocal ensemble"
+]
+},
+"conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|concert de l orchestre a cordes": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"string orchestra"
 ]
 },
 "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|concert de l orchestre a cordes et l orchestre a vents": {
@@ -4781,6 +4869,11 @@
 "ukrainian rap"
 ]
 },
+"fgo-barbara|atelier djing boum animes par paloma colombe": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "fgo-barbara|batbat": {
 "genres": [
 "pop",
@@ -5367,6 +5460,17 @@
 "subgenres": [
 "math rock",
 "minimalism"
+]
+},
+"instants-chavires|le non jazz headband two weeks l aspect constructif": {
+"genres": [
+"experimental",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"free improvisation",
+"noise"
 ]
 },
 "instants-chavires|leila bordreuil michael foster chris corsano greg malcolm": {
@@ -7708,6 +7812,15 @@
 "chanson électronique"
 ]
 },
+"la-dame-de-canton|dire straits tribute by straits": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"classic rock"
+]
+},
 "la-dame-de-canton|edemzi": {
 "genres": [
 "world",
@@ -9811,6 +9924,16 @@
 "symphonic"
 ]
 },
+"la-seine-musicale|beethoven la pastorale a la seine musicale": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic",
+"romantic"
+]
+},
 "la-seine-musicale|bireli lagrene": {
 "genres": [
 "jazz"
@@ -9848,6 +9971,15 @@
 ]
 },
 "la-seine-musicale|concert de lancement de saison": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
+]
+},
+"la-seine-musicale|concert eveil beethoven et la nature": {
 "genres": [
 "classical"
 ],
@@ -10110,6 +10242,15 @@
 "is_music": true,
 "subgenres": [
 "house"
+]
+},
+"la-station|club late x lace radio": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno"
 ]
 },
 "la-station|edging": {
@@ -10871,6 +11012,16 @@
 "modern jazz"
 ]
 },
+"le-bal-blomet|christmas in soul les concerts jazz magazine": {
+"genres": [
+"soul-rnb",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"gospel"
+]
+},
 "le-bal-blomet|christmas jazz night au bal blomet": {
 "genres": [
 "jazz",
@@ -11173,6 +11324,16 @@
 "subgenres": [
 "grunge",
 "indie rock"
+]
+},
+"le-hasard-ludique|free the horn louise bsx": {
+"genres": [
+"electro",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"trumpet electronics"
 ]
 },
 "le-hasard-ludique|jesca hoop": {
@@ -12905,6 +13066,15 @@
 "is_music": true,
 "subgenres": []
 },
+"le-triton|cassiers sakai roy retour vers le futur": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
+]
+},
 "le-triton|cecile evrot devers sortie d album": {
 "genres": [
 "jazz",
@@ -12941,6 +13111,16 @@
 "didgeridoo",
 "indian music",
 "improvisation"
+]
+},
+"le-triton|elise the sugarsweets": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"swing"
 ]
 },
 "le-triton|henri texier essential quartet": {
@@ -13474,6 +13654,13 @@
 "is_music": false,
 "subgenres": []
 },
+"mediatheque-francoise-sagan|festival monte le son concert de paris banlieue": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "mediatheque-helene-berr|aja en concert": {
 "genres": [
 "indie",
@@ -13501,6 +13688,16 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"mediatheque-james-baldwin|monte le son concert d emmanuelle parrenin": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"psych folk",
+"french traditional"
 ]
 },
 "mediatheque-jean-pierre-melville|aure en concert duo": {
@@ -13635,6 +13832,18 @@
 "electro",
 "world",
 "experimental"
+],
+"is_music": true,
+"subgenres": [
+"ciné-concert",
+"uyghur music"
+]
+},
+"mediatheque-musicale-de-paris-christiane-eda-pierre|cycle musiques et exils nosferatu cine concert electronique live": {
+"genres": [
+"electro",
+"experimental",
+"world"
 ],
 "is_music": true,
 "subgenres": [
@@ -14550,6 +14759,13 @@
 "is_music": true,
 "subgenres": []
 },
+"nouveau-casino|riseup": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": []
+},
 "nouveau-casino|saint avangeline": {
 "genres": [
 "indie",
@@ -14621,6 +14837,14 @@
 "is_music": true,
 "subgenres": []
 },
+"olympia|ebony": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "olympia|esdeekid": {
 "genres": [
 "hip-hop"
@@ -14671,6 +14895,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"olympia|les wriggles en spectacle a l olympia": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"chanson humoristique"
+]
 },
 "olympia|linh": {
 "genres": [
@@ -17433,6 +17666,18 @@
 "subgenres": [
 "harmonica blues",
 "swing"
+]
+},
+"sunset-sunside|beyond brazilian stories": {
+"genres": [
+"jazz",
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"samba",
+"brazilian jazz"
 ]
 },
 "sunset-sunside|big bruce the retro kids": {
@@ -20697,6 +20942,14 @@
 ]
 },
 "zenith-paris|generation celine": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
+"zenith-paris|generation celine le meilleur des tributes 4 voix pour une legende": {
 "genres": [
 "pop",
 "chanson"
