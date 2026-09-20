@@ -983,6 +983,17 @@
 "kora"
 ]
 },
+"accor-arena|stevie wonder": {
+"genres": [
+"soul-rnb",
+"funk",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"motown"
+]
+},
 "accor-arena|the neighbourhood": {
 "genres": [
 "indie",
@@ -2459,11 +2470,25 @@
 "improvisation"
 ]
 },
+"bibliotheque-des-batignolles|concert avec l ensemble musiquam": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music"
+]
+},
 "bibliotheque-des-batignolles|musique en bibliotheque": {
 "genres": [
 "classical"
 ],
 "is_music": true,
+"subgenres": []
+},
+"bibliotheque-drouot|tous en ch ur la musique au feminin": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "bibliotheque-francois-villon|festival sido co eveil musical au son d un violon": {
@@ -2481,6 +2506,15 @@
 "early music"
 ]
 },
+"bibliotheque-herge|monte le son concert de gospel du groupe giwyze": {
+"genres": [
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"gospel"
+]
+},
 "bibliotheque-historique-de-la-ville-de-paris-bhvp|concert de harpe en novembre par le conservatoire mozart de paris centre": {
 "genres": [
 "classical"
@@ -2488,6 +2522,15 @@
 "is_music": true,
 "subgenres": [
 "harp recital"
+]
+},
+"bibliotheque-historique-de-la-ville-de-paris-bhvp|concert instrumental et vocal en novembre par le conservatoire mozart de paris centre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"harp"
 ]
 },
 "bibliotheque-historique-de-la-ville-de-paris-bhvp|concert la nouvelle athenes": {
@@ -2768,6 +2811,16 @@
 "is_music": true,
 "subgenres": [
 "contemporary blues"
+]
+},
+"cafe-de-la-danse|dominique fils aime": {
+"genres": [
+"jazz",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
 ]
 },
 "cafe-de-la-danse|dumbo gets mad": {
@@ -5022,6 +5075,14 @@
 "tribute band"
 ]
 },
+"file7|camille yembe morgan": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "file7|dans ton casque avec les fatals picards": {
 "genres": [
 "rock",
@@ -6327,6 +6388,14 @@
 "art rock",
 "post-punk"
 ]
+},
+"la-bellevilloise|movimiento": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-bellevilloise|mulaa joans": {
 "genres": [
@@ -10098,6 +10167,15 @@
 "ciné-concert"
 ]
 },
+"la-seine-musicale|le classique du dimanche la fugue enchantee": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque"
+]
+},
 "la-seine-musicale|le classique du dimanche pierre et le loup": {
 "genres": [
 "classical"
@@ -10310,6 +10388,14 @@
 "subgenres": [
 "techno"
 ]
+},
+"la-station|professeur promesses 38": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-station|punk issues 4 leona jacewska live lila ehja live": {
 "genres": [
@@ -13690,6 +13776,16 @@
 "singer-songwriter"
 ]
 },
+"mediatheque-james-baldwin|concert d emmanuelle parrenin monte le son": {
+"genres": [
+"folk",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"folk psychédélique"
+]
+},
 "mediatheque-james-baldwin|monte le son concert d emmanuelle parrenin": {
 "genres": [
 "folk"
@@ -13726,6 +13822,15 @@
 "subgenres": [
 "big band",
 "swing"
+]
+},
+"mediatheque-marguerite-duras|festival close up le petit fugitif cine concert": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"ciné-concert"
 ]
 },
 "mediatheque-marguerite-duras|gisele pape en concert": {
@@ -13765,6 +13870,11 @@
 "pop"
 ],
 "is_music": true,
+"subgenres": []
+},
+"mediatheque-marguerite-yourcenar|l oreille et la plume atelier musical": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "mediatheque-marguerite-yourcenar|l ours et son orchestre concert decouverte": {
@@ -13825,6 +13935,16 @@
 "subgenres": [
 "mandingue",
 "griot"
+]
+},
+"mediatheque-musicale-de-paris-christiane-eda-pierre|concert oumou diarra et yacouba kone cycle musiques et exils": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"mandingue"
 ]
 },
 "mediatheque-musicale-de-paris-christiane-eda-pierre|cycle musiques et exil nosferatu cine concert electronique live": {
@@ -17854,6 +17974,16 @@
 "vocal jazz"
 ]
 },
+"sunset-sunside|contrefacons": {
+"genres": [
+"jazz",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music"
+]
+},
 "sunset-sunside|d n e trio": {
 "genres": [
 "jazz",
@@ -19105,6 +19235,16 @@
 "modal jazz"
 ]
 },
+"sunset-sunside|sinfonia de carnaval": {
+"genres": [
+"pop",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"instrumental pop"
+]
+},
 "sunset-sunside|sofia levin quintet de piazzolla a nos jours": {
 "genres": [
 "latin",
@@ -19159,6 +19299,17 @@
 "is_music": true,
 "subgenres": [
 "gypsy jazz"
+]
+},
+"sunset-sunside|sylvain ransy trio ft arnaud dolmen zacharie abraham": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"creole rhythms",
+"swing"
 ]
 },
 "sunset-sunside|tango jazz quartet hommage a astor piazzolla": {
