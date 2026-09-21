@@ -1237,6 +1237,14 @@
 "brazilian"
 ]
 },
+"alhambra|levi sct": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "alhambra|mnek": {
 "genres": [
 "soul-rnb",
@@ -2333,6 +2341,15 @@
 "psychedelic rock"
 ]
 },
+"bataclan|u d o": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"heavy metal"
+]
+},
 "bataclan|verka serduchka band": {
 "genres": [
 "pop",
@@ -3357,10 +3374,27 @@
 "industrial"
 ]
 },
+"cirque-electrique|supersonique cie supercho zartan cosmyte pantomiman abiotiq": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": []
+},
 "cirque-electrique|syrano feat danielito bravo de tryo concert anniversaire premiere partie marin fauvel": {
 "genres": [
 "chanson",
 "reggae"
+],
+"is_music": true,
+"subgenres": [
+"slam"
+]
+},
+"cirque-electrique|syrano feat danielito bravo de tryo marin fauvel": {
+"genres": [
+"chanson"
 ],
 "is_music": true,
 "subgenres": [
@@ -4135,6 +4169,23 @@
 "harpsichord"
 ]
 },
+"eglise-saint-merry|5eme edition festival amities musicales internationales": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": []
+},
+"eglise-saint-merry|bertrand giraud piano et osb orchestre symphonique de bry sur marne xavier jacquet chef d orchestre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"piano concerto",
+"symphonic"
+]
+},
 "eglise-saint-merry|concours international de quatuor de saxophones grande finale 3 quatuors introduction par un soliste dmitry pinchuk": {
 "genres": [
 "classical"
@@ -4162,6 +4213,25 @@
 "subgenres": [
 "piano recital",
 "portuguese repertoire"
+]
+},
+"eglise-saint-merry|musique pour l ame carlos intrieri ricci piano soliste": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"piano recital",
+"film music"
+]
+},
+"eglise-saint-merry|sophia vaillant piano": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"piano recital"
 ]
 },
 "eglise-saint-merry|thierry maillard piano stephane belmondo bugle et trompette": {
@@ -5075,6 +5145,14 @@
 "tribute band"
 ]
 },
+"file7|cafe concert chloe antoniotti": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "file7|camille yembe morgan": {
 "genres": [
 "pop",
@@ -5106,6 +5184,13 @@
 "genres": [
 "jazz",
 "funk"
+],
+"is_music": true,
+"subgenres": []
+},
+"file7|juste shani": {
+"genres": [
+"pop"
 ],
 "is_music": true,
 "subgenres": []
@@ -7017,6 +7102,13 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|mischa": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|mulaa joans": {
 "genres": [
 "hip-hop",
@@ -8243,6 +8335,11 @@
 "folk"
 ],
 "is_music": true,
+"subgenres": []
+},
+"la-generale|le peu qu il reste la grande revue": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "la-generale|ras trio": {
@@ -11068,6 +11165,23 @@
 "vocal jazz"
 ]
 },
+"le-baiser-sale|tiss week la jam du lundi de francois constantin china moses": {
+"genres": [
+"jazz",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
+"le-baiser-sale|tiss week sidney": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-baiser-sale|tiss week za kweli": {
 "genres": [
 "soul-rnb",
@@ -13630,6 +13744,14 @@
 "nouvelle scène française"
 ]
 },
+"mains-d-oeuvres|aogiri fest 2": {
+"genres": [
+"metal",
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "mains-d-oeuvres|go muscle es 2": {
 "genres": [],
 "is_music": false,
@@ -14143,6 +14265,15 @@
 "subgenres": [
 "boom bap",
 "detroit rap"
+]
+},
+"new-morning|chicago blues festival": {
+"genres": [
+"blues"
+],
+"is_music": true,
+"subgenres": [
+"chicago blues"
 ]
 },
 "new-morning|chico chico": {
@@ -15584,6 +15715,35 @@
 "progressive metal"
 ]
 },
+"petit-bain|jeu 01 10 marty jjh potter": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
+"petit-bain|jeu 08 10 toma sidibe dakan live": {
+"genres": [
+"world",
+"afro",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"mandingue"
+]
+},
+"petit-bain|jeudi 15 10 mune concert": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
 "petit-bain|jozeph x jude aston": {
 "genres": [
 "soul-rnb",
@@ -15634,6 +15794,14 @@
 "shoegaze",
 "psychedelic rock"
 ]
+},
+"petit-bain|lucie shame x the reed conservation society": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": []
 },
 "petit-bain|marko hietala": {
 "genres": [
@@ -15769,6 +15937,16 @@
 "is_music": true,
 "subgenres": [
 "noise rock"
+]
+},
+"petit-bain|sam 10 10 loner deer release party": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"indie folk"
 ]
 },
 "petit-bain|self deception": {
@@ -15925,6 +16103,37 @@
 "is_music": true,
 "subgenres": [
 "roots"
+]
+},
+"petit-bain|ven 02 10 no monark sans roi release party buski": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
+"petit-bain|ven 09 10 louis arlette": {
+"genres": [
+"chanson",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"chanson à texte"
+]
+},
+"petit-bain|ven 25 09 ulysse mars desespoir des singes": {
+"genres": [
+"folk",
+"indie",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"indie folk",
+"chanson à texte"
 ]
 },
 "petit-bain|veronica fusaro": {
@@ -19551,6 +19760,16 @@
 "garage punk"
 ]
 },
+"supersonic|batbait cold beaches": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "supersonic|bathing suits au supersonic": {
 "genres": [
 "punk",
@@ -20862,6 +21081,26 @@
 "subgenres": [
 "baul",
 "indian devotional"
+]
+},
+"theatre-mandapa|retour aux sources tunisie": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic classical",
+"qanun"
+]
+},
+"theatre-mandapa|souffles du roseau j a jayant inde": {
+"genres": [
+"world",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"carnatic"
 ]
 },
 "theatre-municipal-berthelot-jean-guerrin|festival de guitare roland dyens in the skai": {
