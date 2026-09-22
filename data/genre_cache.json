@@ -2278,6 +2278,16 @@
 "singer-songwriter"
 ]
 },
+"bataclan|punch brothers": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"progressive bluegrass",
+"americana"
+]
+},
 "bataclan|rawayana": {
 "genres": [
 "latin",
@@ -2830,6 +2840,14 @@
 "contemporary blues"
 ]
 },
+"cafe-de-la-danse|daguerre en concert le 6 octobre 2026 au cafe de la danse": {
+"genres": [
+"chanson",
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "cafe-de-la-danse|dominique fils aime": {
 "genres": [
 "jazz",
@@ -2897,6 +2915,17 @@
 "is_music": true,
 "subgenres": [
 "guitar instrumental"
+]
+},
+"cafe-de-la-danse|hohnen ford": {
+"genres": [
+"folk",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter",
+"indie folk"
 ]
 },
 "cafe-de-la-danse|honne": {
@@ -3327,6 +3356,18 @@
 "retro pop"
 ]
 },
+"cirque-electrique|rayon chips presente les tigres du futur monolithe noir chipsy flip": {
+"genres": [
+"electro",
+"experimental",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"krautrock",
+"synth"
+]
+},
 "cirque-electrique|resist queer as fuck": {
 "genres": [
 "electro",
@@ -3382,6 +3423,16 @@
 "is_music": true,
 "subgenres": []
 },
+"cirque-electrique|syrano feat danielito bravo de tryo concert anniversaire marin fauvel": {
+"genres": [
+"chanson",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"chanson festive"
+]
+},
 "cirque-electrique|syrano feat danielito bravo de tryo concert anniversaire premiere partie marin fauvel": {
 "genres": [
 "chanson",
@@ -3409,6 +3460,17 @@
 "is_music": true,
 "subgenres": [
 "slam"
+]
+},
+"cirque-electrique|vinyloff records presente black lodge party zz z pamela tulpa chien fetide": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage punk",
+"psychedelic rock"
 ]
 },
 "cirque-romanes|las migas au cirque romanes": {
@@ -3941,6 +4003,16 @@
 "is_music": true,
 "subgenres": []
 },
+"duc-des-lombards|ruthie foster": {
+"genres": [
+"blues",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"gospel"
+]
+},
 "duc-des-lombards|tristan guillaume quintet": {
 "genres": [
 "jazz"
@@ -4077,6 +4149,16 @@
 "subgenres": [
 "baroque",
 "sacred choral"
+]
+},
+"eglise-notre-dame-des-otages|ensemble vocal cassius palmyre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"sacred music"
 ]
 },
 "eglise-notre-dame-du-travail|chants orthodoxes choeur russe de paris": {
@@ -4241,6 +4323,15 @@
 "is_music": true,
 "subgenres": [
 "piano jazz"
+]
+},
+"eglise-saint-paul-saint-louis|bath abbey choir": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"sacred choral"
 ]
 },
 "eglise-saint-philippe-du-roule|concert gospel helios a l eglise saint philippe du roule": {
@@ -5534,6 +5625,11 @@
 "is_music": false,
 "subgenres": []
 },
+"hotel-de-ville|bienvenue a paris": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "instants-chavires|circuit breath isabelle duthoit alen sinkauz nenad sinkauz marion coutts andy moor": {
 "genres": [
 "experimental"
@@ -6217,6 +6313,13 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|cafe concert djan": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-bellevilloise|cafe concert emigrante": {
 "genres": [
 "latin",
@@ -6246,6 +6349,15 @@
 "afrobeat"
 ]
 },
+"la-bellevilloise|cafe concert les freres dubz": {
+"genres": [
+"reggae"
+],
+"is_music": true,
+"subgenres": [
+"dub"
+]
+},
 "la-bellevilloise|cafe concert ma sane": {
 "genres": [
 "world",
@@ -6268,6 +6380,14 @@
 "genres": [
 "world",
 "latin"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-bellevilloise|cafe concert saligo": {
+"genres": [
+"folk",
+"chanson"
 ],
 "is_music": true,
 "subgenres": []
@@ -9059,6 +9179,18 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-maroquinerie|feldup": {
+"genres": [
+"indie",
+"pop",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"bedroom pop",
+"art pop"
+]
 },
 "la-maroquinerie|felhur andro": {
 "genres": [
@@ -12426,6 +12558,16 @@
 "gypsy jazz"
 ]
 },
+"le-son-de-la-terre|lento": {
+"genres": [
+"jazz",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"ambient jazz"
+]
+},
 "le-son-de-la-terre|maddy orsinet quartet": {
 "genres": [
 "jazz",
@@ -13455,6 +13597,14 @@
 "cold wave"
 ]
 },
+"le-truskel|falvino tati and the chronicle": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-truskel|irene jonas elephant": {
 "genres": [
 "indie",
@@ -13463,6 +13613,16 @@
 "is_music": true,
 "subgenres": [
 "garage rock"
+]
+},
+"le-truskel|ordre public danny redrum": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage punk"
 ]
 },
 "le-truskel|pop rock electro": {
@@ -14492,6 +14652,16 @@
 "modal jazz"
 ]
 },
+"new-morning|jean jacques milteau": {
+"genres": [
+"blues",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"harmonica blues"
+]
+},
 "new-morning|jeru the damaja": {
 "genres": [
 "hip-hop"
@@ -15063,6 +15233,14 @@
 "progressive metal"
 ]
 },
+"olympia|assistez au prix josephine 2026": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "olympia|bakian chante aznavour": {
 "genres": [
 "chanson"
@@ -15454,6 +15632,17 @@
 "is_music": true,
 "subgenres": [
 "ukrainian folk"
+]
+},
+"petit-bain|carlton jumel smith the soul seeders": {
+"genres": [
+"soul-rnb",
+"funk"
+],
+"is_music": true,
+"subgenres": [
+"deep soul",
+"northern soul"
 ]
 },
 "petit-bain|changement de salle humanity s last breath": {
@@ -16377,6 +16566,11 @@
 "garage punk",
 "pub rock"
 ]
+},
+"point-ephemere|ceramique au point": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "point-ephemere|cq wrestling the 113": {
 "genres": [],
@@ -17522,6 +17716,14 @@
 "vinyl dj set"
 ]
 },
+"popup|tia gordon": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|twin blade vickie cherie": {
 "genres": [
 "rock"
@@ -17677,6 +17879,16 @@
 "subgenres": [
 "chamber music",
 "string sextet"
+]
+},
+"salle-erard|shakespeare s songs": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"early music"
 ]
 },
 "salle-erard|shakespeare songs": {
@@ -19831,6 +20043,17 @@
 "bedroom pop"
 ]
 },
+"supersonic|carsick carne bye bye baine": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-hardcore",
+"noise rock"
+]
+},
 "supersonic|club brat": {
 "genres": [
 "punk",
@@ -20302,6 +20525,16 @@
 "subgenres": [
 "surf rock",
 "psychedelic"
+]
+},
+"supersonic|marseille tapage super leone": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"britpop"
 ]
 },
 "supersonic|marshall sonic nights daytime tv jelly dive electric spanish": {
