@@ -1,8 +1,20 @@
 {
 "accor-arena": {
 "digest": "fa111a4ef879578c5fbd07dd458bd797eba5a655",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
+{
+"title": "NBA Paris Games 2027",
+"date": "2027-01-14",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
 {
 "title": "Internationaux de France de Gymnastique",
 "date": "2026-09-26",
@@ -37,7 +49,7 @@
 "hip-hop"
 ],
 "subgenres": [
-"cloud rap"
+"trap"
 ],
 "artists": [
 "A$AP Rocky"
@@ -54,7 +66,7 @@
 "genres": [],
 "subgenres": [],
 "artists": [],
-"is_music": true,
+"is_music": false,
 "sold_out": false
 },
 {
@@ -115,24 +127,12 @@
 ],
 "is_music": true,
 "sold_out": false
-},
-{
-"title": "NBA Paris Games 2027",
-"date": "2027-01-14",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
 }
 ]
 },
 "olympia": {
-"digest": "7ec479c04b798e27df2dc78c8bb054562582470b",
-"today": "2026-09-22",
+"digest": "ed0edad65074223468e380b7cc2e1612c118db8f",
+"today": "2026-09-23",
 "events": [
 {
 "title": "AGNES OBEL",
@@ -141,11 +141,13 @@
 "url": null,
 "price": null,
 "genres": [
-"folk",
-"indie"
+"indie",
+"pop",
+"classical"
 ],
 "subgenres": [
-"chamber pop"
+"chamber pop",
+"neoclassical"
 ],
 "artists": [
 "Agnes Obel"
@@ -160,11 +162,13 @@
 "url": null,
 "price": null,
 "genres": [
-"folk",
-"indie"
+"indie",
+"pop",
+"classical"
 ],
 "subgenres": [
-"chamber pop"
+"chamber pop",
+"neoclassical"
 ],
 "artists": [
 "Agnes Obel"
@@ -180,11 +184,12 @@
 "price": null,
 "genres": [
 "indie",
-"folk",
-"electro"
+"electro",
+"folk"
 ],
 "subgenres": [
-"ambient pop"
+"ambient",
+"downtempo"
 ],
 "artists": [
 "RY X"
@@ -202,7 +207,8 @@
 "electro"
 ],
 "subgenres": [
-"downtempo"
+"techno",
+"live electronica"
 ],
 "artists": [
 "Thylacine"
@@ -220,7 +226,8 @@
 "electro"
 ],
 "subgenres": [
-"downtempo"
+"techno",
+"live electronica"
 ],
 "artists": [
 "Thylacine"
@@ -356,7 +363,7 @@
 "chanson"
 ],
 "subgenres": [
-"tribute"
+"hommage"
 ],
 "artists": [
 "Bakian"
@@ -413,7 +420,8 @@
 "folk"
 ],
 "subgenres": [
-"catalan song"
+"catalan song",
+"mediterranean"
 ],
 "artists": [
 "Maria del Mar Bonet"
@@ -436,12 +444,31 @@
 ],
 "is_music": true,
 "sold_out": false
+},
+{
+"title": "Pomme",
+"date": "2027-03-04",
+"time": "20h00",
+"url": null,
+"price": null,
+"genres": [
+"folk",
+"chanson"
+],
+"subgenres": [
+"pop française"
+],
+"artists": [
+"Pomme"
+],
+"is_music": true,
+"sold_out": false
 }
 ]
 },
 "zenith-paris": {
-"digest": "f84574af1c5987fc73aed4465085c622166c47ff",
-"today": "2026-09-22",
+"digest": "db172d618337c8afe206e6579ca5834f52179474",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Taratata Fête le Zénith - 1984",
@@ -454,11 +481,11 @@
 "rock"
 ],
 "subgenres": [
-"variété"
+"variété française"
 ],
 "artists": [],
 "is_music": true,
-"sold_out": true
+"sold_out": false
 },
 {
 "title": "Chily",
@@ -483,8 +510,8 @@
 "url": null,
 "price": null,
 "genres": [
-"hip-hop",
-"latin"
+"latin",
+"hip-hop"
 ],
 "subgenres": [
 "trap argentino"
@@ -537,7 +564,7 @@
 "rock"
 ],
 "subgenres": [
-"post-rock"
+"indie rock"
 ],
 "artists": [],
 "is_music": true,
@@ -552,9 +579,7 @@
 "genres": [
 "pop"
 ],
-"subgenres": [
-"variété"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -615,7 +640,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop"
+"pop",
+"rock"
 ],
 "subgenres": [
 "musique chrétienne"
@@ -651,7 +677,8 @@
 "metal"
 ],
 "subgenres": [
-"melodic death metal"
+"melodic death metal",
+"viking metal"
 ],
 "artists": [],
 "is_music": true,
@@ -699,9 +726,7 @@
 "pop",
 "folk"
 ],
-"subgenres": [
-"folk pop"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -714,11 +739,10 @@
 "price": null,
 "genres": [
 "hip-hop",
-"pop"
+"soul-rnb"
 ],
 "subgenres": [
-"k-pop",
-"k-r&b"
+"k-pop"
 ],
 "artists": [],
 "is_music": true,
@@ -775,7 +799,8 @@
 "url": null,
 "price": null,
 "genres": [
-"world"
+"world",
+"soul-rnb"
 ],
 "subgenres": [
 "gospel"
@@ -792,7 +817,7 @@
 "price": null,
 "genres": [
 "funk",
-"soul-rnb"
+"electro"
 ],
 "subgenres": [
 "modern funk"
@@ -824,8 +849,7 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"metal"
+"rock"
 ],
 "subgenres": [
 "hard rock"
@@ -904,9 +928,7 @@
 "time": null,
 "url": null,
 "price": null,
-"genres": [
-"hip-hop"
-],
+"genres": [],
 "subgenres": [],
 "artists": [],
 "is_music": true,
@@ -938,9 +960,7 @@
 "pop",
 "soul-rnb"
 ],
-"subgenres": [
-"r&b français"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -954,9 +974,7 @@
 "genres": [
 "pop"
 ],
-"subgenres": [
-"boy band"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -972,7 +990,7 @@
 "rock"
 ],
 "subgenres": [
-"post-punk"
+"post-punk revival"
 ],
 "artists": [],
 "is_music": true,
@@ -1050,9 +1068,7 @@
 "genres": [
 "pop"
 ],
-"subgenres": [
-"ukrainian pop"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1083,9 +1099,7 @@
 "funk",
 "pop"
 ],
-"subgenres": [
-"french funk"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1114,7 +1128,7 @@
 "price": null,
 "genres": [
 "pop",
-"chanson"
+"funk"
 ],
 "subgenres": [],
 "artists": [],
@@ -1128,12 +1142,12 @@
 "url": null,
 "price": null,
 "genres": [
-"blues",
-"latin"
+"latin",
+"folk"
 ],
 "subgenres": [
-"instrumental guitar",
-"desert blues"
+"desert blues",
+"instrumental"
 ],
 "artists": [],
 "is_music": true,
@@ -1146,11 +1160,11 @@
 "url": null,
 "price": null,
 "genres": [
-"indie",
-"pop"
+"indie"
 ],
 "subgenres": [
-"bedroom pop"
+"bedroom pop",
+"shoegaze"
 ],
 "artists": [],
 "is_music": true,
@@ -1165,9 +1179,7 @@
 "genres": [
 "rock"
 ],
-"subgenres": [
-"classic rock"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1179,11 +1191,10 @@
 "url": null,
 "price": null,
 "genres": [
-"rock"
+"rock",
+"punk"
 ],
-"subgenres": [
-"punk rock"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1198,7 +1209,7 @@
 "classical"
 ],
 "subgenres": [
-"musique de jeu vidéo"
+"video game music"
 ],
 "artists": [],
 "is_music": true,
@@ -1258,8 +1269,12 @@
 "time": null,
 "url": null,
 "price": null,
-"genres": [],
-"subgenres": [],
+"genres": [
+"hip-hop"
+],
+"subgenres": [
+"rap français"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1274,7 +1289,7 @@
 "classical"
 ],
 "subgenres": [
-"musique de film"
+"film music"
 ],
 "artists": [],
 "is_music": true,
@@ -1303,8 +1318,8 @@
 "url": null,
 "price": null,
 "genres": [
-"world",
-"afro"
+"afro",
+"world"
 ],
 "subgenres": [],
 "artists": [],
@@ -1470,12 +1485,10 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
-"subgenres": [
-"variété"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1539,7 +1552,7 @@
 "world"
 ],
 "subgenres": [
-"techno"
+"techno orientale"
 ],
 "artists": [],
 "is_music": true,
@@ -1554,9 +1567,7 @@
 "genres": [
 "pop"
 ],
-"subgenres": [
-"indie pop"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1571,7 +1582,7 @@
 "classical"
 ],
 "subgenres": [
-"musique de jeu vidéo"
+"video game music"
 ],
 "artists": [],
 "is_music": true,
@@ -1599,9 +1610,7 @@
 "indie",
 "pop"
 ],
-"subgenres": [
-"indie pop"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1617,7 +1626,7 @@
 "indie"
 ],
 "subgenres": [
-"garage rock"
+"alt rock"
 ],
 "artists": [],
 "is_music": true,
@@ -1631,7 +1640,7 @@
 "price": null,
 "genres": [
 "pop",
-"soul-rnb"
+"indie"
 ],
 "subgenres": [
 "bedroom pop"
@@ -1647,11 +1656,9 @@
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"afro"
+"jazz"
 ],
 "subgenres": [
-"uk jazz",
 "afrobeat"
 ],
 "artists": [],
@@ -1708,8 +1715,7 @@
 "url": null,
 "price": null,
 "genres": [
-"chanson",
-"world"
+"chanson"
 ],
 "subgenres": [],
 "artists": [],
@@ -1741,7 +1747,7 @@
 "electro"
 ],
 "subgenres": [
-"synth pop"
+"synth-pop"
 ],
 "artists": [],
 "is_music": true,
@@ -1772,7 +1778,7 @@
 "price": null,
 "genres": [
 "funk",
-"soul-rnb"
+"pop"
 ],
 "subgenres": [],
 "artists": [],
@@ -1849,8 +1855,7 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"metal"
+"rock"
 ],
 "subgenres": [
 "hard rock"
@@ -1885,7 +1890,7 @@
 "classical"
 ],
 "subgenres": [
-"musique de film"
+"film music"
 ],
 "artists": [],
 "is_music": true,
@@ -1901,9 +1906,7 @@
 "rock",
 "blues"
 ],
-"subgenres": [
-"blues rock"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -1978,7 +1981,10 @@
 "time": null,
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"pop",
+"rock"
+],
 "subgenres": [],
 "artists": [],
 "is_music": true,
@@ -2011,7 +2017,7 @@
 "electro"
 ],
 "subgenres": [
-"techno brass"
+"techno marching band"
 ],
 "artists": [],
 "is_music": true,
@@ -2039,12 +2045,10 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"indie"
+"rock"
 ],
 "subgenres": [
-"alt rock",
-"power pop"
+"alt rock"
 ],
 "artists": [],
 "is_music": true,
@@ -2075,7 +2079,7 @@
 "pop"
 ],
 "subgenres": [
-"pop punk"
+"alt rock"
 ],
 "artists": [],
 "is_music": true,
@@ -2088,8 +2092,7 @@
 "url": null,
 "price": null,
 "genres": [
-"afro",
-"world"
+"afro"
 ],
 "subgenres": [
 "zoblazo"
@@ -2182,11 +2185,9 @@
 "price": null,
 "genres": [
 "rock",
-"pop"
+"chanson"
 ],
-"subgenres": [
-"tribute"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -2210,12 +2211,10 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
-"subgenres": [
-"variété"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -2255,7 +2254,7 @@
 },
 "la-seine-musicale": {
 "digest": "e793cc83c03b5cfe7263dfd7488e028e646c3da7",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "JOSS STONE - Merry Christmas, Love Tour",
@@ -2267,9 +2266,7 @@
 "soul-rnb",
 "funk"
 ],
-"subgenres": [
-"christmas"
-],
+"subgenres": [],
 "artists": [
 "Joss Stone"
 ],
@@ -2287,7 +2284,8 @@
 "blues"
 ],
 "subgenres": [
-"blufunk"
+"blufunk",
+"symphonic"
 ],
 "artists": [
 "Keziah Jones"
@@ -2460,23 +2458,7 @@
 "classical"
 ],
 "subgenres": [
-"symphonic"
-],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "Schéhérazade",
-"date": "2026-10-17",
-"time": "20:00",
-"url": null,
-"price": null,
-"genres": [
-"classical"
-],
-"subgenres": [
-"symphonic"
+"romantic"
 ],
 "artists": [],
 "is_music": true,
@@ -2497,6 +2479,22 @@
 "sold_out": true
 },
 {
+"title": "Schéhérazade",
+"date": "2026-10-17",
+"time": "20:00",
+"url": null,
+"price": null,
+"genres": [
+"classical"
+],
+"subgenres": [
+"symphonic"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
 "title": "HAVASI",
 "date": "2026-10-18",
 "time": null,
@@ -2506,7 +2504,8 @@
 "classical"
 ],
 "subgenres": [
-"piano crossover"
+"piano",
+"crossover"
 ],
 "artists": [
 "Havasi"
@@ -2542,7 +2541,7 @@
 "price": null,
 "genres": [
 "jazz",
-"chanson"
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -2560,7 +2559,7 @@
 "price": null,
 "genres": [
 "jazz",
-"chanson"
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -2607,20 +2606,6 @@
 "sold_out": false
 },
 {
-"title": "L'Atelier de Jean-François",
-"date": "2026-11-01",
-"time": null,
-"url": null,
-"price": "Gratuit",
-"genres": [
-"classical"
-],
-"subgenres": [],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
 "title": "La Cage aux folles",
 "date": "2026-11-02",
 "time": null,
@@ -2642,6 +2627,180 @@
 "subgenres": [],
 "artists": [],
 "is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-04",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-05",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-06",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-07",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-08",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-09",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-10",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-11",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-12",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-13",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Cage aux folles",
+"date": "2026-11-14",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "L'Atelier de Jean-François",
+"date": "2026-11-01",
+"time": null,
+"url": null,
+"price": "Gratuit",
+"genres": [
+"classical"
+],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "L'Atelier de Jean-François",
+"date": "2027-02-14",
+"time": null,
+"url": null,
+"price": "Gratuit",
+"genres": [
+"classical"
+],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "L'Atelier de Jean-François",
+"date": "2027-04-18",
+"time": null,
+"url": null,
+"price": "Gratuit",
+"genres": [
+"classical"
+],
+"subgenres": [],
+"artists": [],
+"is_music": true,
 "sold_out": false
 },
 {
@@ -2673,8 +2832,8 @@
 "sold_out": false
 },
 {
-"title": "La Cage aux folles",
-"date": "2026-11-04",
+"title": "Panique en régie !",
+"date": "2026-11-24",
 "time": null,
 "url": null,
 "price": null,
@@ -2703,59 +2862,23 @@
 "sold_out": false
 },
 {
-"title": "La Cage aux folles",
-"date": "2026-11-05",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
 "title": "Take 6",
 "date": "2026-11-05",
 "time": "20:30",
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"soul-rnb"
+"soul-rnb",
+"jazz"
 ],
 "subgenres": [
-"a cappella",
-"gospel"
+"gospel",
+"a cappella"
 ],
 "artists": [
 "Take 6"
 ],
 "is_music": true,
-"sold_out": false
-},
-{
-"title": "La Cage aux folles",
-"date": "2026-11-06",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "La Cage aux folles",
-"date": "2026-11-07",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
 "sold_out": false
 },
 {
@@ -2786,18 +2909,6 @@
 ],
 "artists": [],
 "is_music": true,
-"sold_out": false
-},
-{
-"title": "La Cage aux folles",
-"date": "2026-11-08",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
 "sold_out": false
 },
 {
@@ -2833,30 +2944,6 @@
 "sold_out": false
 },
 {
-"title": "La Cage aux folles",
-"date": "2026-11-09",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "La Cage aux folles",
-"date": "2026-11-10",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
 "title": "Samara Joy",
 "date": "2026-11-10",
 "time": "20:30",
@@ -2875,30 +2962,6 @@
 "sold_out": false
 },
 {
-"title": "La Cage aux folles",
-"date": "2026-11-11",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "La Cage aux folles",
-"date": "2026-11-12",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
 "title": "Schumann / Mendelssohn",
 "date": "2026-11-12",
 "time": null,
@@ -2915,30 +2978,6 @@
 "sold_out": false
 },
 {
-"title": "La Cage aux folles",
-"date": "2026-11-13",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "La Cage aux folles",
-"date": "2026-11-14",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
 "title": "Schumann / Mendelssohn",
 "date": "2026-11-14",
 "time": null,
@@ -2950,6 +2989,20 @@
 "subgenres": [
 "romantic"
 ],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Beethoven et la nature",
+"date": "2026-11-15",
+"time": "10:30",
+"url": null,
+"price": null,
+"genres": [
+"classical"
+],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -2966,20 +3019,6 @@
 "subgenres": [
 "symphonic"
 ],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "Beethoven et la nature",
-"date": "2026-11-15",
-"time": "10:30",
-"url": null,
-"price": null,
-"genres": [
-"classical"
-],
-"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -3015,18 +3054,6 @@
 ],
 "artists": [],
 "is_music": true,
-"sold_out": false
-},
-{
-"title": "Panique en régie !",
-"date": "2026-11-24",
-"time": null,
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
 "sold_out": false
 },
 {
@@ -3196,8 +3223,8 @@
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"classical"
+"classical",
+"jazz"
 ],
 "subgenres": [
 "opera"
@@ -3237,8 +3264,8 @@
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"classical"
+"classical",
+"jazz"
 ],
 "subgenres": [
 "opera"
@@ -3257,7 +3284,7 @@
 "classical"
 ],
 "subgenres": [
-"ciné-concert",
+"musical",
 "film music"
 ],
 "artists": [],
@@ -3274,7 +3301,7 @@
 "classical"
 ],
 "subgenres": [
-"ciné-concert",
+"musical",
 "film music"
 ],
 "artists": [],
@@ -3291,23 +3318,9 @@
 "classical"
 ],
 "subgenres": [
-"ciné-concert",
+"musical",
 "film music"
 ],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "L'Atelier de Jean-François",
-"date": "2027-02-14",
-"time": null,
-"url": null,
-"price": "Gratuit",
-"genres": [
-"classical"
-],
-"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -3433,7 +3446,9 @@
 "jazz",
 "pop"
 ],
-"subgenres": [],
+"subgenres": [
+"standards"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -3498,22 +3513,8 @@
 "jazz"
 ],
 "subgenres": [
-"vocal jazz"
+"standards"
 ],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "L'Atelier de Jean-François",
-"date": "2027-04-18",
-"time": null,
-"url": null,
-"price": "Gratuit",
-"genres": [
-"classical"
-],
-"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -3753,26 +3754,9 @@
 ]
 },
 "alhambra": {
-"digest": "ffa6276224b96af2beb13d8d33d3599e192ed80f",
-"today": "2026-09-22",
+"digest": "77af149a08d7115542148bcd9d910fde080c9ec4",
+"today": "2026-09-23",
 "events": [
-{
-"title": "VTOROI KA",
-"date": "2026-09-22",
-"time": null,
-"url": null,
-"price": null,
-"genres": [
-"rock",
-"punk"
-],
-"subgenres": [
-"post-punk"
-],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
 {
 "title": "BLACK STONE CHERRY",
 "date": "2026-09-23",
@@ -3786,7 +3770,9 @@
 "southern rock",
 "hard rock"
 ],
-"artists": [],
+"artists": [
+"Black Stone Cherry"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3802,7 +3788,9 @@
 "subgenres": [
 "progressive rock"
 ],
-"artists": [],
+"artists": [
+"IQ"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3819,7 +3807,9 @@
 "americana",
 "old-time"
 ],
-"artists": [],
+"artists": [
+"Rhiannon Giddens"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3849,7 +3839,9 @@
 "visual kei",
 "symphonic metal"
 ],
-"artists": [],
+"artists": [
+"Kamijo"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3866,7 +3858,9 @@
 "post-metal",
 "sludge"
 ],
-"artists": [],
+"artists": [
+"Amenra"
+],
 "is_music": true,
 "sold_out": true
 },
@@ -3877,13 +3871,15 @@
 "url": null,
 "price": null,
 "genres": [
-"world",
-"folk"
+"world"
 ],
 "subgenres": [
+"mpb",
 "brazilian"
 ],
-"artists": [],
+"artists": [
+"Leo Middea"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3897,7 +3893,9 @@
 "indie"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Father of Peace"
+],
 "is_music": true,
 "sold_out": true
 },
@@ -3908,13 +3906,15 @@
 "url": null,
 "price": null,
 "genres": [
-"world",
-"folk"
+"world"
 ],
 "subgenres": [
+"mpb",
 "brazilian"
 ],
-"artists": [],
+"artists": [
+"Leo Middea"
+],
 "is_music": true,
 "sold_out": true
 },
@@ -3930,7 +3930,9 @@
 "subgenres": [
 "neoclassical piano"
 ],
-"artists": [],
+"artists": [
+"Joep Beving"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3944,10 +3946,10 @@
 "indie",
 "rock"
 ],
-"subgenres": [
-"alt rock"
+"subgenres": [],
+"artists": [
+"Paris Jackson"
 ],
-"artists": [],
 "is_music": true,
 "sold_out": true
 },
@@ -3974,10 +3976,11 @@
 "latin"
 ],
 "subgenres": [
-"rock uruguayo",
-"ska"
+"rock uruguayo"
 ],
-"artists": [],
+"artists": [
+"No Te Va Gustar"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -3992,7 +3995,9 @@
 "indie"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Pomplamoose"
+],
 "is_music": true,
 "sold_out": true
 },
@@ -4006,10 +4011,10 @@
 "pop",
 "electro"
 ],
-"subgenres": [
-"electropop"
+"subgenres": [],
+"artists": [
+"Käärijä"
 ],
-"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -4033,7 +4038,9 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Lee Harris"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4048,7 +4055,9 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Theo Juice"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4064,7 +4073,9 @@
 "subgenres": [
 "k-pop"
 ],
-"artists": [],
+"artists": [
+"Tabber"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4081,7 +4092,9 @@
 "subgenres": [
 "blues rock"
 ],
-"artists": [],
+"artists": [
+"Walter Trout"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4095,9 +4108,11 @@
 "folk"
 ],
 "subgenres": [
-"chamber folk"
+"baroque folk"
 ],
-"artists": [],
+"artists": [
+"Yaelokre"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4112,7 +4127,9 @@
 "rock"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Lenaïg"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4126,7 +4143,9 @@
 "indie"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Schur"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4143,7 +4162,9 @@
 "progressive rock",
 "tribute"
 ],
-"artists": [],
+"artists": [
+"The Watch"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4161,7 +4182,10 @@
 "hardcore",
 "deathgrind"
 ],
-"artists": [],
+"artists": [
+"Get the Shot",
+"Benighted"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4177,7 +4201,9 @@
 "subgenres": [
 "k-pop"
 ],
-"artists": [],
+"artists": [
+"Big Ocean"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4191,10 +4217,11 @@
 "metal"
 ],
 "subgenres": [
-"hardcore",
-"beatdown"
+"hardcore beatdown"
 ],
-"artists": [],
+"artists": [
+"Guilt Trip"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4204,11 +4231,11 @@
 "time": null,
 "url": null,
 "price": null,
-"genres": [
-"metal"
-],
+"genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Nicko McBrain"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4220,12 +4247,15 @@
 "price": null,
 "genres": [
 "pop",
+"rock",
 "latin"
 ],
 "subgenres": [
 "indie mexicano"
 ],
-"artists": [],
+"artists": [
+"Ed Maverick"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4241,7 +4271,9 @@
 "subgenres": [
 "k-pop"
 ],
-"artists": [],
+"artists": [
+"Can't Be Blue"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4257,23 +4289,9 @@
 "subgenres": [
 "indie folk"
 ],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "TAKUYA KURODA",
-"date": "2026-11-13",
-"time": null,
-"url": null,
-"price": null,
-"genres": [
-"jazz"
+"artists": [
+"Amistat"
 ],
-"subgenres": [
-"jazz-funk"
-],
-"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -4287,9 +4305,30 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Haute",
+"Freddy"
+],
 "is_music": true,
 "sold_out": true
+},
+{
+"title": "TAKUYA KURODA",
+"date": "2026-11-13",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"jazz"
+],
+"subgenres": [
+"jazz funk"
+],
+"artists": [
+"Takuya Kuroda"
+],
+"is_music": true,
+"sold_out": false
 },
 {
 "title": "WALLS OF JERICHO",
@@ -4305,7 +4344,9 @@
 "metalcore",
 "hardcore"
 ],
-"artists": [],
+"artists": [
+"Walls of Jericho"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4320,9 +4361,11 @@
 "pop"
 ],
 "subgenres": [
-"electropop"
+"electronic rock"
 ],
-"artists": [],
+"artists": [
+"Neoni"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4338,7 +4381,9 @@
 "subgenres": [
 "heartland rock"
 ],
-"artists": [],
+"artists": [
+"The Wallflowers"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4350,7 +4395,9 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Trevor Wallace"
+],
 "is_music": false,
 "sold_out": false
 },
@@ -4367,7 +4414,10 @@
 "subgenres": [
 "ambient jazz"
 ],
-"artists": [],
+"artists": [
+"Sam Gendel",
+"Sam Wilkes"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4382,9 +4432,11 @@
 "rock"
 ],
 "subgenres": [
-"skate punk"
+"pop punk"
 ],
-"artists": [],
+"artists": [
+"Zebrahead"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4400,7 +4452,9 @@
 "subgenres": [
 "rap français"
 ],
-"artists": [],
+"artists": [
+"Satoshi"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4414,7 +4468,7 @@
 "chanson"
 ],
 "subgenres": [
-"variété française"
+"hommage"
 ],
 "artists": [],
 "is_music": true,
@@ -4427,12 +4481,15 @@
 "url": null,
 "price": null,
 "genres": [
-"metal"
+"metal",
+"rock"
 ],
 "subgenres": [
 "progressive metal"
 ],
-"artists": [],
+"artists": [
+"Soen"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4449,7 +4506,9 @@
 "grime",
 "uk rap"
 ],
-"artists": [],
+"artists": [
+"Tinie Tempah"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4462,10 +4521,10 @@
 "genres": [
 "hip-hop"
 ],
-"subgenres": [
-"rap français"
+"subgenres": [],
+"artists": [
+"Stanislas"
 ],
-"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -4479,10 +4538,10 @@
 "pop",
 "soul-rnb"
 ],
-"subgenres": [
-"dance-pop"
+"subgenres": [],
+"artists": [
+"MNEK"
 ],
-"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -4495,9 +4554,7 @@
 "genres": [
 "latin"
 ],
-"subgenres": [
-"spectacle musical"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -4513,10 +4570,11 @@
 "funk"
 ],
 "subgenres": [
-"neo-soul",
 "spoken word"
 ],
-"artists": [],
+"artists": [
+"Tank and the Bangas"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4530,10 +4588,10 @@
 "soul-rnb",
 "jazz"
 ],
-"subgenres": [
-"neo-soul"
+"subgenres": [],
+"artists": [
+"Gotts Street Park"
 ],
-"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -4548,9 +4606,12 @@
 "indie"
 ],
 "subgenres": [
-"indie pop"
+"baroque pop"
 ],
-"artists": [],
+"artists": [
+"Tahiti 80",
+"Maxwell Farrington & Le SuperHomard"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4561,11 +4622,12 @@
 "url": null,
 "price": null,
 "genres": [
-"soul-rnb",
-"pop"
+"soul-rnb"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Sekou"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4591,7 +4653,9 @@
 "indie"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"levi.sct"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4605,10 +4669,10 @@
 "pop",
 "world"
 ],
-"subgenres": [
-"portuguese pop"
+"subgenres": [],
+"artists": [
+"Carolina Deslandes"
 ],
-"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -4619,13 +4683,14 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"metal"
+"rock"
 ],
 "subgenres": [
-"alt rock"
+"alternative metal"
 ],
-"artists": [],
+"artists": [
+"Dead Poet Society"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4640,9 +4705,30 @@
 "pop"
 ],
 "subgenres": [
-"art pop"
+"art rock"
 ],
-"artists": [],
+"artists": [
+"Joan As Police Woman"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "ADAM GREEN",
+"date": "2027-02-18",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"folk",
+"indie"
+],
+"subgenres": [
+"anti-folk"
+],
+"artists": [
+"Adam Green"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4656,7 +4742,9 @@
 "metal"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Revnoir"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4671,7 +4759,9 @@
 "chanson"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Pauline Croze"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4688,7 +4778,9 @@
 "subgenres": [
 "singer-songwriter"
 ],
-"artists": [],
+"artists": [
+"Kate Voegele"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4705,7 +4797,9 @@
 "nu-metal",
 "alt rock"
 ],
-"artists": [],
+"artists": [
+"South Arcade"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4722,7 +4816,9 @@
 "subgenres": [
 "garage rock"
 ],
-"artists": [],
+"artists": [
+"Johnny Mafia"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4736,7 +4832,9 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Manon Lisa"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4747,14 +4845,15 @@
 "url": null,
 "price": null,
 "genres": [
-"folk",
 "jazz",
-"pop"
+"folk"
 ],
 "subgenres": [
 "singer-songwriter"
 ],
-"artists": [],
+"artists": [
+"Sophie Hunger"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4768,15 +4867,17 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"ESTL"
+],
 "is_music": true,
 "sold_out": false
 }
 ]
 },
 "cabaret-sauvage": {
-"digest": "aedca6714a97f52965008695434b019f72945516",
-"today": "2026-09-22",
+"digest": "17b9f2cda0ba5db36ceba64e5650aba91fe81e56",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Sidi Bemol",
@@ -4790,7 +4891,7 @@
 ],
 "subgenres": [
 "chaabi",
-"gasba rock"
+"kabyle"
 ],
 "artists": [
 "Sidi Bemol"
@@ -4890,9 +4991,15 @@
 "time": null,
 "url": null,
 "price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
+"genres": [
+"metal"
+],
+"subgenres": [
+"doom metal"
+],
+"artists": [
+"The Prophecy"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -4935,7 +5042,7 @@
 "world"
 ],
 "subgenres": [
-"rumba"
+"chanson française"
 ],
 "artists": [
 "Zoufris Maracas"
@@ -4954,7 +5061,7 @@
 "world"
 ],
 "subgenres": [
-"rumba"
+"chanson française"
 ],
 "artists": [
 "Zoufris Maracas"
@@ -4990,7 +5097,7 @@
 "electro"
 ],
 "subgenres": [
-"deep house",
+"house",
 "live electronics"
 ],
 "artists": [
@@ -5045,11 +5152,11 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"blues"
+"rock"
 ],
 "subgenres": [
-"rock mexicano"
+"rock mexicano",
+"blues rock"
 ],
 "artists": [
 "El Tri"
@@ -5067,7 +5174,7 @@
 "hip-hop"
 ],
 "subgenres": [
-"k-hip hop"
+"k-hip-hop"
 ],
 "artists": [
 "Lee Young Ji"
@@ -5082,7 +5189,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop"
+"pop",
+"world"
 ],
 "subgenres": [
 "turkish pop"
@@ -5117,8 +5225,8 @@
 "soul-rnb"
 ],
 "subgenres": [
-"neo-soul",
-"gospel"
+"gospel",
+"neo-soul"
 ],
 "artists": [
 "PJ Morton"
@@ -5195,7 +5303,7 @@
 "price": null,
 "genres": [
 "world",
-"rock"
+"blues"
 ],
 "subgenres": [
 "touareg blues"
@@ -5257,6 +5365,27 @@
 "sold_out": false
 },
 {
+"title": "¡Frappé Sauvage w/ Jamie 3:26, Young Pulse & Danou P aka Mystic Freaks?",
+"date": "2026-11-06",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"house",
+"disco"
+],
+"artists": [
+"Jamie 3:26",
+"Young Pulse",
+"Danou P"
+],
+"is_music": true,
+"sold_out": false
+},
+{
 "title": "ALL(H)OURS",
 "date": "2026-11-10",
 "time": null,
@@ -5285,8 +5414,7 @@
 "punk"
 ],
 "subgenres": [
-"rave",
-"hardbass"
+"rave"
 ],
 "artists": [
 "Little Big"
@@ -5322,10 +5450,10 @@
 "hip-hop"
 ],
 "subgenres": [
-"k-hip hop"
+"k-hip-hop"
 ],
 "artists": [
-"pH-1",
+"pH1",
 "lIlBOI",
 "Woodie Gochild"
 ],
@@ -5339,8 +5467,7 @@
 "url": null,
 "price": null,
 "genres": [
-"world",
-"electro"
+"world"
 ],
 "subgenres": [
 "arabic fusion"
@@ -5359,10 +5486,11 @@
 "url": null,
 "price": null,
 "genres": [
-"punk"
+"punk",
+"world"
 ],
 "subgenres": [
-"ska-punk",
+"ska punk",
 "mestizo"
 ],
 "artists": [
@@ -5384,8 +5512,7 @@
 "techno"
 ],
 "artists": [
-"Vitess",
-"Grand V"
+"Vitess"
 ],
 "is_music": true,
 "sold_out": false
@@ -5526,7 +5653,7 @@
 "world"
 ],
 "subgenres": [
-"afro-soul"
+"afro-arabian soul"
 ],
 "artists": [
 "Ahmed Soultan"
@@ -5541,8 +5668,8 @@
 "url": null,
 "price": null,
 "genres": [
-"indie",
-"rock"
+"rock",
+"indie"
 ],
 "subgenres": [
 "madchester",
@@ -5550,6 +5677,25 @@
 ],
 "artists": [
 "Happy Mondays"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Too Many ZooZ",
+"date": "2027-02-10",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"funk",
+"electro"
+],
+"subgenres": [
+"brass house"
+],
+"artists": [
+"Too Many ZooZ"
 ],
 "is_music": true,
 "sold_out": false
@@ -5584,7 +5730,7 @@
 "folk"
 ],
 "subgenres": [
-"indie rock"
+"indie folk"
 ],
 "artists": [
 "Julia Jacklin"
@@ -5613,8 +5759,8 @@
 ]
 },
 "la-bellevilloise": {
-"digest": "b08a3701597936507fffcb663f529134774a1d26",
-"today": "2026-09-22",
+"digest": "9850ca61f5630f3b6f22277d413dd1035a328a7b",
+"today": "2026-09-23",
 "events": [
 {
 "title": "88 MÉNILMONTANT | ATELIER SÉRIGRAPHIE",
@@ -5641,7 +5787,7 @@
 "sold_out": false
 },
 {
-"title": "De l’Amour et des Slows",
+"title": "De l'Amour et des Slows",
 "date": "2026-09-23",
 "time": null,
 "url": null,
@@ -5651,7 +5797,7 @@
 "soul-rnb"
 ],
 "subgenres": [
-"slow jams"
+"slows"
 ],
 "artists": [],
 "is_music": true,
@@ -5711,7 +5857,9 @@
 "time": null,
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"hip-hop"
+],
 "subgenres": [],
 "artists": [],
 "is_music": true,
@@ -5730,7 +5878,7 @@
 "sold_out": false
 },
 {
-"title": "Classics Only | Rap, 2000’s, R&B + Karaoké Classics",
+"title": "Classics Only | Rap, 2000's, R&B + Karaoké Classics",
 "date": "2026-09-25",
 "time": null,
 "url": null,
@@ -5881,7 +6029,7 @@
 "hip-hop"
 ],
 "subgenres": [
-"desi hip-hop"
+"desi hip hop"
 ],
 "artists": [
 "Seedhe Maut"
@@ -5911,9 +6059,7 @@
 "latin",
 "electro"
 ],
-"subgenres": [
-"reggaeton"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -5954,8 +6100,7 @@
 "url": null,
 "price": null,
 "genres": [
-"electro",
-"pop"
+"electro"
 ],
 "subgenres": [
 "club"
@@ -6001,8 +6146,7 @@
 "rock"
 ],
 "subgenres": [
-"post-punk",
-"art rock"
+"post-punk"
 ],
 "artists": [
 "Mary in the Junkyard"
@@ -6011,7 +6155,7 @@
 "sold_out": false
 },
 {
-"title": "Sortir de l’ombre",
+"title": "Sortir de l'ombre",
 "date": "2026-10-07",
 "time": null,
 "url": null,
@@ -6041,7 +6185,6 @@
 "url": null,
 "price": null,
 "genres": [
-"hip-hop",
 "electro"
 ],
 "subgenres": [
@@ -6112,11 +6255,9 @@
 "price": null,
 "genres": [
 "pop",
-"rock"
+"reggae"
 ],
-"subgenres": [
-"reggae pop"
-],
+"subgenres": [],
 "artists": [
 "SIX60"
 ],
@@ -6208,12 +6349,10 @@
 "url": null,
 "price": null,
 "genres": [
-"latin",
-"world"
+"latin"
 ],
 "subgenres": [
-"samba",
-"choro"
+"samba"
 ],
 "artists": [
 "Sexteto Cristal"
@@ -6248,8 +6387,7 @@
 "rock"
 ],
 "subgenres": [
-"garage rock",
-"blues rock"
+"garage rock"
 ],
 "artists": [
 "Des Rocs"
@@ -6277,7 +6415,7 @@
 "price": null,
 "genres": [
 "indie",
-"soul-rnb"
+"pop"
 ],
 "subgenres": [
 "spoken word"
@@ -6325,8 +6463,7 @@
 "url": null,
 "price": null,
 "genres": [
-"hip-hop",
-"pop"
+"hip-hop"
 ],
 "subgenres": [
 "rap français"
@@ -6338,7 +6475,7 @@
 "sold_out": false
 },
 {
-"title": "JAZZ’N’KLEZMER × MIDRASH PRÉSENTENT : MIDRASH TAKEOVER NIGHT",
+"title": "JAZZ'N'KLEZMER PRÉSENTE : MIDRASH TAKEOVER NIGHT w/ HILLEL",
 "date": "2026-11-03",
 "time": null,
 "url": null,
@@ -6364,8 +6501,8 @@
 "indie"
 ],
 "subgenres": [
-"shoegaze",
-"dream pop"
+"dream pop",
+"shoegaze"
 ],
 "artists": [
 "Tokyo Tea Room"
@@ -6383,9 +6520,7 @@
 "rock",
 "pop"
 ],
-"subgenres": [
-"pop español"
-],
+"subgenres": [],
 "artists": [
 "Duncan Dhu"
 ],
@@ -6431,8 +6566,7 @@
 "funk"
 ],
 "subgenres": [
-"house",
-"boogie"
+"house"
 ],
 "artists": [
 "Another Taste",
@@ -6488,9 +6622,7 @@
 "rock",
 "indie"
 ],
-"subgenres": [
-"anthemic rock"
-],
+"subgenres": [],
 "artists": [
 "Gang of Youths"
 ],
@@ -6505,7 +6637,9 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Q Marsden"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -6520,7 +6654,7 @@
 "jazz"
 ],
 "subgenres": [
-"italian pop"
+"cantautore"
 ],
 "artists": [
 "Marco Castello"
@@ -6536,7 +6670,7 @@
 "price": null,
 "genres": [
 "hip-hop",
-"funk"
+"latin"
 ],
 "subgenres": [
 "funk carioca",
@@ -6604,7 +6738,6 @@
 "electro"
 ],
 "subgenres": [
-"broken beat",
 "uk jazz"
 ],
 "artists": [
@@ -6638,10 +6771,10 @@
 },
 "la-marbrerie": {
 "digest": "31587ed5b0eeeb5ce433b2d77435e476c6ee2531",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
-"title": "Rencontre-signature animée par Cécile Strouk - Du premier Roman de Cécilia Tibren",
+"title": "Rencontre-signature animée par Cécile Strouk",
 "date": "2026-09-24",
 "time": null,
 "url": null,
@@ -6650,6 +6783,640 @@
 "subgenres": [],
 "artists": [],
 "is_music": false,
+"sold_out": false
+},
+{
+"title": "SOAD + ASSAFIR & MORE - BIRKLEYN SOUND FESTIVAL #2",
+"date": "2026-09-24",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"world"
+],
+"subgenres": [],
+"artists": [
+"SOAD",
+"ASSAFIR"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Aterciopelados : La Pipa de la Paz Tour",
+"date": "2026-09-25",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"rock",
+"latin"
+],
+"subgenres": [
+"rock en español"
+],
+"artists": [
+"Aterciopelados"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "WEIGHTLESS REMIXES – RELEASE PARTY – LUXIE (live) + bdstf, Hyas, Stresshead, Swooh",
+"date": "2026-09-26",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [],
+"artists": [
+"LUXIE",
+"bdstf",
+"Hyas",
+"Stresshead",
+"Swooh"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "PROHIBITION + GUESTS : BEN SHEMIE (of SUUNS) + MOSSAÏ MOSSAÏ",
+"date": "2026-09-30",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"rock",
+"experimental"
+],
+"subgenres": [
+"post-punk"
+],
+"artists": [
+"Prohibition",
+"Ben Shemie",
+"Mossaï Mossaï"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "FANTAZIO PEUPLE FICTION – RELEASE PARTY + GUESTS",
+"date": "2026-10-01",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"pop",
+"experimental"
+],
+"subgenres": [
+"pop décadente"
+],
+"artists": [
+"Fantazio"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "BIRKLEYN SOUND FESTIVAL #2",
+"date": "2026-10-02",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"world"
+],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "LE BAL RITAL – Télàmuré x Zinharua x Disco Rital",
+"date": "2026-10-03",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"italo disco"
+],
+"artists": [
+"Télàmuré",
+"Zinharua",
+"Disco Rital"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "LAURA MISCH",
+"date": "2026-10-05",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"jazz",
+"electro"
+],
+"subgenres": [
+"jazz expérimental"
+],
+"artists": [
+"Laura Misch"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "BANNED FROM UTOPIA",
+"date": "2026-10-06",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"rock",
+"jazz"
+],
+"subgenres": [
+"zappa tribute",
+"fusion"
+],
+"artists": [
+"Banned From Utopia"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "LECTURE & DÉCOUVERTE DU LIVRE » MON OEIL » PAR GAËLLE GONNET & CÉCILE STROUK",
+"date": "2026-10-07",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "( ANNULÉ ) – Sixpence None The Richer",
+"date": "2026-10-07",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"pop",
+"rock"
+],
+"subgenres": [
+"alternative pop"
+],
+"artists": [
+"Sixpence None The Richer"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Belle Pour Mourir #6",
+"date": "2026-10-07",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Les soirées lalala",
+"date": "2026-10-08",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [
+"chorale"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "BIRKLEYN SOUND FESTIVAL #2",
+"date": "2026-10-09",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"world"
+],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Le Vestiaire des Loupiots",
+"date": "2026-10-11",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "SONGHOY BLUES",
+"date": "2026-10-13",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"blues",
+"afro"
+],
+"subgenres": [
+"desert blues"
+],
+"artists": [
+"Songhoy Blues"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "¡ Surréaliste !",
+"date": "2026-10-15",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"experimental"
+],
+"subgenres": [
+"ciné-concert"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "QUAL + PSYCHE",
+"date": "2026-10-16",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"dark synthpop",
+"ebm"
+],
+"artists": [
+"QUAL",
+"Psyche"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Rai Sentimental",
+"date": "2026-10-17",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"world"
+],
+"subgenres": [
+"raï"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "El Mastodonte – Pico soundsytem à La Marbrerie",
+"date": "2026-10-18",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"latin",
+"afro"
+],
+"subgenres": [
+"picó soundsystem",
+"champeta"
+],
+"artists": [
+"El Mastodonte"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "ALUNE WADE + AGON",
+"date": "2026-10-23",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"jazz",
+"afro",
+"folk"
+],
+"subgenres": [
+"afrobeat"
+],
+"artists": [
+"Alune Wade",
+"Agon"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "SPORTS",
+"date": "2026-10-29",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"indie",
+"pop"
+],
+"subgenres": [
+"dream pop"
+],
+"artists": [
+"Sports"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "FELABRATION – LA KOSSA x FABE BEAUREL BAMBI x AFREEBOAT",
+"date": "2026-10-30",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"afro"
+],
+"subgenres": [
+"afrobeat"
+],
+"artists": [
+"La Kossa",
+"Fabe Beaurel Bambi",
+"Afreeboat"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "LE BAL & LA BÊTE II – HORROR VACUI + PILORI + ALTA ROSSA + MIDSUMMER BLAZE + LIVGONE",
+"date": "2026-10-31",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"metal",
+"punk"
+],
+"subgenres": [],
+"artists": [
+"Horror Vacui",
+"Pilori",
+"Alta Rossa",
+"Midsummer Blaze",
+"Livgone"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "MESSA + THE NIGHT ETERNAL",
+"date": "2026-11-01",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"metal",
+"rock"
+],
+"subgenres": [
+"doom metal"
+],
+"artists": [
+"Messa",
+"The Night Eternal"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "THE EX & BRASS UNBOUND",
+"date": "2026-11-05",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"rock",
+"jazz",
+"experimental"
+],
+"subgenres": [
+"post-punk",
+"free jazz"
+],
+"artists": [
+"The Ex",
+"Brass Unbound"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "ALEXIS CADENAS ET L’ENSEMBLE RECOVECO – 30 ANS !",
+"date": "2026-11-06",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"latin",
+"world"
+],
+"subgenres": [
+"musique colombienne",
+"musique vénézuélienne"
+],
+"artists": [
+"Alexis Cadenas",
+"Ensemble Recoveco"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "ULTRA SUNN + SYDNEY VALETTE + SAD MADONA",
+"date": "2026-11-07",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"cold wave",
+"ebm",
+"dark wave"
+],
+"artists": [
+"Ultra Sunn",
+"Sydney Valette",
+"Sad Madona"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "RICARDO MOYANO",
+"date": "2026-11-11",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"world",
+"folk"
+],
+"subgenres": [
+"musique argentine"
+],
+"artists": [
+"Ricardo Moyano"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "ROADRUNNERS",
+"date": "2026-11-13",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"rock"
+],
+"subgenres": [],
+"artists": [
+"Roadrunners"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "SALSE ESPECIAL avec ADONIS Y LA DIFERENCIA – Release Party",
+"date": "2026-11-28",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"latin"
+],
+"subgenres": [
+"salsa"
+],
+"artists": [
+"Adonis y la Diferencia"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Psycho attack over Montreuil #2",
+"date": "2026-12-11",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"punk",
+"rock"
+],
+"subgenres": [
+"psychobilly"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "PANAME SKA PARTY #4",
+"date": "2027-01-09",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"reggae",
+"punk"
+],
+"subgenres": [
+"ska"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "PANAM’ NOT DEAD #6 – COCKNEY REJECTS & FRIENDS",
+"date": "2027-01-16",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"punk"
+],
+"subgenres": [
+"oi!",
+"street punk"
+],
+"artists": [
+"Cockney Rejects"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "LES RAMONEURS DE MENHIRS",
+"date": "2027-03-06",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"punk",
+"folk"
+],
+"subgenres": [
+"punk breton"
+],
+"artists": [
+"Les Ramoneurs de Menhirs"
+],
+"is_music": true,
 "sold_out": false
 }
 ]
@@ -6830,7 +7597,7 @@
 },
 "file7": {
 "digest": "82f665275e9572d93771b3017c5e19794a3b0cdc",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Ebony + Tessa Galli",
@@ -6838,9 +7605,14 @@
 "time": null,
 "url": "https://www.file7.com/agenda",
 "price": null,
-"genres": [],
+"genres": [
+"soul-rnb"
+],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Ebony",
+"Tessa Galli"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -6862,9 +7634,15 @@
 "time": null,
 "url": "https://www.file7.com/agenda",
 "price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
+"genres": [
+"rock"
+],
+"subgenres": [
+"écoute au casque"
+],
+"artists": [
+"Les Fatals Picards"
+],
 "is_music": true,
 "sold_out": true
 },
@@ -6876,11 +7654,10 @@
 "price": null,
 "genres": [
 "rock",
-"punk",
-"chanson"
+"punk"
 ],
 "subgenres": [
-"rock festif"
+"rock français"
 ],
 "artists": [
 "Les Fatals Picards",
@@ -6922,7 +7699,9 @@
 "time": null,
 "url": "https://www.file7.com/agenda",
 "price": null,
-"genres": [],
+"genres": [
+"soul-rnb"
+],
 "subgenres": [],
 "artists": [
 "Camille Yembe",
@@ -6944,26 +7723,12 @@
 ],
 "is_music": true,
 "sold_out": false
-},
-{
-"title": "Juste Shani",
-"date": "2026-12-04",
-"time": null,
-"url": "https://www.file7.com/agenda",
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [
-"Juste Shani"
-],
-"is_music": true,
-"sold_out": false
 }
 ]
 },
 "glazart": {
-"digest": "14ed4e2e261bb275b3e32026f82e0893c5942460",
-"today": "2026-09-22",
+"digest": "78d368c860cb3fbf38cd443b3fe0a31e624b8782",
+"today": "2026-09-23",
 "events": [
 {
 "title": "BIRDS IN ROW + KARABA FC + WITHOUT SKIN",
@@ -6972,14 +7737,15 @@
 "url": null,
 "price": null,
 "genres": [
-"punk"
+"punk",
+"rock"
 ],
 "subgenres": [
 "screamo",
 "post-hardcore"
 ],
 "artists": [
-"Birds In Row",
+"Birds in Row",
 "Karaba FC",
 "Without Skin"
 ],
@@ -7020,7 +7786,7 @@
 "artists": [
 "Terminal Trax",
 "Lymsa",
-"Deleter"
+"DELETER"
 ],
 "is_music": true,
 "sold_out": false
@@ -7053,7 +7819,8 @@
 "punk"
 ],
 "subgenres": [
-"screamo"
+"screamo",
+"hardcore"
 ],
 "artists": [
 "Loma Prieta"
@@ -7072,7 +7839,7 @@
 "punk"
 ],
 "subgenres": [
-"metallic hardcore"
+"hardcore"
 ],
 "artists": [
 "Twitching Tongues"
@@ -7091,7 +7858,8 @@
 "metal"
 ],
 "subgenres": [
-"metallic hardcore"
+"metalcore",
+"hardcore"
 ],
 "artists": [
 "Integrity"
@@ -7106,14 +7874,14 @@
 "url": null,
 "price": null,
 "genres": [
-"metal"
+"metal",
+"punk"
 ],
 "subgenres": [
 "blackened hardcore"
 ],
 "artists": [
-"Hexis",
-"Violence"
+"Hexis"
 ],
 "is_music": true,
 "sold_out": false
@@ -7167,9 +7935,11 @@
 "price": null,
 "genres": [
 "rock",
-"metal"
+"punk"
 ],
-"subgenres": [],
+"subgenres": [
+"emo"
+],
 "artists": [
 "I Promise The World"
 ],
@@ -7205,7 +7975,7 @@
 ],
 "subgenres": [
 "occult rock",
-"doom"
+"psychedelic doom"
 ],
 "artists": [
 "Wolvennest"
@@ -7242,7 +8012,7 @@
 "metal"
 ],
 "subgenres": [
-"sludge"
+"sludge metal"
 ],
 "artists": [
 "Eyehategod"
@@ -7257,9 +8027,12 @@
 "url": null,
 "price": null,
 "genres": [
+"metal",
 "punk"
 ],
-"subgenres": [],
+"subgenres": [
+"hardcore"
+],
 "artists": [
 "Lagrimas"
 ],
@@ -7276,11 +8049,33 @@
 "rock"
 ],
 "subgenres": [
-"hard rock",
-"psych rock"
+"stoner rock",
+"psychedelic rock"
 ],
 "artists": [
 "The Vintage Caravan"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "SUNAMI + MISSING LINK + EXTINGUISH",
+"date": "2026-11-28",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"punk",
+"metal"
+],
+"subgenres": [
+"hardcore",
+"beatdown"
+],
+"artists": [
+"Sunami",
+"Missing Link",
+"Extinguish"
 ],
 "is_music": true,
 "sold_out": false
@@ -7292,7 +8087,8 @@
 "url": null,
 "price": null,
 "genres": [
-"metal"
+"metal",
+"rock"
 ],
 "subgenres": [
 "tribute",
@@ -7315,6 +8111,7 @@
 "rock"
 ],
 "subgenres": [
+"post-punk",
 "melodic punk"
 ],
 "artists": [
@@ -7326,8 +8123,8 @@
 ]
 },
 "la-machine": {
-"digest": "e5f585a19fc63a4b04f3e1ede5bb0ad3e2e4811d",
-"today": "2026-09-22",
+"digest": "683c061ad5cc376da81aaa9f57e7b4dafcd23a20",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Initiation Pole Dance",
@@ -7339,7 +8136,7 @@
 "subgenres": [],
 "artists": [],
 "is_music": false,
-"sold_out": false
+"sold_out": true
 },
 {
 "title": "CORONER + Schizophrenia + Tar Pond",
@@ -7353,13 +8150,9 @@
 "subgenres": [
 "thrash metal"
 ],
-"artists": [
-"Coroner",
-"Schizophrenia",
-"Tar Pond"
-],
+"artists": [],
 "is_music": true,
-"sold_out": true
+"sold_out": false
 },
 {
 "title": "Trendy",
@@ -7370,7 +8163,9 @@
 "genres": [
 "electro"
 ],
-"subgenres": [],
+"subgenres": [
+"club"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -7402,16 +8197,11 @@
 ],
 "subgenres": [
 "deathcore",
-"technical death metal"
+"death metal"
 ],
-"artists": [
-"Shadow of Intent",
-"Aborted",
-"Disembodied Tyrant",
-"Soreption"
-],
+"artists": [],
 "is_music": true,
-"sold_out": false
+"sold_out": true
 },
 {
 "title": "Initiation Pole Dance",
@@ -7433,18 +8223,15 @@
 "price": null,
 "genres": [
 "rock",
-"punk"
+"indie"
 ],
 "subgenres": [
 "mod revival",
 "garage rock"
 ],
-"artists": [
-"The Molotovs",
-"The Velvet Hands"
-],
+"artists": [],
 "is_music": true,
-"sold_out": true
+"sold_out": false
 },
 {
 "title": "Dizzee Rascal",
@@ -7458,9 +8245,7 @@
 "subgenres": [
 "grime"
 ],
-"artists": [
-"Dizzee Rascal"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7474,7 +8259,9 @@
 "electro",
 "afro"
 ],
-"subgenres": [],
+"subgenres": [
+"club"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -7488,7 +8275,9 @@
 "genres": [
 "electro"
 ],
-"subgenres": [],
+"subgenres": [
+"club"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -7503,14 +8292,14 @@
 "electro"
 ],
 "subgenres": [
-"queer club"
+"club"
 ],
 "artists": [],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "HUMANITY’S LAST BREATH + VILDHJARTA + ENTERPRISE EARTH + KARMANJAKAH",
+"title": "HUMANITY'S LAST BREATH + VILDHJARTA + ENTERPRISE EARTH + KARMANJAKAH",
 "date": "2026-10-06",
 "time": null,
 "url": null,
@@ -7522,17 +8311,12 @@
 "djent",
 "deathcore"
 ],
-"artists": [
-"Humanity's Last Breath",
-"Vildhjarta",
-"Enterprise Earth",
-"Karmanjakah"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Chronologic + Le Grand Karaoké de l’Amour",
+"title": "Chronologic + Le Grand Karaoké de l'Amour",
 "date": "2026-10-09",
 "time": null,
 "url": null,
@@ -7556,7 +8340,9 @@
 "genres": [
 "electro"
 ],
-"subgenres": [],
+"subgenres": [
+"club"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -7571,7 +8357,7 @@
 "electro"
 ],
 "subgenres": [
-"hard techno"
+"club"
 ],
 "artists": [],
 "is_music": true,
@@ -7584,16 +8370,13 @@
 "url": null,
 "price": null,
 "genres": [
-"hip-hop",
-"experimental"
+"hip-hop"
 ],
 "subgenres": [
-"trip hop",
+"trip-hop",
 "instrumental hip-hop"
 ],
-"artists": [
-"DJ Krush"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7608,9 +8391,7 @@
 "soul-rnb"
 ],
 "subgenres": [],
-"artists": [
-"Ruel"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7625,14 +8406,10 @@
 "pop"
 ],
 "subgenres": [
-"pop punk",
+"pop-punk",
 "nerdcore"
 ],
-"artists": [
-"NateWantsToBattle",
-"GENWUNNER",
-"Cam Steady"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7661,14 +8438,12 @@
 "subgenres": [
 "rave"
 ],
-"artists": [
-"STVW"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Emma’a",
+"title": "Emma'a",
 "date": "2026-10-24",
 "time": null,
 "url": null,
@@ -7677,9 +8452,7 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [
-"Emma'a"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7696,12 +8469,9 @@
 "subgenres": [
 "psychedelic black metal"
 ],
-"artists": [
-"Oranssi Pazuzu",
-"MùR"
-],
+"artists": [],
 "is_music": true,
-"sold_out": false
+"sold_out": true
 },
 {
 "title": "Melanie C",
@@ -7713,11 +8483,9 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [
-"Melanie C"
-],
+"artists": [],
 "is_music": true,
-"sold_out": true
+"sold_out": false
 },
 {
 "title": "Two Lanes",
@@ -7731,9 +8499,7 @@
 "subgenres": [
 "melodic techno"
 ],
-"artists": [
-"Two Lanes"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7744,15 +8510,12 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"electro"
+"pop"
 ],
 "subgenres": [
 "synth-pop"
 ],
-"artists": [
-"Allie X"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7784,12 +8547,7 @@
 "subgenres": [
 "technical death metal"
 ],
-"artists": [
-"Archspire",
-"Crown Magnetar",
-"The Zenith Passage",
-"Analepsy"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7805,9 +8563,7 @@
 "subgenres": [
 "neo-soul"
 ],
-"artists": [
-"Isaiah Falls"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7824,11 +8580,7 @@
 "deathcore",
 "death metal"
 ],
-"artists": [
-"Despised Icon",
-"Carnifex",
-"Suffocation"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7839,17 +8591,14 @@
 "url": null,
 "price": null,
 "genres": [
-"metal",
-"electro"
+"electro",
+"metal"
 ],
 "subgenres": [
-"chiptune"
+"chiptune",
+"synthwave"
 ],
-"artists": [
-"Master Boot Record",
-"Fulci",
-"ARottenBit"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7863,11 +8612,9 @@
 "punk"
 ],
 "subgenres": [
-"punk rock covers"
+"pop-punk"
 ],
-"artists": [
-"Spike and The Gimme Gimmes"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7882,12 +8629,9 @@
 "metal"
 ],
 "subgenres": [
-"gothic metal",
-"atmospheric rock"
+"gothic metal"
 ],
-"artists": [
-"Anneke van Giersbergen"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7915,11 +8659,9 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Miss Bashful"
-],
+"artists": [],
 "is_music": true,
-"sold_out": false
+"sold_out": true
 },
 {
 "title": "GLORYHAMMER + MAJESTICA + ARION",
@@ -7933,13 +8675,9 @@
 "subgenres": [
 "power metal"
 ],
-"artists": [
-"Gloryhammer",
-"Majestica",
-"Arion"
-],
+"artists": [],
 "is_music": true,
-"sold_out": true
+"sold_out": false
 },
 {
 "title": "Terror + Bane + Start Today + Peace Of Mind",
@@ -7948,18 +8686,12 @@
 "url": null,
 "price": null,
 "genres": [
-"punk",
-"metal"
+"punk"
 ],
 "subgenres": [
 "hardcore"
 ],
-"artists": [
-"Terror",
-"Bane",
-"Start Today",
-"Peace Of Mind"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -7999,12 +8731,9 @@
 ],
 "subgenres": [
 "power metal",
-"classic rock"
+"hard rock"
 ],
-"artists": [
-"Dominum",
-"The Night Flight Orchestra"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8021,9 +8750,7 @@
 "subgenres": [
 "bedroom pop"
 ],
-"artists": [
-"Nieve Ella"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8035,9 +8762,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Dopelym"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8091,14 +8816,10 @@
 "metal"
 ],
 "subgenres": [
-"folk metal",
-"black metal"
+"black metal",
+"folk metal"
 ],
-"artists": [
-"Arkona",
-"Seth",
-"The Great Old Ones"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8114,12 +8835,7 @@
 "subgenres": [
 "deathcore"
 ],
-"artists": [
-"Spite",
-"Emmure",
-"Distant",
-"Mauled"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8136,11 +8852,7 @@
 "power metal",
 "folk metal"
 ],
-"artists": [
-"Orden Ogan",
-"Ensiferum",
-"Angus McSix"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8151,15 +8863,13 @@
 "url": null,
 "price": null,
 "genres": [
-"electro",
-"pop"
+"pop",
+"electro"
 ],
 "subgenres": [
 "french touch"
 ],
-"artists": [
-"Lewis OfMan"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8170,15 +8880,12 @@
 "url": null,
 "price": null,
 "genres": [
-"metal",
-"pop"
+"metal"
 ],
 "subgenres": [
 "symphonic metal"
 ],
-"artists": [
-"Charlotte Wessels"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8189,16 +8896,13 @@
 "url": null,
 "price": null,
 "genres": [
-"experimental",
-"electro"
+"experimental"
 ],
 "subgenres": [
 "industrial",
 "martial industrial"
 ],
-"artists": [
-"Laibach"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8212,11 +8916,10 @@
 "metal"
 ],
 "subgenres": [
-"gothic doom metal"
+"doom metal",
+"gothic metal"
 ],
-"artists": [
-"Draconian"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8233,9 +8936,7 @@
 "subgenres": [
 "cantautore"
 ],
-"artists": [
-"Mannarino"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8252,10 +8953,7 @@
 "subgenres": [
 "nordic folk"
 ],
-"artists": [
-"Kalandra",
-"Finnegan Tui"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8266,21 +8964,20 @@
 "url": null,
 "price": null,
 "genres": [
-"electro",
-"pop"
+"electro"
 ],
-"subgenres": [],
-"artists": [
-"Il Est Vilaine"
+"subgenres": [
+"house"
 ],
+"artists": [],
 "is_music": true,
 "sold_out": false
 }
 ]
 },
 "duc-des-lombards": {
-"digest": "fc4c2c4f5c4fb620752abc1fe11548f06532aa45",
-"today": "2026-09-22",
+"digest": "f58f36636d3f6ccccf702bc483394f756f789318",
+"today": "2026-09-23",
 "events": [
 {
 "title": "CÉCILE BROCAS \"THAT WAS A DREAM\"",
@@ -8307,9 +9004,12 @@
 "url": "https://www.ducdeslombards.com/",
 "price": null,
 "genres": [
-"blues"
+"blues",
+"soul-rnb"
 ],
-"subgenres": [],
+"subgenres": [
+"gospel blues"
+],
 "artists": [
 "Ruthie Foster"
 ],
@@ -8356,20 +9056,21 @@
 ]
 },
 "le-baiser-sale": {
-"digest": "989e7e802eea00a772853c9404346bce47c864a9",
-"today": "2026-09-22",
+"digest": "6b9e0bc64786e4a8421fa6bf791651c2372af0f0",
+"today": "2026-09-23",
 "events": [
 {
 "title": "CANONGE / ZENINO",
 "date": "2026-09-23",
 "time": "19:00",
-"url": "https://www.lebaisersale.com/fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [
-"jazz créole"
+"jazz créole",
+"improvisation"
 ],
 "artists": [
 "Mario Canonge",
@@ -8379,7 +9080,7 @@
 "sold_out": false
 },
 {
-"title": "SONYA PINÇON QUARTET - “SOULVILLE”",
+"title": "SONYA PINÇON QUARTET - “SOULVILLE” - Tribute to Horace Silver",
 "date": "2026-09-23",
 "time": "21:00",
 "url": null,
@@ -8418,7 +9119,7 @@
 "Arnaud Dolmen",
 "Michel Zenino",
 "Ralph Izquierdo",
-"Jerry Woodson"
+"Jason Woodson"
 ],
 "is_music": true,
 "sold_out": false
@@ -8433,7 +9134,8 @@
 "jazz"
 ],
 "subgenres": [
-"spiritual jazz"
+"spiritual jazz",
+"spoken word"
 ],
 "artists": [
 "Christophe Dal Sasso",
@@ -8453,7 +9155,8 @@
 "soul-rnb"
 ],
 "subgenres": [
-"jam session"
+"jam session",
+"vocal jazz"
 ],
 "artists": [
 "Thalie Bernard",
@@ -8473,7 +9176,8 @@
 "jazz"
 ],
 "subgenres": [
-"spiritual jazz"
+"spiritual jazz",
+"spoken word"
 ],
 "artists": [
 "Christophe Dal Sasso",
@@ -8489,11 +9193,11 @@
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"soul-rnb"
+"jazz"
 ],
 "subgenres": [
-"jam session"
+"jam session",
+"vocal jazz"
 ],
 "artists": [
 "Valentin Caillon",
@@ -8513,7 +9217,7 @@
 ],
 "subgenres": [
 "jam session",
-"vocal jazz"
+"scat"
 ],
 "artists": [
 "Caloé",
@@ -8555,7 +9259,8 @@
 "jazz"
 ],
 "subgenres": [
-"jazz créole"
+"jazz créole",
+"improvisation"
 ],
 "artists": [
 "Mario Canonge",
@@ -8573,13 +9278,32 @@
 "genres": [
 "jazz"
 ],
-"subgenres": [],
+"subgenres": [
+"modern jazz"
+],
 "artists": [
 "Stéphane Beuf",
-"Frédéric Devienne",
+"Fabrice Devienne",
 "Thierry Fanfant",
 "Benjamin Henocq"
 ],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "#TISS+ WEEK - PASS 16 CONCERTS",
+"date": "2026-10-01",
+"time": "00:00",
+"url": null,
+"price": null,
+"genres": [
+"jazz",
+"electro"
+],
+"subgenres": [
+"festival pass"
+],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -8593,7 +9317,9 @@
 "jazz",
 "soul-rnb"
 ],
-"subgenres": [],
+"subgenres": [
+"voix-piano"
+],
 "artists": [
 "Ariel Tintar"
 ],
@@ -8672,7 +9398,9 @@
 "jazz",
 "soul-rnb"
 ],
-"subgenres": [],
+"subgenres": [
+"groove"
+],
 "artists": [
 "Za Kweli",
 "Benjamin Paul",
@@ -8710,7 +9438,8 @@
 "world"
 ],
 "subgenres": [
-"creole jazz"
+"caribbean jazz",
+"spiritual jazz"
 ],
 "artists": [
 "Jowee Omicil",
@@ -8828,7 +9557,8 @@
 "url": null,
 "price": null,
 "genres": [
-"jazz"
+"jazz",
+"soul-rnb"
 ],
 "subgenres": [],
 "artists": [
@@ -8840,41 +9570,18 @@
 ],
 "is_music": true,
 "sold_out": false
-},
-{
-"title": "#Tiss+week - MONSIEUR MÂLÂ",
-"date": "2026-10-06",
-"time": "20:00",
-"url": null,
-"price": null,
-"genres": [
-"jazz",
-"electro"
-],
-"subgenres": [
-"groove"
-],
-"artists": [
-"Swaéli Mbappé",
-"Yoann Danier",
-"Nicholas Vella",
-"Balthazar Naturel",
-"Robin Antunes"
-],
-"is_music": true,
-"sold_out": false
 }
 ]
 },
 "le-104": {
-"digest": "cf0ce6f36d7bedd93598b9399531447a3969a985",
-"today": "2026-09-22",
+"digest": "5564f6ff75b95a5c0030fd31e0ca6ad480ee95b6",
+"today": "2026-09-23",
 "events": [
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-08",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8885,10 +9592,10 @@
 "sold_out": false
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-09",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8899,10 +9606,10 @@
 "sold_out": false
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-10",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8913,10 +9620,10 @@
 "sold_out": false
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-11",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8927,10 +9634,24 @@
 "sold_out": false
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
+"date": "2026-10-12",
+"time": null,
+"url": "https://www.104.fr/",
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Lukas Dana"
+],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Lukas Dana - RING",
 "date": "2026-10-13",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8941,10 +9662,10 @@
 "sold_out": false
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-14",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8955,10 +9676,10 @@
 "sold_out": false
 },
 {
-"title": "RING",
+"title": "Lukas Dana - RING",
 "date": "2026-10-15",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8969,10 +9690,10 @@
 "sold_out": false
 },
 {
-"title": "LOUNGE",
+"title": "Marga Alfeirão - LOUNGE",
 "date": "2026-10-09",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8983,10 +9704,10 @@
 "sold_out": false
 },
 {
-"title": "LOUNGE",
+"title": "Marga Alfeirão - LOUNGE",
 "date": "2026-10-10",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -8997,10 +9718,10 @@
 "sold_out": false
 },
 {
-"title": "LOUNGE",
+"title": "Marga Alfeirão - LOUNGE",
 "date": "2026-10-11",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9011,17 +9732,17 @@
 "sold_out": false
 },
 {
-"title": "Silence",
+"title": "Lucie Antunes, Mathilde Monnier - Silence",
 "date": "2026-10-21",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [
 "electro",
 "experimental"
 ],
 "subgenres": [
-"contemporary dance"
+"contemporary percussion"
 ],
 "artists": [
 "Lucie Antunes",
@@ -9031,17 +9752,17 @@
 "sold_out": false
 },
 {
-"title": "Silence",
+"title": "Lucie Antunes, Mathilde Monnier - Silence",
 "date": "2026-10-22",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [
 "electro",
 "experimental"
 ],
 "subgenres": [
-"contemporary dance"
+"contemporary percussion"
 ],
 "artists": [
 "Lucie Antunes",
@@ -9051,17 +9772,17 @@
 "sold_out": false
 },
 {
-"title": "Silence",
+"title": "Lucie Antunes, Mathilde Monnier - Silence",
 "date": "2026-10-23",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [
 "electro",
 "experimental"
 ],
 "subgenres": [
-"contemporary dance"
+"contemporary percussion"
 ],
 "artists": [
 "Lucie Antunes",
@@ -9071,10 +9792,10 @@
 "sold_out": false
 },
 {
-"title": "Festival of (in)gratitude",
+"title": "Walid Raad - Festival of (in)gratitude",
 "date": "2026-10-23",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9085,10 +9806,10 @@
 "sold_out": false
 },
 {
-"title": "Le Signalement",
+"title": "François Hien, Léa Porracchia, Flora Souchier - Le Signalement",
 "date": "2026-10-23",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9101,10 +9822,10 @@
 "sold_out": false
 },
 {
-"title": "Le Signalement",
+"title": "François Hien, Léa Porracchia, Flora Souchier - Le Signalement",
 "date": "2026-10-24",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9117,10 +9838,10 @@
 "sold_out": false
 },
 {
-"title": "Le Signalement",
+"title": "François Hien, Léa Porracchia, Flora Souchier - Le Signalement",
 "date": "2026-10-25",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9133,10 +9854,10 @@
 "sold_out": false
 },
 {
-"title": "Entre parenthèses",
+"title": "Pauline Bureau - Entre parenthèses",
 "date": "2026-11-17",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9147,10 +9868,10 @@
 "sold_out": false
 },
 {
-"title": "Entre parenthèses",
+"title": "Pauline Bureau - Entre parenthèses",
 "date": "2026-11-18",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9161,10 +9882,10 @@
 "sold_out": false
 },
 {
-"title": "Entre parenthèses",
+"title": "Pauline Bureau - Entre parenthèses",
 "date": "2026-11-19",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9175,10 +9896,10 @@
 "sold_out": false
 },
 {
-"title": "Entre parenthèses",
+"title": "Pauline Bureau - Entre parenthèses",
 "date": "2026-11-20",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9189,10 +9910,10 @@
 "sold_out": false
 },
 {
-"title": "Entre parenthèses",
+"title": "Pauline Bureau - Entre parenthèses",
 "date": "2026-11-21",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9203,10 +9924,10 @@
 "sold_out": false
 },
 {
-"title": "Entre parenthèses",
+"title": "Pauline Bureau - Entre parenthèses",
 "date": "2026-11-22",
 "time": null,
-"url": null,
+"url": "https://www.104.fr/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9220,13 +9941,13 @@
 },
 "la-petite-halle": {
 "digest": "2d27b6b1cd7551d4c168330c897dddfbf5a32ad4",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Orlando Poleo & Afrovenezuela Jazz I 26.09.26",
 "date": "2026-09-26",
 "time": "21:00",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 5,00 €",
 "genres": [
 "jazz",
@@ -9234,11 +9955,10 @@
 ],
 "subgenres": [
 "afro-venezuelan jazz",
-"latin jazz"
+"salsa"
 ],
 "artists": [
-"Orlando Poleo",
-"Afrovenezuela Jazz"
+"Orlando Poleo"
 ],
 "is_music": true,
 "sold_out": false
@@ -9247,7 +9967,7 @@
 "title": "UATS JAM #2 I 28.09.26",
 "date": "2026-09-28",
 "time": "20:30",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 18,00 €",
 "genres": [
 "funk",
@@ -9266,12 +9986,12 @@
 "title": "SUNSET BACO #4 – Toukan Toukan + Melina + Roma Luca",
 "date": "2026-09-30",
 "time": "18:30",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 5,00 €",
 "genres": [
-"folk",
 "indie",
-"pop"
+"pop",
+"folk"
 ],
 "subgenres": [
 "indie pop",
@@ -9280,7 +10000,7 @@
 "artists": [
 "Toukan Toukan",
 "Mélina Vlachos",
-"Roma Luca"
+"ROMA LUCA"
 ],
 "is_music": true,
 "sold_out": false
@@ -9289,12 +10009,14 @@
 "title": "La Cuisine de Gildaa I 01.10.26",
 "date": "2026-10-01",
 "time": "20:30",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 18,00 €",
 "genres": [
 "soul-rnb"
 ],
-"subgenres": [],
+"subgenres": [
+"neo-soul"
+],
 "artists": [
 "Gildaa"
 ],
@@ -9305,15 +10027,15 @@
 "title": "COCHEMEA | 07.10.26",
 "date": "2026-10-07",
 "time": "20:30",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 16,50 €",
 "genres": [
 "jazz",
 "experimental"
 ],
 "subgenres": [
-"psychedelic jazz",
-"spiritual jazz"
+"spiritual jazz",
+"psychedelic"
 ],
 "artists": [
 "Cochemea Gastelum"
@@ -9325,7 +10047,7 @@
 "title": "GROWL PARTY #9 + Closing DJ Freddy Jay I 13.10.2026",
 "date": "2026-10-13",
 "time": "20:00",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 5,00 €",
 "genres": [
 "hip-hop",
@@ -9347,7 +10069,7 @@
 "title": "BUTTON MASHER I 23.10.26",
 "date": "2026-10-23",
 "time": "21:00",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 10,00 €",
 "genres": [
 "electro"
@@ -9365,7 +10087,7 @@
 "title": "BLOW · La Petite Halle (Paris) + 1ère partie",
 "date": "2026-11-27",
 "time": "20:00",
-"url": "https://www.lapetitehalle.com/programmation/",
+"url": null,
 "price": "À partir de 21,00 €",
 "genres": [
 "electro",
@@ -9373,9 +10095,8 @@
 "indie"
 ],
 "subgenres": [
-"nu-disco",
 "synthpop",
-"alternative dance"
+"nu-disco"
 ],
 "artists": [
 "BLOW"
@@ -9387,12 +10108,12 @@
 },
 "le-grand-rex": {
 "digest": "fb8c3863b4b55bf0eac50c4145778da9d6a0395a",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": []
 },
 "mains-d-oeuvres": {
 "digest": "86146704a8fd57570ef75ae8825c8000d1b8e250",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "La famille Kardachien•nes",
@@ -9489,21 +10210,22 @@
 ]
 },
 "badaboum": {
-"digest": "6d4d6ebad38fc8ab85638b86b3be0ace7cfa3ee6",
-"today": "2026-09-22",
+"digest": "fe658eeded6d3f5a1a3d98bb7446a2b6237fab56",
+"today": "2026-09-23",
 "events": [
 {
 "title": "CLUB — LA CH!CK: 100% FRENCH POP",
 "date": "2026-09-24",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop",
 "electro"
 ],
 "subgenres": [
-"dj set"
+"dj set",
+"french pop"
 ],
 "artists": [
 "LA CH!CK"
@@ -9515,7 +10237,7 @@
 "title": "Club — Rinse: Hyas, Naomi b2b Saari, Sottoh",
 "date": "2026-09-25",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -9537,7 +10259,7 @@
 "title": "Concert – Holy Fuck",
 "date": "2026-09-26",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "rock",
@@ -9545,8 +10267,8 @@
 "experimental"
 ],
 "subgenres": [
-"electronic rock",
-"krautrock"
+"krautrock",
+"psychedelic"
 ],
 "artists": [
 "Holy Fuck"
@@ -9558,14 +10280,14 @@
 "title": "Club — Zaatar Release Party: DJ MELL G, Djedjotronic & more",
 "date": "2026-09-26",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
 ],
 "subgenres": [
-"electro",
-"techno"
+"techno",
+"electro club"
 ],
 "artists": [
 "DJ MELL G",
@@ -9578,10 +10300,12 @@
 "title": "DRAG ME UP #2 – WORK BITCH",
 "date": "2026-09-27",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [],
-"subgenres": [],
+"subgenres": [
+"drag show"
+],
 "artists": [],
 "is_music": false,
 "sold_out": false
@@ -9590,7 +10314,7 @@
 "title": "Concert – Saint Nicole",
 "date": "2026-10-01",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop"
@@ -9606,7 +10330,7 @@
 "title": "Club — LA CH!CK PROJET X",
 "date": "2026-10-01",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro",
@@ -9625,14 +10349,13 @@
 "title": "Concert — Otha & more",
 "date": "2026-10-02",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"pop"
+"pop",
+"electro"
 ],
-"subgenres": [
-"electropop"
-],
+"subgenres": [],
 "artists": [
 "Otha"
 ],
@@ -9643,7 +10366,7 @@
 "title": "Club — Orange Crush: Bennet B2B Sinéad, Zuri, RĒVE",
 "date": "2026-10-02",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -9664,10 +10387,11 @@
 "title": "Club — House of Love: Nightchou & Young Pulse",
 "date": "2026-10-03",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"electro"
+"electro",
+"funk"
 ],
 "subgenres": [
 "house",
@@ -9681,10 +10405,10 @@
 "sold_out": false
 },
 {
-"title": "Club — LA CH!CK : REGGAETON ALLSTARS REVIVAL",
+"title": "Club — LA CH!CK : REGGAETON ALLSTARS",
 "date": "2026-10-08",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "latin"
@@ -9702,7 +10426,7 @@
 "title": "Skeler — Badaboum",
 "date": "2026-10-09",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -9721,13 +10445,14 @@
 "title": "Concert – Mateus Asato [SOLD OUT]",
 "date": "2026-10-10",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "rock"
 ],
 "subgenres": [
-"instrumental guitar"
+"guitar virtuoso",
+"fusion"
 ],
 "artists": [
 "Mateus Asato"
@@ -9739,12 +10464,14 @@
 "title": "Concert – DZIDZIO",
 "date": "2026-10-14",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop"
 ],
-"subgenres": [],
+"subgenres": [
+"ukrainian pop"
+],
 "artists": [
 "DZIDZIO"
 ],
@@ -9755,7 +10482,7 @@
 "title": "Concert – ARTICLE15",
 "date": "2026-10-15",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -9769,7 +10496,7 @@
 "title": "Club — LA CH!CK: JUST DANCE IRL",
 "date": "2026-10-15",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop",
@@ -9788,12 +10515,14 @@
 "title": "Concert – Alastair Lane Presents « Love Is The Answer »",
 "date": "2026-10-16",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"pop"
+"electro"
 ],
-"subgenres": [],
+"subgenres": [
+"house"
+],
 "artists": [
 "Alastair Lane"
 ],
@@ -9804,14 +10533,14 @@
 "title": "Club — Lamalice Residency: Janeret, Dana Kuehr, Mel",
 "date": "2026-10-16",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
 ],
 "subgenres": [
 "house",
-"techno"
+"minimal"
 ],
 "artists": [
 "Janeret",
@@ -9825,7 +10554,7 @@
 "title": "Club — Spray, Pureblast, Maco Maria",
 "date": "2026-10-17",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -9845,7 +10574,7 @@
 "title": "Concert — Girli",
 "date": "2026-10-20",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop",
@@ -9864,11 +10593,9 @@
 "title": "Simia @Badaboum",
 "date": "2026-10-21",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
-"genres": [
-"electro"
-],
+"genres": [],
 "subgenres": [],
 "artists": [
 "Simia"
@@ -9880,10 +10607,12 @@
 "title": "LA MAGIC LIVE BY DARLING DELUXE : KARAOKÉ & BAL LIVE",
 "date": "2026-10-22",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [],
-"subgenres": [],
+"subgenres": [
+"karaoke"
+],
 "artists": [
 "Darling Deluxe"
 ],
@@ -9894,7 +10623,7 @@
 "title": "Club — LA CH!CK: CH!CK MUSIC ONLY",
 "date": "2026-10-22",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop",
@@ -9913,14 +10642,14 @@
 "title": "Concert — Mari Merenda, Virginia Cambuci",
 "date": "2026-10-23",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "world",
 "latin"
 ],
 "subgenres": [
-"mpb"
+"brazilian"
 ],
 "artists": [
 "Mari Merenda",
@@ -9933,12 +10662,13 @@
 "title": "Club — Area x Shockwerk: TARKNO, RUIZ OSC1, LEX, Salomé DV",
 "date": "2026-10-24",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
 ],
 "subgenres": [
+"techno",
 "hard techno"
 ],
 "artists": [
@@ -9954,7 +10684,7 @@
 "title": "Concert – Mykki Blanco",
 "date": "2026-10-27",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "hip-hop",
@@ -9973,7 +10703,7 @@
 "title": "Concert — Lane 8",
 "date": "2026-10-28",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -9992,10 +10722,11 @@
 "title": "Concert — Hypershot: Europa, Sodomland, The Velvet Brothers",
 "date": "2026-10-29",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"rock"
+"rock",
+"punk"
 ],
 "subgenres": [],
 "artists": [
@@ -10010,7 +10741,7 @@
 "title": "Club — LA CH!CK: MOTHER MONSTER HALLOWEEN",
 "date": "2026-10-29",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop",
@@ -10029,7 +10760,7 @@
 "title": "Concert — Loukeman",
 "date": "2026-10-30",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -10045,14 +10776,14 @@
 "title": "Club — Silva Bumpa, Scolcab, Lespol b2b Unsho, Noon",
 "date": "2026-10-30",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
 ],
 "subgenres": [
 "uk garage",
-"bass"
+"bassline"
 ],
 "artists": [
 "Silva Bumpa",
@@ -10068,14 +10799,14 @@
 "title": "Halloween Party — Curses, Joe Lewandowski, Le Saint, RAG",
 "date": "2026-10-31",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
 ],
 "subgenres": [
-"dark disco",
-"ebm"
+"ebm",
+"dark disco"
 ],
 "artists": [
 "Curses",
@@ -10090,14 +10821,15 @@
 "title": "DIIV + special guests",
 "date": "2026-11-02",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie",
 "rock"
 ],
 "subgenres": [
-"shoegaze"
+"shoegaze",
+"dream pop"
 ],
 "artists": [
 "DIIV"
@@ -10109,10 +10841,11 @@
 "title": "Concert — AMORE + mori — Pitchfork Music Festival 2026",
 "date": "2026-11-03",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"indie"
+"indie",
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -10126,14 +10859,14 @@
 "title": "Concert — Common Saints + Kelly No Brakes & more : Pitchfork Music Festival 2026",
 "date": "2026-11-04",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie",
 "pop"
 ],
 "subgenres": [
-"psych pop"
+"psychedelic pop"
 ],
 "artists": [
 "Common Saints",
@@ -10146,7 +10879,7 @@
 "title": "Concert — Pitchfork Avant-Garde",
 "date": "2026-11-05",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie",
@@ -10161,7 +10894,7 @@
 "title": "Club — DH2: Pitchfork Music Festival Paris 2026",
 "date": "2026-11-05",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -10179,7 +10912,7 @@
 "title": "Concert — Pitchfork Avant-Garde",
 "date": "2026-11-06",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie",
@@ -10194,7 +10927,7 @@
 "title": "Concert — Pitchfork Avant-Garde",
 "date": "2026-11-07",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie",
@@ -10209,11 +10942,11 @@
 "title": "Whitemary x Elasi",
 "date": "2026-11-12",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "pop",
-"indie"
+"electro"
 ],
 "subgenres": [
 "italian pop"
@@ -10229,15 +10962,15 @@
 "title": "Concert — Maria Arnal",
 "date": "2026-11-19",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"folk",
 "world",
-"experimental"
+"experimental",
+"folk"
 ],
 "subgenres": [
-"catalan song"
+"catalan"
 ],
 "artists": [
 "Maria Arnal"
@@ -10249,7 +10982,7 @@
 "title": "Concert — Chloé Slater",
 "date": "2026-11-23",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie",
@@ -10268,14 +11001,13 @@
 "title": "camoufly — Badaboum",
 "date": "2026-11-28",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
-"electro",
-"indie"
+"electro"
 ],
 "subgenres": [
-"dream pop"
+"future bass"
 ],
 "artists": [
 "camoufly"
@@ -10287,7 +11019,7 @@
 "title": "JIGITZ — Badaboum",
 "date": "2027-02-19",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "electro"
@@ -10303,7 +11035,7 @@
 "title": "Ruby Haunt",
 "date": "2027-03-25",
 "time": null,
-"url": null,
+"url": "https://badaboum.paris/agenda/",
 "price": null,
 "genres": [
 "indie"
@@ -10322,7 +11054,7 @@
 },
 "philharmonie": {
 "digest": "f417d88f569d1689fbfd6783a66a1ccdbce6656f",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": []
 },
 "la-clef": {
@@ -10331,8 +11063,8 @@
 "events": []
 },
 "fgo-barbara": {
-"digest": "55173690fa56fb618d75453f1f2b86894f56cfea",
-"today": "2026-09-22",
+"digest": "d55d4547d4cf5343659233b4e9ecc2cd96d78f1d",
+"today": "2026-09-23",
 "events": [
 {
 "title": "JIRAFE des Musiques Actuelles",
@@ -10345,18 +11077,346 @@
 "artists": [],
 "is_music": false,
 "sold_out": false
+},
+{
+"title": "JIRAFE des Musiques Actuelles",
+"date": "2026-09-25",
+"time": "10:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Kahwa Book Club — Youssra Mahdi",
+"date": "2026-09-26",
+"time": "14:00",
+"url": null,
+"price": "Gratuit sur réservation",
+"genres": [],
+"subgenres": [],
+"artists": [
+"Youssra Mahdi"
+],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "BATBAT",
+"date": "2026-09-26",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"BATBAT"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Book Club Des Affranchies \"Nouveau départ\"",
+"date": "2026-09-27",
+"time": "16:00",
+"url": null,
+"price": "Gratuit sur réservation",
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Mewem Talk — Les Allié·es De La Cause Féministe Et Intersectionnelle",
+"date": "2026-09-29",
+"time": "18:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "T'AS LA REF #PARTY !",
+"date": "2026-10-02",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Silence Musique ! Festival — Sadandsolo + DND + MENDILABAZ + GT1BOIAVANTCSUR",
+"date": "2026-10-03",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Sadandsolo",
+"DND",
+"MENDILABAZ",
+"GT1BOIAVANTCSUR"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Club Mycélium - Rinse France",
+"date": "2026-10-07",
+"time": "18:30",
+"url": null,
+"price": "Gratuit",
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "A Festa — showcases",
+"date": "2026-10-08",
+"time": "19:30",
+"url": null,
+"price": "Entrée libre",
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Forum Santé Des Musicien·nes",
+"date": "2026-10-10",
+"time": "13:00",
+"url": null,
+"price": "Gratuit sur réservation",
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "MaMA Music & Convention",
+"date": "2026-10-14",
+"time": "19:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "MaMA Music & Convention — LOUISADONNA + MONA GUBA + WTAZZZ",
+"date": "2026-10-15",
+"time": "19:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"LOUISADONNA",
+"MONA GUBA",
+"WTAZZZ"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "MaMA Music & Convention — FLEUVES + ZERZURA + CHAMAYE",
+"date": "2026-10-16",
+"time": "19:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"FLEUVES",
+"ZERZURA",
+"CHAMAYE"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "LOUFOX + Bellboy",
+"date": "2026-10-22",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"LOUFOX",
+"Bellboy"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Kinji00 + Domingo Cruz",
+"date": "2026-10-23",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Kinji00",
+"Domingo Cruz"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Gender Fvck Klub - Halloween Edition #2 — Androkill + Belligerency + Joli Younes + Scorpiah + Akey + Gemini K + La Mulette",
+"date": "2026-10-31",
+"time": "23:00",
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"club"
+],
+"artists": [
+"Androkill",
+"Belligerency",
+"Joli Younes",
+"Scorpiah",
+"Akey",
+"Gemini K",
+"La Mulette"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "SAOIRSE DREAM & estelle allen + Michele Bry",
+"date": "2026-11-04",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"SAOIRSE DREAM",
+"estelle allen",
+"Michele Bry"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "ELEVATOR — Donevald + Xobo + A$ile + Eniah",
+"date": "2026-11-06",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Donevald",
+"Xobo",
+"A$ile",
+"Eniah"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "GU1T4R",
+"date": "2026-11-07",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"GU1T4R"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Jasmine not Jafar (release party) + guests",
+"date": "2026-11-25",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Jasmine not Jafar"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Naeko",
+"date": "2026-11-26",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Naeko"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "A Festa — showcases",
+"date": "2026-12-03",
+"time": "19:30",
+"url": null,
+"price": "Entrée libre",
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Rok & Dudu",
+"date": "2026-12-10",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Rok & Dudu"
+],
+"is_music": true,
+"sold_out": false
 }
 ]
 },
 "paris-la-defense-arena": {
 "digest": "d90f2c703d4c45e64bb9f8a272714526624c2c08",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Céline Dion Paris 2026",
-"date": "2026-10-17",
+"date": "2026-09-19",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -10375,7 +11435,7 @@
 "title": "Rolex Paris Masters",
 "date": "2026-10-31",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -10387,7 +11447,7 @@
 "title": "Supercross de Paris",
 "date": "2026-11-21",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -10399,7 +11459,7 @@
 "title": "Supercross de Paris",
 "date": "2026-11-22",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -10411,7 +11471,7 @@
 "title": "Muse",
 "date": "2026-11-27",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "rock"
@@ -10454,15 +11514,15 @@
 "title": "Joé Dwèt Filé",
 "date": "2026-12-05",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
-"soul-rnb",
-"world"
+"pop",
+"afro"
 ],
 "subgenres": [
-"zouk",
-"afro r&b"
+"kompa",
+"zouk"
 ],
 "artists": [
 "Joé Dwèt Filé"
@@ -10474,7 +11534,7 @@
 "title": "Anyma",
 "date": "2026-12-12",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "electro"
@@ -10504,7 +11564,7 @@
 "title": "Gims",
 "date": "2026-12-16",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "hip-hop",
@@ -10523,7 +11583,7 @@
 "title": "Gims",
 "date": "2026-12-17",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "hip-hop",
@@ -10590,7 +11650,7 @@
 "title": "Rush",
 "date": "2027-02-19",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "rock"
@@ -10609,7 +11669,7 @@
 "title": "Enhypen",
 "date": "2027-02-27",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop"
@@ -10627,14 +11687,14 @@
 "title": "KYO",
 "date": "2027-03-13",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "rock",
 "pop"
 ],
 "subgenres": [
-"pop-rock français"
+"pop rock français"
 ],
 "artists": [
 "Kyo"
@@ -10658,15 +11718,15 @@
 "title": "Ibrahim Maalouf",
 "date": "2027-04-10",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
 "world"
 ],
 "subgenres": [
-"oriental jazz",
-"trumpet"
+"jazz oriental",
+"trompette"
 ],
 "artists": [
 "Ibrahim Maalouf"
@@ -10678,14 +11738,14 @@
 "title": "Olivia Rodrigo",
 "date": "2027-04-23",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
 "rock"
 ],
 "subgenres": [
-"pop-punk"
+"pop punk"
 ],
 "artists": [
 "Olivia Rodrigo"
@@ -10697,14 +11757,14 @@
 "title": "Olivia Rodrigo",
 "date": "2027-04-24",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
 "rock"
 ],
 "subgenres": [
-"pop-punk"
+"pop punk"
 ],
 "artists": [
 "Olivia Rodrigo"
@@ -10716,7 +11776,7 @@
 "title": "Céline Dion Paris 2027",
 "date": "2027-05-08",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -10735,14 +11795,14 @@
 "title": "Blink-182",
 "date": "2027-06-15",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "punk",
 "rock"
 ],
 "subgenres": [
-"pop-punk"
+"pop punk"
 ],
 "artists": [
 "Blink-182"
@@ -10754,7 +11814,7 @@
 "title": "Karol G",
 "date": "2027-07-01",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "latin",
@@ -10770,10 +11830,10 @@
 "sold_out": false
 },
 {
-"title": "Harry Styles Paris 2027 - Together, Together Tour",
+"title": "Harry Styles - Together, Together Tour",
 "date": "2027-07-16",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -10787,10 +11847,10 @@
 "sold_out": false
 },
 {
-"title": "Harry Styles Paris 2027 - Together, Together Tour",
+"title": "Harry Styles - Together, Together Tour",
 "date": "2027-07-17",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -10804,10 +11864,10 @@
 "sold_out": false
 },
 {
-"title": "Harry Styles Paris 2027 - Together, Together Tour",
+"title": "Harry Styles - Together, Together Tour",
 "date": "2027-07-23",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -10821,10 +11881,10 @@
 "sold_out": false
 },
 {
-"title": "Harry Styles Paris 2027 - Together, Together Tour",
+"title": "Harry Styles - Together, Together Tour",
 "date": "2027-07-24",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -10841,7 +11901,7 @@
 "title": "Jok'Air",
 "date": "2027-09-25",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "hip-hop"
@@ -10856,10 +11916,10 @@
 "sold_out": false
 },
 {
-"title": "Soprano Paris 2028 - Le Karaoké Stadium Tour",
+"title": "Soprano - Le Karaoké Stadium Tour",
 "date": "2028-06-10",
 "time": null,
-"url": "https://www.plenitudearena.com/",
+"url": null,
 "price": null,
 "genres": [
 "hip-hop",
@@ -10877,28 +11937,9 @@
 ]
 },
 "le-trabendo": {
-"digest": "70eaad6675571c37e22bdd8ed9377b7c3824f5e6",
-"today": "2026-09-22",
+"digest": "758a16d55b1e6e2f84f82d0f02d4440db94f9a05",
+"today": "2026-09-23",
 "events": [
-{
-"title": "New Constellations",
-"date": "2026-09-22",
-"time": null,
-"url": null,
-"price": null,
-"genres": [
-"indie",
-"pop"
-],
-"subgenres": [
-"indie pop"
-],
-"artists": [
-"New Constellations"
-],
-"is_music": true,
-"sold_out": false
-},
 {
 "title": "Rodolphe Burger",
 "date": "2026-09-24",
@@ -10906,31 +11947,11 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"chanson"
+"rock"
 ],
 "subgenres": [],
 "artists": [
 "Rodolphe Burger"
-],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "Basses Fréquences Club : Dasha Rush + Boskøw + Secret Guest",
-"date": "2026-09-26",
-"time": null,
-"url": null,
-"price": null,
-"genres": [
-"electro"
-],
-"subgenres": [
-"techno"
-],
-"artists": [
-"Dasha Rush",
-"Boskøw"
 ],
 "is_music": true,
 "sold_out": false
@@ -11014,8 +12035,8 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"indie"
+"punk",
+"pop"
 ],
 "subgenres": [
 "pop-punk"
@@ -11036,7 +12057,9 @@
 "indie",
 "pop"
 ],
-"subgenres": [],
+"subgenres": [
+"indie pop"
+],
 "artists": [
 "Matt Maeson"
 ],
@@ -11050,8 +12073,7 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"punk"
+"rock"
 ],
 "subgenres": [],
 "artists": [
@@ -11067,11 +12089,11 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"funk"
+"indie",
+"pop"
 ],
 "subgenres": [
-"synth-pop"
+"synth funk"
 ],
 "artists": [
 "Donny Benét"
@@ -11086,11 +12108,11 @@
 "url": null,
 "price": null,
 "genres": [
-"afro",
-"world"
+"world",
+"afro"
 ],
 "subgenres": [
-"afro-psych"
+"afro-psychedelic"
 ],
 "artists": [
 "BCUC"
@@ -11115,7 +12137,7 @@
 "Lucy Bedroque"
 ],
 "is_music": true,
-"sold_out": false
+"sold_out": true
 },
 {
 "title": "ARTE Mix Ø Trabendo 2026",
@@ -11140,11 +12162,12 @@
 "url": null,
 "price": null,
 "genres": [
-"reggae"
+"reggae",
+"electro"
 ],
 "subgenres": [
 "dub",
-"sound system"
+"dubstep"
 ],
 "artists": [],
 "is_music": true,
@@ -11230,7 +12253,7 @@
 ],
 "subgenres": [
 "drum and bass",
-"dubstep"
+"bass music"
 ],
 "artists": [
 "Tape B"
@@ -11282,11 +12305,11 @@
 "url": null,
 "price": null,
 "genres": [
-"indie"
+"indie",
+"rock"
 ],
 "subgenres": [
-"shoegaze",
-"britpop"
+"shoegaze"
 ],
 "artists": [
 "The Boo Radleys"
@@ -11320,7 +12343,6 @@
 "metal"
 ],
 "subgenres": [
-"nu metal",
 "rap metal"
 ],
 "artists": [
@@ -11374,7 +12396,7 @@
 "electro"
 ],
 "subgenres": [
-"hyperpop"
+"club"
 ],
 "artists": [
 "Bassvictim"
@@ -11401,14 +12423,45 @@
 "sold_out": false
 },
 {
+"title": "Pitchfork Club Night 1 [VENDREDI]",
+"date": "2026-11-06",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"techno"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "PITCHFORK CLUB NIGHT 2 [SAMEDI]",
+"date": "2026-11-07",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"techno"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
 "title": "Adrien Soleiman",
 "date": "2026-11-10",
 "time": null,
 "url": null,
 "price": null,
 "genres": [
-"jazz",
-"pop"
+"jazz"
 ],
 "subgenres": [],
 "artists": [
@@ -11424,12 +12477,11 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"punk"
+"punk",
+"rock"
 ],
 "subgenres": [
-"psych-rock",
-"garage"
+"garage psych"
 ],
 "artists": [
 "Frankie and the Witch Fingers"
@@ -11445,6 +12497,7 @@
 "price": null,
 "genres": [
 "folk",
+"world",
 "afro"
 ],
 "subgenres": [
@@ -11484,8 +12537,7 @@
 "url": null,
 "price": null,
 "genres": [
-"soul-rnb",
-"funk"
+"soul"
 ],
 "subgenres": [],
 "artists": [
@@ -11592,9 +12644,7 @@
 "hip-hop",
 "soul-rnb"
 ],
-"subgenres": [
-"alternative rap"
-],
+"subgenres": [],
 "artists": [
 "Genesis Owusu"
 ],
@@ -11664,9 +12714,7 @@
 "punk",
 "rock"
 ],
-"subgenres": [
-"punk rock"
-],
+"subgenres": [],
 "artists": [
 "Kid Kapichi"
 ],
@@ -11713,7 +12761,7 @@
 "price": null,
 "genres": [
 "indie",
-"punk"
+"rock"
 ],
 "subgenres": [
 "post-punk"
@@ -11731,8 +12779,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"punk"
+"punk",
+"pop"
 ],
 "subgenres": [
 "pop-punk"
@@ -11753,7 +12801,7 @@
 "rock"
 ],
 "subgenres": [
-"classic rock"
+"southern rock"
 ],
 "artists": [
 "The Sheepdogs"
@@ -11807,8 +12855,7 @@
 "url": null,
 "price": null,
 "genres": [
-"punk",
-"metal"
+"punk"
 ],
 "subgenres": [
 "hardcore"
@@ -11827,10 +12874,9 @@
 "price": null,
 "genres": [
 "rock",
-"indie"
+"experimental"
 ],
 "subgenres": [
-"post-punk",
 "noise rock"
 ],
 "artists": [
@@ -11889,6 +12935,24 @@
 "subgenres": [],
 "artists": [
 "Almost Monday"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Radie Peat",
+"date": "2027-02-01",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"folk"
+],
+"subgenres": [
+"irish folk"
+],
+"artists": [
+"Radie Peat"
 ],
 "is_music": true,
 "sold_out": false
@@ -11978,7 +13042,7 @@
 "latin"
 ],
 "subgenres": [
-"psych-rock",
+"psych rock",
 "cumbia"
 ],
 "artists": [
@@ -11994,8 +13058,8 @@
 "url": null,
 "price": null,
 "genres": [
-"rock",
-"punk"
+"punk",
+"indie"
 ],
 "subgenres": [
 "post-punk"
@@ -12018,7 +13082,7 @@
 ],
 "subgenres": [
 "stoner rock",
-"psych"
+"psych rock"
 ],
 "artists": [
 "Elder",
@@ -12034,11 +13098,11 @@
 "url": null,
 "price": null,
 "genres": [
-"rock"
+"rock",
+"punk"
 ],
 "subgenres": [
-"post-hardcore",
-"emo"
+"post-hardcore"
 ],
 "artists": [
 "Movements"
@@ -12069,12 +13133,10 @@
 "url": null,
 "price": null,
 "genres": [
-"funk",
-"electro"
+"rock",
+"funk"
 ],
-"subgenres": [
-"nu-disco"
-],
+"subgenres": [],
 "artists": [
 "High Fade"
 ],
@@ -12164,7 +13226,7 @@
 "jazz"
 ],
 "subgenres": [
-"nu-jazz"
+"nu jazz"
 ],
 "artists": [
 "Corto Alto"
@@ -12211,11 +13273,11 @@
 "url": null,
 "price": null,
 "genres": [
-"soul-rnb",
+"soul",
 "blues"
 ],
 "subgenres": [
-"southern soul"
+"bayou soul"
 ],
 "artists": [
 "Marc Broussard"
@@ -12251,7 +13313,7 @@
 "indie"
 ],
 "subgenres": [
-"noise pop",
+"alternative rock",
 "shoegaze"
 ],
 "artists": [
@@ -12263,16 +13325,17 @@
 ]
 },
 "la-station": {
-"digest": "801fbf513e7c626a8dc70b0cefbacb4022e46203",
-"today": "2026-09-22",
+"digest": "b054efd323f10db21a52568fe7d79bd0ae9f201d",
+"today": "2026-09-23",
 "events": [
 {
-"title": "qaher : a fundraising event for Palestine",
-"date": "2026-09-22",
+"title": "CICLADE — Devon Rexi • Nicolini",
+"date": "2026-09-23",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
+"experimental",
 "electro"
 ],
 "subgenres": [],
@@ -12281,28 +13344,10 @@
 "sold_out": false
 },
 {
-"title": "CICLADE — Devon Rexi • Nicolini",
-"date": "2026-09-23",
-"time": null,
-"url": null,
-"price": null,
-"genres": [
-"electro",
-"experimental"
-],
-"subgenres": [],
-"artists": [
-"Devon Rexi",
-"Nicolini"
-],
-"is_music": true,
-"sold_out": false
-},
-{
 "title": "Zawa Show",
 "date": "2026-09-25",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
@@ -12316,7 +13361,7 @@
 "title": "EDGING",
 "date": "2026-09-26",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
@@ -12332,7 +13377,7 @@
 "title": "Heith: Escape Lounge + Leila Bordreuil",
 "date": "2026-09-30",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "experimental",
@@ -12352,7 +13397,7 @@
 "title": "paris electronic week",
 "date": "2026-10-01",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
@@ -12366,11 +13411,11 @@
 "title": "Deli Girls • Donna Haringwey",
 "date": "2026-10-02",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
-"electro",
-"punk"
+"punk",
+"electro"
 ],
 "subgenres": [
 "industrial"
@@ -12386,11 +13431,9 @@
 "title": "white garden",
 "date": "2026-10-02",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
-"genres": [
-"experimental"
-],
+"genres": [],
 "subgenres": [],
 "artists": [],
 "is_music": true,
@@ -12400,7 +13443,7 @@
 "title": "TEMET X FATA MORGANA",
 "date": "2026-10-03",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
@@ -12408,10 +13451,7 @@
 "subgenres": [
 "club"
 ],
-"artists": [
-"Temet",
-"Fata Morgana"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -12419,7 +13459,7 @@
 "title": "ONDULATION by ATOEM #2",
 "date": "2026-10-08",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
@@ -12435,7 +13475,7 @@
 "title": "Eighty Cuts • Stéphanie Lotion",
 "date": "2026-10-10",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro",
@@ -12453,24 +13493,23 @@
 "title": "ENDLESS HARDCORE SUMMER",
 "date": "2026-10-10",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
 ],
 "subgenres": [
-"hardcore",
-"gabber"
+"hardcore"
 ],
 "artists": [],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Entre ce monde et L’autre monde - résidence de marie-pierre le cocq",
+"title": "Entre ce monde et L'autre monde - résidence de marie-pierre le cocq",
 "date": "2026-10-13",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "experimental"
@@ -12486,15 +13525,13 @@
 "title": "Roomer • Vision Fortune",
 "date": "2026-10-15",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "experimental",
 "rock"
 ],
-"subgenres": [
-"post-punk"
-],
+"subgenres": [],
 "artists": [
 "Roomer",
 "Vision Fortune"
@@ -12506,7 +13543,21 @@
 "title": "Club Late x Lace Radio",
 "date": "2026-10-16",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Professeur Promesses #38",
+"date": "2026-10-16",
+"time": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
@@ -12519,17 +13570,15 @@
 "sold_out": false
 },
 {
-"title": "Professeur Promesses #38",
-"date": "2026-10-16",
+"title": "Club Late x Lace Radio",
+"date": "2026-10-22",
 "time": null,
-"url": null,
+"url": "https://lastation.paris/stationgdm/agenda",
 "price": null,
 "genres": [
 "electro"
 ],
-"subgenres": [
-"club"
-],
+"subgenres": [],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -12537,8 +13586,8 @@
 ]
 },
 "cirque-electrique": {
-"digest": "1db03c2031722a91bcbf3401b76f091189c3522d",
-"today": "2026-09-22",
+"digest": "ced1155954a3f8420cd4a6f5ed56dd547544139e",
+"today": "2026-09-23",
 "events": [
 {
 "title": "MASCARA ROCKS présente Spaghetti Kiss Release Party + Aqua Tofana + Aneth Penny",
@@ -12550,9 +13599,7 @@
 "rock",
 "punk"
 ],
-"subgenres": [
-"garage punk"
-],
+"subgenres": [],
 "artists": [
 "Spaghetti Kiss",
 "Aqua Tofana",
@@ -12562,7 +13609,7 @@
 "sold_out": false
 },
 {
-"title": "Macbeth - par la compagnie Le Bateau Noir",
+"title": "Macbeth par la compagnie Le Bateau Noir",
 "date": "2026-09-24",
 "time": "20:00",
 "url": null,
@@ -12576,7 +13623,7 @@
 "sold_out": false
 },
 {
-"title": "Macbeth - par la compagnie Le Bateau Noir",
+"title": "Macbeth par la compagnie Le Bateau Noir",
 "date": "2026-09-25",
 "time": "20:00",
 "url": null,
@@ -12609,7 +13656,7 @@
 "sold_out": false
 },
 {
-"title": "BREAKdown ANTIclub - Horama x Magnolia",
+"title": "BREAKdown ANTIclub — Horama x Magnolia",
 "date": "2026-09-25",
 "time": "20:00",
 "url": null,
@@ -12638,7 +13685,9 @@
 "genres": [
 "electro"
 ],
-"subgenres": [],
+"subgenres": [
+"techno"
+],
 "artists": [
 "VDA",
 "BEN FATE",
@@ -12648,35 +13697,31 @@
 "sold_out": false
 },
 {
-"title": "Les Samedimanche du Clown - par Iziago Productions",
+"title": "Les Samedimanche du Clown par Iziago Productions",
 "date": "2026-09-26",
 "time": "15:00",
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Iziago Productions"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Les Samedimanche du Clown - par Iziago Productions",
+"title": "Les Samedimanche du Clown par Iziago Productions",
 "date": "2026-09-27",
 "time": "15:00",
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Iziago Productions"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "LE CABARET DE NULLE PART - Une création de Masha Kils, présentée par Mulov",
+"title": "LE CABARET DE NULLE PART — Une création de Masha Kils, présentée par Mulov",
 "date": "2026-09-30",
 "time": "21:00",
 "url": null,
@@ -12684,7 +13729,6 @@
 "genres": [],
 "subgenres": [],
 "artists": [
-"Masha Kils",
 "Brenda Mour",
 "Salem",
 "Roxy More"
@@ -12693,15 +13737,13 @@
 "sold_out": false
 },
 {
-"title": "Bubbles Jam - Par Anyjam Tonight, avec Imane & Agathe",
+"title": "Bubbles Jam — Par Anyjam Tonight, avec Imane & Agathe",
 "date": "2026-09-30",
 "time": "20:00",
 "url": null,
 "price": null,
 "genres": [],
-"subgenres": [
-"jam session"
-],
+"subgenres": [],
 "artists": [
 "Imane",
 "Agathe"
@@ -12710,7 +13752,7 @@
 "sold_out": false
 },
 {
-"title": "LA VELU.E - Cabaret de tous poils",
+"title": "LA VELU.E — Cabaret de tous poils",
 "date": "2026-10-01",
 "time": "19:00",
 "url": null,
@@ -12789,7 +13831,7 @@
 "sold_out": false
 },
 {
-"title": "TARS - EXPEDITION 04",
+"title": "TARS — EXPEDITION 04",
 "date": "2026-10-03",
 "time": "19:45",
 "url": null,
@@ -12810,7 +13852,7 @@
 "sold_out": false
 },
 {
-"title": "Don Baltha - Un spectacle de la compagnie L'Art Nak",
+"title": "Don Baltha — Un spectacle de la compagnie L’Art Nak",
 "date": "2026-10-07",
 "time": "17:00",
 "url": null,
@@ -12818,13 +13860,13 @@
 "genres": [],
 "subgenres": [],
 "artists": [
-"Compagnie L'Art Nak"
+"Compagnie L’Art Nak"
 ],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Don Baltha - Un spectacle de la compagnie L'Art Nak",
+"title": "Don Baltha — Un spectacle de la compagnie L’Art Nak",
 "date": "2026-10-08",
 "time": "20:30",
 "url": null,
@@ -12832,13 +13874,13 @@
 "genres": [],
 "subgenres": [],
 "artists": [
-"Compagnie L'Art Nak"
+"Compagnie L’Art Nak"
 ],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Don Baltha - Un spectacle de la compagnie L'Art Nak",
+"title": "Don Baltha — Un spectacle de la compagnie L’Art Nak",
 "date": "2026-10-10",
 "time": "15:00",
 "url": null,
@@ -12846,13 +13888,13 @@
 "genres": [],
 "subgenres": [],
 "artists": [
-"Compagnie L'Art Nak"
+"Compagnie L’Art Nak"
 ],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Don Baltha - Un spectacle de la compagnie L'Art Nak",
+"title": "Don Baltha — Un spectacle de la compagnie L’Art Nak",
 "date": "2026-10-11",
 "time": "15:00",
 "url": null,
@@ -12860,7 +13902,7 @@
 "genres": [],
 "subgenres": [],
 "artists": [
-"Compagnie L'Art Nak"
+"Compagnie L’Art Nak"
 ],
 "is_music": false,
 "sold_out": false
@@ -12876,7 +13918,7 @@
 "folk"
 ],
 "subgenres": [
-"chanson festive"
+"chanson bohème"
 ],
 "artists": [
 "Les Gars de Passage",
@@ -12933,7 +13975,9 @@
 "genres": [
 "electro"
 ],
-"subgenres": [],
+"subgenres": [
+"techno"
+],
 "artists": [
 "Romain Say",
 "Sopycal",
@@ -12947,7 +13991,7 @@
 "sold_out": false
 },
 {
-"title": "La putain de performance - La Bellini",
+"title": "La putain de performance — La Bellini",
 "date": "2026-10-14",
 "time": "20:30",
 "url": null,
@@ -12961,7 +14005,7 @@
 "sold_out": false
 },
 {
-"title": "La putain de performance - La Bellini",
+"title": "La putain de performance — La Bellini",
 "date": "2026-10-15",
 "time": "20:30",
 "url": null,
@@ -13056,8 +14100,8 @@
 "rock"
 ],
 "subgenres": [
-"screamo",
-"emo"
+"emo",
+"screamo"
 ],
 "artists": [
 "CROWQUILL",
@@ -13103,14 +14147,12 @@
 "sold_out": false
 },
 {
-"title": "SuperSonique - Cie SuperCho + Zartan + Cosmyte + Pantomiman & Abiotiq",
+"title": "SuperSonique — Cie SuperCho + Zartan + Cosmyte + Pantomiman & Abiotiq",
 "date": "2026-10-24",
 "time": "19:30",
 "url": null,
 "price": null,
-"genres": [
-"electro"
-],
+"genres": [],
 "subgenres": [],
 "artists": [
 "Cie SuperCho",
@@ -13123,7 +14165,7 @@
 "sold_out": false
 },
 {
-"title": "Le Corbeau et le Renard - Cie Tralala Splatch",
+"title": "Le Corbeau et le Renard — Cie Tralala Splatch",
 "date": "2026-10-28",
 "time": "15:00",
 "url": null,
@@ -13137,7 +14179,7 @@
 "sold_out": false
 },
 {
-"title": "Le Corbeau et le Renard - Cie Tralala Splatch",
+"title": "Le Corbeau et le Renard — Cie Tralala Splatch",
 "date": "2026-10-29",
 "time": "15:00",
 "url": null,
@@ -13191,7 +14233,7 @@
 "sold_out": false
 },
 {
-"title": "Bb Powder - Jam & Battle House",
+"title": "Bb Powder — Jam & Battle House",
 "date": "2026-10-30",
 "time": "19:00",
 "url": null,
@@ -13202,9 +14244,7 @@
 "subgenres": [
 "house"
 ],
-"artists": [
-"Bb Powder"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -13223,21 +14263,21 @@
 "post-rock"
 ],
 "artists": [
-"ENABLERS",
-"THE HECKLE & JECKLE CONSPIRACY"
+"Enablers",
+"The Heckle & Jeckle Conspiracy"
 ],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "La CyberQueer - ILEL ELIL + TATA BAND·E + TEDAAK + BLOOD DRINKER + LauVe + LUNEL & SCOLIOSE + FRANCE BLÜE",
+"title": "La CyberQueer : ILEL ELIL + TATA BAND·E + TEDAAK + BLOOD DRINKER + LauVe + LUNEL & SCOLIOSE + FRANCE BLÜE",
 "date": "2026-10-31",
-"time": "20:30",
+"time": "18:00",
 "url": null,
 "price": null,
 "genres": [
 "electro",
-"punk"
+"experimental"
 ],
 "subgenres": [],
 "artists": [
@@ -13253,7 +14293,7 @@
 "sold_out": false
 },
 {
-"title": "SYRANO feat. Danielito Bravo de TRYO - Concert anniversaire + MARIN FAUVEL",
+"title": "SYRANO feat. Danielito Bravo de TRYO + PREMIÈRE PARTIE : MARIN FAUVEL",
 "date": "2026-11-04",
 "time": "20:00",
 "url": null,
@@ -13263,43 +14303,39 @@
 ],
 "subgenres": [],
 "artists": [
-"SYRANO",
+"Syrano",
 "Danielito Bravo",
-"MARIN FAUVEL"
+"Marin Fauvel"
 ],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Les Samedimanche du Clown - par Iziago Productions",
+"title": "Les Samedimanche du Clown par Iziago Productions",
 "date": "2026-11-07",
 "time": "15:00",
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Iziago Productions"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Les Samedimanche du Clown - par Iziago Productions",
+"title": "Les Samedimanche du Clown par Iziago Productions",
 "date": "2026-11-08",
 "time": "15:00",
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Iziago Productions"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "LA VELU.E - Cabaret de tous poils",
+"title": "LA VELU.E — Cabaret de tous poils",
 "date": "2026-11-12",
 "time": "19:00",
 "url": null,
@@ -13311,7 +14347,7 @@
 "sold_out": false
 },
 {
-"title": "Warum Joe + NOno FUTUr + New Rose - Terminus des prétentieux",
+"title": "Warum Joe + NOno FUTUr + New Rose",
 "date": "2026-11-12",
 "time": "20:30",
 "url": null,
@@ -13321,8 +14357,8 @@
 "electro"
 ],
 "subgenres": [
-"post-punk",
-"industrial"
+"industrial",
+"cold wave"
 ],
 "artists": [
 "Warum Joe",
@@ -13345,7 +14381,7 @@
 "sold_out": false
 },
 {
-"title": "POluxx x Fools Affection - Soirée pop rock & rétro pop",
+"title": "POluxx x Fools Affection — Soirée pop rock & rétro pop",
 "date": "2026-11-19",
 "time": "20:00",
 "url": null,
@@ -13403,14 +14439,13 @@
 "sold_out": false
 },
 {
-"title": "DILI 15 PIGES PARTY - Aälma Dili",
+"title": "DILI 15 PIGES PARTY — Aälma Dili",
 "date": "2026-11-20",
 "time": "21:00",
 "url": null,
 "price": null,
 "genres": [
-"world",
-"folk"
+"world"
 ],
 "subgenres": [
 "gypsy swing",
@@ -13423,7 +14458,7 @@
 "sold_out": false
 },
 {
-"title": "La putain de performance - La Bellini",
+"title": "La putain de performance — La Bellini",
 "date": "2026-11-25",
 "time": "20:30",
 "url": null,
@@ -13437,7 +14472,7 @@
 "sold_out": false
 },
 {
-"title": "La putain de performance - La Bellini",
+"title": "La putain de performance — La Bellini",
 "date": "2026-11-26",
 "time": "20:30",
 "url": null,
@@ -13451,7 +14486,7 @@
 "sold_out": false
 },
 {
-"title": "LA VELU.E - Cabaret de tous poils",
+"title": "LA VELU.E — Cabaret de tous poils",
 "date": "2026-12-17",
 "time": "19:00",
 "url": null,
@@ -13465,26 +14500,44 @@
 ]
 },
 "la-dame-de-canton": {
-"digest": "bdecb48c5d1e3e8d6adfe2cae53ccb02780f5068",
-"today": "2026-09-22",
+"digest": "dccaefdd73627d1404c2facecddcb4d7803a5ab0",
+"today": "2026-09-23",
 "events": [
-{
-"title": "Armelle Yons x Kaptain Bando",
-"date": "2026-09-22",
-"time": null,
-"url": "https://www.damedecanton.com/event-list",
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
 {
 "title": "The Mercury Riots (USA)",
 "date": "2026-09-23",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
+"price": null,
+"genres": [
+"rock"
+],
+"subgenres": [],
+"artists": [
+"The Mercury Riots"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Chu Chi Cha (release party)",
+"date": "2026-09-24",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Chu Chi Cha"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "EMERGENZA Festival Paris",
+"date": "2026-09-29",
+"time": null,
+"url": null,
 "price": null,
 "genres": [
 "rock"
@@ -13495,41 +14548,17 @@
 "sold_out": false
 },
 {
-"title": "Chu Chi Cha (release party)",
-"date": "2026-09-24",
-"time": null,
-"url": "https://www.damedecanton.com/event-list",
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
-"title": "EMERGENZA Festival Paris",
-"date": "2026-09-29",
-"time": null,
-"url": "https://www.damedecanton.com/event-list",
-"price": null,
-"genres": [
-"rock",
-"indie"
-],
-"subgenres": [],
-"artists": [],
-"is_music": true,
-"sold_out": false
-},
-{
 "title": "Lucie Shame x The Reed Conservation Society",
 "date": "2026-09-30",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Lucie Shame",
+"The Reed Conservation Society"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13537,7 +14566,7 @@
 "title": "THE EXPATS JAM",
 "date": "2026-10-01",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -13545,7 +14574,9 @@
 "subgenres": [
 "jam session"
 ],
-"artists": [],
+"artists": [
+"The Expats Jam"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13553,11 +14584,14 @@
 "title": "Gassine Zecar x L'oreille KC",
 "date": "2026-10-02",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Gassine Zecar",
+"L'oreille KC"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13565,13 +14599,16 @@
 "title": "Emma Giulia x David Atger Quartet",
 "date": "2026-10-06",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Emma Giulia",
+"David Atger Quartet"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13579,11 +14616,10 @@
 "title": "EMERGENZA Festival Paris",
 "date": "2026-10-07",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
-"rock",
-"indie"
+"rock"
 ],
 "subgenres": [],
 "artists": [],
@@ -13594,11 +14630,14 @@
 "title": "KNDNS x SICKLIPS",
 "date": "2026-10-09",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"KNDNS",
+"SICKLIPS"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13606,11 +14645,15 @@
 "title": "VIOLET NOISE x DIIVAGUE x ANDREW CLARKE",
 "date": "2026-10-13",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Violet Noise",
+"Diivague",
+"Andrew Clarke"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13618,11 +14661,14 @@
 "title": "JOZEPH x JUDE ASTON",
 "date": "2026-10-14",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Jozeph",
+"Jude Aston"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13630,11 +14676,14 @@
 "title": "SUZON x RONDO",
 "date": "2026-10-15",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Suzon",
+"Rondo"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13642,7 +14691,7 @@
 "title": "LA TRIPLE // Tribute to AMY and Co",
 "date": "2026-10-16",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
 "soul-rnb"
@@ -13650,7 +14699,24 @@
 "subgenres": [
 "tribute"
 ],
-"artists": [],
+"artists": [
+"La Triple"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "MILO ASKA - Release Party x 1ère partie Lilo Applered",
+"date": "2026-10-20",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [
+"Milo Aska",
+"Lilo Applered"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13658,14 +14724,16 @@
 "title": "PACO DIATTA",
 "date": "2026-10-22",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
 "world",
 "afro"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Paco Diatta"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13673,7 +14741,7 @@
 "title": "BRASSTROLOGY x ROLLAND MERGUEZ",
 "date": "2026-10-23",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
 "funk"
@@ -13681,7 +14749,10 @@
 "subgenres": [
 "brass band"
 ],
-"artists": [],
+"artists": [
+"Brasstrology",
+"Rolland Merguez"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13689,11 +14760,13 @@
 "title": "CÉLESTIN",
 "date": "2026-10-30",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Célestin"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -13701,7 +14774,7 @@
 "title": "DIRE STRAITS TRIBUTE by sTRAITS",
 "date": "2026-11-07",
 "time": null,
-"url": "https://www.damedecanton.com/event-list",
+"url": null,
 "price": null,
 "genres": [
 "rock"
@@ -13718,8 +14791,8 @@
 ]
 },
 "la-java": {
-"digest": "a646b1eebd8bea1825312ff59a36eade3e8dce53",
-"today": "2026-09-22",
+"digest": "f91a515556a89acc6411732f1a701f6091df50a2",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Johnny Makam + Najma Dream",
@@ -13728,14 +14801,13 @@
 "url": null,
 "price": null,
 "genres": [
+"world",
 "rock",
-"electro",
-"world"
+"electro"
 ],
 "subgenres": [
-"anatolian rock",
-"queer punk",
-"balkan"
+"anatolian psych",
+"queer punk"
 ],
 "artists": [
 "Johnny Makam",
@@ -13797,7 +14869,6 @@
 "electro"
 ],
 "subgenres": [
-"house",
 "deep house"
 ],
 "artists": [
@@ -13819,13 +14890,36 @@
 "electro"
 ],
 "subgenres": [
-"house"
+"house",
+"vinyl only"
 ],
 "artists": [
 "Elias Mazian",
 "Poppy",
 "The Doudz",
 "Bapt2"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Flasha : Bailey Ibbs, Serō, Mirnaxx, Lou De Swarte & Maÿ",
+"date": "2026-10-03",
+"time": "21:30",
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"techno"
+],
+"artists": [
+"Bailey Ibbs",
+"Serō",
+"Mirnaxx",
+"Lou De Swarte",
+"Maÿ"
 ],
 "is_music": true,
 "sold_out": false
@@ -13841,7 +14935,7 @@
 "soul-rnb"
 ],
 "subgenres": [
-"2000s r&b",
+"2000s rnb",
 "street dance battle"
 ],
 "artists": [],
@@ -13877,9 +14971,8 @@
 "electro"
 ],
 "subgenres": [
-"tech house",
 "minimal",
-"deep tech"
+"tech house"
 ],
 "artists": [
 "Stef Davidse",
@@ -13946,7 +15039,7 @@
 ],
 "artists": [
 "Yuksek",
-"Fleur de Mur",
+"Fleur De Mur",
 "Tartine Music"
 ],
 "is_music": true,
@@ -13980,7 +15073,7 @@
 },
 "doc": {
 "digest": "90fd2deec4f4876246dcc4f1cbaeaeea3358f1a4",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Food&Film",
@@ -14009,39 +15102,22 @@
 ]
 },
 "le-bal-blomet": {
-"digest": "d215a0fb11c592378a11e38a6712fdad7abb54c1",
-"today": "2026-09-22",
+"digest": "8183564f7e26ce7e90635d09b79f6d902e160c7f",
+"today": "2026-09-23",
 "events": [
-{
-"title": "LE BAL DES PHILOSOPHES – L'IA PEUT-ELLE PENSER ?",
-"date": "2026-09-22",
-"time": "19:00",
-"url": "https://www.balblomet.fr/agenda",
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [
-"Martin Legros",
-"Pierre-François Blanchard"
-],
-"is_music": false,
-"sold_out": false
-},
 {
 "title": "MAMA SHAKERS",
 "date": "2026-09-23",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
-"blues",
-"folk"
+"blues"
 ],
 "subgenres": [
 "swing",
-"new orleans",
-"country"
+"new orleans"
 ],
 "artists": [
 "Mama Shakers"
@@ -14053,7 +15129,7 @@
 "title": "OLGA AMELCHENKO – LES CONCERTS JAZZ MAGAZINE",
 "date": "2026-09-24",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14071,7 +15147,7 @@
 "title": "LA LÉGENDE DE L'HEURE EXQUISE",
 "date": "2026-09-25",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -14087,7 +15163,7 @@
 "title": "LA LÉGENDE DE L'HEURE EXQUISE",
 "date": "2026-09-26",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -14103,7 +15179,7 @@
 "title": "LES DIMANCHES DE L'HISTOIRE DE L'ART – RUBENS",
 "date": "2026-09-27",
 "time": "10:30",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14117,7 +15193,7 @@
 "title": "PARIS SOUL CONNEXION – RAY CHARLES",
 "date": "2026-09-30",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "soul-rnb",
@@ -14136,14 +15212,13 @@
 "title": "LES 1001 NUITS DU JAZZ – ESOTERIC & MAGIC JAZZ !",
 "date": "2026-10-01",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [
-"spiritual jazz",
-"free jazz"
+"spiritual jazz"
 ],
 "artists": [
 "Raphaël Imbert",
@@ -14156,7 +15231,7 @@
 "title": "BAPTISTE TROTIGNON TRIO – ART IS SIMPLE",
 "date": "2026-10-02",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14174,7 +15249,7 @@
 "title": "BAPTISTE TROTIGNON TRIO – ART IS SIMPLE",
 "date": "2026-10-03",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14192,7 +15267,7 @@
 "title": "NATALIE DESSAY CHANTE NOUGARO",
 "date": "2026-10-05",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -14210,7 +15285,7 @@
 "title": "NATALIE DESSAY CHANTE NOUGARO",
 "date": "2026-10-06",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -14228,7 +15303,7 @@
 "title": "NATALIE DESSAY CHANTE NOUGARO",
 "date": "2026-10-07",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -14246,7 +15321,7 @@
 "title": "NATALIE DESSAY CHANTE NOUGARO",
 "date": "2026-10-08",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -14264,7 +15339,7 @@
 "title": "NATALIE DESSAY CHANTE NOUGARO",
 "date": "2026-10-09",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -14282,7 +15357,7 @@
 "title": "NATALIE DESSAY CHANTE NOUGARO",
 "date": "2026-10-10",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -14300,7 +15375,7 @@
 "title": "LES DIMANCHES DE L'HISTOIRE DE L'ART – MARY CASSATT",
 "date": "2026-10-11",
 "time": "10:30",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14314,7 +15389,7 @@
 "title": "LE BAL DES PHILOSOPHES – LA MAJORITÉ A-T-ELLE TOUJOURS RAISON EN DÉMOCRATIE ?",
 "date": "2026-10-12",
 "time": "19:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14329,7 +15404,7 @@
 "title": "LES 1001 NUITS DU JAZZ – NEW ORLEANS, LA VILLE QUI INVENTA LE JAZZ",
 "date": "2026-10-14",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -14347,14 +15422,12 @@
 "title": "TRIBUTE TO WAYNE SHORTER BY STEFAN FILEY – LES CONCERTS JAZZ MAGAZINE",
 "date": "2026-10-15",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
-"subgenres": [
-"post-bop"
-],
+"subgenres": [],
 "artists": [
 "Stefan Filey",
 "China Moses"
@@ -14366,7 +15439,7 @@
 "title": "PORGY & BESS – GEORGE GERSHWIN",
 "date": "2026-10-16",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical",
@@ -14383,7 +15456,7 @@
 "title": "PIANO MAN 2, LE PIANO DANS LA POP FRANÇAISE – DOMINIQUE FILLON",
 "date": "2026-10-17",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "pop",
@@ -14405,14 +15478,14 @@
 "title": "L'ORCHESTRE DU BAL BLOMET \"SWEET RHYTHM\" – CAB CALLOWAY",
 "date": "2026-10-20",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [
-"swing",
-"big band"
+"big band",
+"swing"
 ],
 "artists": [
 "L'Orchestre du Bal Blomet",
@@ -14426,7 +15499,7 @@
 "title": "LA SYMPHONIE DE POCHE – TABLEAUX D'UNE NOUVELLE EXPOSITION",
 "date": "2026-10-21",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical"
@@ -14442,11 +15515,12 @@
 "title": "PHILIPPE ET MARCEL POWELL – LES CONCERTS JAZZ MAGAZINE",
 "date": "2026-10-22",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
-"latin",
-"jazz"
+"world",
+"jazz",
+"latin"
 ],
 "subgenres": [
 "música brasileira",
@@ -14463,7 +15537,7 @@
 "title": "L'HEURE EXQUISE – AU DELÀ DU RÉEL",
 "date": "2026-10-23",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -14479,7 +15553,7 @@
 "title": "L'HEURE EXQUISE – AU DELÀ DU RÉEL",
 "date": "2026-10-24",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -14495,7 +15569,7 @@
 "title": "LES 1001 NUITS DU JAZZ – LEONARD COHEN ET LE JAZZ",
 "date": "2026-11-05",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -14510,7 +15584,7 @@
 "title": "RAPHAËL LEMONNIER QUINTET – BESSIE'S BLUES",
 "date": "2026-11-06",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "blues",
@@ -14529,7 +15603,7 @@
 "title": "TOUT EN ROSE – MARIE PERBOST, KAËLIG BOCHÉ ET L'ENSEMBLE GULLIVER",
 "date": "2026-11-07",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical",
@@ -14553,7 +15627,7 @@
 "title": "LES DIMANCHES DE L'HISTOIRE DE L'ART – LE PAYSAGE, DE MONET À HOCKNEY",
 "date": "2026-11-08",
 "time": "10:30",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14567,7 +15641,7 @@
 "title": "LE BAL DES PHILOSOPHES – LE BONHEUR : TROIS GRANDES DÉFINITIONS",
 "date": "2026-11-10",
 "time": "19:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14582,7 +15656,7 @@
 "title": "QUINTETTE DU HOT CLUB DE FRANCE – MIDNIGHT IN PARIS",
 "date": "2026-11-11",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14603,7 +15677,7 @@
 "title": "MARK PRIORE TRIO – LES CONCERTS JAZZ MAGAZINE",
 "date": "2026-11-12",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14621,7 +15695,7 @@
 "title": "MARC COPLAND QUARTET – DREAMING",
 "date": "2026-11-13",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14630,11 +15704,10 @@
 "piano jazz"
 ],
 "artists": [
-"Marc Copland Quartet",
-"Robin Verheyen",
-"Yoni Zelnik",
-"Kerecki",
-"Moreau"
+"Marc Copland",
+"Bert Verheyen",
+"Yoni Zelnik Kerecki",
+"Gautier Garrigue Moreau"
 ],
 "is_music": true,
 "sold_out": false
@@ -14643,7 +15716,7 @@
 "title": "CELL'OPÉRA – DVORAK, VERDI, BIZET, WAGNER",
 "date": "2026-11-14",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical"
@@ -14652,7 +15725,9 @@
 "opera",
 "cello"
 ],
-"artists": [],
+"artists": [
+"Cell'Opéra"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -14660,14 +15735,14 @@
 "title": "L'ORCHESTRE DU BAL BLOMET \"WHAT WILL I TELL MY HEART\" – FLETCHER HENDERSON",
 "date": "2026-11-17",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [
-"swing",
-"big band"
+"big band",
+"swing"
 ],
 "artists": [
 "L'Orchestre du Bal Blomet",
@@ -14681,14 +15756,14 @@
 "title": "LAURENT COURTHALIAC & HUGH COLTMAN – IN THE KEY OF SINATRA",
 "date": "2026-11-18",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [
 "crooner",
-"swing"
+"vocal jazz"
 ],
 "artists": [
 "Laurent Courthaliac",
@@ -14701,7 +15776,7 @@
 "title": "LES 1001 NUITS DU JAZZ – GOD SAVE THE JAZZ (VOLUME 3)",
 "date": "2026-11-19",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -14716,7 +15791,7 @@
 "title": "L'IMMENSE PETIT CABARET",
 "date": "2026-11-20",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson"
@@ -14732,14 +15807,14 @@
 "title": "GERSHWIN IN BLUE",
 "date": "2026-11-21",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical",
 "jazz"
 ],
 "subgenres": [
-"symphonic"
+"symphonic jazz"
 ],
 "artists": [],
 "is_music": true,
@@ -14749,7 +15824,7 @@
 "title": "LES DIMANCHES DE L'HISTOIRE DE L'ART – GEORGIA O'KEEFFE",
 "date": "2026-11-22",
 "time": "10:30",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14763,7 +15838,7 @@
 "title": "COLLECTIF PARIS SWING – LES PREMIÈRES AVENTURES DU JAZZ",
 "date": "2026-11-24",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14782,7 +15857,7 @@
 "title": "LUCIENNE RENAUDIN VARY – ON MY MIND",
 "date": "2026-11-25",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical",
@@ -14801,7 +15876,7 @@
 "title": "PATRICE CARATINI – LES CONCERTS JAZZ MAGAZINE",
 "date": "2026-11-26",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -14820,7 +15895,7 @@
 "title": "L'HEURE EXQUISE – VOYAGE DANS LE TEMPS",
 "date": "2026-11-27",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -14836,7 +15911,7 @@
 "title": "L'HEURE EXQUISE – VOYAGE DANS LE TEMPS",
 "date": "2026-11-28",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -14852,7 +15927,7 @@
 "title": "INVISIBLE STREAM II",
 "date": "2026-11-30",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -14870,11 +15945,11 @@
 "title": "MARION RAMPAL & HUGH COLTMAN – HAPPY CHRISTMAS",
 "date": "2026-12-01",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
-"folk",
 "jazz",
+"folk",
 "blues"
 ],
 "subgenres": [
@@ -14891,11 +15966,11 @@
 "title": "MARION RAMPAL & HUGH COLTMAN – HAPPY CHRISTMAS",
 "date": "2026-12-02",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
-"folk",
 "jazz",
+"folk",
 "blues"
 ],
 "subgenres": [
@@ -14912,7 +15987,7 @@
 "title": "LES 1001 NUITS DU JAZZ – JAZZ ET KLEZMER",
 "date": "2026-12-03",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -14929,7 +16004,7 @@
 "title": "UNE NUIT À L'OPÉRA (ACTE 2) – MOZART, BIZET, VERDI, PUCCINI",
 "date": "2026-12-04",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "classical"
@@ -14948,7 +16023,7 @@
 "title": "LE GRAND SOIR – LA MUSIQUE DE MICHEL LEGRAND",
 "date": "2026-12-05",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -14965,7 +16040,7 @@
 "title": "LES DIMANCHES DE L'HISTOIRE DE L'ART – BRANCUSI",
 "date": "2026-12-06",
 "time": "10:30",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14979,7 +16054,7 @@
 "title": "LE BAL DES PHILOSOPHES – \"CE QUI NE ME TUE PAS, ME REND PLUS FORT.\" VRAIMENT ?",
 "date": "2026-12-08",
 "time": "19:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
@@ -14994,7 +16069,7 @@
 "title": "SPIRITUALS, GOSPELS & CHRISTMAS SONGS",
 "date": "2026-12-09",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "soul-rnb",
@@ -15012,7 +16087,7 @@
 "title": "CHRISTMAS IN SOUL – LES CONCERTS JAZZ MAGAZINE",
 "date": "2026-12-10",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "soul-rnb"
@@ -15028,7 +16103,7 @@
 "title": "ADAM SWANSON – RAGTIME, BLUES & BOOGIE – Handy, Jelly Roll Morton, James P. Johnson",
 "date": "2026-12-11",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -15049,7 +16124,7 @@
 "title": "DU RAGTIME À RHAPSODY IN BLUE – ADAM SWANSON – Joplin, Gershwin, Debussy",
 "date": "2026-12-12",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz",
@@ -15069,14 +16144,14 @@
 "title": "L'ORCHESTRE DU BAL BLOMET \"BLUES IN MY HEART\" – BENNY CARTER",
 "date": "2026-12-15",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
 ],
 "subgenres": [
-"swing",
-"big band"
+"big band",
+"swing"
 ],
 "artists": [
 "L'Orchestre du Bal Blomet",
@@ -15090,7 +16165,7 @@
 "title": "FLAMINGO – COULONDRE, LEVY, CHAZARENC, BRUYERE",
 "date": "2026-12-16",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "jazz"
@@ -15111,7 +16186,7 @@
 "title": "LES 1001 NUITS DU JAZZ – QUAND LA CHANSON FRANÇAISE SWINGUE !",
 "date": "2026-12-17",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [
 "chanson",
@@ -15128,7 +16203,7 @@
 "title": "L'HEURE EXQUISE PRÉPARE LA DINDE",
 "date": "2026-12-18",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -15144,7 +16219,7 @@
 "title": "L'HEURE EXQUISE PRÉPARE LA DINDE",
 "date": "2026-12-19",
 "time": "20:00",
-"url": "https://www.balblomet.fr/agenda",
+"url": null,
 "price": null,
 "genres": [],
 "subgenres": [
@@ -15160,7 +16235,7 @@
 },
 "studio-de-l-ermitage": {
 "digest": "1578daf8cdb9167b327f62776c297cd91a99c62c",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "L'Association \"Roda Do Cavaco\" fête ses 20 ans !",
@@ -15169,12 +16244,11 @@
 "url": "https://www.studio-ermitage.com/index.php/agenda",
 "price": "18€/Early Bird 15 €",
 "genres": [
-"world",
-"latin"
+"world"
 ],
 "subgenres": [
 "samba",
-"choro"
+"brazilian"
 ],
 "artists": [
 "Roda Do Cavaco"
@@ -15189,11 +16263,11 @@
 "url": "https://www.studio-ermitage.com/index.php/agenda",
 "price": "18 €",
 "genres": [
-"world",
-"latin"
+"world"
 ],
 "subgenres": [
-"samba"
+"samba",
+"brazilian"
 ],
 "artists": [
 "Fernando Del Papa"
@@ -15204,8 +16278,8 @@
 ]
 },
 "les-trois-baudets": {
-"digest": "ebc81eb1fbfcf275ebaf7a79e26b2e0fd5ca0a05",
-"today": "2026-09-22",
+"digest": "1c738b64b6987daa0d7d3c82ee04d9161e662bda",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Zeph + Victoria Flavian + Miae",
@@ -15218,7 +16292,11 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Zeph",
+"Victoria Flavian",
+"Miae"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15229,10 +16307,14 @@
 "url": null,
 "price": null,
 "genres": [
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Gabriel Auguste",
+"Maddie Noon"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15247,7 +16329,10 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Eliah",
+"Garçon Printemps"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15264,16 +16349,20 @@
 "sold_out": false
 },
 {
-"title": "Louise Charbonnel",
+"title": "Louise Charbonnel (+ Elise Vassalucci)",
 "date": "2026-09-30",
 "time": "20:00",
 "url": null,
 "price": null,
 "genres": [
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Louise Charbonnel",
+"Elise Vassalucci"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15288,7 +16377,10 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Camille LV",
+"Millie Hopes"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15299,13 +16391,15 @@
 "url": null,
 "price": null,
 "genres": [
-"chanson",
-"folk"
+"folk",
+"chanson"
 ],
 "subgenres": [
 "cantautore"
 ],
-"artists": [],
+"artists": [
+"Pippo Pollina"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15316,11 +16410,14 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Jeeno",
+"Mélusine"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15335,7 +16432,10 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Blandine",
+"fleurdenaí"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15350,9 +16450,12 @@
 "pop"
 ],
 "subgenres": [
-"dream pop"
+"dream pop",
+"bossa nova"
 ],
-"artists": [],
+"artists": [
+"Laure Briard"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15368,9 +16471,12 @@
 "folk"
 ],
 "subgenres": [
-"psych folk"
+"psychedelic rock",
+"singer-songwriter"
 ],
-"artists": [],
+"artists": [
+"Robyn Hitchcock"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15421,7 +16527,11 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Margot Cavalier",
+"Camille Eno",
+"Luna"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15432,12 +16542,16 @@
 "url": null,
 "price": null,
 "genres": [
-"classical"
+"classical",
+"experimental"
 ],
 "subgenres": [
-"neo-classical"
+"neoclassical",
+"ambient"
 ],
-"artists": [],
+"artists": [
+"Peter Sandberg"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15447,9 +16561,13 @@
 "time": "20:00",
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"pop"
+],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Sloń"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15459,9 +16577,14 @@
 "time": "20:00",
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"chanson",
+"pop"
+],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Juliette Magnevasoa"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15472,10 +16595,13 @@
 "url": null,
 "price": null,
 "genres": [
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Mathis Riviere"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15486,11 +16612,13 @@
 "url": null,
 "price": null,
 "genres": [
-"soul-rnb",
-"pop"
+"pop",
+"soul-rnb"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Ella Thompson"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15501,35 +16629,29 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"erodie",
+"Caïman",
+"Lazur"
+],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Kakamü - Les P'tits Baudets (16h)",
+"title": "Kakamü - Les P'tits Baudets",
 "date": "2026-11-08",
 "time": "16:00",
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "Kakamü - Les P'tits Baudets (17h15)",
-"date": "2026-11-08",
-"time": "17:15",
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
+"artists": [
+"Kakamü"
+],
 "is_music": false,
 "sold_out": false
 },
@@ -15542,7 +16664,7 @@
 "genres": [],
 "subgenres": [],
 "artists": [],
-"is_music": false,
+"is_music": true,
 "sold_out": false
 },
 {
@@ -15576,11 +16698,14 @@
 "url": null,
 "price": "Gratuit sur réservation",
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"nuit noire",
+"Roukie"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15591,10 +16716,13 @@
 "url": null,
 "price": null,
 "genres": [
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Raban"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15605,30 +16733,22 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Baozi",
+"Kanou",
+"Maline"
+],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Les Fabuleuses Histoires du Doudou - Les Enfants d'Abord / Les P'tits Baudets (16h)",
+"title": "Les Fabuleuses Histoires du Doudou - Les Enfants d'Abord / Les P'tits Baudets",
 "date": "2026-12-06",
 "time": "16:00",
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "Les Fabuleuses Histoires du Doudou - Les Enfants d'Abord / Les P'tits Baudets (17h15)",
-"date": "2026-12-06",
-"time": "17:15",
 "url": null,
 "price": null,
 "genres": [],
@@ -15648,7 +16768,9 @@
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Diane"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15659,10 +16781,13 @@
 "url": null,
 "price": null,
 "genres": [
+"chanson",
 "pop"
 ],
 "subgenres": [],
-"artists": [],
+"artists": [
+"James Malikey"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15672,9 +16797,14 @@
 "time": "20:00",
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"chanson",
+"pop"
+],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Juan Arenosa"
+],
 "is_music": true,
 "sold_out": false
 }
@@ -15682,13 +16812,13 @@
 },
 "le-360": {
 "digest": "c330fed8d90d9809957e0a1dc0af7907ec194bcf",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "La Nuit Suspendue",
 "date": "2026-09-26",
 "time": "19:30",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15702,12 +16832,14 @@
 "title": "Le Rythme de la Parole",
 "date": "2026-09-30",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
 ],
-"subgenres": [],
+"subgenres": [
+"spoken word"
+],
 "artists": [],
 "is_music": true,
 "sold_out": false
@@ -15716,11 +16848,13 @@
 "title": "PALACE OF MIRRORS – RELEASE PARTY",
 "date": "2026-10-01",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Palace of Mirrors"
+],
 "is_music": true,
 "sold_out": false
 },
@@ -15728,7 +16862,7 @@
 "title": "Le Cantique des Oiseaux",
 "date": "2026-10-07",
 "time": "19:30",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15744,7 +16878,7 @@
 "title": "Panjrud Ensemble",
 "date": "2026-10-08",
 "time": "19:30",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15762,10 +16896,11 @@
 "title": "JE M’APPELLE CHAVELA VARGAS, NE L’OUBLIEZ PAS !",
 "date": "2026-10-10",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
-"latin"
+"latin",
+"world"
 ],
 "subgenres": [
 "ranchera"
@@ -15778,11 +16913,13 @@
 "title": "Ateliers de danse 2026-2027 avec Núria Rovira Salat",
 "date": "2026-10-11",
 "time": null,
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Núria Rovira Salat"
+],
 "is_music": false,
 "sold_out": false
 },
@@ -15790,7 +16927,7 @@
 "title": "Accords Croisés x le 360 (soirée MaMA partenaire)",
 "date": "2026-10-14",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15804,7 +16941,7 @@
 "title": "Zamora x le 360 (soirée MaMA partenaire)",
 "date": "2026-10-15",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15818,7 +16955,7 @@
 "title": "Lynnsha",
 "date": "2026-10-17",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "soul-rnb"
@@ -15836,7 +16973,7 @@
 "title": "Marcos Sacramento et Zé Paulo Becker + Le Ballet des Fous",
 "date": "2026-10-18",
 "time": "18:30",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world",
@@ -15858,7 +16995,7 @@
 "title": "1er Jour – Festival Jazz Nouvelle-Orléans à la Goutte d’Or 2026",
 "date": "2026-10-23",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "jazz"
@@ -15874,7 +17011,7 @@
 "title": "2eme Jour – Festival Jazz Nouvelle-Orléans à la Goutte d’Or 2026",
 "date": "2026-10-24",
 "time": "14:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "jazz"
@@ -15890,7 +17027,7 @@
 "title": "3eme Jour – Festival Jazz Nouvelle-Orléans à la Goutte d’Or 2026",
 "date": "2026-10-25",
 "time": "12:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "jazz"
@@ -15906,7 +17043,7 @@
 "title": "The Gospel Project — Première",
 "date": "2026-11-07",
 "time": "19:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "soul-rnb"
@@ -15922,10 +17059,11 @@
 "title": "REINE MAKOUA « AFRO-NGOLI TOUR »",
 "date": "2026-11-14",
 "time": "18:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
-"afro"
+"afro",
+"world"
 ],
 "subgenres": [],
 "artists": [
@@ -15938,7 +17076,7 @@
 "title": "Jamel Reffes – Raï Roots – Hommage à Ahmed Zergui",
 "date": "2026-11-21",
 "time": "19:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15956,7 +17094,7 @@
 "title": "RELEASE PARTY – NEW EP MAGDALENA – NÚRIA ROVIRA SALAT",
 "date": "2026-11-27",
 "time": "20:00",
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [
 "world"
@@ -15974,11 +17112,13 @@
 "title": "Laboratoire de création chorégraphique 2027 avec Núria Rovira Salat",
 "date": "2027-01-10",
 "time": null,
-"url": null,
+"url": "https://le360paris.com/programmation/",
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Núria Rovira Salat"
+],
 "is_music": false,
 "sold_out": false
 }
@@ -15986,7 +17126,7 @@
 },
 "le-triton": {
 "digest": "f41491df94b9e6de8d4f2b450b3e7ff79da367d5",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Panzerballett feat. Virgil Donati",
@@ -16055,7 +17195,9 @@
 "genres": [
 "jazz"
 ],
-"subgenres": [],
+"subgenres": [
+"contemporary jazz"
+],
 "artists": [
 "Bruno Angelini"
 ],
@@ -16108,8 +17250,7 @@
 "experimental"
 ],
 "subgenres": [
-"zeuhl",
-"jazz-rock"
+"zeuhl"
 ],
 "artists": [
 "Yochk'o Seffer"
@@ -16127,7 +17268,7 @@
 "jazz"
 ],
 "subgenres": [
-"musique improvisée"
+"improvised music"
 ],
 "artists": [
 "Louis Sclavis"
@@ -16146,7 +17287,7 @@
 "experimental"
 ],
 "subgenres": [
-"musique improvisée"
+"improvised music"
 ],
 "artists": [
 "Dominique Pifarély",
@@ -16166,7 +17307,9 @@
 "jazz",
 "soul-rnb"
 ],
-"subgenres": [],
+"subgenres": [
+"swing"
+],
 "artists": [
 "Elise & the Sugarsweets"
 ],
@@ -16183,7 +17326,7 @@
 "jazz"
 ],
 "subgenres": [
-"musique improvisée"
+"improvised music"
 ],
 "artists": [
 "Samuel Blaser",
@@ -16194,7 +17337,7 @@
 "sold_out": false
 },
 {
-"title": "Sylvain Cathala Trio & Kamilya Jubran — About",
+"title": "Sortie d'album | Label Triton — Sylvain Cathala Trio & Kamilya Jubran — About",
 "date": "2026-10-16",
 "time": "20:30",
 "url": null,
@@ -16228,7 +17371,7 @@
 "sold_out": false
 },
 {
-"title": "Médéric Collignon \"Jus de Bocse\" invite Christophe Monniot — Miles Style",
+"title": "Festival Jazz Sur Seine — Médéric Collignon \"Jus de Bocse\" invite Christophe Monniot — Miles Style",
 "date": "2026-10-23",
 "time": "20:30",
 "url": null,
@@ -16237,10 +17380,12 @@
 "jazz"
 ],
 "subgenres": [
-"electric jazz"
+"electric jazz",
+"fusion"
 ],
 "artists": [
 "Médéric Collignon",
+"Jus de Bocse",
 "Christophe Monniot"
 ],
 "is_music": true,
@@ -16273,7 +17418,7 @@
 "world"
 ],
 "subgenres": [
-"folklore argentin"
+"música argentina"
 ],
 "artists": [
 "Manu Sija",
@@ -16308,7 +17453,9 @@
 "genres": [
 "jazz"
 ],
-"subgenres": [],
+"subgenres": [
+"improvised music"
+],
 "artists": [
 "Cassiers",
 "Sakaï",
@@ -16346,12 +17493,12 @@
 "jazz"
 ],
 "subgenres": [
-"musique improvisée"
+"free jazz"
 ],
 "artists": [
 "Daniel Humair",
 "François Jeanneau",
-"Miklós Spányi"
+"Spányi"
 ],
 "is_music": true,
 "sold_out": false
@@ -16396,7 +17543,7 @@
 "price": null,
 "genres": [
 "world",
-"experimental"
+"jazz"
 ],
 "subgenres": [],
 "artists": [
@@ -16462,7 +17609,7 @@
 "sold_out": false
 },
 {
-"title": "Kalistrio — Viaggio",
+"title": "Festival Tango Présence #3 — Kalistrio — Viaggio",
 "date": "2026-12-02",
 "time": "20:00",
 "url": null,
@@ -16481,7 +17628,7 @@
 "sold_out": false
 },
 {
-"title": "Sillages",
+"title": "Festival Tango Présence #3 — Sillages",
 "date": "2026-12-02",
 "time": "20:00",
 "url": null,
@@ -16500,7 +17647,7 @@
 "sold_out": false
 },
 {
-"title": "Ensemble Trama / Cristina Vilallonga — Carnets sonores",
+"title": "Festival Tango Présence #3 — Ensemble Trama / Cristina Vilallonga — Carnets sonores",
 "date": "2026-12-03",
 "time": "20:00",
 "url": null,
@@ -16520,7 +17667,7 @@
 "sold_out": false
 },
 {
-"title": "Sonico — Une célébration de l'inconnu",
+"title": "Festival Tango Présence #3 — Sonico — Une célébration de l'inconnu",
 "date": "2026-12-03",
 "time": "20:00",
 "url": null,
@@ -16539,7 +17686,7 @@
 "sold_out": false
 },
 {
-"title": "Kaptain Bando — Lanterne rouge",
+"title": "Festival Tango Présence #3 — Kaptain Bando — Lanterne rouge",
 "date": "2026-12-04",
 "time": "20:00",
 "url": null,
@@ -16558,7 +17705,7 @@
 "sold_out": false
 },
 {
-"title": "Octetology — Neotango",
+"title": "Festival Tango Présence #3 — Octetology — Neotango",
 "date": "2026-12-04",
 "time": "20:00",
 "url": null,
@@ -16577,14 +17724,14 @@
 "sold_out": false
 },
 {
-"title": "Duo Dryades — Northern Colours",
+"title": "Festival Tango Présence #3 — Duo Dryades — Northern Colours",
 "date": "2026-12-05",
 "time": "20:00",
 "url": null,
 "price": null,
 "genres": [
 "latin",
-"classical"
+"world"
 ],
 "subgenres": [
 "tango"
@@ -16596,7 +17743,7 @@
 "sold_out": false
 },
 {
-"title": "Fleurs Noires — Tangos Aumentados",
+"title": "Festival Tango Présence #3 — Fleurs Noires — Tangos Aumentados",
 "date": "2026-12-05",
 "time": "20:00",
 "url": null,
@@ -16625,7 +17772,7 @@
 "experimental"
 ],
 "subgenres": [
-"violon solo"
+"solo violin"
 ],
 "artists": [
 "Régis Huby"
@@ -16728,7 +17875,7 @@
 ],
 "subgenres": [
 "zeuhl",
-"rock progressif"
+"progressive rock"
 ],
 "artists": [
 "Magma"
@@ -16748,7 +17895,7 @@
 ],
 "subgenres": [
 "zeuhl",
-"rock progressif"
+"progressive rock"
 ],
 "artists": [
 "Magma"
@@ -16768,7 +17915,7 @@
 ],
 "subgenres": [
 "zeuhl",
-"rock progressif"
+"progressive rock"
 ],
 "artists": [
 "Magma"
@@ -16788,7 +17935,7 @@
 ],
 "subgenres": [
 "zeuhl",
-"rock progressif"
+"progressive rock"
 ],
 "artists": [
 "Magma"
@@ -16800,7 +17947,7 @@
 },
 "la-dynamo": {
 "digest": "6a0bb3f1d4bf1e2677fef469d5d3ec58eb5b2d73",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "KOMA SPIRITS + Aymeric Avice, Luke Stewart, Chad Taylor",
@@ -16813,7 +17960,8 @@
 "experimental"
 ],
 "subgenres": [
-"free jazz"
+"free jazz",
+"improvisation"
 ],
 "artists": [
 "KOMA",
@@ -16888,7 +18036,8 @@
 "reggae"
 ],
 "subgenres": [
-"dub"
+"dub",
+"sound system"
 ],
 "artists": [],
 "is_music": true,
@@ -16902,8 +18051,7 @@
 "price": null,
 "genres": [
 "hip-hop",
-"world",
-"electro"
+"world"
 ],
 "subgenres": [
 "rap arabe"
@@ -16926,8 +18074,8 @@
 "rock"
 ],
 "subgenres": [
-"avant-garde guitar",
-"noise"
+"noise guitar",
+"improvisation"
 ],
 "artists": [
 "Ava Mendoza",
@@ -16947,7 +18095,7 @@
 "rock"
 ],
 "subgenres": [
-"noise rock"
+"noise"
 ],
 "artists": [
 "Ar Ker",
@@ -17002,10 +18150,11 @@
 "price": null,
 "genres": [
 "jazz",
-"electro",
-"experimental"
+"electro"
 ],
-"subgenres": [],
+"subgenres": [
+"improvisation"
+],
 "artists": [
 "Alexandre Herer",
 "Franges"
@@ -17034,7 +18183,7 @@
 },
 "canal-93": {
 "digest": "a5a9a254ab506b90f0da3179cd4dc57b6799981e",
-"today": "2026-09-22",
+"today": "2026-09-23",
 "events": [
 {
 "title": "OUVERTURE DE SAISON Rentrée en fête de CANAL 93 !",
@@ -17049,7 +18198,8 @@
 ],
 "subgenres": [
 "dancehall",
-"amapiano"
+"amapiano",
+"dj set"
 ],
 "artists": [
 "DJ Pois'n'Meko",
@@ -17112,7 +18262,8 @@
 "world"
 ],
 "subgenres": [
-"raï"
+"raï",
+"karaoké"
 ],
 "artists": [
 "Naïma Yahi",
@@ -17131,7 +18282,8 @@
 "world"
 ],
 "subgenres": [
-"raï"
+"raï",
+"karaoké"
 ],
 "artists": [
 "Naïma Yahi",
@@ -17143,7 +18295,7 @@
 {
 "title": "Exposition Ya Rahi ! Une Histoire de la Musique Raï",
 "date": "2026-10-09",
-"time": null,
+"time": "14:00",
 "url": null,
 "price": null,
 "genres": [],
@@ -17160,11 +18312,11 @@
 "price": "19€",
 "genres": [
 "world",
-"latin",
-"jazz"
+"afro",
+"latin"
 ],
 "subgenres": [
-"afro-cuban",
+"afro-cubain",
 "mbalax",
 "rumba congolaise"
 ],
@@ -17199,7 +18351,7 @@
 "date": "2026-10-27",
 "time": "20:00",
 "url": null,
-"price": "à partir de 4€",
+"price": "À partir de 4€",
 "genres": [],
 "subgenres": [],
 "artists": [],
@@ -17219,7 +18371,7 @@
 "subgenres": [
 "raï",
 "chaâbi",
-"gnawa"
+"gnaoua"
 ],
 "artists": [
 "Sami Galbi",
@@ -17229,13 +18381,14 @@
 "sold_out": false
 },
 {
-"title": "Concert clôture CABARAÏ + 93 Super Raï Band en première partie",
+"title": "CABARAÏ + 93 Super Raï Band en première partie",
 "date": "2026-10-31",
 "time": "19:30",
 "url": null,
 "price": "16€",
 "genres": [
-"world"
+"world",
+"electro"
 ],
 "subgenres": [
 "raï",
@@ -17243,8 +18396,8 @@
 ],
 "artists": [
 "Cabaraï",
-"Lalla Aïcha",
 "Esraa Warda",
+"Lalla Aïcha",
 "93 Super Raï Band"
 ],
 "is_music": true,
@@ -17260,7 +18413,8 @@
 "hip-hop"
 ],
 "subgenres": [
-"rap français"
+"rap français",
+"boom bap"
 ],
 "artists": [
 "Demi Portion",
@@ -17272,12 +18426,24 @@
 ]
 },
 "espace-1789": {
-"digest": "f12b3c13794e7f90b0e6cc82ba7d6a82e9392c78",
-"today": "2026-09-22",
+"digest": "6c524c950aea2b678b7647493dbc720858872064",
+"today": "2026-09-23",
 "events": [
 {
 "title": "ÎLES FLOTTANTES - Kenza Berrada",
 "date": "2027-06-18",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "37 ans",
+"date": "2027-09-12",
 "time": null,
 "url": null,
 "price": null,
@@ -17295,10 +18461,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Mehdi Kerkouche",
-"Leïla Ka"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17310,10 +18473,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Mehdi Kerkouche",
-"Leïla Ka"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17328,7 +18488,8 @@
 "jazz"
 ],
 "subgenres": [
-"raï"
+"raï",
+"chaabi"
 ],
 "artists": [
 "Sofiane Saidi",
@@ -17346,9 +18507,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Sharon Eyal"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17360,9 +18519,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Sharon Eyal"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17374,37 +18531,31 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Sharon Eyal"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "PORTRAIT DE RITA - Laurène Marx",
+"title": "PORTRAIT DE RITA - Laurène Marx, Bwanga Pilipili",
 "date": "2026-10-14",
 "time": null,
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Laurène Marx"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "PORTRAIT DE RITA - Laurène Marx",
+"title": "PORTRAIT DE RITA - Laurène Marx, Bwanga Pilipili",
 "date": "2026-10-15",
 "time": null,
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Laurène Marx"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17416,9 +18567,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Simon Roth"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17430,9 +18579,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Filipe Lourenço"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17444,9 +18591,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Jack Lena"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17458,9 +18603,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Hofesh Shechter"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17472,9 +18615,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Hofesh Shechter"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17486,9 +18627,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Hofesh Shechter"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17500,14 +18639,12 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Hofesh Shechter"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Sandra Nkaké - [ELLES]",
+"title": "Sandra Nkaké [ELLES]",
 "date": "2026-11-26",
 "time": null,
 "url": null,
@@ -17517,7 +18654,7 @@
 "jazz"
 ],
 "subgenres": [
-"soul jazz"
+"nu-soul"
 ],
 "artists": [
 "Sandra Nkaké"
@@ -17533,9 +18670,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Guillaume Cayet"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17568,10 +18703,10 @@
 "classical"
 ],
 "subgenres": [
-"opera"
+"opéra"
 ],
 "artists": [],
-"is_music": false,
+"is_music": true,
 "sold_out": false
 },
 {
@@ -17582,9 +18717,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Collectif XY"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17596,9 +18729,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Collectif XY"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17610,9 +18741,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Collectif XY"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17624,9 +18753,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Sung Im Her"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17638,9 +18765,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Tiago Rodrigues"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17652,9 +18777,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Tiago Rodrigues"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17666,9 +18789,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Tiago Rodrigues"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17680,10 +18801,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Sarah Jeanne Ziegler",
-"Renaud Ollivier"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17695,9 +18813,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Leïla Ka"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17709,9 +18825,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Leïla Ka"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17723,9 +18837,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Leïla Ka"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17737,9 +18849,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Leïla Ka"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17751,9 +18861,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Théo Askolovitch"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17765,9 +18873,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Théo Askolovitch"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17779,10 +18885,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Suzanne Degennaro",
-"Mwendwa Marchand"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17794,9 +18897,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Carmel Loanga"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17808,9 +18909,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Carmel Loanga"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17822,9 +18921,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Liam Francis"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17838,10 +18935,10 @@
 "classical"
 ],
 "subgenres": [
-"opera"
+"opéra"
 ],
 "artists": [],
-"is_music": false,
+"is_music": true,
 "sold_out": false
 },
 {
@@ -17852,9 +18949,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Sandra Geco"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17866,9 +18961,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"François Gremaud"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17880,9 +18973,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"François Gremaud"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17913,9 +19004,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Compagnie C'hoari"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17927,9 +19016,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Simon Roth"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17941,9 +19028,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Léo Lérus"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17955,9 +19040,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Léo Lérus"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17969,9 +19052,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Nichotomie"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -17988,7 +19069,7 @@
 "neo-soul"
 ],
 "artists": [
-"Gildaa"
+"GILDAA"
 ],
 "is_music": true,
 "sold_out": false
@@ -18004,7 +19085,7 @@
 "latin"
 ],
 "subgenres": [
-"electro-pop"
+"electronic pop"
 ],
 "artists": [
 "La Chica"
@@ -18020,9 +19101,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Josépha Madoki"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -18034,9 +19113,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Emma Dante"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -18048,9 +19125,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Pierre Rigal"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 },
@@ -18062,9 +19137,7 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [
-"Guillaume Cayet"
-],
+"artists": [],
 "is_music": false,
 "sold_out": false
 }
@@ -18076,8 +19149,8 @@
 "events": []
 },
 "la-gaite-lyrique": {
-"digest": "599e9e20a261ba0618ccf8e4b906536127cf91b7",
-"today": "2026-09-22",
+"digest": "849b8f6c47a9b546386166ca3632ae73ac96fbb4",
+"today": "2026-09-23",
 "events": [
 {
 "title": "Finally, Something Good. par Stefan Sagmeister",
@@ -18087,63 +19160,10 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "Pingthérapie",
-"date": "2026-09-22",
-"time": "12:00",
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "C'était mieux avant ?",
-"date": "2026-09-22",
-"time": "19:00",
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "Le Camp du bien : un essai féministe et antiraciste",
-"date": "2026-09-22",
-"time": "19:00",
-"url": null,
-"price": null,
-"genres": [],
-"subgenres": [],
-"artists": [],
-"is_music": false,
-"sold_out": false
-},
-{
-"title": "ARTE Dans le club - So La Lune, Moha MMZ & Surprise",
-"date": "2026-09-22",
-"time": "19:30",
-"url": null,
-"price": null,
-"genres": [
-"hip-hop"
-],
-"subgenres": [
-"rap français"
-],
 "artists": [
-"So La Lune",
-"Moha MMZ"
+"Stefan Sagmeister"
 ],
-"is_music": true,
+"is_music": false,
 "sold_out": false
 },
 {
@@ -18178,12 +19198,14 @@
 "price": null,
 "genres": [],
 "subgenres": [],
-"artists": [],
+"artists": [
+"Anna Jouan"
+],
 "is_music": false,
 "sold_out": false
 },
 {
-"title": "Wolfgang Voigt présente GAS Live - 1ère partie : UNLAND (Ambient DJ set)",
+"title": "Wolfgang Voigt présente GAS Live — 1ère partie : UNLAND (Ambient DJ set)",
 "date": "2026-09-23",
 "time": "19:30",
 "url": null,
@@ -18215,43 +19237,167 @@
 "artists": [],
 "is_music": false,
 "sold_out": false
-}
-]
 },
-"popup": {
-"digest": "8cfcf894bfe9588e2b2a39e0f5044be69a92a3a4",
-"today": "2026-09-22",
-"events": [
 {
-"title": "Mardi Jazz! avec Joan Fort, David Sauzay, Kim Baiunco et Stéphane Chandelier",
-"date": "2026-09-22",
-"time": null,
+"title": "L'édition qui vient",
+"date": "2026-09-24",
+"time": "19:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "[ANNULÉ] Dj Seinfeld (live)",
+"date": "2026-09-25",
+"time": "19:30",
 "url": null,
 "price": null,
 "genres": [
-"jazz"
+"electro"
 ],
 "subgenres": [
-"straight-ahead jazz"
+"lo-fi house"
 ],
 "artists": [
-"Joan Fort",
-"David Sauzay",
-"Kim Baiunco",
-"Stéphane Chandelier"
+"DJ Seinfeld"
 ],
 "is_music": true,
 "sold_out": false
 },
 {
-"title": "Romain Muller + Lily Bonnel",
+"title": "Antitrust · Le festival pour résister aux monopoles",
+"date": "2026-09-26",
+"time": null,
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Book Club",
+"date": "2026-09-26",
+"time": "14:45",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La tech est-elle encore compatible avec la démocratie ?",
+"date": "2026-09-26",
+"time": "15:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Comment libérer les médias et la culture de l’emprise des monopoles ?",
+"date": "2026-09-26",
+"time": "17:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Vous avez dit souveraineté ?",
+"date": "2026-09-26",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Studio 13/16 - Têtes d’affiches",
+"date": "2026-09-26",
+"time": "15:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Nathan Fake",
+"date": "2026-09-26",
+"time": "19:30",
+"url": null,
+"price": null,
+"genres": [
+"electro"
+],
+"subgenres": [
+"techno",
+"ambient techno"
+],
+"artists": [
+"Nathan Fake"
+],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "Studio 13/16 - Têtes d’affiches",
+"date": "2026-09-27",
+"time": "15:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Distributions alimentaires",
+"date": "2026-09-29",
+"time": "09:30",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+}
+]
+},
+"popup": {
+"digest": "12184431cee619befa516b5d74b627329bb6cd4c",
+"today": "2026-09-23",
+"events": [
+{
+"title": "Romain Muller + LILY BONNEL",
 "date": "2026-09-23",
 "time": null,
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -18262,12 +19408,14 @@
 "sold_out": false
 },
 {
-"title": "The Vinyl Hour w/ Carolefe",
+"title": "The Vinyl Hour W/ CAROLEFE",
 "date": "2026-09-24",
 "time": "20:30",
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"electro"
+],
 "subgenres": [
 "dj set"
 ],
@@ -18284,11 +19432,11 @@
 "url": null,
 "price": null,
 "genres": [
-"indie",
-"rock"
+"rock",
+"indie"
 ],
 "subgenres": [
-"psych pop"
+"psych rock"
 ],
 "artists": [
 "The Tambourines",
@@ -18298,7 +19446,7 @@
 "sold_out": false
 },
 {
-"title": "Twin Blade + Vickie Chérie",
+"title": "Twin Blade + VICKIE CHÉRIE",
 "date": "2026-09-25",
 "time": null,
 "url": null,
@@ -18316,12 +19464,14 @@
 "sold_out": false
 },
 {
-"title": "The Vinyl Hour w/ Roxylight",
+"title": "The Vinyl Hour W/ ROXYLIGHT",
 "date": "2026-09-25",
 "time": "20:30",
 "url": null,
 "price": null,
-"genres": [],
+"genres": [
+"electro"
+],
 "subgenres": [
 "dj set"
 ],
@@ -18350,14 +19500,14 @@
 "sold_out": false
 },
 {
-"title": "Blue Boys Club - Release Party",
+"title": "Blue Boys Club – Release Party",
 "date": "2026-09-26",
 "time": null,
 "url": null,
 "price": null,
 "genres": [
 "indie",
-"pop"
+"rock"
 ],
 "subgenres": [],
 "artists": [
@@ -18376,7 +19526,7 @@
 "electro"
 ],
 "subgenres": [
-"club"
+"dj set"
 ],
 "artists": [
 "Leo Nandor",
@@ -18386,7 +19536,7 @@
 "sold_out": false
 },
 {
-"title": "Satellite Jockey + 100KIKI + Bénévole",
+"title": "Satellite Jockey + 100KIKI + BÉNÉVOLE",
 "date": "2026-09-28",
 "time": null,
 "url": null,
@@ -18456,7 +19606,7 @@
 "sold_out": false
 },
 {
-"title": "My Ugly Clementine + Antoní",
+"title": "My Ugly Clementine + ANTONÍ",
 "date": "2026-10-02",
 "time": null,
 "url": null,
@@ -18466,7 +19616,7 @@
 "rock"
 ],
 "subgenres": [
-"indie rock"
+"indie pop"
 ],
 "artists": [
 "My Ugly Clementine",
@@ -18482,12 +19632,10 @@
 "url": null,
 "price": null,
 "genres": [
-"reggae",
 "electro"
 ],
 "subgenres": [
-"dancehall",
-"sound system"
+"dj set"
 ],
 "artists": [
 "Silva Snipa",
@@ -18497,7 +19645,7 @@
 "sold_out": false
 },
 {
-"title": "Victorine - Release Party 'Notes de frais'",
+"title": "Victorine – Release Party 'Notes de frais'",
 "date": "2026-10-05",
 "time": null,
 "url": null,
@@ -18576,7 +19724,7 @@
 "hip-hop"
 ],
 "subgenres": [
-"alternative r&b"
+"alt pop"
 ],
 "artists": [
 "Oliver Malcolm"
@@ -18585,7 +19733,7 @@
 "sold_out": false
 },
 {
-"title": "DJ Cinéma Quartier Latin + Luxie",
+"title": "DJ Cinéma Quartier Latin + LUXIE",
 "date": "2026-10-10",
 "time": null,
 "url": null,
@@ -18604,15 +19752,15 @@
 "sold_out": false
 },
 {
-"title": "Jhariah + Sainte Victoire",
+"title": "Jhariah + SAINTE VICTOIRE",
 "date": "2026-10-12",
 "time": null,
 "url": null,
 "price": null,
 "genres": [
 "experimental",
-"pop",
-"punk"
+"punk",
+"pop"
 ],
 "subgenres": [
 "art pop"
@@ -18660,14 +19808,14 @@
 "sold_out": false
 },
 {
-"title": "Almost Rose + Simone's Carpet + Tess Victoire",
+"title": "Almost Rose + SIMONE'S CARPET + TESS VICTOIRE",
 "date": "2026-10-16",
 "time": null,
 "url": null,
 "price": null,
 "genres": [
 "indie",
-"rock"
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -18686,7 +19834,7 @@
 "price": null,
 "genres": [
 "pop",
-"indie"
+"jazz"
 ],
 "subgenres": [
 "psych pop",
@@ -18727,6 +19875,7 @@
 "url": null,
 "price": null,
 "genres": [
+"pop",
 "indie"
 ],
 "subgenres": [],
@@ -18774,13 +19923,14 @@
 "sold_out": false
 },
 {
-"title": "Daudi Matsiko + Kat White",
+"title": "Daudi Matsiko + KAT WHITE",
 "date": "2026-10-26",
 "time": null,
 "url": null,
 "price": null,
 "genres": [
-"folk"
+"folk",
+"soul-rnb"
 ],
 "subgenres": [
 "singer-songwriter"
@@ -18811,7 +19961,7 @@
 "sold_out": false
 },
 {
-"title": "UCHE YARA - Bodyscanner Tour 26",
+"title": "UCHE YARA – Bodyscanner Tour 26",
 "date": "2026-10-28",
 "time": null,
 "url": null,
@@ -18829,7 +19979,7 @@
 "sold_out": false
 },
 {
-"title": "Disgusting Sisters + Elo Cotton",
+"title": "Disgusting Sisters + ELO COTTON",
 "date": "2026-10-29",
 "time": null,
 "url": null,
@@ -18881,7 +20031,7 @@
 "sold_out": false
 },
 {
-"title": "Greg Mendez + Lily Seabird",
+"title": "Greg Mendez + LILY SEABIRD",
 "date": "2026-11-02",
 "time": null,
 "url": null,
@@ -18891,8 +20041,7 @@
 "folk"
 ],
 "subgenres": [
-"lo-fi",
-"singer-songwriter"
+"lo-fi"
 ],
 "artists": [
 "Greg Mendez",
@@ -19015,7 +20164,7 @@
 "sold_out": false
 },
 {
-"title": "Guacayo - Dancing In The Moonlight Tour",
+"title": "Guacayo – Dancing in the Moonlight Tour",
 "date": "2026-11-16",
 "time": null,
 "url": null,
@@ -19076,11 +20225,10 @@
 "url": null,
 "price": null,
 "genres": [
-"soul-rnb"
+"soul-rnb",
+"pop"
 ],
-"subgenres": [
-"neo-soul"
-],
+"subgenres": [],
 "artists": [
 "Sarah Julia"
 ],
@@ -19097,9 +20245,7 @@
 "indie",
 "pop"
 ],
-"subgenres": [
-"bedroom pop"
-],
+"subgenres": [],
 "artists": [
 "mustbejohn"
 ],
@@ -19167,8 +20313,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -19184,8 +20330,8 @@
 "url": null,
 "price": null,
 "genres": [
-"pop",
-"chanson"
+"chanson",
+"pop"
 ],
 "subgenres": [],
 "artists": [
@@ -19287,10 +20433,11 @@
 "price": null,
 "genres": [
 "funk",
+"soul-rnb",
 "jazz"
 ],
 "subgenres": [
-"soul jazz"
+"instrumental funk"
 ],
 "artists": [
 "Karate Boogaloo"
@@ -19306,10 +20453,11 @@
 "price": null,
 "genres": [
 "jazz",
+"soul-rnb",
 "experimental"
 ],
 "subgenres": [
-"ambient"
+"ambient jazz"
 ],
 "artists": [
 "The Vernon Spring"
@@ -19320,26 +20468,9 @@
 ]
 },
 "le-truskel": {
-"digest": "95c044801e3483b902126f713eb284a4cc43d6da",
-"today": "2026-09-22",
+"digest": "7b9226c9e790b1b2ed239eb2998b5664da68691e",
+"today": "2026-09-23",
 "events": [
-{
-"title": "FALVINO + TATI AND THE CHRONICLE",
-"date": "2026-09-22",
-"time": null,
-"url": null,
-"price": null,
-"genres": [
-"rock"
-],
-"subgenres": [],
-"artists": [
-"Falvino",
-"Tati and the Chronicle"
-],
-"is_music": true,
-"sold_out": false
-},
 {
 "title": "ORDRE PUBLIC + DANNY REDRUM",
 "date": "2026-09-23",
@@ -19368,7 +20499,7 @@
 ],
 "subgenres": [
 "classic rock",
-"oldies"
+"dj set"
 ],
 "artists": [],
 "is_music": true,
@@ -19381,44 +20512,41 @@
 "url": null,
 "price": null,
 "genres": [
+"rock",
+"funk"
+],
+"subgenres": [
+"funk rock",
+"tribute"
+],
+"artists": [],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "BRITPOP INDIE ROCK",
+"date": "2026-09-24",
+"time": null,
+"url": null,
+"price": null,
+"genres": [
+"indie",
 "rock"
 ],
 "subgenres": [
-"tribute",
-"funk rock"
+"britpop",
+"dj set"
 ],
-"artists": [
-"Red Hot Chili Peppers Tribute"
-],
+"artists": [],
 "is_music": true,
 "sold_out": false
 }
 ]
 },
 "nouveau-casino": {
-"digest": "81bf307041670902378670af92df7dfed0d194b4",
-"today": "2026-09-22",
+"digest": "93d9a6e016ddf00a4608f3e98131528acd1b0379",
+"today": "2026-09-23",
 "events": [
-{
-"title": "Xandria",
-"date": "2026-09-22",
-"time": "19:00",
-"url": null,
-"price": null,
-"genres": [
-"metal"
-],
-"subgenres": [
-"symphonic metal"
-],
-"artists": [
-"Xandria",
-"Seven Spires",
-"Tulip"
-],
-"is_music": true,
-"sold_out": false
-},
 {
 "title": "PULSEPAIR Release Party",
 "date": "2026-09-24",
@@ -19430,8 +20558,8 @@
 ],
 "subgenres": [],
 "artists": [
-"PULSEPAIR",
-"Ernesto"
+"Ernesto",
+"PULSEPAIR"
 ],
 "is_music": true,
 "sold_out": false
@@ -19480,7 +20608,8 @@
 "price": null,
 "genres": [
 "afro",
-"reggae"
+"reggae",
+"world"
 ],
 "subgenres": [
 "afropop",
@@ -19539,7 +20668,8 @@
 "electro"
 ],
 "subgenres": [
-"techno"
+"techno",
+"electro-bass"
 ],
 "artists": [
 "DJ Stingray 313",
@@ -19560,8 +20690,8 @@
 "electro"
 ],
 "subgenres": [
-"techno",
-"bounce"
+"bounce",
+"hard bounce"
 ],
 "artists": [
 "Paul Meier",
@@ -19580,10 +20710,11 @@
 "price": null,
 "genres": [
 "rock",
-"indie"
+"indie",
+"pop"
 ],
 "subgenres": [
-"pop rock"
+"indie rock"
 ],
 "artists": [
 "Nicotine Dolls"
@@ -19604,8 +20735,26 @@
 "jazz fusion"
 ],
 "artists": [
-"Marwan Boulaid Jazz Fusion Quartet"
+"Marwan Boulaid Jazz fusion Quartet"
 ],
+"is_music": true,
+"sold_out": false
+},
+{
+"title": "SPARK'LY opening edition",
+"date": "2026-10-09",
+"time": "23:30",
+"url": null,
+"price": null,
+"genres": [
+"afro",
+"hip-hop",
+"soul-rnb"
+],
+"subgenres": [
+"reggaeton"
+],
+"artists": [],
 "is_music": true,
 "sold_out": false
 },
@@ -19630,11 +20779,12 @@
 "url": null,
 "price": null,
 "genres": [
-"electro"
+"electro",
+"funk"
 ],
 "subgenres": [
-"uk garage",
 "disco",
+"uk garage",
 "drum & bass"
 ],
 "artists": [],
@@ -19651,9 +20801,7 @@
 "rock",
 "pop"
 ],
-"subgenres": [
-"pop rock"
-],
+"subgenres": [],
 "artists": [
 "LAMU"
 ],
@@ -19709,7 +20857,8 @@
 "url": null,
 "price": null,
 "genres": [
-"punk"
+"punk",
+"rock"
 ],
 "subgenres": [
 "psychobilly"
@@ -19732,7 +20881,8 @@
 "indie"
 ],
 "subgenres": [
-"new wave"
+"new wave",
+"indie rock"
 ],
 "artists": [
 "Dews Pegahorn"
@@ -19787,7 +20937,8 @@
 ],
 "subgenres": [
 "cumbia",
-"chicha"
+"chicha",
+"latin alternative"
 ],
 "artists": [
 "A.CHAL"
@@ -19824,8 +20975,8 @@
 ],
 "subgenres": [],
 "artists": [
-"Telegraph",
-"Cassily"
+"Cassily",
+"Telegraph"
 ],
 "is_music": true,
 "sold_out": false
@@ -19841,7 +20992,8 @@
 ],
 "subgenres": [
 "house",
-"indie dance"
+"indie dance",
+"progressive house"
 ],
 "artists": [],
 "is_music": true,
@@ -20005,7 +21157,8 @@
 "rock"
 ],
 "subgenres": [
-"rock alternatif"
+"rock alternatif",
+"dark rock"
 ],
 "artists": [
 "Antimatter",
@@ -20017,13 +21170,13 @@
 ]
 },
 "la-generale": {
-"digest": "126fac8af308580f0da4e2786cc68b511a22247a",
-"today": "2026-09-22",
+"digest": "51bbf71665860aaa2d80da5e240eef1f1aa5b80f",
+"today": "2026-09-23",
 "events": [
 {
-"title": "Mardi Informel de La Générale",
-"date": "2026-09-22",
-"time": "19:30",
+"title": "open studio",
+"date": "2026-10-03",
+"time": "14:00",
 "url": null,
 "price": null,
 "genres": [],
@@ -20033,21 +21186,21 @@
 "sold_out": false
 },
 {
-"title": "COMPLET - Rencontre pour un internet militant et autonome #2",
-"date": "2026-09-27",
-"time": null,
+"title": "Alerte dans l'édition indépendante",
+"date": "2026-10-03",
+"time": "14:00",
 "url": null,
 "price": null,
 "genres": [],
 "subgenres": [],
 "artists": [],
 "is_music": false,
-"sold_out": true
+"sold_out": false
 },
 {
-"title": "Alerte dans l'édition indépendante",
+"title": "MEET HZV",
 "date": "2026-10-03",
-"time": "14:00",
+"time": "17:00",
 "url": null,
 "price": null,
 "genres": [],
@@ -20086,6 +21239,30 @@
 "title": "La tête loin des épaules",
 "date": "2026-10-10",
 "time": "16:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "La Revanche des Lapins",
+"date": "2026-10-15",
+"time": "20:00",
+"url": null,
+"price": null,
+"genres": [],
+"subgenres": [],
+"artists": [],
+"is_music": false,
+"sold_out": false
+},
+{
+"title": "Réunion publique",
+"date": "2026-10-23",
+"time": "19:30",
 "url": null,
 "price": null,
 "genres": [],

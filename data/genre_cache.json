@@ -1071,6 +1071,16 @@
 "hard rock"
 ]
 },
+"alhambra|carolina deslandes": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"portuguese pop",
+"singer-songwriter"
+]
+},
 "alhambra|chrocktikal": {
 "genres": [
 "rock"
@@ -2533,6 +2543,16 @@
 "early music"
 ]
 },
+"bibliotheque-germaine-tillion|marie maiko folk rock cinematographique": {
+"genres": [
+"folk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"cinematic folk"
+]
+},
 "bibliotheque-herge|monte le son concert de gospel du groupe giwyze": {
 "genres": [
 "soul-rnb"
@@ -3108,6 +3128,16 @@
 "mediterranean"
 ]
 },
+"centre-culturel-canadien-a-paris|fannie devoile son album une vie au centre culturel canadien a paris le 08 10": {
+"genres": [
+"chanson",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"quebec song"
+]
+},
 "centre-culturel-canadien-a-paris|paysages nordiques jessica paradis et malin g thunell": {
 "genres": [
 "folk",
@@ -3171,6 +3201,11 @@
 "subgenres": [
 "french pop"
 ]
+},
+"chaillot-theatre-national-de-la-danse|assistez a cabarets a chaillot": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "chaillot-theatre-national-de-la-danse|cabarets": {
 "genres": [],
@@ -3841,12 +3876,31 @@
 "saxophone"
 ]
 },
+"conservatoire-municipal-francis-poulenc|autour du concert d ernest chausson": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music",
+"french romantic"
+]
+},
 "conservatoire-municipal-francis-poulenc|musiques au tournant du xixeme siecle": {
 "genres": [
 "classical"
 ],
 "is_music": true,
 "subgenres": []
+},
+"conservatoire-municipal-francis-poulenc|voyage en terre baroque masterclass avec patrick cohen akhenine": {
+"genres": [
+"classical"
+],
+"is_music": false,
+"subgenres": [
+"baroque"
+]
 },
 "conservatoire-municipal-frederic-chopin|concours international de quatuor de saxophones": {
 "genres": [
@@ -3933,6 +3987,15 @@
 "is_music": true,
 "subgenres": [
 "south american"
+]
+},
+"conservatoire-municipal-jean-philippe-rameau|concert spectacle jean tardieu et les arts": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"poetry and music"
 ]
 },
 "conservatoire-municipal-nadia-et-lili-boulanger|audition de classe le son des cordes": {
@@ -4141,6 +4204,16 @@
 "choral"
 ]
 },
+"eglise-notre-dame-de-la-salette|musique baroque allemande": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"cantata"
+]
+},
 "eglise-notre-dame-des-blancs-manteaux|concert dixit dominus haendel": {
 "genres": [
 "classical"
@@ -4169,6 +4242,15 @@
 "subgenres": [
 "sacred choral",
 "russian orthodox chant"
+]
+},
+"eglise-saint-christophe-de-javel|concert caritatif note bien joue mahler au profit de la recherche": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
 ]
 },
 "eglise-saint-germain-des-pres|concerto de noel de corelli les 4 saisons de vivaldi": {
@@ -4520,6 +4602,16 @@
 "violin and piano recital"
 ]
 },
+"eglise-st-marcel|concert le dimanche 11 octobre 2026 a 16h a l eglise st marcel paris xiii": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"sacred choral",
+"organ"
+]
+},
 "eglise-st-philippe-du-roule|grand concert tango guitare couple de danseurs": {
 "genres": [
 "latin",
@@ -4538,6 +4630,16 @@
 "is_music": true,
 "subgenres": [
 "acoustic guitar ensemble"
+]
+},
+"eglise-st-severin|concert a 2 ch urs solistes lyriques": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"requiem"
 ]
 },
 "eglise-st-severin|quintette a vents linos": {
@@ -5112,6 +5214,15 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"fgo-barbara|gender fvck klub halloween edition 2 androkill belligerency joli younes scorpiah akey gemini k la mulette": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"queer club"
 ]
 },
 "fgo-barbara|gu1t4r": {
@@ -5918,6 +6029,16 @@
 "subgenres": [
 "organ trio",
 "hard bop"
+]
+},
+"jass-club-paris|hermeto pascoal s mothership": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"brazilian jazz"
 ]
 },
 "jass-club-paris|jam session groove jazz par le collectif la gelule": {
@@ -7609,6 +7730,15 @@
 "folktronica"
 ]
 },
+"la-cigale|brothers in band dire": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"classic rock"
+]
+},
 "la-cigale|celkilt": {
 "genres": [
 "rock",
@@ -8198,6 +8328,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dame-de-canton|milo aska release party x 1ere partie lilo applered": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie pop"
+]
+},
 "la-dame-de-canton|mune concert": {
 "genres": [
 "pop",
@@ -8470,6 +8609,15 @@
 "is_music": true,
 "subgenres": [
 "improvised music"
+]
+},
+"la-java|la java belleville soiree de lancement libre cours": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"goguette"
 ]
 },
 "la-java|offset pokeyz spaece grokalin dtg corivibor more": {
@@ -9480,6 +9628,15 @@
 "is_music": true,
 "subgenres": [
 "dubstep"
+]
+},
+"la-maroquinerie|moha mmz": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "la-maroquinerie|mona guba": {
@@ -11538,6 +11695,16 @@
 "tropical"
 ]
 },
+"le-cadre-noir|jaguares tropicales vol iv": {
+"genres": [
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"tropical",
+"cumbia"
+]
+},
 "le-carreau-du-temple|saison mediterranee 2026 le festival food temple maroc au carreau du temple": {
 "genres": [],
 "is_music": false,
@@ -11645,6 +11812,15 @@
 "subgenres": [
 "progressive rock",
 "psychedelic rock"
+]
+},
+"le-hasard-ludique|bu nasser live in paris": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"arabic rap"
 ]
 },
 "le-hasard-ludique|francis of delirium": {
@@ -13652,6 +13828,17 @@
 "is_music": true,
 "subgenres": []
 },
+"les-lionnes-parvis-du-palais-de-la-porte-doree|guinguette afro caribbean sunset open air gratuit": {
+"genres": [
+"afro",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"caribbean",
+"dancehall"
+]
+},
 "les-trois-baudets|baozi kanou maline": {
 "genres": [
 "pop",
@@ -13674,6 +13861,11 @@
 "pop"
 ],
 "is_music": true,
+"subgenres": []
+},
+"les-trois-baudets|cabaret les dessous lesbiens 10": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "les-trois-baudets|camille lv millie hopes": {
@@ -13831,6 +14023,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"les-trois-baudets|louise charbonnel elise vassalucci": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
 },
 "les-trois-baudets|mama festival 2026": {
 "genres": [
@@ -15015,6 +15216,15 @@
 "is_music": true,
 "subgenres": []
 },
+"new-morning|shalosh": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano trio"
+]
+},
 "new-morning|shrizz n maze": {
 "genres": [
 "funk",
@@ -15096,6 +15306,15 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"new-morning|une soiree avec sullivan fortner": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano jazz"
 ]
 },
 "new-morning|vowski": {
@@ -15381,6 +15600,13 @@
 ]
 },
 "pan-piper-paris|soyez heureux": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
+"parc-georges-brassens|les 39e journees brassens et de la chanson francaise": {
 "genres": [
 "chanson"
 ],
@@ -16520,6 +16746,11 @@
 "is_music": true,
 "subgenres": []
 },
+"point-ephemere|au poste x diagrammes faire mieux": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|babecore launch showcase jerk off after party": {
 "genres": [
 "electro"
@@ -16527,6 +16758,15 @@
 "is_music": true,
 "subgenres": [
 "hyperpop"
+]
+},
+"point-ephemere|back to school powered by the room": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
 ]
 },
 "point-ephemere|burning festival": {
@@ -17013,6 +17253,13 @@
 "subgenres": [
 "noise"
 ]
+},
+"point-ephemere|paris electronic week opening": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
 },
 "point-ephemere|paris est une fest": {
 "genres": [
@@ -17959,6 +18206,15 @@
 "new wave"
 ]
 },
+"square-courteline|kiosques en fete le choeur emprise directe en happening": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"choir"
+]
+},
 "station-atlante|veronika bulycheva en concert la romance russe": {
 "genres": [
 "world",
@@ -18486,6 +18742,15 @@
 "groove"
 ]
 },
+"sunset-sunside|dictame": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
+]
+},
 "sunset-sunside|django meets armstrong romain vuillemin noe codjia quartet": {
 "genres": [
 "jazz"
@@ -18616,6 +18881,17 @@
 "is_music": true,
 "subgenres": [
 "corsican music"
+]
+},
+"sunset-sunside|faycal salhi": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"oud",
+"andalusian"
 ]
 },
 "sunset-sunside|florence camensuli jazz entre les mots": {
@@ -18907,6 +19183,15 @@
 "is_music": true,
 "subgenres": [
 "contemporary jazz"
+]
+},
+"sunset-sunside|hypnagogic drift": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"ambient jazz"
 ]
 },
 "sunset-sunside|ines de las sierras quintet": {
@@ -19752,6 +20037,16 @@
 "is_music": true,
 "subgenres": [
 "tango"
+]
+},
+"sunset-sunside|the horizons": {
+"genres": [
+"jazz",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber jazz"
 ]
 },
 "sunset-sunside|thibault renard quintet": {
@@ -20689,6 +20984,17 @@
 "surf punk"
 ]
 },
+"supersonic|shaki tavi": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"noise rock",
+"indie rock"
+]
+},
 "supersonic|shaking hand": {
 "genres": [
 "rock",
@@ -21162,6 +21468,16 @@
 "subgenres": [
 "baroque",
 "classical period"
+]
+},
+"theatre-des-champs-elysees|songe et tourment mendelssohn schumann mozart": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"romantic",
+"orchestral"
 ]
 },
 "theatre-du-chatelet|battle pro": {
