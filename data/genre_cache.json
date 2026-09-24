@@ -1255,6 +1255,14 @@
 "is_music": true,
 "subgenres": []
 },
+"alhambra|lowey": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "alhambra|mnek": {
 "genres": [
 "soul-rnb",
@@ -1646,6 +1654,16 @@
 "is_music": true,
 "subgenres": []
 },
+"badaboum|club la ch ck remembering brat summer": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"hyperpop"
+]
+},
 "badaboum|club la ch ck tumblr rave": {
 "genres": [
 "electro",
@@ -1655,6 +1673,16 @@
 "subgenres": [
 "hyperpop",
 "indie sleaze"
+]
+},
+"badaboum|club more girls behind decks birthday party": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house",
+"techno"
 ]
 },
 "badaboum|club orange crush bennet b2b sinead zuri reve": {
@@ -1954,6 +1982,15 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"bataclan|adela": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"french pop"
 ]
 },
 "bataclan|ajna": {
@@ -2329,6 +2366,17 @@
 "alternative metal"
 ]
 },
+"bataclan|swae lee": {
+"genres": [
+"hip-hop",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"trap",
+"melodic rap"
+]
+},
 "bataclan|the kid laroi": {
 "genres": [
 "pop",
@@ -2657,6 +2705,13 @@
 "techno"
 ]
 },
+"cabaret-sauvage|club sauvage part 1 cabaret sauvage": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "cabaret-sauvage|deejay mk": {
 "genres": [
 "electro",
@@ -2867,6 +2922,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"cafe-de-la-danse|dave east": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"east coast hip hop"
+]
 },
 "cafe-de-la-danse|dominique fils aime": {
 "genres": [
@@ -4019,6 +4083,16 @@
 "classical guitar"
 ]
 },
+"doc|free koulchi": {
+"genres": [
+"experimental",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"free improvisation"
+]
+},
 "duc-des-lombards|bria skonberg": {
 "genres": [
 "jazz"
@@ -4065,6 +4139,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"duc-des-lombards|obradovic tixier duo told 10 year anniversary release party": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"duo"
+]
 },
 "duc-des-lombards|ruthie foster": {
 "genres": [
@@ -6434,6 +6518,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|cafe concert diez cuerdas": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"guitar duo"
+]
+},
 "la-bellevilloise|cafe concert djan": {
 "genres": [
 "pop"
@@ -6512,6 +6606,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-bellevilloise|cafe concert soriba sakho": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"mandingue",
+"kora"
+]
 },
 "la-bellevilloise|cafe concert wambo": {
 "genres": [
@@ -7957,6 +8062,15 @@
 "rap français"
 ]
 },
+"la-cigale|logicaltramp the spiri": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"progressive rock"
+]
+},
 "la-cigale|lou sonata 3 concert dessi": {
 "genres": [
 "pop"
@@ -8261,6 +8375,17 @@
 "vocal jazz"
 ]
 },
+"la-dame-de-canton|fish don t exist x scleroda x eigengrau": {
+"genres": [
+"rock",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"post-rock",
+"noise"
+]
+},
 "la-dame-de-canton|gassine zecar x l oreille kc": {
 "genres": [
 "chanson",
@@ -8319,6 +8444,14 @@
 "subgenres": [
 "neo-soul"
 ]
+},
+"la-dame-de-canton|ligne 10 x capitaine sky": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-dame-de-canton|lucie shame x the reed conservation society": {
 "genres": [
@@ -8596,7 +8729,22 @@
 "is_music": true,
 "subgenres": []
 },
+"la-generale|kostard punk": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"punk rock"
+]
+},
 "la-generale|le peu qu il reste la grande revue": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"la-generale|le peu qu il reste revue de la revue desseins": {
 "genres": [],
 "is_music": false,
 "subgenres": []
@@ -9007,6 +9155,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-marbrerie|melo xxx release party girly punk event": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage punk"
+]
+},
 "la-marbrerie|montreuil carnavalaw 2": {
 "genres": [
 "world",
@@ -9117,6 +9275,16 @@
 "is_music": true,
 "subgenres": [
 "bass music"
+]
+},
+"la-maroquinerie|7 weeks": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"stoner rock",
+"alternative rock"
 ]
 },
 "la-maroquinerie|adame": {
@@ -11463,6 +11631,36 @@
 "subgenres": [
 "vocal jazz"
 ]
+},
+"le-baiser-sale|tiss week pass 16 concerts": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": []
+},
+"le-baiser-sale|tiss week pass 3 aftershows": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
+"le-baiser-sale|tiss week pass 6 aftershows": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
+"le-baiser-sale|tiss week pass 8 concerts": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": []
 },
 "le-baiser-sale|tiss week sidney": {
 "genres": [
@@ -14024,6 +14222,16 @@
 "is_music": true,
 "subgenres": []
 },
+"les-trois-baudets|louise charbonnel elise vassallucci": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"nouvelle chanson française"
+]
+},
 "les-trois-baudets|louise charbonnel elise vassalucci": {
 "genres": [
 "chanson"
@@ -14071,6 +14279,14 @@
 "is_music": true,
 "subgenres": []
 },
+"les-trois-baudets|mee shel friends": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "les-trois-baudets|nuit noire roukie": {
 "genres": [
 "indie",
@@ -14078,6 +14294,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"les-trois-baudets|pio margauxrz": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"nouvelle chanson française"
+]
 },
 "les-trois-baudets|raban": {
 "genres": [
@@ -15442,6 +15668,17 @@
 "is_music": true,
 "subgenres": []
 },
+"nouveau-casino|thriller party 100 michael jackson": {
+"genres": [
+"pop",
+"funk",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"80s"
+]
+},
 "olympia|angra": {
 "genres": [
 "metal"
@@ -16034,6 +16271,16 @@
 "subgenres": [
 "tuareg desert blues",
 "sahel guitar"
+]
+},
+"petit-bain|evergrey": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"progressive metal",
+"power metal"
 ]
 },
 "petit-bain|flamin groovies": {
@@ -16838,6 +17085,16 @@
 "math rock"
 ]
 },
+"point-ephemere|delusion records 5 ans": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
+},
 "point-ephemere|devotchka": {
 "genres": [
 "indie",
@@ -16888,6 +17145,16 @@
 "slowcore",
 "lo-fi"
 ]
+},
+"point-ephemere|faire la fete frugale culture vivante et sobriete heureuse avec le low tech journal": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"point-ephemere|festival de bd matin quel journal": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "point-ephemere|fierce birthday 3": {
 "genres": [
@@ -17836,6 +18103,16 @@
 "is_music": true,
 "subgenres": [
 "avant-garde"
+]
+},
+"popup|porte des princes air mediterranee": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"french pop"
 ]
 },
 "popup|provisoire official after party hal guernon fourzitou": {
@@ -18956,6 +19233,17 @@
 "great american songbook"
 ]
 },
+"sunset-sunside|giuliano eriston": {
+"genres": [
+"world",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"mpb",
+"brazilian"
+]
+},
 "sunset-sunside|guillaume leguerinel dance me home quintet": {
 "genres": [
 "jazz"
@@ -19060,6 +19348,15 @@
 "bebop"
 ]
 },
+"sunset-sunside|hommage a chet baker avec fabien mary": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz"
+]
+},
 "sunset-sunside|hommage a chico buarque jam bresil avec bruna hetzel": {
 "genres": [
 "world",
@@ -19080,6 +19377,24 @@
 "subgenres": [
 "bebop",
 "hard bop"
+]
+},
+"sunset-sunside|hommage a dexter gordon avec david sauzay": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop"
+]
+},
+"sunset-sunside|hommage a dizzie gillespie jam session": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop"
 ]
 },
 "sunset-sunside|hommage a freddie hubbard avec fabien mary jam": {
@@ -19174,6 +19489,16 @@
 "subgenres": [
 "bebop",
 "piano jazz"
+]
+},
+"sunset-sunside|hommage a wes montgomery concert thematique": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop",
+"jazz guitar"
 ]
 },
 "sunset-sunside|hugo diaz quintet": {
@@ -19402,6 +19727,16 @@
 "is_music": true,
 "subgenres": [
 "afro jazz"
+]
+},
+"sunset-sunside|jean michel pilc louis moutin shimon gambourg": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz",
+"piano trio"
 ]
 },
 "sunset-sunside|jeremy pelt quintet": {
