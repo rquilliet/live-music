@@ -8,5 +8,8 @@
      extra   any other endpoint: sent as JSON {message, contact, context} plus these keys (e.g. a public access key) */
 window.LIP_CONFIG = {
   spotifyClientId: "b0817d481aaf446996949f90b5c444da",
-  feedback: { url: "", fields: null, extra: null },
+  feedback: {
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSe3wqx-es2imnRgoekEJ6NIFWvrmoYV9qS7Hzv3AUqV_94exA/formResponse",
+    fields: { message: "entry.249841420", contact: "entry.962344304", context: "entry.658419115" },
+  },
 };

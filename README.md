@@ -77,7 +77,13 @@ A "Feedback" button (bottom right, above the player bar when music plays; a "Som
 on the concert sheet) opens one free-form field. The message is posted to `feedback.url` of `web/config.js` with its
 context (page, concert open, active filters, screen, browser). The page holds no secret: the endpoint is either a
 Google Form (`fields` maps message / contact / context to the form's `entry.<id>` names) or any endpoint taking JSON.
-Empty `url` = no button. Sorting the messages into Linear "Feedback" issues happens outside the site (REM-56).
+Empty `url` = no button.
+
+The form "Live in Paris - Feedback" (three paragraph questions: message, contact, context; no sign-in) writes to the
+Google Sheet "Live in Paris - Feedback (responses)". An hourly Claude scheduled task (`live-in-paris-feedback-triage`,
+in the Claude desktop app) reads the new rows, files one Linear issue per message with the `Feedback` label (category,
+the visitor's words, context, probable duplicates, next step; spam is filed as Canceled) and reports. A row is known
+as handled by the `Feedback-ID:` line of its issue, so nothing is stored elsewhere.
 
 ## Spotify (optional)
 
