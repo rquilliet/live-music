@@ -1,0 +1,46 @@
+{
+ "sources": {
+  "le-plan": {
+   "since": "2026-09-13",
+   "days": [
+    "2026-09-27"
+   ],
+   "usd": 0.081,
+   "issue": "REM-67"
+  }
+ },
+ "last": {
+  "date": "2026-09-27",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/36353557720",
+  "usd": 0.081,
+  "sessions": 1,
+  "fixed": [],
+  "recovered": [],
+  "unresolved": [
+   {
+    "venue": "Le Plan",
+    "slug": "le-plan",
+    "error": "HTTP 418 for https://www.leplan.com/",
+    "since": "2026-09-13",
+    "prev_count": 10,
+    "url": "https://www.leplan.com/",
+    "attempts": 1,
+    "usd_total": 0.081,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Le Plan can't be repaired from here: since 2026-09-13 leplan.com answers every request from the scraper with HTTP 418, which looks like a bot wall.\n- Cause: the whole site refuses our fetcher. https://www.leplan.com/, /agenda/, /feed/, /wp-json/, /robots.txt and https://leplan.com/ all return \"HTTP 418\". A different URL won't help.\n- Changed: nothing. venues.json and the parsers are untouched.\n- Check: {\"ok\": false, \"count\": 0, \"prev_count\": 10, \"error\": \"HTTP 418 for https://www.leplan.com/\"}\n- No page content came back, so there were no embedded instructions to report.\n- For a human: open the site in a normal browser to confirm it's up, and check whether a WAF or anti-bot service now filters our user agent or IP. If so, ask the venue to allowlist us or find another source for the programme (a ticketing platform such as Shotgun/Dice/Fnac, or an Essonne agenda). A different source would need a new URL, and possibly a new parser.",
+    "diff": "",
+    "usd": 0.081,
+    "usd_agent": 0.0810456
+   }
+  ],
+  "systemic": [],
+  "skipped": [],
+  "done": true
+ },
+ "spent": {
+  "date": "2026-09-27",
+  "usd": 0.081
+ }
+}
