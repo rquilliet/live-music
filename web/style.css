@@ -171,14 +171,14 @@ svg.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor;
 .weekhead { font-family: var(--display); font-size: 22px; font-weight: 700; margin: 18px 0 8px; display: flex; align-items: baseline; gap: 10px; }
 .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1.5px solid var(--rule); border-left: 1.5px solid var(--rule); background: var(--paper); }
 .day { border-right: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); min-height: 320px; display: flex; flex-direction: column; min-width: 0; }
-.day h2 { font-family: var(--display); font-weight: 700; font-size: 20px; margin: 0; padding: 10px 12px; border-bottom: 1.5px solid var(--rule);
+.day h4 { font-family: var(--display); font-weight: 700; font-size: 20px; margin: 0; padding: 10px 12px; border-bottom: 1.5px solid var(--rule);
   display: flex; justify-content: space-between; align-items: baseline; gap: 6px;
   position: sticky; top: var(--navh, 0px); z-index: 2; background: var(--paper); }   /* the day stays in sight while its concerts scroll by */
-.day h2 em { font-style: normal; font-weight: 500; font-size: 13px; font-family: var(--body); color: var(--muted); white-space: nowrap; }
-.day.today h2 { background: var(--ink); color: var(--paper); }
-.day.today h2 em { color: var(--line); }
+.day h4 em { font-style: normal; font-weight: 500; font-size: 13px; font-family: var(--body); color: var(--muted); white-space: nowrap; }
+.day.today h4 { background: var(--ink); color: var(--paper); }
+.day.today h4 em { color: var(--line); }
 .day.past, .day.out { background: var(--paper2); min-height: 0; }
-.day.past h2, .day.out h2 { color: var(--faint); background: var(--paper2); }
+.day.past h4, .day.out h4 { color: var(--faint); background: var(--paper2); }
 .day .empty { padding: 24px 12px; font-size: 12px; color: var(--faint); font-style: italic; }
 .day .empty .link { font-style: italic; color: var(--faint); font-size: 12px; }
 .gig { padding: 10px 12px; border-bottom: 1px dashed var(--line); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 3px 10px; align-items: start; cursor: pointer; }

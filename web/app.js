@@ -412,7 +412,7 @@
       const past = iso < o.today, out = !past && (iso < o.from || iso > o.to);
       const cls = ["day", iso === o.today && "today", past && "past", out && "out"].filter(Boolean).join(" ");
       const note = past ? "past" : out ? "" : evs.length ? plural(evs.length, "concert") : "—";
-      h += `<div class="${cls}"><h2>${DAYS_SHORT[d.getDay()]} ${d.getDate()}<em>${note}</em></h2>`;
+      h += `<div class="${cls}"><h4>${DAYS_SHORT[d.getDay()]} ${d.getDate()}<em>${note}</em></h4>`;   // month h2 > week h3 > day h4
       if (evs.length) h += evs.map(gigHtml).join("");
       else if (!past && !out) h += '<div class="empty">Nothing announced.</div>';
       h += "</div>";
@@ -450,6 +450,17 @@
       html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}${r.carried ? ` · showing its ${plural(r.carried, "event")} from ${fmtShort(parseISO(r.stale_since))}` : ""}</div>`).join("")}</details>`;
     }
     list.innerHTML = html;
+    padList();
+  }
+  // Room under the last month for its heading to reach the strip (REM-69): without it a short page stops scrolling
+  // first, and the last month never gets the label nor its button.
+  function padList() {
+    const list = $("#list"), h = $$("h2.monthhead").pop();
+    list.style.paddingBottom = "";
+    if (!h) return;
+    const top = h.getBoundingClientRect().bottom + scrollY - $(".weeknav").offsetHeight + 1;   // where jumpMonth() scrolls to
+    const short = top + innerHeight - document.documentElement.scrollHeight;
+    if (short > 0) list.style.paddingBottom = parseFloat(getComputedStyle(list).paddingBottom) + short + "px";
   }
   function renderMeta() {
     const d = DATA;
@@ -1427,7 +1438,7 @@
 
   // ------------------------------------------------------------ events
   $("#months").onscroll = fadeMonths;
-  addEventListener("resize", fadeMonths);
+  addEventListener("resize", () => { fadeMonths(); padList(); });
   $("#months").onclick = ev => { const b = ev.target.closest("[data-m]"); if (b) jumpMonth(b.dataset.m); };
   // The day headers stick right under the strip, whose height changes with the width (the month buttons wrap on phones).
   new ResizeObserver(() => document.documentElement.style.setProperty("--navh", $(".weeknav").offsetHeight + "px")).observe($(".weeknav"));
