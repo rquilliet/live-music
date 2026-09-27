@@ -53,6 +53,16 @@ The site is static: GitHub Pages serves `web/` at `https://rquilliet.github.io/l
 If Pages is not enabled automatically by the first run, pick **GitHub Actions** as the source in
 Settings → Pages once.
 
+## Scraper status page
+
+Every run ends by writing `web/status.json` (`livemusic/status.py`): one entry per source with its status
+(`ok`, `low` under 3 events, `failed`), today's count against the count of its last success, the reason of
+a failure (HTTP error, parser exception, Claude API error, "0 events parsed"), "failing since", and 14 days
+of history, and what Claude cost that day (`livemusic/usage.py`: the scrape's calls per step, plus the
+troubleshooting agent). `web/status.html` shows it (`/status.html` on the site, linked from the failed-sources note at
+the bottom of the programme), with a link to the GitHub Actions log of the run. A run on a subset (`--only`)
+updates its sources and leaves the others as they were.
+
 ## Coverage check
 
 The end of every run lists the venues whose own site yielded fewer than 3 events (`low coverage`): that is

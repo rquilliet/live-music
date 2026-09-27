@@ -5,6 +5,7 @@ import datetime as dt
 import hashlib
 import json
 import os
+import re
 import time
 from typing import List
 
@@ -78,10 +79,12 @@ def _read_plan(venue, ctx):
             texts.append(f"### {u}\n" + html_to_text(get(u)))
         except FetchError as e:
             ctx["log"](f"  {venue['name']}: fetch failed: {e}")
+            ctx["problem"] = str(e)
     if not texts:
-        raise FetchError(f"no page could be fetched for {venue['name']}")
+        raise FetchError(ctx.get("problem") or f"no page could be fetched for {venue['name']}")
     text = "\n\n".join(texts)
     if len(text) < 200:
+        ctx["problem"] = f"the page holds {len(text)} characters of text (JavaScript-rendered page or bot wall?)"
         return []
     chunks = _chunks(text[:MAX_CHARS], CHUNK_CHARS)
     return [(_key(venue, c), c) for c in chunks]
@@ -198,6 +201,7 @@ def _wait_and_collect(client, cache, ctx) -> bool:
 def scrape(venue, ctx):
     if not llm_available():
         ctx["log"](f"  {venue['name']}: skipped (LLM extraction needs ANTHROPIC_API_KEY)")
+        ctx["problem"] = "skipped, LLM extraction needs ANTHROPIC_API_KEY"
         return []
     import anthropic
 
@@ -221,14 +225,17 @@ def scrape(venue, ctx):
                 resp = client.messages.create(**_params(venue, n, len(plan), chunk, today))
             except anthropic.APIStatusError as e:
                 ctx["log"](f"  {venue['name']}: API error {e.status_code}: {e.message}")
+                ctx["problem"] = f"Claude API error {e.status_code}: {_api_message(e.message)}"[:300]
                 break
             except anthropic.APIConnectionError as e:
                 ctx["log"](f"  {venue['name']}: connection error: {e}")
+                ctx["problem"] = f"Claude API connection error: {e}"[:300]
                 break
             usage.add("venues", resp.model, resp.usage)
             got = _parse(_answer_text(resp)) if resp.stop_reason != "max_tokens" else None
             if got is None:
                 ctx["log"](f"  {venue['name']}: unparseable or truncated answer for part {n}")
+                ctx["problem"] = f"unparseable or truncated answer from Claude for part {n}"
                 continue
             cache[key] = {"at": today.isoformat(), "events": got}
             changed = True
@@ -242,6 +249,13 @@ def scrape(venue, ctx):
     if reused:
         ctx["log"](f"  {venue['name']}: {reused}/{len(plan)} page parts unchanged, reused")
     return [_to_event(x, venue, ctx) for x in events]
+
+
+def _api_message(text: str) -> str:
+    """'Error code: 400 - {'type': 'error', 'error': {..., 'message': 'Your credit balance is too low…'}}'
+    -> the sentence a human wants to read on the status page."""
+    m = re.search(r"""['"]message['"]: (['"])(.+?)\1[,}]""", text or "")
+    return m.group(2) if m else (text or "")
 
 
 def _fix_year(date: str, today: dt.date, horizon_days: int) -> str:

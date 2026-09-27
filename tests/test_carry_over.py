@@ -88,10 +88,14 @@ class RunTest(unittest.TestCase):
                 res = pipeline.run(use_llm=False, players=False, log=lambda m: None)
                 with open(seen) as f:
                     self.assertEqual(json.load(f)["last_ok"], {"La Java": "2026-09-27"})
+                with open(os.path.join(tmp, "status.json")) as f:
+                    status = json.load(f)
         titles = {e["title"]: e["stale_since"] for e in res["events"]}
         self.assertEqual(titles, {"Jam": None, "Later": "2026-09-26"})
         self.assertEqual(res["report"][0], {"venue": "Le Trabendo", "ok": False, "error": "HTTP 503",
                                             "carried": 1, "stale_since": "2026-09-26"})
+        self.assertEqual([(s["slug"], s["status"], s.get("error")) for s in status["sources"]],
+                         [("le-trabendo", "failed", "HTTP 503"), ("la-java", "low", None)])
 
 
 if __name__ == "__main__":

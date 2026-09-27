@@ -1,4 +1,4 @@
-# Daily scrape: refresh web/events.json and the caches, commit them to main, redeploy the site.
+# Daily scrape: refresh web/events.json, web/status.json (scraper status page) and the caches, commit them to main, redeploy the site.
 # Secrets (Settings → Secrets and variables → Actions):
 #   ANTHROPIC_API_KEY       genre tagging, sub-genres, event-page summaries, LLM venues (optional but recommended)
 #   SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET   Spotify player ids (optional)
@@ -45,11 +45,11 @@ jobs:
         run: |
           git config user.name "live-music bot"
           git config user.email "actions@users.noreply.github.com"
-          git add web/events.json data/*.json
+          git add web/events.json web/status.json data/*.json
           if git diff --cached --quiet; then echo "no data change"; else
             git commit -m "Data: daily scrape $(date -u +%F)"
             # Code pushes land on main during the ~50 min LLM scrape: rebase onto the tip before
-            # pushing (data/*.json and web/events.json are only written here), retry a few times.
+            # pushing (data/*.json, web/events.json and web/status.json are only written here), retry a few times.
             for attempt in 1 2 3 4 5; do
               git fetch -q origin main
               git rebase -q origin/main || { git rebase --abort; echo "::error::rebase conflict on data files"; exit 1; }

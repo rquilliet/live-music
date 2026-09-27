@@ -10,6 +10,7 @@ import traceback
 
 from . import genres as G
 from . import players as P
+from . import status as ST
 from . import summaries as S
 from . import usage
 from .fetch import FetchError
@@ -60,7 +61,7 @@ def run(only=None, use_llm=True, players=True, log=print):
     venues = load_venues()
     by_slug = {v["slug"]: v for v in venues}
     state = load_state()
-    events, report = [], []
+    events, report, timings = [], [], {}
     todo = [v for v in venues if v["strategy"] != "none" and not (v["strategy"] == "llm" and not use_llm)
             and (not only or v["slug"] in only or v["strategy"] in only)]
     log(f"{len(todo)} sources to scrape, today is {today}")
@@ -91,6 +92,8 @@ def run(only=None, use_llm=True, players=True, log=print):
             log(f"  {v['name']}: unknown strategy {v['strategy']}")
             continue
         log(f"  ({i}/{len(todo)}) {v['name']} [{v['strategy']}] ...")
+        ctx["problem"] = None   # a source that gives up without raising says why here (status page)
+        t0 = time.time()
         try:
             got = fn(v, ctx)
         except FetchError as e:
@@ -102,12 +105,14 @@ def run(only=None, use_llm=True, players=True, log=print):
             traceback.print_exc()
             failed(v, repr(e))
             continue
+        finally:
+            timings[v["name"]] = round(time.time() - t0, 1)
         kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
         had = state["counts"].get(v["name"], 0)
         if not kept and had:
             # a 200 page with nothing in it is a broken parser or a bot wall, not an empty programme
             log(f"  {v['name']}: 0 events (had {had}) -> treated as failure")
-            failed(v, f"0 events parsed (was {had})")
+            failed(v, f"0 events parsed (was {had})" + (f": {ctx['problem']}" if ctx["problem"] else ""))
             continue
         log(f"  {v['name']}: {len(kept)} events" + (f" ({len(got) - len(kept)} outside window/invalid)" if len(got) != len(kept) else ""))
         report.append({"venue": v["name"], "ok": True, "count": len(kept)})
@@ -164,6 +169,10 @@ def run(only=None, use_llm=True, players=True, log=print):
     os.makedirs(WEB, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=0)
+    status_path = os.path.join(WEB, "status.json")
+    ST.write(ST.build(todo, report, state, today, previous=ST.load(status_path), timings=timings,
+                      duration=round(time.time() - started), low=LOW_COVERAGE, cost=usage.totals(), partial=bool(only),
+                      active={v["slug"] for v in venues if v["strategy"] != "none"}), status_path)
     fresh = sum(1 for e in events if first_seen.get(e.id) == today.isoformat())
     log(f"wrote {len(events)} events -> {os.path.relpath(OUT_PATH, ROOT)} ({fresh} newly announced today)")
     for line in usage.summary():
