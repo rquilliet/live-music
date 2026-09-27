@@ -34,6 +34,55 @@ main { padding-bottom: 60px; }
 .cause b { display: block; }
 .cause span { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
 
+/* charts (REM-68): cost and sources over time */
+.trends { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 10px; margin-top: 10px; }
+.trends[hidden] { display: none; }
+.card { border: 1.5px solid var(--ink); border-radius: 14px; padding: 14px 16px 10px; background: var(--white); min-width: 0; display: flex; flex-direction: column; }
+.card header { display: flex; align-items: center; justify-content: space-between; gap: 8px 14px; flex-wrap: wrap; min-height: 30px; }
+.card h2 { margin: 0; font-family: var(--display); font-weight: 900; font-size: 22px; line-height: 1; }
+.seg { display: flex; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; }
+.seg button { height: 27px; padding: 0 12px; border: 0; background: none; font-size: 12.5px; font-weight: 500; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.keys { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.key { display: inline-block; width: 14px; height: 2px; border-radius: 1px; background: var(--ink); vertical-align: middle; margin: 0 5px 0 10px; }
+.key.ok { background: var(--ok); }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 26px; margin: 12px 0 6px; }
+.stat b { display: block; font-family: var(--display); font-weight: 900; font-size: 28px; line-height: 1; }
+.stat span { font-size: 12.5px; color: var(--muted); }
+.stat small { display: block; font-size: 11.5px; color: var(--faint); }
+.plot { position: relative; margin-top: auto; }
+.plot svg { display: block; touch-action: pan-y; }
+.plot .grid { stroke: #e9e4d8; stroke-width: 1; }
+.plot .grid.base { stroke: var(--line); }
+.plot .tick { font: 11px var(--body); fill: var(--faint); font-variant-numeric: tabular-nums; }
+.plot .col { fill: var(--ink); }
+.plot .col.none { fill: var(--none); }
+.plot svg.hover .col:not(.on):not(.none) { opacity: .4; }
+.plot .line { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.plot .line.ok { stroke: var(--ok); }
+.tip i { filter: brightness(1.35); }
+.plot .wash { fill: var(--ink); opacity: .08; }
+.plot .dot { stroke: var(--white); stroke-width: 2; }
+.plot .cross { stroke: var(--faint); stroke-width: 1; }
+.plot .empty { padding: 40px 0; }
+.tip { position: absolute; z-index: 2; pointer-events: none; padding: 8px 10px; border-radius: 8px; background: var(--ink); color: var(--paper); font-size: 12px; white-space: nowrap; }
+.tip b { display: block; margin-bottom: 3px; font-weight: 500; color: var(--line); }
+.tip div { display: flex; align-items: center; gap: 6px; }
+.tip i { width: 10px; height: 3px; border-radius: 1px; }
+.tip strong { font-weight: 700; font-variant-numeric: tabular-nums; }
+.tip span { color: var(--line); }
+.note { order: 1; margin: 2px 0 4px; font-size: 11.5px; color: var(--faint); }
+.note:empty { display: none; }
+#figures { grid-column: 1 / -1; font-size: 12.5px; }
+#figures summary { cursor: pointer; color: var(--muted); width: fit-content; }
+.tables { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 10px 28px; align-items: start; margin-top: 8px; max-height: 320px; overflow: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+caption { text-align: left; font-weight: 600; padding-bottom: 4px; }
+th, td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; padding-left: 0; }
+th { font-size: 11px; font-weight: 400; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); }
+.na { color: var(--faint); }
+
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; margin: 22px 0 8px; }
 .filters { display: flex; gap: 8px; flex-wrap: wrap; }
 .filters button { height: 34px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: none; font-weight: 500; font-size: 13px; white-space: nowrap; }
@@ -75,6 +124,8 @@ main { padding-bottom: 60px; }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tile.cost { grid-column: 1 / -1; }
   .tile b { font-size: 32px; }
+  .trends, .tables { grid-template-columns: minmax(0, 1fr); }
+  .stat b { font-size: 24px; }
   .legend { display: none; }
   .head { display: none; }
   .row { grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 2px; }

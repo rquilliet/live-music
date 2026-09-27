@@ -63,6 +63,10 @@ troubleshooting agent). `web/status/` shows it (`/status/` on the site: a back-o
 and with no link to it), with a link to the GitHub Actions log of the run. A run on a subset (`--only`)
 updates its sources and leaves the others as they were.
 
+Every write of `web/status.json` also brings `web/timeline.json` up to date: one row per day since the first
+scrape, never cut (sources connected, sources that answered, Claude cost). The page draws its two charts from
+it (`web/status/charts.js`): Claude cost per day, per month and cumulated, and the sources connected over time.
+
 ## Troubleshooting agent
 
 `python -m livemusic.troubleshoot run` reads `web/status.json` and handles the sources that failed:

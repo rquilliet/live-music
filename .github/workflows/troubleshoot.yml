@@ -2,7 +2,7 @@
 # A repair that passes the guardrails of livemusic/troubleshoot.py is pushed to its own branch
 # (autofix/<slug>) and proposed as a pull request: nothing reaches main without a human merging it.
 # What cannot be repaired becomes a Linear issue, and the run fails so that GitHub notifies the owner.
-# Only data (web/status.json, web/events.json, data/*.json) is committed to main, as the daily scrape does.
+# Only data (web/status.json, web/timeline.json, web/events.json, data/*.json) is committed to main, as the daily scrape does.
 # Needs Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests";
 # without it the branches are still pushed and the run summary links to them.
 # Secrets:
@@ -116,7 +116,7 @@ jobs:
           git config user.name "live-music bot"
           git config user.email "actions@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git add web/events.json web/status.json data/*.json
+          git add web/events.json web/status.json web/timeline.json data/*.json
           if git diff --cached --quiet; then echo "no data change"; else
             git commit -m "Data: troubleshooting $(date -u +%F)"
             for attempt in 1 2 3 4 5; do

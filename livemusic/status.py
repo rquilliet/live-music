@@ -12,6 +12,11 @@
 
 A run on a subset (--only) updates its sources and leaves the others as the last run saw them; its cost
 is added to the day's.
+
+web/timeline.json is the long memory of the page's charts (REM-68), one row per day since the first scrape,
+oldest first and never cut: [{"date", "sources": connected that day, "ok": those that answered,
+"usd": what Claude cost, absent for the days before it was measured}]; "first" on the day of the launch is the
+number of sources of the first commit. Every write of status.json brings it up to date.
 """
 import datetime as dt
 import json
@@ -21,6 +26,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "web", "status.json")
 HISTORY_DAYS = 14
 FIXES_KEPT = 30
+TIMELINE = "timeline.json"   # next to status.json
 
 
 def load(path=None):
@@ -36,6 +42,50 @@ def write(status, path=None):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=1)
+    try:
+        with open(timeline_path(path), "r", encoding="utf-8") as f:
+            rows = json.load(f)
+    except OSError:
+        rows = []
+    except ValueError:
+        rows = None
+    if not isinstance(rows, list):   # a damaged file is left for a hand to repair: rewriting it would lose the old days
+        print(f"status: {timeline_path(path)} is not readable, left as it is")
+        return
+    with open(timeline_path(path), "w", encoding="utf-8") as f:
+        f.write("[\n" + ",\n".join(json.dumps(r, ensure_ascii=False) for r in track(status, rows)) + "\n]\n")   # a row a line: small diffs
+
+
+def timeline_path(path=None):
+    return os.path.join(os.path.dirname(path or PATH), TIMELINE)
+
+
+def track(status, rows):
+    """The timeline with the days of the report: today's row is replaced (a second run, the troubleshooting
+    agent's cost), an older day is only added when the timeline missed it."""
+    days = {r["date"]: r for r in rows if isinstance(r, dict) and r.get("date")}
+    today, now = status.get("today"), status.get("sources", [])
+
+    def put(date, sources, ok, usd):
+        row = {"date": date, "sources": sources, "ok": ok}
+        if isinstance(usd, (int, float)):
+            row["usd"] = round(usd, 4)
+        if "first" in days.get(date, {}):
+            row["first"] = days[date]["first"]
+        days[date] = row
+
+    for h in status.get("history", []):
+        if not h.get("date") or (h["date"] in days and h["date"] != today):
+            continue
+        counts = list(h.get("sources", {}).values())
+        if h["date"] == today:   # a run on a subset only has its sources in the day's row: count the page's
+            put(today, len(now), sum(1 for s in now if s.get("status") != "failed"), h.get("usd"))
+        else:
+            put(h["date"], len(counts), sum(1 for c in counts if not isinstance(c, str)), h.get("usd"))
+    cost = status.get("cost") or {}
+    if cost.get("date") and cost["date"] not in days and cost.get("usd"):   # the agent ran on a day without a scrape
+        put(cost["date"], len(now), None, cost["usd"])
+    return [days[d] for d in sorted(days)]
 
 
 def run_url(env=None):

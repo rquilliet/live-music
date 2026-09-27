@@ -1,4 +1,7 @@
 import datetime as dt
+import json
+import os
+import tempfile
 import unittest
 
 from livemusic import status
@@ -84,6 +87,48 @@ class BuildTest(unittest.TestCase):
         self.assertEqual((agent["cost"]["usd"], agent["history"][0]["usd"]), (2.15, 2.15))
         tomorrow = build([JAVA], ok, previous=agent, today=dt.date(2026, 9, 28), cost={"usd": 0, "steps": []})
         self.assertEqual((tomorrow["cost"]["usd"], [h["usd"] for h in tomorrow["history"]]), (0, [0, 2.15]))
+
+    def test_timeline_keeps_every_day(self):
+        old = [{"date": "2026-09-07", "sources": 56, "ok": 56}, {"date": "2026-09-26", "sources": 2, "ok": 2}]
+        report = [{"venue": "La Java", "ok": True, "count": 12}, {"venue": "Le Trabendo", "ok": False, "error": "HTTP 503"}]
+        yesterday = build([JAVA, TRABENDO], report, today=dt.date(2026, 9, 26))
+        del yesterday["history"][0]["usd"]   # a day from before the cost was measured
+        first = build([JAVA, TRABENDO], report, previous=yesterday, cost={"usd": 1.5, "steps": [{"what": "venues", "usd": 1.5}]})
+        rows = status.track(first, old)
+        self.assertEqual(rows, [old[0], old[1],   # a day already in the timeline is not rewritten
+                                {"date": "2026-09-27", "sources": 2, "ok": 1, "usd": 1.5}])
+        again = status.add_cost(first, {"steps": [{"what": "troubleshooting", "usd": 0.5}]}, TODAY)
+        self.assertEqual(status.track(again, rows)[-1], {"date": "2026-09-27", "sources": 2, "ok": 1, "usd": 2.0})
+        self.assertEqual(status.track(first, [])[0], {"date": "2026-09-26", "sources": 2, "ok": 1})   # not measured: no usd
+
+    def test_timeline_of_a_run_on_a_subset_counts_every_source(self):
+        report = [{"venue": "La Java", "ok": True, "count": 12}, {"venue": "Le Trabendo", "ok": True, "count": 40}]
+        full = build([JAVA, TRABENDO], report, today=dt.date(2026, 9, 26))
+        patch = build([JAVA], report[:1], previous=full, partial=True)
+        self.assertEqual(status.track(patch, [{"date": "2026-09-27", "sources": 1, "ok": 1, "first": 1}])[-1],
+                         {"date": "2026-09-27", "sources": 2, "ok": 2, "usd": 0, "first": 1})
+
+    def test_timeline_takes_the_agent_cost_of_a_day_without_scrape(self):
+        got = build([JAVA], [{"venue": "La Java", "ok": True, "count": 12}])
+        status.add_cost(got, {"steps": [{"what": "troubleshooting", "usd": 0.4}]}, "2026-09-28")
+        self.assertEqual(status.track(got, [])[-1], {"date": "2026-09-28", "sources": 1, "ok": None, "usd": 0.4})
+
+    def test_damaged_timeline_is_left_alone(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "status.json")
+            with open(os.path.join(d, "timeline.json"), "w", encoding="utf-8") as f:
+                f.write("<<<<<<< HEAD")
+            status.write(build([JAVA], [{"venue": "La Java", "ok": True, "count": 12}]), path)
+            with open(os.path.join(d, "timeline.json"), encoding="utf-8") as f:
+                self.assertEqual(f.read(), "<<<<<<< HEAD")
+
+    def test_write_updates_the_timeline_next_to_the_report(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "status.json")
+            status.write(build([JAVA], [{"venue": "La Java", "ok": True, "count": 12}]), path)
+            status.write(build([JAVA], [{"venue": "La Java", "ok": True, "count": 12}], today=dt.date(2026, 9, 28)), path)
+            with open(os.path.join(d, "timeline.json"), encoding="utf-8") as f:
+                self.assertEqual([r["date"] for r in json.load(f)], ["2026-09-27", "2026-09-28"])
 
     def test_run_url(self):
         self.assertIsNone(status.run_url({}))

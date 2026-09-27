@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="status.css?v=2">
+<link rel="stylesheet" href="status.css?v=3">
 </head>
 <body>
 <header class="top">
@@ -18,6 +18,21 @@
 <main>
   <section class="tiles" id="tiles"></section>
   <div id="cause"></div>
+  <section class="trends" id="trends" hidden>
+    <article class="card" id="cost">
+      <header><h2>Claude cost</h2><div class="seg" role="group" aria-label="Period of the cost chart"></div></header>
+      <div class="stats"></div>
+      <div class="plot"></div>
+      <p class="note"></p>
+    </article>
+    <article class="card" id="sources">
+      <header><h2>Sources connected</h2>
+        <span class="keys"><i class="key"></i>connected <i class="key ok"></i>answered that day</span></header>
+      <div class="stats"></div>
+      <div class="plot"></div>
+    </article>
+    <details id="figures"></details>
+  </section>
   <div class="bar">
     <div class="filters" id="filters" role="group" aria-label="Filter the sources"></div>
     <span class="legend"><i class="dot ok"></i>ok <i class="dot low"></i>low coverage <i class="dot failed"></i>failed <i class="dot none"></i>not run</span>
@@ -26,5 +41,6 @@
   <section id="fixes"></section>
 </main>
 <script src="status.js?v=2"></script>
+<script src="charts.js?v=1"></script>
 </body>
 </html>
