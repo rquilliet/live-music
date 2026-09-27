@@ -139,8 +139,16 @@ select.pill[hidden] { display: none; }
   background: linear-gradient(180deg, var(--gloss) 0, transparent 60%), var(--glass);
   -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3);
   box-shadow: inset 0 1px 0 var(--gloss2), 0 1px 0 var(--shade); }
-.months { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
-.months button { height: 32px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--ink); background: none; font-size: 13px; font-weight: 600; white-space: nowrap;
+/* one row whatever the programme's length (REM-50: a year and more of months): it scrolls sideways, edges fade */
+.months { display: flex; gap: 6px; flex: 1 1 0; min-width: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+  scroll-behavior: smooth; padding: 1px 0; }
+.months::-webkit-scrollbar { display: none; }
+.months button:first-child { margin-left: auto; }   /* right-aligned while they fit (justify-content would clip the start) */
+.months.fl { -webkit-mask-image: linear-gradient(90deg, transparent, #000 28px); mask-image: linear-gradient(90deg, transparent, #000 28px); }
+.months.fr { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
+.months.fl.fr { -webkit-mask-image: linear-gradient(90deg, transparent, #000 28px, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 28px, #000 calc(100% - 28px), transparent); }
+.months button { flex: none; height: 32px; padding: 0 13px; border-radius: 999px; border: 1.5px solid var(--ink); background: none; font-size: 13px; font-weight: 600; white-space: nowrap;
   transition: background-color .15s, color .15s, transform .12s; }
 .months button:hover { background: var(--hi); }
 .months button:active { transform: scale(.96); }
@@ -461,6 +469,7 @@ body.docked .body { padding-bottom: 150px; }
   .months { flex: 1 1 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
   .months::-webkit-scrollbar { display: none; }
   .months button { height: 30px; padding: 0 11px; font-size: 12.5px; flex: none; }
+  .months button:first-child { margin-left: 0; }   /* own row under the label: left-aligned */
   .grid { grid-template-columns: 1fr; }
   .day.past { display: none; }
   .hero-text h2 { font-size: 34px; }
@@ -516,4 +525,5 @@ body.docked .body { padding-bottom: 150px; }
   .list, .pill, .months button, .gpanel .g, .chipin .x, .close, .tile, .artist-pick button, .statusmenu button, .live .yt .play { transition: none; }
   .pill:active, .months button:active, .gpanel .g:active, .tag.sub:active, .close:active, .tile:active { transform: none; }
   .hero, .sheet.moving { will-change: auto; }
+  .months { scroll-behavior: auto; }
 }
