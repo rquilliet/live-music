@@ -121,7 +121,7 @@
     render();
   });
 
-  fetch("status.json?t=" + Date.now()).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  fetch("../status.json?t=" + Date.now()).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(d => { DATA = d; if (!["all", "failed", "low", "ok"].includes(filter)) filter = "all"; render(); })
     .catch(e => { $("#meta").textContent = "No status report yet: it is written at the end of a scrape (" + e.message + ")."; });
 })();

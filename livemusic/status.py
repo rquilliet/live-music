@@ -1,4 +1,4 @@
-"""Scrape report kept between runs: web/status.json, read by web/status.html (REM-45).
+"""Scrape report kept between runs: web/status.json, read by web/status/ (REM-45).
 
 {"generated_at": UTC time of the last run, "today": Paris date, "duration_s", "run_url": GitHub Actions log,
  "cost": {"usd", "steps": [{"what", "model", "batch", "calls", "tokens_in", "tokens_out", "usd"}]}: what Claude

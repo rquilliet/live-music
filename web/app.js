@@ -453,7 +453,7 @@
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
-      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}${r.carried ? ` · showing its ${plural(r.carried, "event")} from ${fmtShort(parseISO(r.stale_since))}` : ""}</div>`).join("")}<div><a href="status.html">Scraper status page</a></div></details>`;
+      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}${r.carried ? ` · showing its ${plural(r.carried, "event")} from ${fmtShort(parseISO(r.stale_since))}` : ""}</div>`).join("")}</details>`;
     }
     list.innerHTML = html;
   }
