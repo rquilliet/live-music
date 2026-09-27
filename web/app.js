@@ -141,6 +141,11 @@
     const age = (Date.now() - parseISO(e.first_seen).getTime()) / 864e5;
     return age <= (DATA.new_window_days || 7);
   }
+  function addedAgo(e) {   // "Added 3 days ago" in the sheet; nothing for a venue's first-scrape baseline
+    if (!e.first_seen || e.first_seen === "baseline") return "";
+    const d = Math.round((today0().getTime() - parseISO(e.first_seen).getTime()) / 864e5);
+    return `Added ${d <= 0 ? "today" : d === 1 ? "yesterday" : d + " days ago"}`;
+  }
   // Headliner + support acts (computed by the scraper; split the title for older events.json files).
   function lineup(e) {
     if (e.headliner) return [e.headliner, ...(e.support || [])];
@@ -261,7 +266,7 @@
   const yearOf = m => m.slice(0, 4) !== String(today0().getFullYear()) ? " " + m.slice(0, 4) : "";   // the year only when it is not this one
   function renderNav() {
     $("#months").innerHTML = months.map(m => `<button type="button" data-m="${m}">${MONTHS_SHORT[+m.slice(5) - 1]}${yearOf(m)}</button>`).join("");
-    spy();
+    spyCur = null; spy();
   }
   let spyRaf = 0;
   function spy() {
@@ -270,6 +275,24 @@
     $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().top <= line) cur = h.dataset.m; });
     $("#weeklabel").innerHTML = cur ? `${MONTHS[+cur.slice(5) - 1]}<small>${cur.slice(0, 4)}</small>` : "Coming up";
     $$("#months button").forEach(b => { b.classList.toggle("on", b.dataset.m === cur); b.setAttribute("aria-current", b.dataset.m === cur ? "true" : "false"); });
+    if (cur !== spyCur) { spyCur = cur; showMonth(); }
+  }
+  // The row scrolls sideways once the programme runs past a dozen months (REM-50): keep the month in view visible and
+  // fade the edge that hides more buttons.
+  let spyCur = null;
+  function showMonth() {
+    const row = $("#months"), b = $("#months .on");
+    if (b) {
+      const l = b.offsetLeft - row.offsetLeft, pad = 32;
+      if (l < row.scrollLeft + pad) row.scrollLeft = Math.max(0, l - pad);
+      else if (l + b.offsetWidth > row.scrollLeft + row.clientWidth - pad) row.scrollLeft = l + b.offsetWidth - row.clientWidth + pad;
+    }
+    fadeMonths();
+  }
+  function fadeMonths() {
+    const row = $("#months");
+    row.classList.toggle("fl", row.scrollLeft > 1);
+    row.classList.toggle("fr", row.scrollLeft + row.clientWidth < row.scrollWidth - 1);
   }
   function jumpMonth(m) {
     const h = $$(".monthhead").find(x => x.dataset.m === m); if (!h) return;
@@ -430,7 +453,7 @@
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
-      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}${r.carried ? ` · showing its ${plural(r.carried, "event")} from ${fmtShort(parseISO(r.stale_since))}` : ""}</div>`).join("")}</details>`;
+      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}${r.carried ? ` · showing its ${plural(r.carried, "event")} from ${fmtShort(parseISO(r.stale_since))}` : ""}</div>`).join("")}<div><a href="status.html">Scraper status page</a></div></details>`;
     }
     list.innerHTML = html;
   }
@@ -1009,7 +1032,7 @@
     const tile = ticketTile(e);
     sheetArtists = artists;
     const i0 = DOCK.e === e ? Math.max(0, artists.indexOf(DOCK.name)) : 0;   // reopened from the dock: start on the act playing
-    const meta = [tile.ticket || !price || price === "paid" ? "" : esc(price), subHtml(e, 4)].filter(Boolean).join(" · ");
+    const meta = [tile.ticket || !price || price === "paid" ? "" : esc(price), subHtml(e, 4), addedAgo(e)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
       <div class="actions${tile.html ? "" : " three"}">
         ${tile.html}
@@ -1323,6 +1346,8 @@
   }
 
   // ------------------------------------------------------------ events
+  $("#months").onscroll = fadeMonths;
+  addEventListener("resize", fadeMonths);
   $("#months").onclick = ev => { const b = ev.target.closest("[data-m]"); if (b) jumpMonth(b.dataset.m); };
   // The day headers stick right under the strip, whose height changes with the width (the month buttons wrap on phones).
   new ResizeObserver(() => document.documentElement.style.setProperty("--navh", $(".weeknav").offsetHeight + "px")).observe($(".weeknav"));

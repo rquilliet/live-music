@@ -7,14 +7,18 @@ import os
 import re
 import time
 import traceback
+from collections import defaultdict
 
 from . import genres as G
 from . import players as P
+from . import status as ST
 from . import summaries as S
+from . import usage
 from .fetch import FetchError
 from .model import Event
 from .sources import STRATEGIES
-from .util import norm_title, slugify, split_lineup, strip_accents
+from .sources import llm as L
+from .util import YEAR_GUESS_DAYS, norm_title, slugify, split_lineup, strip_accents
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -23,8 +27,10 @@ SEEN_PATH = os.path.join(DATA, "seen.json")
 GENRE_CACHE = os.path.join(DATA, "genre_cache.json")
 PLAYER_CACHE = os.path.join(DATA, "player_cache.json")
 OUT_PATH = os.path.join(WEB, "events.json")
-HORIZON_DAYS = 120
+HORIZON_DAYS = 730   # keep every announced concert: venues rarely sell more than a year ahead, this only drops typos
+OLD_HORIZON_DAYS = 120   # seen.json files written before REM-50 only know events this far ahead
 NEW_WINDOW_DAYS = 7
+RENAME_DAYS = 3        # a show renamed after a gap longer than this counts as a new one
 STALE_MAX_DAYS = 14   # a source failing longer than this loses its carried-over events (closed venue, dead site)
 VENUE_MATCH_KM = 0.15
 
@@ -46,7 +52,9 @@ def load_venues(path=None):
     return venues
 
 
-def run(only=None, use_llm=True, players=True, log=print):
+def run(only=None, use_llm=True, players=True, log=print, patch=False):
+    """patch: with `only`, the sources left out keep the events the last run gave them (a source
+    repaired during the day joins the programme without scraping everything again)."""
     started = time.time()
     plain = log
 
@@ -54,14 +62,21 @@ def run(only=None, use_llm=True, players=True, log=print):
         plain(f"[{int(time.time() - started) // 60:02d}:{int(time.time() - started) % 60:02d}] {msg}")
 
     today = today_paris()
-    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log}
+    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "year_guess_days": YEAR_GUESS_DAYS, "log": log}
     venues = load_venues()
     by_slug = {v["slug"]: v for v in venues}
     state = load_state()
-    events, report = [], []
+    events, report, timings = [], [], {}
     todo = [v for v in venues if v["strategy"] != "none" and not (v["strategy"] == "llm" and not use_llm)
             and (not only or v["slug"] in only or v["strategy"] in only)]
     log(f"{len(todo)} sources to scrape, today is {today}")
+    usage.reset()
+    try:   # all changed LLM-venue pages in one Message Batch, at half price (REM-55)
+        if not patch:   # a repaired source joins the programme now, not when a batch is done
+            L.prefetch([v for v in todo if v["strategy"] == "llm"], ctx)
+    except Exception as e:  # the venues then fall back to direct calls one by one
+        log(f"  LLM venues: batch step failed: {e}")
+        traceback.print_exc()
 
     previous = load_previous()
 
@@ -77,12 +92,22 @@ def run(only=None, use_llm=True, players=True, log=print):
             log(f"  {v['name']}: failing since {since}, nothing carried over (limit {STALE_MAX_DAYS} days)")
         report.append(entry)
 
+    if patch and only:
+        if not previous.get("events"):   # nothing to keep: writing would leave the patched sources alone in the programme
+            raise SystemExit("patch run: no previous events.json to patch, run a full scrape")
+        rest = [d for d in previous.get("events", [])
+                if d.get("date", "") >= today.isoformat() and not any(_from_source(d, v) for v in todo)]
+        events.extend(Event(**{k: d[k] for k in d if k in _EVENT_FIELDS}) for d in rest)
+        log(f"  patch run: kept {len(rest)} events of the other sources")
+
     for i, v in enumerate(todo, 1):
         fn = STRATEGIES.get(v["strategy"])
         if not fn:
             log(f"  {v['name']}: unknown strategy {v['strategy']}")
             continue
         log(f"  ({i}/{len(todo)}) {v['name']} [{v['strategy']}] ...")
+        ctx["problem"] = None   # a source that gives up without raising says why here (status page)
+        t0 = time.time()
         try:
             got = fn(v, ctx)
         except FetchError as e:
@@ -94,12 +119,14 @@ def run(only=None, use_llm=True, players=True, log=print):
             traceback.print_exc()
             failed(v, repr(e))
             continue
+        finally:
+            timings[v["name"]] = round(time.time() - t0, 1)
         kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
         had = state["counts"].get(v["name"], 0)
         if not kept and had:
             # a 200 page with nothing in it is a broken parser or a bot wall, not an empty programme
             log(f"  {v['name']}: 0 events (had {had}) -> treated as failure")
-            failed(v, f"0 events parsed (was {had})")
+            failed(v, f"0 events parsed (was {had})" + (f": {ctx['problem']}" if ctx["problem"] else ""))
             continue
         log(f"  {v['name']}: {len(kept)} events" + (f" ({len(got) - len(kept)} outside window/invalid)" if len(got) != len(kept) else ""))
         report.append({"venue": v["name"], "ok": True, "count": len(kept)})
@@ -144,25 +171,67 @@ def run(only=None, use_llm=True, players=True, log=print):
 
     first_seen = track_seen(events, today, state, report)
     events.sort(key=lambda e: (e.date, e.time or "99:99", e.venue))
+    if patch and only:   # the report of the day, with the entries of the sources scraped again
+        again = {r["venue"] for r in report}
+        day_report = [r for r in previous.get("report", []) if r.get("venue") not in again] + report
+    else:
+        day_report = report
     out = {
         "generated_at": dt.datetime.now().isoformat(timespec="seconds"),
         "today": today.isoformat(),
         "new_window_days": NEW_WINDOW_DAYS,
         "tags": G.TAGS,
         "venues": sorted({e.venue for e in events}),
-        "report": report,
+        "report": day_report,
         "events": [dict(e.to_dict(), first_seen=first_seen.get(e.id)) for e in events],
     }
     os.makedirs(WEB, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=0)
+    status_path = os.path.join(WEB, "status.json")
+    ST.write(ST.build(todo, report, state, today, previous=ST.load(status_path), timings=timings,
+                      duration=round(time.time() - started), low=LOW_COVERAGE, cost=usage.totals(), partial=bool(only),
+                      active={v["slug"] for v in venues if v["strategy"] != "none"}), status_path)
     fresh = sum(1 for e in events if first_seen.get(e.id) == today.isoformat())
     log(f"wrote {len(events)} events -> {os.path.relpath(OUT_PATH, ROOT)} ({fresh} newly announced today)")
+    for line in usage.summary():
+        log(line)
     low = low_coverage(todo, report)
     if low:
         log(f"  low coverage (< {LOW_COVERAGE} events from the venue's own site, check the URL / parser): "
             + ", ".join(f"{name} ({n})" for name, n in low))
     return out
+
+
+def check(slug, log=print):
+    """Scrape one source, leave the programme and the state alone: {"slug", "ok", "count", "error", "prev_count", "usd"}.
+    The troubleshooting agent (REM-49) and its guardrails judge a repair with it."""
+    today = today_paris()
+    v = next((v for v in load_venues() if v["slug"] == slug), None)
+    if not v:
+        return {"slug": slug, "ok": False, "count": 0, "error": f"no venue with slug {slug} in venues.json"}
+    res = {"slug": slug, "venue": v["name"], "strategy": v["strategy"], "ok": False, "count": 0,
+           "prev_count": load_state()["counts"].get(v["name"])}
+    fn = STRATEGIES.get(v["strategy"])
+    if not fn:
+        return dict(res, error=f"unknown strategy {v['strategy']}")
+    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "year_guess_days": YEAR_GUESS_DAYS, "log": log, "problem": None}
+    usage.reset()
+    try:
+        got = fn(v, ctx)
+    except FetchError as e:
+        return dict(res, error=str(e), usd=usage.totals()["usd"])
+    except Exception as e:
+        traceback.print_exc()
+        return dict(res, error=repr(e), usd=usage.totals()["usd"])
+    res["usd"] = usage.totals()["usd"]   # what the try cost in Claude calls (LLM venues)
+    kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
+    res["count"] = len(kept)
+    if not kept:
+        return dict(res, error=f"0 events parsed ({len(got)} outside the window or invalid)"
+                    + (f": {ctx['problem']}" if ctx["problem"] else ""))
+    res["sample"] = [f"{e.date} {e.time or '--:--'} {e.title}"[:100] for e in sorted(kept, key=lambda e: e.date)[:5]]
+    return dict(res, ok=True)
 
 
 LOW_COVERAGE = 3
@@ -354,10 +423,11 @@ def merge(events, log=print):
 # ------------------------------------------------------------------ first-seen tracking
 
 def load_state():
-    """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date}},
+    """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date,
+    "venue": slug, "last": date last scraped}},
     "venues": [slugs ever scraped], "counts": {venue name: events last time it succeeded},
-    "last_ok": {venue name: date of its last successful scrape}}."""
-    state = {"ids": {}, "venues": [], "counts": {}, "last_ok": {}}
+    "last_ok": {venue name: date of its last successful scrape}, "horizon": days ahead it covered}."""
+    state = {"ids": {}, "venues": [], "counts": {}, "last_ok": {}, "horizon": HORIZON_DAYS}
     if os.path.exists(SEEN_PATH):
         with open(SEEN_PATH, "r", encoding="utf-8") as f:
             saved = json.load(f)
@@ -368,6 +438,7 @@ def load_state():
             state["venues"] = saved.get("venues", [])
             state["counts"] = saved.get("counts", {})
             state["last_ok"] = saved.get("last_ok", {})
+            state["horizon"] = saved.get("horizon", OLD_HORIZON_DAYS)
         else:  # very first format: flat id -> date
             state["ids"] = {k: {"first_seen": v, "date": "9999-12-31"} for k, v in saved.items()}
     return state
@@ -380,15 +451,35 @@ def track_seen(events, today, state, report):
       that only had open-data events before) gets 'baseline': its whole programme is not "new".
     * Only events whose date is past are pruned, so a source failing one day does not make its
       programme look new the next day.
+    * A venue editing a title ("Trio" -> "Trio feat. X") changes the id. When exactly one id seen in the
+      last RENAME_DAYS days vanished and exactly one new id appeared at the same venue and date, the
+      new one is the renamed show and inherits its first_seen instead of being "new".
+    * Events beyond the horizon seen.json was written with (120 days before REM-50) were never
+      candidates: the first run with a longer horizon baselines them rather than flagging months of
+      concerts as newly announced.
     """
     ids, known = state["ids"], set(state["venues"])
     stamp = today.isoformat()
+    reach = (today + dt.timedelta(days=state["horizon"])).isoformat()
+    recent = (today - dt.timedelta(days=RENAME_DAYS)).isoformat()
+    gone, added = defaultdict(list), defaultdict(list)
+    current = {e.id for e in events}
+    for k, v in ids.items():
+        if k not in current and v.get("venue") and v.get("last", "") >= recent:
+            gone[v["venue"], v["date"]].append(k)
+    for e in events:
+        if e.id not in ids:
+            added[e.venue_slug, e.date].append(e.id)
     for e in events:
         key = f"{e.source}:{e.venue_slug}"
         if e.id not in ids:
-            ids[e.id] = {"first_seen": stamp if key in known else "baseline", "date": e.date}
-        else:
-            ids[e.id]["date"] = e.date
+            old, new = gone.get((e.venue_slug, e.date), []), added[e.venue_slug, e.date]
+            if len(old) == 1 and len(new) == 1:
+                first = ids.pop(old[0])["first_seen"]
+            else:
+                first = stamp if key in known and e.date <= reach else "baseline"
+            ids[e.id] = {"first_seen": first}
+        ids[e.id].update(date=e.date, venue=e.venue_slug, last=stamp)
     cutoff = today.isoformat()
     ids = {k: v for k, v in ids.items() if v.get("date", "9999") >= cutoff}
     counts, last_ok = dict(state["counts"]), dict(state["last_ok"])
@@ -399,5 +490,5 @@ def track_seen(events, today, state, report):
     venues = sorted(known | {f"{e.source}:{e.venue_slug}" for e in events})
     os.makedirs(DATA, exist_ok=True)
     with open(SEEN_PATH, "w", encoding="utf-8") as f:
-        json.dump({"ids": ids, "venues": venues, "counts": counts, "last_ok": last_ok}, f, indent=0)
+        json.dump({"ids": ids, "venues": venues, "counts": counts, "last_ok": last_ok, "horizon": HORIZON_DAYS}, f, indent=0)
     return {k: v["first_seen"] for k, v in ids.items()}
