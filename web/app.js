@@ -19,7 +19,7 @@
   const TAG_ALIASES = { "hip-hop": "rap hip hop", "soul-rnb": "soul rnb r&b", electro: "électronique techno house", classical: "classique classical",
     experimental: "expérimental noise", world: "musiques du monde world music", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
 
-  let DATA = { events: [], tags: [], venues: [] };
+  let DATA = { events: [], tags: [], venues: [], areas: {}, styles: {} };   // areas / styles: the catalogue (REM-27, see buildIndex)
   let state = load({ genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, myArtists: false });
   const STATUS = { interested: { icon: "☆", svg: "star", label: "Interested" }, going: { icon: "✓", svg: "check", label: "Going" } };
   let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Interested? / Going"
@@ -500,8 +500,10 @@
       bump(vc, e.venue);
       if (e.area) bump(va[e.venue] = va[e.venue] || {}, e.area);
     });
-    // Styles: every label of the whole programme, past concerts included (REM-27: a style with no upcoming date is
-    // still findable, its row then says "0 concert à venir"), with its parent genres and the count of upcoming concerts.
+    // Styles: every label of the whole programme, with its parent genres and the count of upcoming concerts, plus the
+    // catalogue of events.json (`styles`: every style the scraper ever tagged, with its usual genre) so that a style
+    // with no upcoming date is still findable — its row then says "no upcoming concert" (REM-27). The venues work the
+    // same way: `venues` lists every venue of venues.json, an empty programme still says the venue exists.
     DATA.events.forEach(e => {
       if (!e.is_music) return;
       (e.subgenres || []).forEach(x => {
@@ -509,10 +511,15 @@
         e.genres.forEach(g => { bump(sg[x] = sg[x] || {}, g); (gs[g] = gs[g] || new Set()).add(x); });
       });
     });
+    Object.entries(DATA.styles || {}).forEach(([x, g]) => {
+      if (x in sc) return;
+      sc[x] = 0;
+      if (g) { bump(sg[x] = sg[x] || {}, g); (gs[g] = gs[g] || new Set()).add(x); }
+    });
     const top = m => Object.keys(m || {}).sort((a, b) => m[b] - m[a])[0] || "";
     IDX = {
       artists: [...artists.values()],
-      venues: DATA.venues.map(v => ({ kind: "venue", name: v, key: norm(v), count: vc[v] || 0, area: top(va[v]) })),
+      venues: DATA.venues.map(v => ({ kind: "venue", name: v, key: norm(v), count: vc[v] || 0, area: top(va[v]) || (DATA.areas || {})[v] || "" })),
       genres: DATA.tags.map(g => ({ kind: "genre", tag: g, name: TAG_LABELS[g] || g, key: norm(`${TAG_LABELS[g] || g} ${g} ${TAG_ALIASES[g] || ""}`),
         count: up.filter(e => e.genres.includes(g)).length, styles: gs[g] ? gs[g].size : 0 })),
       styles: Object.keys(sc).map(x => ({ kind: "style", name: x, key: norm(x), count: sc[x], genre: top(sg[x]) })),
@@ -1257,7 +1264,9 @@
   // concert: the act pills switch it); while another concert plays, the sheet offers a "Play X" button instead, so
   // reading a concert never cuts the music. ✕ dismisses the dock; its title reopens the concert; ‹ › walk the acts
   // that have something to play. A click that asks for an act (its pill, "Play X", ‹ ›) also starts the music (REM-59,
-  // `auto`): Spotify through its embed API, Deezer with autoplay=true; Bandcamp's embed cannot, it waits for its ▶.
+  // `auto`): Spotify through its embed API, Deezer with autoplay=true (its iframe must also be allowed to autoplay:
+  // without `allow="autoplay"` the browser mutes the delegated permission and the widget waits for a tap); Bandcamp's
+  // embed cannot, it waits for its ▶.
   const dock = $("#dock");
   const DOCK = { e: null, name: null, artists: [], key: "" };
   // The dock's height changes with the player and the screen: --dockh keeps the Feedback button right above it.
@@ -1268,7 +1277,7 @@
   function dockHtml(p, dz, auto) {
     if (p.spotify) return `<iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
     if (p.bandcampEmbed) return `<iframe title="Bandcamp" src="${esc(p.bandcampEmbed.replace(/\/size=\w+\//, "/size=small/").replace(/\/artwork=\w+\//, "/artwork=none/"))}" seamless></iframe>`;
-    if (dz) return `<iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks?tracklist=false${auto ? "&autoplay=true" : ""}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe>`;
+    if (dz) return `<iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks?tracklist=false${auto ? "&autoplay=true" : ""}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="autoplay; encrypted-media; clipboard-write"></iframe>`;
     return "";
   }
   function dockBtn(name) { return `<button type="button" class="dockbtn" data-dockplay>${icon("play")}Play ${esc(name)}${DOCK.e && DOCK.e !== current ? ` <small>replaces ${esc(DOCK.name)}</small>` : ""}</button>`; }

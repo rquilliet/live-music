@@ -71,8 +71,22 @@ def _plan(venue, ctx):
     return plans[venue["slug"]]
 
 
+_URL_TPL = re.compile(r"\{(year|month|mm)([+-]\d+)?\}")
+
+
+def expand_url(url: str, today: dt.date) -> str:
+    """Month placeholders in a programme URL, for sites that show one month at a time (Studio de l'Ermitage's
+    `?mois=`): `{month}` is today's month number, `{month+1}` next month's (12 rolls to 1), `{mm+1}` the same
+    zero-padded, `{year+1}` the year of that same month. A run then reads the next months too."""
+    def sub(m):
+        n = int(m.group(2) or 0)
+        y, mo = divmod(today.year * 12 + today.month - 1 + n, 12)
+        return {"year": str(y), "month": str(mo + 1), "mm": f"{mo + 1:02d}"}[m.group(1)]
+    return _URL_TPL.sub(sub, url)
+
+
 def _read_plan(venue, ctx):
-    urls = venue.get("urls") or [venue["url"]]
+    urls = [expand_url(u, ctx["today"]) for u in (venue.get("urls") or [venue["url"]])]
     texts = []
     for u in urls:
         try:

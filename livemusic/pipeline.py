@@ -7,7 +7,7 @@ import os
 import re
 import time
 import traceback
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 from . import genres as G
 from . import players as P
@@ -181,7 +181,7 @@ def run(only=None, use_llm=True, players=True, log=print, patch=False):
         "today": today.isoformat(),
         "new_window_days": NEW_WINDOW_DAYS,
         "tags": G.TAGS,
-        "venues": sorted({e.venue for e in events}),
+        **catalogue(events, venues, G._cache_load(GENRE_CACHE)),
         "report": day_report,
         "events": [dict(e.to_dict(), first_seen=first_seen.get(e.id)) for e in events],
     }
@@ -237,12 +237,38 @@ def check(slug, log=print):
 LOW_COVERAGE = 3
 
 
+def catalogue(events, venues, genre_cache=None):
+    """The `venues`, `areas` and `styles` of events.json: what the search bar offers even when nothing is on
+    (REM-27). events.json only holds upcoming concerts, so without this a venue between two seasons (or one
+    whose scraper is down) and a style whose last concert is past would vanish from the suggestions as if
+    they did not exist. `venues`: every venue of the programme and of venues.json (not the open-data source,
+    which is not a venue); `areas`: their neighbourhood from venues.json; `styles`: every style ever tagged
+    (the programme and Claude's answers cached in genre_cache.json) with the coarse genre it goes with most."""
+    names = {e.venue for e in events} | {v["name"] for v in venues if v["strategy"] != "opendata"}
+    areas = {v["name"]: v["area"] for v in venues if v.get("area") and v["strategy"] != "opendata"}
+    pairs = Counter()
+    tagged = [(e.subgenres, e.genres) for e in events if e.is_music]
+    tagged += [(h.get("subgenres") or [], h.get("genres") or []) for h in (genre_cache or {}).values()
+               if isinstance(h, dict) and h.get("is_music", True)]
+    for subgenres, genres in tagged:
+        for s in subgenres:
+            for g in genres or [""]:
+                pairs[(s, g)] += 1
+    styles = {}
+    for (s, g), _ in sorted(pairs.items(), key=lambda x: (-x[1], x[0])):
+        styles.setdefault(s, g)
+    return {"venues": sorted(names), "areas": dict(sorted(areas.items())), "styles": dict(sorted(styles.items()))}
+
+
 def low_coverage(scraped, report):
     """(venue name, count) for venue sites that answered but yielded almost nothing: a programme page
-    rendered by JavaScript or a URL that moved looks like a thin programme, not like a failure."""
-    strategy = {v["name"]: v["strategy"] for v in scraped}
+    rendered by JavaScript or a URL that moved looks like a thin programme, not like a failure. A venue
+    whose programme really is that thin sets its own bar with "low" in venues.json (the Dernier Bar posts
+    one month at a time: one event left at the end of the month is the programme, not a broken parser)."""
+    by_name = {v["name"]: v for v in scraped}
     return [(r["venue"], r["count"]) for r in report
-            if r["ok"] and r["count"] < LOW_COVERAGE and strategy.get(r["venue"]) != "opendata"]
+            if r["ok"] and r["venue"] in by_name and by_name[r["venue"]]["strategy"] != "opendata"
+            and r["count"] < by_name[r["venue"]].get("low", LOW_COVERAGE)]
 
 
 # ------------------------------------------------------------------ carry-over of failed sources
