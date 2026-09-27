@@ -12,13 +12,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
 <header class="top">
   <div class="mast">
     <h1>Live in Paris</h1>
-    <small id="meta"></small>
+    <div class="mastr">
+      <small id="meta"></small>
+      <button type="button" class="spme" id="spme" aria-haspopup="menu" aria-expanded="false" aria-controls="spmenu" aria-label="My account" title="My account"></button>
+    </div>
   </div>
   <div class="hrow" id="hrow">
     <div class="sbar" id="sbar">
@@ -41,12 +44,6 @@
       <button type="button" class="pill" id="mine" aria-pressed="false" title="Concerts marked Interested or Going">My concerts <small></small></button>
       <button type="button" class="pill" id="myvenues" aria-pressed="false" title="Concerts at my favourite venues (★ on a concert or on a venue chip)">My venues <small></small></button>
       <button type="button" class="pill" id="myartists" aria-pressed="false" title="Concerts by the artists of my liked songs on Spotify"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M6.8 9.4c3.7-1.1 7.6-.7 10.7 1.2M7.4 12.6c3-.9 6.1-.5 8.6 1M8 15.6c2.3-.7 4.6-.4 6.5.8"/></svg><span>My artists</span><small></small></button>
-      <button type="button" class="spme" id="spme" hidden aria-haspopup="menu" aria-expanded="false" aria-controls="spmenu" aria-label="My Spotify account" title="My Spotify account"></button>
-      <button type="button" class="pill" id="near" aria-pressed="false" title="Venues within walking distance"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg><span>Near me</span></button>
-      <select id="radius" class="pill" hidden aria-label="Radius">
-        <option value="2">2 km</option><option value="5" selected>5 km</option>
-        <option value="10">10 km</option><option value="25">25 km</option><option value="1000">Any</option>
-      </select>
     </div>
     <div class="gpanel" id="gpanel" role="dialog" aria-label="Genres and styles" hidden>
       <h4>Genres <button type="button" class="link" id="gclear" hidden>Clear all</button></h4>
@@ -56,7 +53,7 @@
         <div class="gs" id="slist"></div>
       </div>
     </div>
-    <div class="spmenu" id="spmenu" role="menu" aria-label="My Spotify account" hidden></div>
+    <div class="spmenu" id="spmenu" role="menu" aria-label="My account" hidden></div>
   </div>
 </header>
 
@@ -113,7 +110,7 @@
   </form>
 </div>
 
-<script src="config.js?v=15"></script>
-<script src="app.js?v=16"></script>
+<script src="config.js?v=17"></script>
+<script src="app.js?v=17"></script>
 </body>
 </html>
