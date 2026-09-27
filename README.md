@@ -83,7 +83,12 @@ updates its sources and leaves the others as they were.
 keeps the rest of the programme), lists the repairs on the status page, files one Linear issue per source left
 (`Scraper down: <venue>`, a comment when the issue is already open) with `LINEAR_API_KEY`, sends a phone push
 through [ntfy](https://ntfy.sh) when `NTFY_TOPIC` is set, and exits 1 when something is left for a human.
-Attempts are counted in `data/troubleshoot.json`.
+Attempts and what they cost are counted in `data/troubleshoot.json`.
+
+Cost: a session is stopped by Claude Code at $3 (`TROUBLESHOOT_BUDGET_USD`) and no session starts once the
+day's repairs have cost $10 (`TROUBLESHOOT_DAILY_USD`). Each repair's cost (the session plus the Claude calls
+of its checks) is written in its commit message, in the Linear issue, in the run summary and on the status
+page, where the day's total sits next to the cost of the scrape (REM-55).
 
 The guardrails are a filter, not a sandbox: a repaired parser runs in the next daily scrape with the
 repository's secrets, so keep the keys of this repository limited to what the scraper needs.

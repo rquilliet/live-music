@@ -13,8 +13,12 @@ becomes a local commit "Auto-fix <slug>: …" (the workflow pushes it to main); 
 thrown away and reported. `run` only needs ANTHROPIC_API_KEY; the tokens that can push or write to Linear
 belong to the later steps, when no agent is running any more.
 
-State: data/troubleshoot.json {"sources": {slug: {"since", "days": [dates tried], "issue"}}, "last": report of
-the last run}.
+Cost: every session reports what it spent (Claude Code's total_cost_usd) and every check what its Claude
+calls cost (livemusic/usage.py, REM-55). The figures go in the report, the commit message, the Linear issue
+and the status page; a session is capped at AGENT_BUDGET_USD and the day at DAILY_BUDGET_USD.
+
+State: data/troubleshoot.json {"sources": {slug: {"since", "days": [dates tried], "usd", "issue"}}, "last": report
+of the last run}.
 """
 import argparse
 import ast
@@ -43,12 +47,13 @@ NOTES = ".troubleshoot"          # the agent's notes and the pages it fetched, n
 MAX_SOURCES = 5                  # agent sessions per day
 MAX_DAYS = 3                     # days an unrepaired source is tried before it is left to its Linear issue
 AGENT_TIMEOUT = 20 * 60          # seconds per source
-AGENT_BUDGET_USD = "3"
+AGENT_BUDGET_USD = "3"           # Claude Code stops a session that spent this much
+DAILY_BUDGET_USD = 10.0          # no new session once the day's repairs cost this much (TROUBLESHOOT_DAILY_USD)
 SYSTEMIC_MIN = 3                 # that many sources with the same error are one problem
 MIN_RATIO, MAX_RATIO, MAX_SLACK = 0.3, 4, 20   # plausible count against the last good one
 NEIGHBOURS = 15                  # other sources of a touched file checked again
 
-SYSTEMIC = re.compile(r"Claude API|ANTHROPIC_API_KEY|credit balance|rate.?limit|authenticat", re.I)
+SYSTEMIC = re.compile(r"Claude API|ANTHROPIC_API_KEY|credit balance|rate.?limit|authenticat|Message Batch", re.I)
 # the registry (__init__.py) and the sources shared by many venues are for a human to change
 EDITABLE = re.compile(r"^(venues\.json|livemusic/sources/(venues_html|tribe)\.py)$")
 SCRATCH = re.compile(r"^(data/|web/(events|status)\.json$|\.troubleshoot/|(.*/)?__pycache__/|.*\.pyc$)")
@@ -349,13 +354,21 @@ Before you stop, write {notes}/{slug}.md, a few plain lines: the cause, what you
 result; or why it cannot be repaired and what a human should do. Its first line is a one-sentence summary."""
 
 
+def session_budget():
+    return float(os.environ.get("TROUBLESHOOT_BUDGET_USD", AGENT_BUDGET_USD))
+
+
+def daily_budget():
+    return float(os.environ.get("TROUBLESHOOT_DAILY_USD", DAILY_BUDGET_USD))
+
+
 def agent_command(prompt):
     py = sys.executable
     override = os.environ.get("TROUBLESHOOT_AGENT")   # tests, or another runner
     if override:
         return override.split() + [prompt]
     cmd = ["claude", "-p", prompt, "--restricted", "--strict-mcp-config", "--output-format", "json",
-           "--max-budget-usd", os.environ.get("TROUBLESHOOT_BUDGET_USD", AGENT_BUDGET_USD),
+           "--max-budget-usd", str(session_budget()),
            "--tools", "Read,Edit,Write,Glob,Grep,Bash",
            "--allowedTools", "Read", "Edit", "Write", "Glob", "Grep",
            f"Bash({py} scrape.py --check:*)", f"Bash({py} -m livemusic.troubleshoot fetch:*)"]
@@ -372,7 +385,8 @@ def agent_env():
 
 
 def run_agent(source, entry, root):
-    """(ok, text): did the session end normally, and its last message (or what went wrong). root: its copy."""
+    """(ok, text, usd): did the session end normally, its last message (or what went wrong), what it cost.
+    root: its copy of the repository."""
     os.makedirs(os.path.join(root, NOTES, "pages"), exist_ok=True)
     prompt = PROMPT.format(entry=json.dumps(entry, ensure_ascii=False, indent=1), error=source.get("error"),
                            since=source.get("failing_since") or "today", prev=source.get("prev_count") or "unknown",
@@ -381,14 +395,16 @@ def run_agent(source, entry, root):
         p = subprocess.run(agent_command(prompt), cwd=root, capture_output=True, text=True, timeout=AGENT_TIMEOUT,
                            env=agent_env(), stdin=subprocess.DEVNULL)
     except subprocess.TimeoutExpired:
-        return False, f"the agent did not finish in {AGENT_TIMEOUT // 60} minutes"
+        # its cost is unknown: count the most it may have spent
+        return False, f"the agent did not finish in {AGENT_TIMEOUT // 60} minutes", session_budget()
     except OSError as e:
-        return False, f"the agent could not be started: {e}"
+        return False, f"the agent could not be started: {e}", 0
     try:
         out = json.loads(p.stdout)
-        return not out.get("is_error") and p.returncode == 0, str(out.get("result") or "")[:2000]
-    except ValueError:
-        return p.returncode == 0, (p.stdout or p.stderr).strip()[-2000:]
+        return (not out.get("is_error") and p.returncode == 0, str(out.get("result") or "")[:2000],
+                float(out.get("total_cost_usd") or 0))
+    except (ValueError, TypeError):
+        return p.returncode == 0, (p.stdout or p.stderr).strip()[-2000:], None
 
 
 def notes_of(slug, root=None):
@@ -431,22 +447,34 @@ def fetch(url, root=None):
 
 def attempt(s, entry, status, root, log, check, agent):
     """One source: ("recovered" | "fixed" | "unresolved" | "systemic", what goes in the report)."""
-    slug = s["slug"]
-    first = check(slug, root)
+    slug, spent = s["slug"], {"checks": 0.0, "agent": None}
+
+    def counted(slug, root):   # the checks of LLM venues call Claude too
+        r = check(slug, root)
+        spent["checks"] += r.get("usd") or 0
+        return r
+
+    def bill(what):
+        what["usd"] = round(spent["checks"] + (spent["agent"] or 0), 4)
+        what["usd_agent"] = spent["agent"]   # None: the session did not say
+        return what
+
+    first = counted(slug, root)
     if first.get("ok") and plausible(first["count"], s.get("prev_count"))[0]:
         log(f"  works again by itself ({first['count']} events): a passing failure")
-        return "recovered", {"count": first["count"]}
+        return "recovered", bill({"count": first["count"]})
     if SYSTEMIC.search(cause(first.get("error"))):
-        return "systemic", {"cause": cause(first["error"])}
+        return "systemic", bill({"cause": cause(first["error"])})
     mark = fingerprint(root)
     box = sandbox(root)
     try:
-        ok, said = agent(dict(s, error=first.get("error") or s.get("error")), entry, box)
+        ok, said, *more = agent(dict(s, error=first.get("error") or s.get("error")), entry, box)
+        spent["agent"] = more[0] if more else None
         notes = notes_of(slug, box) or said
         if fingerprint(root) != mark:
             raise SystemExit("the repository (HEAD, configuration or hooks) changed while the agent was running: stopping")
         if not ok and SYSTEMIC.search(said or ""):
-            return "systemic", {"cause": said[:300]}
+            return "systemic", bill({"cause": said[:300]})
         changed, problems = harvest(box, root) if ok else ([], [f"the agent stopped early: {said[:300]}"])
         edited = [f for f in changed if EDITABLE.match(f)]
         if ok and not changed and not problems:
@@ -455,7 +483,7 @@ def attempt(s, entry, status, root, log, check, agent):
         if not problems:
             for f in edited:
                 shutil.copyfile(os.path.join(box, f), os.path.join(root, f))
-            problems, res = verify(s, status, edited, root, check)
+            problems, res = verify(s, status, edited, root, counted)
             if fingerprint(root) != mark:
                 raise SystemExit("the repository (HEAD, configuration or hooks) changed during the checks: stopping")
         if problems:
@@ -464,15 +492,16 @@ def attempt(s, entry, status, root, log, check, agent):
                 diff += subprocess.run(["diff", "-u", "--label", "a/" + f, "--label", "b/" + f, "-", os.path.join(box, f)],
                                        input=git("show", f"HEAD:{f}", root=root), capture_output=True, text=True).stdout
             log("  not repaired: " + "; ".join(problems))
-            return "unresolved", {"problems": problems, "notes": notes, "diff": diff[:6000]}
+            return "unresolved", bill({"problems": problems, "notes": notes, "diff": diff[:6000]})
         summary = summary_of(notes, "source repaired")
+        done = bill({"count": res["count"], "summary": summary, "notes": notes, "files": edited})
         git("add", "--", *edited, root=root)
         git("-c", "user.name=live-music bot", "-c", "user.email=actions@users.noreply.github.com", "commit", "-q", "-m",
             f"Auto-fix {slug}: {summary}\n\nSource: {s['venue']}\nWas: {s.get('error')} (failing since {s.get('failing_since')})\n"
-            f"Now: {res['count']} events (last success: {s.get('prev_count')})\n\n{notes}\n\n"
+            f"Now: {res['count']} events (last success: {s.get('prev_count')})\nCost of the repair: ${done['usd']:.2f}\n\n{notes}\n\n"
             "Repaired and checked by the troubleshooting agent (REM-49), merged without review.", "--", *edited, root=root)
         log(f"  repaired: {res['count']} events. {summary}")
-        return "fixed", {"count": res["count"], "summary": summary, "notes": notes, "files": edited}
+        return "fixed", done
     finally:
         shutil.rmtree(box, ignore_errors=True)
         discard(root)
@@ -492,7 +521,7 @@ def run(root=None, log=print, check=run_check, agent=run_agent, today=None):
     # a source that works again starts a new count the next time it breaks
     state["sources"] = {k: v for k, v in state.get("sources", {}).items() if k in failing}
     systemic, todo, skipped = triage(status, state, today)
-    report = {"date": stamp, "run_url": ST.run_url(), "fixed": [], "recovered": [], "unresolved": [],
+    report = {"date": stamp, "run_url": ST.run_url(), "usd": 0, "sessions": 0, "fixed": [], "recovered": [], "unresolved": [],
               "systemic": [{"cause": g["cause"], "venues": [s["venue"] for s in g["sources"]]} for g in systemic],
               "skipped": [{"venue": s["venue"], "slug": s["slug"], "why": why} for s, why in skipped]}
     state["last"] = report
@@ -503,8 +532,15 @@ def run(root=None, log=print, check=run_check, agent=run_agent, today=None):
     if todo and git("status", "--porcelain", "--", "venues.json", "livemusic/sources", root=root).strip():
         raise SystemExit("venues.json or livemusic/sources have uncommitted changes: repairs start from HEAD")
 
+    # what earlier runs of the day already spent counts against the day's budget
+    before = state.get("spent", {}).get("usd", 0) if state.get("spent", {}).get("date") == stamp else 0
     for s in todo:
         slug = s["slug"]
+        if before + report["usd"] >= daily_budget():
+            why = f"over the day's budget (${before + report['usd']:.2f} spent of ${daily_budget():.2f})"
+            log(f"{s['venue']}: skipped, {why}")
+            report["skipped"].append({"venue": s["venue"], "slug": slug, "why": why})
+            continue
         seen = state["sources"].setdefault(slug, {})
         if seen.get("since") != s.get("failing_since"):
             seen.update(since=s.get("failing_since"), days=[])
@@ -516,22 +552,29 @@ def run(root=None, log=print, check=run_check, agent=run_agent, today=None):
         try:
             outcome, what = attempt(s, entries[slug], status, root, log, check, agent)
         except Exception as e:   # one source must not cost the others their turn, nor the report
-            outcome, what = "unresolved", {"problems": [f"the troubleshooting program failed: {e!r}"[:300]], "notes": "", "diff": ""}
+            outcome, what = "unresolved", {"problems": [f"the troubleshooting program failed: {e!r}"[:300]], "notes": "", "diff": "",
+                                           "usd": 0, "usd_agent": None}
             log(f"  {what['problems'][0]}")
+        report["usd"] = round(report["usd"] + what["usd"], 4)
+        report["sessions"] += what["usd_agent"] is not None
+        seen["usd"] = round(seen.get("usd", 0) + what["usd"], 4)
+        state["spent"] = {"date": stamp, "usd": round(before + report["usd"], 4)}
+        log(f"  cost ${what['usd']:.2f}" + ("" if what["usd_agent"] is not None or outcome == "recovered" else " (the session did not report its cost)"))
         if outcome == "systemic":
             log(f"  Claude cannot be reached, nothing can be repaired today: {what['cause'][:200]}")
             report["systemic"].append({"cause": what["cause"], "venues": [x["venue"] for x in todo]})
             seen["days"].remove(stamp)   # not an attempt
             save_state(state, state_path)
             break
-        report[outcome].append(dict(base, **what))
+        report[outcome].append(dict(base, usd_total=seen["usd"], **what))
         save_state(state, state_path)
 
     save_state(state, state_path)
+    log(f"troubleshooting cost ${report['usd']:.2f} today" + (f" (${before + report['usd']:.2f} with the earlier runs)" if before else ""))
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a") as f:
-            f.write(f"fixed={len(report['fixed'])}\nrecovered={len(report['recovered'])}\n"
+            f.write(f"fixed={len(report['fixed'])}\nrecovered={len(report['recovered'])}\nusd={report['usd']}\n"
                     f"open={len(report['unresolved']) + len(report['systemic'])}\n")
     return report
 
@@ -577,7 +620,8 @@ def issue_for(u, report):
     body = (f"The daily scrape failed for **{u['venue']}** and the troubleshooting agent could not repair it "
             f"({report['date']}, attempt {u.get('attempts', 1)} of {MAX_DAYS}).\n\n"
             f"* Error: `{u['error']}`\n* Failing since: {u.get('since')}\n* Events at the last success: {u.get('prev_count')}\n"
-            f"* Programme page: {u.get('url')}\n"
+            f"* Programme page: {u.get('url')}\n* Cost of this attempt: ${u.get('usd') or 0:.2f}"
+            f" (${u.get('usd_total') or u.get('usd') or 0:.2f} on this failure so far)\n"
             + (f"* Run: {report['run_url']}\n" if report.get("run_url") else "")
             + "\n**Why the repair was refused**\n\n" + "\n".join(f"* {p}" for p in u["problems"])
             + (f"\n\n**The agent's notes**\n\n{u['notes']}" if u.get("notes") else "")
@@ -633,10 +677,13 @@ def finish(root=None, log=print, scrape=None, api=linear):
             log("  the patch scrape reported failures (see above)")
     status_path = os.path.join(root, "web", "status.json")
     status = ST.load(status_path)
-    if report["fixed"] and status:
+    if status:
         new = [{"date": report["date"], "venue": x["venue"], "slug": x["slug"], "summary": x["summary"], "error": x["error"],
-                "count": x["count"], "commit_url": commit_url(x["slug"], root)} for x in report["fixed"]]
+                "count": x["count"], "usd": x.get("usd"), "commit_url": commit_url(x["slug"], root)} for x in report["fixed"]]
         status["fixes"] = (new + status.get("fixes", []))[:ST.FIXES_KEPT]
+        if report.get("usd"):   # next to what the scrape cost, on the status page
+            ST.add_cost(status, {"steps": [{"what": "troubleshooting", "model": os.environ.get("TROUBLESHOOT_MODEL", "Claude Code"),
+                                            "batch": False, "calls": report.get("sessions", 0), "usd": report["usd"]}]}, report["date"])
         ST.write(status, status_path)
 
     todo = [issue_for(u, report) + (u,) for u in report["unresolved"]] + \
@@ -658,8 +705,9 @@ def finish(root=None, log=print, scrape=None, api=linear):
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as f:
-            f.write(f"## Troubleshooting {report['date']}\n\n" +
-                    "".join(f"* repaired: **{x['venue']}**, {x['count']} events. {x['summary']}\n" for x in report["fixed"]) +
+            f.write(f"## Troubleshooting {report['date']}\n\nClaude cost: **${report.get('usd') or 0:.2f}** "
+                    f"({report.get('sessions', 0)} agent session(s))\n\n" +
+                    "".join(f"* repaired: **{x['venue']}**, {x['count']} events, ${x.get('usd') or 0:.2f}. {x['summary']}\n" for x in report["fixed"]) +
                     "".join(f"* works again: **{x['venue']}**, {x['count']} events\n" for x in report["recovered"]) +
                     "".join(f"* skipped: **{x['venue']}**, {x['why']}\n" for x in report["skipped"]) +
                     "".join(f"\n### {t} {('(' + r + ')') if r else ''}\n\n{b}\n" for t, r, u_, b in lines))

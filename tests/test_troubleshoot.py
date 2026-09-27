@@ -233,6 +233,28 @@ class RunTest(unittest.TestCase):
             self.assertEqual(self.log_of()[0], "status")
         self.assertEqual(report["unresolved"][0]["notes"], "The venue closed for good.")
 
+    def test_cost_is_counted_and_capped(self):
+        def check(slug, root=None):   # an LLM venue: the check itself calls Claude
+            return dict(self.check(slug, root), usd=0.1)
+
+        def agent(source, entry, root):
+            self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['fixed']\n", root=root)
+            self.counts["cigale"] = 18
+            return True, "The markup changed.", 1.25
+
+        with mock.patch.dict(os.environ, {"TROUBLESHOOT_DAILY_USD": "1"}):
+            report = T.run(self.root, log=self.logs.append, check=check, agent=agent, today=TODAY)
+        # cigale: first check + session + check after the repair + one neighbour (trianon)
+        self.assertEqual([(x["slug"], x["usd"], x["usd_agent"]) for x in report["fixed"]], [("cigale", 1.55, 1.25)])
+        self.assertEqual([(x["slug"], x["why"]) for x in report["skipped"]],
+                         [("java", "over the day's budget ($1.55 spent of $1.00)")])
+        self.assertEqual((report["usd"], report["sessions"]), (1.55, 1))
+        self.assertIn("Cost of the repair: $1.55", subprocess.run(["git", "log", "-1", "--format=%B"], cwd=self.root,
+                                                                  capture_output=True, text=True).stdout)
+        state = T.load_state(os.path.join(self.root, "data/troubleshoot.json"))
+        self.assertEqual((state["spent"], state["sources"]["cigale"]["usd"]), ({"date": "2026-09-27", "usd": 1.55}, 1.55))
+        self.assertNotIn("java", state["sources"])   # not an attempt
+
     def test_passing_failure_and_agent_out_of_credit(self):
         self.counts["cigale"] = 19   # the site was down at 6, it is back
         calls = []
@@ -277,16 +299,18 @@ class FinishTest(unittest.TestCase):
             os.makedirs(os.path.join(root, "data"))
             os.makedirs(os.path.join(root, "web"))
             sh(root, "git", "init", "-q")
-            report = {"date": "2026-09-27", "run_url": None, "skipped": [], "recovered": [],
+            report = {"date": "2026-09-27", "run_url": None, "skipped": [], "recovered": [], "usd": 2.0, "sessions": 2,
                       "fixed": [{"venue": "Cigale", "slug": "cigale", "error": "0 events parsed (was 20)", "count": 18,
-                                 "summary": "The markup changed.", "notes": ""}],
+                                 "summary": "The markup changed.", "notes": "", "usd": 1.55}],
                       "unresolved": [{"venue": "Java", "slug": "java", "error": "HTTP 404", "since": "2026-09-26", "prev_count": 10,
                                       "url": "https://java.fr/", "problems": ["the agent changed nothing"],
-                                      "notes": "The venue closed.", "diff": "", "attempts": 2}],
+                                      "notes": "The venue closed.", "diff": "", "attempts": 2, "usd": 0.45, "usd_total": 1.2}],
                       "systemic": [{"cause": "Claude API error 400: credit", "venues": ["A", "B", "C"]}]}
             T.save_state({"sources": {"java": {}}, "last": report}, os.path.join(root, "data/troubleshoot.json"))
             with open(os.path.join(root, "web/status.json"), "w") as f:
-                json.dump({"sources": [], "fixes": [{"slug": "old"}]}, f)
+                json.dump({"today": "2026-09-27", "sources": [], "fixes": [{"slug": "old"}],
+                           "cost": {"date": "2026-09-27", "usd": 3.0, "steps": [{"what": "venues", "usd": 3.0}]},
+                           "history": [{"date": "2026-09-27", "usd": 3.0, "sources": {}}]}, f)
             filed, scraped, pings = [], [], []
 
             def api(query, variables=None, key=None):
@@ -304,11 +328,16 @@ class FinishTest(unittest.TestCase):
             self.assertEqual((code, scraped), (1, [["cigale"]]))
             self.assertEqual([i["title"] for i in filed], ["Scraper down: Java", "Scrapers down: Claude API error 400: credit"])
             self.assertIn("attempt 2 of 3", filed[0]["description"])
+            self.assertIn("Cost of this attempt: $0.45 ($1.20 on this failure so far)", filed[0]["description"])
             self.assertIn("The venue closed.", filed[0]["description"])
             self.assertEqual(pings[0][1], "Scraper down: Java (REM-61)\nScrapers down: Claude API error 400: credit (REM-62)")
             with open(os.path.join(root, "web/status.json")) as f:
-                fixes = json.load(f)["fixes"]
-            self.assertEqual([(x["slug"], x.get("summary")) for x in fixes], [("cigale", "The markup changed."), ("old", None)])
+                status = json.load(f)
+            self.assertEqual([(x["slug"], x.get("summary"), x.get("usd")) for x in status["fixes"]],
+                             [("cigale", "The markup changed.", 1.55), ("old", None, None)])
+            self.assertEqual((status["cost"]["usd"], status["history"][0]["usd"]), (5.0, 5.0))
+            self.assertEqual(status["cost"]["steps"][-1], {"what": "troubleshooting", "model": "Claude Code", "batch": False,
+                                                           "calls": 2, "usd": 2.0})
             self.assertEqual(T.load_state(os.path.join(root, "data/troubleshoot.json"))["sources"]["java"]["issue"], "REM-61")
 
 

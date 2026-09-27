@@ -69,7 +69,8 @@ def run(only=None, use_llm=True, players=True, log=print, patch=False):
     log(f"{len(todo)} sources to scrape, today is {today}")
     usage.reset()
     try:   # all changed LLM-venue pages in one Message Batch, at half price (REM-55)
-        L.prefetch([v for v in todo if v["strategy"] == "llm"], ctx)
+        if not patch:   # a repaired source joins the programme now, not when a batch is done
+            L.prefetch([v for v in todo if v["strategy"] == "llm"], ctx)
     except Exception as e:  # the venues then fall back to direct calls one by one
         log(f"  LLM venues: batch step failed: {e}")
         traceback.print_exc()
@@ -200,7 +201,7 @@ def run(only=None, use_llm=True, players=True, log=print, patch=False):
 
 
 def check(slug, log=print):
-    """Scrape one source, leave the programme and the state alone: {"slug", "ok", "count", "error", "prev_count"}.
+    """Scrape one source, leave the programme and the state alone: {"slug", "ok", "count", "error", "prev_count", "usd"}.
     The troubleshooting agent (REM-49) and its guardrails judge a repair with it."""
     today = today_paris()
     v = next((v for v in load_venues() if v["slug"] == slug), None)
@@ -212,13 +213,15 @@ def check(slug, log=print):
     if not fn:
         return dict(res, error=f"unknown strategy {v['strategy']}")
     ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log, "problem": None}
+    usage.reset()
     try:
         got = fn(v, ctx)
     except FetchError as e:
-        return dict(res, error=str(e))
+        return dict(res, error=str(e), usd=usage.totals()["usd"])
     except Exception as e:
         traceback.print_exc()
-        return dict(res, error=repr(e))
+        return dict(res, error=repr(e), usd=usage.totals()["usd"])
+    res["usd"] = usage.totals()["usd"]   # what the try cost in Claude calls (LLM venues)
     kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
     res["count"] = len(kept)
     if not kept:

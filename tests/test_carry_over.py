@@ -150,7 +150,7 @@ class RunTest(unittest.TestCase):
                 self.assertFalse(pipeline.check("nowhere")["ok"])
             self.assertEqual(os.listdir(tmp), [])
         self.assertEqual((good["ok"], good["count"], good["sample"]), (True, 1, ["2026-10-02 --:-- Jam"]))
-        self.assertEqual((bad["ok"], bad["count"], bad["error"]), (False, 0, "HTTP 503"))
+        self.assertEqual((bad["ok"], bad["count"], bad["error"], bad["usd"]), (False, 0, "HTTP 503", 0))
 
 
 if __name__ == "__main__":
