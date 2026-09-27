@@ -342,9 +342,8 @@ body.docked .body { padding-bottom: 150px; }
 .live .yt .y { color: var(--lime); font-weight: 700; font-size: 12px; letter-spacing: .08em; flex: none; }
 .live iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 1.5px solid var(--ink); background: var(--plum); }
 .live .via { margin-top: -2px; font-size: 11px; }
-.live .ytsearch { color: var(--ink); font-size: 13px; }
 #artist { display: flex; flex-direction: column; gap: 10px; }
-#artist:empty { display: none; }
+#artist:empty, #artist[hidden] { display: none; }
 #artist h3 { margin: 0 0 -2px; }
 #artist.swap { animation: xfade .24s ease-in-out; }   /* switching act: out, swap the content at mid-point, in */
 /* Multi-artist show: one pill per act under the "Écouter" heading (headliner first), the active one filled ink. */
@@ -363,8 +362,6 @@ body.docked .body { padding-bottom: 150px; }
 .stale { font-size: 12px; font-style: italic; margin-top: 4px; }
 .blurb .link, .blurb .muted { font-size: 13px; white-space: nowrap; }
 .blurb .link { font-style: italic; }
-.links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }
-.links a { color: var(--muted); }
 
 /* ---------- Spotify "Mes artistes" (REM-9): avatar button next to the pill, account menu, connect dialog ---------- */
 .spme { width: 30px; height: 30px; flex: none; margin-left: -2px; padding: 0; border-radius: 50%; border: 1.5px solid var(--ink); overflow: hidden;
