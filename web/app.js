@@ -1031,17 +1031,19 @@
       ${meta ? `<div class="muted meta">${meta}</div>` : ""}
       ${e.stale_since ? `<div class="muted stale">Listing from ${fmtShort(parseISO(e.stale_since))}: the venue's site could not be read since.</div>` : ""}
       ${blurbHtml(e)}
-      ${artists.length > 1 ? `<div class="listen"><h3>Listen</h3><div class="artist-pick" role="group" aria-label="Artist">${artists.map((a, i) =>
-        `<button type="button" class="${i === i0 ? "on" : ""}" aria-pressed="${i === i0}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}
+      ${artists.length > 1 ? `<div class="listen" hidden><h3>Listen</h3><div class="artist-pick" role="group" aria-label="Artist">${artists.map((a, i) =>
+        `<button type="button" class="${i === i0 ? "on" : ""}" aria-pressed="${i === i0}" data-i="${i}"${canPlay(e, a) ? "" : " hidden"}>${esc(a)}</button>`).join("")}</div></div>` : ""}
       <div id="artist"></div>
       ${fbOn() ? `<button type="button" class="link fbreport" data-feedback>Something wrong with this concert? Tell us</button>` : ""}`;
     renderStatus();
-    // Multi-artist show: the pills switch the player (cross-fade), the active one is filled.
-    $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
-      if (b.classList.contains("on")) return;
-      $$(".artist-pick button", detail).forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
-      swapArtist(artists[Number(b.dataset.i)], e, artists);
-    });
+    // Multi-artist show: the pills switch the player (cross-fade) and start it (REM-59), the active one is filled.
+    const pills = $$(".artist-pick button", detail);
+    const pickAct = (b, auto) => {
+      pills.forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      swapArtist(artists[Number(b.dataset.i)], e, artists, auto);
+    };
+    pills.forEach(b => b.onclick = () => { if (!b.classList.contains("on")) pickAct(b, true); });
+    if (pills.length) checkPills(e, artists, pills, pickAct);
     const more = $(".blurb [data-more]", detail);
     if (more) more.onclick = () => {   // "read more" / "show less" swaps the text in place
       const open = more.textContent !== "read more";
@@ -1049,6 +1051,22 @@
       more.textContent = open ? "read more" : "show less";
     };
     if (artists.length) loadArtist(artists[i0], e, artists);
+  }
+  // A pill only for an act with something to play (REM-59): Spotify, Bandcamp or a live video known from events.json,
+  // else a Deezer match, looked up here (the pill stays hidden meanwhile). Fewer than two such acts: no pill row.
+  // When the act shown turns out to have nothing, the sheet moves on to the first one that plays.
+  async function checkPills(e, artists, pills, pickAct) {
+    const row = $(".listen", detail);
+    const show = () => { row.hidden = pills.filter(b => !b.hidden).length < 2; };
+    show();
+    await Promise.all(pills.filter(b => b.hidden).map(async b => {
+      await deezerArtist(artists[+b.dataset.i]).catch(() => null);
+      if (canPlay(e, artists[+b.dataset.i])) { b.hidden = false; show(); }
+    }));
+    if (DOCK.e === e) renderDockActs();   // even with the sheet closed meanwhile
+    if (current !== e || !row.isConnected) return;
+    const on = pills.find(b => b.classList.contains("on")), first = pills.find(b => !b.hidden);
+    if (on && on.hidden && first && DOCK.e !== e) pickAct(first, false);
   }
   // ★ toggle next to the venue name (REM-28): favourite venues feed the "Mes salles" pill.
   function favBtn(venue) {
@@ -1122,11 +1140,11 @@
     return `<p class="blurb"><span class="txt">${esc(long ? BLURB_CUT(text) : text)}</span>${long ? ' <button class="link" type="button" data-more>read more</button>' : ""}</p>`;
   }
   // Cross-fade #artist: fade out, swap the content at the mid-point, fade in.
-  function swapArtist(name, e, artists) {
+  function swapArtist(name, e, artists, auto) {
     const box = $("#artist");
-    if (!motionOK()) { loadArtist(name, e, artists); return; }
+    if (!motionOK()) { loadArtist(name, e, artists, auto); return; }
     replay(box, "swap");
-    setTimeout(() => loadArtist(name, e, artists), 110);
+    setTimeout(() => { if (current === e) loadArtist(name, e, artists, auto); }, 110);
   }
   // Closing reverses the opening motion (veil fades out, sheet slides back); #detail is hidden once it ends. The
   // state (current, hash, body scroll) is reset synchronously, so a second call or a click during the exit is a no-op.
@@ -1174,11 +1192,22 @@
     const yt = p.youtube && YT_ID.test(p.youtube.videoId || "") ? p.youtube : null;
     return { bandcamp: bc, bandcampEmbed: bc && BC_EMBED.test(bc.embed || "") ? bc.embed : null, spotify: sp, youtube: yt };
   }
+  // Something to play or watch for this act: a player or a live video from events.json, else a Deezer match already found.
+  function canPlay(e, name) {
+    const p = playersOf(e, name);
+    return !!(p.youtube || canDock(e, name));
+  }
+  function canDock(e, name) {   // the dock has no use for a video
+    const p = playersOf(e, name);
+    return !!(p.spotify || p.bandcampEmbed || DZ_HIT.has(norm(name)));
+  }
   // ------------------------------------------------------------ player dock (REM-10)
   // The player is a fixed bar at the bottom of the page, never inside the sheet: closing the sheet leaves the music
   // playing. One dock at a time. A sheet docks its act when nothing plays yet (or when the dock already plays this
   // concert: the act pills switch it); while another concert plays, the sheet offers a "Play X" button instead, so
-  // reading a concert never cuts the music. ✕ dismisses the dock; its title reopens the concert; ‹ › walk the acts.
+  // reading a concert never cuts the music. ✕ dismisses the dock; its title reopens the concert; ‹ › walk the acts
+  // that have something to play. A click that asks for an act (its pill, "Play X", ‹ ›) also starts the music (REM-59,
+  // `auto`): Spotify through its embed API, Deezer with autoplay=true; Bandcamp's embed cannot, it waits for its ▶.
   const dock = $("#dock");
   const DOCK = { e: null, name: null, artists: [], key: "" };
   // The dock's height changes with the player and the screen: --dockh keeps the Feedback button right above it.
@@ -1186,43 +1215,71 @@
   let sheetArtists = [];   // the acts of the open sheet, in pill order
   function dockVia(p, dz) { return p.spotify ? "spotify" : p.bandcampEmbed ? "bandcamp" : dz ? "deezer" : ""; }
   // Compact embeds: Spotify's 80px player, Bandcamp's slim "size=small" bar, Deezer without the track list.
-  function dockHtml(p, dz) {
+  function dockHtml(p, dz, auto) {
     if (p.spotify) return `<iframe title="Spotify" src="https://open.spotify.com/embed/artist/${encodeURIComponent(p.spotify.id)}?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
     if (p.bandcampEmbed) return `<iframe title="Bandcamp" src="${esc(p.bandcampEmbed.replace(/\/size=\w+\//, "/size=small/").replace(/\/artwork=\w+\//, "/artwork=none/"))}" seamless></iframe>`;
-    if (dz) return `<iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks?tracklist=false" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe>`;
+    if (dz) return `<iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks?tracklist=false${auto ? "&autoplay=true" : ""}" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe>`;
     return "";
   }
   function dockBtn(name) { return `<button type="button" class="dockbtn" data-dockplay>${icon("play")}Play ${esc(name)}${DOCK.e && DOCK.e !== current ? ` <small>replaces ${esc(DOCK.name)}</small>` : ""}</button>`; }
-  function dockPlay(name, e, artists, p, dz) {
+  // Spotify's embed API, loaded on the first click that needs it; a failed or silent load (6 s) is retried on the next one.
+  let spApi = null, spAsk = 0;
+  function spotifyApi() {
+    return spApi || (spApi = new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      const fail = () => { clearTimeout(t); spApi = null; s.remove(); reject(new Error("spotify api")); };
+      const t = setTimeout(fail, 6000);
+      window.onSpotifyIframeApiReady = api => { clearTimeout(t); resolve(api); };
+      s.onerror = fail;
+      s.src = "https://open.spotify.com/embed/iframe-api/v1";
+      document.head.appendChild(s);
+    }));
+  }
+  // The same 80px player, created by the API so that it can be told to play once ready; the plain iframe without it.
+  function spotifyAuto(p, key) {
+    const ask = ++spAsk, still = () => DOCK.key === key && spAsk === ask;   // the dock still waits for this very click
+    spotifyApi().then(api => {
+      if (!still()) return;
+      $("#dframe").innerHTML = "<div></div>";
+      api.createController($("#dframe").firstChild, { uri: `spotify:artist:${p.spotify.id}`, width: "100%", height: 80, theme: "dark" },
+        c => c.addListener("ready", () => { if (still()) c.play(); }));
+    }).catch(() => { if (still()) $("#dframe").innerHTML = dockHtml(p, null); });
+  }
+  function dockPlay(name, e, artists, p, dz, auto) {
     const via = dockVia(p, dz); if (!via) return false;
     const key = `${e.id}|${norm(name)}|${via}`;
     DOCK.e = e; DOCK.name = name; DOCK.artists = artists;
     $("#dname").textContent = name;
     $("#dwhen").textContent = `${e.venue} · ${fmtShort(parseISO(e.date))}${e.time ? " · " + fmtTime(e.time) : ""}`;
     renderDockActs();
-    if (DOCK.key !== key) { DOCK.key = key; dock.dataset.src = via; $("#dframe").innerHTML = dockHtml(p, dz); }   // same act again: the iframe, and the music, stay
+    if (DOCK.key !== key) {   // same act again: the iframe, and the music, stay
+      DOCK.key = key; dock.dataset.src = via;
+      if (auto && via === "spotify") { $("#dframe").innerHTML = ""; spotifyAuto(p, key); }
+      else $("#dframe").innerHTML = dockHtml(p, dz, auto);
+    }
     dock.hidden = false; document.body.classList.add("docked");
     if (current === e) { const slot = $(".playslot", detail); if (slot) slot.innerHTML = ""; }   // the bar says it plays: no line in the sheet
     return true;
   }
+  function dockActs() { return DOCK.artists.filter(n => n === DOCK.name || canDock(DOCK.e, n)); }
   function renderDockActs() {
-    const a = DOCK.artists, i = a.indexOf(DOCK.name);
+    const a = dockActs(), i = a.indexOf(DOCK.name);
     $("#dacts").innerHTML = a.length > 1 ? `<button type="button" data-dact="-1" aria-label="Previous act" title="${esc(a[(i - 1 + a.length) % a.length])}">‹</button><small>${i + 1}/${a.length}</small><button type="button" data-dact="1" aria-label="Next act" title="${esc(a[(i + 1) % a.length])}">›</button>` : "";
   }
-  async function dockLoad(name, e, artists) {
+  async function dockLoad(name, e, artists, auto) {
     const p = playersOf(e, name);
     const dz = p.spotify || p.bandcampEmbed ? null : await deezerArtist(name).catch(() => null);
-    dockPlay(name, e, artists, p, dz);
+    dockPlay(name, e, artists, p, dz, auto);
   }
   function dockStep(d) {
-    const a = DOCK.artists; if (a.length < 2) return;
+    const a = dockActs(); if (a.length < 2) return;
     const name = a[(a.indexOf(DOCK.name) + d + a.length) % a.length];
-    if (current === DOCK.e) { const b = $$(".artist-pick button", detail).find(x => a[+x.dataset.i] === name); if (b) { b.click(); return; } }   // the sheet shows it: its pill switches both
-    dockLoad(name, DOCK.e, a);
+    if (current === DOCK.e) { const b = $$(".artist-pick button", detail).find(x => DOCK.artists[+x.dataset.i] === name); if (b) { b.click(); return; } }   // the sheet shows it: its pill switches both
+    dockLoad(name, DOCK.e, DOCK.artists, true);
   }
   function dockClose() {
     const e = DOCK.e;
-    dock.hidden = true; dock.dataset.src = ""; $("#dframe").innerHTML = "";
+    dock.hidden = true; dock.dataset.src = ""; $("#dframe").innerHTML = ""; spAsk++;
     DOCK.e = null; DOCK.name = null; DOCK.artists = []; DOCK.key = "";
     document.body.classList.remove("docked");
     if (current && current === e) { const slot = $(".playslot", detail); if (slot) { slot.innerHTML = dockBtn(artistShown); $("#artist").hidden = false; } }
@@ -1249,9 +1306,9 @@
   // related, names only). With several acts the "Listen" heading and the pills sit above, in .listen. Listen and Live
   // only show up when there is something to play (REM-52); an act with none of it leaves #artist hidden. A thin skeleton line stands in while the lookups run; a stale answer (act or
   // sheet changed meanwhile) is dropped.
-  const cache = {};
+  const cache = Object.create(null);
   let artistShown = null;
-  async function loadArtist(name, e, artists = [name]) {
+  async function loadArtist(name, e, artists = [name], auto = false) {
     const box = $("#artist");
     artistShown = name;
     box.innerHTML = '<div class="skel" aria-hidden="true"></div>';
@@ -1264,9 +1321,9 @@
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
     const p = playersOf(e, name), via = dockVia(p, dz);
     // The player goes to the dock (REM-10): dock this act when nothing plays or this concert already plays; otherwise
-    // offer to take over. The .playslot keeps the button's place for dockClose.
+    // offer to take over (its pill, once clicked, takes over by itself). The .playslot keeps the button's place for dockClose.
     let player = "";
-    if (via && (!DOCK.e || DOCK.e === e)) dockPlay(name, e, artists, p, dz);
+    if (via && (auto || !DOCK.e || DOCK.e === e)) dockPlay(name, e, artists, p, dz, auto);   // a clicked pill takes the dock
     else if (via) player = dockBtn(name);
     const listenH = $(".listen h3", detail);   // several acts: "Listen" heads the pills, only when this act plays
     if (listenH) listenH.hidden = !via;
@@ -1298,7 +1355,13 @@
       document.head.appendChild(s);
     });
   }
-  async function deezerArtist(name) {
+  // One lookup per name and per page load; DZ_HIT keeps the names Deezer knows (canPlay). A failed call is retried.
+  const DZ = Object.create(null), DZ_HIT = new Set();
+  function deezerArtist(name) {
+    const n = norm(name);
+    return DZ[n] || (DZ[n] = deezerLookup(name).then(a => { if (a) DZ_HIT.add(n); return a; }, err => { delete DZ[n]; throw err; }));
+  }
+  async function deezerLookup(name) {
     const r = await jsonp(`https://api.deezer.com/search/artist?q=${encodeURIComponent(name)}&limit=5`);
     const hits = (r && r.data) || [];
     const n = norm(name);
@@ -1422,7 +1485,7 @@
     const star = ev.target.closest("[data-fav]");
     if (star) { toggleFav(star.dataset.fav); star.outerHTML = favBtn(star.dataset.fav); replay($(".venue .star", detail), "pop"); render(); return; }
     if (ev.target.closest("[data-feedback]")) { openFb(); return; }
-    if (ev.target.closest("[data-dockplay]")) { if (current) dockLoad(artistShown, current, sheetArtists); return; }   // take the dock over (REM-10)
+    if (ev.target.closest("[data-dockplay]")) { if (current) dockLoad(artistShown, current, sheetArtists, true); return; }   // take the dock over (REM-10) and play (REM-59)
     if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
     const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
   });
