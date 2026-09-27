@@ -1,0 +1,147 @@
+# Troubleshooting agent (REM-49): after the daily scrape, Claude Code repairs the sources that failed.
+# A repair that passes the guardrails of livemusic/troubleshoot.py is pushed to its own branch
+# (autofix/<slug>) and proposed as a pull request: nothing reaches main without a human merging it.
+# What cannot be repaired becomes a Linear issue, and the run fails so that GitHub notifies the owner.
+# Only data (web/status.json, web/events.json, data/*.json) is committed to main, as the daily scrape does.
+# Needs Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests";
+# without it the branches are still pushed and the run summary links to them.
+# Secrets:
+#   ANTHROPIC_API_KEY   the agent (Claude Code) and the LLM venues
+#   LINEAR_API_KEY      issues for what is left to a human (optional: without it they are only in the run summary)
+#   NTFY_TOPIC          phone push through ntfy.sh (optional)
+name: Troubleshoot scrapers
+
+on:
+  workflow_run:
+    workflows: ["Daily scrape"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages            # never while a scrape or a deployment is writing
+  cancel-in-progress: false
+
+jobs:
+  troubleshoot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false   # the agent must not find a token that can push
+      - id: failed
+        run: |
+          n=$(python3 -c "import json; print(sum(s.get('status') == 'failed' for s in json.load(open('web/status.json')).get('sources', [])))" 2>/dev/null || echo 0)
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+          echo "$n failed source(s)"
+      - uses: actions/setup-python@v5
+        if: steps.failed.outputs.count != '0'
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        if: steps.failed.outputs.count != '0'
+        with:
+          node-version: "22"
+      - name: Install
+        if: steps.failed.outputs.count != '0'
+        run: |
+          pip install -r requirements.txt
+          npm install -g @anthropic-ai/claude-code
+      - name: Repairs waiting to be merged
+        id: waiting
+        if: steps.failed.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prs=$(gh pr list --state open --limit 100 --json headRefName,url \
+            --jq '[.[] | select(.headRefName | startswith("autofix/")) | {key: (.headRefName | ltrimstr("autofix/")), value: .url}] | from_entries')
+          [ -n "$prs" ] || prs='{}'
+          echo "prs=${prs}" >> "$GITHUB_OUTPUT"
+          echo "waiting: ${prs}"
+      - name: Repair (Claude Code, one session per failed source)
+        id: run
+        if: steps.failed.outputs.count != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TROUBLESHOOT_AWAITING: ${{ steps.waiting.outputs.prs }}
+        run: python -m livemusic.troubleshoot run
+      - name: Propose the repairs (one branch and one pull request per source)
+        if: steps.run.outputs.fixed != '' && steps.run.outputs.fixed != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          mkdir -p .troubleshoot
+          echo "{}" > .troubleshoot/prs.json
+          for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/autofix/); do
+            slug=${branch#autofix/}
+            git push --force origin "refs/heads/${branch}:refs/heads/${branch}"
+            git log -1 --format=%s "$branch" > .troubleshoot/title.txt
+            git log -1 --format=%b "$branch" > .troubleshoot/body.txt
+            url=$(gh pr create --base main --head "$branch" --title "$(cat .troubleshoot/title.txt)" --body-file .troubleshoot/body.txt) \
+              || url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/main...${branch}?expand=1"
+            echo "$branch -> $url"
+            jq --arg slug "$slug" --arg url "$(echo "$url" | tail -1)" '.[$slug] = $url' .troubleshoot/prs.json > .troubleshoot/prs.tmp
+            mv .troubleshoot/prs.tmp .troubleshoot/prs.json
+          done
+          git remote set-url origin "https://github.com/${GITHUB_REPOSITORY}.git"
+      - name: Report (status page, Linear issues, ping)
+        id: finish
+        if: steps.failed.outputs.count != '0'
+        continue-on-error: true   # exit 1 = a source is left for a human; publish first, fail at the end
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python -m livemusic.troubleshoot finish
+      - name: Commit data
+        id: data
+        if: steps.failed.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "live-music bot"
+          git config user.email "actions@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add web/events.json web/status.json data/*.json
+          if git diff --cached --quiet; then echo "no data change"; else
+            git commit -m "Data: troubleshooting $(date -u +%F)"
+            for attempt in 1 2 3 4 5; do
+              git fetch -q origin main
+              git rebase -q origin/main || { git rebase --abort; echo "::error::rebase conflict on data files"; exit 1; }
+              if git push origin HEAD:main; then break; fi
+              [ "$attempt" = 5 ] && exit 1
+              sleep 15
+            done
+            echo "pushed=1" >> "$GITHUB_OUTPUT"
+          fi
+      # pushes made with GITHUB_TOKEN do not trigger pages.yml: deploy here
+      - uses: actions/configure-pages@v5
+        if: steps.data.outputs.pushed == '1'
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.data.outputs.pushed == '1'
+        with:
+          path: web
+      - id: deployment
+        if: steps.data.outputs.pushed == '1'
+        uses: actions/deploy-pages@v4
+      - name: Left for a human
+        if: steps.finish.outcome == 'failure'
+        run: |
+          echo "::error::some scrapers could not be repaired: see the run summary and the Linear issues"
+          exit 1

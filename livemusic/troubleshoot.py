@@ -9,8 +9,8 @@ problem and no parser can fix them: they go straight to the report. For each of 
 day, Claude Code works headless in a copy of the repository; whatever it changed there is then judged here,
 not by the agent: files it may touch, no code that reads the environment or talks to the network by itself,
 the tests, the other sources of the parsers it touched, and a plausible number of events. A repair that passes
-becomes a local commit "Auto-fix <slug>: …" (the workflow pushes it to main); one that does not is
-thrown away and reported. `run` only needs ANTHROPIC_API_KEY; the tokens that can push or write to Linear
+becomes a commit "Auto-fix <slug>: …" on its own local branch autofix/<slug>, cut from HEAD (the workflow
+pushes the branch and opens a pull request: a human merges); one that does not is thrown away and reported. `run` only needs ANTHROPIC_API_KEY; the tokens that can push or write to Linear
 belong to the later steps, when no agent is running any more.
 
 Cost: every session reports what it spent (Claude Code's total_cost_usd) and every check what its Claude
@@ -85,9 +85,19 @@ def save_state(state, path=None):
         json.dump(state, f, ensure_ascii=False, indent=1)
 
 
-def triage(status, state, today):
+def awaiting():
+    """{slug: pull request URL} of the repairs waiting to be merged (TROUBLESHOOT_AWAITING, set by the workflow)."""
+    try:
+        got = json.loads(os.environ.get("TROUBLESHOOT_AWAITING") or "{}")
+        return got if isinstance(got, dict) else {}
+    except ValueError:
+        return {}
+
+
+def triage(status, state, today, waiting=None):
     """(systemic, todo, skipped): [{"cause", "sources"}], the sources to hand to the agent, and
     [(source, why not)]. Oldest failures first: they have been missing from the programme the longest."""
+    waiting = waiting or {}
     failed = ST.failing(status)
     groups = {}
     for s in failed:
@@ -100,7 +110,9 @@ def triage(status, state, today):
     for s in sorted((s for s in failed if s["slug"] not in taken), key=lambda s: s.get("failing_since") or stamp):
         seen = state.get("sources", {}).get(s["slug"], {})
         days = seen.get("days", []) if seen.get("since") == s.get("failing_since") else []
-        if stamp in days:
+        if s["slug"] in waiting:
+            skipped.append((s, f"its repair is waiting to be merged: {waiting[s['slug']]}"))
+        elif stamp in days:
             skipped.append((s, "already tried today"))
         elif len(days) >= MAX_DAYS:
             skipped.append((s, f"tried on {MAX_DAYS} days without success, left to its issue"))
@@ -499,8 +511,12 @@ def attempt(s, entry, status, root, log, check, agent):
         git("-c", "user.name=live-music bot", "-c", "user.email=actions@users.noreply.github.com", "commit", "-q", "-m",
             f"Auto-fix {slug}: {summary}\n\nSource: {s['venue']}\nWas: {s.get('error')} (failing since {s.get('failing_since')})\n"
             f"Now: {res['count']} events (last success: {s.get('prev_count')})\nCost of the repair: ${done['usd']:.2f}\n\n{notes}\n\n"
-            "Repaired and checked by the troubleshooting agent (REM-49), merged without review.", "--", *edited, root=root)
-        log(f"  repaired: {res['count']} events. {summary}")
+            "Repaired and checked by the troubleshooting agent (REM-49). To be merged by a human.", "--", *edited, root=root)
+        # the repair lives on its own branch; HEAD goes back where it was, the next source starts from there too
+        done["branch"] = f"autofix/{slug}"
+        git("update-ref", f"refs/heads/{done['branch']}", "HEAD", root=root)
+        git("reset", "-q", "--soft", "HEAD~1", root=root)
+        log(f"  repaired: {res['count']} events, on branch {done['branch']}. {summary}")
         return "fixed", done
     finally:
         shutil.rmtree(box, ignore_errors=True)
@@ -520,7 +536,7 @@ def run(root=None, log=print, check=run_check, agent=run_agent, today=None):
     failing = {s["slug"]: s for s in ST.failing(status)}
     # a source that works again starts a new count the next time it breaks
     state["sources"] = {k: v for k, v in state.get("sources", {}).items() if k in failing}
-    systemic, todo, skipped = triage(status, state, today)
+    systemic, todo, skipped = triage(status, state, today, awaiting())
     report = {"date": stamp, "run_url": ST.run_url(), "usd": 0, "sessions": 0, "fixed": [], "recovered": [], "unresolved": [],
               "systemic": [{"cause": g["cause"], "venues": [s["venue"] for s in g["sources"]]} for g in systemic],
               "skipped": [{"venue": s["venue"], "slug": s["slug"], "why": why} for s, why in skipped]}
@@ -653,14 +669,19 @@ def ping(title, text, url=None):
         return False
 
 
-def commit_url(slug, root=None):
-    sha = git("log", "-1", "--format=%H", "--fixed-strings", f"--grep=Auto-fix {slug}:", root=root, check=False).strip()
-    repo = os.environ.get("GITHUB_REPOSITORY")
-    return f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{repo}/commit/{sha}" if sha and repo else None
+def pull_requests(root=None):
+    """{slug: URL} of the pull requests the workflow opened for today's repairs (.troubleshoot/prs.json)."""
+    try:
+        with open(os.path.join(root or ROOT, NOTES, "prs.json"), encoding="utf-8") as f:
+            got = json.load(f)
+        return got if isinstance(got, dict) else {}
+    except (OSError, ValueError):
+        return {}
 
 
 def finish(root=None, log=print, scrape=None, api=linear):
-    """After the repairs are on main. Exit code 1 when something is left for a human (GitHub then mails the owner)."""
+    """After the repairs have their pull requests (which GitHub announces by itself). Exit code 1 when a
+    source could not be repaired (GitHub then mails the owner of the failed run)."""
     root = root or ROOT
     state_path = os.path.join(root, "data", "troubleshoot.json")
     state = load_state(state_path)
@@ -668,7 +689,7 @@ def finish(root=None, log=print, scrape=None, api=linear):
     if report.get("done") or not report:
         log("nothing to finish")
         return 0
-    again = [x["slug"] for x in report["fixed"] + report["recovered"]]
+    again = [x["slug"] for x in report["recovered"]]   # a repaired source joins the programme once merged
     if again:
         log(f"scraping again: {', '.join(again)}")
         scrape = scrape or (lambda slugs: subprocess.run(
@@ -677,10 +698,13 @@ def finish(root=None, log=print, scrape=None, api=linear):
             log("  the patch scrape reported failures (see above)")
     status_path = os.path.join(root, "web", "status.json")
     status = ST.load(status_path)
+    prs = pull_requests(root)
     if status:
         new = [{"date": report["date"], "venue": x["venue"], "slug": x["slug"], "summary": x["summary"], "error": x["error"],
-                "count": x["count"], "usd": x.get("usd"), "commit_url": commit_url(x["slug"], root)} for x in report["fixed"]]
-        status["fixes"] = (new + status.get("fixes", []))[:ST.FIXES_KEPT]
+                "count": x["count"], "usd": x.get("usd"), "branch": x.get("branch"), "pr_url": prs.get(x["slug"])}
+               for x in report["fixed"]]
+        fresh = {x["slug"] for x in new}   # a repair made again replaces the one still waiting
+        status["fixes"] = (new + [f for f in status.get("fixes", []) if f.get("slug") not in fresh])[:ST.FIXES_KEPT]
         if report.get("usd"):   # next to what the scrape cost, on the status page
             ST.add_cost(status, {"steps": [{"what": "troubleshooting", "model": os.environ.get("TROUBLESHOOT_MODEL", "Claude Code"),
                                             "batch": False, "calls": report.get("sessions", 0), "usd": report["usd"]}]}, report["date"])
@@ -707,14 +731,16 @@ def finish(root=None, log=print, scrape=None, api=linear):
         with open(summary, "a", encoding="utf-8") as f:
             f.write(f"## Troubleshooting {report['date']}\n\nClaude cost: **${report.get('usd') or 0:.2f}** "
                     f"({report.get('sessions', 0)} agent session(s))\n\n" +
-                    "".join(f"* repaired: **{x['venue']}**, {x['count']} events, ${x.get('usd') or 0:.2f}. {x['summary']}\n" for x in report["fixed"]) +
+                    "".join(f"* repair to merge: **{x['venue']}**, {x['count']} events, ${x.get('usd') or 0:.2f}. {x['summary']} "
+                            f"{prs.get(x['slug']) or 'branch ' + str(x.get('branch'))}\n" for x in report["fixed"]) +
                     "".join(f"* works again: **{x['venue']}**, {x['count']} events\n" for x in report["recovered"]) +
                     "".join(f"* skipped: **{x['venue']}**, {x['why']}\n" for x in report["skipped"]) +
                     "".join(f"\n### {t} {('(' + r + ')') if r else ''}\n\n{b}\n" for t, r, u_, b in lines))
-    if lines:
-        text = "\n".join(f"{t}{' (' + r + ')' if r else ''}" for t, r, _, _ in lines)
-        ping(f"Live in Paris: {len(lines)} scraper problem(s) need you", text,
-             next((u_ for _, _, u_, _ in lines if u_), report.get("run_url")))
+    if lines or report["fixed"]:
+        text = "\n".join([f"To merge: {x['venue']}, {x['count']} events ({prs.get(x['slug']) or x.get('branch')})" for x in report["fixed"]]
+                         + [f"{t}{' (' + r + ')' if r else ''}" for t, r, _, _ in lines])
+        ping(f"Live in Paris: {len(lines) + len(report['fixed'])} scraper item(s) need you", text,
+             next(iter(prs.values()), None) or next((u_ for _, _, u_, _ in lines if u_), report.get("run_url")))
     report["done"] = True
     save_state(state, state_path)
     return 1 if lines else 0

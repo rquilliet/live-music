@@ -77,10 +77,15 @@ updates its sources and leaves the others as they were.
   for a human), no import outside a short list and no `eval` / `open` / `getattr` in a parser, the tests
   pass, the source gives a number of events between 30 % and 4× its last good count, the healthy sources
   of the parsers it touched are still healthy, and HEAD, the git configuration and the hooks did not move;
-- a repair that passes is a local commit `Auto-fix <slug>: …`; a repair that does not is thrown away.
+- a repair that passes is a commit `Auto-fix <slug>: …` on its own branch `autofix/<slug>`; a repair that
+  does not is thrown away. `.github/workflows/troubleshoot.yml` (after every daily scrape) pushes the branch
+  and opens a pull request: nothing reaches `main` before you merge it, and a source whose pull request is
+  still open is left alone the following days. It needs Settings → Actions → General → "Allow GitHub Actions
+  to create and approve pull requests".
 
-`python -m livemusic.troubleshoot finish` then scrapes the repaired sources again (`scrape.py --only … --patch`
-keeps the rest of the programme), lists the repairs on the status page, files one Linear issue per source left
+`python -m livemusic.troubleshoot finish` then scrapes again the sources that came back by themselves
+(`scrape.py --only … --patch` keeps the rest of the programme; a repaired source joins the programme with the
+first scrape after its merge), lists the repairs on the status page, files one Linear issue per source left
 (`Scraper down: <venue>`, a comment when the issue is already open) with `LINEAR_API_KEY`, sends a phone push
 through [ntfy](https://ntfy.sh) when `NTFY_TOPIC` is set, and exits 1 when something is left for a human.
 Attempts and what they cost are counted in `data/troubleshoot.json`.
@@ -90,8 +95,8 @@ day's repairs have cost $10 (`TROUBLESHOOT_DAILY_USD`). Each repair's cost (the 
 of its checks) is written in its commit message, in the Linear issue, in the run summary and on the status
 page, where the day's total sits next to the cost of the scrape (REM-55).
 
-The guardrails are a filter, not a sandbox: a repaired parser runs in the next daily scrape with the
-repository's secrets, so keep the keys of this repository limited to what the scraper needs.
+The guardrails are a filter, not a sandbox: read the diff of a repair before merging it, a merged parser
+runs in the next daily scrape with the repository's secrets.
 
 ## Coverage check
 

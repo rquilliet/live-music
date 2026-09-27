@@ -143,8 +143,8 @@ class RunTest(unittest.TestCase):
         out = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=self.root, capture_output=True, text=True)
         return out.stdout.splitlines()
 
-    def log_of(self):
-        return subprocess.run(["git", "log", "--format=%s"], cwd=self.root, capture_output=True, text=True).stdout.split("\n")
+    def log_of(self, ref="HEAD"):
+        return subprocess.run(["git", "log", "--format=%s", ref], cwd=self.root, capture_output=True, text=True).stdout.split("\n")
 
     def test_repair_is_committed_and_a_bad_one_thrown_away(self):
         def agent(source, entry, root):
@@ -169,7 +169,12 @@ class RunTest(unittest.TestCase):
         with open(os.path.join(self.root, "venues.json")) as f:
             self.assertNotIn("agenda", f.read())
         self.assertIn("+  \"url\": \"https://java.fr/agenda\"", report["unresolved"][0]["diff"])
-        self.assertEqual(self.log_of()[:2], ["Auto-fix cigale: The markup changed: shows are now <article> blocks.", "init"])
+        # the repair is on its own branch, cut from HEAD, which did not move
+        self.assertEqual(self.log_of()[0], "init")
+        self.assertEqual(report["fixed"][0]["branch"], "autofix/cigale")
+        self.assertEqual(self.log_of("autofix/cigale")[:2], ["Auto-fix cigale: The markup changed: shows are now <article> blocks.", "init"])
+        with open(os.path.join(self.root, "livemusic/sources/venues_html.py")) as f:
+            self.assertNotIn("fixed", f.read())
         # nothing of the refused repair is left; the state and what was lying around are kept
         self.assertEqual(self.dirty(), ["?? data/troubleshoot.json", "?? notes.txt"])
         state = T.load_state(os.path.join(self.root, "data/troubleshoot.json"))
@@ -180,6 +185,15 @@ class RunTest(unittest.TestCase):
         calls = []
         again = self.run_with(lambda *a: calls.append(a) or (True, ""))
         self.assertEqual((calls, [x["why"] for x in again["skipped"]]), ([], ["already tried today"] * 2))
+
+        # the next day the pull request is still open: the source is left alone
+        with mock.patch.dict(os.environ, {"TROUBLESHOOT_AWAITING": '{"cigale": "https://github.com/x/y/pull/7"}'}):
+            self.counts["java"] = 9   # java came back by itself
+            later = T.run(self.root, log=self.logs.append, check=self.check, agent=lambda *a: calls.append(a) or (True, ""),
+                          today=TODAY + dt.timedelta(days=1))
+        self.assertEqual([(x["slug"], x["why"]) for x in later["skipped"]],
+                         [("cigale", "its repair is waiting to be merged: https://github.com/x/y/pull/7")])
+        self.assertEqual(([x["slug"] for x in later["recovered"]], calls), (["java"], []))
 
     def test_refusals(self):
         def implausible(source, entry, root):
@@ -249,7 +263,7 @@ class RunTest(unittest.TestCase):
         self.assertEqual([(x["slug"], x["why"]) for x in report["skipped"]],
                          [("java", "over the day's budget ($1.55 spent of $1.00)")])
         self.assertEqual((report["usd"], report["sessions"]), (1.55, 1))
-        self.assertIn("Cost of the repair: $1.55", subprocess.run(["git", "log", "-1", "--format=%B"], cwd=self.root,
+        self.assertIn("Cost of the repair: $1.55", subprocess.run(["git", "log", "-1", "--format=%B", "autofix/cigale"], cwd=self.root,
                                                                   capture_output=True, text=True).stdout)
         state = T.load_state(os.path.join(self.root, "data/troubleshoot.json"))
         self.assertEqual((state["spent"], state["sources"]["cigale"]["usd"]), ({"date": "2026-09-27", "usd": 1.55}, 1.55))
@@ -307,6 +321,9 @@ class FinishTest(unittest.TestCase):
                                       "notes": "The venue closed.", "diff": "", "attempts": 2, "usd": 0.45, "usd_total": 1.2}],
                       "systemic": [{"cause": "Claude API error 400: credit", "venues": ["A", "B", "C"]}]}
             T.save_state({"sources": {"java": {}}, "last": report}, os.path.join(root, "data/troubleshoot.json"))
+            os.makedirs(os.path.join(root, ".troubleshoot"))
+            with open(os.path.join(root, ".troubleshoot/prs.json"), "w") as f:
+                json.dump({"cigale": "https://github.com/x/y/pull/7"}, f)
             with open(os.path.join(root, "web/status.json"), "w") as f:
                 json.dump({"today": "2026-09-27", "sources": [], "fixes": [{"slug": "old"}],
                            "cost": {"date": "2026-09-27", "usd": 3.0, "steps": [{"what": "venues", "usd": 3.0}]},
@@ -325,16 +342,17 @@ class FinishTest(unittest.TestCase):
                     mock.patch.object(T, "ping", lambda *a: pings.append(a)):
                 code = T.finish(root, log=lambda m: None, scrape=lambda slugs: scraped.append(slugs) or 0, api=api)
                 self.assertEqual(T.finish(root, log=lambda m: None, api=api), 0)   # a second call does nothing
-            self.assertEqual((code, scraped), (1, [["cigale"]]))
+            self.assertEqual((code, scraped), (1, []))   # a repair is scraped again once merged, by the daily scrape
             self.assertEqual([i["title"] for i in filed], ["Scraper down: Java", "Scrapers down: Claude API error 400: credit"])
             self.assertIn("attempt 2 of 3", filed[0]["description"])
             self.assertIn("Cost of this attempt: $0.45 ($1.20 on this failure so far)", filed[0]["description"])
             self.assertIn("The venue closed.", filed[0]["description"])
-            self.assertEqual(pings[0][1], "Scraper down: Java (REM-61)\nScrapers down: Claude API error 400: credit (REM-62)")
+            self.assertEqual(pings[0][1], "To merge: Cigale, 18 events (https://github.com/x/y/pull/7)\n"
+                                          "Scraper down: Java (REM-61)\nScrapers down: Claude API error 400: credit (REM-62)")
             with open(os.path.join(root, "web/status.json")) as f:
                 status = json.load(f)
-            self.assertEqual([(x["slug"], x.get("summary"), x.get("usd")) for x in status["fixes"]],
-                             [("cigale", "The markup changed.", 1.55), ("old", None, None)])
+            self.assertEqual([(x["slug"], x.get("summary"), x.get("usd"), x.get("pr_url")) for x in status["fixes"]],
+                             [("cigale", "The markup changed.", 1.55, "https://github.com/x/y/pull/7"), ("old", None, None, None)])
             self.assertEqual((status["cost"]["usd"], status["history"][0]["usd"]), (5.0, 5.0))
             self.assertEqual(status["cost"]["steps"][-1], {"what": "troubleshooting", "model": "Claude Code", "batch": False,
                                                            "calls": 2, "usd": 2.0})
