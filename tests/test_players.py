@@ -283,6 +283,7 @@ class ResolveTests(unittest.TestCase):
         self.assertEqual(bad.players, {})
         self.assertIn("bandcamp", gig.players["Frankie and the Witch Fingers"])
         self.assertTrue(any("unexpected RuntimeError" in m for m in self.logs))
+        self.assertIsNone(P.cache_load(self.path)["frankie"]["bandcamp"])   # asked again in a month, not every run
 
     def test_lookup_order_and_cap(self):
         http = FakeHttp({P.BC_AUTOCOMPLETE: "{}"})

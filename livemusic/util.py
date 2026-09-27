@@ -73,7 +73,7 @@ _GENERIC_LEAD = re.compile(r"^(?:concerts?|caf[ée][ -]concert|ap[ée]ro[ -]conc
                            r"jam(?: session)?|programmation|musique|spectacle|release party)$", re.I)
 # parts that are status / time / stage directions, never an act
 _LINEUP_NOISE = re.compile(r"^(?:complet|sold ?out|annul[ée]e?|report[ée]e?|nouvelle date|guests?|1[eè]re partie|"
-                           r"premi[eè]re partie|first part|\d{1,2}\s*[h:]\s*\d{0,2})$", re.I)
+                           r"premi[eè]re partie|first part|release party|\d{1,2}\s*[h:]\s*\d{0,2})$", re.I)
 
 
 # Decorations venues hang on an act's name (REM-36): "KYTES en concert (côté Records)", "Horse Lords (1er soir)",
@@ -81,7 +81,7 @@ _LINEUP_NOISE = re.compile(r"^(?:complet|sold ?out|annul[ée]e?|report[ée]e?|no
 _DECOR = [
     re.compile(r"\s*\([^)]*\)"),                                  # (côté Records), (1er soir), (release party)
     re.compile(r"^#\w+\s+(?:(?:de|by|with|avec)\.{0,3}\s+)?"),     # #JazzDeDemain …, #LaJamDuLundi de …, #LaPetiteHeure by... …
-    re.compile(r"\s+\W*release party\b.*$", re.I),                # … Release Party "Megalostrata", … [Release Party] (REM-75)
+    re.compile(r"\s+\W*(?:(?:album|ep|lp|single)\s+)?release party\b.*$", re.I),   # … Release Party "Megalostrata", … [Release Party] (REM-75)
     re.compile(r"\s+en concert\b.*$", re.I),                       # … en concert au 38Riv Jazz Club
     re.compile(r"\s+(?:au|à la|à l'|at the|at)\s+(?=[A-Z0-9]).*$"),   # … au Sunset, at the Olympia
 ]

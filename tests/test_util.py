@@ -22,6 +22,8 @@ class SplitLineupTest(unittest.TestCase):
         self.assertEqual(strip_decor("Malesa release party II"), "Malesa")
         self.assertEqual(strip_decor("Rumeur [Release Party]"), "Rumeur")
         self.assertEqual(strip_decor("CLEGANE *Release Party*"), "CLEGANE")
+        self.assertEqual(strip_decor("Foo EP release party"), "Foo")
+        self.assertEqual(split_lineup("Loner Deer - Release Party"), ("Loner Deer", []))
         self.assertEqual(strip_decor("RELEASE PARTY 'NOTES DE FRAIS'"), "RELEASE PARTY 'NOTES DE FRAIS'")   # no act named: kept
 
     def test_names_that_look_decorated_survive(self):

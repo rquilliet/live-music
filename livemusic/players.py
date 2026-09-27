@@ -436,37 +436,46 @@ def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sl
     dirty = False
     for i, (key, name) in enumerate(todo, 1):
         entry = cache.setdefault(key, {"name": name})
-        try:
-            if bc_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "bandcamp", today):
-                try:
-                    cache_put(entry, "bandcamp", resolve_bandcamp(name, fetch=fetch, sleep=sleep, url=hints.get(key)), today)
-                    bc_errors, dirty = 0, True
-                    found["bandcamp"] += bool(entry["bandcamp"])
-                except (PlayerError, ValueError) as ex:
-                    bc_errors += 1
-                    log(f"  players: bandcamp {name!r}: {ex}")
-                    if bc_errors >= MAX_CONSECUTIVE_ERRORS:
-                        log("  players: Bandcamp unreachable, giving up on it for this run")
-            if token and sp_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "spotify", today):
-                try:
-                    cache_put(entry, "spotify", resolve_spotify(name, token, fetch=fetch), today)
-                    sp_errors, dirty = 0, True
-                    found["spotify"] += bool(entry["spotify"])
-                except (PlayerError, ValueError) as ex:
-                    sp_errors += 1
-                    log(f"  players: spotify {name!r}: {ex}")
-            if key in yt_keys and yt_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "youtube", today):
-                try:
-                    cache_put(entry, "youtube", resolve_youtube(name, yt_key, fetch=fetch), today)
-                    yt_errors, dirty = 0, True
-                    found["youtube"] += bool(entry["youtube"])
-                except (PlayerError, ValueError) as ex:
-                    yt_errors += 1
-                    log(f"  players: youtube {name!r}: {ex}")
-                    if yt_errors >= MAX_CONSECUTIVE_ERRORS:
-                        log("  players: YouTube unreachable (bad key or quota?), giving up on it for this run")
-        except Exception as ex:  # a page we cannot read costs this act its player, not the whole programme its players
-            log(f"  players: {name!r}: unexpected {type(ex).__name__}: {ex}")
+        if bc_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "bandcamp", today):
+            try:
+                cache_put(entry, "bandcamp", resolve_bandcamp(name, fetch=fetch, sleep=sleep, url=hints.get(key)), today)
+                bc_errors, dirty = 0, True
+                found["bandcamp"] += bool(entry["bandcamp"])
+            except (PlayerError, ValueError) as ex:
+                bc_errors += 1
+                log(f"  players: bandcamp {name!r}: {ex}")
+                if bc_errors >= MAX_CONSECUTIVE_ERRORS:
+                    log("  players: Bandcamp unreachable, giving up on it for this run")
+            except Exception as ex:  # a page we cannot read: this act goes without, the programme keeps its players
+                cache_put(entry, "bandcamp", None, today)
+                dirty = True
+                log(f"  players: bandcamp {name!r}: unexpected {type(ex).__name__}: {ex}")
+        if token and sp_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "spotify", today):
+            try:
+                cache_put(entry, "spotify", resolve_spotify(name, token, fetch=fetch), today)
+                sp_errors, dirty = 0, True
+                found["spotify"] += bool(entry["spotify"])
+            except (PlayerError, ValueError) as ex:
+                sp_errors += 1
+                log(f"  players: spotify {name!r}: {ex}")
+            except Exception as ex:  # a page we cannot read: this act goes without, the programme keeps its players
+                cache_put(entry, "spotify", None, today)
+                dirty = True
+                log(f"  players: spotify {name!r}: unexpected {type(ex).__name__}: {ex}")
+        if key in yt_keys and yt_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "youtube", today):
+            try:
+                cache_put(entry, "youtube", resolve_youtube(name, yt_key, fetch=fetch), today)
+                yt_errors, dirty = 0, True
+                found["youtube"] += bool(entry["youtube"])
+            except (PlayerError, ValueError) as ex:
+                yt_errors += 1
+                log(f"  players: youtube {name!r}: {ex}")
+                if yt_errors >= MAX_CONSECUTIVE_ERRORS:
+                    log("  players: YouTube unreachable (bad key or quota?), giving up on it for this run")
+            except Exception as ex:  # a page we cannot read: this act goes without, the programme keeps its players
+                cache_put(entry, "youtube", None, today)
+                dirty = True
+                log(f"  players: youtube {name!r}: unexpected {type(ex).__name__}: {ex}")
         if dirty and i % 25 == 0:
             cache_save(cache_path, cache)  # a run killed halfway keeps what it learnt
         if bc_errors >= MAX_CONSECUTIVE_ERRORS and (not token or sp_errors >= MAX_CONSECUTIVE_ERRORS) \
