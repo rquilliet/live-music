@@ -105,9 +105,9 @@
 
   function renderFixes() {
     const fixes = DATA.fixes || [];
-    $("#fixes").innerHTML = !fixes.length ? "" : `<h2>Automatic fixes</h2>` + fixes.map(f => {
-      const c = safeUrl(f.commit_url);
-      return `<div class="fix"><b>${esc(f.venue)}</b> · ${esc(fmtDay(f.date))} · ${esc(f.summary)}<br><small>was: ${esc(f.error)}${f.count != null ? ` · now ${plural(f.count, "event")}` : ""}${typeof f.usd === "number" ? ` · cost ${usd(f.usd)}` : ""}${c ? ` · <a href="${esc(c)}" target="_blank" rel="noopener">commit ↗</a>` : ""}</small></div>`;
+    $("#fixes").innerHTML = !fixes.length ? "" : `<h2>Repairs by the troubleshooting agent</h2>` + fixes.map(f => {
+      const c = safeUrl(f.pr_url);
+      return `<div class="fix"><b>${esc(f.venue)}</b> · ${esc(fmtDay(f.date))} · ${esc(f.summary)}<br><small>was: ${esc(f.error)}${f.count != null ? ` · now ${plural(f.count, "event")}` : ""}${typeof f.usd === "number" ? ` · cost ${usd(f.usd)}` : ""}${c ? ` · <a href="${esc(c)}" target="_blank" rel="noopener">pull request ↗</a>` : ""}</small></div>`;
     }).join("");
   }
 

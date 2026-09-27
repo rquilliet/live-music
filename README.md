@@ -63,6 +63,41 @@ troubleshooting agent). `web/status.html` shows it (`/status.html` on the site, 
 the bottom of the programme), with a link to the GitHub Actions log of the run. A run on a subset (`--only`)
 updates its sources and leaves the others as they were.
 
+## Troubleshooting agent
+
+`python -m livemusic.troubleshoot run` reads `web/status.json` and handles the sources that failed:
+
+- failures shared by 3 sources or more, and Claude API errors (credit, key), are one problem that no parser
+  change repairs: they are reported, not "fixed";
+- each other source (5 a day at most, 3 days in a row at most) is first checked again (`scrape.py --check
+  <slug>`: a site that was down at 6 am often works at 7), then handed to Claude Code, headless, with a
+  restricted set of tools, in a copy of the repository without `.git`;
+- what the agent changed is judged by the program, not by the agent: only `venues.json` (the entry of that
+  source) and the hand parsers `livemusic/sources/venues_html.py` / `tribe.py` (a new parser or strategy is
+  for a human), no import outside a short list and no `eval` / `open` / `getattr` in a parser, the tests
+  pass, the source gives a number of events between 30 % and 4× its last good count, the healthy sources
+  of the parsers it touched are still healthy, and HEAD, the git configuration and the hooks did not move;
+- a repair that passes is a commit `Auto-fix <slug>: …` on its own branch `autofix/<slug>`; a repair that
+  does not is thrown away. `.github/workflows/troubleshoot.yml` (after every daily scrape) pushes the branch
+  and opens a pull request: nothing reaches `main` before you merge it, and a source whose pull request is
+  still open is left alone the following days. It needs Settings → Actions → General → "Allow GitHub Actions
+  to create and approve pull requests".
+
+`python -m livemusic.troubleshoot finish` then scrapes again the sources that came back by themselves
+(`scrape.py --only … --patch` keeps the rest of the programme; a repaired source joins the programme with the
+first scrape after its merge), lists the repairs on the status page, files one Linear issue per source left
+(`Scraper down: <venue>`, a comment when the issue is already open) with `LINEAR_API_KEY`, sends a phone push
+through [ntfy](https://ntfy.sh) when `NTFY_TOPIC` is set, and exits 1 when something is left for a human.
+Attempts and what they cost are counted in `data/troubleshoot.json`.
+
+Cost: a session is stopped by Claude Code at $3 (`TROUBLESHOOT_BUDGET_USD`) and no session starts once the
+day's repairs have cost $10 (`TROUBLESHOOT_DAILY_USD`). Each repair's cost (the session plus the Claude calls
+of its checks) is written in its commit message, in the Linear issue, in the run summary and on the status
+page, where the day's total sits next to the cost of the scrape (REM-55).
+
+The guardrails are a filter, not a sandbox: read the diff of a repair before merging it, a merged parser
+runs in the next daily scrape with the repository's secrets.
+
 ## Coverage check
 
 The end of every run lists the venues whose own site yielded fewer than 3 events (`low coverage`): that is
