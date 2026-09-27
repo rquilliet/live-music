@@ -124,11 +124,6 @@
     const year = sun.getFullYear() !== today0().getFullYear() ? ` ${sun.getFullYear()}` : "";
     return (mon.getMonth() === sun.getMonth() ? `${mon.getDate()} – ${sun.getDate()} ${M[mon.getMonth()]}` : `${f(mon)} – ${f(sun)}`) + year;
   }
-  // The week in the strip, beside the month: "21 – 27", or "28 Sep – 4 Oct" when it straddles two months.
-  function weekRange(mon) {
-    const sun = addDays(mon, 6);
-    return mon.getMonth() === sun.getMonth() ? `${mon.getDate()} – ${sun.getDate()}` : `${mon.getDate()} ${MONTHS_SHORT[mon.getMonth()]} – ${sun.getDate()} ${MONTHS_SHORT[sun.getMonth()]}`;
-  }
   function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
   function km(a, b) {
     const R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180, dLon = (b.lon - a.lon) * Math.PI / 180;
@@ -259,8 +254,9 @@
   }
 
   // ------------------------------------------------------------ rendering
-  // The sticky strip (REM-35): the month in view as the big label, the week in view beside it, and one button per month
-  // of the programme that scrolls to its heading. spy() keeps them in step with the scroll position.
+  // The sticky strip (REM-35) is the month heading: the month in view with its year, and one button per month of the
+  // programme that scrolls to its start. The list itself only holds empty .monthhead anchors; spy() keeps the label and
+  // the active button in step with the scroll position.
   let months = [];   // "YYYY-MM" keys of the months listed, in order (set by renderList)
   const yearOf = m => m.slice(0, 4) !== String(today0().getFullYear()) ? " " + m.slice(0, 4) : "";   // the year only when it is not this one
   function renderNav() {
@@ -270,11 +266,9 @@
   let spyRaf = 0;
   function spy() {
     const line = $(".weeknav").getBoundingClientRect().bottom + 2;
-    let cur = months[0] || "", week = $(".weekhead");
+    let cur = months[0] || "";
     $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().top <= line) cur = h.dataset.m; });
-    $$(".weekhead").forEach(h => { if (h.getBoundingClientRect().top <= line) week = h; });
-    $("#weeklabel").textContent = cur ? MONTHS[+cur.slice(5) - 1] + yearOf(cur) : "Coming up";
-    $("#weekrange").textContent = week ? weekRange(parseISO(week.dataset.w)) : "";
+    $("#weeklabel").innerHTML = cur ? `${MONTHS[+cur.slice(5) - 1]}<small>${cur.slice(0, 4)}</small>` : "Coming up";
     $$("#months button").forEach(b => { b.classList.toggle("on", b.dataset.m === cur); b.setAttribute("aria-current", b.dataset.m === cur ? "true" : "false"); });
   }
   function jumpMonth(m) {
@@ -431,8 +425,8 @@
     let lastMonth = "";
     for (const w of mondays) {
       const m = monthOf(w);
-      if (m !== lastMonth) { lastMonth = m; html += `<h2 class="monthhead" data-m="${m}" id="m-${m}">${MONTHS[+m.slice(5) - 1]}<small>${m.slice(0, 4)}</small></h2>`; }
-      html += `<h3 class="weekhead" data-w="${w}">${weekLabel(parseISO(w), MOBILE.matches)}</h3>` + weekGrid(parseISO(w), byDay, { today, from, to });
+      if (m !== lastMonth) { lastMonth = m; html += `<div class="monthhead" data-m="${m}" id="m-${m}"></div>`; }
+      html += `<h3 class="weekhead">${weekLabel(parseISO(w), MOBILE.matches)}</h3>` + weekGrid(parseISO(w), byDay, { today, from, to });
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
