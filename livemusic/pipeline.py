@@ -215,7 +215,7 @@ def check(slug, log=print):
     fn = STRATEGIES.get(v["strategy"])
     if not fn:
         return dict(res, error=f"unknown strategy {v['strategy']}")
-    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log, "problem": None}
+    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "year_guess_days": YEAR_GUESS_DAYS, "log": log, "problem": None}
     usage.reset()
     try:
         got = fn(v, ctx)
