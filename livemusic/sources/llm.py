@@ -108,10 +108,12 @@ def scrape(venue, ctx):
     return [_to_event(x, venue, ctx) for x in events]
 
 
-def _fix_year(date: str, today: dt.date, horizon_days: int) -> str:
+def _fix_year(date: str, today: dt.date, window_days: int) -> str:
     """Programme pages print '11 septembre' without a year and the model sometimes picks last year's;
-    a date in the past whose next anniversary falls inside the scraping window is that mistake
-    (La Marbrerie: 38 extracted concerts, 1 kept, before this)."""
+    a date in the past whose next anniversary falls within window_days is that mistake
+    (La Marbrerie: 38 extracted concerts, 1 kept, before this). The window is not the keep/drop horizon:
+    with a 2-year horizon every past date would qualify, and last week's concert still on the page would
+    come back as next year's."""
     try:
         d = dt.date.fromisoformat(date)
     except ValueError:
@@ -121,14 +123,14 @@ def _fix_year(date: str, today: dt.date, horizon_days: int) -> str:
             nxt = d.replace(year=d.year + 1)
         except ValueError:  # 29 February
             return date
-        if today <= nxt <= today + dt.timedelta(days=horizon_days):
+        if today <= nxt <= today + dt.timedelta(days=window_days):
             return nxt.isoformat()
     return date
 
 
 def _to_event(x: dict, venue, ctx) -> Event:
     genres = [g for g in x.get("genres", []) if g in TAGS][:3]
-    date = _fix_year(x["date"], ctx["today"], ctx["horizon_days"])
+    date = _fix_year(x["date"], ctx["today"], ctx["year_guess_days"])
     return Event(
         subgenres=normalize_subgenres(x.get("subgenres", [])),
         title=x["title"], date=date, time=x.get("time") or None, venue=venue["name"], venue_slug=venue["slug"],
