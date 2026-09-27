@@ -295,6 +295,15 @@ class ResolveTests(unittest.TestCase):
         self.assertTrue(all(e.players == {} for e in events))
         self.assertTrue(any("giving up" in m for m in self.logs))
 
+    def test_an_unexpected_error_on_one_act_keeps_the_players_of_the_others(self):   # REM-75
+        http = FakeHttp({P.BC_AUTOCOMPLETE: AUTOCOMPLETE, BAND: BAND_PAGE, "https://frankie.bandcamp.com": RuntimeError("boom")})
+        bad, gig = mk("Frankie", "Frankie", date="2026-09-10"), mk("Frankie and the Witch Fingers", "Frankie and the Witch Fingers")
+        self.run_resolve([bad, gig], http)
+        self.assertEqual(bad.players, {})
+        self.assertIn("bandcamp", gig.players["Frankie and the Witch Fingers"])
+        self.assertTrue(any("unexpected RuntimeError" in m for m in self.logs))
+        self.assertIsNone(P.cache_load(self.path)["frankie"]["bandcamp"])   # asked again in a month, not every run
+
     def test_lookup_order_and_cap(self):
         http = FakeHttp({P.BC_AUTOCOMPLETE: "{}"})
         soon, later = mk("Zed", "Zed", date="2026-09-10"), mk("Alpha", "Alpha", date="2026-12-01")
