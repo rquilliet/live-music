@@ -28,6 +28,8 @@ def main():
     p.add_argument("--patch", action="store_true", help="with --only: keep the events of the other sources")
     p.add_argument("--check", metavar="SLUG", help="scrape one source, print JSON, write nothing")
     a = p.parse_args()
+    if a.patch and not a.only:
+        p.error("--patch needs --only")
     fetch.FRESH = a.fresh
     if a.check:
         fetch.FRESH = True

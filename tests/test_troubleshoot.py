@@ -52,12 +52,13 @@ class TriageTest(unittest.TestCase):
 
 
 class GuardTest(unittest.TestCase):
-    def test_files(self):
-        self.assertEqual(T.guard_files(["venues.json", "livemusic/sources/venues_html.py", "livemusic/sources/new_venue.py",
-                                        "data/llm_cache.json", ".troubleshoot/a.md", "web/events.json"]), [])
-        bad = ["livemusic/sources/llm.py", "livemusic/sources/opendata.py", "livemusic/pipeline.py", "tests/test_util.py",
-               ".github/workflows/scrape.yml", "scrape.py", "web/app.js", "livemusic/sources/../fetch.py"]
-        self.assertEqual(T.guard_files(bad), bad)
+    def test_editable(self):
+        for f in ["venues.json", "livemusic/sources/venues_html.py", "livemusic/sources/tribe.py"]:
+            self.assertTrue(T.EDITABLE.match(f), f)
+        for f in ["livemusic/sources/llm.py", "livemusic/sources/opendata.py", "livemusic/sources/__init__.py",
+                  "livemusic/sources/new_venue.py", "livemusic/pipeline.py", "tests/test_util.py",
+                  ".github/workflows/scrape.yml", "scrape.py", "web/app.js", "livemusic/sources/../fetch.py"]:
+            self.assertFalse(T.EDITABLE.match(f), f)
 
     def test_venues(self):
         old = [{"name": "A", "slug": "a", "strategy": "llm", "url": "https://a.fr/", "lat": 1}, {"name": "B", "slug": "b", "strategy": "llm", "url": "https://b.fr/"}]
@@ -77,16 +78,16 @@ class GuardTest(unittest.TestCase):
         self.assertIn("not valid JSON", T.guard_venues(dump(old), "[", "a")[0])
 
     def test_code(self):
-        diff = "+++ b/livemusic/sources/venues_html.py\n" + "\n".join("+" + l for l in [
-            "from urllib.parse import urljoin",
-            "    for m in re.finditer(r'<article class=\"show\">(.*?)</article>', html, re.S):",
-            "        out.append(Event(title=title, date=parse_date(day), url=urljoin(venue['url'], href)))",
-        ])
-        self.assertEqual(T.guard_code(diff), [])
-        for line in ["import os", "k = os.environ['ANTHROPIC_API_KEY']", "urllib.request.urlopen(u)", "subprocess.run(x)",
-                     "open('/proc/self/environ')", "getattr(m, 'env' + 'iron')", "x.__class__", "import socket", "exec(s)"]:
-            self.assertEqual(len(T.guard_code("+++ b/livemusic/sources/x.py\n+" + line)), 1, line)
-        self.assertEqual(T.guard_code("+++ b/venues.json\n+ \"url\": \"https://os.environ.fr/open(\""), [])
+        before = "import re\nimport urllib.parse\n\nfrom ..fetch import get\n\n\ndef cigale(v, ctx):\n    return []\n"
+        good = before + "\n\ndef parse(html, venue):\n    import json\n    return [urllib.parse.urljoin(venue['url'], m.group(1)) for m in re.finditer('a', html)]\n"
+        self.assertEqual(T.guard_code("x.py", before, good), [])
+        for line in ["import os", "import json, os as o", "from pathlib import Path", "from urllib import request as rq",
+                     "import re, sys as s", "import subprocess", "x = open('/proc/self/environ')", "x = getattr(re, 'a')",
+                     "x = re.__class__", "x = eval('1')", "x = urllib.request", "x = __builtins__", "from .. import fetch"]:
+            self.assertEqual(len(T.guard_code("x.py", before, before + line + "\n")), 1, line)
+        self.assertIn("does not parse", T.guard_code("x.py", before, "def (:\n")[0])
+        # what the file already did is not held against the repair
+        self.assertEqual(T.guard_code("x.py", "import os\n", "import os\nimport re\n"), [])
 
 
 WHO = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@t", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@t"}
@@ -125,8 +126,10 @@ class RunTest(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def write(self, path, text):
-        with open(os.path.join(self.root, path), "w") as f:
+    def write(self, path, text, root=None):
+        path = os.path.join(root or self.root, path)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w") as f:
             f.write(text)
 
     def check(self, slug, root=None):
@@ -136,33 +139,39 @@ class RunTest(unittest.TestCase):
     def run_with(self, agent):
         return T.run(self.root, log=self.logs.append, check=self.check, agent=agent, today=TODAY)
 
+    def dirty(self):
+        out = subprocess.run(["git", "status", "--porcelain", "--untracked-files=all"], cwd=self.root, capture_output=True, text=True)
+        return out.stdout.splitlines()
+
     def log_of(self):
         return subprocess.run(["git", "log", "--format=%s"], cwd=self.root, capture_output=True, text=True).stdout.split("\n")
 
     def test_repair_is_committed_and_a_bad_one_thrown_away(self):
         def agent(source, entry, root):
             if source["slug"] == "cigale":   # a real repair
-                self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['fixed']\n")
-                self.write(".troubleshoot/cigale.md", "The markup changed: shows are now <article> blocks.\n\nCheck: 18 events.")
+                self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['fixed']\n", root=root)
+                self.write(".troubleshoot/cigale.md", "The markup changed: shows are now <article> blocks.\n\nCheck: 18 events.", root=root)
                 self.counts["cigale"] = 18
             else:                            # repairs java by editing what it must not
-                self.write("livemusic/pipeline.py", "X = 2\n")
+                self.write("livemusic/pipeline.py", "X = 2\n", root=root)
                 self.write("venues.json", json.dumps([dict(v, url="https://java.fr/agenda") if v["slug"] == "java" else v
-                                                      for v in self.venues], indent=1))
+                                                      for v in self.venues], indent=1), root=root)
                 self.counts["java"] = 9
             return True, "done"
 
-        os.makedirs(os.path.join(self.root, ".troubleshoot"))
+        self.write("notes.txt", "mine, untracked")
         report = self.run_with(agent)
         self.assertEqual([(x["slug"], x["count"], x["summary"]) for x in report["fixed"]],
                          [("cigale", 18, "The markup changed: shows are now <article> blocks.")])
         self.assertEqual(report["fixed"][0]["files"], ["livemusic/sources/venues_html.py"])
         self.assertEqual([(x["slug"], x["problems"]) for x in report["unresolved"]],
                          [("java", ["livemusic/pipeline.py: not a file the agent may change"])])
-        self.assertIn("java.fr/agenda", report["unresolved"][0]["diff"])
+        with open(os.path.join(self.root, "venues.json")) as f:
+            self.assertNotIn("agenda", f.read())
+        self.assertIn("+  \"url\": \"https://java.fr/agenda\"", report["unresolved"][0]["diff"])
         self.assertEqual(self.log_of()[:2], ["Auto-fix cigale: The markup changed: shows are now <article> blocks.", "init"])
-        # nothing of the refused repair is left, the state is kept for the next steps
-        self.assertEqual(T.changed_files(self.root), ["data/troubleshoot.json"])
+        # nothing of the refused repair is left; the state and what was lying around are kept
+        self.assertEqual(self.dirty(), ["?? data/troubleshoot.json", "?? notes.txt"])
         state = T.load_state(os.path.join(self.root, "data/troubleshoot.json"))
         self.assertEqual(state["sources"]["java"]["days"], ["2026-09-27"])
         self.assertEqual(state["last"]["date"], "2026-09-27")
@@ -174,19 +183,32 @@ class RunTest(unittest.TestCase):
 
     def test_refusals(self):
         def implausible(source, entry, root):
-            self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['nav links']\n")
+            self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['nav links']\n", root=root)
             self.counts[source["slug"]] = 2
             return True, ""
 
         def breaks_a_neighbour(source, entry, root):
-            self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['x']\n")
+            self.write("livemusic/sources/venues_html.py", "def cigale(v, ctx):\n    return ['x']\n", root=root)
             self.counts.update({source["slug"]: 20, "trianon": 0})
             return True, ""
 
         def reads_the_environment(source, entry, root):
-            self.write("livemusic/sources/venues_html.py", "import os\n\n\ndef cigale(v, ctx):\n    return [os.environ]\n")
+            self.write("livemusic/sources/venues_html.py", "import os\n\n\ndef cigale(v, ctx):\n    return [os.environ]\n", root=root)
+            self.write("tests/__pycache__/x.pyc", "bytecode", root=root)
             self.counts[source["slug"]] = 20
             return True, ""
+
+        def new_file(source, entry, root):
+            self.write("livemusic/sources/mine.py", "X = 1\n", root=root)
+            return True, ""
+
+        def link(source, entry, root):
+            os.remove(os.path.join(root, "venues.json"))
+            os.symlink("/etc/hosts", os.path.join(root, "venues.json"))
+            return True, ""
+
+        def crash(source, entry, root):
+            raise RuntimeError("boom")
 
         def nothing(source, entry, root):
             return True, "The venue closed for good."
@@ -197,6 +219,9 @@ class RunTest(unittest.TestCase):
         for agent, expected in [(implausible, "implausible result: 2 events against 20"),
                                 (breaks_a_neighbour, "Trianon worked this morning (30 events) and now gives 0"),
                                 (reads_the_environment, "is not allowed in a parser"),
+                                (new_file, "livemusic/sources/mine.py: not a file the agent may change"),
+                                (link, "venues.json: a symbolic link"),
+                                (crash, "the troubleshooting program failed: RuntimeError('boom')"),
                                 (nothing, "the agent changed nothing")]:
             self.counts.update({"cigale": 0, "trianon": 30})
             if os.path.exists(os.path.join(self.root, "data/troubleshoot.json")):
@@ -204,7 +229,7 @@ class RunTest(unittest.TestCase):
             report = self.run_with(agent)
             self.assertEqual(report["fixed"], [], agent.__name__)
             self.assertIn(expected, report["unresolved"][0]["problems"][0])
-            self.assertEqual(T.changed_files(self.root), ["data/troubleshoot.json"])
+            self.assertEqual(self.dirty(), ["?? data/troubleshoot.json"])
             self.assertEqual(self.log_of()[0], "status")
         self.assertEqual(report["unresolved"][0]["notes"], "The venue closed for good.")
 

@@ -71,11 +71,12 @@ updates its sources and leaves the others as they were.
   change repairs: they are reported, not "fixed";
 - each other source (5 a day at most, 3 days in a row at most) is first checked again (`scrape.py --check
   <slug>`: a site that was down at 6 am often works at 7), then handed to Claude Code, headless, with a
-  restricted set of tools;
+  restricted set of tools, in a copy of the repository without `.git`;
 - what the agent changed is judged by the program, not by the agent: only `venues.json` (the entry of that
-  source) and `livemusic/sources/*.py` (never `llm.py` / `opendata.py`), no code that reads the environment,
-  opens files or talks to the network by itself, the tests pass, the source gives a number of events between
-  30 % and 4× its last good count, and the healthy sources of the files it touched are still healthy;
+  source) and the hand parsers `livemusic/sources/venues_html.py` / `tribe.py` (a new parser or strategy is
+  for a human), no import outside a short list and no `eval` / `open` / `getattr` in a parser, the tests
+  pass, the source gives a number of events between 30 % and 4× its last good count, the healthy sources
+  of the parsers it touched are still healthy, and HEAD, the git configuration and the hooks did not move;
 - a repair that passes is a local commit `Auto-fix <slug>: …`; a repair that does not is thrown away.
 
 `python -m livemusic.troubleshoot finish` then scrapes the repaired sources again (`scrape.py --only … --patch`

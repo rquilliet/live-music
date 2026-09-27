@@ -89,6 +89,8 @@ def run(only=None, use_llm=True, players=True, log=print, patch=False):
         report.append(entry)
 
     if patch and only:
+        if not previous.get("events"):   # nothing to keep: writing would leave the patched sources alone in the programme
+            raise SystemExit("patch run: no previous events.json to patch, run a full scrape")
         rest = [d for d in previous.get("events", [])
                 if d.get("date", "") >= today.isoformat() and not any(_from_source(d, v) for v in todo)]
         events.extend(Event(**{k: d[k] for k in d if k in _EVENT_FIELDS}) for d in rest)
