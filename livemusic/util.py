@@ -81,6 +81,7 @@ _LINEUP_NOISE = re.compile(r"^(?:complet|sold ?out|annul[ée]e?|report[ée]e?|no
 _DECOR = [
     re.compile(r"\s*\([^)]*\)"),                                  # (côté Records), (1er soir), (release party)
     re.compile(r"^#\w+\s+(?:(?:de|by|with|avec)\.{0,3}\s+)?"),     # #JazzDeDemain …, #LaJamDuLundi de …, #LaPetiteHeure by... …
+    re.compile(r"\s+\W*release party\b.*$", re.I),                # … Release Party "Megalostrata", … [Release Party] (REM-75)
     re.compile(r"\s+en concert\b.*$", re.I),                       # … en concert au 38Riv Jazz Club
     re.compile(r"\s+(?:au|à la|à l'|at the|at)\s+(?=[A-Z0-9]).*$"),   # … au Sunset, at the Olympia
 ]
