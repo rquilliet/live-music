@@ -1,5 +1,6 @@
 """Hand-written parsers for venue websites that publish their programme as HTML."""
 import datetime as dt
+import json
 import re
 import urllib.parse
 
@@ -354,12 +355,66 @@ def dernierbar(venue, ctx):
 # ------------------------------------------------------------------ Bal Chavaux (Drupal view, ?page=N for the rest)
 
 _BC_NOT_MUSIC = {"atelier", "theatre", "danse", "cabaret", "performance"}
+# a link to an event at a ticket seller, not to an artist's or a collective's page there ("ra.co/dj/…")
+_BC_SELLER = re.compile(r'href="(https?://(?:www\.)?(?:(?:dice\.fm|shotgun\.live|ra\.co|helloasso\.com|yurplan\.com)/'
+                        r'(?:[^"]*/)?(?:events?|evenements)/|eventbrite\.[a-z]+/e/|(?:my\.)?weezevent\.com/|'
+                        r'billetweb\.fr/|fnacspectacles\.com/|seetickets\.com/|ticketmaster\.fr/)[^"]+)"', re.I)
+_BC_FREE = re.compile(r"\b(entree libre|prix libre|participation libre|gratuit)", re.I)
+
+
+def _bc_amount(x):
+    return "%.2f" % x if x % 1 else str(int(x))
+
+
+def _bc_details(url):
+    """Ticket link, price and text of one event page. The prices are in the JSON-LD offers ('Prévente' 32,
+    'Sur place' 35, 'Exonéré' 0); the tickets are sold on the page itself unless the text links Dice, Shotgun…"""
+    html = get(url, retries=0)
+    ld = {}
+    for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+        try:
+            d = json.loads(raw)
+        except ValueError:
+            continue
+        if isinstance(d, dict) and d.get("@type") == "Event":
+            ld = d
+            break
+    offers = ld.get("offers")
+    offers = [o for o in (offers if isinstance(offers, list) else [offers]) if isinstance(o, dict)]
+    for o in offers:
+        try:
+            o["price"] = float(o.get("price"))
+        except (TypeError, ValueError):
+            o["price"] = None
+    paid = sorted({o["price"] for o in offers if o["price"]})
+    out = {"free": ld.get("isAccessibleForFree") is True}
+    if paid:
+        out["price"] = "–".join(_bc_amount(x) for x in sorted({paid[0], paid[-1]})) + " €"
+    text = _first(r'<div class="[^"]*\bfield--name-field-texte\b[^"]*">(.*?)(?:<div class="paragraph |</main>|<footer|$)',
+                  html) or ""
+    seller = _first(_BC_SELLER, text, flags=0)
+    if seller or offers:
+        out["ticket_url"] = seller or url
+    sold = [o for o in offers if o["price"]] or offers   # the 'Exonéré' offer at 0 stays in stock
+    if sold and all("SoldOut" in str(o.get("availability")) for o in sold):
+        out["sold_out"] = True
+    # the venue's text, without the lines that only point to the ticket seller
+    paras = [clean_text(p) for p in re.findall(r"<p[^>]*>(.*?)</p>", text, re.S) if not _BC_SELLER.search(p)]
+    if not paid and not out["free"]:   # 'PRIX LIBRE' offer at 0, or a first line 'Entrée libre / 10€ conseillé'
+        named = [clean_text(str(o.get("name"))).capitalize() for o in offers
+                 if _BC_FREE.search(strip_accents(str(o.get("name"))))]
+        first = [p for p in paras[:1] if len(p) <= 60 and _BC_FREE.search(strip_accents(p))]
+        if first or named:
+            out["price"], out["free"] = (first or named)[0], True
+            paras = paras[len(first):]
+    out["description"] = " ".join(p for p in paras if len(p) > 12)[:400] or None
+    return out
 
 
 def balchavaux(venue, ctx):
     """Cards with the date in data-day / data-month / data-year, '• 19:30 > 23:30', categories 'Jazz / Rock'
     and a status badge (full, canceled). The first page holds 24 cards, the next one ('Afficher plus') the rest."""
-    events, seen = [], set()
+    events, seen, down = [], set(), 0
     url = venue["url"]
     for _ in range(6):
         html = get(url)
@@ -380,12 +435,20 @@ def balchavaux(venue, ctx):
             if is_music:   # "Concert / Danse" is a concert: the pipeline must not read "danse" in it
                 cats = [c for c in cats if c not in off]
             status = _first(r'data-status-key="([^"]*)"', b) or ""
+            more = {}
+            if link and date >= ctx["today"].isoformat() and down < 3:   # event pages down: the cards are enough
+                try:
+                    more, down = _bc_details(link), 0
+                except FetchError:
+                    down += 1
             events.append(Event(
                 title=title, date=date, time=parse_time(_first(r'evt-date-hour">(.*?)<', b) or ""),
                 venue=venue["name"], venue_slug=venue["slug"], source="balchavaux", url=link,
                 raw_genre=", ".join(cats) or None, image=_abs(venue["url"], _first(r'<noscript>\s*<img src="([^"]+)"', b)),
-                description=" — ".join(x for x in heads[:-1] + [sub] if x) or None,
-                sold_out=status == "full", cancelled=status == "canceled", is_music=is_music,
+                description=" — ".join(x for x in heads[:-1] + [sub, more.get("description")] if x) or None,
+                sold_out=status == "full" or bool(more.get("sold_out")), cancelled=status == "canceled",
+                ticket_url=None if status == "canceled" else more.get("ticket_url"),
+                price=more.get("price"), free=bool(more.get("free")), is_music=is_music,
             ))
         nxt = _first(r'href="(\?page=\d+)"', _first(r'(<a\b[^>]*rel="next"[^>]*>)', html) or "")
         if not nxt:
