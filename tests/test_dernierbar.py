@@ -48,5 +48,16 @@ class ManualTest(unittest.TestCase):
         self.assertTrue(got and all(e.source == "manual" and e.date[:2] == "20" for e in got))
 
 
+class GeoMatchTest(unittest.TestCase):
+    def test_bar_next_to_a_theatre_does_not_take_its_events(self):
+        from livemusic import pipeline
+        from livemusic.model import Event
+        venues = pipeline.load_venues()
+        e = Event(title="Orchestre Français des Jeunes", date="2026-10-10", venue="Théâtre du Châtelet",
+                  venue_slug="theatre-du-chatelet", source="opendata", lat=48.8578, lon=2.3469)
+        pipeline.canonical_venue(e, venues)
+        self.assertEqual(e.venue, "Théâtre du Châtelet")
+
+
 if __name__ == "__main__":
     unittest.main()
