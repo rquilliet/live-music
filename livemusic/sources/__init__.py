@@ -1,5 +1,5 @@
 """Source registry: strategy name -> scraper function(venue_config, ctx) -> list[Event]."""
-from . import opendata, tribe, venues_html, llm
+from . import opendata, tribe, venues_html, llm, manual
 
 STRATEGIES = {
     "opendata": opendata.scrape,
@@ -15,5 +15,7 @@ STRATEGIES = {
     "newmorning": venues_html.newmorning,
     "instantschavires": venues_html.instantschavires,
     "boulenoire": venues_html.boulenoire,
+    "dernierbar": venues_html.dernierbar,
+    "manual": manual.scrape,
     "llm": llm.scrape,
 }

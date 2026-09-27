@@ -5,7 +5,7 @@ import urllib.parse
 
 from ..fetch import get, FetchError
 from ..model import Event
-from ..util import clean_text, parse_fr_date, parse_time, parse_price, strip_accents, FR_MONTHS, infer_year
+from ..util import clean_text, html_to_text, parse_fr_date, parse_time, parse_price, strip_accents, FR_MONTHS, infer_year
 
 
 def _abs(base, href):
@@ -295,4 +295,57 @@ def newmorning(venue, ctx):
             continue
         events.append(Event(title=title, date=date, venue=venue["name"], venue_slug=venue["slug"], source="newmorning",
                             url=url, price=(price + " €") if price else None, description=desc, image=img))
+    return events
+
+
+# ------------------------------------------------------------------ Dernier Bar avant la Fin du Monde (monthly post)
+
+_DB_DAY = re.compile(r"^\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\s+(\d{1,2}(?:er)?\s+[^\W\d]+)\s*(?:[—–-]\s*(.*))?$", re.I)
+_DB_TIME = re.compile(r"(?:(?:a|à) partir de|dès|des|de)?\s*\b\d{1,2}\s*h\s*(?:\d{2})?(?:\s*(?:a|à|-|–)\s*\d{1,2}\s*h\s*(?:\d{2})?)?", re.I)
+_DB_MUSIC = re.compile(r"\b(jam|concerts?|live band|dj set|dj|recital|chorale|fanfare)\b")
+_WEEKDAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+
+def _db_date(weekday, day_month, today):
+    """'20 septembre' + 'dimanche' -> the year where that day is a Sunday (the post gives no year, and an old
+    post left online must not roll over to next year)."""
+    iso = parse_fr_date(day_month, today)
+    if not iso:
+        return None
+    d = dt.date.fromisoformat(iso)
+    for year in (d.year, d.year - 1, d.year + 1):
+        try:
+            c = d.replace(year=year)
+        except ValueError:
+            continue
+        if _WEEKDAYS[c.weekday()] == weekday.lower() and (c - today).days >= -45:
+            return c.isoformat()
+    return None
+
+
+def dernierbar(venue, ctx):
+    """A geek bar's monthly programme, one text post: '🎸 DIMANCHE 20 SEPTEMBRE — 17H00' / 'LA JAM SESSION' /
+    one line of description. The date line sometimes carries the title too ('— LEVEL UP EST DE RETOUR !').
+    Most nights are quizzes and board games: only jams / concerts count as music."""
+    lines = html_to_text(get(venue["url"])).split("\n")
+    events, seen = [], set()
+    for i, line in enumerate(lines):
+        m = _DB_DAY.match(line)
+        if not m:
+            continue
+        date = _db_date(m.group(1), m.group(2), ctx["today"])
+        rest = m.group(3) or ""
+        time = parse_time(rest)
+        inline = _DB_TIME.sub(" ", rest).strip(" —–-!:,")
+        nxt = [ln for ln in lines[i + 1:i + 3] if not _DB_DAY.match(ln)] + ["", ""]
+        title, desc = (inline, nxt[0]) if re.search(r"[^\W\d]", inline) else nxt[:2]
+        title = clean_text(title).strip(" !")
+        if not date or not title or (date, title) in seen:   # the post is sometimes pasted twice
+            continue
+        seen.add((date, title))
+        text = strip_accents(f"{title} {desc}".lower())
+        shouty = sum(c.isupper() for c in title) > sum(c.islower() for c in title)
+        events.append(Event(title=title.title() if shouty else title, date=date, time=time,
+                            venue=venue["name"], venue_slug=venue["slug"], source="dernierbar", url=venue["url"],
+                            description=re.sub(r"^\W+", "", clean_text(desc)) or None, is_music=bool(_DB_MUSIC.search(text))))
     return events

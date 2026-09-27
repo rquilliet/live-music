@@ -58,7 +58,8 @@ Settings → Pages once.
 The end of every run lists the venues whose own site yielded fewer than 3 events (`low coverage`): that is
 almost always a programme page rendered by JavaScript or a URL that moved, not an empty programme. Venues
 whose programme only lives on Facebook / Instagram / Shotgun (`"strategy": "none"` with a `note` in
-`venues.json`) are covered by the open data feed only.
+`venues.json`) are covered by the open data feed only, or get `"strategy": "manual"`: their dates are kept by
+hand in `manual_events.json` (venue slug -> list of `{title, date, time?, price?, url?}`).
 
 ## Adding a venue
 
