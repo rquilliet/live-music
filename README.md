@@ -59,8 +59,8 @@ Every run ends by writing `web/status.json` (`livemusic/status.py`): one entry p
 (`ok`, `low` under 3 events, `failed`), today's count against the count of its last success, the reason of
 a failure (HTTP error, parser exception, Claude API error, "0 events parsed"), "failing since", and 14 days
 of history, and what Claude cost that day (`livemusic/usage.py`: the scrape's calls per step, plus the
-troubleshooting agent). `web/status.html` shows it (`/status.html` on the site, linked from the failed-sources note at
-the bottom of the programme), with a link to the GitHub Actions log of the run. A run on a subset (`--only`)
+troubleshooting agent). `web/status/` shows it (`/status/` on the site: a back-office page, not linked from the programme
+and with no link to it), with a link to the GitHub Actions log of the run. A run on a subset (`--only`)
 updates its sources and leaves the others as they were.
 
 ## Troubleshooting agent
