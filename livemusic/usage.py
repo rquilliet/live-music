@@ -29,6 +29,16 @@ def cost(model: str, t, batch: bool) -> float:
     return dollars / 2 if batch else dollars
 
 
+def totals() -> dict:
+    """The same figures for the status page: {"usd", "steps": [{"what", "model", "batch", "calls", "tokens_in",
+    "tokens_out", "usd"}]}."""
+    steps = [{"what": what, "model": model, "batch": batch, "calls": t["calls"],
+              "tokens_in": t["input_tokens"] + t["cache_read_input_tokens"] + t["cache_creation_input_tokens"],
+              "tokens_out": t["output_tokens"], "usd": round(cost(model, t, batch), 4)}
+             for (what, model, batch), t in sorted(_totals.items())]
+    return {"usd": round(sum(s["usd"] for s in steps), 4), "steps": steps}
+
+
 def summary() -> list:
     """One log line per (label, model, batch) plus a total, or [] when Claude was not called."""
     lines, total = [], 0.0
