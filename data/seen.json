@@ -11587,6 +11587,22 @@
 "7c7444a74443": {
 "first_seen": "2026-09-27",
 "date": "2027-01-25"
+},
+"e8b9a24b96ee": {
+"first_seen": "baseline",
+"date": "2026-09-27"
+},
+"e2fabbd09311": {
+"first_seen": "baseline",
+"date": "2026-10-18"
+},
+"3d6f27410c76": {
+"first_seen": "baseline",
+"date": "2026-10-31"
+},
+"b1fd00ec826a": {
+"first_seen": "baseline",
+"date": "2026-11-27"
 }
 },
 "venues": [
@@ -11594,6 +11610,7 @@
 "boulenoire:la-boule-noire",
 "cafedeladanse:cafe-de-la-danse",
 "cigale:la-cigale",
+"dernierbar:dernier-bar-avant-la-fin-du-monde",
 "hasardludique:le-hasard-ludique",
 "instantschavires:instants-chavires",
 "llm:accor-arena",
@@ -11635,6 +11652,7 @@
 "llm:popup",
 "llm:studio-de-l-ermitage",
 "llm:zenith-paris",
+"manual:la-pointe-lafayette",
 "maroquinerie:la-maroquinerie",
 "newmorning:new-morning",
 "opendata:211",
@@ -11702,6 +11720,7 @@
 "opendata:conservatoire-municipal-nadia-et-lili-boulanger",
 "opendata:conservatoire-municipal-w-a-mozart-centre",
 "opendata:conservatoire-slave-de-musique",
+"opendata:dernier-bar-avant-la-fin-du-monde",
 "opendata:eglise-de-la-madeleine",
 "opendata:eglise-notre-dame-de-la-salette",
 "opendata:eglise-notre-dame-des-blancs-manteaux",
@@ -11864,7 +11883,7 @@
 "tribe:supersonic"
 ],
 "counts": {
-"Paris open data (Que faire \u00e0 Paris ?)": 933,
+"Paris open data (Que faire \u00e0 Paris ?)": 921,
 "Le Bataclan": 44,
 "La Cigale": 72,
 "Le Trianon": 35,
@@ -11901,7 +11920,7 @@
 "La Clef": 0,
 "Les Disquaires": 0,
 "FGO-Barbara": 25,
-"La Boule Noire": 76,
+"La Boule Noire": 75,
 "Plenitude Arena": 17,
 "Le Trabendo": 54,
 "La Station - Gare des Mines": 16,
@@ -11921,6 +11940,29 @@
 "PopUp!": 55,
 "Le Truskel": 4,
 "Nouveau Casino": 32,
-"La G\u00e9n\u00e9rale": 18
+"La G\u00e9n\u00e9rale": 18,
+"Dernier Bar avant la Fin du Monde": 1,
+"La Pointe Lafayette": 3
+},
+"last_ok": {
+"Paris open data (Que faire \u00e0 Paris ?)": "2026-09-27",
+"Le Bataclan": "2026-09-27",
+"La Cigale": "2026-09-27",
+"La Boule Noire": "2026-09-27",
+"Le Trianon": "2026-09-27",
+"\u00c9lys\u00e9e Montmartre": "2026-09-27",
+"La Maroquinerie": "2026-09-27",
+"Petit Bain": "2026-09-27",
+"Point \u00c9ph\u00e9m\u00e8re": "2026-09-27",
+"Caf\u00e9 de la Danse": "2026-09-27",
+"Le Hasard Ludique": "2026-09-27",
+"New Morning": "2026-09-27",
+"Instants Chavir\u00e9s": "2026-09-27",
+"Supersonic": "2026-09-27",
+"Dernier Bar avant la Fin du Monde": "2026-09-27",
+"La Pointe Lafayette": "2026-09-27",
+"Sunset / Sunside": "2026-09-27",
+"Le Grand Rex": "2026-09-27",
+"Philharmonie de Paris": "2026-09-27"
 }
 }

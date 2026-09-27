@@ -266,7 +266,7 @@
   const yearOf = m => m.slice(0, 4) !== String(today0().getFullYear()) ? " " + m.slice(0, 4) : "";   // the year only when it is not this one
   function renderNav() {
     $("#months").innerHTML = months.map(m => `<button type="button" data-m="${m}">${MONTHS_SHORT[+m.slice(5) - 1]}${yearOf(m)}</button>`).join("");
-    spy();
+    spyCur = null; spy();
   }
   let spyRaf = 0;
   function spy() {
@@ -275,6 +275,24 @@
     $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().top <= line) cur = h.dataset.m; });
     $("#weeklabel").innerHTML = cur ? `${MONTHS[+cur.slice(5) - 1]}<small>${cur.slice(0, 4)}</small>` : "Coming up";
     $$("#months button").forEach(b => { b.classList.toggle("on", b.dataset.m === cur); b.setAttribute("aria-current", b.dataset.m === cur ? "true" : "false"); });
+    if (cur !== spyCur) { spyCur = cur; showMonth(); }
+  }
+  // The row scrolls sideways once the programme runs past a dozen months (REM-50): keep the month in view visible and
+  // fade the edge that hides more buttons.
+  let spyCur = null;
+  function showMonth() {
+    const row = $("#months"), b = $("#months .on");
+    if (b) {
+      const l = b.offsetLeft - row.offsetLeft, pad = 32;
+      if (l < row.scrollLeft + pad) row.scrollLeft = Math.max(0, l - pad);
+      else if (l + b.offsetWidth > row.scrollLeft + row.clientWidth - pad) row.scrollLeft = l + b.offsetWidth - row.clientWidth + pad;
+    }
+    fadeMonths();
+  }
+  function fadeMonths() {
+    const row = $("#months");
+    row.classList.toggle("fl", row.scrollLeft > 1);
+    row.classList.toggle("fr", row.scrollLeft + row.clientWidth < row.scrollWidth - 1);
   }
   function jumpMonth(m) {
     const h = $$(".monthhead").find(x => x.dataset.m === m); if (!h) return;
@@ -1245,6 +1263,8 @@
   }
 
   // ------------------------------------------------------------ events
+  $("#months").onscroll = fadeMonths;
+  addEventListener("resize", fadeMonths);
   $("#months").onclick = ev => { const b = ev.target.closest("[data-m]"); if (b) jumpMonth(b.dataset.m); };
   // The day headers stick right under the strip, whose height changes with the width (the month buttons wrap on phones).
   new ResizeObserver(() => document.documentElement.style.setProperty("--navh", $(".weeknav").offsetHeight + "px")).observe($(".weeknav"));

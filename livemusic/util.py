@@ -117,8 +117,14 @@ def event_id(venue_slug: str, date: str, title: str) -> str:
     return hashlib.sha1(key.encode()).hexdigest()[:12]
 
 
-def infer_year(month: int, day: int, today: dt.date = None) -> int:
-    """Pick the year so that (month, day) is not more than ~45 days in the past."""
+YEAR_GUESS_DAYS = 180   # a year-less date only rolls over to next year if that lands within this many days
+
+
+def infer_year(month: int, day: int, today: dt.date = None, window_days: int = YEAR_GUESS_DAYS) -> int:
+    """Pick the year so that (month, day) is not more than ~45 days in the past, rolling over to next year
+    only within window_days: a page still listing a show from three months ago must not turn it into next
+    year's concert (the old 120-day horizon hid this; REM-50 keeps two years). Beyond, the date stays in the
+    past and the pipeline drops it."""
     today = today or dt.date.today()
     for year in (today.year, today.year + 1):
         try:
@@ -126,8 +132,8 @@ def infer_year(month: int, day: int, today: dt.date = None) -> int:
         except ValueError:
             continue
         if (d - today).days >= -45:
-            return year
-    return today.year + 1
+            return year if year == today.year or (d - today).days <= window_days else today.year
+    return today.year
 
 
 def parse_fr_date(s: str, today: dt.date = None) -> str:

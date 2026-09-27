@@ -15,7 +15,7 @@ from . import summaries as S
 from .fetch import FetchError
 from .model import Event
 from .sources import STRATEGIES
-from .util import norm_title, slugify, split_lineup, strip_accents
+from .util import YEAR_GUESS_DAYS, norm_title, slugify, split_lineup, strip_accents
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -24,7 +24,8 @@ SEEN_PATH = os.path.join(DATA, "seen.json")
 GENRE_CACHE = os.path.join(DATA, "genre_cache.json")
 PLAYER_CACHE = os.path.join(DATA, "player_cache.json")
 OUT_PATH = os.path.join(WEB, "events.json")
-HORIZON_DAYS = 120
+HORIZON_DAYS = 730   # keep every announced concert: venues rarely sell more than a year ahead, this only drops typos
+OLD_HORIZON_DAYS = 120   # seen.json files written before REM-50 only know events this far ahead
 NEW_WINDOW_DAYS = 7
 RENAME_DAYS = 3        # a show renamed after a gap longer than this counts as a new one
 STALE_MAX_DAYS = 14   # a source failing longer than this loses its carried-over events (closed venue, dead site)
@@ -56,7 +57,7 @@ def run(only=None, use_llm=True, players=True, log=print):
         plain(f"[{int(time.time() - started) // 60:02d}:{int(time.time() - started) % 60:02d}] {msg}")
 
     today = today_paris()
-    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log}
+    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "year_guess_days": YEAR_GUESS_DAYS, "log": log}
     venues = load_venues()
     by_slug = {v["slug"]: v for v in venues}
     state = load_state()
@@ -359,8 +360,8 @@ def load_state():
     """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date,
     "venue": slug, "last": date last scraped}},
     "venues": [slugs ever scraped], "counts": {venue name: events last time it succeeded},
-    "last_ok": {venue name: date of its last successful scrape}}."""
-    state = {"ids": {}, "venues": [], "counts": {}, "last_ok": {}}
+    "last_ok": {venue name: date of its last successful scrape}, "horizon": days ahead it covered}."""
+    state = {"ids": {}, "venues": [], "counts": {}, "last_ok": {}, "horizon": HORIZON_DAYS}
     if os.path.exists(SEEN_PATH):
         with open(SEEN_PATH, "r", encoding="utf-8") as f:
             saved = json.load(f)
@@ -371,6 +372,7 @@ def load_state():
             state["venues"] = saved.get("venues", [])
             state["counts"] = saved.get("counts", {})
             state["last_ok"] = saved.get("last_ok", {})
+            state["horizon"] = saved.get("horizon", OLD_HORIZON_DAYS)
         else:  # very first format: flat id -> date
             state["ids"] = {k: {"first_seen": v, "date": "9999-12-31"} for k, v in saved.items()}
     return state
@@ -386,9 +388,13 @@ def track_seen(events, today, state, report):
     * A venue editing a title ("Trio" -> "Trio feat. X") changes the id. When exactly one id seen in the
       last RENAME_DAYS days vanished and exactly one new id appeared at the same venue and date, the
       new one is the renamed show and inherits its first_seen instead of being "new".
+    * Events beyond the horizon seen.json was written with (120 days before REM-50) were never
+      candidates: the first run with a longer horizon baselines them rather than flagging months of
+      concerts as newly announced.
     """
     ids, known = state["ids"], set(state["venues"])
     stamp = today.isoformat()
+    reach = (today + dt.timedelta(days=state["horizon"])).isoformat()
     recent = (today - dt.timedelta(days=RENAME_DAYS)).isoformat()
     gone, added = defaultdict(list), defaultdict(list)
     current = {e.id for e in events}
@@ -402,7 +408,10 @@ def track_seen(events, today, state, report):
         key = f"{e.source}:{e.venue_slug}"
         if e.id not in ids:
             old, new = gone.get((e.venue_slug, e.date), []), added[e.venue_slug, e.date]
-            first = ids.pop(old[0])["first_seen"] if len(old) == 1 and len(new) == 1 else stamp if key in known else "baseline"
+            if len(old) == 1 and len(new) == 1:
+                first = ids.pop(old[0])["first_seen"]
+            else:
+                first = stamp if key in known and e.date <= reach else "baseline"
             ids[e.id] = {"first_seen": first}
         ids[e.id].update(date=e.date, venue=e.venue_slug, last=stamp)
     cutoff = today.isoformat()
@@ -415,5 +424,5 @@ def track_seen(events, today, state, report):
     venues = sorted(known | {f"{e.source}:{e.venue_slug}" for e in events})
     os.makedirs(DATA, exist_ok=True)
     with open(SEEN_PATH, "w", encoding="utf-8") as f:
-        json.dump({"ids": ids, "venues": venues, "counts": counts, "last_ok": last_ok}, f, indent=0)
+        json.dump({"ids": ids, "venues": venues, "counts": counts, "last_ok": last_ok, "horizon": HORIZON_DAYS}, f, indent=0)
     return {k: v["first_seen"] for k, v in ids.items()}

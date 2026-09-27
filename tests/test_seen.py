@@ -16,7 +16,7 @@ def ev(title, date="2026-10-10", slug="le-trabendo", source="llm"):
 
 class TrackSeenTest(unittest.TestCase):
     def track(self, events, ids, venues=("llm:le-trabendo",)):
-        state = {"ids": ids, "venues": list(venues), "counts": {}, "last_ok": {}}
+        state = {"ids": ids, "venues": list(venues), "counts": {}, "last_ok": {}, "horizon": pipeline.HORIZON_DAYS}
         with tempfile.TemporaryDirectory() as tmp, \
                 mock.patch.multiple(pipeline, SEEN_PATH=os.path.join(tmp, "seen.json"), DATA=tmp):
             return pipeline.track_seen(events, TODAY, state, [])
