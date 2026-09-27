@@ -254,12 +254,11 @@
   }
 
   // ------------------------------------------------------------ rendering
-  // The sticky strip (REM-35): the month in view as the big label, the total, and one button per month of the programme
-  // that scrolls to its heading. spy() keeps the label and the active button in step with the scroll position.
+  // The sticky strip (REM-35): one button per month of the programme that scrolls to its heading. spy() keeps the
+  // active button in step with the scroll position.
   let months = [];   // "YYYY-MM" keys of the months listed, in order (set by renderList)
   const yearOf = m => m.slice(0, 4) !== String(today0().getFullYear()) ? " " + m.slice(0, 4) : "";   // the year only when it is not this one
   function renderNav() {
-    $("#weekcount").textContent = plural(visible().length, "concert");
     $("#months").innerHTML = months.map(m => `<button type="button" data-m="${m}">${MONTHS_SHORT[+m.slice(5) - 1]}${yearOf(m)}</button>`).join("");
     spy();
   }
@@ -268,7 +267,6 @@
     const line = $(".weeknav").getBoundingClientRect().bottom + 2;
     let cur = months[0] || "";
     $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().top <= line) cur = h.dataset.m; });
-    $("#weeklabel").textContent = cur ? MONTHS[+cur.slice(5) - 1] + yearOf(cur) : "Coming up";
     $$("#months button").forEach(b => { b.classList.toggle("on", b.dataset.m === cur); b.setAttribute("aria-current", b.dataset.m === cur ? "true" : "false"); });
   }
   function jumpMonth(m) {
@@ -419,16 +417,14 @@
     const [from, to] = range();
     let html = "";
     const weekOf = e => isoDate(monday(parseISO(e.date))), monthOf = w => isoDate(addDays(parseISO(w), 3)).slice(0, 7);
-    const perWeek = {}, perMonth = {};
-    evs.forEach(e => { const w = weekOf(e), m = monthOf(w); perWeek[w] = (perWeek[w] || 0) + 1; perMonth[m] = (perMonth[m] || 0) + 1; });
-    const mondays = Object.keys(perWeek).sort();
+    const mondays = [...new Set(evs.map(weekOf))].sort();
     months = [...new Set(mondays.map(monthOf))];
     if (!mondays.length) html += `<div class="empty">${state.myArtists ? "No concert by your artists for now." : state.myVenues && !favVenues.length ? "Add venues with ★ on a concert or on a venue chip." : "Nothing for these filters."}</div>`;
     let lastMonth = "";
     for (const w of mondays) {
       const m = monthOf(w);
-      if (m !== lastMonth) { lastMonth = m; html += `<h2 class="monthhead" data-m="${m}" id="m-${m}">${MONTHS[+m.slice(5) - 1]}<small>${m.slice(0, 4)}</small><em>${plural(perMonth[m], "concert")}</em></h2>`; }
-      html += `<h3 class="weekhead">${weekLabel(parseISO(w), MOBILE.matches)}<em>${plural(perWeek[w], "concert")}</em></h3>` + weekGrid(parseISO(w), byDay, { today, from, to });
+      if (m !== lastMonth) { lastMonth = m; html += `<h2 class="monthhead" data-m="${m}" id="m-${m}">${MONTHS[+m.slice(5) - 1]}<small>${m.slice(0, 4)}</small></h2>`; }
+      html += `<h3 class="weekhead">${weekLabel(parseISO(w), MOBILE.matches)}</h3>` + weekGrid(parseISO(w), byDay, { today, from, to });
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
