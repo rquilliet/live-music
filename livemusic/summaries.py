@@ -13,6 +13,7 @@ import os
 import re
 from typing import Dict, Iterable, List, Optional
 
+from . import usage
 from .fetch import get, FetchError
 from .genres import llm_available, _cache_load, _cache_save
 from .util import clean_text, html_to_text
@@ -93,6 +94,7 @@ def ask(client, model: str, batch: List[dict]) -> Dict[str, str]:
         system=SYSTEM,
         messages=[{"role": "user", "content": "\n\n".join(parts)}],
     )
+    usage.add("summaries", getattr(resp, "model", model), getattr(resp, "usage", None))
     if resp.stop_reason == "max_tokens":
         raise ValueError("answer truncated (max_tokens)")
     text = "".join(getattr(b, "text", "") for b in resp.content if getattr(b, "type", "") == "text")

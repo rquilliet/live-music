@@ -11,9 +11,11 @@ import traceback
 from . import genres as G
 from . import players as P
 from . import summaries as S
+from . import usage
 from .fetch import FetchError
 from .model import Event
 from .sources import STRATEGIES
+from .sources import llm as L
 from .util import norm_title, slugify, split_lineup, strip_accents
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -62,6 +64,12 @@ def run(only=None, use_llm=True, players=True, log=print):
     todo = [v for v in venues if v["strategy"] != "none" and not (v["strategy"] == "llm" and not use_llm)
             and (not only or v["slug"] in only or v["strategy"] in only)]
     log(f"{len(todo)} sources to scrape, today is {today}")
+    usage.reset()
+    try:   # all changed LLM-venue pages in one Message Batch, at half price (REM-55)
+        L.prefetch([v for v in todo if v["strategy"] == "llm"], ctx)
+    except Exception as e:  # the venues then fall back to direct calls one by one
+        log(f"  LLM venues: batch step failed: {e}")
+        traceback.print_exc()
 
     previous = load_previous()
 
@@ -158,6 +166,8 @@ def run(only=None, use_llm=True, players=True, log=print):
         json.dump(out, f, ensure_ascii=False, indent=0)
     fresh = sum(1 for e in events if first_seen.get(e.id) == today.isoformat())
     log(f"wrote {len(events)} events -> {os.path.relpath(OUT_PATH, ROOT)} ({fresh} newly announced today)")
+    for line in usage.summary():
+        log(line)
     low = low_coverage(todo, report)
     if low:
         log(f"  low coverage (< {LOW_COVERAGE} events from the venue's own site, check the URL / parser): "

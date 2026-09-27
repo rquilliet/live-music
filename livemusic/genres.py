@@ -4,6 +4,7 @@ import os
 import re
 from typing import List, Optional
 
+from . import usage
 from .util import strip_accents
 
 # Canonical tags shown in the UI (order = display order)
@@ -344,6 +345,7 @@ def llm_tag(events, cache_path: str, batch_size: int = 40, log=print):
                 messages=[{"role": "user", "content": "Events:\n" + "\n".join(lines)}],
                 output_format=TaggedList,
             )
+            usage.add("genres", resp.model, resp.usage)
             result = resp.parsed_output
         except anthropic.APIStatusError as e:
             log(f"  LLM: API error {e.status_code}: {e.message}")
