@@ -213,6 +213,13 @@
   // may not, and it reaches the server (a per-concert preview becomes possible). The page itself keeps #e=<id> in the
   // address bar (fillDetail): opening a sheet must not reload the page, and both forms open the sheet at boot.
   function shareLink(e) { return location.origin + location.pathname + "?e=" + e.id; }
+  // Google Maps on the venue's place page (photos, hours, reviews) rather than a bare pin on its coordinates (REM-48):
+  // searching "name, address" resolves to the listing; coordinates only when there is nothing to search by.
+  function mapsLink(e) {
+    const q = [e.venue, e.address].filter(Boolean).join(", ");
+    if (q) return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+    return e.lat != null && e.lon != null ? `https://www.google.com/maps/search/?api=1&query=${Number(e.lat)},${Number(e.lon)}` : "";
+  }
 
   // ------------------------------------------------------------ filtering
   // The toggles (Nouveautés, Mes concerts, Mes salles, Mes artistes) narrow the programme before the genre / style / venue picks.
@@ -926,7 +933,8 @@
       <h2>${title}</h2>${sup.length ? `<div class="support">with ${esc(sup.join(", "))}</div>` : ""}`;
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
     const price = e.free ? "Free" : shortPrice(e.price);
-    const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Directions ↗</a>` : "";
+    const mapUrl = mapsLink(e);
+    const maps = mapUrl ? `<a href="${esc(mapUrl)}" target="_blank" rel="noopener" title="${esc(e.venue || "Venue")} on Google Maps">Map ↗</a>` : "";
     const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
     const tile = ticketTile(e);
     sheetArtists = artists;
