@@ -205,6 +205,16 @@
   // may not, and it reaches the server (a per-concert preview becomes possible). The page itself keeps #e=<id> in the
   // address bar (fillDetail): opening a sheet must not reload the page, and both forms open the sheet at boot.
   function shareLink(e) { return location.origin + location.pathname + "?e=" + e.id; }
+  // Google Maps links for the venue (REM-48). Searching "name, address" resolves to the place (its pin is labelled, the
+  // listing has photos, hours, reviews) rather than a bare pin on the coordinates, which are only the fallback.
+  function mapsQuery(e) {
+    const q = [e.venue, e.address].filter(Boolean).join(", ");
+    return q ? encodeURIComponent(q) : e.lat != null && e.lon != null ? `${Number(e.lat)},${Number(e.lon)}` : "";
+  }
+  const mapsLink = e => "https://www.google.com/maps/search/?api=1&query=" + mapsQuery(e);
+  const mapsDirections = e => "https://www.google.com/maps/dir/?api=1&travelmode=transit&destination=" + mapsQuery(e);
+  // The keyless embed (output=embed): the official Embed API needs a key, this one serves the same interactive map.
+  const mapsEmbed = e => `https://maps.google.com/maps?q=${mapsQuery(e)}&z=16&output=embed`;
 
   // ------------------------------------------------------------ filtering
   // The toggles (Nouveautés, Mes concerts, Mes salles, Mes artistes) narrow the programme before the genre / style / venue picks.
@@ -986,12 +996,14 @@
     chevron: '<path d="M6 9.5l6 6 6-6" stroke-width="2"/>',
     x: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
     play: '<path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/>',
+    pin: '<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
+    route: '<circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.8"/>',
   };
   const icon = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n]}</svg>`;
   // Open: fill, unhide — the CSS animations play (veil fade, sheet slide); .moving keeps a compositor layer on the
   // sheet only while it slides. Deep links and grid clicks take the same path.
   function openDetail(e) {
-    cancelExit(detail); closing = false;
+    cancelExit(detail); closing = false; closeMap();   // another concert (dock, keyboard) must not sit under the old map
     const fresh = detail.hidden;
     fillDetail(e);
     if (fresh && motionOK()) exitThen(sheet, "moving", 320, () => {});
@@ -1011,7 +1023,8 @@
       <h2>${title}</h2>${sup.length ? `<div class="support">with ${esc(sup.join(", "))}</div>` : ""}`;
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
     const price = e.free ? "Free" : shortPrice(e.price);
-    const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Directions ↗</a>` : "";
+    // "Map" opens the in-app map (openMap); the href keeps a middle-click / no-JS path to Google Maps.
+    const maps = mapsQuery(e) ? `<a class="maplink" data-map href="${esc(mapsLink(e))}" target="_blank" rel="noopener" title="Map of ${esc(e.venue || "the venue")}">${icon("pin")}Map</a>` : "";
     const line2 = [e.address ? esc(e.address) : "", maps].filter(Boolean).join(" · ");
     const tile = ticketTile(e);
     sheetArtists = artists;
@@ -1151,10 +1164,31 @@
   function closeDetail() {
     if (detail.hidden || closing) return;
     current = null; closing = true; menuOpen = false;
+    closeMap();
     document.body.style.overflow = ""; history.replaceState(null, "", location.pathname);
     const hide = () => { closing = false; if (current) return; detail.hidden = true; hero.style.transform = ""; };   // unless reopened meanwhile
     if (motionOK()) exitThen(sheet, "moving", 200, () => {});
     exitThen(detail, "closing", 200, hide);
+  }
+  // In-app map (REM-48): a panel slides up over the sheet with Google's interactive map of the venue, "Directions"
+  // (public transport) and "Open in Google Maps". The iframe loads on open and is dropped on close.
+  let mapOpen = false, mapFocusBack = null;
+  function openMap(e) {
+    if (mapOpen || !mapsQuery(e)) return;
+    mapOpen = true; mapFocusBack = document.activeElement; closeMenu();
+    $("#maptitle").textContent = e.venue || "Venue";
+    $("#mapaddr").textContent = [e.address, e.area].filter(Boolean).join(" · ");
+    $("#mapframe").innerHTML = `<iframe title="Map of ${esc(e.venue || "the venue")}" src="${esc(mapsEmbed(e))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`;
+    $("#mapdir").href = mapsDirections(e); $("#mapdir").innerHTML = icon("route") + "Directions";
+    $("#mapopen").href = mapsLink(e);
+    const d = $("#mapdialog"); cancelExit(d); d.hidden = false;
+    $("#mapclose").focus();
+  }
+  function closeMap() {
+    if (!mapOpen) return;
+    mapOpen = false;
+    const d = $("#mapdialog"); exitThen(d, "out", 200, () => { d.hidden = true; $("#mapframe").innerHTML = ""; });
+    if (mapFocusBack && mapFocusBack.focus) mapFocusBack.focus();
   }
   // Hero parallax: the picture scrolls at a third of the sheet's speed and the body slides over it.
   let heroRaf = 0;
@@ -1472,6 +1506,8 @@
   $("#fbdialog").onclick = ev => { if ((ev.target.id === "fbdialog" && fbDown === ev.target) || ev.target.closest("#fbclose, #fbok")) closeFb(); };
   $("#fbform").onsubmit = ev => { ev.preventDefault(); fbSubmit(); };
   $("#fbtext").onkeydown = ev => { if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) { ev.preventDefault(); fbSubmit(); } };
+  $("#mapclose").onclick = closeMap;
+  $("#mapdialog").onclick = ev => { if (ev.target === ev.currentTarget) closeMap(); };
   // player dock (REM-10)
   $("#dinfo").onclick = () => { if (DOCK.e) openDetail(DOCK.e); };
   $("#dclose").onclick = dockClose;
@@ -1485,6 +1521,8 @@
     const star = ev.target.closest("[data-fav]");
     if (star) { toggleFav(star.dataset.fav); star.outerHTML = favBtn(star.dataset.fav); replay($(".venue .star", detail), "pop"); render(); return; }
     if (ev.target.closest("[data-feedback]")) { openFb(); return; }
+    const ml = ev.target.closest("[data-map]");
+    if (ml && !ev.metaKey && !ev.ctrlKey && !ev.shiftKey) { ev.preventDefault(); if (current) openMap(current); return; }
     if (ev.target.closest("[data-dockplay]")) { if (current) dockLoad(artistShown, current, sheetArtists, true); return; }   // take the dock over (REM-10) and play (REM-59)
     if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
     const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
@@ -1503,6 +1541,7 @@
     if (ev.key === "Escape" && SP.menu) { closeSpMenu(true); return; }
     if (ev.key === "Escape" && taOpen) { closeTa(true); return; }
     if (ev.key === "Escape" && genresOpen) { closeGenres(true); return; }
+    if (ev.key === "Escape" && mapOpen) { closeMap(); return; }
     if (ev.key === "Escape" && menuOpen) { closeMenu(true); return; }
     if (ev.key === "Escape" && !detail.hidden) closeDetail();
   });

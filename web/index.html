@@ -79,6 +79,21 @@
   </div>
 </div>
 
+<div id="mapdialog" class="mapveil" hidden>
+  <div class="mapbox" role="dialog" aria-modal="true" aria-labelledby="maptitle">
+    <div class="grab" aria-hidden="true"></div>
+    <div class="maphead">
+      <div><h4 id="maptitle"></h4><div class="addr" id="mapaddr"></div></div>
+      <button type="button" class="x" id="mapclose" aria-label="Close">✕</button>
+    </div>
+    <div class="mapframe" id="mapframe"></div>
+    <div class="mapacts">
+      <a class="mapbtn go" id="mapdir" target="_blank" rel="noopener">Directions</a>
+      <a class="mapbtn" id="mapopen" target="_blank" rel="noopener">Google Maps ↗</a>
+    </div>
+  </div>
+</div>
+
 <div id="spdialog" class="spveil" hidden>
   <div class="spbox" role="dialog" aria-modal="true" aria-labelledby="sptitle">
     <button type="button" class="x" id="spclose" aria-label="Close">✕</button>
