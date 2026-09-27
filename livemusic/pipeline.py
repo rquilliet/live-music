@@ -299,7 +299,9 @@ def _km(lat1, lon1, lat2, lon2):
 
 def canonical_venue(e, venues):
     """Map an open-data venue ('Philharmonie de Paris', 'L'Olympia - Bruno Coquatrix') onto the
-    configured venue with the same name or within 150 m, so cross-source merging can work."""
+    configured venue with the same name or within 150 m, so cross-source merging can work.
+    A small bar next to a big hall sets "geo_match": false in venues.json (the Dernier Bar sits between the
+    Théâtre du Châtelet and the Théâtre de la Ville)."""
     if e.source != "opendata":
         return
     n = _norm_venue(e.venue)
@@ -310,7 +312,7 @@ def canonical_venue(e, venues):
             return
     if e.lat is not None and e.lon is not None:
         for v in venues:
-            if v.get("lat") is not None and _km(e.lat, e.lon, v["lat"], v["lon"]) <= VENUE_MATCH_KM:
+            if v.get("geo_match", True) and v.get("lat") is not None and _km(e.lat, e.lon, v["lat"], v["lon"]) <= VENUE_MATCH_KM:
                 e.venue, e.venue_slug = v["name"], v["slug"]
                 return
 
