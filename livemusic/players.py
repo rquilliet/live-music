@@ -56,6 +56,11 @@ class PlayerError(Exception):
     pass
 
 
+# What one artist's lookup may raise: network trouble, or an answer that does not have the expected shape.
+# Caught per artist, so that one odd page does not end the lookups of the whole run.
+LOOKUP_ERRORS = (PlayerError, ValueError, AttributeError, TypeError, KeyError, IndexError)
+
+
 # ------------------------------------------------------------------ names
 
 def norm_artist(name: str) -> str:
@@ -167,6 +172,8 @@ def parse_page_properties(page: str):
     try:
         props = json.loads(htmllib.unescape(m.group(1)))
     except ValueError:
+        return None
+    if not isinstance(props, dict):   # content="null" on some pages
         return None
     kind, item_id = props.get("item_type"), props.get("item_id")
     if kind in ("a", "t") and isinstance(item_id, int) and item_id > 0:
@@ -439,9 +446,9 @@ def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sl
                 cache_put(entry, "bandcamp", resolve_bandcamp(name, fetch=fetch, sleep=sleep, url=hints.get(key)), today)
                 bc_errors, dirty = 0, True
                 found["bandcamp"] += bool(entry["bandcamp"])
-            except (PlayerError, ValueError) as ex:
+            except LOOKUP_ERRORS as ex:
                 bc_errors += 1
-                log(f"  players: bandcamp {name!r}: {ex}")
+                log(f"  players: bandcamp {name!r}: {type(ex).__name__}: {ex}")
                 if bc_errors >= MAX_CONSECUTIVE_ERRORS:
                     log("  players: Bandcamp unreachable, giving up on it for this run")
         if token and sp_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "spotify", today):
@@ -449,7 +456,7 @@ def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sl
                 cache_put(entry, "spotify", resolve_spotify(name, token, fetch=fetch), today)
                 sp_errors, dirty = 0, True
                 found["spotify"] += bool(entry["spotify"])
-            except (PlayerError, ValueError) as ex:
+            except LOOKUP_ERRORS as ex:
                 sp_errors += 1
                 log(f"  players: spotify {name!r}: {ex}")
         if key in yt_keys and yt_errors < MAX_CONSECUTIVE_ERRORS and needs_lookup(entry, "youtube", today):
@@ -457,7 +464,7 @@ def resolve(events, cache_path, today=None, log=print, fetch=http, sleep=time.sl
                 cache_put(entry, "youtube", resolve_youtube(name, yt_key, fetch=fetch), today)
                 yt_errors, dirty = 0, True
                 found["youtube"] += bool(entry["youtube"])
-            except (PlayerError, ValueError) as ex:
+            except LOOKUP_ERRORS as ex:
                 yt_errors += 1
                 log(f"  players: youtube {name!r}: {ex}")
                 if yt_errors >= MAX_CONSECUTIVE_ERRORS:

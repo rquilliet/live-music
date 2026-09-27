@@ -21,8 +21,8 @@ TAGS = [
 #    Only unambiguous words: a title is prose, so "house", "world", "groove", "impro" are banned here.
 SITE_RULES = [
     (r"\bmetal|death|black metal|doom|thrash|hardcore|metalcore|grind|sludge|stoner", "metal"),
-    (r"\bpunk|\boi\b|crust|emo\b", "punk"),
-    (r"post[- ]?punk|shoegaze|garage|psych|noise pop|dream pop|indie|lo-?fi|math rock|krautrock|alternati|bedroom", "indie"),
+    (r"(?<!post-)(?<!post )(?<!post- )\bpunk|\boi\b|crust|emo\b", "punk"),   # post-punk is indie, not punk
+    (r"post[- ]{0,2}punk|\b(dark|cold|new) ?wave\b(?! of)|\bgoth(ic|ique)?\b(?! metal)|shoegaze|garage|psych|noise pop|dream pop|indie|lo-?fi|math rock|krautrock|alternati|bedroom", "indie"),
     (r"\brock|grunge", "rock"),
     (r"techno|house|electro|electronic|electronique|electronica|synth|ambient|drum ?(and|&|n) ?bass|dnb|dubstep|bass music|rave|dj|hyperpop|idm|trance|edm|breakbeat|acid|club", "electro"),
     (r"hip[- ]?hop|\brap\b|\btrap\b|\bdrill\b|grime|boom bap", "hip-hop"),
@@ -43,8 +43,8 @@ SITE_RULES = [
 
 TEXT_RULES = [
     (r"\b(metal|black metal|death metal|doom|thrash|metalcore|grindcore|sludge)\b", "metal"),
-    (r"\b(punk|hardcore)\b", "punk"),
-    (r"\b(post-?punk|shoegaze|garage rock|psych(edelic|e)?|indie|krautrock)\b", "indie"),
+    (r"(?<!post-)(?<!post )(?<!post- )\bpunk\b|\bhardcore\b", "punk"),
+    (r"\b(post[- ]{0,2}punk|darkwave|coldwave|shoegaze|garage rock|psych(edelic|e)?|indie|krautrock)\b", "indie"),
     (r"\b(rock|grunge|rock'?n'?roll|rock and roll)\b", "rock"),
     (r"\b(techno|electro|electronic|electronique|dj set|rave|drum ?(and|&|n) ?bass|dubstep|hyperpop|trance|clubbing|dj)\b", "electro"),
     (r"\b(hip-?hop|rap|trap|drill|grime)\b", "hip-hop"),
@@ -76,7 +76,7 @@ MUSIC_HINT = re.compile(r"\b(concerts?|live|musique|music|musical|dj|club|festiv
 
 
 def _norm(s: str) -> str:
-    return strip_accents((s or "").lower()).replace("’", "'").replace("'", "'")
+    return re.sub(r"[‐‑–—]", "-", strip_accents((s or "").lower()).replace("’", "'").replace("'", "'"))
 
 
 def _match(rules, text: str, max_tags: int = 3) -> List[str]:
