@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 <header class="top">
@@ -80,6 +80,21 @@
     <button class="close" id="close" aria-label="Close">✕</button>
     <div class="hero" id="hero"><div class="hero-text" id="hero-text"></div></div>
     <div class="body" id="detail-body"></div>
+  </div>
+</div>
+
+<div id="mapdialog" class="mapveil" hidden>
+  <div class="mapbox" role="dialog" aria-modal="true" aria-labelledby="maptitle">
+    <div class="grab" aria-hidden="true"></div>
+    <div class="maphead">
+      <div><h4 id="maptitle"></h4><div class="addr" id="mapaddr"></div></div>
+      <button type="button" class="x" id="mapclose" aria-label="Close">✕</button>
+    </div>
+    <div class="mapframe" id="mapframe"></div>
+    <div class="mapacts">
+      <a class="mapbtn go" id="mapdir" target="_blank" rel="noopener">Directions</a>
+      <a class="mapbtn" id="mapopen" target="_blank" rel="noopener">Google Maps ↗</a>
+    </div>
   </div>
 </div>
 

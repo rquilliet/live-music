@@ -424,9 +424,39 @@ body.docked .body { padding-bottom: 150px; }
   .spbtn { width: 100%; }
 }
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .spmenu, .spbox { background: var(--white); } }
+/* ---------- in-app map (REM-48): a panel slides up over the sheet, as wide as it and aligned on it ---------- */
+.maplink { display: inline-flex; align-items: center; gap: 3px; color: var(--ink); font-weight: 600; }
+.maplink svg.i { width: 15px; height: 15px; }
+.mapveil { position: fixed; inset: 0; z-index: 40; display: flex; align-items: flex-end; justify-content: flex-end; background: rgba(23, 20, 15, .45); animation: fade-in .2s ease backwards; }
+.mapveil[hidden] { display: none; }
+.mapveil.out { animation: fade-out .2s ease forwards; pointer-events: none; }
+.mapbox { position: relative; display: flex; flex-direction: column; width: min(640px, 100%); max-height: 92%; background: var(--paper); color: var(--ink);
+  border-top: 2px solid var(--ink); border-left: 2px solid var(--ink); animation: map-up .32s var(--ease-out) backwards; }
+.mapveil.out .mapbox { animation: map-down .2s ease-in forwards; }
+.mapbox .grab { width: 44px; height: 4px; margin: 8px auto 4px; border-radius: 2px; background: var(--line); }
+.maphead { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 4px 16px 12px; }
+.maphead h4 { margin: 0 0 4px; font-family: var(--display); font-weight: 900; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: -.01em; }
+.maphead .addr { color: var(--muted); font-size: 14px; }
+.maphead .x { flex: none; width: 36px; height: 36px; padding: 0; border: 1.5px solid var(--ink); background: none; font-size: 15px; display: grid; place-items: center; transition: background-color .15s, color .15s; }
+.maphead .x:hover { background: var(--ink); color: var(--paper); }
+.mapframe { position: relative; height: min(56vh, 520px); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: var(--paper2); }
+.mapframe iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mapacts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px 16px 18px; }
+.mapbtn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 48px; padding: 8px 12px; border: 2px solid var(--ink);
+  background: var(--paper); color: var(--ink); font-weight: 700; font-size: 15px; text-align: center; text-decoration: none; transition: background-color .15s, transform .12s; }
+.mapbtn:hover { background: var(--hi); }
+.mapbtn:active { transform: scale(.97); }
+.mapbtn.go { background: var(--lime); }
+.mapbtn.go:hover { background: #cbe95a; }
+.mapbtn svg.i { width: 20px; height: 20px; }
+@keyframes map-up { from { transform: translateY(100%); } }
+@keyframes map-down { to { transform: translateY(100%); } }
+
 @media (prefers-reduced-motion: reduce) {
-  .spmenu, .spbox, .spveil { animation: fade-in .12s ease backwards; }
-  .spmenu.out, .spveil.out { animation: fade-out .12s ease forwards; }
+  .spmenu, .spbox, .spveil, .mapveil, .mapbox { animation: fade-in .12s ease backwards; }
+  .mapveil.out .mapbox { animation: none; }
+  .mapbtn { transition: none; } .mapbtn:active { transform: none; }
+  .spmenu.out, .spveil.out, .mapveil.out { animation: fade-out .12s ease forwards; }
   .spme, .mi, .spbtn, .spbox .x { transition: none; }
   .spme:active, .mi:active, .spbtn:active { transform: none; }
 }
