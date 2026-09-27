@@ -40,6 +40,11 @@ class BuildTest(unittest.TestCase):
         got = build([JAVA], [{"venue": "La Java", "ok": True, "count": 2}])
         self.assertEqual(got["sources"][0]["status"], "low")
 
+    def test_a_venue_sets_its_own_bar_with_low(self):
+        bar = dict(JAVA, low=1)   # a bar with one jam a month: one event is its whole programme
+        self.assertEqual(build([bar], [{"venue": "La Java", "ok": True, "count": 1}])["sources"][0]["status"], "ok")
+        self.assertEqual(build([bar], [{"venue": "La Java", "ok": True, "count": 0}])["sources"][0]["status"], "low")
+
     def test_failing_since_survives_the_following_days_and_resets_on_success(self):
         fail = [{"venue": "Le Trabendo", "ok": False, "error": "HTTP 503"}]
         day1 = build([TRABENDO], fail, today=dt.date(2026, 9, 25))

@@ -132,8 +132,9 @@ def build(scraped, report, state, today, previous=None, timings=None, duration=N
         s = {"venue": v["name"], "slug": v["slug"], "strategy": v["strategy"], "url": v.get("url"),
              "prev_count": state.get("counts", {}).get(v["name"]), "seconds": timings.get(v["name"]), "checked_at": now}
         if r["ok"]:
-            # a venue site with next to nothing is a moved URL more often than a thin programme
-            thin = r["count"] < low and v["strategy"] != "opendata"
+            # a venue site with next to nothing is a moved URL more often than a thin programme; a venue whose
+            # programme is that thin by nature says so with "low" in venues.json (a bar with a jam a month: 1)
+            thin = r["count"] < v.get("low", low) and v["strategy"] != "opendata"
             s.update(status="low" if thin else "ok", count=r["count"], last_ok=stamp)
         else:
             if was.get("status") == "failed" and was.get("failing_since"):

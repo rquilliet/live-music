@@ -53,7 +53,17 @@ def get(url: str, accept: str = "text/html,application/xhtml+xml,application/jso
                 return body
         except urllib.error.HTTPError as e:
             last = FetchError(f"HTTP {e.code} for {url}")
-            if e.code in (403, 404, 406, 410):
+            if e.code in (403, 418):
+                # A bot wall (418 is the classic "I'm a teapot" answer of WAF rules, 403 the polite one) often keys
+                # on the TLS handshake, and Python's is a well-known fingerprint: curl's differs, so it gets one try
+                # before the failure is reported (Le Plan, REM-67).
+                body = _curl(url, timeout)
+                if body is not None:
+                    with open(path, "w", encoding="utf-8") as f:
+                        f.write(body)
+                    return body
+                break
+            if e.code in (404, 406, 410):
                 break
         except (ssl.SSLError, urllib.error.URLError) as e:
             if not isinstance(e, ssl.SSLError) and "SSL" not in str(e):
