@@ -63,6 +63,30 @@ troubleshooting agent). `web/status.html` shows it (`/status.html` on the site, 
 the bottom of the programme), with a link to the GitHub Actions log of the run. A run on a subset (`--only`)
 updates its sources and leaves the others as they were.
 
+## Troubleshooting agent
+
+`python -m livemusic.troubleshoot run` reads `web/status.json` and handles the sources that failed:
+
+- failures shared by 3 sources or more, and Claude API errors (credit, key), are one problem that no parser
+  change repairs: they are reported, not "fixed";
+- each other source (5 a day at most, 3 days in a row at most) is first checked again (`scrape.py --check
+  <slug>`: a site that was down at 6 am often works at 7), then handed to Claude Code, headless, with a
+  restricted set of tools;
+- what the agent changed is judged by the program, not by the agent: only `venues.json` (the entry of that
+  source) and `livemusic/sources/*.py` (never `llm.py` / `opendata.py`), no code that reads the environment,
+  opens files or talks to the network by itself, the tests pass, the source gives a number of events between
+  30 % and 4× its last good count, and the healthy sources of the files it touched are still healthy;
+- a repair that passes is a local commit `Auto-fix <slug>: …`; a repair that does not is thrown away.
+
+`python -m livemusic.troubleshoot finish` then scrapes the repaired sources again (`scrape.py --only … --patch`
+keeps the rest of the programme), lists the repairs on the status page, files one Linear issue per source left
+(`Scraper down: <venue>`, a comment when the issue is already open) with `LINEAR_API_KEY`, sends a phone push
+through [ntfy](https://ntfy.sh) when `NTFY_TOPIC` is set, and exits 1 when something is left for a human.
+Attempts are counted in `data/troubleshoot.json`.
+
+The guardrails are a filter, not a sandbox: a repaired parser runs in the next daily scrape with the
+repository's secrets, so keep the keys of this repository limited to what the scraper needs.
+
 ## Coverage check
 
 The end of every run lists the venues whose own site yielded fewer than 3 events (`low coverage`): that is

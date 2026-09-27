@@ -49,7 +49,9 @@ def load_venues(path=None):
     return venues
 
 
-def run(only=None, use_llm=True, players=True, log=print):
+def run(only=None, use_llm=True, players=True, log=print, patch=False):
+    """patch: with `only`, the sources left out keep the events the last run gave them (a source
+    repaired during the day joins the programme without scraping everything again)."""
     started = time.time()
     plain = log
 
@@ -85,6 +87,12 @@ def run(only=None, use_llm=True, players=True, log=print):
         elif since:
             log(f"  {v['name']}: failing since {since}, nothing carried over (limit {STALE_MAX_DAYS} days)")
         report.append(entry)
+
+    if patch and only:
+        rest = [d for d in previous.get("events", [])
+                if d.get("date", "") >= today.isoformat() and not any(_from_source(d, v) for v in todo)]
+        events.extend(Event(**{k: d[k] for k in d if k in _EVENT_FIELDS}) for d in rest)
+        log(f"  patch run: kept {len(rest)} events of the other sources")
 
     for i, v in enumerate(todo, 1):
         fn = STRATEGIES.get(v["strategy"])
@@ -157,13 +165,18 @@ def run(only=None, use_llm=True, players=True, log=print):
 
     first_seen = track_seen(events, today, state, report)
     events.sort(key=lambda e: (e.date, e.time or "99:99", e.venue))
+    if patch and only:   # the report of the day, with the entries of the sources scraped again
+        again = {r["venue"] for r in report}
+        day_report = [r for r in previous.get("report", []) if r.get("venue") not in again] + report
+    else:
+        day_report = report
     out = {
         "generated_at": dt.datetime.now().isoformat(timespec="seconds"),
         "today": today.isoformat(),
         "new_window_days": NEW_WINDOW_DAYS,
         "tags": G.TAGS,
         "venues": sorted({e.venue for e in events}),
-        "report": report,
+        "report": day_report,
         "events": [dict(e.to_dict(), first_seen=first_seen.get(e.id)) for e in events],
     }
     os.makedirs(WEB, exist_ok=True)
@@ -182,6 +195,35 @@ def run(only=None, use_llm=True, players=True, log=print):
         log(f"  low coverage (< {LOW_COVERAGE} events from the venue's own site, check the URL / parser): "
             + ", ".join(f"{name} ({n})" for name, n in low))
     return out
+
+
+def check(slug, log=print):
+    """Scrape one source, leave the programme and the state alone: {"slug", "ok", "count", "error", "prev_count"}.
+    The troubleshooting agent (REM-49) and its guardrails judge a repair with it."""
+    today = today_paris()
+    v = next((v for v in load_venues() if v["slug"] == slug), None)
+    if not v:
+        return {"slug": slug, "ok": False, "count": 0, "error": f"no venue with slug {slug} in venues.json"}
+    res = {"slug": slug, "venue": v["name"], "strategy": v["strategy"], "ok": False, "count": 0,
+           "prev_count": load_state()["counts"].get(v["name"])}
+    fn = STRATEGIES.get(v["strategy"])
+    if not fn:
+        return dict(res, error=f"unknown strategy {v['strategy']}")
+    ctx = {"today": today, "horizon_days": HORIZON_DAYS, "log": log, "problem": None}
+    try:
+        got = fn(v, ctx)
+    except FetchError as e:
+        return dict(res, error=str(e))
+    except Exception as e:
+        traceback.print_exc()
+        return dict(res, error=repr(e))
+    kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
+    res["count"] = len(kept)
+    if not kept:
+        return dict(res, error=f"0 events parsed ({len(got)} outside the window or invalid)"
+                    + (f": {ctx['problem']}" if ctx["problem"] else ""))
+    res["sample"] = [f"{e.date} {e.time or '--:--'} {e.title}"[:100] for e in sorted(kept, key=lambda e: e.date)[:5]]
+    return dict(res, ok=True)
 
 
 LOW_COVERAGE = 3

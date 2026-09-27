@@ -97,6 +97,61 @@ class RunTest(unittest.TestCase):
         self.assertEqual([(s["slug"], s["status"], s.get("error")) for s in status["sources"]],
                          [("le-trabendo", "failed", "HTTP 503"), ("la-java", "low", None)])
 
+    def test_patch_run_keeps_the_other_sources(self):
+        venues = [dict(SITE, strategy="fixed"), {"name": "La Java", "slug": "la-java", "strategy": "ok"}]
+
+        def fixed(v, ctx):
+            return [Event(title=t, date="2026-10-10", venue="Le Trabendo", venue_slug="le-trabendo", source="fixed")
+                    for t in ("Later", "Announced since", "Third")]
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out, seen = os.path.join(tmp, "events.json"), os.path.join(tmp, "seen.json")
+            with open(out, "w") as f:
+                json.dump({"today": "2026-09-27", "report": [
+                    {"venue": "Le Trabendo", "ok": False, "error": "HTTP 503", "carried": 1, "stale_since": "2026-09-26"},
+                    {"venue": "La Java", "ok": True, "count": 1}], "events": [
+                    row("Later", "2026-10-10", source="fixed", stale_since="2026-09-26"),
+                    dict(row("Jam", "2026-10-02", source="ok", slug="la-java"), venue="La Java"),
+                    dict(row("Gone", "2026-09-20", source="ok", slug="la-java"), venue="La Java")]}, f)
+            with open(os.path.join(tmp, "status.json"), "w") as f:
+                json.dump({"sources": [{"slug": "le-trabendo", "status": "failed", "failing_since": "2026-09-27"},
+                                       {"slug": "la-java", "status": "ok", "count": 1}]}, f)
+            with mock.patch.multiple(pipeline, OUT_PATH=out, SEEN_PATH=seen, WEB=tmp, DATA=tmp,
+                                     STRATEGIES={"fixed": fixed}, today_paris=lambda: TODAY,
+                                     load_venues=lambda: venues), \
+                    mock.patch.object(pipeline.S, "enrich", lambda *a, **k: None):
+                res = pipeline.run(only={"le-trabendo"}, patch=True, use_llm=False, players=False, log=lambda m: None)
+                with open(os.path.join(tmp, "status.json")) as f:
+                    status = json.load(f)
+                with open(seen) as f:
+                    self.assertEqual(json.load(f)["last_ok"], {"Le Trabendo": "2026-09-27"})
+        self.assertEqual({e["title"]: e["stale_since"] for e in res["events"]},
+                         {"Jam": None, "Later": None, "Announced since": None, "Third": None})
+        self.assertEqual(res["report"], [{"venue": "La Java", "ok": True, "count": 1},
+                                         {"venue": "Le Trabendo", "ok": True, "count": 3}])
+        self.assertEqual([(s["slug"], s["status"]) for s in status["sources"]], [("le-trabendo", "ok"), ("la-java", "ok")])
+
+    def test_check_writes_nothing(self):
+        venues = [dict(SITE, strategy="broken"), {"name": "La Java", "slug": "la-java", "strategy": "ok"}]
+
+        def broken(v, ctx):
+            raise FetchError("HTTP 503")
+
+        def ok(v, ctx):
+            return [Event(title="Jam", date="2026-10-02", venue="La Java", venue_slug="la-java", source="ok"),
+                    Event(title="Old", date="2026-09-02", venue="La Java", venue_slug="la-java", source="ok")]
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.multiple(pipeline, OUT_PATH=os.path.join(tmp, "events.json"), WEB=tmp, DATA=tmp,
+                                     SEEN_PATH=os.path.join(tmp, "seen.json"), STRATEGIES={"broken": broken, "ok": ok},
+                                     today_paris=lambda: TODAY, load_venues=lambda: venues):
+                good = pipeline.check("la-java", log=lambda m: None)
+                bad = pipeline.check("le-trabendo", log=lambda m: None)
+                self.assertFalse(pipeline.check("nowhere")["ok"])
+            self.assertEqual(os.listdir(tmp), [])
+        self.assertEqual((good["ok"], good["count"], good["sample"]), (True, 1, ["2026-10-02 --:-- Jam"]))
+        self.assertEqual((bad["ok"], bad["count"], bad["error"]), (False, 0, "HTTP 503"))
+
 
 if __name__ == "__main__":
     unittest.main()
