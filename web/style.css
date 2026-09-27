@@ -357,6 +357,7 @@ body.docked .body { padding-bottom: 150px; }
 /* Multi-artist show: one pill per act under the "Écouter" heading (headliner first), the active one filled ink. */
 .listen { display: flex; flex-direction: column; gap: 8px; margin-bottom: -8px; }
 .listen h3 { margin: 0; }
+.listen[hidden], .listen h3[hidden], .artist-pick button[hidden] { display: none; }   /* REM-59: acts with nothing to play have no pill */
 .artist-pick { display: flex; gap: 6px; flex-wrap: wrap; }
 .artist-pick button { border: 1.5px solid var(--line); background: none; padding: 5px 11px; font-size: 12px; font-weight: 500; border-radius: 0;
   transition: background-color .15s, border-color .15s, color .15s; }
