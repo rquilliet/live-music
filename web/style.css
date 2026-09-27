@@ -291,8 +291,8 @@ code { background: var(--paper2); padding: 1px 4px; }
 .venue span { color: var(--muted); font-size: 13px; }
 .venue a { color: var(--ink); }
 .meta { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
-.nowline { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
-.nowline .i { width: 16px; height: 16px; }
+.playslot { display: flex; }
+.playslot:empty { display: none; }
 .dockbtn { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; padding: 8px 14px 8px 12px; border-radius: 999px; border: 1.5px solid var(--ink); background: none; font-weight: 600; font-size: 13px;
   transition: background-color .15s, color .15s; }
 .dockbtn .i { width: 16px; height: 16px; }

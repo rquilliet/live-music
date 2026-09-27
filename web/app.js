@@ -1102,8 +1102,6 @@
     if (dz) return `<iframe title="Deezer" src="https://widget.deezer.com/widget/light/artist/${Number(dz.id)}/top_tracks?tracklist=false" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="encrypted-media; clipboard-write"></iframe>`;
     return "";
   }
-  const VIA = { spotify: "Spotify", bandcamp: "Bandcamp", deezer: "Deezer" };
-  function nowLine(via) { return `<div class="nowline">${icon("play")}<span>Playing in the bar at the bottom · via ${VIA[via]}</span></div>`; }
   function dockBtn(name) { return `<button type="button" class="dockbtn" data-dockplay>${icon("play")}Play ${esc(name)}${DOCK.e && DOCK.e !== current ? ` <small>replaces ${esc(DOCK.name)}</small>` : ""}</button>`; }
   function dockPlay(name, e, artists, p, dz) {
     const via = dockVia(p, dz); if (!via) return false;
@@ -1114,7 +1112,7 @@
     renderDockActs();
     if (DOCK.key !== key) { DOCK.key = key; dock.dataset.src = via; $("#dframe").innerHTML = dockHtml(p, dz); }   // same act again: the iframe, and the music, stay
     dock.hidden = false; document.body.classList.add("docked");
-    if (current === e) { const b = $("[data-dockplay]", detail); if (b) b.outerHTML = nowLine(via); }
+    if (current === e) { const slot = $(".playslot", detail); if (slot) slot.innerHTML = ""; }   // the bar says it plays: no line in the sheet
     return true;
   }
   function renderDockActs() {
@@ -1137,7 +1135,7 @@
     dock.hidden = true; dock.dataset.src = ""; $("#dframe").innerHTML = "";
     DOCK.e = null; DOCK.name = null; DOCK.artists = []; DOCK.key = "";
     document.body.classList.remove("docked");
-    if (current && current === e) { const nl = $(".nowline", detail); if (nl) nl.outerHTML = dockBtn(artistShown); }
+    if (current && current === e) { const slot = $(".playslot", detail); if (slot) { slot.innerHTML = dockBtn(artistShown); $("#artist").hidden = false; } }
   }
   // "Live" block: a thumbnail tile (ink play glyph, title + year) that becomes the youtube-nocookie iframe on click;
   // no block at all without a resolved video (REM-52).
@@ -1156,10 +1154,10 @@
   function ytIframe(id) {
     return `<iframe title="YouTube" src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
   }
-  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · "Listen to <act>" + the dock line or
-  // the "Play" button (with several acts the heading and the pills sit above, in .listen) · "Live" · "In the same
-  // vein" (Deezer related, names only). Listen and Live only show up when there is something to play (REM-52); an act
-  // with none of it leaves #artist hidden. A thin skeleton line stands in while the lookups run; a stale answer (act or
+  // #artist, below the blurb: [Wikipedia paragraph when the event gave no text] · the "Play" button when another
+  // concert holds the dock (nothing while this act plays: the bar says it) · "Live" · "In the same vein" (Deezer
+  // related, names only). With several acts the "Listen" heading and the pills sit above, in .listen. Listen and Live
+  // only show up when there is something to play (REM-52); an act with none of it leaves #artist hidden. A thin skeleton line stands in while the lookups run; a stale answer (act or
   // sheet changed meanwhile) is dropped.
   const cache = {};
   let artistShown = null;
@@ -1176,18 +1174,16 @@
     if (dz && dz.picture_xl && !e.image) $("#hero").style.backgroundImage = `url("${dz.picture_xl}")`;
     const p = playersOf(e, name), via = dockVia(p, dz);
     // The player goes to the dock (REM-10): dock this act when nothing plays or this concert already plays; otherwise
-    // offer to take over.
+    // offer to take over. The .playslot keeps the button's place for dockClose.
     let player = "";
-    if (via && (!DOCK.e || DOCK.e === e)) { dockPlay(name, e, artists, p, dz); player = nowLine(via); }
+    if (via && (!DOCK.e || DOCK.e === e)) dockPlay(name, e, artists, p, dz);
     else if (via) player = dockBtn(name);
     const listenH = $(".listen h3", detail);   // several acts: "Listen" heads the pills, only when this act plays
-    if (listenH) listenH.hidden = !player;
-    const html = [
-      wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></p>` : "",
-      player ? `${artists.length > 1 ? "" : `<h3>Listen to ${esc(name)}</h3>`}${player}` : "",
-      liveHtml(p, name)].join("");
-    box.innerHTML = html + '<div class="esprit muted" id="esprit"></div>';
-    box.hidden = !html;   // "In the same vein" may still show it below
+    if (listenH) listenH.hidden = !via;
+    const wikiP = wiki ? `<p>${esc(wiki.extract)} <a class="muted" href="${esc(wiki.url)}" target="_blank" rel="noopener">Wikipedia ↗</a></p>` : "";
+    const live = liveHtml(p, name);
+    box.innerHTML = wikiP + (via ? `<div class="playslot">${player}</div>` : "") + live + '<div class="esprit muted" id="esprit"></div>';
+    box.hidden = !(wikiP || player || live);   // "In the same vein" may still show it below
     // The tile becomes the player on tap: the iframe is only created now (autoplay), in the same 16:9 box.
     const tile = $(".live .yt", box);
     if (tile) tile.onclick = () => { const id = tile.dataset.yt; if (YT_ID.test(id)) tile.outerHTML = ytIframe(id); };
