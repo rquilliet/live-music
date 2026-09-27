@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Archivo:wdth,wght@75..100,400;75..100,500;75..100,600;75..100,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 <header class="top">
@@ -90,7 +90,30 @@
   </div>
 </div>
 
-<script src="config.js?v=13"></script>
-<script src="app.js?v=13"></script>
+<!-- Feedback (REM-56): after #detail in the source, the button hides while the sheet is open (the sheet has its own link). -->
+<button type="button" class="fab" id="fab" hidden aria-haspopup="dialog" aria-controls="fbdialog" title="A missing concert, a problem, an idea?"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H11l-4.5 3.5v-3.5H4z"/></svg><span>Feedback</span></button>
+
+<div id="fbdialog" class="spveil" hidden>
+  <form class="spbox fbbox" id="fbform" role="dialog" aria-modal="true" aria-labelledby="fbtitle" novalidate>
+    <button type="button" class="x" id="fbclose" aria-label="Close">✕</button>
+    <h4 id="fbtitle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v11H11l-4.5 3.5v-3.5H4z"/></svg>Feedback</h4>
+    <div id="fbask">
+      <p id="fbhint">A venue or a concert that is missing, something awkward, an idea? Tell us in your own words.</p>
+      <div class="fbabout" id="fbabout" hidden></div>
+      <textarea id="fbtext" rows="5" maxlength="2000" aria-label="Your feedback" aria-describedby="fbhint" placeholder="e.g. La Mécanique Ondulatoire is not in the list"></textarea>
+      <input id="fbmail" type="email" maxlength="120" autocomplete="email" placeholder="Email (optional, if you want an answer)" aria-label="Email, optional">
+      <input class="hp" id="fbsite" name="fb_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="spnote err" id="fberr" role="alert" hidden></div>
+      <div class="fbrow"><small>Sent with the page you are on, your active filters and your browser version.</small><button type="submit" class="spbtn" id="fbsend">Send</button></div>
+    </div>
+    <div id="fbdone" role="status" hidden>
+      <p><b>Thanks, it is on its way.</b> Every message is read.</p>
+      <button type="button" class="spbtn sec" id="fbok">Close</button>
+    </div>
+  </form>
+</div>
+
+<script src="config.js?v=14"></script>
+<script src="app.js?v=14"></script>
 </body>
 </html>

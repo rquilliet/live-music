@@ -71,6 +71,14 @@ if you want it to work without the API key. `genres` on a venue is the default t
 
 Claude calls use `claude-opus-5` by default; set `LIVEMUSIC_MODEL` to change it.
 
+## Feedback (optional)
+
+A "Feedback" button (bottom right, above the player bar when music plays; a "Something wrong with this concert?" link
+on the concert sheet) opens one free-form field. The message is posted to `feedback.url` of `web/config.js` with its
+context (page, concert open, active filters, screen, browser). The page holds no secret: the endpoint is either a
+Google Form (`fields` maps message / contact / context to the form's `entry.<id>` names) or any endpoint taking JSON.
+Empty `url` = no button. Sorting the messages into Linear "Feedback" issues happens outside the site (REM-56).
+
 ## Spotify (optional)
 
 Bandcamp needs no key. To also resolve Spotify artists, create an app on the Spotify developer dashboard and

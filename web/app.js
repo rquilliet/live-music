@@ -884,6 +884,86 @@
     ev.preventDefault();
   }
 
+  // ------------------------------------------------------------ feedback (REM-56)
+  // One free-form field; the message goes to the endpoint of config.js with the context needed to understand it (the
+  // concert open, the active filters, the screen). The triage happens elsewhere: nothing secret lives in the page.
+  const FB = { open: false, sending: false, about: null };
+  const FB_MIN = 5, FB_TIMEOUT = 12000;
+  let fbFocusBack = null;
+  function fbCfg() { return (window.LIP_CONFIG && window.LIP_CONFIG.feedback) || {}; }
+  function fbOn() { const c = fbCfg(); return /^https?:\/\//.test(c.url || "") && (!c.fields || !!c.fields.message); }
+  function fbContext() {
+    const e = FB.about, f = {};
+    ["genres", "styles", "venues"].forEach(k => { if (state[k].length) f[k] = state[k]; });
+    if (state.q) f.q = state.q;
+    ["newOnly", "mine", "myVenues", "myArtists", "near"].forEach(k => { if (state[k]) f[k] = true; });
+    return {
+      page: location.origin + location.pathname + (e ? "?e=" + e.id : ""),
+      concert: e ? { id: e.id, title: e.title, venue: e.venue, date: e.date, url: e.url || null } : null,
+      filters: f, screen: `${innerWidth}x${innerHeight}`, browser: navigator.userAgent, lang: navigator.language,
+      programme: DATA.generated_at || null, sent_at: new Date().toISOString(),
+    };
+  }
+  async function fbPost(message, contact) {
+    const c = fbCfg(), context = JSON.stringify(fbContext());
+    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), FB_TIMEOUT);
+    try {
+      if (c.fields) {   // Google Form: form-encoded, opaque answer — a network failure is the only error we can see
+        const body = new URLSearchParams();
+        body.set(c.fields.message, message);
+        if (contact && c.fields.contact) body.set(c.fields.contact, contact);
+        if (c.fields.context) body.set(c.fields.context, context);
+        await fetch(c.url, { method: "POST", mode: "no-cors", body, signal: ctl.signal });
+        return;
+      }
+      const r = await fetch(c.url, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(Object.assign({}, c.extra, { message, contact, context })), signal: ctl.signal });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+    } finally { clearTimeout(t); }
+  }
+  function fbShow(done) { $("#fbask").hidden = done; $("#fbdone").hidden = !done; }
+  function fbError(msg) { const el = $("#fberr"); el.textContent = msg; el.hidden = !msg; }
+  function openFb() {
+    if (FB.open || !fbOn()) return;
+    FB.open = true; FB.about = current; fbFocusBack = document.activeElement; closeSpMenu(); closeTa(); closeGenres();
+    const e = FB.about, about = $("#fbabout");
+    about.hidden = !e;
+    if (e) about.textContent = `About: ${e.title} · ${e.venue} · ${fmtShort(parseISO(e.date))}`;
+    fbShow(false); fbError("");
+    const d = $("#fbdialog"); cancelExit(d); d.hidden = false;
+    $("#fbtext").focus();
+  }
+  function closeFb() {
+    if (!FB.open || FB.sending) return;   // the answer of a request in flight lands in this dialog
+    FB.open = false;
+    const d = $("#fbdialog"); exitThen(d, "out", 120, () => { d.hidden = true; });
+    if (fbFocusBack && fbFocusBack.isConnected) fbFocusBack.focus();
+  }
+  // Tab stays inside the dialog (it is modal).
+  function fbTrap(ev) {
+    if (ev.key !== "Tab") return;
+    const f = $$("#fbform button, #fbform textarea, #fbform input:not(.hp)").filter(el => el.offsetParent !== null && !el.disabled);
+    const first = f[0], last = f[f.length - 1];
+    if (!f.includes(document.activeElement)) { ev.preventDefault(); first.focus(); }
+    else if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+    else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+  }
+  async function fbSubmit() {
+    if (FB.sending) return;
+    const text = $("#fbtext").value.trim(), mail = $("#fbmail").value.trim();
+    if (text.length < FB_MIN) { fbError("A few words, please."); $("#fbtext").focus(); return; }
+    if (mail && !$("#fbmail").checkValidity()) { fbError("That email does not look right (you can leave it empty)."); $("#fbmail").focus(); return; }
+    const btn = $("#fbsend");
+    FB.sending = true; btn.disabled = true; btn.textContent = "Sending…"; fbError("");
+    try {
+      if (!$("#fbsite").value) await fbPost(text, mail);   // a filled trap field is a bot: same thank-you, nothing sent
+      $("#fbtext").value = "";
+      fbShow(true); $("#fbok").focus();
+    } catch {
+      fbError("Could not send it. Your text is kept: check the connection and try again.");   // the text stays in the field
+    } finally { FB.sending = false; btn.disabled = false; btn.textContent = "Send"; }
+  }
+
   // ------------------------------------------------------------ detail sheet
   const detail = $("#detail"), sheet = $(".sheet", detail), hero = $("#hero");
   let current = null;
@@ -946,7 +1026,8 @@
       ${blurbHtml(e)}
       ${artists.length > 1 ? `<div class="listen"><h3>Listen</h3><div class="artist-pick" role="group" aria-label="Artist">${artists.map((a, i) =>
         `<button type="button" class="${i === i0 ? "on" : ""}" aria-pressed="${i === i0}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}
-      <div id="artist"></div>`;
+      <div id="artist"></div>
+      ${fbOn() ? `<button type="button" class="link fbreport" data-feedback>Something wrong with this concert? Tell us</button>` : ""}`;
     renderStatus();
     // Multi-artist show: the pills switch the player (cross-fade), the active one is filled.
     $$(".artist-pick button", detail).forEach(b => b.onclick = () => {
@@ -1093,6 +1174,8 @@
   // reading a concert never cuts the music. ✕ dismisses the dock; its title reopens the concert; ‹ › walk the acts.
   const dock = $("#dock");
   const DOCK = { e: null, name: null, artists: [], key: "" };
+  // The dock's height changes with the player and the screen: --dockh keeps the Feedback button right above it.
+  if (window.ResizeObserver) new ResizeObserver(() => document.documentElement.style.setProperty("--dockh", `${dock.offsetHeight}px`)).observe(dock);
   let sheetArtists = [];   // the acts of the open sheet, in pill order
   function dockVia(p, dz) { return p.spotify ? "spotify" : p.bandcampEmbed ? "bandcamp" : dz ? "deezer" : ""; }
   // Compact embeds: Spotify's 80px player, Bandcamp's slim "size=small" bar, Deezer without the track list.
@@ -1327,6 +1410,14 @@
     const e = DATA.events.find(x => x.id === row.dataset.id); if (e) openDetail(e);
   };
   $("#close").onclick = closeDetail;
+  // feedback (REM-56)
+  $("#fab").hidden = !fbOn();
+  $("#fab").onclick = openFb;
+  let fbDown = null;   // a text selection dragged out of the box ends on the veil: only a click that started there closes
+  $("#fbdialog").onmousedown = ev => { fbDown = ev.target; };
+  $("#fbdialog").onclick = ev => { if ((ev.target.id === "fbdialog" && fbDown === ev.target) || ev.target.closest("#fbclose, #fbok")) closeFb(); };
+  $("#fbform").onsubmit = ev => { ev.preventDefault(); fbSubmit(); };
+  $("#fbtext").onkeydown = ev => { if (ev.key === "Enter" && (ev.metaKey || ev.ctrlKey)) { ev.preventDefault(); fbSubmit(); } };
   // player dock (REM-10)
   $("#dinfo").onclick = () => { if (DOCK.e) openDetail(DOCK.e); };
   $("#dclose").onclick = dockClose;
@@ -1339,6 +1430,7 @@
     if (vn) { const v = vn.dataset.venue; closeDetail(); if (!state.venues.includes(v)) state.venues = [...state.venues, v]; render(); return; }
     const star = ev.target.closest("[data-fav]");
     if (star) { toggleFav(star.dataset.fav); star.outerHTML = favBtn(star.dataset.fav); replay($(".venue .star", detail), "pop"); render(); return; }
+    if (ev.target.closest("[data-feedback]")) { openFb(); return; }
     if (ev.target.closest("[data-dockplay]")) { if (current) dockLoad(artistShown, current, sheetArtists); return; }   // take the dock over (REM-10)
     if (ev.target.closest("#statusbtn")) { menuOpen ? closeMenu() : openMenu(); return; }
     const item = ev.target.closest("#statusmenu [data-status]"); if (item) pickStatus(item.dataset.status);
@@ -1349,6 +1441,7 @@
   });
   // ⌘K / Ctrl+K / "/" focus the bar; Escape closes whatever is open (typeahead, panel, status menu, sheet).
   document.addEventListener("keydown", ev => {
+    if (FB.open) { if (ev.key === "Escape") closeFb(); else fbTrap(ev); return; }   // modal: no ⌘K or "/" behind it
     const inField = /^(INPUT|SELECT|TEXTAREA)$/.test(ev.target.tagName);
     if ((ev.metaKey || ev.ctrlKey) && !ev.altKey && ev.key.toLowerCase() === "k") { ev.preventDefault(); focusSearch(); return; }
     if (ev.key === "/" && !inField && !ev.metaKey && !ev.ctrlKey && !ev.altKey) { ev.preventDefault(); focusSearch(); return; }
