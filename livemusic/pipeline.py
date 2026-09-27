@@ -7,6 +7,7 @@ import os
 import re
 import time
 import traceback
+from collections import defaultdict
 
 from . import genres as G
 from . import players as P
@@ -25,6 +26,7 @@ PLAYER_CACHE = os.path.join(DATA, "player_cache.json")
 OUT_PATH = os.path.join(WEB, "events.json")
 HORIZON_DAYS = 120
 NEW_WINDOW_DAYS = 7
+RENAME_DAYS = 3        # a show renamed after a gap longer than this counts as a new one
 STALE_MAX_DAYS = 14   # a source failing longer than this loses its carried-over events (closed venue, dead site)
 VENUE_MATCH_KM = 0.15
 
@@ -354,7 +356,8 @@ def merge(events, log=print):
 # ------------------------------------------------------------------ first-seen tracking
 
 def load_state():
-    """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date}},
+    """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date,
+    "venue": slug, "last": date last scraped}},
     "venues": [slugs ever scraped], "counts": {venue name: events last time it succeeded},
     "last_ok": {venue name: date of its last successful scrape}}."""
     state = {"ids": {}, "venues": [], "counts": {}, "last_ok": {}}
@@ -380,15 +383,28 @@ def track_seen(events, today, state, report):
       that only had open-data events before) gets 'baseline': its whole programme is not "new".
     * Only events whose date is past are pruned, so a source failing one day does not make its
       programme look new the next day.
+    * A venue editing a title ("Trio" -> "Trio feat. X") changes the id. When exactly one id seen in the
+      last RENAME_DAYS days vanished and exactly one new id appeared at the same venue and date, the
+      new one is the renamed show and inherits its first_seen instead of being "new".
     """
     ids, known = state["ids"], set(state["venues"])
     stamp = today.isoformat()
+    recent = (today - dt.timedelta(days=RENAME_DAYS)).isoformat()
+    gone, added = defaultdict(list), defaultdict(list)
+    current = {e.id for e in events}
+    for k, v in ids.items():
+        if k not in current and v.get("venue") and v.get("last", "") >= recent:
+            gone[v["venue"], v["date"]].append(k)
+    for e in events:
+        if e.id not in ids:
+            added[e.venue_slug, e.date].append(e.id)
     for e in events:
         key = f"{e.source}:{e.venue_slug}"
         if e.id not in ids:
-            ids[e.id] = {"first_seen": stamp if key in known else "baseline", "date": e.date}
-        else:
-            ids[e.id]["date"] = e.date
+            old, new = gone.get((e.venue_slug, e.date), []), added[e.venue_slug, e.date]
+            first = ids.pop(old[0])["first_seen"] if len(old) == 1 and len(new) == 1 else stamp if key in known else "baseline"
+            ids[e.id] = {"first_seen": first}
+        ids[e.id].update(date=e.date, venue=e.venue_slug, last=stamp)
     cutoff = today.isoformat()
     ids = {k: v for k, v in ids.items() if v.get("date", "9999") >= cutoff}
     counts, last_ok = dict(state["counts"]), dict(state["last_ok"])

@@ -141,6 +141,11 @@
     const age = (Date.now() - parseISO(e.first_seen).getTime()) / 864e5;
     return age <= (DATA.new_window_days || 7);
   }
+  function addedAgo(e) {   // "Added 3 days ago" in the sheet; nothing for a venue's first-scrape baseline
+    if (!e.first_seen || e.first_seen === "baseline") return "";
+    const d = Math.round((today0().getTime() - parseISO(e.first_seen).getTime()) / 864e5);
+    return `Added ${d <= 0 ? "today" : d === 1 ? "yesterday" : d + " days ago"}`;
+  }
   // Headliner + support acts (computed by the scraper; split the title for older events.json files).
   function lineup(e) {
     if (e.headliner) return [e.headliner, ...(e.support || [])];
@@ -929,7 +934,7 @@
     const tile = ticketTile(e);
     sheetArtists = artists;
     const i0 = DOCK.e === e ? Math.max(0, artists.indexOf(DOCK.name)) : 0;   // reopened from the dock: start on the act playing
-    const meta = [tile.ticket || !price || price === "paid" ? "" : esc(price), subHtml(e, 4)].filter(Boolean).join(" · ");
+    const meta = [tile.ticket || !price || price === "paid" ? "" : esc(price), subHtml(e, 4), addedAgo(e)].filter(Boolean).join(" · ");
     $("#detail-body").innerHTML = `
       <div class="actions${tile.html ? "" : " three"}">
         ${tile.html}
