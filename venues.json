@@ -28,7 +28,7 @@
   {"name": "Supersonic", "slug": "supersonic", "strategy": "tribe", "url": "https://supersonic-club.fr",
    "address": "9 rue Biscornet, 75012 Paris", "area": "Bastille", "lat": 48.8514, "lon": 2.3706, "genres": ["rock", "indie"]},
   {"name": "Dernier Bar avant la Fin du Monde", "slug": "dernier-bar-avant-la-fin-du-monde", "strategy": "dernierbar", "url": "https://dernierbar.com/pages/paris",
-   "address": "19 avenue Victoria, 75001 Paris", "area": "Châtelet", "lat": 48.8577, "lon": 2.3473},
+   "address": "19 avenue Victoria, 75001 Paris", "area": "Châtelet", "lat": 48.8577, "lon": 2.3473, "geo_match": false},
   {"name": "La Pointe Lafayette", "slug": "la-pointe-lafayette", "strategy": "manual", "url": "https://www.facebook.com/lapointelafayetteofficielle/",
    "address": "230 rue La Fayette, 75010 Paris", "area": "Jaurès", "lat": 48.8826, "lon": 2.3699, "genres": ["rock", "indie"]},
   {"name": "Sunset / Sunside", "slug": "sunset-sunside", "strategy": "tribe", "url": "https://www.sunset-sunside.com",
