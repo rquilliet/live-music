@@ -5,6 +5,30 @@ from livemusic import genres as G
 from livemusic.model import Event
 
 
+class RuleTests(unittest.TestCase):
+    def test_post_punk_is_not_punk(self):
+        self.assertEqual(G.tags_from_site("Darkwave, Post-punk"), ["indie"])
+        self.assertEqual(G.tags_from_site("post punk"), ["indie"])
+        self.assertEqual(G.tags_from_site("Darkwave"), ["indie"])
+        self.assertEqual(G.tags_from_site("Cold wave / Goth"), ["indie"])
+        self.assertEqual(G.tags_from_site("Concert, Rock, Punk"), ["punk", "rock"])
+        self.assertEqual(G.tags_from_site("bedroom punk / emo pop"), ["punk", "indie", "pop"])
+        self.assertEqual(G.tags_from_site("Post-punk, Punk"), ["punk", "indie"])
+        self.assertEqual(G.tags_from_site("Synth wave"), ["electro"])
+        self.assertEqual(G.tags_from_site("Post–punk"), ["indie"])          # en dash
+        self.assertEqual(G.tags_from_site("post- punk"), ["indie"])
+        self.assertEqual(G.tags_from_site("Gothenburg melodic death metal"), ["metal"])
+        self.assertEqual(G.tags_from_site("Gothic metal"), ["metal"])
+        self.assertEqual(G.tags_from_site("New Wave of British Heavy Metal"), ["metal"])
+        self.assertEqual(G.tags_from_site("Visigoth"), [])
+        self.assertEqual(G.tags_from_site("Rock gothique"), ["indie", "rock"])
+
+    def test_titles(self):
+        self.assertEqual(G.tags_from_text("Soirée post-punk"), ["indie"])
+        self.assertEqual(G.tags_from_text("Nuit punk hardcore"), ["punk"])
+        self.assertEqual(G.tags_from_text("Post-hardcore night"), ["punk"])
+
+
 class SubgenreTests(unittest.TestCase):
     def test_venue_descriptors_become_labels(self):
         self.assertEqual(G.subgenres_from_site("Metal, Punk, Heavy Metal, Hard Rock et assimilés"), ["heavy metal", "hard rock"])

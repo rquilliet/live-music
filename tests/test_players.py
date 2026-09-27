@@ -106,6 +106,8 @@ class BandcampParsingTests(unittest.TestCase):
         self.assertEqual(P.parse_page_properties(TRACK_PAGE), ("t", 99))
         self.assertIsNone(P.parse_page_properties(DISCOGRAPHY))
         self.assertIsNone(P.parse_page_properties('<meta name="bc-page-properties" content="{&quot;item_type&quot;:&quot;b&quot;,&quot;item_id&quot;:5}">'))
+        self.assertIsNone(P.parse_page_properties('<meta name="bc-page-properties" content="null">'))
+        self.assertIsNone(P.parse_page_properties('<meta name="bc-page-properties" content="[1]">'))
         self.assertEqual(P.first_release_link(DISCOGRAPHY, BAND), BAND + "/album/data-doom")
         self.assertEqual(P.first_release_link('<a href="https://elsewhere.bandcamp.com/album/z">z</a><a href="https://a.bandcamp.com/track/t">', "https://a.bandcamp.com/"),
                          "https://a.bandcamp.com/track/t")
@@ -265,6 +267,24 @@ class ResolveTests(unittest.TestCase):
         self.run_resolve([gig], http, credentials=("id", "wrong"))
         self.assertIn("bandcamp", gig.players["Frankie and the Witch Fingers"])
         self.assertTrue(any("Spotify auth failed" in m for m in self.logs))
+
+    def test_an_odd_answer_for_one_artist_does_not_stop_the_others(self):
+        calls = []
+
+        def resolve_bandcamp(name, **kw):
+            calls.append(name)
+            if name == "Odd":
+                raise AttributeError("'NoneType' object has no attribute 'get'")
+            return {"url": BAND}
+        orig, P.resolve_bandcamp = P.resolve_bandcamp, resolve_bandcamp
+        try:
+            events = [mk("Odd", "Odd"), mk("Fine", "Fine", date="2026-09-21")]
+            self.run_resolve(events, FakeHttp({}))
+        finally:
+            P.resolve_bandcamp = orig
+        self.assertEqual(calls, ["Odd", "Fine"])
+        self.assertEqual((events[0].players, events[1].players), ({}, {"Fine": {"bandcamp": {"url": BAND}}}))
+        self.assertTrue(any("bandcamp 'Odd'" in m for m in self.logs))
 
     def test_network_failures_are_logged_not_cached_and_bounded(self):
         http = FakeHttp({})  # everything fails
