@@ -361,6 +361,7 @@ body.docked .body { padding-bottom: 150px; }
 .skel { height: 10px; width: 38%; background: linear-gradient(90deg, var(--paper2) 25%, var(--line) 50%, var(--paper2) 75%); background-size: 200% 100%;
   animation: shimmer 1.4s linear infinite; }
 .muted { color: var(--muted); font-size: 13px; }
+.stale { font-size: 12px; font-style: italic; margin-top: 4px; }
 .blurb .link, .blurb .muted { font-size: 13px; white-space: nowrap; }
 .blurb .link { font-style: italic; }
 .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; }

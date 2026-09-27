@@ -436,7 +436,7 @@
     }
     const failed = (DATA.report || []).filter(r => !r.ok);
     if (failed.length) {
-      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}</div>`).join("")}</details>`;
+      html += `<details class="report"><summary>${failed.length} source(s) failed at the last scrape</summary>${failed.map(r => `<div>${esc(r.venue)} — ${esc(r.error)}${r.carried ? ` · showing its ${plural(r.carried, "event")} from ${fmtShort(parseISO(r.stale_since))}` : ""}</div>`).join("")}</details>`;
     }
     list.innerHTML = html;
   }
@@ -948,6 +948,7 @@
       </div>
       <div class="venue"><button type="button" class="vname" data-venue="${esc(e.venue)}" title="See the concerts at this venue"><b>${esc(e.venue)}</b></button>${favBtn(e.venue)}${e.area ? " · " + esc(e.area) : ""}${line2 ? `<br><span>${line2}</span>` : ""}</div>
       ${meta ? `<div class="muted meta">${meta}</div>` : ""}
+      ${e.stale_since ? `<div class="muted stale">Listing from ${fmtShort(parseISO(e.stale_since))}: the venue's site could not be read since.</div>` : ""}
       ${blurbHtml(e)}
       ${artists.length > 1 ? `<div class="listen"><h3>Listen</h3><div class="artist-pick" role="group" aria-label="Artist">${artists.map((a, i) =>
         `<button type="button" class="${i === i0 ? "on" : ""}" aria-pressed="${i === i0}" data-i="${i}">${esc(a)}</button>`).join("")}</div></div>` : ""}

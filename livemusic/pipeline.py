@@ -1,4 +1,5 @@
 """Run every source, merge duplicates, tag genres, resolve players, track first-seen dates, write web/events.json."""
+import dataclasses
 import datetime as dt
 import json
 import math
@@ -11,6 +12,7 @@ from . import genres as G
 from . import players as P
 from . import summaries as S
 from .fetch import FetchError
+from .model import Event
 from .sources import STRATEGIES
 from .util import norm_title, slugify, split_lineup, strip_accents
 
@@ -23,6 +25,7 @@ PLAYER_CACHE = os.path.join(DATA, "player_cache.json")
 OUT_PATH = os.path.join(WEB, "events.json")
 HORIZON_DAYS = 120
 NEW_WINDOW_DAYS = 7
+STALE_MAX_DAYS = 14   # a source failing longer than this loses its carried-over events (closed venue, dead site)
 VENUE_MATCH_KM = 0.15
 
 
@@ -60,6 +63,20 @@ def run(only=None, use_llm=True, players=True, log=print):
             and (not only or v["slug"] in only or v["strategy"] in only)]
     log(f"{len(todo)} sources to scrape, today is {today}")
 
+    previous = load_previous()
+
+    def failed(v, error):
+        """Keep the programme the source gave last time it worked rather than dropping the venue."""
+        kept, since = carry_over(v, previous, today, state["last_ok"].get(v["name"]))
+        entry = {"venue": v["name"], "ok": False, "error": error}
+        if kept:
+            entry.update(carried=len(kept), stale_since=since)
+            events.extend(kept)
+            log(f"  {v['name']}: kept {len(kept)} events from {since}")
+        elif since:
+            log(f"  {v['name']}: failing since {since}, nothing carried over (limit {STALE_MAX_DAYS} days)")
+        report.append(entry)
+
     for i, v in enumerate(todo, 1):
         fn = STRATEGIES.get(v["strategy"])
         if not fn:
@@ -70,19 +87,19 @@ def run(only=None, use_llm=True, players=True, log=print):
             got = fn(v, ctx)
         except FetchError as e:
             log(f"  {v['name']}: FETCH FAILED {e}")
-            report.append({"venue": v["name"], "ok": False, "error": str(e)})
+            failed(v, str(e))
             continue
         except Exception as e:  # a broken parser must not kill the run
             log(f"  {v['name']}: PARSER ERROR {e}")
             traceback.print_exc()
-            report.append({"venue": v["name"], "ok": False, "error": repr(e)})
+            failed(v, repr(e))
             continue
         kept = [e for e in got if e.is_valid(today, HORIZON_DAYS)]
-        previous = state["counts"].get(v["name"], 0)
-        if not kept and previous:
+        had = state["counts"].get(v["name"], 0)
+        if not kept and had:
             # a 200 page with nothing in it is a broken parser or a bot wall, not an empty programme
-            log(f"  {v['name']}: 0 events (had {previous}) -> treated as failure")
-            report.append({"venue": v["name"], "ok": False, "error": f"0 events parsed (was {previous})"})
+            log(f"  {v['name']}: 0 events (had {had}) -> treated as failure")
+            failed(v, f"0 events parsed (was {had})")
             continue
         log(f"  {v['name']}: {len(kept)} events" + (f" ({len(got) - len(kept)} outside window/invalid)" if len(got) != len(kept) else ""))
         report.append({"venue": v["name"], "ok": True, "count": len(kept)})
@@ -157,6 +174,41 @@ def low_coverage(scraped, report):
     strategy = {v["name"]: v["strategy"] for v in scraped}
     return [(r["venue"], r["count"]) for r in report
             if r["ok"] and r["count"] < LOW_COVERAGE and strategy.get(r["venue"]) != "opendata"]
+
+
+# ------------------------------------------------------------------ carry-over of failed sources
+
+def load_previous(path=None):
+    """The events.json of the last run, the only record of what a failing source used to publish."""
+    try:
+        with open(path or OUT_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def _from_source(d, v) -> bool:
+    """Did this event of the previous events.json come from venue config v? Open data covers many venues."""
+    return d.get("source") == v["strategy"] and (v["strategy"] == "opendata" or d.get("venue_slug") == v["slug"])
+
+
+_EVENT_FIELDS = {f.name for f in dataclasses.fields(Event)}
+
+
+def carry_over(v, previous, today, last_ok=None):
+    """(events, date) — the upcoming events source v gave at its last success, marked stale_since that
+    date, or ([], date) once the source has been failing for more than STALE_MAX_DAYS.
+
+    last_ok (seen.json) wins over the rows' own dates: merge() clears stale_since on a show another
+    source confirmed, which would otherwise restart the clock every day."""
+    rows = [d for d in previous.get("events", []) if _from_source(d, v) and d.get("date", "") >= today.isoformat()]
+    if not rows:
+        return [], None
+    # a row without stale_since was scraped fresh by the previous run
+    since = last_ok or min(d.get("stale_since") or previous.get("today") or today.isoformat() for d in rows)
+    if (today - dt.date.fromisoformat(since)).days > STALE_MAX_DAYS:
+        return [], since
+    return [Event(**dict({k: d[k] for k in d if k in _EVENT_FIELDS}, stale_since=since)) for d in rows], since
 
 
 # ------------------------------------------------------------------ venue identity
@@ -287,6 +339,8 @@ def merge(events, log=print):
                     if not getattr(dup, attr):
                         setattr(dup, attr, getattr(e, attr))
                 dup.free = dup.free or e.free
+                if not e.stale_since:   # another source confirmed the show today
+                    dup.stale_since = None
                 if dup.lat is None:
                     dup.lat, dup.lon = e.lat, e.lon
             else:
@@ -301,8 +355,9 @@ def merge(events, log=print):
 
 def load_state():
     """seen.json: {"ids": {id: {"first_seen": date|"baseline", "date": event date}},
-    "venues": [slugs ever scraped], "counts": {venue name: events last time it succeeded}}."""
-    state = {"ids": {}, "venues": [], "counts": {}}
+    "venues": [slugs ever scraped], "counts": {venue name: events last time it succeeded},
+    "last_ok": {venue name: date of its last successful scrape}}."""
+    state = {"ids": {}, "venues": [], "counts": {}, "last_ok": {}}
     if os.path.exists(SEEN_PATH):
         with open(SEEN_PATH, "r", encoding="utf-8") as f:
             saved = json.load(f)
@@ -312,6 +367,7 @@ def load_state():
             state["ids"] = {k: (v if isinstance(v, dict) else {"first_seen": v, "date": "9999-12-31"}) for k, v in ids.items()}
             state["venues"] = saved.get("venues", [])
             state["counts"] = saved.get("counts", {})
+            state["last_ok"] = saved.get("last_ok", {})
         else:  # very first format: flat id -> date
             state["ids"] = {k: {"first_seen": v, "date": "9999-12-31"} for k, v in saved.items()}
     return state
@@ -335,12 +391,13 @@ def track_seen(events, today, state, report):
             ids[e.id]["date"] = e.date
     cutoff = today.isoformat()
     ids = {k: v for k, v in ids.items() if v.get("date", "9999") >= cutoff}
-    counts = dict(state["counts"])
+    counts, last_ok = dict(state["counts"]), dict(state["last_ok"])
     for r in report:
         if r["ok"]:
             counts[r["venue"]] = r["count"]
+            last_ok[r["venue"]] = stamp
     venues = sorted(known | {f"{e.source}:{e.venue_slug}" for e in events})
     os.makedirs(DATA, exist_ok=True)
     with open(SEEN_PATH, "w", encoding="utf-8") as f:
-        json.dump({"ids": ids, "venues": venues, "counts": counts}, f, indent=0)
+        json.dump({"ids": ids, "venues": venues, "counts": counts, "last_ok": last_ok}, f, indent=0)
     return {k: v["first_seen"] for k, v in ids.items()}

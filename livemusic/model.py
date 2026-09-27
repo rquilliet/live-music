@@ -52,6 +52,7 @@ class Event:
     lat: Optional[float] = None
     lon: Optional[float] = None
     is_music: bool = True
+    stale_since: Optional[str] = None  # carried over from an earlier run: date its source last answered (REM-46)
     id: str = ""
 
     def __post_init__(self):
