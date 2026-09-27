@@ -14,18 +14,16 @@
   const DAYS_SHORT = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const WALK_KMH = 4.5;
   // Extra words the search bar accepts for the coarse genres ("rap" -> Hip-hop, "techno" -> Electro, "classique" -> Classical): the French
   // names stay searchable now that the labels are English (REM-32).
   const TAG_ALIASES = { "hip-hop": "rap hip hop", "soul-rnb": "soul rnb r&b", electro: "électronique techno house", classical: "classique classical",
     experimental: "expérimental noise", world: "musiques du monde world music", chanson: "chanson française variété", latin: "latino", afro: "afrobeat" };
 
   let DATA = { events: [], tags: [], venues: [] };
-  let state = load({ genres: [], styles: [], venues: [], q: "", near: false, radius: 5, newOnly: false, mine: false, myVenues: false, myArtists: false });
+  let state = load({ genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, myArtists: false });
   const STATUS = { interested: { icon: "☆", svg: "star", label: "Interested" }, going: { icon: "✓", svg: "check", label: "Going" } };
   let status = loadStatus(); // {eventId: "interested" | "going"} — REM-18 "Interested? / Going"
   let favVenues = loadFavs(); // favourite venue names (★ on the sheet), localStorage "lip-venues" — REM-28 "Mes salles"
-  let me = null; // {lat, lon}
   let stylesOpen = false;  // "+N autres" expanded in the Genres panel (not persisted)
   let genresOpen = false;  // Genres panel under the "Genres ▾" pill
   let taOpen = false;      // typeahead listbox under the search bar
@@ -66,9 +64,8 @@
     s.genres = strings(s.genres); s.styles = strings(s.styles); s.venues = strings(s.venues);
     if (typeof s.venue === "string" && s.venue && !s.venues.length) s.venues = [s.venue];   // single-venue dropdown from the previous UI
     s.q = typeof s.q === "string" ? s.q.trim() : "";
-    s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.myVenues = s.myVenues === true; s.myArtists = s.myArtists === true; s.near = s.near === true;
-    if (![2, 5, 10, 25, 1000].includes(Number(s.radius))) s.radius = 5;
-    ["tab", "free", "others", "saved", "venue", "week"].forEach(k => delete s[k]);   // week: the ‹ › offset of the one-week view (gone, REM-35)
+    s.newOnly = s.newOnly === true; s.mine = s.mine === true; s.myVenues = s.myVenues === true; s.myArtists = s.myArtists === true;
+    ["tab", "free", "others", "saved", "venue", "week", "near", "radius"].forEach(k => delete s[k]);   // week: the ‹ › offset of the one-week view (gone, REM-35); near / radius: "Near me" (gone, REM-62)
     return s;
   }
   function save() { try { localStorage.setItem("lip-state", JSON.stringify(state)); } catch {} }
@@ -125,11 +122,6 @@
     return (mon.getMonth() === sun.getMonth() ? `${mon.getDate()} – ${sun.getDate()} ${M[mon.getMonth()]}` : `${f(mon)} – ${f(sun)}`) + year;
   }
   function esc(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
-  function km(a, b) {
-    const R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180, dLon = (b.lon - a.lon) * Math.PI / 180;
-    const x = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * Math.PI / 180) * Math.cos(b.lat * Math.PI / 180) * Math.sin(dLon / 2) ** 2;
-    return 2 * R * Math.asin(Math.sqrt(x));
-  }
   function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
   function plural(n, w) { return `${n} ${w}${n > 1 ? "s" : ""}`; }
 
@@ -162,11 +154,6 @@
     const f = n => Number.isInteger(n) ? String(n) : n.toFixed(2);
     const lo = Math.min(...nums), hi = Math.max(...nums);
     return lo === hi ? `${f(lo)} €` : `${f(lo)}–${f(hi)} €`;
-  }
-  function walk(e) {
-    if (!(state.near && me && e.lat != null)) return "";
-    const d = km(me, e), min = Math.round(d / WALK_KMH * 60);
-    return min <= 90 ? `${min} min walk` : `${d.toFixed(d < 10 ? 1 : 0)} km`;
   }
 
   // "Agenda Google" link: floating local time in Europe/Paris, 2h30 long, or an all-day event when the time is unknown.
@@ -237,10 +224,6 @@
       const q = norm(state.q);
       if (!norm(`${e.title} ${e.venue} ${e.area || ""} ${e.raw_genre || ""} ${(e.subgenres || []).join(" ")} ${e.description || ""} ${e.summary || ""}`).includes(q)) return false;
     }
-    if (state.near && me) {
-      if (e.lat == null || e.lon == null) return false;
-      if (km(me, e) > Number(state.radius)) return false;
-    }
     return true;
   }
   function visible() { const r = range(); return DATA.events.filter(e => baseFilter(e) && inFrame(e, r)); }
@@ -298,8 +281,7 @@
     const h = $$(".monthhead").find(x => x.dataset.m === m); if (!h) return;
     window.scrollTo({ top: h.getBoundingClientRect().top + scrollY - $(".weeknav").offsetHeight + 1, behavior: motionOK() ? "smooth" : "auto" });   // tucked 1px under the strip: spy() counts it as in view
   }
-  // The pills: Genres ▾ (badge = active genres + styles), Nouveautés, Mes concerts, Mes salles (badge = favourite venues),
-  // Près de moi (+ radius once active).
+  // The pills: Genres ▾ (badge = active genres + styles), Nouveautés, Mes concerts, Mes salles (badge = favourite venues).
   function renderPills() {
     const t = isoDate(today0());
     const nNew = DATA.events.filter(e => e.is_music && e.date >= t && isNew(e)).length, nG = state.genres.length + state.styles.length;
@@ -309,9 +291,6 @@
     const g = $("#gbtn");
     g.classList.toggle("on", nG > 0); g.setAttribute("aria-expanded", String(genresOpen));
     $("small", g).textContent = nG || ""; $(".car", g).textContent = genresOpen ? "▴" : "▾";
-    const near = $("#near");
-    near.classList.toggle("on", state.near); near.setAttribute("aria-pressed", String(state.near)); $("span", near).textContent = "Near me";
-    $("#radius").hidden = !state.near; $("#radius").value = state.radius;
     renderGenrePanel();
   }
   // Genres panel: the 19 genres with the counts of the frame, then (once a genre or a style is picked) the styles found
@@ -406,7 +385,7 @@
     return `<div class="gig${e.cancelled ? " cancelled" : ""}" data-id="${e.id}">
       <time>${fmtTime(e.time)}</time>
       <div class="who">${esc(head)}${sup.length ? `<span>${esc(sup.join(", "))}</span>` : ""}</div>
-      <div class="where">${esc([e.venue, e.area, walk(e)].filter(Boolean).join(" · "))}</div>
+      <div class="where">${esc([e.venue, e.area].filter(Boolean).join(" · "))}</div>
       <div class="tags">${price}${genre ? `<span class="tag">${TAG_LABELS[genre] || genre}</span>` : ""}${subHtml(e)}${statusTags(e)}</div>
     </div>`;
   }
@@ -430,7 +409,7 @@
   function renderList() {
     let evs = visible();
     const byTime = (a, b) => (a.time || "99:99").localeCompare(b.time || "99:99");
-    evs = evs.slice().sort((a, b) => a.date.localeCompare(b.date) || (state.near && me ? km(me, a) - km(me, b) : byTime(a, b)));
+    evs = evs.slice().sort((a, b) => a.date.localeCompare(b.date) || byTime(a, b));
     const list = $("#list");
     if (!DATA.events.length) {
       list.innerHTML = '<div class="empty">No events. Run <code>python scrape.py</code> to fill the programme.</div>';
@@ -633,7 +612,7 @@
     render();
   }
   function clearAll() {
-    state = { ...state, genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, myArtists: false, near: false };
+    state = { ...state, genres: [], styles: [], venues: [], q: "", newOnly: false, mine: false, myVenues: false, myArtists: false };
     stylesOpen = false; $("#gsq").value = ""; $("#search").value = "";
     render(); renderTa();
   }
@@ -680,6 +659,7 @@
   const SP_AUTH = "https://accounts.spotify.com", SP_API = "https://api.spotify.com/v1", SP_SCOPE = "user-library-read";
   const SP_TTL = 24 * 3600e3, SP_PAGES = 200;   // library cache lifetime; 200 pages of 50 = 10 000 liked songs at most
   const SP = { tok: spRead("lip-spotify"), lib: spRead("lip-spotify-artists"), keys: new Set(), long: [], ids: new Set(), hits: new Map(), busy: false, error: "", open: false, menu: false };
+  const ACC_ICON = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c.9-3.7 3.9-5.6 7.5-5.6s6.6 1.9 7.5 5.6"/></svg>';   // account icon while no avatar (REM-62)
   const SP_ICON = '<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M6.8 9.4c3.7-1.1 7.6-.7 10.7 1.2M7.4 12.6c3-.9 6.1-.5 8.6 1M8 15.6c2.3-.7 4.6-.4 6.5.8"/></svg>';
   function spRead(k) { try { const v = JSON.parse(localStorage.getItem(k) || "null"); return v && typeof v === "object" ? v : null; } catch { return null; } }
   function spWrite(k, v) { try { if (v) localStorage.setItem(k, JSON.stringify(v)); else localStorage.removeItem(k); } catch {} }
@@ -842,10 +822,14 @@
     const b = $("#myartists"), on = state.myArtists && spLinked();
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on));
     $("small", b).textContent = SP.busy ? "…" : spLinked() && DATA.events.length ? spCount() || "" : "";
-    b.title = spLinked() ? "Concerts by the artists of my liked songs on Spotify (right-click or ↓: my account)" : "Connect Spotify to see the concerts of the artists of my liked songs";
+    b.title = spLinked() ? "Concerts by the artists of my liked songs on Spotify" : "Connect Spotify to see the concerts of the artists of my liked songs";
+    // Account icon, top right of the masthead (REM-62): the avatar once Spotify is linked, else a generic glyph that opens the connect dialog.
     const me = $("#spme");
-    me.hidden = !spLinked();
-    if (spLinked()) { me.innerHTML = SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : "…"; me.setAttribute("aria-expanded", String(SP.menu)); }
+    me.innerHTML = spLinked() && SP.tok.avatar ? `<img src="${esc(SP.tok.avatar)}" alt="">` : ACC_ICON;
+    me.title = spLinked() ? "My account" : "Connect Spotify"; me.setAttribute("aria-label", me.title);
+    me.setAttribute("aria-haspopup", spLinked() ? "menu" : "dialog");
+    if (spLinked()) { me.setAttribute("aria-controls", "spmenu"); me.setAttribute("aria-expanded", String(SP.menu)); }
+    else { me.removeAttribute("aria-controls"); me.removeAttribute("aria-expanded"); }
     renderSpMenu();
   }
   function spAccountHtml(cls) {
@@ -865,12 +849,12 @@
   }
   function placeSpMenu() {
     const m = $("#spmenu"); if (m.hidden) return;
-    const b = $("#myartists").getBoundingClientRect(), r = $("#hrow").getBoundingClientRect();
+    const b = $("#spme").getBoundingClientRect(), r = $("#hrow").getBoundingClientRect();   // under the icon, right edges aligned
     m.style.top = `${Math.round(b.bottom - r.top + 8)}px`;
-    m.style.left = `${Math.round(Math.max(0, Math.min(b.left - r.left, r.width - m.offsetWidth)))}px`;
+    m.style.left = `${Math.round(Math.max(0, Math.min(b.right - r.left - m.offsetWidth, r.width - m.offsetWidth)))}px`;
   }
   function openSpMenu() { if (SP.menu || !spLinked()) return; SP.menu = true; closeTa(); closeGenres(); renderSpPill(); const f = $("#spmenu button"); if (f) f.focus(); }
-  function closeSpMenu(refocus) { if (!SP.menu) return; SP.menu = false; renderSpPill(); if (refocus) $("#myartists").focus(); }
+  function closeSpMenu(refocus) { if (!SP.menu) return; SP.menu = false; renderSpPill(); if (refocus) $("#spme").focus(); }
   let spFocusBack = null;
   function openSp() {
     if (SP.open) return;
@@ -919,7 +903,7 @@
     const e = FB.about, f = {};
     ["genres", "styles", "venues"].forEach(k => { if (state[k].length) f[k] = state[k]; });
     if (state.q) f.q = state.q;
-    ["newOnly", "mine", "myVenues", "myArtists", "near"].forEach(k => { if (state[k]) f[k] = true; });
+    ["newOnly", "mine", "myVenues", "myArtists"].forEach(k => { if (state[k]) f[k] = true; });
     return {
       page: location.origin + location.pathname + (e ? "?e=" + e.id : ""),
       concert: e ? { id: e.id, title: e.title, venue: e.venue, date: e.date, url: e.url || null } : null,
@@ -1028,7 +1012,7 @@
     const artists = e.headliner ? [head, ...sup] : splitArtists(e.title);
     const price = e.free ? "Free" : shortPrice(e.price);
     const maps = e.lat != null && e.lon != null ? `<a href="https://www.google.com/maps?q=${Number(e.lat)},${Number(e.lon)}" target="_blank" rel="noopener">Directions ↗</a>` : "";
-    const line2 = [e.address ? esc(e.address) : "", maps, esc(walk(e))].filter(Boolean).join(" · ");
+    const line2 = [e.address ? esc(e.address) : "", maps].filter(Boolean).join(" · ");
     const tile = ticketTile(e);
     sheetArtists = artists;
     const i0 = DOCK.e === e ? Math.max(0, artists.indexOf(DOCK.name)) : 0;   // reopened from the dock: start on the act playing
@@ -1389,28 +1373,16 @@
   $("#newonly").onclick = () => { state.newOnly = !state.newOnly; render(); };
   $("#mine").onclick = () => { state.mine = !state.mine; render(); };
   $("#myvenues").onclick = () => { state.myVenues = !state.myVenues; render(); };
-  // Mes artistes (REM-9): one tap toggles the filter once Spotify is linked, else opens the connect dialog; the account
-  // menu sits behind the avatar button, a right-click or ↓ on the pill.
+  // Mes artistes (REM-9): one tap toggles the filter once Spotify is linked, else opens the connect dialog. The account
+  // menu sits behind the account icon at the top right (REM-62).
   $("#myartists").onclick = () => { if (!spLinked()) { openSp(); return; } state.myArtists = !state.myArtists; render(); };
-  $("#myartists").oncontextmenu = ev => { if (spLinked()) { ev.preventDefault(); SP.menu ? closeSpMenu() : openSpMenu(); } };
-  $("#myartists").onkeydown = ev => { if (ev.key === "ArrowDown" && spLinked() && !SP.menu) { ev.preventDefault(); openSpMenu(); } };
-  $("#spme").onclick = () => SP.menu ? closeSpMenu() : openSpMenu();
+  $("#spme").onclick = () => { if (!spLinked()) { openSp(); return; } SP.menu ? closeSpMenu() : openSpMenu(); };
   $("#spmenu").onclick = spAction; $("#spmenu").onkeydown = spMenuKeys;
   $("#spdialog").onclick = ev => { if (ev.target.id === "spdialog" || ev.target.closest("#spclose")) closeSp(); else spAction(ev); };
-  document.addEventListener("error", ev => {   // unreachable avatar -> "…" on the button, the glyph in the menu / dialog
+  document.addEventListener("error", ev => {   // unreachable avatar -> the account glyph on the button, the glyph in the menu / dialog
     const img = ev.target; if (!(img.tagName === "IMG" && img.closest("#spme, .spwho"))) return;
-    if (img.parentElement.id === "spme") img.parentElement.textContent = "…"; else img.outerHTML = `<span class="spav">${SP_ICON}</span>`;
+    if (img.parentElement.id === "spme") img.parentElement.innerHTML = ACC_ICON; else img.outerHTML = `<span class="spav">${SP_ICON}</span>`;
   }, true);
-  $("#radius").onchange = ev => { state.radius = ev.target.value; render(); };
-  $("#near").onclick = () => {
-    if (state.near) { state.near = false; render(); return; }
-    if (!navigator.geolocation) { alert("Geolocation unavailable"); return; }
-    $("#near span").textContent = "…";
-    navigator.geolocation.getCurrentPosition(pos => {
-      me = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-      state.near = true; render();
-    }, () => { render(); alert("Location denied"); }, { timeout: 10000 });
-  };
   // Outside clicks close the popovers. composedPath() rather than closest(): a click on a pill re-renders it, so by the
   // time the event reaches the document the target may be detached and closest() would see it as "outside".
   document.addEventListener("click", ev => {
@@ -1418,7 +1390,7 @@
     if (taOpen && !within("sbar")) closeTa();
     if (genresOpen && !within("gbtn", "gpanel")) closeGenres();
     if (menuOpen && !within("status")) closeMenu();
-    if (SP.menu && !within("myartists", "spme", "spmenu")) closeSpMenu();
+    if (SP.menu && !within("spme", "spmenu")) closeSpMenu();
   });
   addEventListener("resize", () => { if (genresOpen) placePanel(); if (SP.menu) placeSpMenu(); });
   MOBILE.addEventListener("change", () => { if (!MOBILE.matches) document.body.classList.remove("searching"); else if (taOpen) closeTa(true); render(); });   // short / long week labels
@@ -1480,7 +1452,6 @@
   }).then(d => {
     if (!d) return;
     DATA = d;
-    state.near = false; // ask for the position again on each visit
     buildIndex(); renderMeta(); render(); renderTa();
     // Shareable link straight to a concert: ?e=<id> (what we hand out since REM-29) or the older #e=<id>.
     const m = /[?&]e=([a-f0-9]+)/.exec(location.search) || /^#e=([a-f0-9]+)/.exec(location.hash);
