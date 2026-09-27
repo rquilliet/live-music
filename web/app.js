@@ -253,19 +253,22 @@
 
   // ------------------------------------------------------------ rendering
   // The sticky strip (REM-35) is the month heading: the month in view with its year, and one button per month of the
-  // programme that scrolls to its start. The list itself only holds empty .monthhead anchors; spy() keeps the label and
-  // the active button in step with the scroll position.
+  // programme that scrolls to its start. In the list every month but the first opens on a .monthhead heading (REM-69: two
+  // months can share a screen under a narrow filter); spy() hands a month to the label and to the active button once its
+  // heading has slid under the strip.
   let months = [];   // "YYYY-MM" keys of the months listed, in order (set by renderList)
   const yearOf = m => m.slice(0, 4) !== String(today0().getFullYear()) ? " " + m.slice(0, 4) : "";   // the year only when it is not this one
   function renderNav() {
-    $("#months").innerHTML = months.map(m => `<button type="button" data-m="${m}">${MONTHS_SHORT[+m.slice(5) - 1]}${yearOf(m)}</button>`).join("");
+    // the year once, ahead of its first month, rather than in every button (REM-69)
+    $("#months").innerHTML = months.map((m, i) => (yearOf(m) && (!i || months[i - 1].slice(0, 4) !== m.slice(0, 4)) ? `<span class="yr">${m.slice(0, 4)}</span>` : "")
+      + `<button type="button" data-m="${m}" aria-label="${MONTHS[+m.slice(5) - 1]} ${m.slice(0, 4)}">${MONTHS_SHORT[+m.slice(5) - 1]}</button>`).join("");
     spyCur = null; spy();
   }
   let spyRaf = 0;
   function spy() {
     const line = $(".weeknav").getBoundingClientRect().bottom + 2;
     let cur = months[0] || "";
-    $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().top <= line) cur = h.dataset.m; });
+    $$(".monthhead").forEach(h => { if (h.getBoundingClientRect().bottom <= line) cur = h.dataset.m; });
     $("#weeklabel").innerHTML = cur ? `${MONTHS[+cur.slice(5) - 1]}<small>${cur.slice(0, 4)}</small>` : "Coming up";
     $$("#months button").forEach(b => { b.classList.toggle("on", b.dataset.m === cur); b.setAttribute("aria-current", b.dataset.m === cur ? "true" : "false"); });
     if (cur !== spyCur) { spyCur = cur; showMonth(); }
@@ -276,9 +279,11 @@
   function showMonth() {
     const row = $("#months"), b = $("#months .on");
     if (b) {
-      const l = b.offsetLeft - row.offsetLeft, pad = 32;
+      const y = b.previousElementSibling, first = y && y.matches(".yr") ? y : b;   // a year's first month brings its label along
+      const l = first.offsetLeft - row.offsetLeft, pad = 32;
+      const r = b.offsetLeft - row.offsetLeft + b.offsetWidth;
       if (l < row.scrollLeft + pad) row.scrollLeft = Math.max(0, l - pad);
-      else if (l + b.offsetWidth > row.scrollLeft + row.clientWidth - pad) row.scrollLeft = l + b.offsetWidth - row.clientWidth + pad;
+      else if (r > row.scrollLeft + row.clientWidth - pad) row.scrollLeft = r - row.clientWidth + pad;
     }
     fadeMonths();
   }
@@ -289,7 +294,7 @@
   }
   function jumpMonth(m) {
     const h = $$(".monthhead").find(x => x.dataset.m === m); if (!h) return;
-    window.scrollTo({ top: h.getBoundingClientRect().top + scrollY - $(".weeknav").offsetHeight + 1, behavior: motionOK() ? "smooth" : "auto" });   // tucked 1px under the strip: spy() counts it as in view
+    window.scrollTo({ top: h.getBoundingClientRect().bottom + scrollY - $(".weeknav").offsetHeight + 1, behavior: motionOK() ? "smooth" : "auto" });   // tucked 1px under the strip: spy() counts it as in view
   }
   // The pills: Genres ▾ (badge = active genres + styles), Nouveautés, Mes concerts, Mes salles (badge = favourite venues).
   function renderPills() {
@@ -437,7 +442,7 @@
     let lastMonth = "";
     for (const w of mondays) {
       const m = monthOf(w);
-      if (m !== lastMonth) { lastMonth = m; html += `<div class="monthhead" data-m="${m}" id="m-${m}"></div>`; }
+      if (m !== lastMonth) { lastMonth = m; html += html ? `<h2 class="monthhead" data-m="${m}" id="m-${m}">${MONTHS[+m.slice(5) - 1]}<small>${m.slice(0, 4)}</small></h2>` : `<div class="monthhead" data-m="${m}" id="m-${m}"></div>`; }
       html += `<h3 class="weekhead">${weekLabel(parseISO(w), MOBILE.matches)}</h3>` + weekGrid(parseISO(w), byDay, { today, from, to });
     }
     const failed = (DATA.report || []).filter(r => !r.ok);

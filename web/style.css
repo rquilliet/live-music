@@ -142,7 +142,7 @@ svg.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor;
 .months { display: flex; gap: 6px; flex: 1 1 0; min-width: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
   scroll-behavior: smooth; padding: 1px 0; }
 .months::-webkit-scrollbar { display: none; }
-.months button:first-child { margin-left: auto; }   /* right-aligned while they fit (justify-content would clip the start) */
+.months > :first-child { margin-left: auto; }   /* right-aligned while they fit (justify-content would clip the start) */
 .months.fl { -webkit-mask-image: linear-gradient(90deg, transparent, #000 28px); mask-image: linear-gradient(90deg, transparent, #000 28px); }
 .months.fr { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); }
 .months.fl.fr { -webkit-mask-image: linear-gradient(90deg, transparent, #000 28px, #000 calc(100% - 28px), transparent);
@@ -152,6 +152,8 @@ svg.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor;
 .months button:hover { background: var(--hi); }
 .months button:active { transform: scale(.96); }
 .months button.on { background: var(--ink); color: var(--paper); }
+.months .yr { flex: none; align-self: center; margin: 0 2px 0 10px; font-family: var(--display); font-size: 18px; font-weight: 700; line-height: 1; color: var(--muted); }   /* the year, once, ahead of its months (REM-69) */
+.months .yr:first-child { margin-left: auto; }
 .weeknav h2 { font-family: var(--display); font-size: 44px; font-weight: 900; line-height: .9; letter-spacing: -.01em; margin: 0;
   display: flex; align-items: baseline; gap: 10px; }
 .weeknav h2 small { font-size: 18px; font-weight: 700; color: var(--muted); }
@@ -160,8 +162,12 @@ svg.i { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor;
 /* ---------- week grid ---------- */
 .list { padding: 0 32px 40px; }
 .list.swap { animation: fade-in .16s ease-out; }   /* the frame changed (week <-> every upcoming week) */
-.monthhead { height: 0; margin-top: 28px; }   /* an empty anchor where a month starts: the strip above names it */
-.monthhead:first-child { margin-top: 4px; }
+/* where a month starts (REM-69): the strip's own heading again, under a heavy rule — the first month is an empty anchor,
+   the strip above names it */
+.monthhead { margin: 44px 0 0; padding-top: 12px; border-top: 3px solid var(--rule); font-family: var(--display); font-size: 44px; font-weight: 900; line-height: .9; letter-spacing: -.01em;
+  display: flex; align-items: baseline; gap: 8px; }
+.monthhead small { font-size: 18px; font-weight: 700; color: var(--muted); }
+.monthhead:first-child { height: 0; margin-top: 4px; padding: 0; border: 0; }
 .weekhead { font-family: var(--display); font-size: 22px; font-weight: 700; margin: 18px 0 8px; display: flex; align-items: baseline; gap: 10px; }
 .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1.5px solid var(--rule); border-left: 1.5px solid var(--rule); background: var(--paper); }
 .day { border-right: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); min-height: 320px; display: flex; flex-direction: column; min-width: 0; }
@@ -495,13 +501,15 @@ body.docked .body { padding-bottom: 150px; }
   #newonly { margin-left: 0; }
   .gpanel { left: 0 !important; right: 0; width: auto; border-radius: 18px; padding: 14px 14px 16px; }
   .weeknav { margin-top: 14px; padding: 8px 16px 10px; gap: 10px; }
-  .weeknav h2 { font-size: 34px; }
-  .weeknav h2 small { font-size: 14px; }
+  .weeknav h2, .monthhead { font-size: 34px; }
+  .weeknav h2 small, .monthhead small { font-size: 14px; }
+  .monthhead { margin-top: 32px; }
+  .months .yr { font-size: 16px; margin-left: 6px; }
   /* the month buttons scroll in one row under the label */
   .months { flex: 1 1 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
   .months::-webkit-scrollbar { display: none; }
   .months button { height: 30px; padding: 0 11px; font-size: 12.5px; flex: none; }
-  .months button:first-child { margin-left: 0; }   /* own row under the label: left-aligned */
+  .months > :first-child, .months .yr:first-child { margin-left: 0; }   /* own row under the label: left-aligned */
   .grid { grid-template-columns: 1fr; }
   .day.past { display: none; }
   .hero-text h2 { font-size: 34px; }
