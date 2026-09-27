@@ -349,3 +349,46 @@ def dernierbar(venue, ctx):
                             venue=venue["name"], venue_slug=venue["slug"], source="dernierbar", url=venue["url"],
                             description=re.sub(r"^\W+", "", clean_text(desc)) or None, is_music=bool(_DB_MUSIC.search(text))))
     return events
+
+
+# ------------------------------------------------------------------ Bal Chavaux (Drupal view, ?page=N for the rest)
+
+_BC_NOT_MUSIC = {"atelier", "theatre", "danse", "cabaret", "performance"}
+
+
+def balchavaux(venue, ctx):
+    """Cards with the date in data-day / data-month / data-year, '• 19:30 > 23:30', categories 'Jazz / Rock'
+    and a status badge (full, canceled). The first page holds 24 cards, the next one ('Afficher plus') the rest."""
+    events, seen = [], set()
+    url = venue["url"]
+    for _ in range(6):
+        html = get(url)
+        for b in _blocks(html, r'<div[^>]*class="views-row"'):
+            link = _abs(venue["url"], _first(r'<a href="(/agenda/[^"]+)"', b))
+            heads = [clean_text(h) for h in re.findall(r"<h2[^>]*>(.*?)</h2>", b, re.S)]
+            title = heads[-1] if heads else ""   # a small '… présentent' <h2> sometimes sits above the line-up
+            head = _first(r'<div[^>]*class="[^"]*\bevt-date\b[^"]*"([^>]*)>', b) or ""
+            day, month, year = (_first(r'data-%s="([^"]*)"' % k, head) for k in ("day", "month", "year"))
+            date = parse_fr_date(f"{day} {month} {year}") if day and month and year else None
+            if not title or not date or (link, date) in seen:
+                continue
+            seen.add((link, date))
+            cats = [clean_text(c) for c in re.findall(r'data-term-name="[^"]*">(.*?)</span>', b, re.S)]
+            sub = clean_text(_first(r"</h2>\s*<div[^>]*>(.*?)</div>", b) or "")   # second line of the title
+            off = [c for c in cats if strip_accents(c.lower()) in _BC_NOT_MUSIC]
+            is_music = len(off) < len(cats) or not cats   # a workshop or a cabaret night is not a concert
+            if is_music:   # "Concert / Danse" is a concert: the pipeline must not read "danse" in it
+                cats = [c for c in cats if c not in off]
+            status = _first(r'data-status-key="([^"]*)"', b) or ""
+            events.append(Event(
+                title=title, date=date, time=parse_time(_first(r'evt-date-hour">(.*?)<', b) or ""),
+                venue=venue["name"], venue_slug=venue["slug"], source="balchavaux", url=link,
+                raw_genre=", ".join(cats) or None, image=_abs(venue["url"], _first(r'<noscript>\s*<img src="([^"]+)"', b)),
+                description=" — ".join(x for x in heads[:-1] + [sub] if x) or None,
+                sold_out=status == "full", cancelled=status == "canceled", is_music=is_music,
+            ))
+        nxt = _first(r'href="(\?page=\d+)"', _first(r'(<a\b[^>]*rel="next"[^>]*>)', html) or "")
+        if not nxt:
+            break
+        url = _abs(venue["url"], nxt)
+    return events

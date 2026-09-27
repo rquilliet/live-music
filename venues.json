@@ -25,6 +25,8 @@
    "address": "7-9 rue des Petites Écuries, 75010 Paris", "area": "Château d'Eau", "lat": 48.8731, "lon": 2.3533, "genres": ["jazz"]},
   {"name": "Instants Chavirés", "slug": "instants-chavires", "strategy": "instantschavires", "url": "https://www.instantschavires.com/musique/concerts/",
    "address": "7 rue Richard Lenoir, 93100 Montreuil", "area": "Montreuil", "lat": 48.8567, "lon": 2.4292, "genres": ["experimental"]},
+  {"name": "Bal Chavaux", "slug": "bal-chavaux", "strategy": "balchavaux", "url": "https://balchavaux.fr/agenda",
+   "address": "2 avenue de la Résistance, 93100 Montreuil", "area": "Montreuil", "lat": 48.8584, "lon": 2.4368},
   {"name": "Supersonic", "slug": "supersonic", "strategy": "tribe", "url": "https://supersonic-club.fr",
    "address": "9 rue Biscornet, 75012 Paris", "area": "Bastille", "lat": 48.8514, "lon": 2.3706, "genres": ["rock", "indie"]},
   {"name": "Dernier Bar avant la Fin du Monde", "slug": "dernier-bar-avant-la-fin-du-monde", "strategy": "dernierbar", "url": "https://dernierbar.com/pages/paris",

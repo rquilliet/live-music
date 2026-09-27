@@ -16,6 +16,7 @@ STRATEGIES = {
     "instantschavires": venues_html.instantschavires,
     "boulenoire": venues_html.boulenoire,
     "dernierbar": venues_html.dernierbar,
+    "balchavaux": venues_html.balchavaux,
     "manual": manual.scrape,
     "llm": llm.scrape,
 }
