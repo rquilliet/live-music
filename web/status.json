@@ -6,7 +6,7 @@
  "low_below": 3,
  "cost": {
   "date": "2026-09-28",
-  "usd": 0.1534,
+  "usd": 0.8874,
   "steps": [
    {
     "what": "genres",
@@ -25,6 +25,31 @@
     "tokens_in": 9375,
     "tokens_out": 630,
     "usd": 0.0626
+   },
+   {
+    "what": "genres",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 1,
+    "tokens_in": 1029,
+    "tokens_out": 556,
+    "usd": 0.019
+   },
+   {
+    "what": "venues",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 1,
+    "tokens_in": 5847,
+    "tokens_out": 10549,
+    "usd": 0.293
+   },
+   {
+    "what": "troubleshooting",
+    "model": "Claude Code",
+    "batch": false,
+    "calls": 1,
+    "usd": 0.422
    }
   ]
  },
@@ -281,13 +306,11 @@
    "strategy": "llm",
    "url": "https://www.zenith-paris.com/",
    "prev_count": 117,
-   "seconds": 84.9,
-   "checked_at": "2026-09-28T12:17:51Z",
-   "status": "failed",
-   "error": "URLError: <urlopen error timed out> for https://www.zenith-paris.com/",
-   "last_ok": "2026-09-27",
-   "failing_since": "2026-09-28",
-   "carried": 117
+   "seconds": 97.3,
+   "checked_at": "2026-09-28T12:27:37Z",
+   "status": "ok",
+   "count": 118,
+   "last_ok": "2026-09-28"
   },
   {
    "venue": "La Seine Musicale",
@@ -799,8 +822,8 @@
  "history": [
   {
    "date": "2026-09-28",
-   "run_url": "https://github.com/rquilliet/live-music/actions/runs/36413943218",
-   "usd": 0.1534,
+   "run_url": "https://github.com/rquilliet/live-music/actions/runs/36420958436",
+   "usd": 0.8874,
    "sources": {
     "opendata": 1151,
     "bataclan": 53,
@@ -822,7 +845,7 @@
     "sunset-sunside": 178,
     "accor-arena": "extraction still running in the Message Batch",
     "olympia": "extraction still running in the Message Batch",
-    "zenith-paris": "URLError: <urlopen error timed out> for https://www.zenith-paris.com/",
+    "zenith-paris": 118,
     "la-seine-musicale": "extraction still running in the Message Batch",
     "paris-la-defense-arena": "extraction still running in the Message Batch",
     "alhambra": "extraction still running in the Message Batch",

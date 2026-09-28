@@ -7,40 +7,102 @@
    ],
    "usd": 0.081,
    "issue": "REM-67"
+  },
+  "dernier-bar-avant-la-fin-du-monde": {
+   "since": "2026-09-28",
+   "days": [
+    "2026-09-28"
+   ],
+   "usd": 0.1292,
+   "issue": "REM-76"
+  },
+  "zenith-paris": {
+   "since": "2026-09-28",
+   "days": [
+    "2026-09-28"
+   ],
+   "usd": 0.2928
   }
  },
  "last": {
-  "date": "2026-09-27",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/36353557720",
-  "usd": 0.081,
+  "date": "2026-09-28",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/36420958436",
+  "usd": 0.422,
   "sessions": 1,
   "fixed": [],
-  "recovered": [],
+  "recovered": [
+   {
+    "venue": "Zénith Paris",
+    "slug": "zenith-paris",
+    "error": "URLError: <urlopen error timed out> for https://www.zenith-paris.com/",
+    "since": "2026-09-28",
+    "prev_count": 117,
+    "url": "https://www.zenith-paris.com/",
+    "attempts": 1,
+    "usd_total": 0.2928,
+    "count": 118,
+    "usd": 0.2928,
+    "usd_agent": null
+   }
+  ],
   "unresolved": [
    {
-    "venue": "Le Plan",
-    "slug": "le-plan",
-    "error": "HTTP 418 for https://www.leplan.com/",
-    "since": "2026-09-13",
-    "prev_count": 10,
-    "url": "https://www.leplan.com/",
+    "venue": "Dernier Bar avant la Fin du Monde",
+    "slug": "dernier-bar-avant-la-fin-du-monde",
+    "error": "0 events parsed (was 1)",
+    "since": "2026-09-28",
+    "prev_count": 1,
+    "url": "https://dernierbar.com/pages/paris",
     "attempts": 1,
-    "usd_total": 0.081,
+    "usd_total": 0.1292,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "Le Plan can't be repaired from here: since 2026-09-13 leplan.com answers every request from the scraper with HTTP 418, which looks like a bot wall.\n- Cause: the whole site refuses our fetcher. https://www.leplan.com/, /agenda/, /feed/, /wp-json/, /robots.txt and https://leplan.com/ all return \"HTTP 418\". A different URL won't help.\n- Changed: nothing. venues.json and the parsers are untouched.\n- Check: {\"ok\": false, \"count\": 0, \"prev_count\": 10, \"error\": \"HTTP 418 for https://www.leplan.com/\"}\n- No page content came back, so there were no embedded instructions to report.\n- For a human: open the site in a normal browser to confirm it's up, and check whether a WAF or anti-bot service now filters our user agent or IP. If so, ask the venue to allowlist us or find another source for the programme (a ticketing platform such as Shotgun/Dice/Fnac, or an Essonne agenda). A different source would need a new URL, and possibly a new parser.",
+    "notes": "Nothing is broken: the venue's page still shows only its September programme, which ended on 27/09, and the October programme is not online yet.\nCause: https://dernierbar.com/pages/paris still shows the post \"LA RENTRÉE DES CLASSES…\" (updated 02/09). It lists 11 dates, from Wednesday 2 to Sunday 27 September 2026. The dernierbar parser reads all 11 correctly, but today is 28/09, so every one is in the past and gets dropped (\"11 outside the window or invalid\"). The embedded Instagram feed has no later dates either. The markup did not change.\nChanges: none. The URL and the parser are both correct, and there is no other source for the October programme on the page.\nCheck result: ok=false, count=0, error \"0 events parsed (11 outside the window or invalid)\". This is the expected result until the venue posts its October programme.\nFor a human: no action needed. The scrape should recover by itself once the bar puts its October programme on /pages/paris (or on Facebook/Instagram first). If it is still at 0 in mid-October, look at the page again.\nThe page contained no instructions aimed at the scraper.",
     "diff": "",
-    "usd": 0.081,
-    "usd_agent": 0.0810456
+    "usd": 0.1292,
+    "usd_agent": 0.1291706
    }
   ],
-  "systemic": [],
+  "systemic": [
+   {
+    "cause": "extraction still running in the Message Batch",
+    "venues": [
+     "Accor Arena",
+     "L'Olympia",
+     "La Seine Musicale",
+     "Plenitude Arena",
+     "Alhambra",
+     "Cabaret Sauvage",
+     "La Bellevilloise",
+     "Le Plan",
+     "Glazart",
+     "Duc des Lombards",
+     "Le Baiser Salé",
+     "Le Centquatre",
+     "Le Grand Rex",
+     "Mains d'Œuvres",
+     "Badaboum",
+     "Philharmonie de Paris",
+     "Le Trabendo",
+     "La Station - Gare des Mines",
+     "Cirque Electrique",
+     "La Java",
+     "DOC",
+     "Le Bal Blomet",
+     "Studio de l'Ermitage",
+     "Espace 1789",
+     "La Gaîté Lyrique",
+     "Nouveau Casino",
+     "La Générale"
+    ]
+   }
+  ],
   "skipped": [],
   "done": true
  },
  "spent": {
-  "date": "2026-09-27",
-  "usd": 0.081
+  "date": "2026-09-28",
+  "usd": 0.422
  }
 }
