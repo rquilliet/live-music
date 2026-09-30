@@ -2115,6 +2115,17 @@
 "disco"
 ]
 },
+"bal-chavaux|fantazio peuple fiction release party": {
+"genres": [
+"experimental",
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"free improvisation"
+]
+},
 "bal-chavaux|fluisteraars bacht n de vulle moane": {
 "genres": [
 "metal"
@@ -3566,6 +3577,16 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|paula cole": {
+"genres": [
+"pop",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
 "cafe-de-la-danse|ramon pipin une folle envie de bisser": {
 "genres": [
 "chanson",
@@ -3574,6 +3595,16 @@
 "is_music": true,
 "subgenres": [
 "chanson humoristique"
+]
+},
+"cafe-de-la-danse|rpwl": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"progressive rock",
+"neo-prog"
 ]
 },
 "cafe-de-la-danse|sananda maitreya the sugar plum pharaohs": {
@@ -3788,6 +3819,16 @@
 "subgenres": [
 "lieder",
 "mélodie française"
+]
+},
+"cinema-chaplin-saint-lambert|elastic bird the green album show": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"ambient",
+"field recording"
 ]
 },
 "cirque-electrique|almost famous presente clegane release party pray kugelblitz": {
@@ -4922,6 +4963,16 @@
 "is_music": true,
 "subgenres": [
 "symphonic"
+]
+},
+"eglise-saint-etienne-du-mont|bach et nous raconte par agnes jaoui": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"organ"
 ]
 },
 "eglise-saint-eugene-sainte-cecile|recital lyrique soprano mezzo soprano piano": {
@@ -6154,6 +6205,15 @@
 "rap français"
 ]
 },
+"fgo-barbara|ici demain festival la creation contemporaine au fgo barbara": {
+"genres": [
+"experimental",
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "fgo-barbara|jasmine not jafar release party": {
 "genres": [
 "pop",
@@ -6354,6 +6414,15 @@
 "double bass",
 "vocal jazz",
 "piano jazz"
+]
+},
+"fondation-des-etats-unis|les arenes lyriques": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"opera"
 ]
 },
 "gambetta-club|pavillonn label soiree club": {
@@ -8400,6 +8469,13 @@
 "synth-pop"
 ]
 },
+"la-boule-noire|lakna": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|liars": {
 "genres": [
 "rock",
@@ -8804,6 +8880,16 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"la-boule-noire|yanamko": {
+"genres": [
+"world",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"caribbean"
 ]
 },
 "la-boule-noire|zoh amba les femmes s en melent": {
@@ -9211,6 +9297,15 @@
 ]
 },
 "la-cigale|lagui": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
+"la-cigale|le programme phare liv": {
 "genres": [
 "hip-hop"
 ],
@@ -11733,6 +11828,15 @@
 "rap français"
 ]
 },
+"la-peniche-pop|festival re mix a l ecoute des fantomes": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"sound art"
+]
+},
 "la-petite-halle|blow la petite halle paris 1ere partie": {
 "genres": [
 "electro",
@@ -12044,6 +12148,16 @@
 "is_music": true,
 "subgenres": [
 "contemporary classical"
+]
+},
+"la-scene-du-canal|manda sira": {
+"genres": [
+"world",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"mandingue"
 ]
 },
 "la-seine-musicale|anne sila yvan cassar": {
@@ -13419,6 +13533,17 @@
 "vocal jazz"
 ]
 },
+"le-baiser-sale|tiss week la chica": {
+"genres": [
+"electro",
+"latin",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"latin electronica"
+]
+},
 "le-baiser-sale|tiss week la jam du lundi de francois constantin china moses": {
 "genres": [
 "jazz",
@@ -14395,6 +14520,16 @@
 "subgenres": [
 "modern jazz",
 "piano trio"
+]
+},
+"le-melville|tribute to duke": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"big band",
+"swing"
 ]
 },
 "le-melville|very blue quartet": {
@@ -16577,6 +16712,11 @@
 "singer-songwriter"
 ]
 },
+"maison-de-la-vie-associative-et-citoyenne-du-11e-arrondissement|produire ou organiser un concert un spectacle ou un evenement culturel": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "maison-le-kinff|les 48h de la petite ceinture": {
 "genres": [],
 "is_music": false,
@@ -16712,6 +16852,13 @@
 "subgenres": [
 "singer-songwriter"
 ]
+},
+"mediatheque-marguerite-duras|heure musicale women of folk": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": []
 },
 "mediatheque-marguerite-duras|pauline mann en concert": {
 "genres": [
@@ -18160,6 +18307,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"parc-des-expo-paris-nord-villepinte|festival dream nation le rendez vous incontournable des amateurs de musiques electroniques": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno",
+"hard techno"
+]
 },
 "parc-georges-brassens|les 39e journees brassens et de la chanson francaise": {
 "genres": [
@@ -20282,6 +20439,14 @@
 "hyperpop"
 ]
 },
+"point-ephemere|baby b": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "point-ephemere|back to school powered by the room": {
 "genres": [
 "electro"
@@ -20889,6 +21054,13 @@
 "subgenres": [
 "club"
 ]
+},
+"point-ephemere|roi luis": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "point-ephemere|samba pingo de ouro": {
 "genres": [
@@ -21838,6 +22010,16 @@
 "choral singing"
 ]
 },
+"residence-autonomie-le-jardin-des-moines|concert au jardin des moines": {
+"genres": [
+"chanson",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"piano and voice"
+]
+},
 "restaurant-marilou|jam session funk neo soul a paris": {
 "genres": [
 "funk",
@@ -22012,6 +22194,16 @@
 "chamber music",
 "piano",
 "romantic"
+]
+},
+"salle-cortot|renaud capucon et talents": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"violin",
+"chamber music"
 ]
 },
 "salle-cortot|souvenir de florence tchaikovski schulhoff": {
@@ -22795,6 +22987,16 @@
 "subgenres": [
 "vocal jazz",
 "standards"
+]
+},
+"sunset-sunside|emilie calme invite shai maestro": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz",
+"flute"
 ]
 },
 "sunset-sunside|emilie calme with very special": {
@@ -23761,6 +23963,16 @@
 "is_music": true,
 "subgenres": []
 },
+"sunset-sunside|louis winsberg trio acoustic standards": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"standards",
+"guitar trio"
+]
+},
 "sunset-sunside|lown trio": {
 "genres": [
 "jazz",
@@ -24553,6 +24765,16 @@
 "post-punk"
 ]
 },
+"supersonic|d accord simon gizmo eliah": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"french indie pop"
+]
+},
 "supersonic|daily j vivienne lost solar dust": {
 "genres": [
 "indie",
@@ -24644,6 +24866,17 @@
 "is_music": true,
 "subgenres": [
 "indie sleaze"
+]
+},
+"supersonic|farveblind": {
+"genres": [
+"electro",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"big beat",
+"electronic rock"
 ]
 },
 "supersonic|finojet tom river en concert cote records": {
@@ -25076,6 +25309,17 @@
 "is_music": true,
 "subgenres": [
 "dance-pop"
+]
+},
+"supersonic|oskar haag": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie folk",
+"singer-songwriter"
 ]
 },
 "supersonic|penelope isles": {
@@ -25583,6 +25827,16 @@
 "shoegaze",
 "dream pop",
 "jangle pop"
+]
+},
+"supersonic|they re gonna be big festival 2026": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"emerging bands"
 ]
 },
 "supersonic|untitled halo lal tuna tom hufnagel": {
@@ -26098,6 +26352,16 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"theatre-stephane-gildas|mademoiselle maya en ut integral enchante le theatre stephane gildas": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"café-concert",
+"belle époque"
+]
 },
 "theatre-thenardier|recital flamenco avec el turry": {
 "genres": [
