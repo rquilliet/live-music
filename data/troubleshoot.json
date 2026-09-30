@@ -4,16 +4,17 @@
    "since": "2026-09-28",
    "days": [
     "2026-09-28",
-    "2026-09-29"
+    "2026-09-29",
+    "2026-09-30"
    ],
-   "usd": 0.3006,
+   "usd": 0.4277,
    "issue": "REM-76"
   }
  },
  "last": {
-  "date": "2026-09-29",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/36562317609",
-  "usd": 0.1714,
+  "date": "2026-09-30",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/36710528040",
+  "usd": 0.1271,
   "sessions": 1,
   "fixed": [],
   "recovered": [],
@@ -25,23 +26,57 @@
     "since": "2026-09-28",
     "prev_count": 1,
     "url": "https://dernierbar.com/pages/paris",
-    "attempts": 2,
-    "usd_total": 0.3006,
+    "attempts": 3,
+    "usd_total": 0.4277,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "Not a breakage: the venue's page still carries its September programme, whose only music night (jam session, Sunday 20 September) is now past, so there is nothing to repair.\n\n- Cause: https://dernierbar.com/pages/paris still shows the monthly post \"LA RENTRÉE DES CLASSES… (mise à jour du 02/09)\" with 11 dated September events. The `dernierbar` parser reads them all correctly (same markup as before: \"🎸 DIMANCHE 20 SEPTEMBRE — 17H00\" / \"LA JAM SESSION\"), but all 11 are before today (2026-09-29), hence \"0 events parsed (11 outside the window or invalid)\". The 1 event at the last success was that 20 September jam.\n- No October programme is online yet. The blog (/pages/news) and the embedded Instagram feed announce a few October nights (Loup-Garou party 6 Oct, Stargate party 2 Oct, role-playing game (JDR) nights 10/14/17 Oct), but none of them is a concert or a jam, and they exist only as blog/social posts, not in the programme post the parser reads.\n- Changed: nothing (venues.json and venues_html.py untouched). Check result: ok=false, count=0, \"0 events parsed (11 outside the window or invalid)\", which is the correct outcome for a stale programme.\n- For a human: nothing to fix in code. The source should come back by itself once the bar posts its October programme on /pages/paris. If that post never appears, look at the page again: the parser may need a new layout.\n- No instructions aimed at the scraper were found in the pages.",
+    "notes": "Not a scraper fault: the venue's page still shows only its September 2026 programme (updated 02/09), and all of it is now past, so nothing was changed.\n- Cause: https://dernierbar.com/pages/paris loads fine (310 KB, \"Au programme\" post \"LA RENTRÉE DES CLASSES…\", mise à jour du 02/09). The dernierbar parser still matches its 11 date lines (2 to 27 September). All are before today (2026-09-30), hence \"0 events parsed (11 outside the window or invalid)\". The one music night, \"LA JAM SESSION\" on Sunday 20 September, was the 1 event at the last success.\n- Checked for an October programme elsewhere: /pages/news (Shopify blog \"le-blog\") has only single-event posts (Loup-Garou party, Stargate party, JDR signing, a Lille comedy club). None is a programme and none is a concert. There's no other programme page linked from the site.\n- Changed: nothing (venues.json and venues_html.py untouched). Loosening the parser or changing the URL would not help and would be wrong.\n- Check result: ok=false, count=0, error \"0 events parsed (11 outside the window or invalid)\". This is expected until the venue posts its October programme.\n- For a human: nothing to do in the code. The source should recover by itself once the bar updates /pages/paris with the new month's post, which it usually does in the first days of the month. If it's still failing in mid-October, look at the page again: its format may have changed, or the programme may have moved to social networks only.\n- The pages contained no instructions aimed at the scraper.",
     "diff": "",
-    "usd": 0.1714,
-    "usd_agent": 0.17143039999999998
+    "usd": 0.1271,
+    "usd_agent": 0.1270834
    }
   ],
-  "systemic": [],
+  "systemic": [
+   {
+    "cause": "extraction still running in the Message Batch",
+    "venues": [
+     "L'Olympia",
+     "Zénith Paris",
+     "La Seine Musicale",
+     "Cabaret Sauvage",
+     "La Bellevilloise",
+     "La Marbrerie",
+     "Le Plan",
+     "Glazart",
+     "La Machine du Moulin Rouge",
+     "Duc des Lombards",
+     "Le Centquatre",
+     "Le Grand Rex",
+     "Mains d'Œuvres",
+     "Philharmonie de Paris",
+     "Le Trabendo",
+     "FGO-Barbara",
+     "La Station - Gare des Mines",
+     "La Dame de Canton",
+     "La Java",
+     "DOC",
+     "Le Bal Blomet",
+     "Les Trois Baudets",
+     "Le 360 Paris Music Factory",
+     "Canal 93",
+     "La Gaîté Lyrique",
+     "PopUp!",
+     "Nouveau Casino",
+     "La Générale"
+    ]
+   }
+  ],
   "skipped": [],
   "done": true
  },
  "spent": {
-  "date": "2026-09-29",
-  "usd": 0.1714
+  "date": "2026-09-30",
+  "usd": 0.1271
  }
 }
