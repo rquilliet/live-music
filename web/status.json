@@ -1,37 +1,39 @@
 {
- "generated_at": "2026-09-30T11:45:29Z",
- "today": "2026-09-30",
- "duration_s": 3895,
- "run_url": "https://github.com/rquilliet/live-music/actions/runs/36703832371",
+ "generated_at": "2026-10-01T12:09:26Z",
+ "today": "2026-10-01",
+ "duration_s": 3720,
+ "run_url": "https://github.com/rquilliet/live-music/actions/runs/36853351141",
  "low_below": 3,
  "cost": {
-  "date": "2026-09-30",
-  "usd": 0.3047,
+  "date": "2026-10-01",
+  "usd": 2.4566,
   "steps": [
    {
     "what": "genres",
     "model": "claude-opus-5",
     "batch": false,
     "calls": 1,
-    "tokens_in": 4565,
-    "tokens_out": 3226,
-    "usd": 0.1035
+    "tokens_in": 3170,
+    "tokens_out": 3264,
+    "usd": 0.0974
    },
    {
     "what": "summaries",
     "model": "claude-opus-5",
     "batch": false,
     "calls": 2,
-    "tokens_in": 10174,
-    "tokens_out": 928,
-    "usd": 0.0741
+    "tokens_in": 11083,
+    "tokens_out": 838,
+    "usd": 0.0764
    },
    {
-    "what": "troubleshooting",
-    "model": "Claude Code",
-    "batch": false,
-    "calls": 1,
-    "usd": 0.1271
+    "what": "venues",
+    "model": "claude-opus-5",
+    "batch": true,
+    "calls": 32,
+    "tokens_in": 170979,
+    "tokens_out": 148425,
+    "usd": 2.2828
    }
   ]
  },
@@ -41,12 +43,12 @@
    "slug": "opendata",
    "strategy": "opendata",
    "url": "https://opendata.paris.fr/explore/dataset/que-faire-a-paris-/",
-   "prev_count": 1188,
-   "seconds": 7.5,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 1217,
+   "seconds": 7.9,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 1217,
-   "last_ok": "2026-09-30"
+   "count": 1212,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Le Bataclan",
@@ -54,35 +56,35 @@
    "strategy": "bataclan",
    "url": "https://www.bataclan.fr/programmation",
    "prev_count": 53,
-   "seconds": 0.4,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "seconds": 0.5,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 53,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "La Cigale",
    "slug": "la-cigale",
    "strategy": "cigale",
    "url": "https://lacigale.fr/programmation/",
-   "prev_count": 109,
-   "seconds": 2.3,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 110,
+   "seconds": 0.2,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 110,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "La Boule Noire",
    "slug": "la-boule-noire",
    "strategy": "boulenoire",
    "url": "https://laboule-noire.fr/",
-   "prev_count": 82,
-   "seconds": 8.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 83,
+   "seconds": 7.5,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 83,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Le Trianon",
@@ -90,11 +92,11 @@
    "strategy": "trianon",
    "url": "https://www.letrianon.fr/fr/programmation/",
    "prev_count": 35,
-   "seconds": 1.4,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "seconds": 1.6,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 35,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Élysée Montmartre",
@@ -102,23 +104,23 @@
    "strategy": "trianon",
    "url": "https://www.elyseemontmartre.com/fr/programmation/",
    "prev_count": 63,
-   "seconds": 1.5,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "seconds": 1.7,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 63,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "La Maroquinerie",
    "slug": "la-maroquinerie",
    "strategy": "maroquinerie",
    "url": "https://www.lamaroquinerie.fr/fr/agenda/",
-   "prev_count": 109,
-   "seconds": 2.2,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 108,
+   "seconds": 2.6,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 108,
-   "last_ok": "2026-09-30"
+   "count": 110,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Petit Bain",
@@ -126,59 +128,59 @@
    "strategy": "petitbain",
    "url": "https://petitbain.org/agenda/",
    "prev_count": 56,
-   "seconds": 1.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "seconds": 1.4,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 56,
-   "last_ok": "2026-09-30"
+   "count": 57,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Point Éphémère",
    "slug": "point-ephemere",
    "strategy": "pointephemere",
    "url": "https://www.pointephemere.org/agenda",
-   "prev_count": 62,
-   "seconds": 1.7,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 68,
+   "seconds": 1.3,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 68,
-   "last_ok": "2026-09-30"
+   "count": 70,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Café de la Danse",
    "slug": "cafe-de-la-danse",
    "strategy": "cafedeladanse",
    "url": "https://www.cafedeladanse.com/",
-   "prev_count": 23,
-   "seconds": 3.1,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 24,
+   "seconds": 0.8,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 24,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Le Hasard Ludique",
    "slug": "le-hasard-ludique",
    "strategy": "hasardludique",
    "url": "https://www.lehasardludique.paris/programmation",
-   "prev_count": 10,
-   "seconds": 2.6,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 9,
+   "seconds": 2.4,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 9,
-   "last_ok": "2026-09-30"
+   "count": 10,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "New Morning",
    "slug": "new-morning",
    "strategy": "newmorning",
    "url": "https://www.newmorning.com/programmation.html",
-   "prev_count": 73,
-   "seconds": 1.1,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 72,
+   "seconds": 1.4,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 72,
-   "last_ok": "2026-09-30"
+   "count": 71,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Instants Chavirés",
@@ -187,34 +189,36 @@
    "url": "https://www.instantschavires.com/musique/concerts/",
    "prev_count": 14,
    "seconds": 1.3,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 14,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Bal Chavaux",
    "slug": "bal-chavaux",
    "strategy": "balchavaux",
    "url": "https://balchavaux.fr/agenda",
-   "prev_count": 30,
-   "seconds": 20.8,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 31,
+   "seconds": 27.5,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 31,
-   "last_ok": "2026-09-30"
+   "count": 32,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Supersonic",
    "slug": "supersonic",
    "strategy": "tribe",
    "url": "https://supersonic-club.fr",
-   "prev_count": 62,
-   "seconds": 2.4,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 61,
-   "last_ok": "2026-09-30"
+   "prev_count": 61,
+   "seconds": 1.1,
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-01&page=1",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 60
   },
   {
    "venue": "Dernier Bar avant la Fin du Monde",
@@ -222,8 +226,8 @@
    "strategy": "dernierbar",
    "url": "https://dernierbar.com/pages/paris",
    "prev_count": 1,
-   "seconds": 0.8,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "seconds": 0.5,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "0 events parsed (was 1)",
    "last_ok": "2026-09-27",
@@ -237,22 +241,22 @@
    "url": "https://www.facebook.com/lapointelafayetteofficielle/",
    "prev_count": 3,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 3,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Sunset / Sunside",
    "slug": "sunset-sunside",
    "strategy": "tribe",
    "url": "https://www.sunset-sunside.com",
-   "prev_count": 177,
-   "seconds": 403.9,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "prev_count": 174,
+   "seconds": 402.6,
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
-   "count": 174,
-   "last_ok": "2026-09-30"
+   "count": 172,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Accor Arena",
@@ -261,10 +265,12 @@
    "url": "https://www.accorarena.com/fr/programmation",
    "prev_count": 8,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 8,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 7
   },
   {
    "venue": "L'Olympia",
@@ -273,12 +279,12 @@
    "url": "https://www.olympiahall.com/",
    "prev_count": 22,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 22
+   "carried": 21
   },
   {
    "venue": "Zénith Paris",
@@ -287,7 +293,7 @@
    "url": "https://www.zenith-paris.com/",
    "prev_count": 117,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -301,12 +307,10 @@
    "url": "https://www.laseinemusicale.com/",
    "prev_count": 79,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "failed",
-   "error": "extraction still running in the Message Batch",
-   "last_ok": "2026-09-29",
-   "failing_since": "2026-09-30",
-   "carried": 78
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "ok",
+   "count": 105,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Plenitude Arena",
@@ -315,10 +319,12 @@
    "url": "https://www.plenitudearena.com/",
    "prev_count": 34,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 34,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 34
   },
   {
    "venue": "Alhambra",
@@ -327,10 +333,12 @@
    "url": "https://www.alhambra-paris.com/",
    "prev_count": 61,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 61,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 61
   },
   {
    "venue": "Cabaret Sauvage",
@@ -339,7 +347,7 @@
    "url": "https://www.cabaretsauvage.com/agenda",
    "prev_count": 62,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -353,7 +361,7 @@
    "url": "https://www.labellevilloise.com/agenda/",
    "prev_count": 67,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -367,12 +375,12 @@
    "url": "https://www.lamarbrerie.fr/agenda/",
    "prev_count": 34,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 34
+   "carried": 33
   },
   {
    "venue": "Le Plan",
@@ -381,7 +389,7 @@
    "url": "https://www.leplan.com/",
    "prev_count": 19,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -395,10 +403,12 @@
    "url": "https://www.file7.com/agenda",
    "prev_count": 8,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 8,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 8
   },
   {
    "venue": "Glazart",
@@ -407,12 +417,10 @@
    "url": "https://www.glazart.com/agenda/",
    "prev_count": 16,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "failed",
-   "error": "extraction still running in the Message Batch",
-   "last_ok": "2026-09-29",
-   "failing_since": "2026-09-30",
-   "carried": 15
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "ok",
+   "count": 19,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "La Machine du Moulin Rouge",
@@ -421,12 +429,12 @@
    "url": "https://www.lamachinedumoulinrouge.com/agenda/",
    "prev_count": 52,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 52
+   "carried": 51
   },
   {
    "venue": "Duc des Lombards",
@@ -435,12 +443,12 @@
    "url": "https://www.ducdeslombards.com/",
    "prev_count": 7,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 6
+   "carried": 5
   },
   {
    "venue": "Le Baiser Salé",
@@ -449,10 +457,12 @@
    "url": "https://www.lebaisersale.com/fr/agenda",
    "prev_count": 20,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 20,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 18
   },
   {
    "venue": "Le Centquatre",
@@ -461,7 +471,7 @@
    "url": "https://www.104.fr/",
    "prev_count": 24,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -475,10 +485,10 @@
    "url": "https://www.lapetitehalle.com/programmation/",
    "prev_count": 10,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 10,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Le Grand Rex",
@@ -487,7 +497,7 @@
    "url": "https://www.legrandrex.com/evenement/",
    "prev_count": 75,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -501,12 +511,10 @@
    "url": "https://mainsdoeuvres.org/",
    "prev_count": 7,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "failed",
-   "error": "extraction still running in the Message Batch",
-   "last_ok": "2026-09-29",
-   "failing_since": "2026-09-30",
-   "carried": 7
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "ok",
+   "count": 6,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Badaboum",
@@ -515,10 +523,12 @@
    "url": "https://badaboum.paris/agenda/",
    "prev_count": 47,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 47,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 47
   },
   {
    "venue": "Philharmonie de Paris",
@@ -527,12 +537,12 @@
    "url": "https://www.philharmoniedeparis.fr/fr/agenda",
    "prev_count": 341,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 340
+   "carried": 339
   },
   {
    "venue": "Le Trabendo",
@@ -541,12 +551,12 @@
    "url": "https://www.letrabendo.net/programmation/",
    "prev_count": 79,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 78
+   "carried": 77
   },
   {
    "venue": "FGO-Barbara",
@@ -555,7 +565,7 @@
    "url": "https://fgo-barbara.fr/programmation",
    "prev_count": 23,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -569,12 +579,12 @@
    "url": "https://lastation.paris/stationgdm/agenda",
    "prev_count": 16,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 16
+   "carried": 15
   },
   {
    "venue": "Cirque Electrique",
@@ -582,11 +592,13 @@
    "strategy": "llm",
    "url": "https://www.cirque-electrique.com/agenda",
    "prev_count": 52,
-   "seconds": 0.1,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 52,
-   "last_ok": "2026-09-30"
+   "seconds": 0.0,
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 50
   },
   {
    "venue": "La Dame de Canton",
@@ -595,12 +607,12 @@
    "url": "https://www.damedecanton.com/event-list",
    "prev_count": 18,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 17
+   "carried": 16
   },
   {
    "venue": "La Java",
@@ -609,7 +621,7 @@
    "url": "https://www.la-java.fr/programmation",
    "prev_count": 9,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -623,12 +635,10 @@
    "url": "https://doc.work/project_category/concert/",
    "prev_count": 4,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "failed",
-   "error": "extraction still running in the Message Batch",
-   "last_ok": "2026-09-29",
-   "failing_since": "2026-09-30",
-   "carried": 4
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "ok",
+   "count": 5,
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "Le Bal Blomet",
@@ -637,12 +647,12 @@
    "url": "https://www.balblomet.fr/agenda",
    "prev_count": 58,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 58
+   "carried": 57
   },
   {
    "venue": "Studio de l'Ermitage",
@@ -651,10 +661,12 @@
    "url": "https://www.studio-ermitage.com/index.php/agenda",
    "prev_count": 26,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 26,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 26
   },
   {
    "venue": "Les Trois Baudets",
@@ -663,12 +675,12 @@
    "url": "https://lestroisbaudets.com/l-agenda",
    "prev_count": 38,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 38
+   "carried": 37
   },
   {
    "venue": "Le 360 Paris Music Factory",
@@ -677,12 +689,12 @@
    "url": "https://le360paris.com/programmation/",
    "prev_count": 20,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 20
+   "carried": 19
   },
   {
    "venue": "Le Triton",
@@ -691,10 +703,10 @@
    "url": "https://letriton.com/agenda",
    "prev_count": 40,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 40,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "La Dynamo de Banlieues Bleues",
@@ -703,10 +715,12 @@
    "url": "https://www.banlieuesbleues.org/dynamo/",
    "prev_count": 12,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 12,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 11
   },
   {
    "venue": "Canal 93",
@@ -715,7 +729,7 @@
    "url": "https://www.canal93.com/agendaetbilletterie",
    "prev_count": 11,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -729,10 +743,10 @@
    "url": "https://www.espace-1789.com/spectacle/saison",
    "prev_count": 52,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "ok",
    "count": 52,
-   "last_ok": "2026-09-30"
+   "last_ok": "2026-10-01"
   },
   {
    "venue": "La Gaîté Lyrique",
@@ -741,12 +755,12 @@
    "url": "https://www.gaite-lyrique.net/agenda/",
    "prev_count": 7,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 5
+   "carried": 3
   },
   {
    "venue": "PopUp!",
@@ -755,12 +769,12 @@
    "url": "https://www.popup.paris/agenda/",
    "prev_count": 65,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
    "failing_since": "2026-09-30",
-   "carried": 64
+   "carried": 63
   },
   {
    "venue": "Le Truskel",
@@ -769,10 +783,12 @@
    "url": "https://www.truskel.fr/",
    "prev_count": 4,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "ok",
-   "count": 4,
-   "last_ok": "2026-09-30"
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "failed",
+   "error": "extraction still running in the Message Batch",
+   "last_ok": "2026-09-30",
+   "failing_since": "2026-10-01",
+   "carried": 3
   },
   {
    "venue": "Nouveau Casino",
@@ -781,7 +797,7 @@
    "url": "https://nouveaucasino.fr/",
    "prev_count": 30,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
+   "checked_at": "2026-10-01T12:09:26Z",
    "status": "failed",
    "error": "extraction still running in the Message Batch",
    "last_ok": "2026-09-29",
@@ -795,15 +811,79 @@
    "url": "https://www.lagenerale.fr/",
    "prev_count": 10,
    "seconds": 0.0,
-   "checked_at": "2026-09-30T11:45:29Z",
-   "status": "failed",
-   "error": "extraction still running in the Message Batch",
-   "last_ok": "2026-09-29",
-   "failing_since": "2026-09-30",
-   "carried": 9
+   "checked_at": "2026-10-01T12:09:26Z",
+   "status": "ok",
+   "count": 9,
+   "last_ok": "2026-10-01"
   }
  ],
  "history": [
+  {
+   "date": "2026-10-01",
+   "run_url": "https://github.com/rquilliet/live-music/actions/runs/36853351141",
+   "usd": 2.4566,
+   "sources": {
+    "opendata": 1212,
+    "bataclan": 53,
+    "la-cigale": 110,
+    "la-boule-noire": 83,
+    "le-trianon": 35,
+    "elysee-montmartre": 63,
+    "la-maroquinerie": 110,
+    "petit-bain": 57,
+    "point-ephemere": 70,
+    "cafe-de-la-danse": 24,
+    "le-hasard-ludique": 10,
+    "new-morning": 71,
+    "instants-chavires": 14,
+    "bal-chavaux": 32,
+    "supersonic": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-01&page=1",
+    "dernier-bar-avant-la-fin-du-monde": "0 events parsed (was 1)",
+    "la-pointe-lafayette": 3,
+    "sunset-sunside": 172,
+    "accor-arena": "extraction still running in the Message Batch",
+    "olympia": "extraction still running in the Message Batch",
+    "zenith-paris": "extraction still running in the Message Batch",
+    "la-seine-musicale": 105,
+    "paris-la-defense-arena": "extraction still running in the Message Batch",
+    "alhambra": "extraction still running in the Message Batch",
+    "cabaret-sauvage": "extraction still running in the Message Batch",
+    "la-bellevilloise": "extraction still running in the Message Batch",
+    "la-marbrerie": "extraction still running in the Message Batch",
+    "le-plan": "extraction still running in the Message Batch",
+    "file7": "extraction still running in the Message Batch",
+    "glazart": 19,
+    "la-machine": "extraction still running in the Message Batch",
+    "duc-des-lombards": "extraction still running in the Message Batch",
+    "le-baiser-sale": "extraction still running in the Message Batch",
+    "le-104": "extraction still running in the Message Batch",
+    "la-petite-halle": 10,
+    "le-grand-rex": "extraction still running in the Message Batch",
+    "mains-d-oeuvres": 6,
+    "badaboum": "extraction still running in the Message Batch",
+    "philharmonie": "extraction still running in the Message Batch",
+    "le-trabendo": "extraction still running in the Message Batch",
+    "fgo-barbara": "extraction still running in the Message Batch",
+    "la-station": "extraction still running in the Message Batch",
+    "cirque-electrique": "extraction still running in the Message Batch",
+    "la-dame-de-canton": "extraction still running in the Message Batch",
+    "la-java": "extraction still running in the Message Batch",
+    "doc": 5,
+    "le-bal-blomet": "extraction still running in the Message Batch",
+    "studio-de-l-ermitage": "extraction still running in the Message Batch",
+    "les-trois-baudets": "extraction still running in the Message Batch",
+    "le-360": "extraction still running in the Message Batch",
+    "le-triton": 40,
+    "la-dynamo": "extraction still running in the Message Batch",
+    "canal-93": "extraction still running in the Message Batch",
+    "espace-1789": 52,
+    "la-gaite-lyrique": "extraction still running in the Message Batch",
+    "popup": "extraction still running in the Message Batch",
+    "le-truskel": "extraction still running in the Message Batch",
+    "nouveau-casino": "extraction still running in the Message Batch",
+    "la-generale": 9
+   }
+  },
   {
    "date": "2026-09-30",
    "run_url": "https://github.com/rquilliet/live-music/actions/runs/36703832371",
@@ -1622,68 +1702,6 @@
     "popup": 59,
     "le-truskel": 1,
     "nouveau-casino": 34,
-    "la-generale": 9
-   }
-  },
-  {
-   "date": "2026-09-17",
-   "run_url": null,
-   "sources": {
-    "opendata": 1010,
-    "bataclan": 45,
-    "la-cigale": 73,
-    "la-boule-noire": 84,
-    "le-trianon": 35,
-    "elysee-montmartre": 42,
-    "la-maroquinerie": 91,
-    "petit-bain": 54,
-    "point-ephemere": 66,
-    "cafe-de-la-danse": 18,
-    "le-hasard-ludique": 9,
-    "new-morning": 69,
-    "instants-chavires": 11,
-    "supersonic": 77,
-    "sunset-sunside": 164,
-    "accor-arena": 8,
-    "olympia": 13,
-    "zenith-paris": 61,
-    "la-seine-musicale": 48,
-    "paris-la-defense-arena": 13,
-    "alhambra": 55,
-    "cabaret-sauvage": 46,
-    "la-bellevilloise": 60,
-    "la-marbrerie": 34,
-    "le-plan": "no page could be fetched for Le Plan",
-    "file7": 8,
-    "glazart": 21,
-    "la-machine": 45,
-    "duc-des-lombards": 6,
-    "le-baiser-sale": 25,
-    "le-104": 18,
-    "la-petite-halle": 11,
-    "le-grand-rex": 0,
-    "mains-d-oeuvres": 7,
-    "badaboum": 43,
-    "philharmonie": 0,
-    "le-trabendo": 55,
-    "fgo-barbara": 24,
-    "la-station": 16,
-    "cirque-electrique": 53,
-    "la-dame-de-canton": 18,
-    "la-java": 17,
-    "doc": 2,
-    "le-bal-blomet": 65,
-    "studio-de-l-ermitage": 4,
-    "les-trois-baudets": 33,
-    "le-360": 1,
-    "le-triton": 41,
-    "la-dynamo": 12,
-    "canal-93": 11,
-    "espace-1789": 26,
-    "la-gaite-lyrique": 30,
-    "popup": 62,
-    "le-truskel": 2,
-    "nouveau-casino": 35,
     "la-generale": 9
    }
   }
