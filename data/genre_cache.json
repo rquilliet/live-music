@@ -2126,6 +2126,18 @@
 "free improvisation"
 ]
 },
+"bal-chavaux|fine": {
+"genres": [
+"soul-rnb",
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"alternative r&b",
+"neo-soul"
+]
+},
 "bal-chavaux|fluisteraars bacht n de vulle moane": {
 "genres": [
 "metal"
@@ -2197,6 +2209,18 @@
 "subgenres": [
 "stoner rock",
 "psychedelic rock"
+]
+},
+"bal-chavaux|montreuil sous bass 2": {
+"genres": [
+"electro",
+"reggae"
+],
+"is_music": true,
+"subgenres": [
+"bass music",
+"dub",
+"sound system"
 ]
 },
 "bal-chavaux|schlaasss corto malaise": {
@@ -3798,6 +3822,20 @@
 "french pop"
 ]
 },
+"centre-paris-anim-bessie-smith-ex-reuilly|jam avec l association cadence": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
+"centre-paris-anim-bessie-smith-ex-reuilly|jam latino": {
+"genres": [
+"latin"
+],
+"is_music": true,
+"subgenres": []
+},
 "centre-tcheque-de-paris|cine concert viva kapralova": {
 "genres": [
 "classical"
@@ -4500,6 +4538,17 @@
 "dream pop"
 ]
 },
+"conservatoire-municipal-charles-munch|concert de musique carnatique inde du sud suryaprakash classical trio": {
+"genres": [
+"world",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"carnatic",
+"indian classical"
+]
+},
 "conservatoire-municipal-charles-munch|grand concert de l orchestre enjeux": {
 "genres": [
 "classical"
@@ -4632,6 +4681,15 @@
 "opera"
 ]
 },
+"conservatoire-municipal-gabriel-faure|masterclasses de musique carnatique inde du sud suryaprakash classical trio": {
+"genres": [
+"world"
+],
+"is_music": false,
+"subgenres": [
+"carnatic"
+]
+},
 "conservatoire-municipal-hector-berlioz|carnaval": {
 "genres": [
 "classical"
@@ -4691,6 +4749,15 @@
 "is_music": true,
 "subgenres": [
 "poetry and music"
+]
+},
+"conservatoire-municipal-maurice-ravel|concert de l orchestre des jeunes altistes parisiens ojap": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"orchestral"
 ]
 },
 "conservatoire-municipal-nadia-et-lili-boulanger|audition de classe le son des cordes": {
@@ -6208,6 +6275,11 @@
 "rap français"
 ]
 },
+"fgo-barbara|festival de rhetorique x fete des vendanges": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "fgo-barbara|gender fvck klub halloween edition 2 androkill belligerency joli younes scorpiah akey gemini k la mulette": {
 "genres": [
 "electro"
@@ -6428,6 +6500,15 @@
 "is_music": true,
 "subgenres": [
 "rock festif"
+]
+},
+"file7|revnoir solitaris trvma": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"post-metal"
 ]
 },
 "file7|soirees fan club tedaak jasmine not jafar": {
@@ -7421,6 +7502,15 @@
 ]
 },
 "l-ours-et-la-vieille-grille|bjam jam baroque": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque"
+]
+},
+"l-ours-et-la-vieille-grille|bjam jam baroque costumee": {
 "genres": [
 "classical"
 ],
@@ -8537,6 +8627,17 @@
 "bass"
 ]
 },
+"la-boule-noire|logic1000": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house",
+"uk garage",
+"breakbeat"
+]
+},
 "la-boule-noire|lost": {
 "genres": [
 "pop",
@@ -8697,6 +8798,14 @@
 "subgenres": []
 },
 "la-boule-noire|pernod ricard live music": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-boule-noire|pyo": {
 "genres": [
 "pop",
 "indie"
@@ -10929,6 +11038,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-maroquinerie|charlotte fever": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"indie pop"
+]
 },
 "la-maroquinerie|cheri": {
 "genres": [
@@ -14185,6 +14304,18 @@
 "avant-pop"
 ]
 },
+"le-hasard-ludique|yard au hasard ludique": {
+"genres": [
+"electro",
+"rock",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"noise rock",
+"techno"
+]
+},
 "le-lucernaire|pauline paris projette son film dejeuner s du matin au lucernaire": {
 "genres": [],
 "is_music": false,
@@ -17048,6 +17179,15 @@
 "subgenres": [
 "piano recital",
 "minimalism"
+]
+},
+"mediatheque-mateo-maximoff|performance artistique et musicale autour de la bande dessinee manouche manouche": {
+"genres": [
+"world"
+],
+"is_music": false,
+"subgenres": [
+"gypsy"
 ]
 },
 "mediatheque-musicale-de-paris-christiane-eda-pierre|concert hura mirshekari et n9ne monte le son 2026 o feminins": {
@@ -20779,6 +20919,11 @@
 "subgenres": []
 },
 "point-ephemere|faire la fete frugale culture vivante et sobriete heureuse avec le low tech journal": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"point-ephemere|festival de bd matin": {
 "genres": [],
 "is_music": false,
 "subgenres": []
@@ -26443,6 +26588,15 @@
 "symphonic"
 ]
 },
+"theatre-du-gouvernail|cosmos chansons francaises": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"piano-voix"
+]
+},
 "theatre-juliette-recamier|memoires vivantes ensemble vocal sequenza 9 3": {
 "genres": [
 "classical",
@@ -26510,6 +26664,18 @@
 "subgenres": [
 "baul",
 "indian devotional"
+]
+},
+"theatre-mandapa|le petit mish mash musiques yiddish tsiganes roumaines et moldaves": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"klezmer",
+"gypsy",
+"balkan"
 ]
 },
 "theatre-mandapa|ragas romantiques inde du nord": {
