@@ -13,16 +13,17 @@
   "supersonic": {
    "since": "2026-10-01",
    "days": [
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-02"
    ],
-   "usd": 0.2252,
+   "usd": 0.4163,
    "issue": "REM-78"
   }
  },
  "last": {
-  "date": "2026-10-01",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/36859936834",
-  "usd": 0.2252,
+  "date": "2026-10-02",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37002392161",
+  "usd": 0.1911,
   "sessions": 1,
   "fixed": [],
   "recovered": [],
@@ -30,58 +31,56 @@
    {
     "venue": "Supersonic",
     "slug": "supersonic",
-    "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-01&page=1",
+    "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-02&page=1",
     "since": "2026-10-01",
     "prev_count": 61,
     "url": "https://supersonic-club.fr",
-    "attempts": 1,
-    "usd_total": 0.2252,
+    "attempts": 2,
+    "usd_total": 0.4163,
     "problems": [
-     "the tests fail: nal elements.\nFirst extra element 2:\n'?? tests/__pycache__/test_ok.cpython-312.pyc'\n\n- ['?? data/troubleshoot.json',\n+ ['?? data/troubleshoot.json', '?? notes.txt']\n?                              ++++++++++++++++\n\n-  '?? notes.txt',\n-  '?? tests/__pycache__/test_ok.cpython-312.pyc']\n\n----------------------------------------------------------------------\nRan 128 tests in 1.222s\n\nFAILED (failures=2)"
+     "the tests fail: nal elements.\nFirst extra element 2:\n'?? tests/__pycache__/test_ok.cpython-312.pyc'\n\n- ['?? data/troubleshoot.json',\n+ ['?? data/troubleshoot.json', '?? notes.txt']\n?                              ++++++++++++++++\n\n-  '?? notes.txt',\n-  '?? tests/__pycache__/test_ok.cpython-312.pyc']\n\n----------------------------------------------------------------------\nRan 128 tests in 1.523s\n\nFAILED (failures=2)"
     ],
-    "notes": "Supersonic rebuilt its WordPress site without The Events Calendar, so the tribe API now returns 404; I pointed the source at its /agenda/ page using the existing \"llm\" strategy.\n\n- Cause: the new site (theme \"supersonic\", built by Contemple studio) stores concerts as a custom post type \"evenement\". /wp-json/ no longer lists the tribe/events/v1 namespace, so the tribe parser has nothing to read.\n- Change (venues.json, Supersonic entry only): \"strategy\" \"tribe\" -> \"llm\", \"url\" \"https://supersonic-club.fr\" -> \"https://supersonic-club.fr/agenda/\". The agenda is server-rendered (about 8.8k characters of text) and lists every concert with its date, room and title. No parser code changed.\n- Not used: /wp-json/wp/v2/evenement. Its \"date\" field is the publish date, not the concert date, and the response is over 1 MB of text. Reading it properly would need a new hand parser, which is a job for a human if they want to stop paying for LLM extraction (about $0.41 per run without cache).\n- Check: ok, count 103 (previous 61). Sample: 2026-10-01 King Phantom + Les Caballeros + KIJE, 2026-10-01 Yard Act // Official Aftershow DJ Set, 2026-10-02 ĠENN + Dirty Rodeo + FLOAT.\n  The count is higher because the agenda now runs to May 2027. It has 122 dated entries, some listed twice (e.g. \"Shaking Hand\" and \"Shaking Hand + Penny & The Pits + PEUF!\"), plus festival passes.\n  One entry is at La Bellevilloise (another venue). A human may want to check whether it ends up under Supersonic.\n- No instructions aimed at the scraper were found in the pages.",
+    "notes": "Supersonic rebuilt its WordPress site without The Events Calendar, so the tribe REST endpoint now returns 404; I repaired it by moving the source to the \"llm\" strategy on its /agenda/ page.\n\nCause: the new site (theme \"supersonic\" by Contemple studio) dropped the Events Calendar plugin. /wp-json/ no longer lists a tribe/events/v1 namespace. Events are now a custom post type \"evenement\" (/evenement/<slug>/, wp/v2/evenement), and no existing parser reads that.\nChange: venues.json, Supersonic entry only: \"strategy\" \"tribe\" -> \"llm\", \"url\" \"https://supersonic-club.fr\" -> \"https://supersonic-club.fr/agenda/\". The agenda page is static HTML listing every event (date in <time datetime>, title, room). I left tribe.py alone because Sunset/Sunside also uses it.\nCheck: ok, count 97 (previously 61), sample \"2026-10-02 ĠENN + Dirty Rodeo + FLOAT\", ... The agenda holds 97 items: 85 Supersonic, 11 Supersonic Records and 1 at La Bellevilloise, dated 2026-10-02 to 2027-05-08. The higher count reflects a longer programme published online, not parser noise.\nFor a human: a dedicated parser for the agenda markup (li.agenda-item, data-venue, <time datetime>, h3) would avoid the LLM cost and could drop the off-site La Bellevilloise date. Times are not on the agenda list (shown as --:--).\nI saw no instructions embedded in the pages.",
     "diff": "--- a/venues.json\n+++ b/venues.json\n@@ -27,7 +27,7 @@\n    \"address\": \"7 rue Richard Lenoir, 93100 Montreuil\", \"area\": \"Montreuil\", \"lat\": 48.8567, \"lon\": 2.4292, \"genres\": [\"experimental\"]},\n   {\"name\": \"Bal Chavaux\", \"slug\": \"bal-chavaux\", \"strategy\": \"balchavaux\", \"url\": \"https://balchavaux.fr/agenda\",\n    \"address\": \"2 avenue de la Résistance, 93100 Montreuil\", \"area\": \"Montreuil\", \"lat\": 48.8584, \"lon\": 2.4368},\n-  {\"name\": \"Supersonic\", \"slug\": \"supersonic\", \"strategy\": \"tribe\", \"url\": \"https://supersonic-club.fr\",\n+  {\"name\": \"Supersonic\", \"slug\": \"supersonic\", \"strategy\": \"llm\", \"url\": \"https://supersonic-club.fr/agenda/\",\n    \"address\": \"9 rue Biscornet, 75012 Paris\", \"area\": \"Bastille\", \"lat\": 48.8514, \"lon\": 2.3706, \"genres\": [\"rock\", \"indie\"]},\n   {\"name\": \"Dernier Bar avant la Fin du Monde\", \"slug\": \"dernier-bar-avant-la-fin-du-monde\", \"strategy\": \"dernierbar\", \"url\": \"https://dernierbar.com/pages/paris\", \"low\": 1,\n    \"address\": \"19 avenue Victoria, 75001 Paris\", \"area\": \"Châtelet\", \"lat\": 48.8577, \"lon\": 2.3473, \"geo_match\": false},\n",
-    "usd": 0.2252,
-    "usd_agent": 0.22515880000000002
+    "usd": 0.1911,
+    "usd_agent": 0.19107459999999998
    }
   ],
   "systemic": [
    {
     "cause": "extraction still running in the Message Batch",
     "venues": [
-     "Accor Arena",
      "L'Olympia",
      "Zénith Paris",
+     "La Seine Musicale",
      "Plenitude Arena",
-     "Alhambra",
      "Cabaret Sauvage",
      "La Bellevilloise",
      "La Marbrerie",
-     "Le Plan",
-     "File7",
      "La Machine du Moulin Rouge",
      "Duc des Lombards",
      "Le Baiser Salé",
      "Le Centquatre",
+     "La Petite Halle",
      "Le Grand Rex",
      "Badaboum",
      "Philharmonie de Paris",
      "Le Trabendo",
-     "FGO-Barbara",
      "La Station - Gare des Mines",
      "Cirque Electrique",
      "La Dame de Canton",
-     "La Java",
+     "DOC",
      "Le Bal Blomet",
      "Studio de l'Ermitage",
      "Les Trois Baudets",
      "Le 360 Paris Music Factory",
+     "Le Triton",
      "La Dynamo de Banlieues Bleues",
-     "Canal 93",
      "La Gaîté Lyrique",
      "PopUp!",
      "Le Truskel",
-     "Nouveau Casino"
+     "Nouveau Casino",
+     "La Générale"
     ]
    }
   ],
@@ -95,7 +94,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-01",
-  "usd": 0.2252
+  "date": "2026-10-02",
+  "usd": 0.1911
  }
 }
