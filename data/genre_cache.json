@@ -4949,6 +4949,17 @@
 "is_music": true,
 "subgenres": []
 },
+"duc-des-lombards|kassa overall": {
+"genres": [
+"jazz",
+"hip-hop",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"experimental jazz"
+]
+},
 "duc-des-lombards|obradovic tixier duo told 10 year anniversary release party": {
 "genres": [
 "jazz"
@@ -6615,6 +6626,16 @@
 "is_music": true,
 "subgenres": []
 },
+"file7|juste shani chorale sauvage": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "file7|les fatals picards la bise": {
 "genres": [
 "rock",
@@ -6649,6 +6670,16 @@
 "electro"
 ],
 "is_music": true,
+"subgenres": []
+},
+"file7|super week end kidz into the woods seance scolaire": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"file7|super week end kidz orel octave melodie seance scolaire": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "fondation-des-etats-unis|concert jazz a la cite 16 it s impossible to sing and play the bass": {
@@ -8050,12 +8081,32 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|halle aux oliviers lemmy s tribe": {
+"genres": [
+"metal",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"heavy metal",
+"speed metal"
+]
+},
 "la-bellevilloise|halle aux oliviers les duos de jean loup": {
 "genres": [
 "jazz"
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-bellevilloise|halle aux oliviers les freres dubz": {
+"genres": [
+"reggae"
+],
+"is_music": true,
+"subgenres": [
+"dub"
+]
 },
 "la-bellevilloise|halle aux oliviers margaux monnois baptiste renou duo": {
 "genres": [
@@ -14043,6 +14094,18 @@
 "vocal jazz"
 ]
 },
+"le-baiser-sale|tiss week femi temowo x gildaa": {
+"genres": [
+"jazz",
+"soul-rnb",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"afro-jazz",
+"neo-soul"
+]
+},
 "le-baiser-sale|tiss week koko": {
 "genres": [
 "jazz",
@@ -15300,6 +15363,16 @@
 "is_music": true,
 "subgenres": []
 },
+"le-plan|coeur de pirate suzanne belaubre": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"indie pop"
+]
+},
 "le-plan|gouter concert de l opening 12 les inseparables piou piou": {
 "genres": [],
 "is_music": false,
@@ -15855,6 +15928,17 @@
 "is_music": true,
 "subgenres": []
 },
+"le-trabendo|clap your hands say yeah": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"indie rock",
+"lo-fi"
+]
+},
 "le-trabendo|genesis owusu": {
 "genres": [
 "hip-hop",
@@ -16223,6 +16307,17 @@
 "is_music": false,
 "subgenres": [
 "orchestral"
+]
+},
+"le-trianon|les wampas": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"yéyé punk",
+"punk rock"
 ]
 },
 "le-trianon|leslie odom jr": {
@@ -16741,6 +16836,14 @@
 "subgenres": [
 "garage rock"
 ]
+},
+"le-truskel|laces": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
 },
 "le-truskel|ordre public danny redrum": {
 "genres": [
@@ -18909,6 +19012,16 @@
 "retro soul"
 ]
 },
+"olympia|juste shani": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "olympia|le prix josephine": {
 "genres": [
 "pop",
@@ -18966,6 +19079,14 @@
 "subgenres": [
 "grunge"
 ]
+},
+"olympia|piche": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
 },
 "olympia|remportez des entrees pour assister au prix josephine 2026": {
 "genres": [
@@ -27412,6 +27533,17 @@
 "urbano"
 ]
 },
+"zenith-paris|cage the elephant": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"alternative rock",
+"garage rock"
+]
+},
 "zenith-paris|calbo heritage": {
 "genres": [
 "hip-hop"
@@ -27888,6 +28020,17 @@
 "folk-pop"
 ]
 },
+"zenith-paris|naika": {
+"genres": [
+"pop",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"afro-pop",
+"caribbean pop"
+]
+},
 "zenith-paris|neg marrons": {
 "genres": [
 "reggae",
@@ -27897,6 +28040,16 @@
 "subgenres": [
 "ragga",
 "rap français"
+]
+},
+"zenith-paris|nothing but thieves": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"alternative rock"
 ]
 },
 "zenith-paris|omah lay": {
