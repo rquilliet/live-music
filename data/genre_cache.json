@@ -9,6 +9,17 @@
 "techno"
 ]
 },
+"211|zouk konpa": {
+"genres": [
+"world",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"zouk",
+"konpa"
+]
+},
 "38riv-jazz-club|a birchola trio chansons bresiliennes compositions au 38riv jazz club": {
 "genres": [
 "world",
@@ -2154,6 +2165,13 @@
 "subgenres": [
 "atmospheric black metal"
 ]
+},
+"bal-chavaux|jazz": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
 },
 "bal-chavaux|jessica93 maria violenza la scroafa emputecida noir boy george": {
 "genres": [
@@ -4989,6 +5007,81 @@
 "modern jazz"
 ]
 },
+"ecuje|anne sila alex terrier quintet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
+"ecuje|david krakauer kathleen tagg breath hammer": {
+"genres": [
+"world",
+"jazz",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"klezmer"
+]
+},
+"ecuje|finale du prix rene urtreger 2027": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
+"ecuje|laurent robin trio ft de wilde zelnik": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano trio"
+]
+},
+"ecuje|marion rampal p f blanchard": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
+"ecuje|omri mor mehdi nassouli karim ziad": {
+"genres": [
+"world",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"gnawa"
+]
+},
+"ecuje|tamir hendelman duo krome": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"mainstream jazz",
+"piano duo"
+]
+},
+"ecuje|ted nash european quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-bop"
+]
+},
 "eglise-de-la-madeleine|bolero de ravel 9eme symphonie de beethoven": {
 "genres": [
 "classical"
@@ -5322,6 +5415,15 @@
 "subgenres": [
 "piano recital",
 "film music"
+]
+},
+"eglise-saint-merry|poesia dell evocare enrico damiano vallone": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"classical guitar"
 ]
 },
 "eglise-saint-merry|sophia vaillant piano": {
@@ -5890,6 +5992,16 @@
 "singer-songwriter"
 ]
 },
+"elysee-montmartre|florence road": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"indie rock"
+]
+},
 "elysee-montmartre|getdown services": {
 "genres": [
 "indie",
@@ -6445,6 +6557,17 @@
 "rap français"
 ]
 },
+"fgo-barbara|ici demain festival 7eme edition a fgo barbara": {
+"genres": [
+"pop",
+"hip-hop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"emerging artists"
+]
+},
 "fgo-barbara|ici demain festival la creation contemporaine au fgo barbara": {
 "genres": [
 "experimental",
@@ -6458,6 +6581,15 @@
 "genres": [
 "pop",
 "soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
+"fgo-barbara|jeudi 19 novembre a ici demain festival": {
+"genres": [
+"pop",
+"hip-hop",
+"electro"
 ],
 "is_music": true,
 "subgenres": []
@@ -6503,6 +6635,15 @@
 "fgo-barbara|mama music convention louisadonna mona guba wtazzz": {
 "genres": [
 "pop",
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
+"fgo-barbara|mercredi 18 novembre a ici demain festival": {
+"genres": [
+"pop",
+"hip-hop",
 "electro"
 ],
 "is_music": true,
@@ -6556,6 +6697,15 @@
 "subgenres": [
 "rap français"
 ]
+},
+"fgo-barbara|vendredi 20 novembre a ici demain festival": {
+"genres": [
+"hip-hop",
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": []
 },
 "fiap-paris|jimi rebel show": {
 "genres": [
@@ -9779,6 +9929,15 @@
 "is_music": false,
 "subgenres": []
 },
+"la-cigale|mous k": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "la-cigale|nemzzz": {
 "genres": [
 "hip-hop"
@@ -12064,6 +12223,15 @@
 "subgenres": [
 "rap marocain",
 "trap"
+]
+},
+"la-maroquinerie|sofia camara": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"bedroom pop"
 ]
 },
 "la-maroquinerie|sons of legion": {
@@ -16490,6 +16658,13 @@
 "britpop",
 "post-punk revival"
 ]
+},
+"le-trianon|teddybear": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "le-trianon|temples": {
 "genres": [
