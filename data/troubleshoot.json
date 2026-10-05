@@ -12,14 +12,45 @@
   }
  },
  "last": {
-  "date": "2026-10-04",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37196814558",
+  "date": "2026-10-05",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37311658348",
   "usd": 0,
   "sessions": 0,
   "fixed": [],
   "recovered": [],
   "unresolved": [],
-  "systemic": [],
+  "systemic": [
+   {
+    "cause": "extraction still running in the Message Batch",
+    "venues": [
+     "L'Olympia",
+     "Zénith Paris",
+     "La Seine Musicale",
+     "Alhambra",
+     "Cabaret Sauvage",
+     "La Bellevilloise",
+     "Le Plan",
+     "Glazart",
+     "Duc des Lombards",
+     "Le Baiser Salé",
+     "Le Centquatre",
+     "Le Grand Rex",
+     "Mains d'Œuvres",
+     "Badaboum",
+     "Philharmonie de Paris",
+     "Le Trabendo",
+     "FGO-Barbara",
+     "La Station - Gare des Mines",
+     "La Dame de Canton",
+     "Le Bal Blomet",
+     "Studio de l'Ermitage",
+     "Canal 93",
+     "PopUp!",
+     "Le Truskel",
+     "Nouveau Casino"
+    ]
+   }
+  ],
   "skipped": [
    {
     "venue": "Supersonic",
