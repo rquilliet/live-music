@@ -272,6 +272,16 @@
 "piano trio"
 ]
 },
+"38riv-jazz-club|dom ingham en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"jazz violin"
+]
+},
 "38riv-jazz-club|dylan choisi trio en concert au 38riv jazz club": {
 "genres": [
 "jazz",
@@ -1502,6 +1512,18 @@
 "baroque pop"
 ]
 },
+"alhambra|take me out stereo mc s en concert a paris": {
+"genres": [
+"hip-hop",
+"electro",
+"funk"
+],
+"is_music": true,
+"subgenres": [
+"british hip hop",
+"acid house"
+]
+},
 "alhambra|take me out vtoroi ka en concert a paris": {
 "genres": [
 "punk",
@@ -2065,6 +2087,17 @@
 "bal"
 ]
 },
+"badaboum|moizo brinkert feather aid la mecanique ondulatoire": {
+"genres": [
+"rock",
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"pop rock"
+]
+},
 "badaboum|simia badaboum": {
 "genres": [
 "electro",
@@ -2478,6 +2511,17 @@
 "folk rock"
 ]
 },
+"bataclan|dead poet society": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"alternative rock",
+"hard rock"
+]
+},
 "bataclan|devin townsend": {
 "genres": [
 "metal"
@@ -2534,6 +2578,15 @@
 "subgenres": [
 "j-pop",
 "vocaloid"
+]
+},
+"bataclan|evnne": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"k-pop"
 ]
 },
 "bataclan|ezhel": {
@@ -3777,6 +3830,17 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|valeria castro": {
+"genres": [
+"folk",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"canarian folk",
+"singer-songwriter"
+]
+},
 "canal-barboteur|le beau dimanche break ya bones live dj la bise": {
 "genres": [
 "rock",
@@ -4703,6 +4767,16 @@
 "is_music": true,
 "subgenres": [
 "saxophone"
+]
+},
+"conservatoire-municipal-erik-satie|satie en fete": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"french impressionism",
+"chamber music"
 ]
 },
 "conservatoire-municipal-francis-poulenc|alchimie": {
@@ -5938,6 +6012,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"elysee-montmartre|eisbrecher": {
+"genres": [
+"metal",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"neue deutsche härte",
+"industrial metal"
+]
 },
 "elysee-montmartre|elephanz": {
 "genres": [
@@ -9714,6 +9799,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-cigale|giant rooks": {
+"genres": [
+"indie",
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie rock"
+]
+},
 "la-cigale|girls in hawaii": {
 "genres": [
 "indie",
@@ -10216,6 +10312,18 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dame-de-canton|armelle yons x iva nova": {
+"genres": [
+"world",
+"folk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"russian folk",
+"folk rock"
+]
+},
 "la-dame-de-canton|armelle yons x kaptain bando": {
 "genres": [
 "chanson",
@@ -10228,6 +10336,14 @@
 "genres": [
 "pop",
 "indie"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-dame-de-canton|bckst x enalion": {
+"genres": [
+"indie",
+"pop"
 ],
 "is_music": true,
 "subgenres": []
@@ -11463,6 +11579,18 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|beth orton": {
+"genres": [
+"folk",
+"indie",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"folktronica",
+"singer-songwriter"
+]
+},
 "la-maroquinerie|bey": {
 "genres": [
 "hip-hop",
@@ -11858,6 +11986,14 @@
 "subgenres": [
 "art pop"
 ]
+},
+"la-maroquinerie|keo": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-maroquinerie|la 808e nuit": {
 "genres": [
@@ -13143,6 +13279,11 @@
 "greek pop"
 ]
 },
+"la-seine-musicale|la cage aux folles": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "la-seine-musicale|la symphonie revee a la seine musicale": {
 "genres": [
 "classical"
@@ -13244,6 +13385,22 @@
 "is_music": true,
 "subgenres": [
 "gala concert"
+]
+},
+"la-seine-musicale|retour vers le futur le spectacle musical": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"la-seine-musicale|rhapsodies danses folkloriques et chants populaires": {
+"genres": [
+"classical",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"orchestral",
+"rhapsody"
 ]
 },
 "la-seine-musicale|romeo et juliette": {
@@ -14041,6 +14198,18 @@
 "is_music": true,
 "subgenres": [
 "improvisation"
+]
+},
+"le-baiser-sale|lajamdudimanche la jam du dimanche d isaias alves": {
+"genres": [
+"latin",
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"brazilian",
+"percussion"
 ]
 },
 "le-baiser-sale|lajamdulundi de francois constantin": {
@@ -14903,6 +15072,17 @@
 "brazilian"
 ]
 },
+"le-melville|beija jeanzac quartet": {
+"genres": [
+"blues",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"harmonica blues",
+"singer-songwriter"
+]
+},
 "le-melville|benzaquine 4tet": {
 "genres": [
 "jazz"
@@ -14920,6 +15100,16 @@
 "subgenres": [
 "hard bop",
 "folk-tinged jazz"
+]
+},
+"le-melville|blue moon": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop",
+"standards"
 ]
 },
 "le-melville|breton toulon duo": {
@@ -17002,6 +17192,16 @@
 "is_music": true,
 "subgenres": []
 },
+"le-truskel|indie rock": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"indie rock"
+]
+},
 "le-truskel|irene jonas elephant": {
 "genres": [
 "indie",
@@ -17072,6 +17272,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"les-disquaires|chants de l exil": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"balkan",
+"sephardic songs"
+]
 },
 "les-lionnes-parvis-du-palais-de-la-porte-doree|guinguette afro caribbean sunset open air gratuit": {
 "genres": [
@@ -17411,6 +17622,18 @@
 "is_music": true,
 "subgenres": []
 },
+"mains-d-oeuvres|dj set de la louuve": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
+"mains-d-oeuvres|focus 6 matieres en partage": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "mains-d-oeuvres|go muscle es 2": {
 "genres": [],
 "is_music": false,
@@ -17420,6 +17643,16 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"mains-d-oeuvres|laincore release party": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"hyperpop"
+]
 },
 "mains-d-oeuvres|les rejetons d olive": {
 "genres": [],
@@ -17661,6 +17894,14 @@
 "subgenres": [
 "singer-songwriter"
 ]
+},
+"mediatheque-helene-berr|concert la repetheque de muddy cotton": {
+"genres": [
+"blues",
+"folk"
+],
+"is_music": true,
+"subgenres": []
 },
 "mediatheque-james-baldwin|concert d emmanuelle parrenin monte le son": {
 "genres": [
@@ -21733,6 +21974,11 @@
 "psych folk"
 ]
 },
+"point-ephemere|green flag comedy club mahaud drama louis chappey olivia dago et camille giry": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|gregoire jokic": {
 "genres": [
 "jazz"
@@ -21848,6 +22094,13 @@
 "genres": [
 "electro",
 "pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"point-ephemere|la scarlette x stargurl rituals the freakshow": {
+"genres": [
+"electro"
 ],
 "is_music": true,
 "subgenres": []
@@ -22111,6 +22364,11 @@
 "is_music": true,
 "subgenres": []
 },
+"point-ephemere|pop up solidaire moodz": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|primitive ring": {
 "genres": [
 "rock",
@@ -22156,6 +22414,11 @@
 "subgenres": [
 "rap français"
 ]
+},
+"point-ephemere|screen queens almodovar": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "point-ephemere|sebastien schuller": {
 "genres": [
@@ -23799,6 +24062,17 @@
 "subgenres": [
 "instrumental soul",
 "groove"
+]
+},
+"sunset-sunside|blood and sun society of the silver cross et linnea hjerten": {
+"genres": [
+"folk",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"neofolk",
+"dark ambient"
 ]
 },
 "sunset-sunside|bloom": {
@@ -25447,6 +25721,17 @@
 "instrumental pop"
 ]
 },
+"sunset-sunside|slow slow loris shantidas et frontier en concert": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"noise",
+"power electronics"
+]
+},
 "sunset-sunside|sofia levin quintet de piazzolla a nos jours": {
 "genres": [
 "latin",
@@ -25734,6 +26019,17 @@
 "dream pop",
 "bedroom pop",
 "lo-fi"
+]
+},
+"supersonic|a r t": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"art rock"
 ]
 },
 "supersonic|alberta cross": {
@@ -27432,6 +27728,27 @@
 "piano-voix"
 ]
 },
+"theatre-du-temps|in gowan ring et adaya en concert": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"psychedelic folk",
+"neofolk"
+]
+},
+"theatre-du-temps|melodies nomades traversees musicales et theatrales": {
+"genres": [
+"world",
+"chanson",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"traditional songs"
+]
+},
 "theatre-juliette-recamier|memoires vivantes ensemble vocal sequenza 9 3": {
 "genres": [
 "classical",
@@ -27607,6 +27924,38 @@
 "subgenres": [
 "flamenco",
 "cante jondo"
+]
+},
+"theatre-traversiere|nuages cine concert jeune public": {
+"genres": [
+"indie",
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"ciné-concert"
+]
+},
+"theatre-traversiere|villa fantome concert": {
+"genres": [
+"rock",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"rock français"
+]
+},
+"zebre-de-belleville|agathe peyrat et pierre cussac en concert au zebre de belleville": {
+"genres": [
+"classical",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"mélodie française",
+"opera"
 ]
 },
 "zenith-paris|adele castillon": {
