@@ -152,6 +152,17 @@
 "piano trio"
 ]
 },
+"38riv-jazz-club|baptiste ferrandis abdallah abozerky en concert au 38riv jazz club": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"oriental jazz",
+"arabic music"
+]
+},
 "38riv-jazz-club|benart invite celine bonacina jazz fusion au 38riv jazz club": {
 "genres": [
 "jazz",
@@ -413,6 +424,17 @@
 "swing"
 ]
 },
+"38riv-jazz-club|gabrielle sandman a kind of cabaret au 38riv jazz club": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"cabaret",
+"vocal jazz"
+]
+},
 "38riv-jazz-club|gilliam sayad standards trio au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -492,6 +514,15 @@
 "subgenres": [
 "contemporary jazz",
 "post-bop"
+]
+},
+"38riv-jazz-club|hispanic trio django afternoon au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz manouche"
 ]
 },
 "38riv-jazz-club|jakob dreyer quartet en concert au 38riv jazz club": {
@@ -589,6 +620,26 @@
 "subgenres": [
 "gypsy jazz",
 "swing"
+]
+},
+"38riv-jazz-club|julie saury quartet family affair au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"mainstream jazz"
+]
+},
+"38riv-jazz-club|julie saury trio en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"groove"
 ]
 },
 "38riv-jazz-club|juliette delas release party au 38riv jazz club": {
@@ -793,6 +844,26 @@
 "contemporary jazz"
 ]
 },
+"38riv-jazz-club|pierre marcus quartet standards compositions au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"standards"
+]
+},
+"38riv-jazz-club|pierre perchaud chris jennings concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"chamber jazz"
+]
+},
 "38riv-jazz-club|ramona horvath invite lisa cat berro femmages au 38riv jazz club jss26": {
 "genres": [
 "jazz"
@@ -819,6 +890,17 @@
 "subgenres": [
 "gypsy jazz",
 "swing"
+]
+},
+"38riv-jazz-club|sara miette clement simon en concert au 38riv jazz club": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"vocal jazz"
 ]
 },
 "38riv-jazz-club|sara miette raconte le choro velours velours a kind of cabaret au 38riv jazz club": {
@@ -853,6 +935,26 @@
 "guitar jazz"
 ]
 },
+"38riv-jazz-club|sebastien giniaux trio django afternoon au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz manouche",
+"swing"
+]
+},
+"38riv-jazz-club|simon chivallon invite lluc casares en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"hard bop"
+]
+},
 "38riv-jazz-club|simone magliozzi trio django afternoon au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -881,6 +983,16 @@
 "subgenres": [
 "bebop",
 "jazz standards"
+]
+},
+"38riv-jazz-club|tiffany muzellec jules charbonnier en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"standards"
 ]
 },
 "38riv-jazz-club|tiffany muzellec raconte jo stafford concert au 38riv jazz club": {
@@ -931,6 +1043,14 @@
 "contemporary jazz",
 "piano trio"
 ]
+},
+"38riv-jazz-club|will of things en partenariat avec le cmdl au 38riv jazz club": {
+"genres": [
+"pop",
+"jazz"
+],
+"is_music": true,
+"subgenres": []
 },
 "38riv-jazz-club|xavier belin baptiste poulin crossing au 38riv jazz club jss26": {
 "genres": [
@@ -1829,6 +1949,18 @@
 "trance"
 ]
 },
+"badaboum|club sauti not your africa": {
+"genres": [
+"afro",
+"electro",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"amapiano",
+"afro house"
+]
+},
 "badaboum|club spray pureblast maco maria": {
 "genres": [
 "electro"
@@ -2008,6 +2140,17 @@
 "subgenres": [
 "experimental rap",
 "queer rap"
+]
+},
+"badaboum|concert nava": {
+"genres": [
+"world",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"persian",
+"downtempo"
 ]
 },
 "badaboum|concert otha more": {
@@ -2278,6 +2421,18 @@
 "psychedelic rock"
 ]
 },
+"bal-chavaux|monokate": {
+"genres": [
+"electro",
+"folk",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"ukrainian folk",
+"electro-folk"
+]
+},
 "bal-chavaux|montreuil sous bass 2": {
 "genres": [
 "electro",
@@ -2298,6 +2453,16 @@
 "is_music": true,
 "subgenres": [
 "noise rock"
+]
+},
+"bal-chavaux|speakeasy blues": {
+"genres": [
+"blues"
+],
+"is_music": true,
+"subgenres": [
+"jump blues",
+"blues dance"
 ]
 },
 "bal-chavaux|spineshank hed p e": {
@@ -3453,6 +3618,14 @@
 "roots"
 ]
 },
+"cabaret-sauvage|the urs": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "cabaret-sauvage|wafa oudjit": {
 "genres": [
 "world"
@@ -3981,6 +4154,11 @@
 "20th century"
 ]
 },
+"centre-wallonie-bruxelles|performissima 3": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "chaillot-theatre-national-de-la-danse|assistez a cabarets a chaillot": {
 "genres": [],
 "is_music": false,
@@ -4277,6 +4455,17 @@
 "is_music": true,
 "subgenres": [
 "industrial"
+]
+},
+"cirque-electrique|spel x folded woodini fthmlss asta hiroki peine rose": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"bass music",
+"idm"
 ]
 },
 "cirque-electrique|supersonique cie supercho zartan cosmyte pantomiman abiotiq": {
@@ -6688,6 +6877,14 @@
 "rap français"
 ]
 },
+"fgo-barbara|ledbyher": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "fgo-barbara|loufox bellboy": {
 "genres": [
 "pop",
@@ -6743,6 +6940,14 @@
 "subgenres": [
 "rnb français"
 ]
+},
+"fgo-barbara|ridgeclub": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "fgo-barbara|rok dudu": {
 "genres": [
@@ -8302,6 +8507,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|halle aux oliviers diez cuerdas": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"flamenco",
+"guitar duo"
+]
+},
 "la-bellevilloise|halle aux oliviers djan": {
 "genres": [
 "jazz"
@@ -9383,6 +9599,16 @@
 "rap français"
 ]
 },
+"la-boule-noire|slow fiction": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
+},
 "la-boule-noire|sofy": {
 "genres": [
 "indie",
@@ -9407,6 +9633,14 @@
 "genres": [
 "pop",
 "chanson"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-boule-noire|sorosoro": {
+"genres": [
+"indie",
+"pop"
 ],
 "is_music": true,
 "subgenres": []
@@ -9760,6 +9994,18 @@
 "subgenres": [
 "rap français",
 "trap"
+]
+},
+"la-cigale|duo jatekok rammstein": {
+"genres": [
+"classical",
+"metal",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"piano duo",
+"transcriptions"
 ]
 },
 "la-cigale|edis": {
@@ -11092,6 +11338,14 @@
 "eurodance"
 ]
 },
+"la-machine|ptite soeur aftershow": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-machine|ruel": {
 "genres": [
 "pop",
@@ -11120,6 +11374,15 @@
 "mod revival",
 "garage rock"
 ]
+},
+"la-machine|tones of paris afterparty by sixtion colorsxstudios": {
+"genres": [
+"electro",
+"hip-hop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-machine|trendy": {
 "genres": [
@@ -11754,6 +12017,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|dressed like boys": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-maroquinerie|ecca vandal": {
 "genres": [
 "punk",
@@ -12267,6 +12538,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|paolo": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-maroquinerie|ravage": {
 "genres": [
 "metal"
@@ -12736,6 +13015,22 @@
 "neo-soul"
 ]
 },
+"la-petite-halle|meet the bizz armel bizzman i 26 11 26": {
+"genres": [
+"soul-rnb",
+"hip-hop"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-petite-halle|meet the bizz r b meme party i 22 10 26": {
+"genres": [
+"soul-rnb",
+"hip-hop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-petite-halle|opa prix decouvertes rfi 2026 en concert a paris": {
 "genres": [
 "world",
@@ -12768,6 +13063,15 @@
 "genres": [
 "jazz",
 "soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-petite-halle|vandojam sanchez brothers i 15 10 26": {
+"genres": [
+"funk",
+"soul-rnb",
+"jazz"
 ],
 "is_music": true,
 "subgenres": []
@@ -13696,6 +14000,15 @@
 "psychedelic",
 "krautrock"
 ]
+},
+"la-station|solidarite avec le soudan": {
+"genres": [
+"electro",
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-station|sous tes reins nord sud": {
 "genres": [
@@ -15825,6 +16138,17 @@
 "rap français"
 ]
 },
+"le-point-fort-d-aubervilliers|banquet kreol le point fort d aubervilliers": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"gwoka",
+"caribbean"
+]
+},
 "le-regard-du-cygne|a table concert baroque en huit services": {
 "genres": [
 "classical"
@@ -16867,6 +17191,17 @@
 "psychedelic rock"
 ]
 },
+"le-trianon|the last internationale": {
+"genres": [
+"rock",
+"blues"
+],
+"is_music": true,
+"subgenres": [
+"protest rock",
+"hard rock"
+]
+},
 "le-trianon|transfert les 10ans": {
 "genres": [
 "electro"
@@ -17696,6 +18031,27 @@
 "is_music": true,
 "subgenres": []
 },
+"mairie-du-10e-arrondissement|soiree musicale ouverture de la saison culturelle du 10e": {
+"genres": [
+"classical",
+"pop",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"romantic"
+]
+},
+"mairie-du-20e-arrondissement|concert de restitution de la jeune scene lyrique": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"opera",
+"lyric singing"
+]
+},
 "mairie-du-7e-arrondissement|sonates de francis poulenc": {
 "genres": [
 "classical"
@@ -17893,6 +18249,16 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"mediatheque-helene-berr|concert la repetheque de lucia wilson deniz besim": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"voice and piano"
 ]
 },
 "mediatheque-helene-berr|concert la repetheque de muddy cotton": {
@@ -19225,6 +19591,17 @@
 "is_music": true,
 "subgenres": []
 },
+"nouveau-casino|micha": {
+"genres": [
+"pop",
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
 "nouveau-casino|milo korbenski gabriel kroger": {
 "genres": [
 "indie",
@@ -19303,6 +19680,17 @@
 "subgenres": [
 "dark rock",
 "atmospheric rock"
+]
+},
+"nouveau-casino|take me out micha en concert a paris": {
+"genres": [
+"pop",
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
 ]
 },
 "nouveau-casino|telegraph cassily": {
@@ -19513,6 +19901,14 @@
 "award ceremony"
 ]
 },
+"olympia|rnboi": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "olympia|the musical story of elvis revient en france du 02 au 17 janvier 2027 a l olympia a paris le 09 janvier a 20h": {
 "genres": [
 "rock",
@@ -19524,6 +19920,14 @@
 "gospel"
 ]
 },
+"olympia|tori kelly": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "oratoire-du-louvre|concert anniversaire 30 ans afmd memoire vigilance": {
 "genres": [
 "classical"
@@ -19531,6 +19935,16 @@
 "is_music": true,
 "subgenres": [
 "commemorative concert"
+]
+},
+"pan-piper-paris|festival avec la langue": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"nouvelle scène française"
 ]
 },
 "pan-piper-paris|soyez heureux": {
@@ -19579,6 +19993,11 @@
 "chanson"
 ],
 "is_music": true,
+"subgenres": []
+},
+"paris-la-defense-arena|d awards paris 2027": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "paris-la-defense-arena|harry styles paris 2027 together together tour": {
@@ -20644,6 +21063,16 @@
 "roots"
 ]
 },
+"petit-bain|tobiahs": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house",
+"breaks"
+]
+},
 "petit-bain|ven 02 10 no monark sans roi release party buski": {
 "genres": [
 "hip-hop"
@@ -21230,6 +21659,15 @@
 "subgenres": [
 "oratorio",
 "early music"
+]
+},
+"philharmonie|les aventures du prince ahmed": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"ciné-concert"
 ]
 },
 "philharmonie|les chemins qui montent": {
@@ -21840,6 +22278,17 @@
 "subgenres": [
 "gypsy punk",
 "balkan"
+]
+},
+"point-ephemere|diggers xth anniversary": {
+"genres": [
+"hip-hop",
+"funk",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"crate digging"
 ]
 },
 "point-ephemere|discovery zone": {
@@ -22610,6 +23059,14 @@
 "indie pop"
 ]
 },
+"popup|ava joe": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|baozi ilan sellouk eoline": {
 "genres": [
 "pop",
@@ -22643,6 +23100,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"popup|boni vincent taeger barbara forstner": {
+"genres": [
+"experimental",
+"jazz",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"psychedelic"
+]
 },
 "popup|boy in space": {
 "genres": [
@@ -22852,9 +23320,26 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|l osmose galawesh serje": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|lovetempo": {
 "genres": [
 "indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"popup|luxie friends paradis fiscal clover kone": {
+"genres": [
+"indie",
+"rock",
 "pop"
 ],
 "is_music": true,
@@ -23029,6 +23514,14 @@
 "subgenres": [
 "french pop"
 ]
+},
+"popup|penny": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
 },
 "popup|peuf": {
 "genres": [
@@ -23385,6 +23878,15 @@
 "is_music": true,
 "subgenres": [
 "nouvelle chanson française"
+]
+},
+"popup|ziyad al samman": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic"
 ]
 },
 "pub-la-station-paris|celine le mega karaoke des fans": {
@@ -24612,6 +25114,17 @@
 "subgenres": [
 "mpb",
 "brazilian"
+]
+},
+"sunset-sunside|guillaume barraud quartet": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"indo-jazz",
+"bansuri"
 ]
 },
 "sunset-sunside|guillaume leguerinel dance me home quintet": {
