@@ -20,32 +20,60 @@
   }
  },
  "last": {
-  "date": "2026-10-07",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37614457582",
-  "usd": 0.1027,
+  "date": "2026-10-08",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37771830722",
+  "usd": 0.0,
   "sessions": 1,
   "fixed": [],
   "recovered": [],
-  "unresolved": [
+  "unresolved": [],
+  "systemic": [
    {
-    "venue": "New Morning",
-    "slug": "new-morning",
-    "error": "HTTP 404 for https://www.newmorning.com/programmation.html",
-    "since": "2026-10-07",
-    "prev_count": 71,
-    "url": "https://www.newmorning.com/programmation.html",
-    "attempts": 1,
-    "usd_total": 0.1027,
-    "problems": [
-     "the tests fail: nal elements.\nFirst extra element 2:\n'?? tests/__pycache__/test_ok.cpython-312.pyc'\n\n- ['?? data/troubleshoot.json',\n+ ['?? data/troubleshoot.json', '?? notes.txt']\n?                              ++++++++++++++++\n\n-  '?? notes.txt',\n-  '?? tests/__pycache__/test_ok.cpython-312.pyc']\n\n----------------------------------------------------------------------\nRan 128 tests in 1.404s\n\nFAILED (failures=2)"
-    ],
-    "notes": "New Morning moved its programme page from /programmation.html to /programmation, so I changed the URL in venues.json and the source works again (70 events).\nCause: https://www.newmorning.com/programmation.html now returns HTTP 404. The site's own \"Agenda\" link points to https://www.newmorning.com/programmation (no .html).\nThe new page still has the same schema.org JSON-LD Event blocks (70 \"@type\":\"Event\"), so the newmorning parser works on it unchanged.\nChange: in the venues.json entry for new-morning, \"url\" is now \"https://www.newmorning.com/programmation\". Nothing else changed.\nCheck: scrape.py --check new-morning -> ok: true, count: 70 (71 at the last success). The sample starts with 2026-10-07 Michel Alibo and 2026-10-08 Guinga & Yamandu Costa.\nI found no instructions addressed to automated agents in the page.",
-    "diff": "--- a/venues.json\n+++ b/venues.json\n@@ -21,7 +21,7 @@\n    \"address\": \"5 passage Louis-Philippe, 75011 Paris\", \"area\": \"Bastille\", \"lat\": 48.8538, \"lon\": 2.3719},\n   {\"name\": \"Le Hasard Ludique\", \"slug\": \"le-hasard-ludique\", \"strategy\": \"hasardludique\", \"url\": \"https://www.lehasardludique.paris/programmation\",\n    \"address\": \"128 avenue de Saint-Ouen, 75018 Paris\", \"area\": \"Porte de Saint-Ouen\", \"lat\": 48.8969, \"lon\": 2.3277},\n-  {\"name\": \"New Morning\", \"slug\": \"new-morning\", \"strategy\": \"newmorning\", \"url\": \"https://www.newmorning.com/programmation.html\",\n+  {\"name\": \"New Morning\", \"slug\": \"new-morning\", \"strategy\": \"newmorning\", \"url\": \"https://www.newmorning.com/programmation\",\n    \"address\": \"7-9 rue des Petites Écuries, 75010 Paris\", \"area\": \"Château d'Eau\", \"lat\": 48.8731, \"lon\": 2.3533, \"genres\": [\"jazz\"]},\n   {\"name\": \"Instants Chavirés\", \"slug\": \"instants-chavires\", \"strategy\": \"instantschavires\", \"url\": \"https://www.instantschavires.com/musique/concerts/\",\n    \"address\": \"7 rue Richard Lenoir, 93100 Montreuil\", \"area\": \"Montreuil\", \"lat\": 48.8567, \"lon\": 2.4292, \"genres\": [\"experimental\"]},\n",
-    "usd": 0.1027,
-    "usd_agent": 0.10274060000000002
+    "cause": "Claude API error 401: API key is invalid.",
+    "venues": [
+     "L'Olympia",
+     "Zénith Paris",
+     "La Seine Musicale",
+     "Plenitude Arena",
+     "Alhambra",
+     "Cabaret Sauvage",
+     "La Bellevilloise",
+     "La Marbrerie",
+     "File7",
+     "Glazart",
+     "La Machine du Moulin Rouge",
+     "Duc des Lombards",
+     "Le Baiser Salé",
+     "Le Centquatre",
+     "La Petite Halle",
+     "Le Grand Rex",
+     "Mains d'Œuvres",
+     "Badaboum",
+     "Philharmonie de Paris",
+     "Le Trabendo",
+     "FGO-Barbara",
+     "La Station - Gare des Mines",
+     "Cirque Electrique",
+     "La Dame de Canton",
+     "DOC",
+     "Le Bal Blomet",
+     "Studio de l'Ermitage",
+     "Le 360 Paris Music Factory",
+     "Canal 93",
+     "La Gaîté Lyrique",
+     "PopUp!",
+     "Le Truskel",
+     "Nouveau Casino",
+     "La Générale"
+    ]
+   },
+   {
+    "cause": "Failed to authenticate. API Error: 401 API key is invalid.",
+    "venues": [
+     "New Morning"
+    ]
    }
   ],
-  "systemic": [],
   "skipped": [
    {
     "venue": "Supersonic",
@@ -56,7 +84,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-07",
-  "usd": 0.1027
+  "date": "2026-10-08",
+  "usd": 0.0
  }
 }
