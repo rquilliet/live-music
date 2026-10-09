@@ -13,24 +13,44 @@
   "new-morning": {
    "since": "2026-10-07",
    "days": [
-    "2026-10-07"
+    "2026-10-07",
+    "2026-10-09"
    ],
    "usd": 0.1027,
    "issue": "REM-79"
   }
  },
  "last": {
-  "date": "2026-10-08",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37771830722",
+  "date": "2026-10-09",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37924773859",
   "usd": 0.0,
   "sessions": 1,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
+  "unresolved": [
+   {
+    "venue": "New Morning",
+    "slug": "new-morning",
+    "error": "HTTP 404 for https://www.newmorning.com/programmation.html",
+    "since": "2026-10-07",
+    "prev_count": 71,
+    "url": "https://www.newmorning.com/programmation.html",
+    "attempts": 2,
+    "usd_total": 0.1027,
+    "problems": [
+     "the agent stopped early: Invalid API key · Fix external API key"
+    ],
+    "notes": "Invalid API key · Fix external API key",
+    "diff": "",
+    "usd": 0.0,
+    "usd_agent": 0.0
+   }
+  ],
   "systemic": [
    {
-    "cause": "Claude API error 401: API key is invalid.",
+    "cause": "Claude API error 401: invalid x-api-key",
     "venues": [
+     "Accor Arena",
      "L'Olympia",
      "Zénith Paris",
      "La Seine Musicale",
@@ -39,6 +59,7 @@
      "Cabaret Sauvage",
      "La Bellevilloise",
      "La Marbrerie",
+     "Le Plan",
      "File7",
      "Glazart",
      "La Machine du Moulin Rouge",
@@ -58,19 +79,17 @@
      "DOC",
      "Le Bal Blomet",
      "Studio de l'Ermitage",
+     "Les Trois Baudets",
      "Le 360 Paris Music Factory",
+     "Le Triton",
+     "La Dynamo de Banlieues Bleues",
      "Canal 93",
+     "Espace 1789",
      "La Gaîté Lyrique",
      "PopUp!",
      "Le Truskel",
      "Nouveau Casino",
      "La Générale"
-    ]
-   },
-   {
-    "cause": "Failed to authenticate. API Error: 401 API key is invalid.",
-    "venues": [
-     "New Morning"
     ]
    }
   ],
@@ -84,7 +103,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "usd": 0.0
  }
 }
