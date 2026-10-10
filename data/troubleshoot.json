@@ -14,15 +14,16 @@
    "since": "2026-10-07",
    "days": [
     "2026-10-07",
-    "2026-10-09"
+    "2026-10-09",
+    "2026-10-10"
    ],
    "usd": 0.1027,
    "issue": "REM-79"
   }
  },
  "last": {
-  "date": "2026-10-09",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/37924773859",
+  "date": "2026-10-10",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/38046415970",
   "usd": 0.0,
   "sessions": 1,
   "fixed": [],
@@ -35,7 +36,7 @@
     "since": "2026-10-07",
     "prev_count": 71,
     "url": "https://www.newmorning.com/programmation.html",
-    "attempts": 2,
+    "attempts": 3,
     "usd_total": 0.1027,
     "problems": [
      "the agent stopped early: Invalid API key · Fix external API key"
@@ -103,7 +104,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "usd": 0.0
  }
 }
