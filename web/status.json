@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-10-09T11:36:12Z",
- "today": "2026-10-09",
- "duration_s": 488,
- "run_url": "https://github.com/rquilliet/live-music/actions/runs/37923874976",
+ "generated_at": "2026-10-10T10:52:05Z",
+ "today": "2026-10-10",
+ "duration_s": 389,
+ "run_url": "https://github.com/rquilliet/live-music/actions/runs/38046007999",
  "low_below": 3,
  "cost": {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "usd": 0,
   "steps": []
  },
@@ -15,12 +15,12 @@
    "slug": "opendata",
    "strategy": "opendata",
    "url": "https://opendata.paris.fr/explore/dataset/que-faire-a-paris-/",
-   "prev_count": 1303,
-   "seconds": 6.8,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 1311,
+   "seconds": 5.4,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 1311,
-   "last_ok": "2026-10-09"
+   "count": 1293,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Le Bataclan",
@@ -28,11 +28,11 @@
    "strategy": "bataclan",
    "url": "https://www.bataclan.fr/programmation",
    "prev_count": 52,
-   "seconds": 0.5,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.4,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 52,
-   "last_ok": "2026-10-09"
+   "count": 51,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "La Cigale",
@@ -41,22 +41,22 @@
    "url": "https://lacigale.fr/programmation/",
    "prev_count": 107,
    "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 107,
-   "last_ok": "2026-10-09"
+   "count": 108,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "La Boule Noire",
    "slug": "la-boule-noire",
    "strategy": "boulenoire",
    "url": "https://laboule-noire.fr/",
-   "prev_count": 81,
-   "seconds": 5.8,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 80,
+   "seconds": 5.9,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 80,
-   "last_ok": "2026-10-09"
+   "count": 78,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Le Trianon",
@@ -65,10 +65,10 @@
    "url": "https://www.letrianon.fr/fr/programmation/",
    "prev_count": 35,
    "seconds": 1.5,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
    "count": 35,
-   "last_ok": "2026-10-09"
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Élysée Montmartre",
@@ -76,47 +76,47 @@
    "strategy": "trianon",
    "url": "https://www.elyseemontmartre.com/fr/programmation/",
    "prev_count": 61,
-   "seconds": 1.5,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 1.4,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 61,
-   "last_ok": "2026-10-09"
+   "count": 59,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "La Maroquinerie",
    "slug": "la-maroquinerie",
    "strategy": "maroquinerie",
    "url": "https://www.lamaroquinerie.fr/fr/agenda/",
-   "prev_count": 111,
-   "seconds": 2.0,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 110,
+   "seconds": 1.6,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 110,
-   "last_ok": "2026-10-09"
+   "count": 109,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Petit Bain",
    "slug": "petit-bain",
    "strategy": "petitbain",
    "url": "https://petitbain.org/agenda/",
-   "prev_count": 54,
-   "seconds": 1.6,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 57,
+   "seconds": 0.9,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 57,
-   "last_ok": "2026-10-09"
+   "count": 56,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Point Éphémère",
    "slug": "point-ephemere",
    "strategy": "pointephemere",
    "url": "https://www.pointephemere.org/agenda",
-   "prev_count": 69,
-   "seconds": 1.3,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 67,
+   "seconds": 1.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 67,
-   "last_ok": "2026-10-09"
+   "count": 65,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Café de la Danse",
@@ -124,11 +124,11 @@
    "strategy": "cafedeladanse",
    "url": "https://www.cafedeladanse.com/",
    "prev_count": 21,
-   "seconds": 0.7,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.5,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
    "count": 21,
-   "last_ok": "2026-10-09"
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Le Hasard Ludique",
@@ -136,11 +136,11 @@
    "strategy": "hasardludique",
    "url": "https://www.lehasardludique.paris/programmation",
    "prev_count": 10,
-   "seconds": 2.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 1.9,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 10,
-   "last_ok": "2026-10-09"
+   "count": 9,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "New Morning",
@@ -148,13 +148,13 @@
    "strategy": "newmorning",
    "url": "https://www.newmorning.com/programmation.html",
    "prev_count": 71,
-   "seconds": 0.6,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.5,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "HTTP 404 for https://www.newmorning.com/programmation.html",
    "last_ok": "2026-10-06",
    "failing_since": "2026-10-07",
-   "carried": 68
+   "carried": 67
   },
   {
    "venue": "Instants Chavirés",
@@ -162,23 +162,23 @@
    "strategy": "instantschavires",
    "url": "https://www.instantschavires.com/musique/concerts/",
    "prev_count": 12,
-   "seconds": 1.3,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 1.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 12,
-   "last_ok": "2026-10-09"
+   "count": 11,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Bal Chavaux",
    "slug": "bal-chavaux",
    "strategy": "balchavaux",
    "url": "https://balchavaux.fr/agenda",
-   "prev_count": 36,
-   "seconds": 30.4,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 38,
+   "seconds": 24.5,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 38,
-   "last_ok": "2026-10-09"
+   "count": 37,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Supersonic",
@@ -187,12 +187,12 @@
    "url": "https://supersonic-club.fr",
    "prev_count": 61,
    "seconds": 0.6,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
-   "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-09&page=1",
+   "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-10&page=1",
    "last_ok": "2026-09-30",
    "failing_since": "2026-10-01",
-   "carried": 51
+   "carried": 49
   },
   {
    "venue": "Dernier Bar avant la Fin du Monde",
@@ -200,11 +200,11 @@
    "strategy": "dernierbar",
    "url": "https://dernierbar.com/pages/paris",
    "prev_count": 7,
-   "seconds": 0.8,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.3,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
    "count": 7,
-   "last_ok": "2026-10-09"
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "La Pointe Lafayette",
@@ -213,22 +213,22 @@
    "url": "https://www.facebook.com/lapointelafayetteofficielle/",
    "prev_count": 3,
    "seconds": 0.0,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
    "count": 3,
-   "last_ok": "2026-10-09"
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Sunset / Sunside",
    "slug": "sunset-sunside",
    "strategy": "tribe",
    "url": "https://www.sunset-sunside.com",
-   "prev_count": 160,
-   "seconds": 308.4,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "prev_count": 157,
+   "seconds": 234.2,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 157,
-   "last_ok": "2026-10-09"
+   "count": 160,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "Accor Arena",
@@ -236,8 +236,8 @@
    "strategy": "llm",
    "url": "https://www.accorarena.com/fr/programmation",
    "prev_count": 8,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-08",
@@ -250,13 +250,13 @@
    "strategy": "llm",
    "url": "https://www.olympiahall.com/",
    "prev_count": 16,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 16
+   "carried": 15
   },
   {
    "venue": "Zénith Paris",
@@ -264,13 +264,13 @@
    "strategy": "llm",
    "url": "https://www.zenith-paris.com/",
    "prev_count": 114,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 114): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 114
+   "carried": 113
   },
   {
    "venue": "La Seine Musicale",
@@ -278,8 +278,8 @@
    "strategy": "llm",
    "url": "https://www.laseinemusicale.com/",
    "prev_count": 77,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 77): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -293,7 +293,7 @@
    "url": "https://www.plenitudearena.com/",
    "prev_count": 32,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 32): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -306,8 +306,8 @@
    "strategy": "llm",
    "url": "https://www.alhambra-paris.com/",
    "prev_count": 61,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 61): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -321,12 +321,12 @@
    "url": "https://www.cabaretsauvage.com/agenda",
    "prev_count": 66,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 66): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 64
+   "carried": 62
   },
   {
    "venue": "La Bellevilloise",
@@ -334,13 +334,13 @@
    "strategy": "llm",
    "url": "https://www.labellevilloise.com/agenda/",
    "prev_count": 70,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 70): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 68
+   "carried": 67
   },
   {
    "venue": "La Marbrerie",
@@ -348,13 +348,13 @@
    "strategy": "llm",
    "url": "https://www.lamarbrerie.fr/agenda/",
    "prev_count": 31,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 31): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 28
+   "carried": 27
   },
   {
    "venue": "Le Plan",
@@ -363,12 +363,12 @@
    "url": "https://www.leplan.com/",
    "prev_count": 17,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 17): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-08",
    "failing_since": "2026-10-09",
-   "carried": 17
+   "carried": 16
   },
   {
    "venue": "File7",
@@ -376,13 +376,13 @@
    "strategy": "llm",
    "url": "https://www.file7.com/agenda",
    "prev_count": 8,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 8
+   "carried": 7
   },
   {
    "venue": "Glazart",
@@ -390,13 +390,13 @@
    "strategy": "llm",
    "url": "https://www.glazart.com/agenda/",
    "prev_count": 16,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 16
+   "carried": 15
   },
   {
    "venue": "La Machine du Moulin Rouge",
@@ -405,12 +405,12 @@
    "url": "https://www.lamachinedumoulinrouge.com/agenda/",
    "prev_count": 48,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 48): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 48
+   "carried": 47
   },
   {
    "venue": "Duc des Lombards",
@@ -418,8 +418,8 @@
    "strategy": "llm",
    "url": "https://www.ducdeslombards.com/",
    "prev_count": 4,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -432,13 +432,13 @@
    "strategy": "llm",
    "url": "https://www.lebaisersale.com/fr/agenda",
    "prev_count": 25,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 25): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 19
+   "carried": 17
   },
   {
    "venue": "Le Centquatre",
@@ -446,13 +446,13 @@
    "strategy": "llm",
    "url": "https://www.104.fr/",
    "prev_count": 23,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 23): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 22
+   "carried": 20
   },
   {
    "venue": "La Petite Halle",
@@ -460,8 +460,8 @@
    "strategy": "llm",
    "url": "https://www.lapetitehalle.com/programmation/",
    "prev_count": 15,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 15): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -475,12 +475,12 @@
    "url": "https://www.legrandrex.com/evenement/",
    "prev_count": 73,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 73): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 71
+   "carried": 70
   },
   {
    "venue": "Mains d'Œuvres",
@@ -488,13 +488,13 @@
    "strategy": "llm",
    "url": "https://mainsdoeuvres.org/",
    "prev_count": 8,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 8
+   "carried": 7
   },
   {
    "venue": "Badaboum",
@@ -502,13 +502,13 @@
    "strategy": "llm",
    "url": "https://badaboum.paris/agenda/",
    "prev_count": 47,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 47): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 46
+   "carried": 44
   },
   {
    "venue": "Philharmonie de Paris",
@@ -517,12 +517,12 @@
    "url": "https://www.philharmoniedeparis.fr/fr/agenda",
    "prev_count": 337,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 337): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 332
+   "carried": 330
   },
   {
    "venue": "Le Trabendo",
@@ -531,12 +531,12 @@
    "url": "https://www.letrabendo.net/programmation/",
    "prev_count": 76,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 76): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 75
+   "carried": 74
   },
   {
    "venue": "FGO-Barbara",
@@ -544,8 +544,8 @@
    "strategy": "llm",
    "url": "https://fgo-barbara.fr/programmation",
    "prev_count": 27,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 27): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -558,13 +558,13 @@
    "strategy": "llm",
    "url": "https://lastation.paris/stationgdm/agenda",
    "prev_count": 16,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 14
+   "carried": 12
   },
   {
    "venue": "Cirque Electrique",
@@ -573,12 +573,12 @@
    "url": "https://www.cirque-electrique.com/agenda",
    "prev_count": 52,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 48
+   "carried": 47
   },
   {
    "venue": "La Dame de Canton",
@@ -586,25 +586,25 @@
    "strategy": "llm",
    "url": "https://www.damedecanton.com/event-list",
    "prev_count": 18,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 18): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 16
+   "carried": 15
   },
   {
    "venue": "La Java",
    "slug": "la-java",
    "strategy": "llm",
    "url": "https://www.la-java.fr/programmation",
-   "prev_count": 8,
+   "prev_count": 7,
    "seconds": 0.0,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "ok",
-   "count": 7,
-   "last_ok": "2026-10-09"
+   "count": 6,
+   "last_ok": "2026-10-10"
   },
   {
    "venue": "DOC",
@@ -612,13 +612,13 @@
    "strategy": "llm",
    "url": "https://doc.work/project_category/concert/",
    "prev_count": 6,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 6): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 6
+   "carried": 5
   },
   {
    "venue": "Le Bal Blomet",
@@ -626,13 +626,13 @@
    "strategy": "llm",
    "url": "https://www.balblomet.fr/agenda",
    "prev_count": 52,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 50
+   "carried": 49
   },
   {
    "venue": "Studio de l'Ermitage",
@@ -641,12 +641,12 @@
    "url": "https://www.studio-ermitage.com/index.php/agenda",
    "prev_count": 32,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 32): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 31
+   "carried": 30
   },
   {
    "venue": "Les Trois Baudets",
@@ -654,13 +654,13 @@
    "strategy": "llm",
    "url": "https://lestroisbaudets.com/l-agenda",
    "prev_count": 36,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 36): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-08",
    "failing_since": "2026-10-09",
-   "carried": 35
+   "carried": 34
   },
   {
    "venue": "Le 360 Paris Music Factory",
@@ -669,7 +669,7 @@
    "url": "https://le360paris.com/programmation/",
    "prev_count": 18,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 18): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -683,12 +683,12 @@
    "url": "https://letriton.com/agenda",
    "prev_count": 37,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 37): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-08",
    "failing_since": "2026-10-09",
-   "carried": 36
+   "carried": 35
   },
   {
    "venue": "La Dynamo de Banlieues Bleues",
@@ -696,8 +696,8 @@
    "strategy": "llm",
    "url": "https://www.banlieuesbleues.org/dynamo/",
    "prev_count": 11,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 11): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-08",
@@ -711,12 +711,12 @@
    "url": "https://www.canal93.com/agendaetbilletterie",
    "prev_count": 10,
    "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 10): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 10
+   "carried": 8
   },
   {
    "venue": "Espace 1789",
@@ -724,13 +724,13 @@
    "strategy": "llm",
    "url": "https://www.espace-1789.com/spectacle/saison",
    "prev_count": 51,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 51): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-08",
    "failing_since": "2026-10-09",
-   "carried": 50
+   "carried": 49
   },
   {
    "venue": "La Gaîté Lyrique",
@@ -739,12 +739,12 @@
    "url": "https://www.gaite-lyrique.net/agenda/",
    "prev_count": 13,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 13): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 7
+   "carried": 5
   },
   {
    "venue": "PopUp!",
@@ -752,13 +752,13 @@
    "strategy": "llm",
    "url": "https://www.popup.paris/agenda/",
    "prev_count": 65,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 65): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 62
+   "carried": 60
   },
   {
    "venue": "Le Truskel",
@@ -766,8 +766,8 @@
    "strategy": "llm",
    "url": "https://www.truskel.fr/",
    "prev_count": 4,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
@@ -781,12 +781,12 @@
    "url": "https://nouveaucasino.fr/",
    "prev_count": 33,
    "seconds": 0.1,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 33): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 32
+   "carried": 30
   },
   {
    "venue": "La Générale",
@@ -794,16 +794,82 @@
    "strategy": "llm",
    "url": "https://www.lagenerale.fr/",
    "prev_count": 8,
-   "seconds": 0.2,
-   "checked_at": "2026-10-09T11:36:12Z",
+   "seconds": 0.1,
+   "checked_at": "2026-10-10T10:52:05Z",
    "status": "failed",
    "error": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
    "last_ok": "2026-10-07",
    "failing_since": "2026-10-08",
-   "carried": 7
+   "carried": 6
   }
  ],
  "history": [
+  {
+   "date": "2026-10-10",
+   "run_url": "https://github.com/rquilliet/live-music/actions/runs/38046007999",
+   "usd": 0,
+   "sources": {
+    "opendata": 1293,
+    "bataclan": 51,
+    "la-cigale": 108,
+    "la-boule-noire": 78,
+    "le-trianon": 35,
+    "elysee-montmartre": 59,
+    "la-maroquinerie": 109,
+    "petit-bain": 56,
+    "point-ephemere": 65,
+    "cafe-de-la-danse": 21,
+    "le-hasard-ludique": 9,
+    "new-morning": "HTTP 404 for https://www.newmorning.com/programmation.html",
+    "instants-chavires": 11,
+    "bal-chavaux": 37,
+    "supersonic": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-10&page=1",
+    "dernier-bar-avant-la-fin-du-monde": 7,
+    "la-pointe-lafayette": 3,
+    "sunset-sunside": 160,
+    "accor-arena": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
+    "olympia": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
+    "zenith-paris": "0 events parsed (was 114): Claude API error 401: invalid x-api-key",
+    "la-seine-musicale": "0 events parsed (was 77): Claude API error 401: invalid x-api-key",
+    "paris-la-defense-arena": "0 events parsed (was 32): Claude API error 401: invalid x-api-key",
+    "alhambra": "0 events parsed (was 61): Claude API error 401: invalid x-api-key",
+    "cabaret-sauvage": "0 events parsed (was 66): Claude API error 401: invalid x-api-key",
+    "la-bellevilloise": "0 events parsed (was 70): Claude API error 401: invalid x-api-key",
+    "la-marbrerie": "0 events parsed (was 31): Claude API error 401: invalid x-api-key",
+    "le-plan": "0 events parsed (was 17): Claude API error 401: invalid x-api-key",
+    "file7": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
+    "glazart": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
+    "la-machine": "0 events parsed (was 48): Claude API error 401: invalid x-api-key",
+    "duc-des-lombards": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
+    "le-baiser-sale": "0 events parsed (was 25): Claude API error 401: invalid x-api-key",
+    "le-104": "0 events parsed (was 23): Claude API error 401: invalid x-api-key",
+    "la-petite-halle": "0 events parsed (was 15): Claude API error 401: invalid x-api-key",
+    "le-grand-rex": "0 events parsed (was 73): Claude API error 401: invalid x-api-key",
+    "mains-d-oeuvres": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
+    "badaboum": "0 events parsed (was 47): Claude API error 401: invalid x-api-key",
+    "philharmonie": "0 events parsed (was 337): Claude API error 401: invalid x-api-key",
+    "le-trabendo": "0 events parsed (was 76): Claude API error 401: invalid x-api-key",
+    "fgo-barbara": "0 events parsed (was 27): Claude API error 401: invalid x-api-key",
+    "la-station": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
+    "cirque-electrique": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
+    "la-dame-de-canton": "0 events parsed (was 18): Claude API error 401: invalid x-api-key",
+    "la-java": 6,
+    "doc": "0 events parsed (was 6): Claude API error 401: invalid x-api-key",
+    "le-bal-blomet": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
+    "studio-de-l-ermitage": "0 events parsed (was 32): Claude API error 401: invalid x-api-key",
+    "les-trois-baudets": "0 events parsed (was 36): Claude API error 401: invalid x-api-key",
+    "le-360": "0 events parsed (was 18): Claude API error 401: invalid x-api-key",
+    "le-triton": "0 events parsed (was 37): Claude API error 401: invalid x-api-key",
+    "la-dynamo": "0 events parsed (was 11): Claude API error 401: invalid x-api-key",
+    "canal-93": "0 events parsed (was 10): Claude API error 401: invalid x-api-key",
+    "espace-1789": "0 events parsed (was 51): Claude API error 401: invalid x-api-key",
+    "la-gaite-lyrique": "0 events parsed (was 13): Claude API error 401: invalid x-api-key",
+    "popup": "0 events parsed (was 65): Claude API error 401: invalid x-api-key",
+    "le-truskel": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
+    "nouveau-casino": "0 events parsed (was 33): Claude API error 401: invalid x-api-key",
+    "la-generale": "0 events parsed (was 8): Claude API error 401: invalid x-api-key"
+   }
+  },
   {
    "date": "2026-10-09",
    "run_url": "https://github.com/rquilliet/live-music/actions/runs/37923874976",
@@ -1659,68 +1725,6 @@
     "la-generale": 10,
     "dernier-bar-avant-la-fin-du-monde": 1,
     "la-pointe-lafayette": 3
-   }
-  },
-  {
-   "date": "2026-09-26",
-   "run_url": null,
-   "sources": {
-    "opendata": 968,
-    "bataclan": 45,
-    "la-cigale": 73,
-    "la-boule-noire": 77,
-    "le-trianon": 35,
-    "elysee-montmartre": 43,
-    "la-maroquinerie": 92,
-    "petit-bain": 50,
-    "point-ephemere": 64,
-    "cafe-de-la-danse": 19,
-    "le-hasard-ludique": 10,
-    "new-morning": 66,
-    "instants-chavires": 14,
-    "supersonic": 65,
-    "sunset-sunside": 175,
-    "accor-arena": "0 events parsed (was 8)",
-    "olympia": "0 events parsed (was 11)",
-    "zenith-paris": "no page could be fetched for Zénith Paris",
-    "la-seine-musicale": "0 events parsed (was 67)",
-    "paris-la-defense-arena": "0 events parsed (was 17)",
-    "alhambra": "0 events parsed (was 53)",
-    "cabaret-sauvage": "0 events parsed (was 59)",
-    "la-bellevilloise": "0 events parsed (was 66)",
-    "la-marbrerie": "0 events parsed (was 33)",
-    "le-plan": "no page could be fetched for Le Plan",
-    "file7": "0 events parsed (was 8)",
-    "glazart": "0 events parsed (was 17)",
-    "la-machine": "0 events parsed (was 45)",
-    "duc-des-lombards": "0 events parsed (was 3)",
-    "le-baiser-sale": "0 events parsed (was 21)",
-    "le-104": "0 events parsed (was 24)",
-    "la-petite-halle": "0 events parsed (was 12)",
-    "le-grand-rex": 0,
-    "mains-d-oeuvres": "0 events parsed (was 7)",
-    "badaboum": "0 events parsed (was 46)",
-    "philharmonie": 0,
-    "le-trabendo": "0 events parsed (was 54)",
-    "fgo-barbara": "0 events parsed (was 25)",
-    "la-station": "0 events parsed (was 16)",
-    "cirque-electrique": "0 events parsed (was 53)",
-    "la-dame-de-canton": "0 events parsed (was 18)",
-    "la-java": "0 events parsed (was 13)",
-    "doc": "0 events parsed (was 3)",
-    "le-bal-blomet": "0 events parsed (was 62)",
-    "studio-de-l-ermitage": "0 events parsed (was 2)",
-    "les-trois-baudets": "0 events parsed (was 35)",
-    "le-360": "0 events parsed (was 19)",
-    "le-triton": "0 events parsed (was 39)",
-    "la-dynamo": "0 events parsed (was 12)",
-    "canal-93": "0 events parsed (was 13)",
-    "espace-1789": "0 events parsed (was 30)",
-    "la-gaite-lyrique": "0 events parsed (was 14)",
-    "popup": "0 events parsed (was 55)",
-    "le-truskel": "0 events parsed (was 4)",
-    "nouveau-casino": "0 events parsed (was 32)",
-    "la-generale": "0 events parsed (was 18)"
    }
   }
  ],
