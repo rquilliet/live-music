@@ -22,31 +22,13 @@
   }
  },
  "last": {
-  "date": "2026-10-10",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/38046415970",
-  "usd": 0.0,
-  "sessions": 1,
+  "date": "2026-10-11",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/38134291832",
+  "usd": 0,
+  "sessions": 0,
   "fixed": [],
   "recovered": [],
-  "unresolved": [
-   {
-    "venue": "New Morning",
-    "slug": "new-morning",
-    "error": "HTTP 404 for https://www.newmorning.com/programmation.html",
-    "since": "2026-10-07",
-    "prev_count": 71,
-    "url": "https://www.newmorning.com/programmation.html",
-    "attempts": 3,
-    "usd_total": 0.1027,
-    "problems": [
-     "the agent stopped early: Invalid API key · Fix external API key"
-    ],
-    "notes": "Invalid API key · Fix external API key",
-    "diff": "",
-    "usd": 0.0,
-    "usd_agent": 0.0
-   }
-  ],
+  "unresolved": [],
   "systemic": [
    {
     "cause": "Claude API error 401: invalid x-api-key",
@@ -98,6 +80,11 @@
    {
     "venue": "Supersonic",
     "slug": "supersonic",
+    "why": "tried on 3 days without success, left to its issue"
+   },
+   {
+    "venue": "New Morning",
+    "slug": "new-morning",
     "why": "tried on 3 days without success, left to its issue"
    }
   ],
