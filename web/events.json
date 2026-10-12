@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-10-12T10:37:24",
+"generated_at": "2026-10-12T12:27:01",
 "today": "2026-10-12",
 "new_window_days": 7,
 "tags": [
@@ -62,6 +62,7 @@
 "Centre Paris Anim' Bessie Smith( ex Reuilly)",
 "Centre Paris Anim' Point du Jour",
 "Centre Wallonie-Bruxelles",
+"Centre culturel suisse Paris",
 "Cinéma Chaplin Saint Lambert",
 "Cirque Electrique",
 "Cité de l'architecture et du patrimoine",
@@ -1403,7 +1404,7 @@
 {
 "venue": "Paris open data (Que faire à Paris ?)",
 "ok": true,
-"count": 1244
+"count": 1246
 },
 {
 "venue": "Le Bataclan",
@@ -1492,7 +1493,7 @@
 {
 "venue": "Sunset / Sunside",
 "ok": true,
-"count": 155
+"count": 156
 },
 {
 "venue": "Accor Arena",
@@ -3834,7 +3835,7 @@
 ],
 "description": null,
 "summary": "Noor, lauréate du Grand Prix des Inouïs du Printemps de Bourges, monte sur la scène de La Cigale après des concerts complets à la Boule Noire et à la Maroquinerie. Goodbye Karelle assure la première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/10/noor-cigale-1080x1350-1-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/10/noor-cigale-1080x1350-1-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOOR",
@@ -5257,6 +5258,38 @@
 "stale_since": "2026-10-07",
 "id": "62f0b0d693f8",
 "first_seen": "2026-09-07"
+},
+{
+"title": "Miles Davis, la nuit aussi est un soleil",
+"date": "2026-10-14",
+"venue": "Fondation des États-Unis",
+"venue_slug": "fondation-des-etats-unis",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/miles-davis-la-nuit-aussi-est-un-soleil-125765",
+"ticket_url": "https://www.helloasso.com/associations/fondation-des-etats-unis/evenements/salon-litteraire-miles-davis-la-nuit-aussi-est-un-soleil-erwann-gauthier?_gl=1%2agwexfc%2a_gcl_au%2aMTk0MzM0Njc3NC4xNzg3MDUwNDEyLi0uLS4xNzg4MTczMDgwLjk1MjA4MDU5My4xNzg4MTY3MzY1LjE3ODgxODI2OTA.",
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Conférence, Littérature",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Venez redécouvrir l'histoire de Miles Davis - Rencontre avec Erwann Gauthier",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/09/huge-9182bca8846cf4f7f640bb1f0ab874e0.jpg",
+"address": "15 boulevard Jourdan, 75014, Paris",
+"area": "14e",
+"headliner": "Miles Davis",
+"support": [],
+"players": {},
+"lat": 48.856578,
+"lon": 2.351828,
+"is_music": false,
+"stale_since": null,
+"id": "7f90d5400d3b",
+"first_seen": "2026-10-12"
 },
 {
 "title": "JAZZETTE à La Trockette 2.2",
@@ -7752,38 +7785,6 @@
 "stale_since": null,
 "id": "0030e52af46a",
 "first_seen": "baseline"
-},
-{
-"title": "Soirée musicale à Paris : rendez-vous à l'ECUJE",
-"date": "2026-10-15",
-"venue": "ECUJE",
-"venue_slug": "ecuje",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/soiree-musicale-a-paris-rendez-vous-a-l-ecuje-125827",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Une soirée musicale conviviale pour partager un moment de découverte, de culture et de rencontre autour de la musique.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/08/13/huge-8e29982e168ddcdc4f18f21056816c0e.png",
-"address": "119 rue La Fayette,, 75010, Paris",
-"area": "10e",
-"headliner": "Soirée musicale à Paris",
-"support": [],
-"players": {},
-"lat": 48.8783540198944,
-"lon": 2.35299300511971,
-"is_music": true,
-"stale_since": null,
-"id": "46cfd0babc1b",
-"first_seen": "2026-10-12"
 },
 {
 "title": "MaMA Music & Convention - LOUISADONNA + MONA GUBA + WTAZZZ",
@@ -15295,7 +15296,7 @@
 ],
 "description": null,
 "summary": "Says'z revient sur scène avec ses musiciens pour un show afro, dancehall et R&B, entre titres emblématiques (Doudou, Dis-Moi Oui, Esméralda), morceaux inédits et surprises.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/saysz-photo-1080x1350-@lena-mestric-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/saysz-photo-1080x1350-@lena-mestric-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SAYS’Z",
@@ -20190,9 +20191,9 @@
 "url": "https://open.spotify.com/artist/7p24SkpCc94fUK8rPK3JHm"
 },
 "youtube": {
-"videoId": "5fMSxPPudQQ",
+"publishedAt": "2021-03-20",
 "title": "Black Pontiac Live Stream at The Roxy- Presented by Crank Music",
-"publishedAt": "2021-03-20"
+"videoId": "5fMSxPPudQQ"
 }
 },
 "Electric Enemy": {
@@ -20205,9 +20206,9 @@
 "url": "https://open.spotify.com/artist/2N1mByBMykfROrhwRVQV3v"
 },
 "youtube": {
-"videoId": "MznkGBdnlYU",
+"publishedAt": "2025-08-21",
 "title": "Electric Enemy LIVE in Brighton FULL SET (Audio Optic Craft)",
-"publishedAt": "2025-08-21"
+"videoId": "MznkGBdnlYU"
 }
 }
 },
@@ -20541,9 +20542,9 @@
 "url": "https://open.spotify.com/artist/03cwCzIWQ8BRmXjGPDAL04"
 },
 "youtube": {
-"videoId": "EqxzT4vXc1k",
+"publishedAt": "2010-02-02",
 "title": "Cab Calloway Singing Minnie The Moocher (Live 1988)",
-"publishedAt": "2010-02-02"
+"videoId": "EqxzT4vXc1k"
 }
 }
 },
@@ -20656,9 +20657,9 @@
 "url": "https://open.spotify.com/artist/41iimwP9pnOm0EY3E0lXYR"
 },
 "youtube": {
-"videoId": "QpaZUAlP5pY",
+"publishedAt": "2020-02-18",
 "title": "Caetano Malta - Pra se Molhar (live at Pavé d'Orsay)",
-"publishedAt": "2020-02-18"
+"videoId": "QpaZUAlP5pY"
 }
 }
 },
@@ -20792,9 +20793,9 @@
 "url": "https://open.spotify.com/artist/6OlHxNP0SfOgEh60owhcOk"
 },
 "youtube": {
-"videoId": "kaj8wncYLPU",
+"publishedAt": "2021-09-12",
 "title": "LOCO de L'Orchestre Nobis",
-"publishedAt": "2021-09-12"
+"videoId": "kaj8wncYLPU"
 }
 }
 },
@@ -20842,9 +20843,9 @@
 "url": "https://open.spotify.com/artist/6q7nMIVgGohQ14mSsq3F8t"
 },
 "youtube": {
-"videoId": "7Cs8dyruzNQ",
+"publishedAt": "2025-08-29",
 "title": "Gilsons - Live at the Miami Beach Bandshell (Completo / Full Concert 2025)",
-"publishedAt": "2025-08-29"
+"videoId": "7Cs8dyruzNQ"
 }
 }
 },
@@ -21057,9 +21058,9 @@
 "url": "https://open.spotify.com/artist/4XX9YjNQrHTZfZz3DCX6DP"
 },
 "youtube": {
-"videoId": "4K8-IV_8Ddk",
+"publishedAt": "2026-01-21",
 "title": "GIRLI // The Sauna Sessions // S2",
-"publishedAt": "2026-01-21"
+"videoId": "4K8-IV_8Ddk"
 }
 }
 },
@@ -21110,9 +21111,9 @@
 "url": "https://open.spotify.com/artist/6HBfXt98QpP7QVDPLHjHTe"
 },
 "youtube": {
-"videoId": "Fzo6ER4iixo",
+"publishedAt": "2023-08-02",
 "title": "Codefendants - Full Performance (Live from The Big Room)",
-"publishedAt": "2023-08-02"
+"videoId": "Fzo6ER4iixo"
 }
 }
 },
@@ -21209,9 +21210,9 @@
 "url": "https://open.spotify.com/artist/2na7I8tiC5cQ1TxJlXlrRA"
 },
 "youtube": {
-"videoId": "pCjdyWQ-xkE",
+"publishedAt": "2026-07-29",
 "title": "PANICBABY – Claw Marks (LIVE @DEICHBRAND FESTIVAL 2026)",
-"publishedAt": "2026-07-29"
+"videoId": "pCjdyWQ-xkE"
 }
 }
 },
@@ -21255,9 +21256,9 @@
 "players": {
 "MILO ASKA": {
 "youtube": {
-"videoId": "kaCAsaVZFuM",
+"publishedAt": "2025-07-17",
 "title": "Milo Aska  - Je m'accroche à des bouts de verre (Live Session)",
-"publishedAt": "2025-07-17"
+"videoId": "kaCAsaVZFuM"
 }
 }
 },
@@ -21435,9 +21436,9 @@
 "url": "https://open.spotify.com/artist/0tSF0pn1f0hGMkmP5bDSUr"
 },
 "youtube": {
-"videoId": "AC59qr92mAI",
+"publishedAt": "2022-12-28",
 "title": "Yves Brouqui   Live at Smalls 2002",
-"publishedAt": "2022-12-28"
+"videoId": "AC59qr92mAI"
 }
 },
 "Fabien Marcoz": {
@@ -21446,9 +21447,9 @@
 "url": "https://open.spotify.com/artist/7m4BAFApNFiOJlKmHdi8Jo"
 },
 "youtube": {
-"videoId": "wTt-zkUqFrA",
+"publishedAt": "2020-03-08",
 "title": "NY Quintett 9 with Joe Magnarelli , Dmitry Baevsky , Jeb Patton , Fabien Marcoz and Bernd Reiter",
-"publishedAt": "2020-03-08"
+"videoId": "wTt-zkUqFrA"
 }
 }
 },
@@ -21626,16 +21627,16 @@
 "url": "https://open.spotify.com/artist/30tUlKZ8oLo0BnN6n0GZKD"
 },
 "youtube": {
-"videoId": "A9iJVHW1Gpw",
+"publishedAt": "2018-07-26",
 "title": "Nuages (Live At The Tivoli Gardens, Copenhagen / 1979)",
-"publishedAt": "2018-07-26"
+"videoId": "A9iJVHW1Gpw"
 }
 },
 "Jeune Public": {
 "youtube": {
-"videoId": "6yhrIMJrrQU",
+"publishedAt": "2018-11-08",
 "title": "NA au pays de ZZAZZAN - Concert Jeune Public",
-"publishedAt": "2018-11-08"
+"videoId": "6yhrIMJrrQU"
 }
 }
 },
@@ -21730,9 +21731,9 @@
 "url": "https://open.spotify.com/artist/3GOEpVQKFuVvZeFAyu8a8M"
 },
 "youtube": {
-"videoId": "9YCuJYRhCKg",
+"publishedAt": "2026-01-04",
 "title": "LEMONSUCKR - Live From The Beach House",
-"publishedAt": "2026-01-04"
+"videoId": "9YCuJYRhCKg"
 }
 },
 "The Jump Cuts": {
@@ -21745,9 +21746,9 @@
 "url": "https://open.spotify.com/artist/3hanaZBkEkcbCIgQIgye1g"
 },
 "youtube": {
-"videoId": "0Jekv0_N_2w",
+"publishedAt": "2025-10-11",
 "title": "2025-10-10  The Jump Cuts @ Respectable Street West Palm Beach  live",
-"publishedAt": "2025-10-11"
+"videoId": "0Jekv0_N_2w"
 }
 },
 "Vincent Khouni": {
@@ -21760,9 +21761,9 @@
 "url": "https://open.spotify.com/artist/7JCnd0ZS2KdbkXSRGUemf8"
 },
 "youtube": {
-"videoId": "k1t7VM-t57w",
+"publishedAt": "2025-03-07",
 "title": "VINCENT KHOUNI - \"LA VALLÉE\" (Live Session)",
-"publishedAt": "2025-03-07"
+"videoId": "k1t7VM-t57w"
 }
 }
 },
@@ -21888,9 +21889,9 @@
 "url": "https://open.spotify.com/artist/6wLLZZHYhlEWpLjA0j3tqp"
 },
 "youtube": {
-"videoId": "OMKkPqNwPDY",
+"publishedAt": "2026-06-25",
 "title": "PINWHEEL - LIVE @SIDETRACK FEST 2026 - MARSEILLE - 4K - [FULL SET - MULTI CAM] 24/05/2026",
-"publishedAt": "2026-06-25"
+"videoId": "OMKkPqNwPDY"
 }
 }
 },
@@ -21937,9 +21938,9 @@
 "url": "https://open.spotify.com/artist/2TM7WyJwjfD5wKyX9OtIWJ"
 },
 "youtube": {
-"videoId": "Lh0zNoF_gNo",
+"publishedAt": "2023-04-19",
 "title": "Zed Yun Pavarotti x Studio Ferber ∣ Live Me If You Can",
-"publishedAt": "2023-04-19"
+"videoId": "Lh0zNoF_gNo"
 }
 }
 },
@@ -22025,9 +22026,9 @@
 "url": "https://open.spotify.com/artist/269JN3NUKhXFyIG1uGLWS4"
 },
 "youtube": {
-"videoId": "A-mfC6WLmTs",
+"publishedAt": "2023-05-10",
 "title": "Charlotte Reinhardt live, Café de la danse, 10/05/2023",
-"publishedAt": "2023-05-10"
+"videoId": "A-mfC6WLmTs"
 }
 }
 },
@@ -22118,9 +22119,9 @@
 "players": {
 "LIGNE 10": {
 "youtube": {
-"videoId": "U5wvbUy8Haw",
+"publishedAt": "2026-07-04",
 "title": "MF19 Metro Ligne 10 (croisement)",
-"publishedAt": "2026-07-04"
+"videoId": "U5wvbUy8Haw"
 }
 },
 "TATE AMMONIA": {
@@ -22129,9 +22130,9 @@
 "url": "https://open.spotify.com/artist/5ZxmCOkJVTxaCfsClQT1Qw"
 },
 "youtube": {
-"videoId": "W1h01OPoTMc",
+"publishedAt": "2026-08-13",
 "title": "Tate Ammonia - Make it Right (Live Session at Club K7)",
-"publishedAt": "2026-08-13"
+"videoId": "W1h01OPoTMc"
 }
 },
 "CAPITAINE SKY": {
@@ -22222,9 +22223,9 @@
 "url": "https://open.spotify.com/artist/1zQAlD3Ca9pSM9KLma3PgW"
 },
 "youtube": {
-"videoId": "wxt7p3wzD78",
+"publishedAt": "2015-10-15",
 "title": "Ze Big Band avec Ricky Ford - Festival Jazz In Langourla 2015",
-"publishedAt": "2015-10-15"
+"videoId": "wxt7p3wzD78"
 }
 }
 },
@@ -22272,9 +22273,9 @@
 "url": "https://open.spotify.com/artist/0TN2AJDGVSRreQ7Yy9sCcg"
 },
 "youtube": {
-"videoId": "-dn0vn25ews",
+"publishedAt": "2020-05-19",
 "title": "Charlie Live Session#2 - Margot Cavalier - Si je reste",
-"publishedAt": "2020-05-19"
+"videoId": "-dn0vn25ews"
 }
 },
 "Camille Eno": {
@@ -22283,9 +22284,9 @@
 "url": "https://open.spotify.com/artist/2N7V6byMoOv7eN1ZMQMslI"
 },
 "youtube": {
-"videoId": "hIrLikgVERk",
+"publishedAt": "2025-10-10",
 "title": "Concert de Camille Eno",
-"publishedAt": "2025-10-10"
+"videoId": "hIrLikgVERk"
 }
 },
 "Luna": {
@@ -22298,9 +22299,9 @@
 "url": "https://open.spotify.com/artist/2AACqFGo8offvHCKGvrWxq"
 },
 "youtube": {
-"videoId": "rDwaylt7gv0",
+"publishedAt": "2023-02-22",
 "title": "Luna - Full Performance (Live on KEXP)",
-"publishedAt": "2023-02-22"
+"videoId": "rDwaylt7gv0"
 }
 }
 },
@@ -22344,9 +22345,9 @@
 "players": {
 "SOLAXIS": {
 "youtube": {
-"videoId": "NlY4_Gyu_GE",
+"publishedAt": "2026-09-07",
 "title": "SOLAXIS /  LISA CAT-BERRO / Live au Studio de l'Ermitage / \" Analog Technoïd \" (extrait)",
-"publishedAt": "2026-09-07"
+"videoId": "NlY4_Gyu_GE"
 }
 },
 "Lisa Cat-Berro": {
@@ -22401,9 +22402,9 @@
 "url": "https://open.spotify.com/artist/2QZMVctpqIHBaOpOIcENLy"
 },
 "youtube": {
-"videoId": "F5scKovuFDU",
+"publishedAt": "2025-09-02",
 "title": "Eric-pearls",
-"publishedAt": "2025-09-02"
+"videoId": "F5scKovuFDU"
 }
 }
 },
@@ -22452,9 +22453,9 @@
 "url": "https://lovedbyadrienne.bandcamp.com"
 },
 "youtube": {
-"videoId": "HaH21NIOMBg",
+"publishedAt": "2024-09-05",
 "title": "Adrienne - Live - May 25th 2024 - Full Set - FINAL SHOW -",
-"publishedAt": "2024-09-05"
+"videoId": "HaH21NIOMBg"
 }
 }
 },
@@ -22580,16 +22581,16 @@
 "url": "https://open.spotify.com/artist/0XmzWk0NILMJsOZlDgaSCP"
 },
 "youtube": {
-"videoId": "l2dLYUsnchc",
+"publishedAt": "2022-06-24",
 "title": "Lucie Antunes - Jacob Live Version (Recorded @ Chorus Festival)",
-"publishedAt": "2022-06-24"
+"videoId": "l2dLYUsnchc"
 }
 },
 "Mathilde Monnier": {
 "youtube": {
-"videoId": "tQK5T-WI-7E",
+"publishedAt": "2026-09-01",
 "title": "BALLET | LE MUR  | Entretien avec Mathilde Monnier et Ève Risser",
-"publishedAt": "2026-09-01"
+"videoId": "tQK5T-WI-7E"
 }
 },
 "Silence": {
@@ -22602,9 +22603,9 @@
 "url": "https://open.spotify.com/artist/4giO85Ma0hNO0wBWLFtJsS"
 },
 "youtube": {
-"videoId": "ugsQypXvJQw",
+"publishedAt": "2023-09-29",
 "title": "Delerium ft. Sarah McLachlan - Silence (Tiesto Remix) | Live Vocals Edit | Official Video Remastered",
-"publishedAt": "2023-09-29"
+"videoId": "ugsQypXvJQw"
 }
 }
 },
@@ -22649,9 +22650,9 @@
 "players": {
 "Brad Leali Quintet": {
 "youtube": {
-"videoId": "eODa9RUUA3w",
+"publishedAt": "2015-06-05",
 "title": "3rd Thursday Jazz - Brad Leali Quintet - May 21, 2015",
-"publishedAt": "2015-06-05"
+"videoId": "eODa9RUUA3w"
 }
 },
 "Ronald Baker": {
@@ -22664,9 +22665,9 @@
 "url": "https://open.spotify.com/artist/6XcjiWcmkH8IIbjTIdsLT7"
 },
 "youtube": {
-"videoId": "V1BtTkxy91c",
+"publishedAt": "2015-11-12",
 "title": "Ronald Baker Quintet feat. Michele Hendricks - Festival Jazz In Langourla 2015",
-"publishedAt": "2015-11-12"
+"videoId": "V1BtTkxy91c"
 }
 }
 },
@@ -22785,9 +22786,9 @@
 "url": "https://open.spotify.com/artist/3osLvnBGfFBUHhuWDLLmOB"
 },
 "youtube": {
-"videoId": "V5PcwjuMGU4",
+"publishedAt": "2026-09-30",
 "title": "October 2026 Energy Update | Lee Harris",
-"publishedAt": "2026-09-30"
+"videoId": "V5PcwjuMGU4"
 }
 }
 },
@@ -22877,16 +22878,16 @@
 "url": "https://open.spotify.com/artist/2FMOHE79X98yptp4RpPrt7"
 },
 "youtube": {
-"videoId": "f9JPrVFmq1A",
+"publishedAt": "2023-08-11",
 "title": "PJ Morton - Watch The Sun Live | The Mansion Sessions",
-"publishedAt": "2023-08-11"
+"videoId": "f9JPrVFmq1A"
 }
 },
 "The Saturday Night": {
 "youtube": {
-"videoId": "OrPpC-HLZPs",
+"publishedAt": "2026-10-11",
 "title": "Father-Daughter Song - SNL",
-"publishedAt": "2026-10-11"
+"videoId": "OrPpC-HLZPs"
 }
 },
 "Sunday Morning": {
@@ -22899,9 +22900,9 @@
 "url": "https://open.spotify.com/artist/2jctlQLPR5HkLkNZz4Zo4G"
 },
 "youtube": {
-"videoId": "cBsr_FuUqXY",
+"publishedAt": "2016-12-15",
 "title": "No Doubt - Sunday Morning (Live in 1997)",
-"publishedAt": "2016-12-15"
+"videoId": "cBsr_FuUqXY"
 }
 },
 "Tour": {
@@ -22910,9 +22911,9 @@
 "url": "https://letour.bandcamp.com"
 },
 "youtube": {
-"videoId": "PTnt1o6Df2w",
+"publishedAt": "2026-10-12",
 "title": "Solidarity Forever Tour: LIVE from Biddeford with Troy Jackson",
-"publishedAt": "2026-10-12"
+"videoId": "PTnt1o6Df2w"
 }
 }
 },
@@ -22996,9 +22997,9 @@
 "url": "https://open.spotify.com/artist/6r4OXTv5GG4cGuCk6bcihV"
 },
 "youtube": {
-"videoId": "IgrN6mNw1Q4",
+"publishedAt": "2020-01-07",
 "title": "WOLVENNEST - Live at Tyrant Fest 2019",
-"publishedAt": "2020-01-07"
+"videoId": "IgrN6mNw1Q4"
 }
 }
 },
@@ -23058,9 +23059,9 @@
 "url": "https://open.spotify.com/artist/6ouZeILzh1LkUEKbbsfCWe"
 },
 "youtube": {
-"videoId": "33gZ5-I4qNE",
+"publishedAt": "2018-04-21",
 "title": "Obamo Sessions 02 /Jacob Mafuleni & Martha Thom « Kutandara, tribute to Chiwoniso Maraire »",
-"publishedAt": "2018-04-21"
+"videoId": "33gZ5-I4qNE"
 }
 }
 },
@@ -23106,9 +23107,9 @@
 "url": "https://open.spotify.com/artist/2kO6mP0olFJGGh6kvUdNC8"
 },
 "youtube": {
-"videoId": "uLV7-P_ZTu4",
+"publishedAt": "2024-02-02",
 "title": "Des Rocs - I Am The Lightning (Official Live Video)",
-"publishedAt": "2024-02-02"
+"videoId": "uLV7-P_ZTu4"
 }
 }
 },
@@ -23152,9 +23153,9 @@
 "players": {
 "VERKA SERDUCHKA & BAND": {
 "youtube": {
-"videoId": "w1Hr93uq5GM",
+"publishedAt": "2025-06-19",
 "title": "VERKA SERDUCHKA & BAND - «Верба» [Ювілейний концерт до 80-річчя Юрія Рибчинського 24 травня 2025 р.]",
-"publishedAt": "2025-06-19"
+"videoId": "w1Hr93uq5GM"
 }
 }
 },
@@ -23234,9 +23235,9 @@
 "url": "https://open.spotify.com/artist/3pYle1qnqjdGhG0agFZLj5"
 },
 "youtube": {
-"videoId": "Dwdv1Wk-Z5g",
+"publishedAt": "2026-06-26",
 "title": "Live BIBI ka Alam juloos Hyderabad 10th MUHARRAM 2026",
-"publishedAt": "2026-06-26"
+"videoId": "Dwdv1Wk-Z5g"
 }
 }
 },
@@ -23282,9 +23283,9 @@
 "url": "https://open.spotify.com/artist/5aLDWFw5qUmTWnEuevuhYG"
 },
 "youtube": {
-"videoId": "Naz1nLu8N6I",
+"publishedAt": "2023-02-09",
 "title": "Gaidaa - Falling Higher (Live) | Boiler Room Festival Amsterdam: Energy",
-"publishedAt": "2023-02-09"
+"videoId": "Naz1nLu8N6I"
 }
 }
 },
@@ -23337,9 +23338,9 @@
 "url": "https://open.spotify.com/artist/2Sp19cOHSqAUlE64hekARW"
 },
 "youtube": {
-"videoId": "dtXrIrtTyyQ",
+"publishedAt": "2024-08-06",
 "title": "Teenage Fanclub - Full Performance (Live on KEXP)",
-"publishedAt": "2024-08-06"
+"videoId": "dtXrIrtTyyQ"
 }
 }
 },
@@ -23399,16 +23400,16 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 },
 "Roméo et Juliette": {
 "youtube": {
-"videoId": "1ahmce9HHsQ",
+"publishedAt": "2010-04-17",
 "title": "Roméo et Juliette - Paris 26 03 2010 - Final",
-"publishedAt": "2010-04-17"
+"videoId": "1ahmce9HHsQ"
 }
 }
 },
@@ -23494,9 +23495,9 @@
 "url": "https://open.spotify.com/artist/13NmOYYfvONNZ9mn2qn8P2"
 },
 "youtube": {
-"videoId": "0Ssi-9wS1so",
+"publishedAt": "2026-02-05",
 "title": "Angine de Poitrine - Full Performance (Live on KEXP)",
-"publishedAt": "2026-02-05"
+"videoId": "0Ssi-9wS1so"
 }
 }
 },
@@ -23619,16 +23620,16 @@
 "url": "https://open.spotify.com/artist/30tUlKZ8oLo0BnN6n0GZKD"
 },
 "youtube": {
-"videoId": "A9iJVHW1Gpw",
+"publishedAt": "2018-07-26",
 "title": "Nuages (Live At The Tivoli Gardens, Copenhagen / 1979)",
-"publishedAt": "2018-07-26"
+"videoId": "A9iJVHW1Gpw"
 }
 },
 "Jeune Public": {
 "youtube": {
-"videoId": "6yhrIMJrrQU",
+"publishedAt": "2018-11-08",
 "title": "NA au pays de ZZAZZAN - Concert Jeune Public",
-"publishedAt": "2018-11-08"
+"videoId": "6yhrIMJrrQU"
 }
 }
 },
@@ -23855,6 +23856,11 @@
 "spotify": {
 "id": "6UBMFaCTZnL1Hr1nTOEblM",
 "url": "https://open.spotify.com/artist/6UBMFaCTZnL1Hr1nTOEblM"
+},
+"youtube": {
+"videoId": "98kNYSqKWVM",
+"title": "Gordi - Full Performance (Live on KEXP)",
+"publishedAt": "2025-08-27"
 }
 }
 },
@@ -23975,6 +23981,11 @@
 "spotify": {
 "id": "3A6FvoCrZq0imwy7CwSTUA",
 "url": "https://open.spotify.com/artist/3A6FvoCrZq0imwy7CwSTUA"
+},
+"youtube": {
+"videoId": "k5WIUFsGB3c",
+"title": "The Cranberries  - Dreams | Live at Woodstock (1994)",
+"publishedAt": "2020-11-14"
 }
 }
 },
@@ -24055,6 +24066,11 @@
 "spotify": {
 "id": "794Zf2mnfM5a7GV9h4WpRq",
 "url": "https://open.spotify.com/artist/794Zf2mnfM5a7GV9h4WpRq"
+},
+"youtube": {
+"videoId": "Q81GKeVTZg4",
+"title": "chaos",
+"publishedAt": "2026-04-16"
 }
 },
 "Bellboy": {
@@ -24116,9 +24132,9 @@
 "url": "https://open.spotify.com/artist/2z78AlkdwE2Ghj9EB50M6z"
 },
 "youtube": {
-"videoId": "QEo4Jc1Axt4",
+"publishedAt": "2014-06-10",
 "title": "Liars - Full Performance (Live on KEXP)",
-"publishedAt": "2014-06-10"
+"videoId": "QEo4Jc1Axt4"
 }
 }
 },
@@ -24167,9 +24183,9 @@
 "url": "https://open.spotify.com/artist/0iZfB56PLEsG9T03C2hjhK"
 },
 "youtube": {
-"videoId": "uLzG__IAlTY",
+"publishedAt": "2023-02-24",
 "title": "Dov'è Liana per Stereotipi (Live Session)",
-"publishedAt": "2023-02-24"
+"videoId": "uLzG__IAlTY"
 }
 }
 },
@@ -24299,6 +24315,11 @@
 "Noa": {
 "bandcamp": {
 "url": "https://noamadethis.bandcamp.com"
+},
+"youtube": {
+"videoId": "tuKhIdiiqqo",
+"title": "メガネを外して(アニメ『正反対な君と僕』第1期OP) Live video - noa live tour 2026",
+"publishedAt": "2026-07-15"
 }
 }
 },
@@ -24333,7 +24354,7 @@
 ],
 "description": null,
 "summary": "Le rappeur français Dosseh, connu pour « Yuri », « Vidalo$$a » et les mixtapes « SummerCrack », présente son projet « Dieu donne, j'utilise » tout en revisitant sa carrière.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/la-cigale-650x650-@fifou-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/la-cigale-650x650-@fifou-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DOSSEH",
@@ -24345,9 +24366,9 @@
 "url": "https://open.spotify.com/artist/3b5bg1k6N9u31OtzSfK2dP"
 },
 "youtube": {
-"videoId": "BZyCRdgnu-0",
+"publishedAt": "2019-01-02",
 "title": "DOSSEH : \"Habitué\" (live @ Hip Hop Symphonique 3)",
-"publishedAt": "2019-01-02"
+"videoId": "BZyCRdgnu-0"
 }
 }
 },
@@ -24516,7 +24537,15 @@
 "area": "Grands Boulevards",
 "headliner": "BABYLON EN CINÉ-CONCERT",
 "support": [],
-"players": {},
+"players": {
+"BABYLON EN CINÉ-CONCERT": {
+"youtube": {
+"videoId": "VRGRDj97tQI",
+"title": "Babylon en ciné-concert • Première mondiale à Paris",
+"publishedAt": "2025-12-12"
+}
+}
+},
 "lat": 48.8707,
 "lon": 2.3477,
 "is_music": true,
@@ -24557,9 +24586,9 @@
 "players": {
 "YARD": {
 "youtube": {
-"videoId": "wGlbeTcebFc",
+"publishedAt": "2025-02-28",
 "title": "YARD - Full Performance (Live on KEXP)",
-"publishedAt": "2025-02-28"
+"videoId": "wGlbeTcebFc"
 }
 }
 },
@@ -24641,6 +24670,11 @@
 "spotify": {
 "id": "3LtlJprzuq0Ii8p8YFZXai",
 "url": "https://open.spotify.com/artist/3LtlJprzuq0Ii8p8YFZXai"
+},
+"youtube": {
+"videoId": "WPXSNi1IqKQ",
+"title": "Peter Sandberg – Nocturnal (Live at Ocean Sound Recordings)",
+"publishedAt": "2019-12-19"
 }
 }
 },
@@ -24740,6 +24774,40 @@
 "stale_since": null,
 "id": "a8c2a8820184",
 "first_seen": "baseline"
+},
+{
+"title": "Carte Blanche à Fred Nardin",
+"date": "2026-10-22",
+"venue": "Eleven Village",
+"venue_slug": "eleven-village",
+"source": "opendata",
+"time": "20:30",
+"url": "https://www.paris.fr/evenements/carte-blance-a-fred-nardin-125729",
+"ticket_url": "https://elevenvillage.fr/event/?id=fred-nardin",
+"price": "25 €",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Figure majeure de la scène jazz française, Fred Nardin impose son piano avec une intensité rare et une élégance musicale reconnue.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/09/huge-837e3460d4879d24ba42cc9d186a1ff3.png",
+"address": "10 rue la Vacquerie, 75011, Paris",
+"area": "11e",
+"headliner": "Carte Blanche à Fred Nardin",
+"support": [],
+"players": {},
+"lat": 48.8580960076573,
+"lon": 2.38516702427771,
+"is_music": true,
+"stale_since": null,
+"id": "ba61175a7a53",
+"first_seen": "2026-10-12"
 },
 {
 "title": "Estelle Perrault 4tet",
@@ -24977,16 +25045,16 @@
 "url": "https://open.spotify.com/artist/0XmzWk0NILMJsOZlDgaSCP"
 },
 "youtube": {
-"videoId": "l2dLYUsnchc",
+"publishedAt": "2022-06-24",
 "title": "Lucie Antunes - Jacob Live Version (Recorded @ Chorus Festival)",
-"publishedAt": "2022-06-24"
+"videoId": "l2dLYUsnchc"
 }
 },
 "Mathilde Monnier": {
 "youtube": {
-"videoId": "tQK5T-WI-7E",
+"publishedAt": "2026-09-01",
 "title": "BALLET | LE MUR  | Entretien avec Mathilde Monnier et Ève Risser",
-"publishedAt": "2026-09-01"
+"videoId": "tQK5T-WI-7E"
 }
 },
 "Silence": {
@@ -24999,9 +25067,9 @@
 "url": "https://open.spotify.com/artist/4giO85Ma0hNO0wBWLFtJsS"
 },
 "youtube": {
-"videoId": "ugsQypXvJQw",
+"publishedAt": "2023-09-29",
 "title": "Delerium ft. Sarah McLachlan - Silence (Tiesto Remix) | Live Vocals Edit | Official Video Remastered",
-"publishedAt": "2023-09-29"
+"videoId": "ugsQypXvJQw"
 }
 }
 },
@@ -25047,6 +25115,11 @@
 "spotify": {
 "id": "2x0vL2sqxXMPJje6LPEnyA",
 "url": "https://open.spotify.com/artist/2x0vL2sqxXMPJje6LPEnyA"
+},
+"youtube": {
+"videoId": "C7AiyUrMpSo",
+"title": "JOCELYN MIENNIEL & LA FRENCH CONNECTION - Live @La Gare_Le Gore / Paris (2026)",
+"publishedAt": "2026-09-25"
 }
 },
 "Nightfall": {
@@ -25057,6 +25130,11 @@
 "spotify": {
 "id": "4W0Vom1cl6o3UCq8tTfRHV",
 "url": "https://open.spotify.com/artist/4W0Vom1cl6o3UCq8tTfRHV"
+},
+"youtube": {
+"videoId": "B74eyUOUhz8",
+"title": "Nightfall | Blind Guardian live | Rockpalast 2016",
+"publishedAt": "2020-03-20"
 }
 }
 },
@@ -25130,7 +25208,15 @@
 "area": "République",
 "headliner": "THEO JUICE",
 "support": [],
-"players": {},
+"players": {
+"THEO JUICE": {
+"youtube": {
+"videoId": "MVnigJBXUY8",
+"title": "THÉO JUICE EN LIVE",
+"publishedAt": "2024-05-13"
+}
+}
+},
 "lat": 48.87,
 "lon": 2.363,
 "is_music": true,
@@ -25258,9 +25344,9 @@
 "url": "https://open.spotify.com/artist/2QMdzNxFJIria2cEO1B9EV"
 },
 "youtube": {
-"videoId": "jYHeMGUt0bQ",
+"publishedAt": "2026-03-30",
 "title": "smr.tni live at SOUTERRAIN @ Emokeller Essen",
-"publishedAt": "2026-03-30"
+"videoId": "jYHeMGUt0bQ"
 }
 },
 "XOMO": {
@@ -25269,9 +25355,9 @@
 "url": "https://open.spotify.com/artist/3nYJJ3nAnKuGuoIXjzx5fH"
 },
 "youtube": {
-"videoId": "bh57B_vDNHY",
+"publishedAt": "2021-06-17",
 "title": "XOMO IS LIVE",
-"publishedAt": "2021-06-17"
+"videoId": "bh57B_vDNHY"
 }
 },
 "Andrea Pensado": {
@@ -25280,9 +25366,9 @@
 "url": "https://open.spotify.com/artist/102kzDBUxSMf8YRHXHfYGJ"
 },
 "youtube": {
-"videoId": "_a0o5cszIo4",
+"publishedAt": "2022-11-21",
 "title": "Andrea Pensado live @ The Ridge, Providence 11/20/2022",
-"publishedAt": "2022-11-21"
+"videoId": "_a0o5cszIo4"
 }
 }
 },
@@ -25483,10 +25569,22 @@
 "Isengard"
 ],
 "players": {
+"Eternal Mana": {
+"youtube": {
+"videoId": "D5ksFchutnk",
+"title": "Atelier Iris: Eternal Mana - Opening (HD)",
+"publishedAt": "2019-04-24"
+}
+},
 "Isengard": {
 "spotify": {
 "id": "6ZdRyBejw8z3vD879gj1Dy",
 "url": "https://open.spotify.com/artist/6ZdRyBejw8z3vD879gj1Dy"
+},
+"youtube": {
+"videoId": "rLdK1yLzRsY",
+"title": "The Lord of the Rings: Live Symphony - #07 Isengard - Howard Shore",
+"publishedAt": "2015-08-19"
 }
 }
 },
@@ -25532,9 +25630,9 @@
 "url": "https://open.spotify.com/artist/1wsoV3RXPkxVz3PwsNRI5K"
 },
 "youtube": {
-"videoId": "aU3IShOq8VU",
+"publishedAt": "2019-11-15",
 "title": "[Live Clip] BewhY (비와이) - 가라사대 (GOTTASADAE) Concert Live Clip (190907)",
-"publishedAt": "2019-11-15"
+"videoId": "aU3IShOq8VU"
 }
 }
 },
@@ -25586,9 +25684,9 @@
 "url": "https://open.spotify.com/artist/77oD8X9qLXZhpbCjv53l5n"
 },
 "youtube": {
-"videoId": "Yld16P1yHW8",
+"publishedAt": "2024-10-15",
 "title": "Mercury Rev - Full Concert | Live at Paradiso Amsterdam 2005",
-"publishedAt": "2024-10-15"
+"videoId": "Yld16P1yHW8"
 }
 }
 },
@@ -25638,9 +25736,9 @@
 "url": "https://open.spotify.com/artist/3u7WZTVUhTgjSKrlqzPfs9"
 },
 "youtube": {
-"videoId": "Q9NDn8muVPg",
+"publishedAt": "2024-02-01",
 "title": "Mica Millar live | Leverkusener Jazztage 2023 | Jazzline",
-"publishedAt": "2024-02-01"
+"videoId": "Q9NDn8muVPg"
 }
 }
 },
@@ -25692,9 +25790,9 @@
 "url": "https://open.spotify.com/artist/3hmNB1OCsGQVf8ttZy01e2"
 },
 "youtube": {
-"videoId": "ZDcwLZg4yas",
+"publishedAt": "2024-09-13",
 "title": "BIG SPECIAL - LIVE AT GLASTONBURY FESTIVAL - LEFT FIELD STAGE - 2024",
-"publishedAt": "2024-09-13"
+"videoId": "ZDcwLZg4yas"
 }
 }
 },
@@ -25754,16 +25852,16 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 },
 "Roméo et Juliette": {
 "youtube": {
-"videoId": "1ahmce9HHsQ",
+"publishedAt": "2010-04-17",
 "title": "Roméo et Juliette - Paris 26 03 2010 - Final",
-"publishedAt": "2010-04-17"
+"videoId": "1ahmce9HHsQ"
 }
 }
 },
@@ -25808,6 +25906,11 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=2959003516/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://smr1.bandcamp.com"
+},
+"youtube": {
+"videoId": "6F_jf5RGhNc",
+"title": "Weekend Live with SMR & SIMRAN",
+"publishedAt": "2026-08-29"
 }
 },
 "LPEE": {
@@ -25857,6 +25960,11 @@
 "spotify": {
 "id": "49qUD3ZuoOWEXwLgDwa3Eg",
 "url": "https://open.spotify.com/artist/49qUD3ZuoOWEXwLgDwa3Eg"
+},
+"youtube": {
+"videoId": "QS7qtILxQ5A",
+"title": "Wallace Cleaver - xenonV3 (live 16:11)",
+"publishedAt": "2026-09-30"
 }
 }
 },
@@ -26014,6 +26122,11 @@
 "spotify": {
 "id": "6EfilTfy7TJQI7KXitffIq",
 "url": "https://open.spotify.com/artist/6EfilTfy7TJQI7KXitffIq"
+},
+"youtube": {
+"videoId": "HFbNoG5Rw5c",
+"title": "Koudlam - See You All - Live at Le Trabendo, Paris 2022",
+"publishedAt": "2022-12-01"
 }
 },
 "LA MVERTE": {
@@ -26024,6 +26137,11 @@
 "spotify": {
 "id": "0HJtnM3UOqy0npaJY0r16h",
 "url": "https://open.spotify.com/artist/0HJtnM3UOqy0npaJY0r16h"
+},
+"youtube": {
+"videoId": "ry-L8-euxkI",
+"title": "La Mverte - Concert sauvage - Les 3 éléphants 2016",
+"publishedAt": "2016-06-01"
 }
 },
 "FRANKY GOGO": {
@@ -26034,6 +26152,11 @@
 "spotify": {
 "id": "7x7lhPl1mt0hHP1JcW0jF7",
 "url": "https://open.spotify.com/artist/7x7lhPl1mt0hHP1JcW0jF7"
+},
+"youtube": {
+"videoId": "mtGtaxZbZ3E",
+"title": "FRANKY GOGO LIVE IN PARIS AU CAFE DE LA DANSE LE 18 JUIN 2022",
+"publishedAt": "2022-07-19"
 }
 }
 },
@@ -26276,6 +26399,11 @@
 "spotify": {
 "id": "1GWsnvoiuPEfBxKLkznKUu",
 "url": "https://open.spotify.com/artist/1GWsnvoiuPEfBxKLkznKUu"
+},
+"youtube": {
+"videoId": "OOqniMGO5aM",
+"title": "El León Pardo sexteto - Florero Alucinógeno / en vivo desde el Octavo Festival de La Tigra 2024",
+"publishedAt": "2024-11-30"
 }
 },
 "INDUS": {
@@ -26384,6 +26512,11 @@
 "spotify": {
 "id": "57MIstrTi3Sw9J9yJybN0E",
 "url": "https://open.spotify.com/artist/57MIstrTi3Sw9J9yJybN0E"
+},
+"youtube": {
+"videoId": "lacQKt5KyxU",
+"title": "Makthaverskan live at Supersonic Paris 2022",
+"publishedAt": "2022-06-16"
 }
 }
 },
@@ -26515,6 +26648,11 @@
 "spotify": {
 "id": "09w9cxzjdgXxzACb0N3C50",
 "url": "https://open.spotify.com/artist/09w9cxzjdgXxzACb0N3C50"
+},
+"youtube": {
+"videoId": "NG3k04q-w7Q",
+"title": "Arkayla - Doctor (Live At Nan's House)",
+"publishedAt": "2025-08-11"
 }
 }
 },
@@ -26597,9 +26735,9 @@
 "url": "https://open.spotify.com/artist/0iZfB56PLEsG9T03C2hjhK"
 },
 "youtube": {
-"videoId": "uLzG__IAlTY",
+"publishedAt": "2023-02-24",
 "title": "Dov'è Liana per Stereotipi (Live Session)",
-"publishedAt": "2023-02-24"
+"videoId": "uLzG__IAlTY"
 }
 }
 },
@@ -26882,7 +27020,7 @@
 ],
 "description": null,
 "summary": "La P'tite Fumée présente une nouvelle formule de son électro instrumentale, enrichie d'une voix féminine formant un duo vocal percutant pour un live plus massif. Michel Hubert assure la première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/sans-titre-1_650x650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/sans-titre-1_650x650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA P’TITE FUMÉE",
@@ -27102,7 +27240,15 @@
 "area": "Grands Boulevards",
 "headliner": "BABYLON EN CINÉ-CONCERT",
 "support": [],
-"players": {},
+"players": {
+"BABYLON EN CINÉ-CONCERT": {
+"youtube": {
+"videoId": "VRGRDj97tQI",
+"title": "Babylon en ciné-concert • Première mondiale à Paris",
+"publishedAt": "2025-12-12"
+}
+}
+},
 "lat": 48.8707,
 "lon": 2.3477,
 "is_music": true,
@@ -27582,16 +27728,16 @@
 "url": "https://open.spotify.com/artist/0XmzWk0NILMJsOZlDgaSCP"
 },
 "youtube": {
-"videoId": "l2dLYUsnchc",
+"publishedAt": "2022-06-24",
 "title": "Lucie Antunes - Jacob Live Version (Recorded @ Chorus Festival)",
-"publishedAt": "2022-06-24"
+"videoId": "l2dLYUsnchc"
 }
 },
 "Mathilde Monnier": {
 "youtube": {
-"videoId": "tQK5T-WI-7E",
+"publishedAt": "2026-09-01",
 "title": "BALLET | LE MUR  | Entretien avec Mathilde Monnier et Ève Risser",
-"publishedAt": "2026-09-01"
+"videoId": "tQK5T-WI-7E"
 }
 },
 "Silence": {
@@ -27604,9 +27750,9 @@
 "url": "https://open.spotify.com/artist/4giO85Ma0hNO0wBWLFtJsS"
 },
 "youtube": {
-"videoId": "ugsQypXvJQw",
+"publishedAt": "2023-09-29",
 "title": "Delerium ft. Sarah McLachlan - Silence (Tiesto Remix) | Live Vocals Edit | Official Video Remastered",
-"publishedAt": "2023-09-29"
+"videoId": "ugsQypXvJQw"
 }
 }
 },
@@ -27672,9 +27818,9 @@
 "genres": [
 "jazz"
 ],
-"genre_source": "venue",
+"genre_source": "rules",
 "subgenres": [],
-"description": "C’EST QUOI TIMELINE ? Timeline, c’est un format de concerts imaginé par Juliette Poitrenaud. Régulièrement depuis 2023, un.e musicien.ne investit le Sunset ou le Sunside durant trois soirs pour évoquer trois temporalités de sa carrière : des concerts déclinés au passé, au présent et au futur. Cet automne, pour la première fois, c’est une maison de disques qui sera mise à l’honneur, et pas n’import",
+"description": "25 ans après sa sortie, l’album solo culte reprend vie sur scène ! En 2001, on pouvait lire dans Citizen Jazz « Solobsession porte déjà la marque indélébile du génie musical de Bojan Z ». Et ce n’était que le début ! Figure incontournable de la scène jazz européenne, le pianiste franco-serbe Bojan Z s’est imposé grâce à un style unique qui fusionne la tradition du jazz et les riches sonorités des ",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Henri-Bojan.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -27924,6 +28070,11 @@
 "spotify": {
 "id": "4CYjITN8Au3K5CWFeex7fU",
 "url": "https://open.spotify.com/artist/4CYjITN8Au3K5CWFeex7fU"
+},
+"youtube": {
+"videoId": "AtFDI_5Tchg",
+"title": "태버(Tabber) - 007 & Chi-Ka (Feat.DEAN) | 딘, 태버 [DF LIVE]",
+"publishedAt": "2024-03-06"
 }
 }
 },
@@ -27969,6 +28120,11 @@
 "spotify": {
 "id": "07FaEsHIaVZAFFHvNElpbQ",
 "url": "https://open.spotify.com/artist/07FaEsHIaVZAFFHvNElpbQ"
+},
+"youtube": {
+"videoId": "aWJ0arInq5U",
+"title": "Mari Merenda \"Uirapuru\" (Waldemar Henrique) | ONErpm Studio Session",
+"publishedAt": "2026-08-28"
 }
 },
 "Virginia Cambuci": {
@@ -28093,6 +28249,13 @@
 "spotify": {
 "id": "1chSVYg9jYCmLrY5JRMPDk",
 "url": "https://open.spotify.com/artist/1chSVYg9jYCmLrY5JRMPDk"
+}
+},
+"Pierrinski": {
+"youtube": {
+"videoId": "wvBH1didIuI",
+"title": "Pierrinski - 10th May 2025 | Bangkok Community Radio",
+"publishedAt": "2025-05-12"
 }
 }
 },
@@ -28401,6 +28564,11 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=2393265623/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://agonmusician.bandcamp.com"
+},
+"youtube": {
+"videoId": "ky7LIxBAvkE",
+"title": "🔴 LIVE | Darkfall Rise of Agon  Mob Grind Before Work",
+"publishedAt": "2026-10-12"
 }
 }
 },
@@ -28677,6 +28845,11 @@
 "spotify": {
 "id": "1DcL22xdIWcdNa4ZHaXZjT",
 "url": "https://open.spotify.com/artist/1DcL22xdIWcdNa4ZHaXZjT"
+},
+"youtube": {
+"videoId": "yQfmzX8gRR0",
+"title": "Aupinard et Bianca Costa - Belle âme (Live) Le Grand Studio RTL",
+"publishedAt": "2026-04-13"
 }
 }
 },
@@ -28726,6 +28899,11 @@
 "spotify": {
 "id": "4LYX3rRdXV2l99wR5YPFoK",
 "url": "https://open.spotify.com/artist/4LYX3rRdXV2l99wR5YPFoK"
+},
+"youtube": {
+"videoId": "MFSYuWvxF10",
+"title": "EXIT 2016 | Dub Pistols Live @ Fusion Stage HD Show",
+"publishedAt": "2017-03-03"
 }
 }
 },
@@ -28865,6 +29043,11 @@
 "spotify": {
 "id": "5DFOYJLWzBdNifHaXGuRQc",
 "url": "https://open.spotify.com/artist/5DFOYJLWzBdNifHaXGuRQc"
+},
+"youtube": {
+"videoId": "a4WGA-OdYXE",
+"title": "Keros N - Madame, Pliss Ki Zanmi, Un Dos Tres - LIVE",
+"publishedAt": "2014-08-01"
 }
 }
 },
@@ -29142,6 +29325,44 @@
 "stale_since": null,
 "id": "0b7117767ca6",
 "first_seen": "baseline"
+},
+{
+"title": "SuPERFORM - Une après-midi de performances au CCS",
+"date": "2026-10-24",
+"venue": "Centre culturel suisse Paris",
+"venue_slug": "centre-culturel-suisse-paris",
+"source": "opendata",
+"time": "16:00",
+"url": "https://www.paris.fr/evenements/superform-une-apres-midi-de-performances-au-ccs-125770",
+"ticket_url": null,
+"price": "Merci de réserver uniquement votre créneau d’arrivée.",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Art contemporain, Expo",
+"genres": [
+"experimental"
+],
+"genre_source": "site",
+"subgenres": [
+"art contemporain"
+],
+"description": "Le CCS se transforme en terrain de jeu artistique Performances, films, lecture et musique expérimentale : le temps d’une après-midi, SuPERFORM invite à découvrir la création contemporaine sous des formes multiples. Les espaces du Centre culturel suisse s’animent au fil d’un programme qui fait se rencontrer les œuvres et encourage le public à circuler d’une proposition à l’autre. Au programme, une ",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/09/huge-2692118d50d01aee525f49a542bba70f.jpg",
+"address": "32 rue des Francs-Bourgeois, 75003, Paris",
+"area": "3e",
+"headliner": "SuPERFORM",
+"support": [
+"Une après-midi de performances"
+],
+"players": {},
+"lat": 48.8582709798861,
+"lon": 2.35969903057426,
+"is_music": false,
+"stale_since": null,
+"id": "37a30e5a2d22",
+"first_seen": "2026-10-12"
 },
 {
 "title": "Concert du quintette de cuivres Q5",
@@ -29598,9 +29819,9 @@
 "url": "https://open.spotify.com/artist/0iZfB56PLEsG9T03C2hjhK"
 },
 "youtube": {
-"videoId": "uLzG__IAlTY",
+"publishedAt": "2023-02-24",
 "title": "Dov'è Liana per Stereotipi (Live Session)",
-"publishedAt": "2023-02-24"
+"videoId": "uLzG__IAlTY"
 }
 }
 },
@@ -29853,7 +30074,15 @@
 "area": "Grands Boulevards",
 "headliner": "BABYLON EN CINÉ-CONCERT",
 "support": [],
-"players": {},
+"players": {
+"BABYLON EN CINÉ-CONCERT": {
+"youtube": {
+"videoId": "VRGRDj97tQI",
+"title": "Babylon en ciné-concert • Première mondiale à Paris",
+"publishedAt": "2025-12-12"
+}
+}
+},
 "lat": 48.8707,
 "lon": 2.3477,
 "is_music": true,
@@ -32823,7 +33052,7 @@
 ],
 "description": null,
 "summary": "Soirée du Programme Phare consacrée à la nouvelle scène, avec onze artistes émergents en live, rejoints sur scène par des artistes parrains et soutiens du programme. Concert présenté en partenariat avec Live Nation.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/design-sans-titre-15-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/design-sans-titre-15-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LE PROGRAMME PHARE",
@@ -33146,7 +33375,7 @@
 ],
 "description": null,
 "summary": "Concert rock de l'auteur-compositeur américain Ryan Adams, figure du songwriting aux plus de vingt albums studio (Whiskeytown, Ryan Adams & The Cardinals). Le concert est annulé, la tournée européenne de l'artiste ayant été supprimée.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/format-site-ryan-adams-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/format-site-ryan-adams-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RYAN ADAMS",
@@ -33955,7 +34184,7 @@
 ],
 "description": null,
 "summary": "Concert du rappeur a6el, jeune figure de la scène rap/pop révélée par son EP « Pire que chez moi » et deux Boule Noire complets.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/photo-a6el-la-cigale-600x600.jpeg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/photo-a6el-la-cigale-600x600.jpeg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "a6el",
@@ -36842,7 +37071,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/pl117748.hd-credit-stephane-de-bourgies-463x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/pl117748.hd-credit-stephane-de-bourgies-463x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PHILIPPE LELLOUCHE",
@@ -43840,7 +44069,7 @@
 ],
 "description": null,
 "summary": "Camille Yembe, révélation de la scène pop francophone au univers mêlant pop, indie et influences rap, présente sur scène son premier album après une date parisienne complète à La Maroquinerie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/camille-yembe-650x650-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/camille-yembe-650x650-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CAMILLE YEMBE",
@@ -44661,7 +44890,7 @@
 ],
 "description": null,
 "summary": "Eagles of Death Metal, le groupe de Josh Homme et Jesse Hughes, présente son rock 70's garage et glam dans le cadre de la tournée européenne des 20 ans de « Death by Sexy… ». En première partie : James and the Cold Gun.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/eodm-press-photo-600x401.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/eodm-press-photo-600x401.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EAGLES OF DEATH METAL",
@@ -46169,7 +46398,7 @@
 ],
 "description": null,
 "summary": "Concert de rap du duo La Kadrilla (Bara et Jamso), originaire de Rosny-sous-Bois, qui mêle culture du freestyle, univers sombre et incisif, technicité et mélodie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/brute-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/brute-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA KADRILLA",
@@ -47519,7 +47748,7 @@
 ],
 "description": null,
 "summary": "Le groupe belge Girls In Hawaii, référence de la scène indie rock européenne, est en tournée européenne pour défendre son nouvel album Eldorado, premier disque studio depuis Nocturne (2017).",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/gih_eldorado_tour-2026_1_1-©-simon-vanrie-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/gih_eldorado_tour-2026_1_1-©-simon-vanrie-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GIRLS IN HAWAII",
@@ -49256,7 +49485,7 @@
 ],
 "description": null,
 "summary": "Concert de jazz de daoud, qui bouscule les codes du genre avec son groupe, entre lyrisme contenu et déflagration, autour de son nouvel album ok après le succès de GOOD BOY.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/daoud1_credit_tanguy-delavet-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/daoud1_credit_tanguy-delavet-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAOUD",
@@ -51765,7 +51994,7 @@
 ],
 "description": null,
 "summary": "Le groupe britannique The Temperance Movement, formé à Londres en 2011, défend un blues rock nourri de soul et du rock des années 60-70, et revisite son répertoire dont les titres « Only Friend » et « Midnight Black ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/ttm_photo_650x650_lacigale-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/ttm_photo_650x650_lacigale-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE TEMPERANCE MOVEMENT",
@@ -54177,7 +54406,7 @@
 ],
 "description": null,
 "summary": "WaïV défend sur scène sa « variété mélodie », mêlant rap, mélodies pop et sonorités afro, entouré de ses beatmakers et musiciens.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/format-site-waiv-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/format-site-waiv-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "WAÏV",
@@ -54960,7 +55189,7 @@
 ],
 "description": null,
 "summary": "Shannon, figure de la scène martiniquaise révélée par le titre « Mal À Dit », déploie un univers entre shatta, dancehall, reggaeton, bouyon et rap, célébrant l'indépendance et l'identité antillaise.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/shannon-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/shannon-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHANNON",
@@ -55027,9 +55256,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -56089,7 +56318,7 @@
 ],
 "description": null,
 "summary": "La chanteuse et rappeuse Zinée présente son EP BIL, réalisé avec Chilly Gonzales, Freaky Joe et Empty7, entre sonorités sombres et solaires.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-site-zinee-1-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-site-zinee-1-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ZINÉE",
@@ -57585,7 +57814,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/la-ligue-majeure-presente-2-450x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/la-ligue-majeure-presente-2-450x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MATCH D’IMPRO",
@@ -59207,7 +59436,7 @@
 ],
 "description": "Préparez-vous à une décharge de pur HARD ROCK !",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/the-5-rosies-la-cigale-650x650px-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/the-5-rosies-la-cigale-650x650px-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE 5 ROSIES",
@@ -61572,7 +61801,7 @@
 ],
 "description": null,
 "summary": "Le chanteur et guitariste Lucas Seb, figure contemporaine du kompa et des musiques caribéennes aux racines guadeloupéennes, mêle sonorités latines, afro et R&B. Entouré de musiciens kompa, il joue ses titres phares comme « Mortal Kompa », « Bagay cho » ou « Cadence » ainsi que ses sorties récentes.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/lucas_seb_650x650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/lucas_seb_650x650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LUCAS SEB",
@@ -62340,6 +62569,49 @@
 "first_seen": "baseline"
 },
 {
+"title": "Dr Swing invite André Villeger",
+"date": "2026-11-14",
+"venue": "Sunset / Sunside",
+"venue_slug": "sunset-sunside",
+"source": "tribe",
+"time": "19:00",
+"url": "https://www.sunset-sunside.com/concert/dr-swing-invite-andre-villeger/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Coming Soon",
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Le Dr SWING quartet a maintenant 20 ans d’existence, âge de la maturité pour un vieux pur malt écossais mais aussi peut-être pour un groupe de jazz, toujours animé par un chirurgien pianiste et un cardiologue batteur toujours aussi fous de jazz et de swing. Après quelques belles soirées au SUNSET en 2017 et 2018, puis en 2022 en sextet avec la participation d’André VILLEGER au saxophone et de Fran",
+"summary": null,
+"image": "https://www.sunset-sunside.com/app/uploads/2026/10/a-villeger.webp",
+"address": "60 rue des Lombards, 75001 Paris",
+"area": "Châtelet",
+"headliner": "Dr Swing",
+"support": [
+"André Villeger"
+],
+"players": {
+"André Villeger": {
+"spotify": {
+"id": "5wEX22GmtWUUlodFtzE7l8",
+"url": "https://open.spotify.com/artist/5wEX22GmtWUUlodFtzE7l8"
+}
+}
+},
+"lat": 48.8595,
+"lon": 2.3474,
+"is_music": true,
+"stale_since": null,
+"id": "9d3bb30ec411",
+"first_seen": "2026-10-12"
+},
+{
 "title": "Varsovie • Alien Tears • Antifer",
 "date": "2026-11-14",
 "venue": "Supersonic",
@@ -62683,7 +62955,7 @@
 ],
 "description": null,
 "summary": "Soirée reggae réunissant pour la première fois sur scène Mike et Riké (Sinsémilia), Manu et Guizmo (Tryo), HK et Vanupié, qui interprètent ensemble les grands titres de leurs répertoires respectifs.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/650x650ensemble-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/650x650ensemble-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CONCERT ENSEMBLE",
@@ -64102,7 +64374,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/650x650px-le-cas-pucine2.jpg-600x600.jpeg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/650x650px-le-cas-pucine2.jpg-600x600.jpeg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LE CAS PUCINE",
@@ -65298,7 +65570,7 @@
 ],
 "description": null,
 "summary": "Concert de rap britannique avec Nemzzz, qui défend son projet « Locked In » après « From Me 2 You » et des singles comme « GEEKIN » avec Lil Yachty.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/08/main-600x398.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/08/main-600x398.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NEMZZZ",
@@ -66183,7 +66455,7 @@
 ],
 "description": null,
 "summary": "Bilal Hassani, figure de la pop française contemporaine, propose un show intense et fédérateur.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BILAL HASSANI",
@@ -67096,7 +67368,7 @@
 ],
 "description": null,
 "summary": "Hilight Tribe, référence de la Natural Trance, présente un show mêlant instruments ethniques et énergie scénique. En première partie, Spoink ouvre la soirée avec une musique organique, festive et improvisée, entre acoustique et électronique.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/hlt-650650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/hlt-650650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HILIGHT TRIBE",
@@ -69137,7 +69409,7 @@
 ],
 "description": null,
 "summary": "Concert dessiné de Julien Neel, auteur de la BD Lou !, avec le groupe Krystal Zealot : musique, image et narration se rejoignent sur scène pour conclure le cycle Lou ! Sonata.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/lousonata650x650-591x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/lousonata650x650-591x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOU ! SONATA 3",
@@ -75388,7 +75660,7 @@
 ],
 "description": null,
 "summary": "Le rappeur marseillais Lagui, révélé avec « Ciro » puis l'EP « En Attendant en Croix » et son premier album « En Croix », défend sur scène un rap français cru et réaliste.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/lagui-cigale-650x650-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/lagui-cigale-650x650-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LAGUI",
@@ -76311,7 +76583,7 @@
 ],
 "description": null,
 "summary": "Le Greg Fest, soirée rap/hip-hop organisée par Clearwaters, avec un line-up, des surprises et des happenings.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/650-par-650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/650-par-650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GREGFEST",
@@ -77641,7 +77913,7 @@
 ],
 "description": null,
 "summary": "Le chanteur Tété, qui navigue depuis vingt-cinq ans entre folk, blues et pop, revient avec un nouveau cycle artistique inauguré par le single Vertige du Seum, pour des concerts intimes portant un projet solidaire en faveur des mères isolées.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650_visuel-neutre-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650_visuel-neutre-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TÉTÉ",
@@ -78965,7 +79237,7 @@
 ],
 "description": null,
 "summary": "Révélée par l'émission Nouvelle École, la rappeuse Eve La Marka mêle rap, trap, dancehall et pop urbaine dans un show intense et sans filtre. (Événement annulé.)",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/photo-neutre-1080x1350-1-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/photo-neutre-1080x1350-1-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EVE LA MARKA",
@@ -80771,7 +81043,7 @@
 ],
 "description": null,
 "summary": "Le rappeur nantais Cielbleu présente son EP « Gosse Coureur », une écriture aérienne mêlant poésie brute, humour et sincérité sur des beats entre rap, soul et jazz.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/gs-26-01-29-1276©gabriel-senechal-@gab.senechal-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/gs-26-01-29-1276©gabriel-senechal-@gab.senechal-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CIELBLEU",
@@ -82944,7 +83216,7 @@
 ],
 "description": null,
 "summary": "Le duo nous étions une armée présente son premier album « mais le ciel est sublime » : une voix parlée-chantée, des guitares saisissantes et des boîtes à rythmes, entre punk et rock alternatif, dans un univers mélancolique en clair-obscur.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/neua_2026_visuelweb_salle_650x650_la-cigale_draft1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/neua_2026_visuelweb_salle_650x650_la-cigale_draft1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOUS ÉTIONS UNE ARMÉE",
@@ -84572,7 +84844,7 @@
 ],
 "description": null,
 "summary": "SENYSS, artiste aux influences urbaines, caribéennes et R&B, présente un show accompagné de musiciens live konpa, entre rythmes caribéens, sensualité et énergie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/senyss-650650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/senyss-650650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SENYSS",
@@ -85881,7 +86153,7 @@
 ],
 "description": null,
 "summary": "Nuit Incolore, alias Théo Marclay, revient avec un nouveau chapitre pop aux accents orchestraux et épiques, après les succès « Dépassé », « Crush » et l'album « La loi du papillon ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NUIT INCOLORE",
@@ -86736,7 +87008,7 @@
 ],
 "description": null,
 "summary": "Première à La Cigale pour Mauvaise Bouche, qui défend une pop francophone accrocheuse aux textes sincères et au franc-parler, autour de son premier album « La vie d'adulte ».",
-"image": "https://lacigale.fr/wp-content/uploads/2025/10/1080x1080-credit-charlotte-steppe-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/10/1080x1080-credit-charlotte-steppe-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MAUVAISE BOUCHE",
@@ -87340,9 +87612,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -87997,7 +88269,7 @@
 ],
 "description": null,
 "summary": "Le rappeur, compositeur et multi-instrumentiste Sheldon, membre du collectif 75e Session, présente son nouveau disque nourri de jazz, reggae et rock, à l'issue d'une tournée.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-pour-la-cigale-650x650-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-pour-la-cigale-650x650-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHELDON",
@@ -88657,9 +88929,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -89119,7 +89391,7 @@
 ],
 "description": null,
 "summary": "Le duo Bonbon Vodou (Oriane Lacaille et JereM Boucris) défend son troisième album, Épopée métèque, entre océan Indien et Méditerranée, sur la route des exils, avec des textes en français, créole et gascon et le renfort du trio Piment Piment.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/format-site-bb-vodou-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/format-site-bb-vodou-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BONBON VODOU",
@@ -90794,7 +91066,7 @@
 ],
 "description": null,
 "summary": "Broken Back, auteur-compositeur-interprète nommé aux Victoires de la Musique 2017, présente sa folk pop lumineuse et fédératrice. Le concert s'inscrit dans le dernier chapitre du « Follow The Sun Tour », avant une pause consacrée à l'écriture de son prochain album.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/brokenback-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/brokenback-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BROKEN BACK",
@@ -92534,7 +92806,7 @@
 ],
 "description": "Shaârghot donne rendez-vous aux amateurs de metal et de musique industrielle le 6 décembre 2026 à La Cigale, à Paris. Une date qui s’annonce particulièrement intense et qui viendra s’inscrire dans une tournée à travers toute la France.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHAÂRGHOT",
@@ -93830,7 +94102,7 @@
 ],
 "description": null,
 "summary": "Le rappeur GLK, originaire de Bobigny et révélé par sa série de freestyles Bandito, donne son premier concert sur cette scène, présenté par Allo Floride, La Triade et Karma.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/glk-la-cigale-raw-1080x1350-1-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/glk-la-cigale-raw-1080x1350-1-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GLK",
@@ -94395,7 +94667,7 @@
 ],
 "description": null,
 "summary": "Concert de Wamen, artiste franco-camerounaise de rap et R'n'B à l'écriture directe et poétique, connue pour son titre « Discipline » et son projet « RE ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-la-cigale-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-la-cigale-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "WAMEN",
@@ -94630,9 +94902,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -95628,7 +95900,7 @@
 ],
 "description": null,
 "summary": "Le rappeur parisien Jwles, qui avait rempli la Machine du Moulin Rouge en 2024, revient sur scène à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/flyer-jwles_768x768-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/flyer-jwles_768x768-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JWLES",
@@ -95823,9 +96095,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -96729,7 +97001,7 @@
 ],
 "description": null,
 "summary": "Retrouvailles entre le groupe parisien Java et le chanteur jamaïcain Winston McAnuff, vingt ans après leur tournée « Paris Rockin' », autour d'un projet commun reggae-chanson. Sur scène : R.Wan et Winston au chant, Fixi à l'accordéon et aux claviers, Alexis Bossard à la batterie et Tom Fire à la basse et aux machines.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/java-mcanuuf-carre_-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/java-mcanuuf-carre_-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JAVA & WINSTON MCANUFF",
@@ -99152,7 +99424,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/feet-650_650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/feet-650_650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FEET",
@@ -100394,7 +100666,7 @@
 ],
 "description": null,
 "summary": "Ladaniva, duo formé par la chanteuse Jaklin Baghdasaryan et le multi-instrumentiste Louis Thomas, mêle musiques traditionnelles arménienne et balkanique, maloya et reggae dans une musique-monde explosive. Le groupe, connu pour « Kef Chilini », « Shakar » et « Jako » (Eurovision 2024), présente son deuxième album entre tradition revisitée et sonorités contemporaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/07/ladaniva_photo-carree-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/07/ladaniva_photo-carree-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LADANIVA",
@@ -100585,9 +100857,9 @@
 "url": "https://open.spotify.com/artist/6OlHxNP0SfOgEh60owhcOk"
 },
 "youtube": {
-"videoId": "kaj8wncYLPU",
+"publishedAt": "2021-09-12",
 "title": "LOCO de L'Orchestre Nobis",
-"publishedAt": "2021-09-12"
+"videoId": "kaj8wncYLPU"
 }
 }
 },
@@ -101048,7 +101320,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Florent Marchet, figure singulière de la chanson française depuis plus de vingt ans, revient sur scène avec un nouveau projet écrit entre la France et la Méditerranée, aux sonorités plus organiques et à l'écriture attentive aux trajectoires humaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FLORENT MARCHET",
@@ -101865,7 +102137,7 @@
 ],
 "description": null,
 "summary": "Renan Luce célèbre les vingt ans de son premier album « Repentie » en rejouant sur scène les treize chansons du disque dans l'ordre.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/renan-luce_2026_bd©laurent_seroussi_650x650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/renan-luce_2026_bd©laurent_seroussi_650x650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RENAN LUCE",
@@ -106718,7 +106990,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/nadege_650x650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/nadege_650x650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NADÈGE 100 GÈNE",
@@ -107537,7 +107809,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-1-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-1-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAMIEN GILLARD",
@@ -107680,7 +107952,7 @@
 ],
 "description": null,
 "summary": "K-Reen, pionnière du R&B en France, donne son tout premier concert solo : après plus de 30 ans de carrière, elle y réunit ses plus grands succès, des invités surprises et des moments inédits.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/08/k-reen-cigale-650x650-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/08/k-reen-cigale-650x650-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "K-REEN",
@@ -109503,7 +109775,7 @@
 ],
 "description": null,
 "summary": "Heaven Sam, DJ et artiste-performer de la scène afro, architecte du mouvement Afro Disco et créateur du phénomène SKALALA, investit La Cigale pour son show « The Afrodisco Experience », présenté comme une expérience sensorielle totale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/650x650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/650x650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HEAVEN SAM",
@@ -109947,7 +110219,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Après plus de 100 dates sur les routes de France, la jeune artiste Dinaa présente un show sublimé à La Cigale, où sa voix soul raconte ses expériences personnelles entre mélancolie et résilience.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/650x650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/650x650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DINAA",
@@ -110586,7 +110858,7 @@
 ],
 "description": null,
 "summary": "Concert du rappeur et auteur-interprète parisien DMA, entre rap introspectif et mélodie, qui défend son album CŒUR DE LION dans un live intense et habité.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-affiche-vierge-dma-la-cigale-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-affiche-vierge-dma-la-cigale-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DMA",
@@ -111388,7 +111660,7 @@
 ],
 "description": null,
 "summary": "Le saxophoniste Léon Phal, figure de la nouvelle scène jazz européenne, défend son quatrième album Bodies & Ideas, entre jazz, groove et électronique, accompagné de Gauthier Toux, Zacharie Ksyk, Rémi Bouyssière et Arthur Alard pour un live dansant et intense.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/format-site-phal-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/format-site-phal-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LÉON PHAL",
@@ -111965,7 +112237,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/mico-milwaukee-9.28-40-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/mico-milwaukee-9.28-40-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MICO",
@@ -112539,9 +112811,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -112640,7 +112912,7 @@
 ],
 "description": null,
 "summary": "Brothers in Band rend hommage à Dire Straits avec The Very Best of Dire Straits, un spectacle qui parcourt les grandes périodes du groupe de Mark Knopfler et ses titres emblématiques comme « Sultans of Swing », « Money for Nothing » ou « Brothers in Arms », dans le respect des arrangements d'origine.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/dire-straits-bib-la-cigale-650x650px-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/dire-straits-bib-la-cigale-650x650px-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "bROTHERS iN bAND",
@@ -113106,9 +113378,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -113142,7 +113414,7 @@
 ],
 "description": "LOGICALTRAMP ravive avec éclat l’esprit de Supertramp : un hommage authentique, soutenu par les membres historiques, pour replonger dans des titres légendaires au charme intact. Un voyage musical fidèle, brillant & intensément Supertramp.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/logicaltramp-la-cigale-650x650px-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/logicaltramp-la-cigale-650x650px-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOGICALTRAMP",
@@ -113730,7 +114002,7 @@
 ],
 "description": "Après le succès sans précédent de leurs spectacles à travers toute l'Europe, \"LeNoise\" arrive enfin en France grâce au CONCERT EXTRAORDINAIRE, afin de combler les fans de Neil Young qui pourront revivre sur scène les versions originales plus vraies que nature, de ses plus grands classiques.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/le-noise-la-cigale-650x650px-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/le-noise-la-cigale-650x650px-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LENOISE",
@@ -114154,7 +114426,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/hl-tour-press-pic-scaled-e1782220099550-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/hl-tour-press-pic-scaled-e1782220099550-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAN & PHIL",
@@ -114675,7 +114947,7 @@
 ],
 "description": null,
 "summary": "Concert pop de Pi Ja Ma, alias Pauline de Tarragon, autour de son nouvel album « Magnetofille », pour une « Pi Ja Ma party » mêlant douceur, humour et poésie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/visuel_pi-ja-ma-la-cigale-2-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/visuel_pi-ja-ma-la-cigale-2-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PI JA MA",
@@ -115201,7 +115473,7 @@
 ],
 "description": null,
 "summary": "Le groupe rock britannique Editors est en tournée après son single « Call It In », premier morceau depuis l'album EBM, qui annonce un nouveau chapitre pour la formation menée par Tom Smith.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/editors-2026by-rahi-rezvani-first-press-shot-600x399.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/editors-2026by-rahi-rezvani-first-press-shot-600x399.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EDITORS",
@@ -116297,7 +116569,7 @@
 ],
 "description": null,
 "summary": "Concert de rap du artiste Sean, dans le cadre de sa tournée « tfkpourlafindumonde? ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/photo-sean-424x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/photo-sean-424x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SEAN",
@@ -116634,7 +116906,7 @@
 ],
 "description": null,
 "summary": "Resolve donne son plus gros concert parisien en tête d'affiche, dans un registre metal puissant mêlant mélodies accrocheuses et intensité émotionnelle, avec Spleen en première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/resolve-2026-aurelien-mariat-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/resolve-2026-aurelien-mariat-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RESOLVE",
@@ -121502,7 +121774,7 @@
 ],
 "description": null,
 "summary": "Le quatuor canadien de hard rock Theory of a Deadman revient à La Cigale avec « The Barricade Tour », en défense de son EP « Funeral Songs Vol. 1 » qui renoue avec un heavy rock brut, énergique et accrocheur.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THEORY OF A DEADMAN",
@@ -121676,7 +121948,7 @@
 ],
 "description": null,
 "summary": "Le groupe allemand d'indie-pop Giant Rooks revient à Paris pour défendre son troisième album studio, « If Heaven Exists, This Might Be It », enregistré aux Real World Studios.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/design-sans-titre-16-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/design-sans-titre-16-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GIANT ROOKS",
@@ -126000,7 +126272,7 @@
 ],
 "description": null,
 "summary": "La chanteuse portugaise Cristina Branco célèbre 30 ans de carrière, entre fado traditionnel, poésie et influences jazz, accompagnée de Bernardo Couto à la guitare portugaise, Bernardo Moreira à la contrebasse et Luís Figueiredo au piano.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/cristina_brancofado1_@augusto_brazio-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/cristina_brancofado1_@augusto_brazio-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CRISTINA BRANCO",
@@ -126346,7 +126618,7 @@
 ],
 "description": null,
 "summary": "Le compositeur et producteur danois Anders Trentemøller livre un live en groupe mêlant post-rock, électronica, shoegaze et dark wave, entre atmosphères cinématographiques et climax sonores.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/trente_2026_credit_jj-345x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/trente_2026_credit_jj-345x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TRENTEMØLLER",
@@ -127190,7 +127462,7 @@
 ],
 "description": null,
 "summary": "Le groupe britannique Palace revient à Paris pour défendre Ox, son cinquième album enregistré à Deptford avec Adam Jaffrey, aux couleurs organiques et americana inspirées de The Band ou Townes Van Zandt.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/credit-adrian-lee-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/credit-adrian-lee-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PALACE",
@@ -127741,7 +128013,7 @@
 ],
 "description": "Delco music présente Loa Mercury à La Cigale (Paris), le 6 mars 2027 à 20 h.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/loa@lacigale_650x650.jpeg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/loa@lacigale_650x650.jpeg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOA MERCURY",
@@ -128817,7 +129089,7 @@
 ],
 "description": null,
 "summary": "Le chanteur bruxellois Noé Preszow, auteur-compositeur de chanson française, vient présenter sur scène les titres de son troisième album.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650_cigale-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650_cigale-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOÉ PRESZOW",
@@ -129256,7 +129528,7 @@
 ],
 "description": null,
 "summary": "Lancelot revient sur scène après son EP Curriculum Vitae, son single Madame et son dernier morceau Guéri, une pop française nostalgique et teintée d'humour sur les tourments amoureux.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/04/lancelot_1000x1000_chugolardenet-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2025/04/lancelot_1000x1000_chugolardenet-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LANCELOT",
@@ -130173,7 +130445,7 @@
 ],
 "description": null,
 "summary": "Blanco White, projet solo du Londonien Josh Edwards, mêle guitare flamenco, charango et musique andalouse et latino à ses influences folk anglo-saxonnes, dans le sillage de son album Tarifa.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/blanco-white-650x650-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/blanco-white-650x650-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BLANCO WHITE",
@@ -130808,7 +131080,7 @@
 ],
 "description": null,
 "summary": "Retour sur scène d'Assassin, groupe mythique du hip-hop français mené par Rockin' Squat, pionnier d'un rap conscient et engagé produit en indépendance.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/2_1080x1350-assassin-la-cigale-c-sixtine-raider-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/2_1080x1350-assassin-la-cigale-c-sixtine-raider-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ASSASSIN",
@@ -131972,7 +132244,7 @@
 ],
 "description": null,
 "summary": "Cali présente « Caliciuri », nouvel album et nouveau spectacle de chanson française, dans un concert placé sous le signe de la proximité et du partage avec le public.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/cali_cigale_site-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/cali_cigale_site-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CALI",
@@ -132376,7 +132648,7 @@
 ],
 "description": null,
 "summary": "Joyce Jonathan présente sur scène « De justesse », son sixième album personnel qu'elle a produit elle-même, évoquant amour, séparation, maternité et reconstruction, en alternant nouvelles chansons et titres emblématiques.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/1080x1080-neutre-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/1080x1080-neutre-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JOYCE JONATHAN",
@@ -132655,9 +132927,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -132843,7 +133115,7 @@
 ],
 "description": null,
 "summary": "Le rappeur Asfar Shamsi est en concert, après des dates complètes à La Boule Noire et à La Maroquinerie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/cigale4-480x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/cigale4-480x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ASFAR SHAMSI",
@@ -133103,9 +133375,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -133262,7 +133534,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/madam-credit-boby-1-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/madam-credit-boby-1-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MADAM",
@@ -133760,7 +134032,7 @@
 ],
 "description": null,
 "summary": "Auteur-compositeur-interprète et producteur inclassable, CHATON revient à La Cigale avec son univers à la croisée de la chanson, du dub et de l'électro, dans des concerts intimes où il se livre seul sur scène, parfois accompagné de ses enfants.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650-x-650-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650-x-650-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CHATON",
@@ -134808,7 +135080,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Dominique A défend sur scène « Spirales », son quinzième album studio, à l'esthétique plus brute et plus rock, aux textes autobiographiques et universels.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-1-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-1-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DOMINIQUE A",
@@ -136486,7 +136758,7 @@
 ],
 "description": null,
 "summary": "Colonel Reyel célèbre les 16 ans de son album « Au rapport », qui a marqué la pop urbaine française, en reprenant ses titres emblématiques comme « Celui », « Aurélie » ou « Toutes les nuits ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/colonel-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/colonel-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "COLONEL REYEL",
@@ -136751,7 +137023,7 @@
 ],
 "description": null,
 "summary": "Hervé Salters, alias General Elektriks, présente sa soul funk nourrie de musiques afro-américaines (funk, soul, hip-hop, jazz) et portée par son jeu de claviers, à l'occasion d'un septième album. Entouré de Jessie Chaton, Guillaume Lantonnet, Toma Milteau et Eric Starczan, il réarrange ses morceaux pour un show live sans laptop.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/ge-600x600-1.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/ge-600x600-1.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "General Elektriks",
@@ -137073,9 +137345,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -137464,9 +137736,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 }
 },
@@ -137705,7 +137977,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/oria650x650-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/oria650x650-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ORIA",
@@ -137989,7 +138261,7 @@
 ],
 "description": null,
 "summary": "Le trio réunionnais PLL (Power Love Life), composé de Lil King, S.G et Luidgi, mêle dancehall, shatta, afro-caribéen et musiques urbaines. Le groupe, connu pour les titres Shattiment, Maya ou Roulman, joue pour la première fois à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/p.l.l-hd-©tony-600x400.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/p.l.l-hd-©tony-600x400.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "P.L.L",
@@ -138428,7 +138700,7 @@
 ],
 "description": null,
 "summary": "Premier concert de Lecya, jeune chanteuse révélée par The Voice Kids, dans un univers entre pop et R&B après ses singles « Amour oublié » et « C'est mort ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/lecya-cigale-photo-650x650-1-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/lecya-cigale-photo-650x650-1-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LECYA",
@@ -138984,9 +139256,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 },
 "Alexandre Kantorow": {
@@ -139224,9 +139496,9 @@
 "url": "https://open.spotify.com/artist/6iGHnrxEjBwhHsZ65HVUiE"
 },
 "youtube": {
-"videoId": "Mczyu3TiRbw",
+"publishedAt": "2026-02-12",
 "title": "Bruckner 8 Finale – RCO BRASS | Klaus Mäkelä | Live",
-"publishedAt": "2026-02-12"
+"videoId": "Mczyu3TiRbw"
 }
 },
 "Alexandre Kantorow": {
@@ -140655,7 +140927,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/visu-cigale-650x650-1-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/visu-cigale-650x650-1-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LUSHE",
@@ -140932,7 +141204,7 @@
 ],
 "description": null,
 "summary": "Le Duo Jatekok (Adélaïde Panaget et Naïri Badal) présente « Rammstein on the beach », un concert hybride mis en scène par David Gauchard qui fait dialoguer l'univers rock de Rammstein, avec lequel les pianistes ont tourné, et la musique minimaliste de Monk, Adams et Glass.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-ctina-dubrovsky-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-ctina-dubrovsky-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DUO JATEKOK",
@@ -141426,7 +141698,7 @@
 ],
 "description": null,
 "summary": "Juste Shani, voix montante du rap français révélée par son EP « Diamant Noir » et ses vidéos virales, monte sur la scène de La Cigale après avoir rempli la Gaîté Lyrique.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-justeshani-cigale-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-justeshani-cigale-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JUSTE SHANI",
@@ -141537,7 +141809,7 @@
 ],
 "description": null,
 "summary": "Nouvelle Vague présente son septième album, entièrement consacré aux reprises de Depeche Mode : treize titres emblématiques réinterprétés par de nouvelles voix et enregistrés à Rio avec des musiciens brésiliens.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/nouvelle-vague-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/nouvelle-vague-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOUVELLE VAGUE",
@@ -141914,7 +142186,7 @@
 ],
 "description": null,
 "summary": "La Yegros, figure de la nu-cumbia et des musiques globales, défend son album « HAZ » mêlant folklore latino-américain, reggae, ska et électro, dans un show live survolté.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/1080x1080_sansecri-600x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/1080x1080_sansecri-600x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA YEGROS",
@@ -143263,7 +143535,7 @@
 ],
 "description": null,
 "summary": "Le trio strasbourgeois Emile Londonien — Nils Boyny (claviers), Théodore Eristoff (basse) et Matthieu Drago (batterie) — issu du collectif Omezis, propose un jazz nourri de la scène britannique et de culture clubbing. Après les albums Legacy et Inwards, le groupe élargit son univers vers le R&B et la house moderne.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/c-ambre-savagnac-1-338x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/c-ambre-savagnac-1-338x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EMILE LONDONIEN",
@@ -143574,7 +143846,7 @@
 ],
 "description": null,
 "summary": "Mélissa Laveaux présente en live son album « At my softest, I am most dangerous », une pop indé aux guitares électriques en fingerpicking psychédélique, avec un travail marqué sur la voix et les chœurs.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/melissa-laveaux-cigale-650x650-v2-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/melissa-laveaux-cigale-650x650-v2-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MÉLISSA LAVEAUX",
@@ -144583,7 +144855,7 @@
 ],
 "description": null,
 "summary": "Le chanteur Séverin défend sur scène son nouvel album « Tout est vrai », enregistré sur l'île de Wight, entouré de ses musiciens complices et d'invités surprises.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/visuel-neutre-severin-650x650px-600x600.png.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/visuel-neutre-severin-650x650px-600x600.png",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SEVERIN",
@@ -147373,7 +147645,7 @@
 ],
 "description": null,
 "summary": "Stanislas, jeune auteur-compositeur-interprète de Colombes révélé avec l'EP « Topless », défend son rap indie teinté de pop alternative.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/1080-x-1440-450x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/1080-x-1440-450x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "STANISLAS",
@@ -147487,7 +147759,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/copie-de-camille-vivier_lou-doillon_look-5_0556_r3-400x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/copie-de-camille-vivier_lou-doillon_look-5_0556_r3-400x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOU DOILLON",
@@ -148288,9 +148560,9 @@
 "players": {
 "Roméo et Juliette": {
 "youtube": {
-"videoId": "1ahmce9HHsQ",
+"publishedAt": "2010-04-17",
 "title": "Roméo et Juliette - Paris 26 03 2010 - Final",
-"publishedAt": "2010-04-17"
+"videoId": "1ahmce9HHsQ"
 }
 }
 },
@@ -152422,7 +152694,7 @@
 ],
 "description": null,
 "summary": "Le duo Felhur x Andro présente un nouveau show après une tournée indépendante : un rap doux et acide nourri de chanson, de rock et de techno, où Felhur écrit les textes et Andro signe les compositions. Après l'album-roman Liaisons & Ruptures et l'EP Pousser sur des cendres, porté par le titre viral Bébou.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/affiche-felhuretandro-7794-scaled-e1789656496947-535x600.jpg.webp",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/affiche-felhuretandro-7794-scaled-e1789656496947-535x600.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FELHUR",
