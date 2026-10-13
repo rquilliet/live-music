@@ -19,16 +19,42 @@
    ],
    "usd": 0.1027,
    "issue": "REM-79"
+  },
+  "mains-d-oeuvres": {
+   "since": "2026-10-08",
+   "days": [
+    "2026-10-13"
+   ],
+   "usd": 0.0,
+   "issue": "REM-83"
   }
  },
  "last": {
-  "date": "2026-10-12",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/38249126373",
-  "usd": 0,
-  "sessions": 0,
+  "date": "2026-10-13",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/38395881748",
+  "usd": 0.0,
+  "sessions": 1,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
+  "unresolved": [
+   {
+    "venue": "Mains d'Œuvres",
+    "slug": "mains-d-oeuvres",
+    "error": "URLError: <urlopen error timed out> for https://mainsdoeuvres.org/",
+    "since": "2026-10-08",
+    "prev_count": 8,
+    "url": "https://mainsdoeuvres.org/",
+    "attempts": 1,
+    "usd_total": 0.0,
+    "problems": [
+     "the agent stopped early: Invalid API key · Fix external API key"
+    ],
+    "notes": "Invalid API key · Fix external API key",
+    "diff": "",
+    "usd": 0.0,
+    "usd_agent": 0.0
+   }
+  ],
   "systemic": [
    {
     "cause": "Claude API error 401: invalid x-api-key",
@@ -51,7 +77,6 @@
      "Le Centquatre",
      "La Petite Halle",
      "Le Grand Rex",
-     "Mains d'Œuvres",
      "Badaboum",
      "Philharmonie de Paris",
      "Le Trabendo",
@@ -92,7 +117,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-10",
+  "date": "2026-10-13",
   "usd": 0.0
  }
 }
