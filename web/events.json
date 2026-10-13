@@ -1,6 +1,6 @@
 {
-"generated_at": "2026-10-12T12:27:01",
-"today": "2026-10-12",
+"generated_at": "2026-10-13T12:14:27",
+"today": "2026-10-13",
 "new_window_days": 7,
 "tags": [
 "rock",
@@ -160,7 +160,9 @@
 "Les Disquaires",
 "Les Trois Baudets",
 "L’ODÉON - Scène Musicale de Tremblay",
+"MPAA/Broussais - Maison des Pratiques Artistiques Amateurs",
 "MPAA/Saint-Germain",
+"MPAA/Saint-Germain - Maison des Pratiques Artistiques Amateurs",
 "Mains d'Œuvres",
 "Mairie du 10e arrondissement",
 "Mairie du 20e arrondissement",
@@ -177,7 +179,6 @@
 "Médiathèque Jean-Pierre Melville",
 "Médiathèque Marguerite Duras",
 "Médiathèque Marguerite Yourcenar",
-"Médiathèque Matéo Maximoff",
 "Médiathèque Violette Leduc",
 "Médiathèque musicale de Paris – Christiane Eda-Pierre",
 "Mémorial de la Shoah",
@@ -192,6 +193,7 @@
 "Point Éphémère",
 "PopUp!",
 "Restaurant Marilou",
+"Réfectoire des Cordeliers",
 "Rêva",
 "Salle Colonne",
 "Salle Cortot",
@@ -216,7 +218,6 @@
 "Théâtre du Châtelet",
 "Théâtre du Gouvernail",
 "Théâtre du Temps",
-"Word with Women - Les femmes s'arrêtent",
 "Zèbre de Belleville",
 "Zénith Paris",
 "conservatoire Léo Delibes",
@@ -1143,7 +1144,6 @@
 "rap italien": "hip-hop",
 "rap marocain": "hip-hop",
 "rap metal": "metal",
-"rap polonais": "hip-hop",
 "rap rock": "punk",
 "rap suisse": "hip-hop",
 "rave": "electro",
@@ -1338,7 +1338,7 @@
 "turkish folk": "rock",
 "turkish pop": "pop",
 "turkish rap": "hip-hop",
-"turntablism": "hip-hop",
+"turntablism": "funk",
 "twee pop": "indie",
 "tzigane": "folk",
 "uk drill": "hip-hop",
@@ -1404,7 +1404,7 @@
 {
 "venue": "Paris open data (Que faire à Paris ?)",
 "ok": true,
-"count": 1246
+"count": 1250
 },
 {
 "venue": "Le Bataclan",
@@ -1419,7 +1419,7 @@
 {
 "venue": "La Boule Noire",
 "ok": true,
-"count": 77
+"count": 75
 },
 {
 "venue": "Le Trianon",
@@ -1429,17 +1429,17 @@
 {
 "venue": "Élysée Montmartre",
 "ok": true,
-"count": 57
+"count": 58
 },
 {
 "venue": "La Maroquinerie",
 "ok": true,
-"count": 107
+"count": 108
 },
 {
 "venue": "Petit Bain",
 "ok": true,
-"count": 55
+"count": 54
 },
 {
 "venue": "Point Éphémère",
@@ -1460,7 +1460,7 @@
 "venue": "New Morning",
 "ok": false,
 "error": "HTTP 404 for https://www.newmorning.com/programmation.html",
-"carried": 66,
+"carried": 65,
 "stale_since": "2026-10-06"
 },
 {
@@ -1476,8 +1476,8 @@
 {
 "venue": "Supersonic",
 "ok": false,
-"error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-12&page=1",
-"carried": 46,
+"error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-13&page=1",
+"carried": 45,
 "stale_since": "2026-09-30"
 },
 {
@@ -1493,7 +1493,7 @@
 {
 "venue": "Sunset / Sunside",
 "ok": true,
-"count": 156
+"count": 155
 },
 {
 "venue": "Accor Arena",
@@ -1513,7 +1513,7 @@
 "venue": "Zénith Paris",
 "ok": false,
 "error": "0 events parsed (was 114): Claude API error 401: invalid x-api-key",
-"carried": 111,
+"carried": 110,
 "stale_since": "2026-10-07"
 },
 {
@@ -1548,7 +1548,7 @@
 "venue": "La Bellevilloise",
 "ok": false,
 "error": "0 events parsed (was 70): Claude API error 401: invalid x-api-key",
-"carried": 59,
+"carried": 57,
 "stale_since": "2026-10-07"
 },
 {
@@ -1583,21 +1583,21 @@
 "venue": "La Machine du Moulin Rouge",
 "ok": false,
 "error": "0 events parsed (was 48): Claude API error 401: invalid x-api-key",
-"carried": 45,
+"carried": 44,
 "stale_since": "2026-10-07"
 },
 {
 "venue": "Duc des Lombards",
 "ok": false,
 "error": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
-"carried": 2,
+"carried": 1,
 "stale_since": "2026-10-07"
 },
 {
 "venue": "Le Baiser Salé",
 "ok": false,
 "error": "0 events parsed (was 25): Claude API error 401: invalid x-api-key",
-"carried": 14,
+"carried": 13,
 "stale_since": "2026-10-07"
 },
 {
@@ -1618,13 +1618,13 @@
 "venue": "Le Grand Rex",
 "ok": false,
 "error": "0 events parsed (was 73): Claude API error 401: invalid x-api-key",
-"carried": 69,
+"carried": 68,
 "stale_since": "2026-10-07"
 },
 {
 "venue": "Mains d'Œuvres",
 "ok": false,
-"error": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
+"error": "URLError: <urlopen error timed out> for https://mainsdoeuvres.org/",
 "carried": 6,
 "stale_since": "2026-10-07"
 },
@@ -1639,7 +1639,7 @@
 "venue": "Philharmonie de Paris",
 "ok": false,
 "error": "0 events parsed (was 337): Claude API error 401: invalid x-api-key",
-"carried": 327,
+"carried": 326,
 "stale_since": "2026-10-07"
 },
 {
@@ -1695,7 +1695,7 @@
 "venue": "Le Bal Blomet",
 "ok": false,
 "error": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
-"carried": 47,
+"carried": 46,
 "stale_since": "2026-10-07"
 },
 {
@@ -1758,7 +1758,7 @@
 "venue": "PopUp!",
 "ok": false,
 "error": "0 events parsed (was 65): Claude API error 401: invalid x-api-key",
-"carried": 58,
+"carried": 57,
 "stale_since": "2026-10-07"
 },
 {
@@ -1782,1300 +1782,6 @@
 }
 ],
 "events": [
-{
-"title": "MASTERCLASSES DE MUSIQUE CARNATIQUE - Inde du Sud - Suryaprakash Classical Trio",
-"date": "2026-10-12",
-"venue": "Conservatoire Municipal Gabriel Fauré",
-"venue_slug": "conservatoire-municipal-gabriel-faure",
-"source": "opendata",
-"time": "09:30",
-"url": "https://www.paris.fr/evenements/masterclasses-de-musique-carnatique-inde-du-sud-suryaprakash-classical-trio-125248",
-"ticket_url": null,
-"price": "Placement libre dans la limite des places disponibles.",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Conférence",
-"genres": [
-"world"
-],
-"genre_source": "llm",
-"subgenres": [
-"carnatic"
-],
-"description": "Manodharmam, l'art d'improviser - Le konnakol, le solfège rythmique - Le violon carnatique et l'expression mélodique - CMA 5 et CMA11",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/10/01/huge-7607a5c199e79ef22976ca061a90f7f7.png",
-"address": "12 Rue de Pontoise, 75005, Paris",
-"area": "5e",
-"headliner": "MASTERCLASSES DE MUSIQUE CARNATIQUE",
-"support": [
-"Inde du Sud",
-"Suryaprakash Classical Trio"
-],
-"players": {},
-"lat": 48.849967,
-"lon": 2.351947,
-"is_music": false,
-"stale_since": null,
-"id": "3a78fb0886a4",
-"first_seen": "2026-10-02"
-},
-{
-"title": "Auditions 26-27",
-"date": "2026-10-12",
-"venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
-"venue_slug": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
-"source": "opendata",
-"time": "17:45",
-"url": "https://www.paris.fr/evenements/auditions-25-26-92345",
-"ticket_url": "https://www.paris.fr/crr",
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"classical"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": "Retrouvez nos élèves en concerts de classes instrumentales, vocales, et musique d'ensembles lors de ces rendez-vous réguliers.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2025/09/10/huge-ca46794bcd60f69a830999c685ddad41.jpg",
-"address": "14, rue de Madrid, 75008, Paris",
-"area": "8e",
-"headliner": "Auditions 26-27",
-"support": [],
-"players": {},
-"lat": 48.8785160001733,
-"lon": 2.32069904092731,
-"is_music": true,
-"stale_since": null,
-"id": "8e0c02b63229",
-"first_seen": "2026-10-03"
-},
-{
-"title": "LE BAL DES PHILOSOPHES – LA MAJORITÉ A-T-ELLE TOUJOURS RAISON EN DÉMOCRATIE ?",
-"date": "2026-10-12",
-"venue": "Le Bal Blomet",
-"venue_slug": "le-bal-blomet",
-"source": "llm",
-"time": "19:00",
-"url": "https://www.balblomet.fr/agenda",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz"
-],
-"genre_source": "venue",
-"subgenres": [],
-"description": "Martin Legros, Karol Beffa",
-"summary": null,
-"image": null,
-"address": "33 rue Blomet, 75015 Paris",
-"area": "15e",
-"headliner": "LE BAL DES PHILOSOPHES",
-"support": [
-"LA MAJORITÉ A-T-ELLE TOUJOURS RAISON EN DÉMOCRATIE ?"
-],
-"players": {},
-"lat": 48.843,
-"lon": 2.306,
-"is_music": false,
-"stale_since": "2026-10-07",
-"id": "b0a735912243",
-"first_seen": "baseline"
-},
-{
-"title": "Performance artistique et musicale autour de la bande dessinée « Manouche Manouche »",
-"date": "2026-10-12",
-"venue": "Médiathèque Matéo Maximoff",
-"venue_slug": "mediatheque-mateo-maximoff",
-"source": "opendata",
-"time": "19:00",
-"url": "https://www.paris.fr/evenements/performance-artistique-et-musicale-autour-de-la-bande-dessinee-manouche-manouche-125224",
-"ticket_url": null,
-"price": "Entrée gratuite sur inscription à l’adresse suivante : docum",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "BD, LGBT",
-"genres": [
-"world"
-],
-"genre_source": "llm",
-"subgenres": [
-"gypsy"
-],
-"description": "La Fnasat-Gens du voyage vous invite à la médiathèque Matéo Maximoff, le lundi 12 octobre 2026 à 19h, pour une performance artistique et musicale autour de la bande dessinée « Manouche Manouche » avec l’auteur et dessinateur Johann G. Louis, le contrebassiste Gilles Coquard et la chanteuse et guitariste Leïla Duclos.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/10/01/huge-aa873070f8a8409b30eb500dabcc1fda.png",
-"address": "59, rue de l'Ourcq, 75019, Paris",
-"area": "19e",
-"headliner": "Performance artistique et musicale autour de la bande dessinée « Manouche Manouche »",
-"support": [],
-"players": {},
-"lat": 48.8915939903313,
-"lon": 2.38034097588638,
-"is_music": false,
-"stale_since": null,
-"id": "f211b6a7f586",
-"first_seen": "baseline"
-},
-{
-"title": "Ciné-club Tsedek! présente Fama, une héroïne sans gloire de Dalila Ennadre",
-"date": "2026-10-12",
-"venue": "Point Éphémère",
-"venue_slug": "point-ephemere",
-"source": "pointephemere",
-"time": "19:00",
-"url": "https://www.pointephemere.org/event/le-cine-club-tsedek-presente-un-cycle-de-programma",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": "https://images.prismic.io/pointf/15SvdthaANx1sXKL_Tsedek.png?auto=format&w=200&q=25&fm=webp",
-"address": "200 quai de Valmy, 75010 Paris",
-"area": "Canal Saint-Martin",
-"headliner": "Ciné-club Tsedek! présente Fama",
-"support": [],
-"players": {},
-"lat": 48.8797,
-"lon": 2.3693,
-"is_music": false,
-"stale_since": null,
-"id": "af44fd2e89ca",
-"first_seen": "2026-09-29"
-},
-{
-"title": "Alison’s Halo • Typical Light • Tannhaüser Dream",
-"date": "2026-10-12",
-"venue": "Supersonic",
-"venue_slug": "supersonic",
-"source": "tribe",
-"time": "19:00",
-"url": "https://supersonic-club.fr/event/alisons-halo/",
-"ticket_url": null,
-"price": "Gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Alison's Halo",
-"genres": [
-"indie",
-"rock"
-],
-"genre_source": "llm",
-"subgenres": [
-"shoegaze",
-"dream pop"
-],
-"description": "Si vous êtes fan de… Slowdive, Cocteau Twins & My Bloody Valentine",
-"summary": null,
-"image": "https://supersonic-club.fr/wp-content/uploads/2026/06/namethumb_w600px_img_event_ca59ab6b-dbed-4601-8cb7-d4d6df4ed8e8-1.jpg",
-"address": "9 rue Biscornet, 75012 Paris",
-"area": "Bastille",
-"headliner": "Alison’s Halo",
-"support": [
-"Typical Light",
-"Tannhaüser Dream"
-],
-"players": {
-"Alison’s Halo": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3481128708/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://alisonshalo.bandcamp.com"
-},
-"spotify": {
-"id": "1xD4rzgPGOwrc7RHZywzKg",
-"url": "https://open.spotify.com/artist/1xD4rzgPGOwrc7RHZywzKg"
-},
-"youtube": {
-"publishedAt": "2026-04-29",
-"title": "Alison's Halo on Audiotree Live (Full Session)",
-"videoId": "FSxfdFEH3qo"
-}
-},
-"Typical Light": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=91289266/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://typicallight.bandcamp.com"
-},
-"spotify": {
-"id": "5to2GFG5gnXty4Impzh0ML",
-"url": "https://open.spotify.com/artist/5to2GFG5gnXty4Impzh0ML"
-},
-"youtube": {
-"publishedAt": "2020-05-25",
-"title": "Typical Light - Lonely Place (Official music video)",
-"videoId": "dzr9Wvdcaxg"
-}
-},
-"Tannhaüser Dream": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1429208733/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://tannhauserdream.bandcamp.com"
-},
-"spotify": {
-"id": "1uJYOl0XKyN5TWoUQGB7oK",
-"url": "https://open.spotify.com/artist/1uJYOl0XKyN5TWoUQGB7oK"
-}
-}
-},
-"lat": 48.8514,
-"lon": 2.3706,
-"is_music": true,
-"stale_since": null,
-"id": "ca723572f61f",
-"first_seen": "2026-09-08"
-},
-{
-"title": "Ramona Horvath invite Lisa Cat-Berro, Femmages au 38Riv Jazz Club JSS26",
-"date": "2026-10-12",
-"venue": "38Riv Jazz Club",
-"venue_slug": "38riv-jazz-club",
-"source": "opendata",
-"time": "19:30",
-"url": "https://www.paris.fr/evenements/ramona-horvath-invite-lisa-cat-berro-femmages-au-38riv-jazz-club-jss26-117109",
-"ticket_url": "https://38riv.com/concerts/ramona-horvath-invite-lisa-cat-berro-1",
-"price": "Tarif en ligne : 24€ à 27€ Tarif sur place : 27€ à 30€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz"
-],
-"genre_source": "llm",
-"subgenres": [
-"contemporary jazz"
-],
-"description": "Jazz contemporain — Ramona Horvath et Lisa Cat-Berro s'unissent pour célébrer les grandes compositrices du jazz, rendant hommage à leur héritage tout en apportant une touche d'originalité.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/07/28/huge-d4cab832e6ece7c46855d459867cd8a9.jpg",
-"address": "38, rue de Rivoli, 75004, Paris",
-"area": "4e",
-"headliner": "Ramona Horvath",
-"support": [
-"Lisa Cat-Berro",
-"Femmages"
-],
-"players": {
-"Ramona Horvath": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2651046335/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://ramonahorvath.bandcamp.com"
-},
-"spotify": {
-"id": "18UgM4iIg1BFrhLnVNBnhR",
-"url": "https://open.spotify.com/artist/18UgM4iIg1BFrhLnVNBnhR"
-},
-"youtube": {
-"publishedAt": "2018-06-09",
-"title": "Ramona Horvath & friends - Live in Bucarest",
-"videoId": "NWx7V-ue7tY"
-}
-},
-"Lisa Cat-Berro": {
-"spotify": {
-"id": "6iaBypg8M8oxSEOWOvrrmm",
-"url": "https://open.spotify.com/artist/6iaBypg8M8oxSEOWOvrrmm"
-},
-"youtube": {
-"publishedAt": "2023-02-09",
-"title": "Concert Lisa Cat Berro",
-"videoId": "po-loSsbI4Q"
-}
-},
-"Femmages": {
-"youtube": {
-"publishedAt": "2024-03-10",
-"title": "Live excerpt, March 9 2024 - Femmages - Amy Beach, “Ballade”",
-"videoId": "AtuPqRDaT3E"
-}
-}
-},
-"lat": 48.856427003097,
-"lon": 2.3564829781449,
-"is_music": true,
-"stale_since": null,
-"id": "4129d82b0a27",
-"first_seen": "baseline"
-},
-{
-"title": "Amaro Freitas Trio",
-"date": "2026-10-12",
-"venue": "Duc des Lombards",
-"venue_slug": "duc-des-lombards",
-"source": "llm",
-"time": "19:30",
-"url": "https://www.ducdeslombards.com/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz",
-"world"
-],
-"genre_source": "llm",
-"subgenres": [
-"brazilian jazz"
-],
-"description": "Amaro Freitas",
-"summary": null,
-"image": null,
-"address": "42 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "Amaro Freitas Trio",
-"support": [],
-"players": {
-"Amaro Freitas Trio": {
-"youtube": {
-"publishedAt": "2025-10-29",
-"title": "Amaro Freitas Trio | Live at Jazz in Marciac Festival",
-"videoId": "MlCWesWzKVI"
-}
-}
-},
-"lat": 48.8592,
-"lon": 2.3479,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "03c38b643fe4",
-"first_seen": "2026-09-16"
-},
-{
-"title": "CHARLES DOLLÉ",
-"date": "2026-10-12",
-"venue": "La Boule Noire",
-"venue_slug": "la-boule-noire",
-"source": "boulenoire",
-"time": "19:30",
-"url": "https://laboule-noire.fr/charles-dolle/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"chanson",
-"pop"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": null,
-"summary": "Charles Dollé, compositeur, chanteur et producteur signé chez Tricatel, présente sur scène l'univers orageux et sensible de son premier album « Panthère à la fenêtre », entouré de musiciens.",
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/04/CD-Boule-Noire_1800x1800-1024x1024.jpg",
-"address": "120 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "CHARLES DOLLÉ",
-"support": [],
-"players": {
-"CHARLES DOLLÉ": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4204627469/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://charlesdolle.bandcamp.com"
-},
-"spotify": {
-"id": "6wWOOejQdKDPBOqeI8CO50",
-"url": "https://open.spotify.com/artist/6wWOOejQdKDPBOqeI8CO50"
-},
-"youtube": {
-"publishedAt": "2026-06-09",
-"title": "Charles Dollé - Promesses (Visuel officiel)",
-"videoId": "Hj4bocQ-tS4"
-}
-}
-},
-"lat": 48.8823,
-"lon": 2.34,
-"is_music": true,
-"stale_since": null,
-"id": "538f9d024228",
-"first_seen": "baseline"
-},
-{
-"title": "MISCHA",
-"date": "2026-10-12",
-"venue": "La Boule Noire",
-"venue_slug": "la-boule-noire",
-"source": "boulenoire",
-"time": "19:30",
-"url": "https://laboule-noire.fr/mischa/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"pop"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": null,
-"summary": "Mischa, jeune rappeur de 19 ans originaire de Noisy-le-Sec, révélé par les open-mics et la nouvelle saison de Nouvelle École, présente son rap technique et engagé composé avec son cousin Walle. Clearwaters complète l'affiche.",
-"image": "https://laboule-noire.fr/wp-content/uploads/2026/09/1800x1800px-1-1024x1024.jpg",
-"address": "120 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "MISCHA",
-"support": [],
-"players": {
-"MISCHA": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1727668239/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://mischaofficialmusic.bandcamp.com"
-},
-"spotify": {
-"id": "4jQJP7r2EqusqHqWaJ7KnA",
-"url": "https://open.spotify.com/artist/4jQJP7r2EqusqHqWaJ7KnA"
-},
-"youtube": {
-"publishedAt": "2026-06-05",
-"title": "Mischa 葉巧琳 - Live from YouTube Music Nights (Full Performance)",
-"videoId": "D7HcAulzeII"
-}
-}
-},
-"lat": 48.8823,
-"lon": 2.34,
-"is_music": true,
-"stale_since": null,
-"id": "1118cd55786c",
-"first_seen": "2026-09-21"
-},
-{
-"title": "FELHUR & ANDRO",
-"date": "2026-10-12",
-"venue": "La Maroquinerie",
-"venue_slug": "la-maroquinerie",
-"source": "maroquinerie",
-"time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2317/felhur-andro-complet/?of=0",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": true,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"hip-hop",
-"soul-rnb"
-],
-"genre_source": "llm",
-"subgenres": [
-"rap français"
-],
-"description": null,
-"summary": "Le duo Felhur & Andro présente un nouveau show, entre rap doux et acide nourri de chanson, de rock et de techno, Felhur écrivant les textes et Andro signant les compositions. Après l'album-roman Liaisons & Ruptures, ils défendent l'EP Pousser sur des cendres et son titre viral Bébou.",
-"image": "https://www.lamaroquinerie.fr/files/event_thumbnail_2317.png",
-"address": "23 rue Boyer, 75020 Paris",
-"area": "Ménilmontant",
-"headliner": "FELHUR & ANDRO",
-"support": [],
-"players": {},
-"lat": 48.8686,
-"lon": 2.3906,
-"is_music": true,
-"stale_since": null,
-"id": "8062e09c2ec9",
-"first_seen": "baseline"
-},
-{
-"title": "HOMMAGE À Freddie Hubbard avec Fabien Mary + jam",
-"date": "2026-10-12",
-"venue": "Sunset / Sunside",
-"venue_slug": "sunset-sunside",
-"source": "tribe",
-"time": "19:30",
-"url": "https://www.sunset-sunside.com/concert/hommage-a-freddie-hubbard-avec-fabien-mary-jam/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Entrée libre",
-"genres": [
-"jazz"
-],
-"genre_source": "llm",
-"subgenres": [
-"hard bop"
-],
-"description": "Concert à 19h30 / 21h30. Ouverture des portes 30mm avant. Pas de réservations Consommation obligatoire La Jam session est le rendez-vous indispensable pour un club de jazz digne de ce nom ! C’est la rencontre entre musiciens réputés et jeunes talents. Ce sont des moments uniques où se fabriquent les groupes et les artistes de demain. C’est l’interaction sans filet et sans frontière entre le public",
-"summary": null,
-"image": "https://www.sunset-sunside.com/app/uploads/2026/08/Freddie_Hubbard_1976.webp",
-"address": "60 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "HOMMAGE À Freddie Hubbard",
-"support": [
-"Fabien Mary"
-],
-"players": {
-"Fabien Mary": {
-"spotify": {
-"id": "6yoY8kJ4MZOTpzpGOPm9DP",
-"url": "https://open.spotify.com/artist/6yoY8kJ4MZOTpzpGOPm9DP"
-},
-"youtube": {
-"publishedAt": "2018-08-07",
-"title": "Fabien MARY Octet:  \"Autumn Melodie\" -Live-  @ JAZZ A FOIX 2018",
-"videoId": "NV7AK97jS9Q"
-}
-}
-},
-"lat": 48.8595,
-"lon": 2.3474,
-"is_music": true,
-"stale_since": null,
-"id": "5d43f4f0b8cf",
-"first_seen": "baseline"
-},
-{
-"title": "PTITE SOEUR",
-"date": "2026-10-12",
-"venue": "La Cigale",
-"venue_slug": "la-cigale",
-"source": "cigale",
-"time": "19:40",
-"url": "https://lacigale.fr/evenements/ptite-soeur-2/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Rap",
-"genres": [
-"hip-hop"
-],
-"genre_source": "site",
-"subgenres": [
-"rap français"
-],
-"description": null,
-"summary": "Concert de rap de Ptite Soeur, sur une nouvelle date à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/photo-brute-scaled-e1785254493245-600x369.jpg",
-"address": "120 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "PTITE SOEUR",
-"support": [],
-"players": {
-"PTITE SOEUR": {
-"spotify": {
-"id": "0lbRlAslcfb1mRFpSlo6dC",
-"url": "https://open.spotify.com/artist/0lbRlAslcfb1mRFpSlo6dC"
-},
-"youtube": {
-"publishedAt": "2023-12-10",
-"title": "Ptite soeur - La Gaîté Lyrique - (Concert Complet) - Intro #5",
-"videoId": "hiIiVpZZACY"
-}
-}
-},
-"lat": 48.8823,
-"lon": 2.34,
-"is_music": true,
-"stale_since": null,
-"id": "31302b9a6409",
-"first_seen": "baseline"
-},
-{
-"title": "JAMES BLAKE",
-"date": "2026-10-12",
-"venue": "Le Grand Rex",
-"venue_slug": "le-grand-rex",
-"source": "llm",
-"time": "20:00",
-"url": "https://www.legrandrex.com/evenement/",
-"ticket_url": null,
-"price": "De 52,53€ à 69,53€",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"soul-rnb",
-"pop"
-],
-"genre_source": "llm",
-"subgenres": [
-"alt-r&b",
-"post-dubstep"
-],
-"description": "James Blake, Monica Martin",
-"summary": null,
-"image": null,
-"address": "1 boulevard Poissonnière, 75002 Paris",
-"area": "Grands Boulevards",
-"headliner": "JAMES BLAKE",
-"support": [],
-"players": {
-"JAMES BLAKE": {
-"spotify": {
-"id": "53KwLdlmrlCelAZMaLVZqU",
-"url": "https://open.spotify.com/artist/53KwLdlmrlCelAZMaLVZqU"
-},
-"youtube": {
-"publishedAt": "2024-07-13",
-"title": "James Blake - Live at Pohoda Festival 2024 (FULL SHOW)",
-"videoId": "2weP7p0T7iE"
-}
-}
-},
-"lat": 48.8707,
-"lon": 2.3477,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "60182a00a394",
-"first_seen": "baseline"
-},
-{
-"title": "Alexandre Tharaud",
-"date": "2026-10-12",
-"venue": "Philharmonie de Paris",
-"venue_slug": "philharmonie",
-"source": "llm",
-"time": "20:00",
-"url": "https://www.philharmoniedeparis.fr/fr/agenda",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"classical"
-],
-"genre_source": "llm",
-"subgenres": [
-"piano recital"
-],
-"description": "Alexandre Tharaud",
-"summary": null,
-"image": null,
-"address": "221 avenue Jean-Jaurès, 75019 Paris",
-"area": "Villette",
-"headliner": "Alexandre Tharaud",
-"support": [],
-"players": {
-"Alexandre Tharaud": {
-"spotify": {
-"id": "5HG9Eg7Ik8ZuNtMyGYTxLG",
-"url": "https://open.spotify.com/artist/5HG9Eg7Ik8ZuNtMyGYTxLG"
-},
-"youtube": {
-"publishedAt": "2022-12-21",
-"title": "Alexandre Tharaud plays Mozart: Piano Concerto No. 9 in E-flat major, K. 271 (Jeunehomme)",
-"videoId": "ozvWLv_lLXA"
-}
-}
-},
-"lat": 48.8892,
-"lon": 2.3939,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "f7dacd4d6f61",
-"first_seen": "baseline"
-},
-{
-"title": "Jody Sternberg — Sea Of Love",
-"date": "2026-10-12",
-"venue": "Eleven Village",
-"venue_slug": "eleven-village",
-"source": "opendata",
-"time": "20:30",
-"url": "https://www.paris.fr/evenements/jody-sternberg-sea-of-love-125723",
-"ticket_url": "https://elevenvillage.fr/event/?id=jody-steinberg-sea-of-love",
-"price": "25 €",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [],
-"genre_source": null,
-"subgenres": [],
-"description": "Jody Sternberg nous présente Sea of Love, son deuxième album, totalement personnel où viennent se cristalliser comme par miracle, tous les acquis de son parcours riche, libre et atypique",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/10/09/huge-292aef263d177500aea7c6002c809aa4.png",
-"address": "10 rue de la Vacquerie, 7011, Paris",
-"area": null,
-"headliner": "Jody Sternberg",
-"support": [
-"Sea Of Love"
-],
-"players": {
-"Jody Sternberg": {
-"spotify": {
-"id": "5e54vDDW4xAxgz6Z0HfOdv",
-"url": "https://open.spotify.com/artist/5e54vDDW4xAxgz6Z0HfOdv"
-},
-"youtube": {
-"publishedAt": "2025-12-13",
-"title": "Dream - Jean-Baptiste Loussier & Jody Sternberg - Live@@Sunset - Paris - 11/12/2025",
-"videoId": "GKqLrJKfOuA"
-}
-},
-"Sea Of Love": {
-"youtube": {
-"publishedAt": "2014-04-02",
-"title": "The National - \"Sea Of Love\" | Live at Sydney Opera House",
-"videoId": "mx6icChtSPA"
-}
-}
-},
-"lat": 48.8580960076573,
-"lon": 2.38516702427771,
-"is_music": true,
-"stale_since": null,
-"id": "535e8b859e4b",
-"first_seen": "baseline"
-},
-{
-"title": "#FestivalJazzSurSeine2026 - La Jam Du Lundi de FRANÇOIS CONSTANTIN",
-"date": "2026-10-12",
-"venue": "Le Baiser Salé",
-"venue_slug": "le-baiser-sale",
-"source": "llm",
-"time": "21:00",
-"url": "https://www.lebaisersale.com/fr/agenda",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": "François Constantin, Anthony Jambon, Noé Berne, Tilo Bertholo",
-"summary": null,
-"image": null,
-"address": "58 rue des Lombards, 75001 Paris",
-"area": "Châtelet",
-"headliner": "#FestivalJazzSurSeine2026",
-"support": [
-"La Jam Du Lundi de FRANÇOIS CONSTANTIN"
-],
-"players": {},
-"lat": 48.8594,
-"lon": 2.3475,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "cee82dc86cb3",
-"first_seen": "2026-10-03"
-},
-{
-"title": "#LaJamDuLundi de François Constantin",
-"date": "2026-10-12",
-"venue": "Le Baiser Salé",
-"venue_slug": "le-baiser-sale",
-"source": "opendata",
-"time": "21:00",
-"url": "https://www.paris.fr/evenements/lajamdulundi-de-francois-constantin-117521",
-"ticket_url": null,
-"price": "gratuit sous condition",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "llm",
-"subgenres": [
-"latin jazz"
-],
-"description": "Qui dit lundi dit forcément JAM Du Lundi !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/08/11/huge-04066c7460ce78f6804453ca6e739bb3.jpeg",
-"address": "58 Rue des Lombards, 75001, Paris",
-"area": "Châtelet",
-"headliner": "François Constantin",
-"support": [],
-"players": {
-"François Constantin": {
-"spotify": {
-"id": "2Lq4dbq5O2kqH6pHMhtIyc",
-"url": "https://open.spotify.com/artist/2Lq4dbq5O2kqH6pHMhtIyc"
-},
-"youtube": {
-"publishedAt": "2025-07-04",
-"title": "Le saxophoniste Benjamin Petit avec François Constantin au Baiser salé, Paris - 30/06/2025 [concert]",
-"videoId": "bsf1rfsGgHU"
-}
-}
-},
-"lat": 48.8598354,
-"lon": 2.3478728,
-"is_music": true,
-"stale_since": null,
-"id": "e47595c44dba",
-"first_seen": "baseline"
-},
-{
-"title": "Les lundis jazz manouche du Piano Vache",
-"date": "2026-10-12",
-"venue": "Le Piano Vache",
-"venue_slug": "le-piano-vache",
-"source": "opendata",
-"time": "21:00",
-"url": "https://www.paris.fr/evenements/les-lundis-jazz-manouche-du-piano-vache-125554",
-"ticket_url": null,
-"price": "gratuit",
-"free": true,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz",
-"world"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": "Concert de jazz manouche en entrée libre, chaque lundi à partir de 21h, dans un bar mythique du Quartier latin.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/10/06/huge-7d0e237a08c3c473509ce6e7612593ac.jpg",
-"address": "8 rue Laplace, 75005, Paris",
-"area": "5e",
-"headliner": "Les lundis jazz manouche du Piano Vache",
-"support": [],
-"players": {},
-"lat": 48.8472869986888,
-"lon": 2.34772196148882,
-"is_music": true,
-"stale_since": null,
-"id": "145409560f09",
-"first_seen": "baseline"
-},
-{
-"title": "Mezo & Liber",
-"date": "2026-10-12",
-"venue": "La Bellevilloise",
-"venue_slug": "la-bellevilloise",
-"source": "llm",
-"time": null,
-"url": "https://www.labellevilloise.com/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"hip-hop"
-],
-"genre_source": "llm",
-"subgenres": [
-"rap polonais"
-],
-"description": "Mezo, Liber",
-"summary": null,
-"image": null,
-"address": "19-21 rue Boyer, 75020 Paris",
-"area": "Ménilmontant",
-"headliner": "Mezo & Liber",
-"support": [],
-"players": {},
-"lat": 48.8688,
-"lon": 2.3905,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "2bbeab890cd0",
-"first_seen": "2026-09-29"
-},
-{
-"title": "Cardio Rave",
-"date": "2026-10-12",
-"venue": "La Bellevilloise",
-"venue_slug": "la-bellevilloise",
-"source": "llm",
-"time": null,
-"url": "https://www.labellevilloise.com/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro"
-],
-"genre_source": "rules",
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": null,
-"address": "19-21 rue Boyer, 75020 Paris",
-"area": "Ménilmontant",
-"headliner": "Cardio Rave",
-"support": [],
-"players": {},
-"lat": 48.8688,
-"lon": 2.3905,
-"is_music": false,
-"stale_since": "2026-10-07",
-"id": "0055e1d54f53",
-"first_seen": "2026-10-03"
-},
-{
-"title": "DJ KRUSH + DJ Low Cut",
-"date": "2026-10-12",
-"venue": "La Machine du Moulin Rouge",
-"venue_slug": "la-machine",
-"source": "llm",
-"time": null,
-"url": "https://www.lamachinedumoulinrouge.com/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"hip-hop",
-"electro"
-],
-"genre_source": "llm",
-"subgenres": [
-"turntablism",
-"trip-hop"
-],
-"description": "DJ Krush, DJ Low Cut",
-"summary": null,
-"image": null,
-"address": "90 boulevard de Clichy, 75018 Paris",
-"area": "Pigalle",
-"headliner": "DJ KRUSH",
-"support": [
-"DJ Low Cut"
-],
-"players": {
-"DJ KRUSH": {
-"bandcamp": {
-"url": "https://dj-krush.bandcamp.com"
-},
-"spotify": {
-"id": "00G1NTDAoU7rBpjG4KoYAM",
-"url": "https://open.spotify.com/artist/00G1NTDAoU7rBpjG4KoYAM"
-},
-"youtube": {
-"publishedAt": "2021-03-15",
-"title": "DJ KRUSH at 大中寺 Daichuji / MUSO Culture Festival 2021",
-"videoId": "l4vkouAwuec"
-}
-},
-"DJ Low Cut": {
-"spotify": {
-"id": "1akzQX9lyUCEYZ2srHuFKb",
-"url": "https://open.spotify.com/artist/1akzQX9lyUCEYZ2srHuFKb"
-},
-"youtube": {
-"publishedAt": "2020-11-27",
-"title": "Dj Low Cut Live - C19 Disc Over Hit #3 Festival x Alignement Désastreux - 05/22/2020",
-"videoId": "12IvL-X29Vc"
-}
-}
-},
-"lat": 48.8842,
-"lon": 2.3323,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "fbcd6776a12d",
-"first_seen": "2026-09-07"
-},
-{
-"title": "JACK SAVORETTI",
-"date": "2026-10-12",
-"venue": "Le Trianon",
-"venue_slug": "le-trianon",
-"source": "trianon",
-"time": null,
-"url": "https://www.letrianon.fr/fr/programmation/jack-savoretti/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"pop",
-"folk"
-],
-"genre_source": "llm",
-"subgenres": [
-"singer-songwriter"
-],
-"description": null,
-"summary": "L'auteur-compositeur-interprète italo-britannique Jack Savoretti, révélé par les albums « Written in Scars » et « Singing to Strangers », est en tournée avec un concert entre groove subtil et arrangements sophistiqués.",
-"image": "https://www.letrianon.fr/wp-content/uploads/jack-savoretti-trianon.jpg",
-"address": "80 boulevard de Rochechouart, 75018 Paris",
-"area": "Pigalle",
-"headliner": "JACK SAVORETTI",
-"support": [],
-"players": {
-"JACK SAVORETTI": {
-"spotify": {
-"id": "7nC05zmJukRGYObQeRgg3x",
-"url": "https://open.spotify.com/artist/7nC05zmJukRGYObQeRgg3x"
-},
-"youtube": {
-"publishedAt": "2019-11-20",
-"title": "Jack Savoretti live MUZOFEST 2019",
-"videoId": "dKEJSZDr4WU"
-}
-}
-},
-"lat": 48.8826,
-"lon": 2.3436,
-"is_music": true,
-"stale_since": null,
-"id": "9be528adbf3f",
-"first_seen": "baseline"
-},
-{
-"title": "LowDown Brass Band",
-"date": "2026-10-12",
-"venue": "New Morning",
-"venue_slug": "new-morning",
-"source": "newmorning",
-"time": null,
-"url": "https://www.newmorning.com/20261012-7763-lowdown-brass-band.html",
-"ticket_url": null,
-"price": "0.00 €",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"jazz",
-"hip-hop",
-"reggae"
-],
-"genre_source": "llm",
-"subgenres": [
-"brass band"
-],
-"description": "LowDown Brass Band : Incarnant la culture musicale vibrante de Chicago, LowDown Brass Band est un ensemble de cuivres unique en son genre, mêlant l'énergie urbaine au hip-hop engagé, au jazz, au reggae et à la soul. Habitué des tournées intensives, le groupe s'est produit sur des scènes aussi emblématiques qu'Electric Forest, Bonnaroo, Summer Camp Music Festival, le Salmonfest, le Festival Interna",
-"summary": null,
-"image": "http://www.newmorning.com/photos/evenements/formations/800/8471.jpg",
-"address": "7-9 rue des Petites Écuries, 75010 Paris",
-"area": "Château d'Eau",
-"headliner": "LowDown Brass Band",
-"support": [],
-"players": {
-"LowDown Brass Band": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1827534865/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://lowdownbrassband.bandcamp.com"
-},
-"spotify": {
-"id": "0DccOPSJ5LcC4HDiDZl17u",
-"url": "https://open.spotify.com/artist/0DccOPSJ5LcC4HDiDZl17u"
-},
-"youtube": {
-"publishedAt": "2024-09-26",
-"title": "LowDown Brass Band | Live on KUVO!",
-"videoId": "2d2hI32dVuw"
-}
-}
-},
-"lat": 48.8731,
-"lon": 2.3533,
-"is_music": true,
-"stale_since": "2026-10-06",
-"id": "4be7f00f128a",
-"first_seen": "baseline"
-},
-{
-"title": "ONSLAUGHT",
-"date": "2026-10-12",
-"venue": "Petit Bain",
-"venue_slug": "petit-bain",
-"source": "petitbain",
-"time": null,
-"url": "https://petitbain.org/evenement/onslaught/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "concerts",
-"genres": [
-"metal"
-],
-"genre_source": "llm",
-"subgenres": [
-"thrash metal"
-],
-"description": null,
-"summary": "Le groupe britannique Onslaught, pionnier du thrash metal fondé en 1982, est en tournée européenne « Force From Hell », avec The Prophecy 23 et Toranaga UK en soutien.",
-"image": "https://petitbain.org/wp-content/uploads/2025/11/onslaught-paris-web-1-500x500.jpg",
-"address": "7 port de la Gare, 75013 Paris",
-"area": "13e",
-"headliner": "ONSLAUGHT",
-"support": [],
-"players": {
-"ONSLAUGHT": {
-"spotify": {
-"id": "71lhIVHJ24x9hEcwFSWuOf",
-"url": "https://open.spotify.com/artist/71lhIVHJ24x9hEcwFSWuOf"
-},
-"youtube": {
-"publishedAt": "2026-03-23",
-"title": "Let There Be Death LIVE – Onslaught Proves Why They're Thrash Royalty",
-"videoId": "PQvk8kMPDfI"
-}
-}
-},
-"lat": 48.8326,
-"lon": 2.3773,
-"is_music": true,
-"stale_since": null,
-"id": "8de5865d057f",
-"first_seen": "baseline"
-},
-{
-"title": "Jhariah + SAINTE VICTOIRE",
-"date": "2026-10-12",
-"venue": "PopUp!",
-"venue_slug": "popup",
-"source": "llm",
-"time": null,
-"url": "https://www.popup.paris/agenda/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"rock",
-"pop"
-],
-"genre_source": "llm",
-"subgenres": [
-"art punk"
-],
-"description": "Jhariah, Sainte Victoire",
-"summary": null,
-"image": null,
-"address": "14 rue Abel, 75012 Paris",
-"area": "12e",
-"headliner": "Jhariah",
-"support": [
-"SAINTE VICTOIRE"
-],
-"players": {
-"Jhariah": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=66581919/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://jhariah.bandcamp.com"
-},
-"spotify": {
-"id": "5iMYu8Sj8dZEDsWJxSFwPP",
-"url": "https://open.spotify.com/artist/5iMYu8Sj8dZEDsWJxSFwPP"
-},
-"youtube": {
-"publishedAt": "2026-05-28",
-"title": "Jhariah – RISK, RISK, RISK! (LIVE IN BROOKLYN)",
-"videoId": "lj6WpDlQ4Bk"
-}
-},
-"SAINTE VICTOIRE": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2236081725/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://saintevictoire.bandcamp.com"
-},
-"spotify": {
-"id": "5CMBaPlxo9IOBSDRBaHPw0",
-"url": "https://open.spotify.com/artist/5CMBaPlxo9IOBSDRBaHPw0"
-},
-"youtube": {
-"publishedAt": "2025-04-27",
-"title": "Sainte Victoire x Fresh ∣ Live Me If You Can",
-"videoId": "aXBiZMyrJZM"
-}
-}
-},
-"lat": 48.8471,
-"lon": 2.3773,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "c16f420ffa8f",
-"first_seen": "2026-09-18"
-},
-{
-"title": "Tyla",
-"date": "2026-10-12",
-"venue": "Zénith Paris",
-"venue_slug": "zenith-paris",
-"source": "llm",
-"time": null,
-"url": "https://www.zenith-paris.com/",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"pop",
-"soul-rnb"
-],
-"genre_source": "llm",
-"subgenres": [
-"amapiano"
-],
-"description": "Tyla",
-"summary": null,
-"image": null,
-"address": "211 avenue Jean-Jaurès, 75019 Paris",
-"area": "Villette",
-"headliner": "Tyla",
-"support": [],
-"players": {
-"Tyla": {
-"bandcamp": {
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3131137240/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
-"url": "https://tylatyla.bandcamp.com"
-},
-"spotify": {
-"id": "3SozjO3Lat463tQICI9LcE",
-"url": "https://open.spotify.com/artist/3SozjO3Lat463tQICI9LcE"
-},
-"youtube": {
-"publishedAt": "2024-10-18",
-"title": "Tyla performing PUSH 2 START & Water live from the Victoria’s Secret Fashion Show 2024",
-"videoId": "DjvkMIFlOwA"
-}
-}
-},
-"lat": 48.8938,
-"lon": 2.3931,
-"is_music": true,
-"stale_since": "2026-10-07",
-"id": "da598c325046",
-"first_seen": "baseline"
-},
 {
 "title": "MASTERCLASSES DE MUSIQUE CARNATIQUE - Inde du Sud - Suryaprakash Classical Trio",
 "date": "2026-10-13",
@@ -3118,8 +1824,8 @@
 {
 "title": "Word with Women - Les femmes s'arrêtent le 13 octobre",
 "date": "2026-10-13",
-"venue": "Word with Women - Les femmes s'arrêtent",
-"venue_slug": "word-with-women-les-femmes-s-arretent",
+"venue": "La Pointe Lafayette",
+"venue_slug": "la-pointe-lafayette",
 "source": "opendata",
 "time": "11:30",
 "url": "https://www.paris.fr/evenements/mardi-13-octobre-les-femmes-s-arretent-125211",
@@ -3129,21 +1835,24 @@
 "sold_out": false,
 "cancelled": false,
 "raw_genre": "Conférence, Solidarité",
-"genres": [],
-"genre_source": null,
+"genres": [
+"rock",
+"indie"
+],
+"genre_source": "venue",
 "subgenres": [],
-"description": "Une grande mobilisation pour faire avancer la mixité femmes-hommes.",
+"description": "Une grande mobilisation pour faire avancer la mixité femmes-hommes, place de la Bataille de Stalingrad.",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/09/30/huge-6e505f2f2bc6d38a0a09ff2812d4fef8.png",
-"address": "Place de la Bastille, 75011, Paris",
-"area": "11e",
+"address": "Place de la Bataille de Stalingrad, 75019, Paris",
+"area": "Jaurès",
 "headliner": "Word with Women",
 "support": [
 "Les femmes s'arrêtent le 13 octobre"
 ],
 "players": {},
-"lat": 48.8533808071006,
-"lon": 2.36976041954856,
+"lat": 48.8831861879156,
+"lon": 2.36950645923004,
 "is_music": false,
 "stale_since": null,
 "id": "c1fc786c0ccf",
@@ -3646,7 +2355,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2174/il-est-vilaine-complet/?of=1",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2174/il-est-vilaine-complet/?of=0",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -3835,7 +2544,7 @@
 ],
 "description": null,
 "summary": "Noor, lauréate du Grand Prix des Inouïs du Printemps de Bourges, monte sur la scène de La Cigale après des concerts complets à la Boule Noire et à la Maroquinerie. Goodbye Karelle assure la première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/10/noor-cigale-1080x1350-1-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/10/noor-cigale-1080x1350-1-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOOR",
@@ -5658,7 +4367,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2125/les-negresses-vertes-complet/?of=2",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2125/les-negresses-vertes-complet/?of=1",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -8726,7 +7435,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2367/les-negresses-vertes-complet/?of=3",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2367/les-negresses-vertes-complet/?of=2",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -8908,45 +7617,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "Mune Concert",
-"date": "2026-10-15",
-"venue": "La Dame de Canton",
-"venue_slug": "la-dame-de-canton",
-"source": "opendata",
-"time": "20:00",
-"url": "https://www.paris.fr/evenements/no-monark-sans-roi-release-party-117701",
-"ticket_url": "https://shotgun.live/fr/events/mune-concert-paris",
-"price": "De 10 à 15 euros. 🎟️ Prévente : 12 euros (+ frais) 🎟️ Sur pl",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"pop",
-"folk",
-"chanson"
-],
-"genre_source": "llm",
-"subgenres": [
-"dream pop",
-"singer-songwriter"
-],
-"description": "MUNE compose depuis sa tiny house nichée dans les dunes du Cotentin. Ici, pas de studio aux murs capitonnés : juste le vent, l'océan et une écriture qui s'abreuve aux images encore humides de rêve.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/08/17/huge-0d0733e1a78fd07db9c795a716af1861.jpeg",
-"address": "8, port de la Gare, 75013, Paris",
-"area": "13e",
-"headliner": "Mune Concert",
-"support": [],
-"players": {},
-"lat": 48.8337829983019,
-"lon": 2.37856904155507,
-"is_music": true,
-"stale_since": null,
-"id": "b1e9a934ce50",
-"first_seen": "baseline"
-},
-{
 "title": "JEUDI 15/10 - MUNE CONCERT",
 "date": "2026-10-15",
 "venue": "La Dame de Canton",
@@ -8992,6 +7662,45 @@
 "stale_since": null,
 "id": "b3f2054e7810",
 "first_seen": "2026-10-03"
+},
+{
+"title": "Mune Concert",
+"date": "2026-10-15",
+"venue": "La Dame de Canton",
+"venue_slug": "la-dame-de-canton",
+"source": "opendata",
+"time": "20:00",
+"url": "https://www.paris.fr/evenements/no-monark-sans-roi-release-party-117701",
+"ticket_url": "https://shotgun.live/fr/events/mune-concert-paris",
+"price": "De 10 à 15 euros. 🎟️ Prévente : 12 euros (+ frais) 🎟️ Sur pl",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"pop",
+"folk",
+"chanson"
+],
+"genre_source": "llm",
+"subgenres": [
+"dream pop",
+"singer-songwriter"
+],
+"description": "MUNE compose depuis sa tiny house nichée dans les dunes du Cotentin. Ici, pas de studio aux murs capitonnés : juste le vent, l'océan et une écriture qui s'abreuve aux images encore humides de rêve.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/08/17/huge-0d0733e1a78fd07db9c795a716af1861.jpeg",
+"address": "8, port de la Gare, 75013, Paris",
+"area": "13e",
+"headliner": "Mune Concert",
+"support": [],
+"players": {},
+"lat": 48.8337829983019,
+"lon": 2.37856904155507,
+"is_music": true,
+"stale_since": null,
+"id": "b1e9a934ce50",
+"first_seen": "baseline"
 },
 {
 "title": "TRIBUTE TO WAYNE SHORTER BY STEFAN FILEY – LES CONCERTS JAZZ MAGAZINE",
@@ -11417,7 +10126,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2102/the-narrator/?of=4",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2102/the-narrator/?of=3",
 "ticket_url": "https://bit.ly/TheNarrator_Paris26",
 "price": null,
 "free": false,
@@ -15085,7 +13794,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2227/the-buttshakers-xxl/?of=5",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2227/the-buttshakers-xxl/?of=4",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/the-buttshakers-billet/idmanif/653071/idtier/38743526",
 "price": null,
 "free": false,
@@ -15296,7 +14005,7 @@
 ],
 "description": null,
 "summary": "Says'z revient sur scène avec ses musiciens pour un show afro, dancehall et R&B, entre titres emblématiques (Doudou, Dis-Moi Oui, Esméralda), morceaux inédits et surprises.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/saysz-photo-1080x1350-@lena-mestric-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/saysz-photo-1080x1350-@lena-mestric-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SAYS’Z",
@@ -18282,7 +16991,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2217/ulrika-spacek/?of=6",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2217/ulrika-spacek/?of=5",
 "ticket_url": "https://link.dice.fm/W207af5024a4",
 "price": null,
 "free": false,
@@ -19436,7 +18145,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2267/my-new-band-believe/?of=7",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2267/my-new-band-believe/?of=6",
 "ticket_url": "https://link.dice.fm/c5512cc025e0",
 "price": null,
 "free": false,
@@ -20372,7 +19081,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2288/static-dress/?of=8",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2288/static-dress/?of=7",
 "ticket_url": "https://www.aegpresents.fr/event/static-dress/",
 "price": null,
 "free": false,
@@ -21909,7 +20618,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2253/zed-yun-pavarotti/?of=9",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2253/zed-yun-pavarotti/?of=8",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/zed-yun-pavarotti-billet/idmanif/656758",
 "price": null,
 "free": false,
@@ -23858,9 +22567,9 @@
 "url": "https://open.spotify.com/artist/6UBMFaCTZnL1Hr1nTOEblM"
 },
 "youtube": {
-"videoId": "98kNYSqKWVM",
+"publishedAt": "2025-08-27",
 "title": "Gordi - Full Performance (Live on KEXP)",
-"publishedAt": "2025-08-27"
+"videoId": "98kNYSqKWVM"
 }
 }
 },
@@ -23936,7 +22645,15 @@
 "area": "4e",
 "headliner": "Carte blanche à Gautier Garrigue",
 "support": [],
-"players": {},
+"players": {
+"Carte blanche à Gautier Garrigue": {
+"youtube": {
+"videoId": "ffgnXKaAre0",
+"title": "Carte blanche à Gautier Garrigue — Live au 38Riv Jazz Club Paris #Shorts",
+"publishedAt": "2026-09-05"
+}
+}
+},
 "lat": 48.856578,
 "lon": 2.351828,
 "is_music": true,
@@ -23983,9 +22700,9 @@
 "url": "https://open.spotify.com/artist/3A6FvoCrZq0imwy7CwSTUA"
 },
 "youtube": {
-"videoId": "k5WIUFsGB3c",
+"publishedAt": "2020-11-14",
 "title": "The Cranberries  - Dreams | Live at Woodstock (1994)",
-"publishedAt": "2020-11-14"
+"videoId": "k5WIUFsGB3c"
 }
 }
 },
@@ -24068,9 +22785,9 @@
 "url": "https://open.spotify.com/artist/794Zf2mnfM5a7GV9h4WpRq"
 },
 "youtube": {
-"videoId": "Q81GKeVTZg4",
+"publishedAt": "2026-04-16",
 "title": "chaos",
-"publishedAt": "2026-04-16"
+"videoId": "Q81GKeVTZg4"
 }
 },
 "Bellboy": {
@@ -24152,7 +22869,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2282/dov-e-liana-complet/?of=10",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2282/dov-e-liana-complet/?of=9",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -24317,9 +23034,9 @@
 "url": "https://noamadethis.bandcamp.com"
 },
 "youtube": {
-"videoId": "tuKhIdiiqqo",
+"publishedAt": "2026-07-15",
 "title": "メガネを外して(アニメ『正反対な君と僕』第1期OP) Live video - noa live tour 2026",
-"publishedAt": "2026-07-15"
+"videoId": "tuKhIdiiqqo"
 }
 }
 },
@@ -24354,7 +23071,7 @@
 ],
 "description": null,
 "summary": "Le rappeur français Dosseh, connu pour « Yuri », « Vidalo$$a » et les mixtapes « SummerCrack », présente son projet « Dieu donne, j'utilise » tout en revisitant sa carrière.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/la-cigale-650x650-@fifou-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/la-cigale-650x650-@fifou-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DOSSEH",
@@ -24457,6 +23174,11 @@
 "spotify": {
 "id": "4Md8IAcfkCRrHL6KF41GYk",
 "url": "https://open.spotify.com/artist/4Md8IAcfkCRrHL6KF41GYk"
+},
+"youtube": {
+"videoId": "BnFQzpHzAiI",
+"title": "Al Akhareen - Osloob & Naïssam Jalal - Live @ St denis",
+"publishedAt": "2016-07-16"
 }
 }
 },
@@ -24540,9 +23262,9 @@
 "players": {
 "BABYLON EN CINÉ-CONCERT": {
 "youtube": {
-"videoId": "VRGRDj97tQI",
+"publishedAt": "2025-12-12",
 "title": "Babylon en ciné-concert • Première mondiale à Paris",
-"publishedAt": "2025-12-12"
+"videoId": "VRGRDj97tQI"
 }
 }
 },
@@ -24628,7 +23350,15 @@
 "area": "5e",
 "headliner": "Hetty Kate Quartet",
 "support": [],
-"players": {},
+"players": {
+"Hetty Kate Quartet": {
+"youtube": {
+"videoId": "H1_mdtg8wYI",
+"title": "Hetty Kate Quartet - \"Moonlight In Vermont\"",
+"publishedAt": "2022-05-01"
+}
+}
+},
 "lat": 48.851503,
 "lon": 2.351091,
 "is_music": true,
@@ -24672,9 +23402,9 @@
 "url": "https://open.spotify.com/artist/3LtlJprzuq0Ii8p8YFZXai"
 },
 "youtube": {
-"videoId": "WPXSNi1IqKQ",
+"publishedAt": "2019-12-19",
 "title": "Peter Sandberg – Nocturnal (Live at Ocean Sound Recordings)",
-"publishedAt": "2019-12-19"
+"videoId": "WPXSNi1IqKQ"
 }
 }
 },
@@ -24886,6 +23616,13 @@
 "publishedAt": "2021-08-06",
 "title": "Wine & Vinyl Hour with Mayer Hawthorne (08/05/21)",
 "videoId": "viV26mLdSwY"
+}
+},
+"CESTGAEL": {
+"youtube": {
+"videoId": "e4pu0YgpFmw",
+"title": "MAISON JAZZ presented by CESTGAEL @TheLotRadio 10-22-2025",
+"publishedAt": "2025-10-23"
 }
 }
 },
@@ -25117,9 +23854,9 @@
 "url": "https://open.spotify.com/artist/2x0vL2sqxXMPJje6LPEnyA"
 },
 "youtube": {
-"videoId": "C7AiyUrMpSo",
+"publishedAt": "2026-09-25",
 "title": "JOCELYN MIENNIEL & LA FRENCH CONNECTION - Live @La Gare_Le Gore / Paris (2026)",
-"publishedAt": "2026-09-25"
+"videoId": "C7AiyUrMpSo"
 }
 },
 "Nightfall": {
@@ -25132,9 +23869,9 @@
 "url": "https://open.spotify.com/artist/4W0Vom1cl6o3UCq8tTfRHV"
 },
 "youtube": {
-"videoId": "B74eyUOUhz8",
+"publishedAt": "2020-03-20",
 "title": "Nightfall | Blind Guardian live | Rockpalast 2016",
-"publishedAt": "2020-03-20"
+"videoId": "B74eyUOUhz8"
 }
 }
 },
@@ -25211,9 +23948,9 @@
 "players": {
 "THEO JUICE": {
 "youtube": {
-"videoId": "MVnigJBXUY8",
+"publishedAt": "2024-05-13",
 "title": "THÉO JUICE EN LIVE",
-"publishedAt": "2024-05-13"
+"videoId": "MVnigJBXUY8"
 }
 }
 },
@@ -25493,6 +24230,11 @@
 "spotify": {
 "id": "0uxZ4hNhdzTQRRurOTg0wj",
 "url": "https://open.spotify.com/artist/0uxZ4hNhdzTQRRurOTg0wj"
+},
+"youtube": {
+"videoId": "qXVsawcJfd8",
+"title": "PACO DIATTA LIVE ABENE 2009 SENEGAL AFRICA",
+"publishedAt": "2009-07-25"
 }
 }
 },
@@ -25571,9 +24313,9 @@
 "players": {
 "Eternal Mana": {
 "youtube": {
-"videoId": "D5ksFchutnk",
+"publishedAt": "2019-04-24",
 "title": "Atelier Iris: Eternal Mana - Opening (HD)",
-"publishedAt": "2019-04-24"
+"videoId": "D5ksFchutnk"
 }
 },
 "Isengard": {
@@ -25582,9 +24324,9 @@
 "url": "https://open.spotify.com/artist/6ZdRyBejw8z3vD879gj1Dy"
 },
 "youtube": {
-"videoId": "rLdK1yLzRsY",
+"publishedAt": "2015-08-19",
 "title": "The Lord of the Rings: Live Symphony - #07 Isengard - Howard Shore",
-"publishedAt": "2015-08-19"
+"videoId": "rLdK1yLzRsY"
 }
 }
 },
@@ -25908,9 +24650,9 @@
 "url": "https://smr1.bandcamp.com"
 },
 "youtube": {
-"videoId": "6F_jf5RGhNc",
+"publishedAt": "2026-08-29",
 "title": "Weekend Live with SMR & SIMRAN",
-"publishedAt": "2026-08-29"
+"videoId": "6F_jf5RGhNc"
 }
 },
 "LPEE": {
@@ -25962,9 +24704,9 @@
 "url": "https://open.spotify.com/artist/49qUD3ZuoOWEXwLgDwa3Eg"
 },
 "youtube": {
-"videoId": "QS7qtILxQ5A",
+"publishedAt": "2026-09-30",
 "title": "Wallace Cleaver - xenonV3 (live 16:11)",
-"publishedAt": "2026-09-30"
+"videoId": "QS7qtILxQ5A"
 }
 }
 },
@@ -26124,9 +24866,9 @@
 "url": "https://open.spotify.com/artist/6EfilTfy7TJQI7KXitffIq"
 },
 "youtube": {
-"videoId": "HFbNoG5Rw5c",
+"publishedAt": "2022-12-01",
 "title": "Koudlam - See You All - Live at Le Trabendo, Paris 2022",
-"publishedAt": "2022-12-01"
+"videoId": "HFbNoG5Rw5c"
 }
 },
 "LA MVERTE": {
@@ -26139,9 +24881,9 @@
 "url": "https://open.spotify.com/artist/0HJtnM3UOqy0npaJY0r16h"
 },
 "youtube": {
-"videoId": "ry-L8-euxkI",
+"publishedAt": "2016-06-01",
 "title": "La Mverte - Concert sauvage - Les 3 éléphants 2016",
-"publishedAt": "2016-06-01"
+"videoId": "ry-L8-euxkI"
 }
 },
 "FRANKY GOGO": {
@@ -26154,9 +24896,9 @@
 "url": "https://open.spotify.com/artist/7x7lhPl1mt0hHP1JcW0jF7"
 },
 "youtube": {
-"videoId": "mtGtaxZbZ3E",
+"publishedAt": "2022-07-19",
 "title": "FRANKY GOGO LIVE IN PARIS AU CAFE DE LA DANSE LE 18 JUIN 2022",
-"publishedAt": "2022-07-19"
+"videoId": "mtGtaxZbZ3E"
 }
 }
 },
@@ -26208,12 +24950,22 @@
 "spotify": {
 "id": "0b1Wro257PDdjW7DisomAS",
 "url": "https://open.spotify.com/artist/0b1Wro257PDdjW7DisomAS"
+},
+"youtube": {
+"videoId": "8v_PWr98uuk",
+"title": "Healer - Kari Jobe (Official Live Concert)",
+"publishedAt": "2009-07-22"
 }
 },
 "Sloth Temple": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/track=3694600751/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://slothtemple.bandcamp.com"
+},
+"youtube": {
+"videoId": "o4UNcAuT_zU",
+"title": "The great old sloth - LIVE 2026",
+"publishedAt": "2026-04-23"
 }
 }
 },
@@ -26311,6 +25063,11 @@
 "spotify": {
 "id": "1KIYM7Cs5B09z3D7fXvs5I",
 "url": "https://open.spotify.com/artist/1KIYM7Cs5B09z3D7fXvs5I"
+},
+"youtube": {
+"videoId": "2qrQ68zSahQ",
+"title": "Magic Malik Orchestra \"Saoule\" (live officiel) | Archive INA",
+"publishedAt": "2015-06-09"
 }
 }
 },
@@ -26401,9 +25158,9 @@
 "url": "https://open.spotify.com/artist/1GWsnvoiuPEfBxKLkznKUu"
 },
 "youtube": {
-"videoId": "OOqniMGO5aM",
+"publishedAt": "2024-11-30",
 "title": "El León Pardo sexteto - Florero Alucinógeno / en vivo desde el Octavo Festival de La Tigra 2024",
-"publishedAt": "2024-11-30"
+"videoId": "OOqniMGO5aM"
 }
 },
 "INDUS": {
@@ -26414,6 +25171,11 @@
 "spotify": {
 "id": "0FggDmwZ2gXQqCASyQMCx9",
 "url": "https://open.spotify.com/artist/0FggDmwZ2gXQqCASyQMCx9"
+},
+"youtube": {
+"videoId": "Saa_cM9skaU",
+"title": "Indus - Alfa indi (Live at Locombia Festival,  Toulouse, France) ",
+"publishedAt": "2026-02-13"
 }
 }
 },
@@ -26463,6 +25225,11 @@
 "spotify": {
 "id": "6Ps1VYd6CPGYk96SYPQy08",
 "url": "https://open.spotify.com/artist/6Ps1VYd6CPGYk96SYPQy08"
+},
+"youtube": {
+"videoId": "OPI7g87P0mY",
+"title": "Dews Pegahorn (DE) I Hope You Dance LIVE Chelsea Vienna Waves 4.10.2025",
+"publishedAt": "2025-10-05"
 }
 }
 },
@@ -26514,9 +25281,9 @@
 "url": "https://open.spotify.com/artist/57MIstrTi3Sw9J9yJybN0E"
 },
 "youtube": {
-"videoId": "lacQKt5KyxU",
+"publishedAt": "2022-06-16",
 "title": "Makthaverskan live at Supersonic Paris 2022",
-"publishedAt": "2022-06-16"
+"videoId": "lacQKt5KyxU"
 }
 }
 },
@@ -26557,7 +25324,15 @@
 "support": [
 "Jazz from NY"
 ],
-"players": {},
+"players": {
+"Alexandra Ridout Quartet": {
+"youtube": {
+"videoId": "k5U-tZD9ojI",
+"title": "Alexandra Ridout Quartet - Jenever Live at the Jazz Gallery NYC",
+"publishedAt": "2026-08-04"
+}
+}
+},
 "lat": 48.856427003097,
 "lon": 2.3564829781449,
 "is_music": true,
@@ -26600,12 +25375,22 @@
 "spotify": {
 "id": "19GYu85T8PlAbWVKKSDWFF",
 "url": "https://open.spotify.com/artist/19GYu85T8PlAbWVKKSDWFF"
+},
+"youtube": {
+"videoId": "VuvNjT-XFmM",
+"title": "Shake - Kinji00 en concert au Festif",
+"publishedAt": "2026-08-01"
 }
 },
 "Domingo Cruz": {
 "spotify": {
 "id": "75mH0jrVeaGhIbrGMXmLqT",
 "url": "https://open.spotify.com/artist/75mH0jrVeaGhIbrGMXmLqT"
+},
+"youtube": {
+"videoId": "FITYi34nIEs",
+"title": "Domingo Cruz - CALL ON ME",
+"publishedAt": "2026-09-02"
 }
 }
 },
@@ -26650,9 +25435,9 @@
 "url": "https://open.spotify.com/artist/09w9cxzjdgXxzACb0N3C50"
 },
 "youtube": {
-"videoId": "NG3k04q-w7Q",
+"publishedAt": "2025-08-11",
 "title": "Arkayla - Doctor (Live At Nan's House)",
-"publishedAt": "2025-08-11"
+"videoId": "NG3k04q-w7Q"
 }
 }
 },
@@ -26704,7 +25489,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2328/dov-e-liana-complet/?of=11",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2328/dov-e-liana-complet/?of=10",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -26784,6 +25569,11 @@
 "spotify": {
 "id": "4FlG0V0jhLO4qGpayFOphj",
 "url": "https://open.spotify.com/artist/4FlG0V0jhLO4qGpayFOphj"
+},
+"youtube": {
+"videoId": "ohYyk9uvLd8",
+"title": "EST GEE (Live) New Orleans @ Republic Nola",
+"publishedAt": "2021-09-07"
 }
 }
 },
@@ -26849,6 +25639,11 @@
 "spotify": {
 "id": "19iNYCVHcMwJMS3NZqhZ59",
 "url": "https://open.spotify.com/artist/19iNYCVHcMwJMS3NZqhZ59"
+},
+"youtube": {
+"videoId": "6_YKb3VcPmU",
+"title": "2025-11-15 - Oh Hiroshima - In Silence We Yearn (Live @ Gloomaar Festival 2025)",
+"publishedAt": "2025-12-21"
 }
 },
 "Barrens": {
@@ -26859,6 +25654,11 @@
 "spotify": {
 "id": "00Gmz0du1HDnRUT33VM3yV",
 "url": "https://open.spotify.com/artist/00Gmz0du1HDnRUT33VM3yV"
+},
+"youtube": {
+"videoId": "jxwrOkq_6DM",
+"title": "BARRENS live @ Control Club, 24.03.2026, Bucharest, Romania",
+"publishedAt": "2026-03-24"
 }
 }
 },
@@ -26903,6 +25703,11 @@
 "spotify": {
 "id": "0IGkNweSpYQBOEK2Zxv9DP",
 "url": "https://open.spotify.com/artist/0IGkNweSpYQBOEK2Zxv9DP"
+},
+"youtube": {
+"videoId": "F2yWeHzxamU",
+"title": "Katerina Pipili - Room for Blue (Live at Studio de L'Ermitage)",
+"publishedAt": "2025-10-26"
 }
 }
 },
@@ -26947,6 +25752,11 @@
 "spotify": {
 "id": "7JTVqKJ414qRPuDPhdKnHD",
 "url": "https://open.spotify.com/artist/7JTVqKJ414qRPuDPhdKnHD"
+},
+"youtube": {
+"videoId": "tcg-Oj3ADok",
+"title": "Valeria Castro - devota (Live Session)",
+"publishedAt": "2025-05-07"
 }
 }
 },
@@ -27020,7 +25830,7 @@
 ],
 "description": null,
 "summary": "La P'tite Fumée présente une nouvelle formule de son électro instrumentale, enrichie d'une voix féminine formant un duo vocal percutant pour un live plus massif. Michel Hubert assure la première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/sans-titre-1_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/sans-titre-1_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA P’TITE FUMÉE",
@@ -27034,6 +25844,11 @@
 "spotify": {
 "id": "1moKH1sGouxco5VNQx8P7W",
 "url": "https://open.spotify.com/artist/1moKH1sGouxco5VNQx8P7W"
+},
+"youtube": {
+"videoId": "wm0j2Jskl_o",
+"title": "LA P'TITE FUMEE @Durassic Festival TRANSE 18/07/21 Odditytv",
+"publishedAt": "2021-08-13"
 }
 }
 },
@@ -27042,6 +25857,45 @@
 "is_music": true,
 "stale_since": null,
 "id": "ae52548a5527",
+"first_seen": "baseline"
+},
+{
+"title": "Concert de HOT BODIES",
+"date": "2026-10-23",
+"venue": "La Maison des Métallos",
+"venue_slug": "la-maison-des-metallos",
+"source": "opendata",
+"time": "20:00",
+"url": "https://www.paris.fr/evenements/concert-de-hot-bodies-113515",
+"ticket_url": "https://maisondesmetallos-billetterie.mapado.com/event/707445-hot-bodies-gerald-kurdian",
+"price": "De 10 à 25 euros. Placement libre, debout. Pas de vestiaire.",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"electro",
+"pop",
+"experimental"
+],
+"genre_source": "llm",
+"subgenres": [
+"queer pop",
+"electronic folk"
+],
+"description": "Après la sortie de son EP « Digital Fairy/Folk Songs » en 2025, Gérald Kurdian, alias HOT BODIES, revient avec une nouvelle proposition intime et élégante : un concert à la Maison des Métallos, comme une plongée en avant-première dans les morceaux de son prochain album, « The Transition Pieces ».",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/06/09/huge-6214678306c9df600e781bb8f0a8010d.jpg",
+"address": "94, rue Jean-Pierre Timbaud, 75011, Paris",
+"area": "11e",
+"headliner": "Concert de HOT BODIES",
+"support": [],
+"players": {},
+"lat": 48.867741,
+"lon": 2.377855,
+"is_music": true,
+"stale_since": null,
+"id": "3659c30eda7c",
 "first_seen": "baseline"
 },
 {
@@ -27084,6 +25938,11 @@
 "spotify": {
 "id": "3AQddiytVMF4ILhN29ReDF",
 "url": "https://open.spotify.com/artist/3AQddiytVMF4ILhN29ReDF"
+},
+"youtube": {
+"videoId": "yg8ljPbAzbw",
+"title": "GÆRALD (aka Hot Bodies)  - \"WITCH BITCH\" - Live @ MOFO Festival - La Station",
+"publishedAt": "2023-04-05"
 }
 }
 },
@@ -27093,45 +25952,6 @@
 "stale_since": null,
 "id": "81c7c3336518",
 "first_seen": "2026-10-01"
-},
-{
-"title": "Concert de HOT BODIES",
-"date": "2026-10-23",
-"venue": "La Maison des Métallos",
-"venue_slug": "la-maison-des-metallos",
-"source": "opendata",
-"time": "20:00",
-"url": "https://www.paris.fr/evenements/concert-de-hot-bodies-113515",
-"ticket_url": "https://maisondesmetallos-billetterie.mapado.com/event/707445-hot-bodies-gerald-kurdian",
-"price": "De 10 à 25 euros. Placement libre, debout. Pas de vestiaire.",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"pop",
-"experimental"
-],
-"genre_source": "llm",
-"subgenres": [
-"queer pop",
-"electronic folk"
-],
-"description": "Après la sortie de son EP « Digital Fairy/Folk Songs » en 2025, Gérald Kurdian, alias HOT BODIES, revient avec une nouvelle proposition intime et élégante : un concert à la Maison des Métallos, comme une plongée en avant-première dans les morceaux de son prochain album, « The Transition Pieces ».",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/06/09/huge-6214678306c9df600e781bb8f0a8010d.jpg",
-"address": "94, rue Jean-Pierre Timbaud, 75011, Paris",
-"area": "11e",
-"headliner": "Concert de HOT BODIES",
-"support": [],
-"players": {},
-"lat": 48.867741,
-"lon": 2.377855,
-"is_music": true,
-"stale_since": null,
-"id": "3659c30eda7c",
-"first_seen": "baseline"
 },
 {
 "title": "1er Jour – Festival Jazz Nouvelle-Orléans à la Goutte d’Or 2026",
@@ -27202,7 +26022,22 @@
 "support": [
 "AU DELÀ DU RÉEL"
 ],
-"players": {},
+"players": {
+"L’HEURE EXQUISE": {
+"youtube": {
+"videoId": "80Ceh3D6r-g",
+"title": "Renée Fleming - Hahn: L’Heure exquise, from 7 Chansons grises (session video)",
+"publishedAt": "2021-10-08"
+}
+},
+"AU DELÀ DU RÉEL": {
+"youtube": {
+"videoId": "_2WBMiZYuAw",
+"title": "1992.01.25 Rave AU-DELÀ DU RÉEL - Partie B",
+"publishedAt": "2014-03-05"
+}
+}
+},
 "lat": 48.843,
 "lon": 2.306,
 "is_music": true,
@@ -27243,9 +26078,9 @@
 "players": {
 "BABYLON EN CINÉ-CONCERT": {
 "youtube": {
-"videoId": "VRGRDj97tQI",
+"publishedAt": "2025-12-12",
 "title": "Babylon en ciné-concert • Première mondiale à Paris",
-"publishedAt": "2025-12-12"
+"videoId": "VRGRDj97tQI"
 }
 }
 },
@@ -27403,10 +26238,22 @@
 "Jordi Savall"
 ],
 "players": {
+"Requiem allemand": {
+"youtube": {
+"videoId": "-D6jQ1VGb4U",
+"title": "Brahms : \"Un requiem allemand\" sous la direction de Daniele Gatti",
+"publishedAt": "2017-12-15"
+}
+},
 "Jordi Savall": {
 "spotify": {
 "id": "3faEZMpTmZFXpELU1EwWNL",
 "url": "https://open.spotify.com/artist/3faEZMpTmZFXpELU1EwWNL"
+},
+"youtube": {
+"videoId": "bWx_HlL3k24",
+"title": "Jordi Savall and Hespèrion XXI - Musical Europe | Bayreuth Baroque Festival 2020",
+"publishedAt": "2024-11-15"
 }
 }
 },
@@ -27455,6 +26302,11 @@
 "spotify": {
 "id": "3fPap8kKuNMRn5PR06x0gN",
 "url": "https://open.spotify.com/artist/3fPap8kKuNMRn5PR06x0gN"
+},
+"youtube": {
+"videoId": "A1ufmKsTp6Y",
+"title": "Camille Jansen - Live at Paper Dress Vintage, UK, 2026",
+"publishedAt": "2026-04-27"
 }
 }
 },
@@ -27499,6 +26351,20 @@
 "Miles Style"
 ],
 "players": {
+"Festival Jazz Sur Seine": {
+"youtube": {
+"videoId": "j-bFGExRljE",
+"title": "FESTIVAL JAZZ SUR SEINE 2019 - Teaser",
+"publishedAt": "2019-10-01"
+}
+},
+"Médéric Collignon \"Jus de Bocse\"": {
+"youtube": {
+"videoId": "Ep7PR6WjaYM",
+"title": "Live  :   Médéric Collignon / Jus de Bocse joue King Crimson   - Au rendez vous de l'erdre",
+"publishedAt": "2020-04-05"
+}
+},
 "Christophe Monniot": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=3640659461/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -27507,6 +26373,18 @@
 "spotify": {
 "id": "0UiQgEDog8goZguNZTJUcQ",
 "url": "https://open.spotify.com/artist/0UiQgEDog8goZguNZTJUcQ"
+},
+"youtube": {
+"videoId": "q3Ao4sU6B-E",
+"title": "CHRISTOPHE MONNIOT & DIDIER ITHURSARRY - HYMNES À L'AMOUR - TEASER",
+"publishedAt": "2026-05-22"
+}
+},
+"Miles Style": {
+"youtube": {
+"videoId": "9zBMHZgfrO4",
+"title": "Miles Styles (Live)",
+"publishedAt": "2026-07-16"
 }
 }
 },
@@ -27563,6 +26441,11 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=1943272190/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://tobit1.bandcamp.com"
+},
+"youtube": {
+"videoId": "ccg6uBQfViI",
+"title": "E ti tobi to (Live)| EmmaOMG ft The OhEmGee Choir, @pelumi.deborah and @Officialbbo",
+"publishedAt": "2024-08-11"
 }
 }
 },
@@ -27876,6 +26759,11 @@
 "spotify": {
 "id": "0CUvJzhxLqPRd3xMxwsoxp",
 "url": "https://open.spotify.com/artist/0CUvJzhxLqPRd3xMxwsoxp"
+},
+"youtube": {
+"videoId": "BflUoE7B7lI",
+"title": "Concierto Minino Garay. Speaking Tango Jazz. Live 360º Eurojazz 2022",
+"publishedAt": "2023-05-13"
 }
 },
 "Lucas Dorado": {
@@ -27932,7 +26820,15 @@
 "support": [
 "Optimal Request @ La Java"
 ],
-"players": {},
+"players": {
+"Essence": {
+"youtube": {
+"videoId": "yO6DYZLzwC8",
+"title": "Wizkid — Essence (Apple Music Live 2022)",
+"publishedAt": "2022-11-15"
+}
+}
+},
 "lat": 48.87,
 "lon": 2.3706,
 "is_music": true,
@@ -28072,9 +26968,9 @@
 "url": "https://open.spotify.com/artist/4CYjITN8Au3K5CWFeex7fU"
 },
 "youtube": {
-"videoId": "AtFDI_5Tchg",
+"publishedAt": "2024-03-06",
 "title": "태버(Tabber) - 007 & Chi-Ka (Feat.DEAN) | 딘, 태버 [DF LIVE]",
-"publishedAt": "2024-03-06"
+"videoId": "AtFDI_5Tchg"
 }
 }
 },
@@ -28122,9 +27018,9 @@
 "url": "https://open.spotify.com/artist/07FaEsHIaVZAFFHvNElpbQ"
 },
 "youtube": {
-"videoId": "aWJ0arInq5U",
+"publishedAt": "2026-08-28",
 "title": "Mari Merenda \"Uirapuru\" (Waldemar Henrique) | ONErpm Studio Session",
-"publishedAt": "2026-08-28"
+"videoId": "aWJ0arInq5U"
 }
 },
 "Virginia Cambuci": {
@@ -28183,12 +27079,22 @@
 "spotify": {
 "id": "2j74J6dIUd8X3x6UKH3pZF",
 "url": "https://open.spotify.com/artist/2j74J6dIUd8X3x6UKH3pZF"
+},
+"youtube": {
+"videoId": "yqqyZTOtW90",
+"title": "Didi Han | Boiler Room x Róisín Murphy",
+"publishedAt": "2023-07-21"
 }
 },
 "Narciss": {
 "spotify": {
 "id": "7jEmLGxzh2RuOwdj96tlyL",
 "url": "https://open.spotify.com/artist/7jEmLGxzh2RuOwdj96tlyL"
+},
+"youtube": {
+"videoId": "ivDbcw_R6dI",
+"title": "Narciss - Stone Techno Festival 2023 - ARTE Concert",
+"publishedAt": "2023-08-10"
 }
 }
 },
@@ -28241,6 +27147,20 @@
 "url": "https://open.spotify.com/artist/4XC335ouK6pXyq4QiIb8bP"
 }
 },
+"Jeremy Underground": {
+"youtube": {
+"videoId": "rAskFJJCFJo",
+"title": "Motor City Drum Ensemble B2B Jeremy Underground live at Dimensions - INSIDE | Resident Advisor",
+"publishedAt": "2015-10-05"
+}
+},
+"Mayou Picchu": {
+"youtube": {
+"videoId": "BiyO0-cGT9c",
+"title": "MAYOU PICCHU [MIA MAO live] DJ set | TECH HOUSE",
+"publishedAt": "2026-05-11"
+}
+},
 "Cabaret Contemporain": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=719467584/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -28249,13 +27169,18 @@
 "spotify": {
 "id": "1chSVYg9jYCmLrY5JRMPDk",
 "url": "https://open.spotify.com/artist/1chSVYg9jYCmLrY5JRMPDk"
+},
+"youtube": {
+"videoId": "mGS60e7QO2w",
+"title": "Cabaret Contemporain - Studio Session",
+"publishedAt": "2021-02-02"
 }
 },
 "Pierrinski": {
 "youtube": {
-"videoId": "wvBH1didIuI",
+"publishedAt": "2025-05-12",
 "title": "Pierrinski - 10th May 2025 | Bangkok Community Radio",
-"publishedAt": "2025-05-12"
+"videoId": "wvBH1didIuI"
 }
 }
 },
@@ -28374,6 +27299,13 @@
 "title": "Wendell Almeida & Band à là Halle Aux Oliviers à La Bellevilloise Paris 07/01/2023",
 "videoId": "z53yt-Gytvs"
 }
+},
+"Lemmy’s Tribe": {
+"youtube": {
+"videoId": "Ynm8u1By_Ys",
+"title": "Lemmy's Tribe - Breaking Up Somebody's Home (Blues Rock Live 38Riv, Paris 05/04/2026)",
+"publishedAt": "2026-04-07"
+}
 }
 },
 "lat": 48.8688,
@@ -28419,6 +27351,11 @@
 "spotify": {
 "id": "6vFLWeYRBAtIZSyTex2Fcu",
 "url": "https://open.spotify.com/artist/6vFLWeYRBAtIZSyTex2Fcu"
+},
+"youtube": {
+"videoId": "mHiZzss8A50",
+"title": "Rolland Merguez - Live Complet à La Belle Électrique, Grenoble, 2020",
+"publishedAt": "2021-02-12"
 }
 }
 },
@@ -28507,6 +27444,13 @@
 "title": "Angine De Poitrine - Chronological Live Megamix",
 "videoId": "WRANG_ckXj4"
 }
+},
+"We Are The 90's": {
+"youtube": {
+"videoId": "Lq9ubYgURB4",
+"title": "We Are The 90's (Promo 2023) | Live band | 90er |  90s | 90s cover",
+"publishedAt": "2022-10-24"
+}
 }
 },
 "lat": 48.8842,
@@ -28558,6 +27502,11 @@
 "spotify": {
 "id": "7z8khF1UMs48mtkh4xibRy",
 "url": "https://open.spotify.com/artist/7z8khF1UMs48mtkh4xibRy"
+},
+"youtube": {
+"videoId": "7x48EWr7lq0",
+"title": "Sago - Alune Wade & Harold Lopez Live New Morning",
+"publishedAt": "2015-07-07"
 }
 },
 "AGON": {
@@ -28566,9 +27515,9 @@
 "url": "https://agonmusician.bandcamp.com"
 },
 "youtube": {
-"videoId": "ky7LIxBAvkE",
+"publishedAt": "2026-10-12",
 "title": "🔴 LIVE | Darkfall Rise of Agon  Mob Grind Before Work",
-"publishedAt": "2026-10-12"
+"videoId": "ky7LIxBAvkE"
 }
 }
 },
@@ -28643,7 +27592,15 @@
 "support": [
 "END OF DAY"
 ],
-"players": {},
+"players": {
+"END OF DAY": {
+"youtube": {
+"videoId": "5SjAg4cc93w",
+"title": "Vinnie Paz - End Of Days, live @ Openair Frauenfeld 2012",
+"publishedAt": "2012-11-10"
+}
+}
+},
 "lat": 48.9006,
 "lon": 2.369,
 "is_music": true,
@@ -28754,6 +27711,11 @@
 "spotify": {
 "id": "2AeL43nXvfqW3WrV9sDh5t",
 "url": "https://open.spotify.com/artist/2AeL43nXvfqW3WrV9sDh5t"
+},
+"youtube": {
+"videoId": "tcgyDaWQjlc",
+"title": "Soft Loft – Paper Plane Live Session",
+"publishedAt": "2025-08-07"
 }
 }
 },
@@ -28800,6 +27762,11 @@
 "spotify": {
 "id": "4hIlbNJfehZZHP2e2tDE7w",
 "url": "https://open.spotify.com/artist/4hIlbNJfehZZHP2e2tDE7w"
+},
+"youtube": {
+"videoId": "cgqq7oMZpxg",
+"title": "SAMPLIFIRE DJ SET PARIS | OHLALA FESTIVAL 2026",
+"publishedAt": "2026-07-29"
 }
 }
 },
@@ -28847,9 +27814,9 @@
 "url": "https://open.spotify.com/artist/1DcL22xdIWcdNa4ZHaXZjT"
 },
 "youtube": {
-"videoId": "yQfmzX8gRR0",
+"publishedAt": "2026-04-13",
 "title": "Aupinard et Bianca Costa - Belle âme (Live) Le Grand Studio RTL",
-"publishedAt": "2026-04-13"
+"videoId": "yQfmzX8gRR0"
 }
 }
 },
@@ -28901,9 +27868,9 @@
 "url": "https://open.spotify.com/artist/4LYX3rRdXV2l99wR5YPFoK"
 },
 "youtube": {
-"videoId": "MFSYuWvxF10",
+"publishedAt": "2017-03-03",
 "title": "EXIT 2016 | Dub Pistols Live @ Fusion Stage HD Show",
-"publishedAt": "2017-03-03"
+"videoId": "MFSYuWvxF10"
 }
 }
 },
@@ -28952,6 +27919,11 @@
 "spotify": {
 "id": "19iNYCVHcMwJMS3NZqhZ59",
 "url": "https://open.spotify.com/artist/19iNYCVHcMwJMS3NZqhZ59"
+},
+"youtube": {
+"videoId": "6_YKb3VcPmU",
+"title": "2025-11-15 - Oh Hiroshima - In Silence We Yearn (Live @ Gloomaar Festival 2025)",
+"publishedAt": "2025-12-21"
 }
 }
 },
@@ -29000,6 +27972,11 @@
 "spotify": {
 "id": "44qDh9SR4FYA9V1yb7Amig",
 "url": "https://open.spotify.com/artist/44qDh9SR4FYA9V1yb7Amig"
+},
+"youtube": {
+"videoId": "aQCLARcLYVs",
+"title": "Pushh… Pushhh…. pushhhhhh 😍 #birthvlog  #midwife #normaldeliverytips  #familyplanning  #pregnancy",
+"publishedAt": "2023-10-18"
 }
 }
 },
@@ -29045,9 +28022,9 @@
 "url": "https://open.spotify.com/artist/5DFOYJLWzBdNifHaXGuRQc"
 },
 "youtube": {
-"videoId": "a4WGA-OdYXE",
+"publishedAt": "2014-08-01",
 "title": "Keros N - Madame, Pliss Ki Zanmi, Un Dos Tres - LIVE",
-"publishedAt": "2014-08-01"
+"videoId": "a4WGA-OdYXE"
 }
 }
 },
@@ -29771,6 +28748,11 @@
 "spotify": {
 "id": "1ClmHgLorY9RUCIvsTdT7A",
 "url": "https://open.spotify.com/artist/1ClmHgLorY9RUCIvsTdT7A"
+},
+"youtube": {
+"videoId": "QnwzWjDj8-g",
+"title": "BEKA (Live from St Paul's Shadwell Church) | School Night Concert",
+"publishedAt": "2021-12-07"
 }
 }
 },
@@ -29788,7 +28770,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2335/dov-e-liana-complet/?of=12",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2335/dov-e-liana-complet/?of=11",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -30036,7 +29018,22 @@
 "support": [
 "AU DELÀ DU RÉEL"
 ],
-"players": {},
+"players": {
+"L’HEURE EXQUISE": {
+"youtube": {
+"videoId": "80Ceh3D6r-g",
+"title": "Renée Fleming - Hahn: L’Heure exquise, from 7 Chansons grises (session video)",
+"publishedAt": "2021-10-08"
+}
+},
+"AU DELÀ DU RÉEL": {
+"youtube": {
+"videoId": "_2WBMiZYuAw",
+"title": "1992.01.25 Rave AU-DELÀ DU RÉEL - Partie B",
+"publishedAt": "2014-03-05"
+}
+}
+},
 "lat": 48.843,
 "lon": 2.306,
 "is_music": true,
@@ -30077,9 +29074,9 @@
 "players": {
 "BABYLON EN CINÉ-CONCERT": {
 "youtube": {
-"videoId": "VRGRDj97tQI",
+"publishedAt": "2025-12-12",
 "title": "Babylon en ciné-concert • Première mondiale à Paris",
-"publishedAt": "2025-12-12"
+"videoId": "VRGRDj97tQI"
 }
 }
 },
@@ -31630,6 +30627,11 @@
 "spotify": {
 "id": "5Lz6hyIn2iDwHEesU4idwl",
 "url": "https://open.spotify.com/artist/5Lz6hyIn2iDwHEesU4idwl"
+},
+"youtube": {
+"videoId": "LXe6OYFMg-A",
+"title": "CHUIS CHELOU (Live à La Boule Noire) – Mohand Baha | Répression policière & violences",
+"publishedAt": "2025-03-30"
 }
 }
 },
@@ -31746,7 +30748,15 @@
 "area": "Pigalle",
 "headliner": "BAG’SHOW 2026",
 "support": [],
-"players": {},
+"players": {
+"BAG’SHOW 2026": {
+"youtube": {
+"videoId": "Ss7E5YQ4-Os",
+"title": "BAG'SHOW 2026 - Teaser",
+"publishedAt": "2026-03-28"
+}
+}
+},
 "lat": 48.8826,
 "lon": 2.3445,
 "is_music": true,
@@ -32270,14 +31280,14 @@
 "first_seen": "baseline"
 },
 {
-"title": "TootArd",
+"title": "TootArd + Cinna Peyghamy",
 "date": "2026-10-25",
 "venue": "Bal Chavaux",
 "venue_slug": "bal-chavaux",
 "source": "balchavaux",
 "time": "19:30",
-"url": "https://balchavaux.fr/agenda/tootard",
-"ticket_url": "https://balchavaux.fr/agenda/tootard",
+"url": "https://balchavaux.fr/agenda/tootard-cinna-peyghamy",
+"ticket_url": "https://balchavaux.fr/agenda/tootard-cinna-peyghamy",
 "price": "21–23 €",
 "free": false,
 "sold_out": false,
@@ -32293,11 +31303,13 @@
 ],
 "description": "TootArd, un duo aux frontières musicales floues composé des frères visionnaires Hasan et Rami Nakhleh, est célébré pour sa créativité sans limites, qui redéfinit sans cesse son univers musical à chaque nouvelle sortie. Leur art est une fusion entre des refrains pop internationaux et des lignes mélodiques en quarts de ton, créant un mélange unique de disco et de musique dance qui puise son inspirat",
 "summary": null,
-"image": "https://balchavaux.fr/sites/balchavaux/files/styles/auto_1920/public/import_billetterie/1038-field_illustration_id-1789030451.jpg?itok=DFr7iU7Y",
+"image": "https://balchavaux.fr/sites/balchavaux/files/styles/auto_1920/public/2026-10/1080X1080.jpg?itok=HkOelacL",
 "address": "2 avenue de la Résistance, 93100 Montreuil",
 "area": "Montreuil",
 "headliner": "TootArd",
-"support": [],
+"support": [
+"Cinna Peyghamy"
+],
 "players": {
 "TootArd": {
 "bandcamp": {
@@ -32308,13 +31320,19 @@
 "id": "7nSWA1659h0Vb1EyjJdSFV",
 "url": "https://open.spotify.com/artist/7nSWA1659h0Vb1EyjJdSFV"
 }
+},
+"Cinna Peyghamy": {
+"spotify": {
+"id": "6fT3NRrmf4vlBOJ7ynGg0O",
+"url": "https://open.spotify.com/artist/6fT3NRrmf4vlBOJ7ynGg0O"
+}
 }
 },
 "lat": 48.8584,
 "lon": 2.4368,
 "is_music": true,
 "stale_since": null,
-"id": "168e1a039eff",
+"id": "fdbb37123748",
 "first_seen": "baseline"
 },
 {
@@ -32365,7 +31383,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2220/enola-cox-complet/?of=13",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2220/enola-cox-complet/?of=12",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -33052,7 +32070,7 @@
 ],
 "description": null,
 "summary": "Soirée du Programme Phare consacrée à la nouvelle scène, avec onze artistes émergents en live, rejoints sur scène par des artistes parrains et soutiens du programme. Concert présenté en partenariat avec Live Nation.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/design-sans-titre-15-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/design-sans-titre-15-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LE PROGRAMME PHARE",
@@ -33229,7 +32247,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2364/typhee/?of=14",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2364/typhee/?of=13",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/typhee-billet/idmanif/671194/idseance/4402830/attribauto/idtier/38743526",
 "price": null,
 "free": false,
@@ -33375,7 +32393,7 @@
 ],
 "description": null,
 "summary": "Concert rock de l'auteur-compositeur américain Ryan Adams, figure du songwriting aux plus de vingt albums studio (Whiskeytown, Ryan Adams & The Cardinals). Le concert est annulé, la tournée européenne de l'artiste ayant été supprimée.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/format-site-ryan-adams-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/format-site-ryan-adams-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RYAN ADAMS",
@@ -34013,7 +33031,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2271/kabeaushe/?of=15",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2271/kabeaushe/?of=14",
 "ticket_url": "https://link.dice.fm/V43caa334778",
 "price": null,
 "free": false,
@@ -34184,7 +33202,7 @@
 ],
 "description": null,
 "summary": "Concert du rappeur a6el, jeune figure de la scène rap/pop révélée par son EP « Pire que chez moi » et deux Boule Noire complets.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/photo-a6el-la-cigale-600x600.jpeg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/photo-a6el-la-cigale-600x600.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "a6el",
@@ -35423,7 +34441,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2233/cardinals/?of=16",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2233/cardinals/?of=15",
 "ticket_url": "https://tix.to/cardinals-2026SL/hlfgy",
 "price": null,
 "free": false,
@@ -36776,7 +35794,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2371/melissa-complet/?of=17",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2371/melissa-complet/?of=16",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -36822,7 +35840,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2202/marius/?of=18",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2202/marius/?of=17",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -37071,7 +36089,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/pl117748.hd-credit-stephane-de-bourgies-463x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/pl117748.hd-credit-stephane-de-bourgies-463x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PHILIPPE LELLOUCHE",
@@ -38445,7 +37463,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2332/yvnnis-complet/?of=19",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2332/yvnnis-complet/?of=18",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -41088,7 +40106,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2294/mietze-conte/?of=20",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2294/mietze-conte/?of=19",
 "ticket_url": "https://shotgun.live/fr/events/mietze-conte-la-maroquinerie",
 "price": null,
 "free": false,
@@ -41337,6 +40355,47 @@
 "is_music": true,
 "stale_since": "2026-10-07",
 "id": "5dddd7b31d15",
+"first_seen": "baseline"
+},
+{
+"title": "⚡ The Funeral Party - Halloween ⚡",
+"date": "2026-10-31",
+"venue": "Point Éphémère",
+"venue_slug": "point-ephemere",
+"source": "pointephemere",
+"time": "20:00",
+"url": "https://www.pointephemere.org/event/animations-danses-macabres-et-musiques-froides--vo",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://images.prismic.io/pointf/iDx82WCU4SRmIxQ9_POSTINSTA.jpg?auto=format&w=200&q=25&fm=webp",
+"address": "200 quai de Valmy, 75010 Paris",
+"area": "Canal Saint-Martin",
+"headliner": "⚡ The Funeral Party",
+"support": [
+"Halloween ⚡"
+],
+"players": {
+"⚡ The Funeral Party": {
+"spotify": {
+"id": "7sDdiLpxFr7hfrbs9fHSWE",
+"url": "https://open.spotify.com/artist/7sDdiLpxFr7hfrbs9fHSWE"
+}
+}
+},
+"lat": 48.8797,
+"lon": 2.3693,
+"is_music": true,
+"stale_since": null,
+"id": "fe3c24b5ab52",
 "first_seen": "baseline"
 },
 {
@@ -42544,41 +41603,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "⚡ HALLOWEEN ⚡",
-"date": "2026-10-31",
-"venue": "Point Éphémère",
-"venue_slug": "point-ephemere",
-"source": "pointephemere",
-"time": null,
-"url": "https://www.pointephemere.org/event/halloween",
-"ticket_url": null,
-"price": null,
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": null,
-"genres": [
-"electro",
-"rock"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": null,
-"summary": null,
-"image": null,
-"address": "200 quai de Valmy, 75010 Paris",
-"area": "Canal Saint-Martin",
-"headliner": "⚡ HALLOWEEN ⚡",
-"support": [],
-"players": {},
-"lat": 48.8797,
-"lon": 2.3693,
-"is_music": true,
-"stale_since": null,
-"id": "380123ae7949",
-"first_seen": "baseline"
-},
-{
 "title": "Lovetempo",
 "date": "2026-10-31",
 "venue": "PopUp!",
@@ -43147,7 +42171,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2304/web/?of=21",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2304/web/?of=20",
 "ticket_url": "https://spectacles.bleucitron.net/reserver/web-maroquinerie-paris/9933",
 "price": null,
 "free": false,
@@ -43847,7 +42871,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2378/moha-mmz-complet/?of=22",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2378/moha-mmz-complet/?of=21",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -44069,7 +43093,7 @@
 ],
 "description": null,
 "summary": "Camille Yembe, révélation de la scène pop francophone au univers mêlant pop, indie et influences rap, présente sur scène son premier album après une date parisienne complète à La Maroquinerie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/camille-yembe-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/camille-yembe-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CAMILLE YEMBE",
@@ -44742,7 +43766,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2300/ryan-beatty-complet/?of=23",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2300/ryan-beatty-complet/?of=22",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -44890,7 +43914,7 @@
 ],
 "description": null,
 "summary": "Eagles of Death Metal, le groupe de Josh Homme et Jesse Hughes, présente son rock 70's garage et glam dans le cadre de la tournée européenne des 20 ans de « Death by Sexy… ». En première partie : James and the Cold Gun.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/eodm-press-photo-600x401.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/eodm-press-photo-600x401.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EAGLES OF DEATH METAL",
@@ -45120,6 +44144,10 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/track=633606638/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://ravelatl.bandcamp.com"
+},
+"spotify": {
+"id": "2baQWT806tM9iqYRhLiFCQ",
+"url": "https://open.spotify.com/artist/2baQWT806tM9iqYRhLiFCQ"
 },
 "youtube": {
 "publishedAt": "2018-06-30",
@@ -45919,12 +44947,12 @@
 "source": "llm",
 "time": "15:00",
 "url": "https://www.philharmoniedeparis.fr/fr/agenda",
-"ticket_url": null,
-"price": null,
+"ticket_url": "https://philharmoniedeparis.fr/fr/activite/concert-en-famille/29859-nord-sauvage",
+"price": "payant",
 "free": false,
 "sold_out": false,
 "cancelled": false,
-"raw_genre": null,
+"raw_genre": "Enfants, Spectacle musical",
 "genres": [
 "classical",
 "folk"
@@ -45933,9 +44961,9 @@
 "subgenres": [
 "nordic"
 ],
-"description": null,
+"description": "Ce concert dessiné donne vie à l’imaginaire de Jack London, où l’homme et le loup affrontent une nature aussi belle qu’hostile. « C’était le Wild, le Wild farouche, glacé jusqu’au cœur, de la terre du Nord… Néanmoins la vie était là, comme un défi lancé. » Avez-vous l’âme d’un aventurier ? L’air enivrant des espaces sauvages souffle sur ce concert inspiré des livres de Jack London ! Grâce aux dess",
 "summary": null,
-"image": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/13/huge-f9e9ab347a59af9a1bb1463c955b6f8a.png",
 "address": "221 avenue Jean-Jaurès, 75019 Paris",
 "area": "Villette",
 "headliner": "Nord Sauvage",
@@ -45944,7 +44972,7 @@
 "lat": 48.8892,
 "lon": 2.3939,
 "is_music": true,
-"stale_since": "2026-10-07",
+"stale_since": null,
 "id": "81504becd19e",
 "first_seen": "baseline"
 },
@@ -46202,7 +45230,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2290/rikas-complet/?of=24",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2290/rikas-complet/?of=23",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -46398,7 +45426,7 @@
 ],
 "description": null,
 "summary": "Concert de rap du duo La Kadrilla (Bara et Jamso), originaire de Rosny-sous-Bois, qui mêle culture du freestyle, univers sombre et incisif, technicité et mélodie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/brute-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/brute-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA KADRILLA",
@@ -47488,7 +46516,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2211/talisco-complet/?of=25",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2211/talisco-complet/?of=24",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -47748,7 +46776,7 @@
 ],
 "description": null,
 "summary": "Le groupe belge Girls In Hawaii, référence de la scène indie rock européenne, est en tournée européenne pour défendre son nouvel album Eldorado, premier disque studio depuis Nocturne (2017).",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/gih_eldorado_tour-2026_1_1-©-simon-vanrie-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/gih_eldorado_tour-2026_1_1-©-simon-vanrie-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GIRLS IN HAWAII",
@@ -49211,7 +48239,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2256/de-staat/?of=26",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2256/de-staat/?of=25",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/de-staat-billet/idmanif/657540",
 "price": null,
 "free": false,
@@ -49485,7 +48513,7 @@
 ],
 "description": null,
 "summary": "Concert de jazz de daoud, qui bouscule les codes du genre avec son groupe, entre lyrisme contenu et déflagration, autour de son nouvel album ok après le succès de GOOD BOY.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/daoud1_credit_tanguy-delavet-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/daoud1_credit_tanguy-delavet-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAOUD",
@@ -51844,7 +50872,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2312/saults/?of=27",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2312/saults/?of=26",
 "ticket_url": "https://my.weezevent.com/saults-2",
 "price": null,
 "free": false,
@@ -51994,7 +51022,7 @@
 ],
 "description": null,
 "summary": "Le groupe britannique The Temperance Movement, formé à Londres en 2011, défend un blues rock nourri de soul et du rock des années 60-70, et revisite son répertoire dont les titres « Only Friend » et « Midnight Black ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/ttm_photo_650x650_lacigale-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/ttm_photo_650x650_lacigale-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE TEMPERANCE MOVEMENT",
@@ -52578,7 +51606,7 @@
 "first_seen": "2026-09-29"
 },
 {
-"title": "Un verano en Nueva York / Un été à New York",
+"title": "Les Samedis Salsa du Sunset avec Speranza Galez",
 "date": "2026-11-07",
 "venue": "Sunset / Sunside",
 "venue_slug": "sunset-sunside",
@@ -52594,24 +51622,22 @@
 "genres": [
 "latin"
 ],
-"genre_source": "llm",
-"subgenres": [
-"salsa"
-],
+"genre_source": "rules",
+"subgenres": [],
 "description": "New York, années 70. El Gran Combo de Puerto Rico s’impose comme l’une des orchestres de salsa les plus aimées du monde hispanique. La chanteuse vénézuélienne Speranza Galez et son orchestre plongent dans ce répertoire solaire et festif, célébrant l’énergie et l’élégance d’un groupe qui, depuis plus de soixante ans, fait danser sans jamais vieillir. Groove, cuivres et joie de vivre au cœur de la R",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/09/Speranza-Galez-voix-Raul-Monsalve-basse-Klennder-Rosales-trombone-Josue-Omana-trompette-Julian-Jimenez-Ossa-piano-Orlando-Poleo-percussions-Sebastian-Betancur-timbales.webp",
 "address": "60 rue des Lombards, 75001 Paris",
 "area": "Châtelet",
-"headliner": "Un verano en Nueva York",
+"headliner": "Les Samedis Salsa du Sunset",
 "support": [
-"Un été à New York"
+"Speranza Galez"
 ],
 "players": {
-"Un verano en Nueva York": {
+"Speranza Galez": {
 "spotify": {
-"id": "5CatmyfMFcg1JtQvBp9GjU",
-"url": "https://open.spotify.com/artist/5CatmyfMFcg1JtQvBp9GjU"
+"id": "6DChxXVqmsKdUBCVfE1p8C",
+"url": "https://open.spotify.com/artist/6DChxXVqmsKdUBCVfE1p8C"
 }
 }
 },
@@ -52619,7 +51645,7 @@
 "lon": 2.3474,
 "is_music": true,
 "stale_since": null,
-"id": "1bf0ce917824",
+"id": "a5ae2c394616",
 "first_seen": "2026-09-25"
 },
 {
@@ -54348,7 +53374,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2326/sons-of-legion-complet/?of=28",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2326/sons-of-legion-complet/?of=27",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -54406,7 +53432,7 @@
 ],
 "description": null,
 "summary": "WaïV défend sur scène sa « variété mélodie », mêlant rap, mélodies pop et sonorités afro, entouré de ses beatmakers et musiciens.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/format-site-waiv-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/format-site-waiv-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "WAÏV",
@@ -55189,7 +54215,7 @@
 ],
 "description": null,
 "summary": "Shannon, figure de la scène martiniquaise révélée par le titre « Mal À Dit », déploie un univers entre shatta, dancehall, reggaeton, bouyon et rap, célébrant l'indépendance et l'identité antillaise.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/shannon-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/shannon-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHANNON",
@@ -55778,6 +54804,55 @@
 "first_seen": "baseline"
 },
 {
+"title": "Peacock dreams | Abdullah Miniawy (trio)",
+"date": "2026-11-10",
+"venue": "Réfectoire des Cordeliers",
+"venue_slug": "refectoire-des-cordeliers",
+"source": "opendata",
+"time": "19:00",
+"url": "https://www.paris.fr/evenements/peacock-dreams-abdullah-miniawy-trio-125901",
+"ticket_url": "https://billetterie-culture.u-pariscite.fr/event/798164-peacock-dreams-abdullah-miniawy-trio",
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Festival, Spectacle musical",
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Dans le cadre du Festival d’Automne à l’université, l’Université Paris Cité et le Festival invitent le trio original Peacock dreams d’Abdullah Miniawy, pour une soirée entre jazz et tradition orientales.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-cc47ab327d2346f8c75c66e5f22b9c33.jpg",
+"address": "15 rue de l'école de médecine, 75006, Paris",
+"area": "6e",
+"headliner": "Peacock dreams",
+"support": [
+"Abdullah Miniawy"
+],
+"players": {
+"Peacock dreams": {
+"spotify": {
+"id": "1YVWLzK8vBJHYBP9COmtPH",
+"url": "https://open.spotify.com/artist/1YVWLzK8vBJHYBP9COmtPH"
+}
+},
+"Abdullah Miniawy": {
+"spotify": {
+"id": "4vtk0GdkL06BZlviVp2H7J",
+"url": "https://open.spotify.com/artist/4vtk0GdkL06BZlviVp2H7J"
+}
+}
+},
+"lat": 48.8507739961384,
+"lon": 2.34118499902132,
+"is_music": true,
+"stale_since": null,
+"id": "77887453007c",
+"first_seen": "baseline"
+},
+{
 "title": "I Love You Honey Bunny • Bye Boy • Keller Palace",
 "date": "2026-11-10",
 "venue": "Supersonic",
@@ -56034,7 +55109,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2212/allt/?of=29",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2212/allt/?of=28",
 "ticket_url": "https://bit.ly/Allt_Paris26",
 "price": null,
 "free": false,
@@ -56318,7 +55393,7 @@
 ],
 "description": null,
 "summary": "La chanteuse et rappeuse Zinée présente son EP BIL, réalisé avec Chilly Gonzales, Freaky Joe et Empty7, entre sonorités sombres et solaires.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-site-zinee-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-site-zinee-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ZINÉE",
@@ -57703,7 +56778,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2254/napa/?of=30",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2254/napa/?of=29",
 "ticket_url": "http://link.dice.fm/bb7f1a11c378",
 "price": null,
 "free": false,
@@ -57814,7 +56889,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/la-ligue-majeure-presente-2-450x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/la-ligue-majeure-presente-2-450x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MATCH D’IMPRO",
@@ -59043,7 +58118,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2222/arthur-fu-bandini/?of=31",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2222/arthur-fu-bandini/?of=30",
 "ticket_url": "https://shotgun.live/fr/events/arthur-fu-bandini-en-concert-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -59436,7 +58511,7 @@
 ],
 "description": "Préparez-vous à une décharge de pur HARD ROCK !",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/the-5-rosies-la-cigale-650x650px-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/the-5-rosies-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE 5 ROSIES",
@@ -59548,6 +58623,43 @@
 "stale_since": "2026-10-08",
 "id": "d9d9332e2098",
 "first_seen": "baseline"
+},
+{
+"title": "NOUVELLE SAISON DES CONCERTS CLASH : CHARLIE WINSTON ET SA MUSIQUE POP RÉINVENTENT LE CLASSIQUE",
+"date": "2026-11-12",
+"venue": "Salle Gaveau",
+"venue_slug": "salle-gaveau",
+"source": "opendata",
+"time": "20:30",
+"url": "https://www.paris.fr/evenements/nouvelle-saison-des-concerts-clash-charlie-winston-et-sa-musique-pop-reinventent-le-classique-125893",
+"ticket_url": "https://sallegaveau.com/event-pro/clash-pop-les-classiques-de-charlie-winston/",
+"price": "De 24€ à 89€",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Festival",
+"genres": [
+"classical",
+"pop"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Retrouvez Charlie Winston à la Salle Gaveau le jeudi 12 novembre 2026",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-08dc531530da793f1a41ae43b1cb08d6.jpeg",
+"address": "45-47 Rue La Boétie, 75008 Paris, France, 75008, Paris",
+"area": "8e",
+"headliner": "NOUVELLE SAISON DES CONCERTS CLASH",
+"support": [
+"CHARLIE WINSTON ET SA MUSIQUE POP RÉINVENTENT LE CLASSIQUE"
+],
+"players": {},
+"lat": 48.856578,
+"lon": 2.351828,
+"is_music": true,
+"stale_since": null,
+"id": "37614927822e",
+"first_seen": "2026-10-13"
 },
 {
 "title": "Arnault Cuisinier",
@@ -60698,7 +59810,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2214/the-veils/?of=32",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2214/the-veils/?of=31",
 "ticket_url": "https://link.dice.fm/qacd7abfda19",
 "price": "Billet : 27.29 EUR",
 "free": false,
@@ -61801,7 +60913,7 @@
 ],
 "description": null,
 "summary": "Le chanteur et guitariste Lucas Seb, figure contemporaine du kompa et des musiques caribéennes aux racines guadeloupéennes, mêle sonorités latines, afro et R&B. Entouré de musiciens kompa, il joue ses titres phares comme « Mortal Kompa », « Bagay cho » ou « Cadence » ainsi que ses sorties récentes.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/lucas_seb_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/lucas_seb_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LUCAS SEB",
@@ -62218,7 +61330,7 @@
 "first_seen": "2026-09-16"
 },
 {
-"title": "Résonnances",
+"title": "Résonances",
 "date": "2026-11-14",
 "venue": "Cité de l'architecture et du patrimoine",
 "venue_slug": "cite-de-l-architecture-et-du-patrimoine",
@@ -62231,26 +61343,22 @@
 "sold_out": false,
 "cancelled": false,
 "raw_genre": null,
-"genres": [
-"classical"
-],
-"genre_source": "llm",
-"subgenres": [
-"choral"
-],
+"genres": [],
+"genre_source": null,
+"subgenres": [],
 "description": "Parcours vocal de la Maîtrise de Paris à la Cité de l'architecture et du patrimoine",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/07/22/huge-1bc3bab8b75571f4e1d9cd70e680a64a.jpg",
 "address": "1 place du Trocadéro et du 11 Novembre, 75016, Paris",
 "area": "16e",
-"headliner": "Résonnances",
+"headliner": "Résonances",
 "support": [],
 "players": {},
 "lat": 48.8629049988756,
 "lon": 2.28834196100399,
 "is_music": true,
 "stale_since": null,
-"id": "71d97a918551",
+"id": "eaccfba03275",
 "first_seen": "baseline"
 },
 {
@@ -62834,7 +61942,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/1980/deelee-s-complet/?of=33",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/1980/deelee-s-complet/?of=32",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -62867,6 +61975,41 @@
 "is_music": true,
 "stale_since": null,
 "id": "14fd6cc760c0",
+"first_seen": "baseline"
+},
+{
+"title": "MetalOnze",
+"date": "2026-11-14",
+"venue": "MPAA/Saint-Germain - Maison des Pratiques Artistiques Amateurs",
+"venue_slug": "mpaa-saint-germain-maison-des-pratiques-artistiques-amateurs",
+"source": "opendata",
+"time": "19:30",
+"url": "https://www.paris.fr/evenements/metalonze-125832",
+"ticket_url": "https://www.mpaa.fr/programmation/metalonze",
+"price": "Vente sur place sous réserve de places disponibles. Billette",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [
+"metal",
+"classical"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Un concert de Metal symphonique par un groupe du Conservatoire du 11ᵉ arrondissement",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-e25c00a0c343bd8c4cfc20a32e2a437e.jpg",
+"address": "4 rue Félibien, 75006, Paris",
+"area": "6e",
+"headliner": "MetalOnze",
+"support": [],
+"players": {},
+"lat": 48.852123,
+"lon": 2.336519,
+"is_music": true,
+"stale_since": null,
+"id": "ddd2694c6e5c",
 "first_seen": "baseline"
 },
 {
@@ -62955,7 +62098,7 @@
 ],
 "description": null,
 "summary": "Soirée reggae réunissant pour la première fois sur scène Mike et Riké (Sinsémilia), Manu et Guizmo (Tryo), HK et Vanupié, qui interprètent ensemble les grands titres de leurs répertoires respectifs.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/650x650ensemble-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/650x650ensemble-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CONCERT ENSEMBLE",
@@ -64374,7 +63517,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/650x650px-le-cas-pucine2.jpg-600x600.jpeg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/650x650px-le-cas-pucine2.jpg-600x600.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LE CAS PUCINE",
@@ -64639,7 +63782,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2231/chinchilla/?of=34",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2231/chinchilla/?of=33",
 "ticket_url": "https://www.livenation.fr/chinchilla-tickets-adp1304513",
 "price": null,
 "free": false,
@@ -65416,7 +64559,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2258/hollysiz/?of=35",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2258/hollysiz/?of=34",
 "ticket_url": "https://www.concert-auguri.fr/fr/manifestation/4698/hollysiz",
 "price": null,
 "free": false,
@@ -65570,7 +64713,7 @@
 ],
 "description": null,
 "summary": "Concert de rap britannique avec Nemzzz, qui défend son projet « Locked In » après « From Me 2 You » et des singles comme « GEEKIN » avec Lil Yachty.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/08/main-600x398.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/08/main-600x398.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NEMZZZ",
@@ -66278,7 +65421,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2259/hollysiz/?of=36",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2259/hollysiz/?of=35",
 "ticket_url": "https://www.concert-auguri.fr/fr/manifestation/4698/hollysiz",
 "price": null,
 "free": false,
@@ -66455,7 +65598,7 @@
 ],
 "description": null,
 "summary": "Bilal Hassani, figure de la pop française contemporaine, propose un show intense et fédérateur.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BILAL HASSANI",
@@ -67368,7 +66511,7 @@
 ],
 "description": null,
 "summary": "Hilight Tribe, référence de la Natural Trance, présente un show mêlant instruments ethniques et énergie scénique. En première partie, Spoink ouvre la soirée avec une musique organique, festive et improvisée, entre acoustique et électronique.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/hlt-650650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/hlt-650650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HILIGHT TRIBE",
@@ -67749,7 +66892,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2260/hollysiz/?of=37",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2260/hollysiz/?of=36",
 "ticket_url": "https://www.concert-auguri.fr/fr/manifestation/4698/hollysiz",
 "price": null,
 "free": false,
@@ -69097,7 +68240,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2264/death-valley-girls/?of=38",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2264/death-valley-girls/?of=37",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/death-valley-girls-billet/idmanif/658213/idtier/38743526",
 "price": null,
 "free": false,
@@ -69409,7 +68552,7 @@
 ],
 "description": null,
 "summary": "Concert dessiné de Julien Neel, auteur de la BD Lou !, avec le groupe Krystal Zealot : musique, image et narration se rejoignent sur scène pour conclure le cycle Lou ! Sonata.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/lousonata650x650-591x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/lousonata650x650-591x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOU ! SONATA 3",
@@ -71060,7 +70203,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2142/zebrahead/?of=39",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2142/zebrahead/?of=38",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -73260,7 +72403,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2180/horskh/?of=40",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2180/horskh/?of=39",
 "ticket_url": "https://billetterie.seetickets.fr/horskh-la-maroquinerie-paris-21-novembre-2026-css5-baseproductions-pg101-ri11609683.html",
 "price": null,
 "free": false,
@@ -73336,6 +72479,38 @@
 "is_music": true,
 "stale_since": null,
 "id": "fdf276110c7a",
+"first_seen": "baseline"
+},
+{
+"title": "Diary of women",
+"date": "2026-11-21",
+"venue": "MPAA/Broussais - Maison des Pratiques Artistiques Amateurs",
+"venue_slug": "mpaa-broussais-maison-des-pratiques-artistiques-amateurs",
+"source": "opendata",
+"time": "19:30",
+"url": "https://www.paris.fr/evenements/diary-of-women-125834",
+"ticket_url": "https://www.mpaa.fr/programmation/diary-of-women",
+"price": "Vente sur place sous réserve de places disponibles. Billette",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Une poésie de mots et de mouvements à travers la danse Bharata natyam Découvrez un spectacle mêlant à la fois poésie des mots et poésie du mouvement, à travers le Bharata natyam, danse sacrée du sud de l’Inde.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-271db82b95676e4e79e16b61d663d88f.jpg",
+"address": "100 rue Didot, 75014, Paris",
+"area": "14e",
+"headliner": "Diary of women",
+"support": [],
+"players": {},
+"lat": 48.827999,
+"lon": 2.315748,
+"is_music": true,
+"stale_since": null,
+"id": "6691abbfe96b",
 "first_seen": "baseline"
 },
 {
@@ -74933,7 +74108,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2316/ulysse/?of=41",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2316/ulysse/?of=40",
 "ticket_url": "https://shotgun.live/fr/events/ulysse-la-maroquinerie",
 "price": null,
 "free": false,
@@ -75552,7 +74727,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2262/izae/?of=42",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2262/izae/?of=41",
 "ticket_url": "https://www.billetweb.fr/izae-la-maroquinerie",
 "price": null,
 "free": false,
@@ -75660,7 +74835,7 @@
 ],
 "description": null,
 "summary": "Le rappeur marseillais Lagui, révélé avec « Ciro » puis l'EP « En Attendant en Croix » et son premier album « En Croix », défend sur scène un rap français cru et réaliste.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/lagui-cigale-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/lagui-cigale-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LAGUI",
@@ -76449,7 +75624,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2274/thomas-kahn/?of=43",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2274/thomas-kahn/?of=42",
 "ticket_url": "https://caramba.trium.fr/fr/t/-/event/67711",
 "price": null,
 "free": false,
@@ -76583,7 +75758,7 @@
 ],
 "description": null,
 "summary": "Le Greg Fest, soirée rap/hip-hop organisée par Clearwaters, avec un line-up, des surprises et des happenings.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/650-par-650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/650-par-650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GREGFEST",
@@ -77814,7 +76989,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2303/anais-rosso/?of=44",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2303/anais-rosso/?of=43",
 "ticket_url": "https://www.billetweb.fr/anais-rosso-maroquinerie",
 "price": null,
 "free": false,
@@ -77913,7 +77088,7 @@
 ],
 "description": null,
 "summary": "Le chanteur Tété, qui navigue depuis vingt-cinq ans entre folk, blues et pop, revient avec un nouveau cycle artistique inauguré par le single Vertige du Seum, pour des concerts intimes portant un projet solidaire en faveur des mères isolées.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650_visuel-neutre-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650_visuel-neutre-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TÉTÉ",
@@ -78993,6 +78168,13 @@
 "Sirius"
 ],
 "players": {
+"Carte blanche à Gautier Garrigue": {
+"youtube": {
+"videoId": "ffgnXKaAre0",
+"title": "Carte blanche à Gautier Garrigue — Live au 38Riv Jazz Club Paris #Shorts",
+"publishedAt": "2026-09-05"
+}
+},
 "Sirius": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=2220817615/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -79137,7 +78319,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2281/bardix-le-gaulois-complet/?of=45",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2281/bardix-le-gaulois-complet/?of=44",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -79237,7 +78419,7 @@
 ],
 "description": null,
 "summary": "Révélée par l'émission Nouvelle École, la rappeuse Eve La Marka mêle rap, trap, dancehall et pop urbaine dans un show intense et sans filtre. (Événement annulé.)",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/photo-neutre-1080x1350-1-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/photo-neutre-1080x1350-1-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EVE LA MARKA",
@@ -80820,7 +80002,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2203/chest/?of=46",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2203/chest/?of=45",
 "ticket_url": "https://link.dice.fm/B65cf7dc547a",
 "price": null,
 "free": false,
@@ -81043,7 +80225,7 @@
 ],
 "description": null,
 "summary": "Le rappeur nantais Cielbleu présente son EP « Gosse Coureur », une écriture aérienne mêlant poésie brute, humour et sincérité sur des beats entre rap, soul et jazz.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/gs-26-01-29-1276©gabriel-senechal-@gab.senechal-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/gs-26-01-29-1276©gabriel-senechal-@gab.senechal-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CIELBLEU",
@@ -81147,7 +80329,15 @@
 "support": [
 "VOYAGE DANS LE TEMPS"
 ],
-"players": {},
+"players": {
+"L’HEURE EXQUISE": {
+"youtube": {
+"videoId": "80Ceh3D6r-g",
+"title": "Renée Fleming - Hahn: L’Heure exquise, from 7 Chansons grises (session video)",
+"publishedAt": "2021-10-08"
+}
+}
+},
 "lat": 48.843,
 "lon": 2.306,
 "is_music": true,
@@ -83216,7 +82406,7 @@
 ],
 "description": null,
 "summary": "Le duo nous étions une armée présente son premier album « mais le ciel est sublime » : une voix parlée-chantée, des guitares saisissantes et des boîtes à rythmes, entre punk et rock alternatif, dans un univers mélancolique en clair-obscur.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/neua_2026_visuelweb_salle_650x650_la-cigale_draft1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/neua_2026_visuelweb_salle_650x650_la-cigale_draft1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOUS ÉTIONS UNE ARMÉE",
@@ -83271,7 +82461,15 @@
 "support": [
 "VOYAGE DANS LE TEMPS"
 ],
-"players": {},
+"players": {
+"L’HEURE EXQUISE": {
+"youtube": {
+"videoId": "80Ceh3D6r-g",
+"title": "Renée Fleming - Hahn: L’Heure exquise, from 7 Chansons grises (session video)",
+"publishedAt": "2021-10-08"
+}
+}
+},
 "lat": 48.843,
 "lon": 2.306,
 "is_music": true,
@@ -84751,7 +83949,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2299/crc/?of=47",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2299/crc/?of=46",
 "ticket_url": "https://link.dice.fm/Se14428cdfa3",
 "price": null,
 "free": false,
@@ -84844,7 +84042,7 @@
 ],
 "description": null,
 "summary": "SENYSS, artiste aux influences urbaines, caribéennes et R&B, présente un show accompagné de musiciens live konpa, entre rythmes caribéens, sensualité et énergie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/senyss-650650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/senyss-650650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SENYSS",
@@ -85390,7 +84588,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2241/julia-wolf/?of=48",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2241/julia-wolf/?of=47",
 "ticket_url": "https://www.livenation.fr/julia-wolf-tickets-adp1569646?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnpObblEpPdTiaZKguAF6Yrq3CYO4SyvmuVyMIN2KSYNEj5e2vZhZ54_W4r7c_aem_AQTfD25dR5d988YdWq-Yhg",
 "price": null,
 "free": false,
@@ -85620,6 +84818,38 @@
 "stale_since": "2026-10-07",
 "id": "80c88a3c5a3b",
 "first_seen": "baseline"
+},
+{
+"title": "RADIO FREE ALICE",
+"date": "2026-11-30",
+"venue": "Point Éphémère",
+"venue_slug": "point-ephemere",
+"source": "pointephemere",
+"time": "20:00",
+"url": "https://www.pointephemere.org/event/radio-free-alice",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://images.prismic.io/pointf/w93K_Wra_hpuzV5a_RFA-WIBTOUR-PARISSHOWS-STORY-2-.png?auto=format&w=200&q=25&fm=webp",
+"address": "200 quai de Valmy, 75010 Paris",
+"area": "Canal Saint-Martin",
+"headliner": "RADIO FREE ALICE",
+"support": [],
+"players": {},
+"lat": 48.8797,
+"lon": 2.3693,
+"is_music": false,
+"stale_since": null,
+"id": "0d567c0b21c6",
+"first_seen": "2026-10-13"
 },
 {
 "title": "Les lundis jazz manouche du Piano Vache",
@@ -86153,7 +85383,7 @@
 ],
 "description": null,
 "summary": "Nuit Incolore, alias Théo Marclay, revient avec un nouveau chapitre pop aux accents orchestraux et épiques, après les succès « Dépassé », « Crush » et l'album « La loi du papillon ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NUIT INCOLORE",
@@ -86947,7 +86177,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2334/modestep/?of=49",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2334/modestep/?of=48",
 "ticket_url": "https://shotgun.live/fr/events/modestep-la-maroquinerie",
 "price": null,
 "free": false,
@@ -87008,7 +86238,7 @@
 ],
 "description": null,
 "summary": "Première à La Cigale pour Mauvaise Bouche, qui défend une pop francophone accrocheuse aux textes sincères et au franc-parler, autour de son premier album « La vie d'adulte ».",
-"image": "https://lacigale.fr/wp-content/uploads/2025/10/1080x1080-credit-charlotte-steppe-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/10/1080x1080-credit-charlotte-steppe-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MAUVAISE BOUCHE",
@@ -88114,7 +87344,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2149/changeline-complet/?of=0",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2149/changeline-complet/?of=49",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -88269,7 +87499,7 @@
 ],
 "description": null,
 "summary": "Le rappeur, compositeur et multi-instrumentiste Sheldon, membre du collectif 75e Session, présente son nouveau disque nourri de jazz, reggae et rock, à l'issue d'une tournée.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-pour-la-cigale-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-pour-la-cigale-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHELDON",
@@ -88597,6 +87827,40 @@
 "first_seen": "2026-10-03"
 },
 {
+"title": "Square Noon",
+"date": "2026-12-03",
+"venue": "Le Melville",
+"venue_slug": "le-melville",
+"source": "opendata",
+"time": "20:30",
+"url": "https://www.paris.fr/evenements/square-noon-125562",
+"ticket_url": "https://lemelville.fr/?p=6661",
+"price": "Tarif plein : 10 EUR",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Festival",
+"genres": [
+"jazz"
+],
+"genre_source": "llm",
+"subgenres": [],
+"description": "Jazz Trio Contemporain",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/07/huge-9be7eed2cb8144d0ea7497d3b87216f7.png",
+"address": "28 Rue Jean Mermoz, 75008, Paris",
+"area": "8e",
+"headliner": "Square Noon",
+"support": [],
+"players": {},
+"lat": 48.8713718,
+"lon": 2.3121803,
+"is_music": true,
+"stale_since": null,
+"id": "6f25838f0c9b",
+"first_seen": "2026-10-07"
+},
+{
 "title": "Tribute to Duke",
 "date": "2026-12-03",
 "venue": "Le Melville",
@@ -88632,40 +87896,6 @@
 "stale_since": null,
 "id": "067cbd6fc178",
 "first_seen": "2026-09-30"
-},
-{
-"title": "Square Noon",
-"date": "2026-12-03",
-"venue": "Le Melville",
-"venue_slug": "le-melville",
-"source": "opendata",
-"time": "20:30",
-"url": "https://www.paris.fr/evenements/square-noon-125562",
-"ticket_url": "https://lemelville.fr/?p=6661",
-"price": "Tarif plein : 10 EUR",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Festival",
-"genres": [
-"jazz"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": "Jazz Trio Contemporain",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/10/07/huge-9be7eed2cb8144d0ea7497d3b87216f7.png",
-"address": "28 Rue Jean Mermoz, 75008, Paris",
-"area": "8e",
-"headliner": "Square Noon",
-"support": [],
-"players": {},
-"lat": 48.8713718,
-"lon": 2.3121803,
-"is_music": true,
-"stale_since": null,
-"id": "6f25838f0c9b",
-"first_seen": "2026-10-07"
 },
 {
 "title": "Clémence de Tournemire",
@@ -89261,7 +88491,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2209/edgar/?of=1",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2209/edgar/?of=0",
 "ticket_url": "https://my.weezevent.com/edgar-la-maroquinerie-paris",
 "price": null,
 "free": false,
@@ -89391,7 +88621,7 @@
 ],
 "description": null,
 "summary": "Le duo Bonbon Vodou (Oriane Lacaille et JereM Boucris) défend son troisième album, Épopée métèque, entre océan Indien et Méditerranée, sur la route des exils, avec des textes en français, créole et gascon et le renfort du trio Piment Piment.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/format-site-bb-vodou-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/format-site-bb-vodou-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BONBON VODOU",
@@ -89654,7 +88884,15 @@
 "area": "Villette",
 "headliner": "L’heure exquise",
 "support": [],
-"players": {},
+"players": {
+"L’heure exquise": {
+"youtube": {
+"videoId": "80Ceh3D6r-g",
+"title": "Renée Fleming - Hahn: L’Heure exquise, from 7 Chansons grises (session video)",
+"publishedAt": "2021-10-08"
+}
+}
+},
 "lat": 48.8892,
 "lon": 2.3939,
 "is_music": true,
@@ -90967,7 +90205,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2252/triggerfinger/?of=2",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2252/triggerfinger/?of=1",
 "ticket_url": "https://bit.ly/Triggerfinger_Paris26",
 "price": null,
 "free": false,
@@ -91003,6 +90241,38 @@
 "is_music": true,
 "stale_since": null,
 "id": "95939cef9e57",
+"first_seen": "baseline"
+},
+{
+"title": "Familles de cœur",
+"date": "2026-12-05",
+"venue": "MPAA/Saint-Germain - Maison des Pratiques Artistiques Amateurs",
+"venue_slug": "mpaa-saint-germain-maison-des-pratiques-artistiques-amateurs",
+"source": "opendata",
+"time": "19:30",
+"url": "https://www.paris.fr/evenements/familles-de-coeur-125840",
+"ticket_url": "https://www.mpaa.fr/programmation/familles-de-coeur",
+"price": "Vente sur place sous réserve de places disponibles. Billette",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Explorez les multiples facettes du cœur à travers la musique",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-77b494a75bc199fab48c7b34048f145f.png",
+"address": "4 rue Félibien, 75006, Paris",
+"area": "6e",
+"headliner": "Familles de cœur",
+"support": [],
+"players": {},
+"lat": 48.852123,
+"lon": 2.336519,
+"is_music": true,
+"stale_since": null,
+"id": "d06f7f936ac3",
 "first_seen": "baseline"
 },
 {
@@ -91066,7 +90336,7 @@
 ],
 "description": null,
 "summary": "Broken Back, auteur-compositeur-interprète nommé aux Victoires de la Musique 2017, présente sa folk pop lumineuse et fédératrice. Le concert s'inscrit dans le dernier chapitre du « Follow The Sun Tour », avant une pause consacrée à l'écriture de son prochain album.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/brokenback-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/brokenback-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BROKEN BACK",
@@ -92398,6 +91668,48 @@
 "first_seen": "baseline"
 },
 {
+"title": "Nous sommes le vent",
+"date": "2026-12-06",
+"venue": "MPAA/Saint-Germain - Maison des Pratiques Artistiques Amateurs",
+"venue_slug": "mpaa-saint-germain-maison-des-pratiques-artistiques-amateurs",
+"source": "opendata",
+"time": "16:00",
+"url": "https://www.paris.fr/evenements/nous-sommes-le-vent-125842",
+"ticket_url": "https://www.mpaa.fr/programmation/nous-sommes-le-vent",
+"price": "Vente sur place sous réserve de places disponibles. Billette",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [
+"jazz"
+],
+"genre_source": "rules",
+"subgenres": [],
+"description": "Un voyage musical autour des éléments climatiques mêlant quartet de jazz et orchestre d'harmonie",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-70d58a8ec33b6e1004e6dc4ffb7c4ad1.jpg",
+"address": "4 rue Félibien, 75006, Paris",
+"area": "6e",
+"headliner": "Nous sommes le vent",
+"support": [],
+"players": {
+"Nous sommes le vent": {
+"youtube": {
+"publishedAt": "2017-10-26",
+"title": "nous sommes le vent debout - Reportage ILTV",
+"videoId": "FnRjO8juomU"
+}
+}
+},
+"lat": 48.852123,
+"lon": 2.336519,
+"is_music": true,
+"stale_since": null,
+"id": "551787ce22bc",
+"first_seen": "baseline"
+},
+{
 "title": "Mozart - Requiem",
 "date": "2026-12-06",
 "venue": "Philharmonie de Paris",
@@ -92707,7 +92019,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2250/nobodylikesbirdie/?of=3",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2250/nobodylikesbirdie/?of=2",
 "ticket_url": "https://shotgun.live/fr/events/nobodylikesbirdie-la-maroquinerie",
 "price": null,
 "free": false,
@@ -92806,7 +92118,7 @@
 ],
 "description": "Shaârghot donne rendez-vous aux amateurs de metal et de musique industrielle le 6 décembre 2026 à La Cigale, à Paris. Une date qui s’annonce particulièrement intense et qui viendra s’inscrire dans une tournée à travers toute la France.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHAÂRGHOT",
@@ -93450,7 +92762,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2292/oathbreaker-complet/?of=4",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2292/oathbreaker-complet/?of=3",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -93967,7 +93279,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2297/minitel/?of=5",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2297/minitel/?of=4",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/minitel-billet/idmanif/663193/idtier/38743526",
 "price": null,
 "free": false,
@@ -94102,7 +93414,7 @@
 ],
 "description": null,
 "summary": "Le rappeur GLK, originaire de Bobigny et révélé par sa série de freestyles Bandito, donne son premier concert sur cette scène, présenté par Allo Floride, La Triade et Karma.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/glk-la-cigale-raw-1080x1350-1-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/glk-la-cigale-raw-1080x1350-1-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GLK",
@@ -94553,7 +93865,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2289/lemofil-complet/?of=6",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2289/lemofil-complet/?of=5",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -94667,7 +93979,7 @@
 ],
 "description": null,
 "summary": "Concert de Wamen, artiste franco-camerounaise de rap et R'n'B à l'écriture directe et poétique, connue pour son titre « Discipline » et son projet « RE ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-la-cigale-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-la-cigale-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "WAMEN",
@@ -95324,6 +94636,42 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les midi-concerts à la mairie du 8e",
+"date": "2026-12-10",
+"venue": "Mairie du 8e arrondissement",
+"venue_slug": "mairie-du-8e-arrondissement",
+"source": "opendata",
+"time": "13:00",
+"url": "https://www.paris.fr/evenements/les-midi-concerts-a-la-mairie-du-8e-125845",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "Entrée libre et gratuite dans la limite des places disponibl",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"classical"
+],
+"genre_source": "llm",
+"subgenres": [
+"classical guitar"
+],
+"description": "Concert à la mairie du 8e par les élèves de Musique de chambre",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/10/01/huge-06ade22905642e6dba7b6386927d2a14.jpg",
+"address": "3 rue de Lisbonne, 75008, Paris",
+"area": "8e",
+"headliner": "Les midi-concerts à la mairie du 8e",
+"support": [],
+"players": {},
+"lat": 48.877751,
+"lon": 2.317486,
+"is_music": true,
+"stale_since": null,
+"id": "37b95f9cdb92",
+"first_seen": "2026-10-13"
+},
+{
 "title": "Auditions 26-27",
 "date": "2026-12-10",
 "venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
@@ -95808,7 +95156,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2379/shobee/?of=7",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2379/shobee/?of=6",
 "ticket_url": "https://link.dice.fm/cc20c2e0a689",
 "price": null,
 "free": false,
@@ -95900,7 +95248,7 @@
 ],
 "description": null,
 "summary": "Le rappeur parisien Jwles, qui avait rempli la Machine du Moulin Rouge en 2024, revient sur scène à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/flyer-jwles_768x768-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/flyer-jwles_768x768-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JWLES",
@@ -96894,7 +96242,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2244/maddy-street/?of=8",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2244/maddy-street/?of=7",
 "ticket_url": "https://shotgun.live/fr/events/maddy-street-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -97001,7 +96349,7 @@
 ],
 "description": null,
 "summary": "Retrouvailles entre le groupe parisien Java et le chanteur jamaïcain Winston McAnuff, vingt ans après leur tournée « Paris Rockin' », autour d'un projet commun reggae-chanson. Sur scène : R.Wan et Winston au chant, Fixi à l'accordéon et aux claviers, Alexis Bossard à la batterie et Tom Fire à la basse et aux machines.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/java-mcanuuf-carre_-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/java-mcanuuf-carre_-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JAVA & WINSTON MCANUFF",
@@ -97359,7 +96707,7 @@
 "venue_slug": "eglise-de-la-madeleine",
 "source": "opendata",
 "time": "20:45",
-"url": "https://www.paris.fr/evenements/le-messie-de-haendel-106885",
+"url": "https://www.paris.fr/evenements/copie-de-le-messie-de-haendel-106978",
 "ticket_url": "https://www.orchestrehelios.com/concerts",
 "price": "DE 60 à 20 €",
 "free": false,
@@ -98152,7 +97500,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2308/jeanne-complet/?of=9",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2308/jeanne-complet/?of=8",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -98454,6 +97802,11 @@
 "spotify": {
 "id": "3faEZMpTmZFXpELU1EwWNL",
 "url": "https://open.spotify.com/artist/3faEZMpTmZFXpELU1EwWNL"
+},
+"youtube": {
+"videoId": "bWx_HlL3k24",
+"title": "Jordi Savall and Hespèrion XXI - Musical Europe | Bayreuth Baroque Festival 2020",
+"publishedAt": "2024-11-15"
 }
 },
 "Vivaldi": {
@@ -99424,7 +98777,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/feet-650_650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/feet-650_650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FEET",
@@ -99597,7 +98950,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2270/maustetytot/?of=10",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2270/maustetytot/?of=9",
 "ticket_url": "https://billetterie.seetickets.fr/maustetytot-la-maroquinerie-paris-13-decembre-2026-css5-baseproductions-pg101-ri11763649.html",
 "price": null,
 "free": false,
@@ -100126,7 +99479,7 @@
 "ticket_url": null,
 "price": null,
 "free": false,
-"sold_out": false,
+"sold_out": true,
 "cancelled": false,
 "raw_genre": null,
 "genres": [
@@ -100164,7 +99517,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2291/youv-dee/?of=11",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2291/youv-dee/?of=10",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -100666,7 +100019,7 @@
 ],
 "description": null,
 "summary": "Ladaniva, duo formé par la chanteuse Jaklin Baghdasaryan et le multi-instrumentiste Louis Thomas, mêle musiques traditionnelles arménienne et balkanique, maloya et reggae dans une musique-monde explosive. Le groupe, connu pour « Kef Chilini », « Shakar » et « Jako » (Eurovision 2024), présente son deuxième album entre tradition revisitée et sonorités contemporaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/07/ladaniva_photo-carree-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/07/ladaniva_photo-carree-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LADANIVA",
@@ -100914,7 +100267,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": null,
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2223/barbara-carlotti/?of=12",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2223/barbara-carlotti/?of=11",
 "ticket_url": "https://barbaracarlotti.lnk.to/Maroquinerie",
 "price": null,
 "free": false,
@@ -101229,7 +100582,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2221/adele-robin/?of=13",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2221/adele-robin/?of=12",
 "ticket_url": "https://spectacles.bleucitron.net/reserver/adele-et-robin-maroquinerie-paris/8909",
 "price": null,
 "free": false,
@@ -101262,6 +100615,38 @@
 "is_music": true,
 "stale_since": null,
 "id": "ca4b72e6b0e2",
+"first_seen": "baseline"
+},
+{
+"title": "Le Grand Marcel",
+"date": "2026-12-16",
+"venue": "MPAA/Saint-Germain - Maison des Pratiques Artistiques Amateurs",
+"venue_slug": "mpaa-saint-germain-maison-des-pratiques-artistiques-amateurs",
+"source": "opendata",
+"time": "19:30",
+"url": "https://www.paris.fr/evenements/le-grand-marcel-125857",
+"ticket_url": "https://www.mpaa.fr/programmation/le-grand-marcel",
+"price": "Vente sur place sous réserve de places disponibles. Billette",
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Spectacle musical",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": "Orchestre amateur à Montreuil axé sur le collectif, l'écoute et l'improvisation",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2026/10/12/huge-c476ebe4b3e12c874ace8885603bb826.jpeg",
+"address": "4 rue Félibien, 75006, Paris",
+"area": "6e",
+"headliner": "Le Grand Marcel",
+"support": [],
+"players": {},
+"lat": 48.852123,
+"lon": 2.336519,
+"is_music": true,
+"stale_since": null,
+"id": "ebe4e963e283",
 "first_seen": "baseline"
 },
 {
@@ -101320,7 +100705,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Florent Marchet, figure singulière de la chanson française depuis plus de vingt ans, revient sur scène avec un nouveau projet écrit entre la France et la Méditerranée, aux sonorités plus organiques et à l'écriture attentive aux trajectoires humaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FLORENT MARCHET",
@@ -102004,7 +101389,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2373/joe-yorke/?of=14",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2373/joe-yorke/?of=13",
 "ticket_url": "https://shotgun.live/events/joe-yorke-la-maroquinerie",
 "price": null,
 "free": false,
@@ -102137,7 +101522,7 @@
 ],
 "description": null,
 "summary": "Renan Luce célèbre les vingt ans de son premier album « Repentie » en rejouant sur scène les treize chansons du disque dans l'ordre.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/renan-luce_2026_bd©laurent_seroussi_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/renan-luce_2026_bd©laurent_seroussi_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RENAN LUCE",
@@ -103255,7 +102640,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2374/joe-yorke/?of=15",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2374/joe-yorke/?of=14",
 "ticket_url": "https://shotgun.live/events/joe-yorke-la-maroquinerie-2",
 "price": null,
 "free": false,
@@ -104383,7 +103768,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2245/nassi/?of=16",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2245/nassi/?of=15",
 "ticket_url": "https://link.dice.fm/sc8dab797740",
 "price": null,
 "free": false,
@@ -106990,7 +106375,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/nadege_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/nadege_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NADÈGE 100 GÈNE",
@@ -107581,7 +106966,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2287/vernis-rouge/?of=17",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2287/vernis-rouge/?of=16",
 "ticket_url": "https://my.weezevent.com/vernis-rouge-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -107809,7 +107194,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAMIEN GILLARD",
@@ -107952,7 +107337,7 @@
 ],
 "description": null,
 "summary": "K-Reen, pionnière du R&B en France, donne son tout premier concert solo : après plus de 30 ans de carrière, elle y réunit ses plus grands succès, des invités surprises et des moments inédits.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/08/k-reen-cigale-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/08/k-reen-cigale-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "K-REEN",
@@ -108424,7 +107809,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2243/lost-in-kyiv/?of=18",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2243/lost-in-kyiv/?of=17",
 "ticket_url": "https://found.ee/910Xp8",
 "price": null,
 "free": false,
@@ -109538,15 +108923,15 @@
 "first_seen": "baseline"
 },
 {
-"title": "SCARAMOUCHE ET MUSIC-HALL",
+"title": "Scaramouche et Music-Hall",
 "date": "2027-01-13",
 "venue": "Théâtre du Châtelet",
 "venue_slug": "theatre-du-chatelet",
 "source": "opendata",
 "time": "20:00",
-"url": "https://www.paris.fr/evenements/scaramouche-et-music-hall-123628",
-"ticket_url": "https://www.orchestredechambredeparis.com/concert/scaramouche-et-music-hall/",
-"price": "De 5 à 45€",
+"url": "https://www.paris.fr/evenements/scaramouche-et-music-hall-124796",
+"ticket_url": "https://billetterie.chatelet.com/selection/event/seat?perfId=10229738233067&lang=fr",
+"price": "payant",
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -109559,12 +108944,12 @@
 "music-hall",
 "operetta"
 ],
-"description": "Une soirée où la musique classique change de costume. Au Théâtre du Châtelet le 13 janvier à 20h.",
+"description": "Hervé Niquet réunit l’Orchestre de chambre de Paris, le chœur du Concert Spirituel et le clarinettiste Florent Pujuila pour une soirée aussi virtuose que populaire. Entre opérette, chanson française et raretés inattendues, ce programme célèbre avec humour, émotion et panache l’esprit du Théâtre et des grandes soirées parisiennes.",
 "summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/09/10/huge-3f614ff0d3ef8ecd6edb265a46bb7faa.jpg",
+"image": "https://cdn.paris.fr/qfapv4/2026/09/25/huge-86200c55d2b13b9ca2b1866aafdf02c2.jpeg",
 "address": "1 place du Châtelet, 75001, Paris",
 "area": "1er",
-"headliner": "SCARAMOUCHE ET MUSIC-HALL",
+"headliner": "Scaramouche et Music-Hall",
 "support": [],
 "players": {},
 "lat": 48.857614,
@@ -109775,7 +109160,7 @@
 ],
 "description": null,
 "summary": "Heaven Sam, DJ et artiste-performer de la scène afro, architecte du mouvement Afro Disco et créateur du phénomène SKALALA, investit La Cigale pour son show « The Afrodisco Experience », présenté comme une expérience sensorielle totale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HEAVEN SAM",
@@ -110145,7 +109530,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2301/locomuerte-doorshan/?of=19",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2301/locomuerte-doorshan/?of=18",
 "ticket_url": "https://shotgun.live/fr/events/loco-muerte-door-shan-la-maroquinerie",
 "price": null,
 "free": false,
@@ -110219,7 +109604,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Après plus de 100 dates sur les routes de France, la jeune artiste Dinaa présente un show sublimé à La Cigale, où sa voix soul raconte ses expériences personnelles entre mélancolie et résilience.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DINAA",
@@ -110794,7 +110179,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2298/sawyer-hill/?of=20",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2298/sawyer-hill/?of=19",
 "ticket_url": "https://www.aegpresents.fr/event/sawyer-hill/",
 "price": null,
 "free": false,
@@ -110858,7 +110243,7 @@
 ],
 "description": null,
 "summary": "Concert du rappeur et auteur-interprète parisien DMA, entre rap introspectif et mélodie, qui défend son album CŒUR DE LION dans un live intense et habité.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-affiche-vierge-dma-la-cigale-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-affiche-vierge-dma-la-cigale-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DMA",
@@ -111660,7 +111045,7 @@
 ],
 "description": null,
 "summary": "Le saxophoniste Léon Phal, figure de la nouvelle scène jazz européenne, défend son quatrième album Bodies & Ideas, entre jazz, groove et électronique, accompagné de Gauthier Toux, Zacharie Ksyk, Rémi Bouyssière et Arthur Alard pour un live dansant et intense.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/format-site-phal-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/format-site-phal-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LÉON PHAL",
@@ -111988,7 +111373,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2320/feldup/?of=21",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2320/feldup/?of=20",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/feldup-billet/idmanif/665731/idtier/38743526",
 "price": null,
 "free": false,
@@ -112237,7 +111622,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/mico-milwaukee-9.28-40-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/mico-milwaukee-9.28-40-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MICO",
@@ -112687,7 +112072,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2319/feldup/?of=22",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2319/feldup/?of=21",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/feldup-billet/idmanif/665731/idtier/38743526",
 "price": null,
 "free": false,
@@ -112912,7 +112297,7 @@
 ],
 "description": null,
 "summary": "Brothers in Band rend hommage à Dire Straits avec The Very Best of Dire Straits, un spectacle qui parcourt les grandes périodes du groupe de Mark Knopfler et ses titres emblématiques comme « Sultans of Swing », « Money for Nothing » ou « Brothers in Arms », dans le respect des arrangements d'origine.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/dire-straits-bib-la-cigale-650x650px-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/dire-straits-bib-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "bROTHERS iN bAND",
@@ -113258,7 +112643,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2242/7-weeks/?of=23",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2242/7-weeks/?of=22",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/7-weeks-billet/idmanif/657055",
 "price": null,
 "free": false,
@@ -113414,7 +112799,7 @@
 ],
 "description": "LOGICALTRAMP ravive avec éclat l’esprit de Supertramp : un hommage authentique, soutenu par les membres historiques, pour replonger dans des titres légendaires au charme intact. Un voyage musical fidèle, brillant & intensément Supertramp.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/logicaltramp-la-cigale-650x650px-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/logicaltramp-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOGICALTRAMP",
@@ -113836,7 +113221,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2370/the-milk-carton-kids/?of=24",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2370/the-milk-carton-kids/?of=23",
 "ticket_url": "https://www.aegpresents.fr/event/the-milk-carton-kids/",
 "price": null,
 "free": false,
@@ -114002,7 +113387,7 @@
 ],
 "description": "Après le succès sans précédent de leurs spectacles à travers toute l'Europe, \"LeNoise\" arrive enfin en France grâce au CONCERT EXTRAORDINAIRE, afin de combler les fans de Neil Young qui pourront revivre sur scène les versions originales plus vraies que nature, de ses plus grands classiques.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/le-noise-la-cigale-650x650px-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/le-noise-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LENOISE",
@@ -114377,7 +113762,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2382/soul-sugar-meets-dub-shepherds/?of=25",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2382/soul-sugar-meets-dub-shepherds/?of=24",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/soul-sugar-meets-dub-sheperds-billet/idmanif/673191/idtier/38743526",
 "price": null,
 "free": false,
@@ -114426,7 +113811,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/hl-tour-press-pic-scaled-e1782220099550-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/hl-tour-press-pic-scaled-e1782220099550-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAN & PHIL",
@@ -114947,7 +114332,7 @@
 ],
 "description": null,
 "summary": "Concert pop de Pi Ja Ma, alias Pauline de Tarragon, autour de son nouvel album « Magnetofille », pour une « Pi Ja Ma party » mêlant douceur, humour et poésie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/visuel_pi-ja-ma-la-cigale-2-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/visuel_pi-ja-ma-la-cigale-2-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PI JA MA",
@@ -115412,7 +114797,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2313/ritual-x/?of=26",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2313/ritual-x/?of=25",
 "ticket_url": "https://shotgun.live/fr/events/ritual-x-la-maroquinerie",
 "price": null,
 "free": false,
@@ -115473,7 +114858,7 @@
 ],
 "description": null,
 "summary": "Le groupe rock britannique Editors est en tournée après son single « Call It In », premier morceau depuis l'album EBM, qui annonce un nouveau chapitre pour la formation menée par Tom Smith.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/editors-2026by-rahi-rezvani-first-press-shot-600x399.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/editors-2026by-rahi-rezvani-first-press-shot-600x399.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EDITORS",
@@ -116504,7 +115889,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2375/friendly-fires/?of=27",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2375/friendly-fires/?of=26",
 "ticket_url": "https://www.aegpresents.fr/event/friendly-fires/",
 "price": null,
 "free": false,
@@ -116569,7 +115954,7 @@
 ],
 "description": null,
 "summary": "Concert de rap du artiste Sean, dans le cadre de sa tournée « tfkpourlafindumonde? ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/photo-sean-424x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/photo-sean-424x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SEAN",
@@ -116906,7 +116291,7 @@
 ],
 "description": null,
 "summary": "Resolve donne son plus gros concert parisien en tête d'affiche, dans un registre metal puissant mêlant mélodies accrocheuses et intensité émotionnelle, avec Spleen en première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/resolve-2026-aurelien-mariat-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/resolve-2026-aurelien-mariat-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RESOLVE",
@@ -117743,7 +117128,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2389/pamela/?of=28",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2389/pamela/?of=27",
 "ticket_url": "https://shotgun.live/events/pamela-a-la-maroquinerie",
 "price": null,
 "free": false,
@@ -118012,6 +117397,40 @@
 "stale_since": null,
 "id": "6f4232b3a85a",
 "first_seen": "2026-10-08"
+},
+{
+"title": "Auditions 26-27",
+"date": "2027-02-03",
+"venue": "Conservatoire à rayonnement régional de Paris - Ida Rubinstein",
+"venue_slug": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
+"source": "opendata",
+"time": "18:30",
+"url": "https://www.paris.fr/evenements/auditions-25-26-92345",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "gratuit",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"classical"
+],
+"genre_source": "llm",
+"subgenres": [],
+"description": "Retrouvez nos élèves en concerts de classes instrumentales, vocales, et musique d'ensembles lors de ces rendez-vous réguliers.",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/09/10/huge-ca46794bcd60f69a830999c685ddad41.jpg",
+"address": "14, rue de Madrid, 75008, Paris",
+"area": "8e",
+"headliner": "Auditions 26-27",
+"support": [],
+"players": {},
+"lat": 48.8785160001733,
+"lon": 2.32069904092731,
+"is_music": true,
+"stale_since": null,
+"id": "c92bc0340ee2",
+"first_seen": "baseline"
 },
 {
 "title": "Jam avec l'association Cadence",
@@ -118885,7 +118304,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2323/mister-gang/?of=29",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2323/mister-gang/?of=28",
 "ticket_url": "https://shotgun.live/fr/events/mister-gang-la-maroquinerie-paris",
 "price": null,
 "free": false,
@@ -119328,7 +118747,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2280/dagny/?of=30",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2280/dagny/?of=29",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/dagny-billet/idmanif/659620",
 "price": null,
 "free": false,
@@ -119752,7 +119171,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2393/sofia-camara/?of=31",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2393/sofia-camara/?of=30",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/sofia-camara-billet/idmanif/674164",
 "price": null,
 "free": false,
@@ -121774,7 +121193,7 @@
 ],
 "description": null,
 "summary": "Le quatuor canadien de hard rock Theory of a Deadman revient à La Cigale avec « The Barricade Tour », en défense de son EP « Funeral Songs Vol. 1 » qui renoue avec un heavy rock brut, énergique et accrocheur.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THEORY OF A DEADMAN",
@@ -121890,7 +121309,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2273/escape-the-internet/?of=32",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2273/escape-the-internet/?of=31",
 "ticket_url": "http://bit.ly/EscapeTheInternet_Paris27",
 "price": null,
 "free": false,
@@ -121948,7 +121367,7 @@
 ],
 "description": null,
 "summary": "Le groupe allemand d'indie-pop Giant Rooks revient à Paris pour défendre son troisième album studio, « If Heaven Exists, This Might Be It », enregistré aux Real World Studios.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/design-sans-titre-16-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/design-sans-titre-16-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "GIANT ROOKS",
@@ -122139,7 +121558,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2392/beth-orton/?of=33",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2392/beth-orton/?of=32",
 "ticket_url": "https://link.dice.fm/beth-orton-lamaroquinerie",
 "price": null,
 "free": false,
@@ -122799,6 +122218,45 @@
 "first_seen": "baseline"
 },
 {
+"title": "TAYRON KWIDAN’S",
+"date": "2027-02-19",
+"venue": "La Cigale",
+"venue_slug": "la-cigale",
+"source": "cigale",
+"time": null,
+"url": "https://lacigale.fr/evenements/tayron-kwidans-5/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "R'n'B",
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/tk_2027_visuelweb_salle_650x650_cigale-e1791881724421-600x322.jpg",
+"address": "120 boulevard de Rochechouart, 75018 Paris",
+"area": "Pigalle",
+"headliner": "TAYRON KWIDAN’S",
+"support": [],
+"players": {
+"TAYRON KWIDAN’S": {
+"spotify": {
+"id": "1wlqglR1kdPF2T0Rxee11v",
+"url": "https://open.spotify.com/artist/1wlqglR1kdPF2T0Rxee11v"
+}
+}
+},
+"lat": 48.8823,
+"lon": 2.34,
+"is_music": true,
+"stale_since": null,
+"id": "7f3ee049ad5e",
+"first_seen": "2026-10-13"
+},
+{
 "title": "Protomartyr",
 "date": "2027-02-19",
 "venue": "Le Trabendo",
@@ -123134,7 +122592,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2369/flowerovlove/?of=34",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2369/flowerovlove/?of=33",
 "ticket_url": "https://www.livenation.fr/flowerovlove-tickets-adp1381349",
 "price": null,
 "free": false,
@@ -123786,7 +123244,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2333/blind-channel/?of=35",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2333/blind-channel/?of=34",
 "ticket_url": "http://bit.ly/BlindChannel_Paris27",
 "price": null,
 "free": false,
@@ -124101,7 +123559,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2329/louve/?of=36",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2329/louve/?of=35",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -124638,7 +124096,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2390/gwendoline/?of=37",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2390/gwendoline/?of=36",
 "ticket_url": "https://shotgun.live/fr/events/gwendoline-la-maroquinerie-25-02-2027",
 "price": null,
 "free": false,
@@ -125582,7 +125040,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2268/luns/?of=38",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2268/luns/?of=37",
 "ticket_url": "https://shotgun.live/fr/events/luns-la-maroquinerie-paris?utm_source=la-maroquinerie",
 "price": null,
 "free": false,
@@ -125783,6 +125241,45 @@
 "stale_since": "2026-10-07",
 "id": "796f264bfd69",
 "first_seen": "baseline"
+},
+{
+"title": "DYNAMITE SHAKERS",
+"date": "2027-02-27",
+"venue": "Le Trianon",
+"venue_slug": "le-trianon",
+"source": "trianon",
+"time": null,
+"url": "https://www.letrianon.fr/fr/programmation/dynamite-shakers/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://www.letrianon.fr/wp-content/uploads/dynamite-shakers-trianon.jpg",
+"address": "80 boulevard de Rochechouart, 75018 Paris",
+"area": "Pigalle",
+"headliner": "DYNAMITE SHAKERS",
+"support": [],
+"players": {
+"DYNAMITE SHAKERS": {
+"spotify": {
+"id": "0T6jBctjBGXqRmXI2pe0aT",
+"url": "https://open.spotify.com/artist/0T6jBctjBGXqRmXI2pe0aT"
+}
+}
+},
+"lat": 48.8826,
+"lon": 2.3436,
+"is_music": true,
+"stale_since": null,
+"id": "13ea56277701",
+"first_seen": "2026-10-13"
 },
 {
 "title": "José James",
@@ -126272,7 +125769,7 @@
 ],
 "description": null,
 "summary": "La chanteuse portugaise Cristina Branco célèbre 30 ans de carrière, entre fado traditionnel, poésie et influences jazz, accompagnée de Bernardo Couto à la guitare portugaise, Bernardo Moreira à la contrebasse et Luís Figueiredo au piano.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/cristina_brancofado1_@augusto_brazio-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/cristina_brancofado1_@augusto_brazio-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CRISTINA BRANCO",
@@ -126440,7 +125937,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2372/ravage/?of=39",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2372/ravage/?of=38",
 "ticket_url": "https://www.fnacspectacles.com/event/ravage-en-concert-la-maroquinerie-paris-20-22114958/",
 "price": null,
 "free": false,
@@ -126618,7 +126115,7 @@
 ],
 "description": null,
 "summary": "Le compositeur et producteur danois Anders Trentemøller livre un live en groupe mêlant post-rock, électronica, shoegaze et dark wave, entre atmosphères cinématographiques et climax sonores.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/trente_2026_credit_jj-345x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/trente_2026_credit_jj-345x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TRENTEMØLLER",
@@ -126963,7 +126460,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2365/les-garcons-bouchers/?of=40",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2365/les-garcons-bouchers/?of=39",
 "ticket_url": "https://billetterie.seetickets.fr/les-garcons-bouchers-concert-pop-rock-css5-billetterie3ctour-pg51-ei1133735.html",
 "price": null,
 "free": false,
@@ -127400,7 +126897,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2366/les-garcons-bouchers/?of=41",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2366/les-garcons-bouchers/?of=40",
 "ticket_url": "https://billetterie.seetickets.fr/les-garcons-bouchers-concert-pop-rock-css5-billetterie3ctour-pg51-ei1133735.html",
 "price": null,
 "free": false,
@@ -127462,7 +126959,7 @@
 ],
 "description": null,
 "summary": "Le groupe britannique Palace revient à Paris pour défendre Ox, son cinquième album enregistré à Deptford avec Adam Jaffrey, aux couleurs organiques et americana inspirées de The Band ou Townes Van Zandt.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/credit-adrian-lee-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/credit-adrian-lee-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PALACE",
@@ -128013,7 +127510,7 @@
 ],
 "description": "Delco music présente Loa Mercury à La Cigale (Paris), le 6 mars 2027 à 20 h.",
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/loa@lacigale_650x650.jpeg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/loa@lacigale_650x650.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOA MERCURY",
@@ -128765,7 +128262,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2397/bodega/?of=42",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2397/bodega/?of=41",
 "ticket_url": "https://radical-production.trium.fr/fr/t/-/event/70399",
 "price": null,
 "free": false,
@@ -129031,7 +128528,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2384/isia/?of=43",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2384/isia/?of=42",
 "ticket_url": "https://bit.ly/ISIA_Paris27",
 "price": null,
 "free": false,
@@ -129089,7 +128586,7 @@
 ],
 "description": null,
 "summary": "Le chanteur bruxellois Noé Preszow, auteur-compositeur de chanson française, vient présenter sur scène les titres de son troisième album.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650_cigale-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650_cigale-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOÉ PRESZOW",
@@ -129528,7 +129025,7 @@
 ],
 "description": null,
 "summary": "Lancelot revient sur scène après son EP Curriculum Vitae, son single Madame et son dernier morceau Guéri, une pop française nostalgique et teintée d'humour sur les tourments amoureux.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/04/lancelot_1000x1000_chugolardenet-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2025/04/lancelot_1000x1000_chugolardenet-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LANCELOT",
@@ -129815,7 +129312,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2388/dressed-like-boys/?of=44",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2388/dressed-like-boys/?of=43",
 "ticket_url": "https://link.dice.fm/T9982109f8a9",
 "price": null,
 "free": false,
@@ -130382,7 +129879,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2368/medium-build/?of=45",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2368/medium-build/?of=44",
 "ticket_url": "https://link.dice.fm/Q43274d6ec16",
 "price": null,
 "free": false,
@@ -130445,7 +129942,7 @@
 ],
 "description": null,
 "summary": "Blanco White, projet solo du Londonien Josh Edwards, mêle guitare flamenco, charango et musique andalouse et latino à ses influences folk anglo-saxonnes, dans le sillage de son album Tarifa.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/blanco-white-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/blanco-white-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BLANCO WHITE",
@@ -131080,7 +130577,7 @@
 ],
 "description": null,
 "summary": "Retour sur scène d'Assassin, groupe mythique du hip-hop français mené par Rockin' Squat, pionnier d'un rap conscient et engagé produit en indépendance.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/2_1080x1350-assassin-la-cigale-c-sixtine-raider-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/2_1080x1350-assassin-la-cigale-c-sixtine-raider-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ASSASSIN",
@@ -132092,7 +131589,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2381/dirty-honey/?of=46",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2381/dirty-honey/?of=45",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/dirty-honey-billet/idmanif/671790/idtier/38743526",
 "price": null,
 "free": false,
@@ -132186,7 +131683,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2361/stella-lefty-complet/?of=47",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2361/stella-lefty-complet/?of=46",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -132244,7 +131741,7 @@
 ],
 "description": null,
 "summary": "Cali présente « Caliciuri », nouvel album et nouveau spectacle de chanson française, dans un concert placé sous le signe de la proximité et du partage avec le public.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/cali_cigale_site-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/cali_cigale_site-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CALI",
@@ -132586,7 +132083,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2380/barkanan/?of=48",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2380/barkanan/?of=47",
 "ticket_url": "https://shotgun.live/fr/events/barkanan-a-la-maroquinerie?utm_source=la-maroquinerie",
 "price": null,
 "free": false,
@@ -132648,7 +132145,7 @@
 ],
 "description": null,
 "summary": "Joyce Jonathan présente sur scène « De justesse », son sixième album personnel qu'elle a produit elle-même, évoquant amour, séparation, maternité et reconstruction, en alternant nouvelles chansons et titres emblématiques.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/1080x1080-neutre-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/1080x1080-neutre-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JOYCE JONATHAN",
@@ -133115,7 +132612,7 @@
 ],
 "description": null,
 "summary": "Le rappeur Asfar Shamsi est en concert, après des dates complètes à La Boule Noire et à La Maroquinerie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/cigale4-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/cigale4-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ASFAR SHAMSI",
@@ -133534,7 +133031,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/madam-credit-boby-1-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/madam-credit-boby-1-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MADAM",
@@ -133967,7 +133464,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2327/burning-heads/?of=49",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2327/burning-heads/?of=48",
 "ticket_url": "https://billetterie.seetickets.fr/burning-heads-concert-la-maroquinerie-paris-20-mars-2027-css5-billetterie3ctour-pg101-ri11794851.html",
 "price": null,
 "free": false,
@@ -134032,7 +133529,7 @@
 ],
 "description": null,
 "summary": "Auteur-compositeur-interprète et producteur inclassable, CHATON revient à La Cigale avec son univers à la croisée de la chanson, du dub et de l'électro, dans des concerts intimes où il se livre seul sur scène, parfois accompagné de ses enfants.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650-x-650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650-x-650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CHATON",
@@ -134797,6 +134294,11 @@
 "spotify": {
 "id": "3faEZMpTmZFXpELU1EwWNL",
 "url": "https://open.spotify.com/artist/3faEZMpTmZFXpELU1EwWNL"
+},
+"youtube": {
+"videoId": "bWx_HlL3k24",
+"title": "Jordi Savall and Hespèrion XXI - Musical Europe | Bayreuth Baroque Festival 2020",
+"publishedAt": "2024-11-15"
 }
 },
 "Te Deum": {
@@ -135019,7 +134521,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2395/paolo/?of=0",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2395/paolo/?of=49",
 "ticket_url": "https://billetterie.seetickets.fr/index-css5-paolo-pg1.html",
 "price": null,
 "free": false,
@@ -135080,7 +134582,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Dominique A défend sur scène « Spirales », son quinzième album studio, à l'esthétique plus brute et plus rock, aux textes autobiographiques et universels.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DOMINIQUE A",
@@ -135535,7 +135037,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2309/cheri/?of=1",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2309/cheri/?of=0",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/cheri-billet/idmanif/665042/idtier/38743526",
 "price": null,
 "free": false,
@@ -136561,7 +136063,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2269/heroe/?of=2",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2269/heroe/?of=1",
 "ticket_url": "https://www.ticketmaster.fr/fr/manifestation/heroe-billet/idmanif/659210",
 "price": null,
 "free": false,
@@ -136758,7 +136260,7 @@
 ],
 "description": null,
 "summary": "Colonel Reyel célèbre les 16 ans de son album « Au rapport », qui a marqué la pop urbaine française, en reprenant ses titres emblématiques comme « Celui », « Aurélie » ou « Toutes les nuits ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/colonel-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/colonel-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "COLONEL REYEL",
@@ -136785,7 +136287,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2385/arca-m/?of=3",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2385/arca-m/?of=2",
 "ticket_url": "https://shotgun.live/events/arca-m-maroquinerie",
 "price": null,
 "free": false,
@@ -136960,7 +136462,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2386/bey/?of=4",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2386/bey/?of=3",
 "ticket_url": "https://caramba.trium.fr/fr/t/-/event/70060",
 "price": null,
 "free": false,
@@ -137023,7 +136525,7 @@
 ],
 "description": null,
 "summary": "Hervé Salters, alias General Elektriks, présente sa soul funk nourrie de musiques afro-américaines (funk, soul, hip-hop, jazz) et portée par son jeu de claviers, à l'occasion d'un septième album. Entouré de Jessie Chaton, Guillaume Lantonnet, Toma Milteau et Eric Starczan, il réarrange ses morceaux pour un show live sans laptop.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/ge-600x600-1.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/ge-600x600-1.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "General Elektriks",
@@ -137180,7 +136682,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2284/charlotte-fever/?of=5",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2284/charlotte-fever/?of=4",
 "ticket_url": "https://shotgun.live/fr/events/charlotte-fever-la-maroquinerie?utm_source=mrqnr",
 "price": null,
 "free": false,
@@ -137919,7 +137421,7 @@
 "venue_slug": "la-maroquinerie",
 "source": "maroquinerie",
 "time": "19:30",
-"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2394/keo/?of=6",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2394/keo/?of=5",
 "ticket_url": null,
 "price": null,
 "free": false,
@@ -137977,7 +137479,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/oria650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/oria650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ORIA",
@@ -138237,6 +137739,45 @@
 "first_seen": "baseline"
 },
 {
+"title": "AFTER BERLIN",
+"date": "2027-04-03",
+"venue": "La Maroquinerie",
+"venue_slug": "la-maroquinerie",
+"source": "maroquinerie",
+"time": "19:30",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2398/after-berlin/?of=6",
+"ticket_url": "https://shotgun.live/fr/events/after-berlin-la-maroquinerie",
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://www.lamaroquinerie.fr/files/event_thumbnail_2398.png",
+"address": "23 rue Boyer, 75020 Paris",
+"area": "Ménilmontant",
+"headliner": "AFTER BERLIN",
+"support": [],
+"players": {
+"AFTER BERLIN": {
+"spotify": {
+"id": "0toBP3LoIrAkCutxp4QnVf",
+"url": "https://open.spotify.com/artist/0toBP3LoIrAkCutxp4QnVf"
+}
+}
+},
+"lat": 48.8686,
+"lon": 2.3906,
+"is_music": true,
+"stale_since": null,
+"id": "027b6be52274",
+"first_seen": "2026-10-13"
+},
+{
 "title": "P.L.L",
 "date": "2027-04-03",
 "venue": "La Cigale",
@@ -138261,7 +137802,7 @@
 ],
 "description": null,
 "summary": "Le trio réunionnais PLL (Power Love Life), composé de Lil King, S.G et Luidgi, mêle dancehall, shatta, afro-caribéen et musiques urbaines. Le groupe, connu pour les titres Shattiment, Maya ou Roulman, joue pour la première fois à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/p.l.l-hd-©tony-600x400.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/p.l.l-hd-©tony-600x400.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "P.L.L",
@@ -138700,7 +138241,7 @@
 ],
 "description": null,
 "summary": "Premier concert de Lecya, jeune chanteuse révélée par The Voice Kids, dans un univers entre pop et R&B après ses singles « Amour oublié » et « C'est mort ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/lecya-cigale-photo-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/lecya-cigale-photo-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LECYA",
@@ -140323,6 +139864,45 @@
 "first_seen": "baseline"
 },
 {
+"title": "JACK KAYS",
+"date": "2027-04-11",
+"venue": "La Maroquinerie",
+"venue_slug": "la-maroquinerie",
+"source": "maroquinerie",
+"time": "19:30",
+"url": "https://www.lamaroquinerie.fr/fr/agenda/view/2383/jack-kays/?of=7",
+"ticket_url": "https://www.livenation.fr/jack-kays-tickets-adp1515774",
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://www.lamaroquinerie.fr/files/event_thumbnail_2383.png",
+"address": "23 rue Boyer, 75020 Paris",
+"area": "Ménilmontant",
+"headliner": "JACK KAYS",
+"support": [],
+"players": {
+"JACK KAYS": {
+"spotify": {
+"id": "24qqDoA4BBXVnPOdHBjT54",
+"url": "https://open.spotify.com/artist/24qqDoA4BBXVnPOdHBjT54"
+}
+}
+},
+"lat": 48.8686,
+"lon": 2.3906,
+"is_music": true,
+"stale_since": null,
+"id": "9a6ff0337bf7",
+"first_seen": "2026-10-13"
+},
+{
 "title": "#LaJamDuDimanche DE MAXENCE LEROY",
 "date": "2027-04-11",
 "venue": "Le Baiser Salé",
@@ -140927,7 +140507,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/visu-cigale-650x650-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/visu-cigale-650x650-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LUSHE",
@@ -141204,7 +140784,7 @@
 ],
 "description": null,
 "summary": "Le Duo Jatekok (Adélaïde Panaget et Naïri Badal) présente « Rammstein on the beach », un concert hybride mis en scène par David Gauchard qui fait dialoguer l'univers rock de Rammstein, avec lequel les pianistes ont tourné, et la musique minimaliste de Monk, Adams et Glass.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-ctina-dubrovsky-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-ctina-dubrovsky-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DUO JATEKOK",
@@ -141281,6 +140861,45 @@
 "stale_since": "2026-10-07",
 "id": "ab5c3395b00c",
 "first_seen": "baseline"
+},
+{
+"title": "DUBIOZA KOLEKTIV",
+"date": "2027-04-17",
+"venue": "Élysée Montmartre",
+"venue_slug": "elysee-montmartre",
+"source": "trianon",
+"time": null,
+"url": "https://www.elyseemontmartre.com/fr/programmation/dubioza-kolektiv-la-brigade-du-kif/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [],
+"genre_source": null,
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": "https://www.elyseemontmartre.com/wp-content/uploads/sites/2/dubioza-kolektiv-elysee-montmartre2-700x700.jpg",
+"address": "72 boulevard de Rochechouart, 75018 Paris",
+"area": "Pigalle",
+"headliner": "DUBIOZA KOLEKTIV",
+"support": [],
+"players": {
+"DUBIOZA KOLEKTIV": {
+"spotify": {
+"id": "02IFYoziC7CpQRK8fbehUY",
+"url": "https://open.spotify.com/artist/02IFYoziC7CpQRK8fbehUY"
+}
+}
+},
+"lat": 48.8826,
+"lon": 2.3445,
+"is_music": true,
+"stale_since": null,
+"id": "cd53524b8193",
+"first_seen": "2026-10-13"
 },
 {
 "title": "MELODIES NOMADES, traversées musicales et théâtrales",
@@ -141698,7 +141317,7 @@
 ],
 "description": null,
 "summary": "Juste Shani, voix montante du rap français révélée par son EP « Diamant Noir » et ses vidéos virales, monte sur la scène de La Cigale après avoir rempli la Gaîté Lyrique.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-justeshani-cigale-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-justeshani-cigale-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JUSTE SHANI",
@@ -141809,7 +141428,7 @@
 ],
 "description": null,
 "summary": "Nouvelle Vague présente son septième album, entièrement consacré aux reprises de Depeche Mode : treize titres emblématiques réinterprétés par de nouvelles voix et enregistrés à Rio avec des musiciens brésiliens.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/nouvelle-vague-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/nouvelle-vague-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOUVELLE VAGUE",
@@ -142186,7 +141805,7 @@
 ],
 "description": null,
 "summary": "La Yegros, figure de la nu-cumbia et des musiques globales, défend son album « HAZ » mêlant folklore latino-américain, reggae, ska et électro, dans un show live survolté.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/1080x1080_sansecri-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/1080x1080_sansecri-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA YEGROS",
@@ -143535,7 +143154,7 @@
 ],
 "description": null,
 "summary": "Le trio strasbourgeois Emile Londonien — Nils Boyny (claviers), Théodore Eristoff (basse) et Matthieu Drago (batterie) — issu du collectif Omezis, propose un jazz nourri de la scène britannique et de culture clubbing. Après les albums Legacy et Inwards, le groupe élargit son univers vers le R&B et la house moderne.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/c-ambre-savagnac-1-338x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/c-ambre-savagnac-1-338x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EMILE LONDONIEN",
@@ -143846,7 +143465,7 @@
 ],
 "description": null,
 "summary": "Mélissa Laveaux présente en live son album « At my softest, I am most dangerous », une pop indé aux guitares électriques en fingerpicking psychédélique, avec un travail marqué sur la voix et les chœurs.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/melissa-laveaux-cigale-650x650-v2-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/melissa-laveaux-cigale-650x650-v2-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MÉLISSA LAVEAUX",
@@ -144855,7 +144474,7 @@
 ],
 "description": null,
 "summary": "Le chanteur Séverin défend sur scène son nouvel album « Tout est vrai », enregistré sur l'île de Wight, entouré de ses musiciens complices et d'invités surprises.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/visuel-neutre-severin-650x650px-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/visuel-neutre-severin-650x650px-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SEVERIN",
@@ -146972,7 +146591,7 @@
 "venue_slug": "theatre-des-champs-elysees",
 "source": "opendata",
 "time": "20:00",
-"url": "https://www.paris.fr/evenements/beethoven-1808-124757",
+"url": "https://www.paris.fr/evenements/beethoven-1808-123652",
 "ticket_url": "https://www.orchestredechambredeparis.com/concert/beethoven-1808/",
 "price": "De 10 à 64 €",
 "free": false,
@@ -147645,7 +147264,7 @@
 ],
 "description": null,
 "summary": "Stanislas, jeune auteur-compositeur-interprète de Colombes révélé avec l'EP « Topless », défend son rap indie teinté de pop alternative.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/1080-x-1440-450x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/1080-x-1440-450x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "STANISLAS",
@@ -147759,7 +147378,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/copie-de-camille-vivier_lou-doillon_look-5_0556_r3-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/copie-de-camille-vivier_lou-doillon_look-5_0556_r3-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOU DOILLON",
@@ -148865,6 +148484,42 @@
 "first_seen": "baseline"
 },
 {
+"title": "Les midi-concerts à la mairie du 8e",
+"date": "2027-06-03",
+"venue": "Mairie du 8e arrondissement",
+"venue_slug": "mairie-du-8e-arrondissement",
+"source": "opendata",
+"time": "13:00",
+"url": "https://www.paris.fr/evenements/les-midi-concerts-a-la-mairie-du-8e-125846",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "Entrée libre et gratuite dans la limite des places disponibl",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"classical"
+],
+"genre_source": "llm",
+"subgenres": [
+"classical guitar"
+],
+"description": "Concert à la mairie du 8e par les élèves de Musique de chambre",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/10/01/huge-06ade22905642e6dba7b6386927d2a14.jpg",
+"address": "3 rue de Lisbonne, 75008, Paris",
+"area": "8e",
+"headliner": "Les midi-concerts à la mairie du 8e",
+"support": [],
+"players": {},
+"lat": 48.877751,
+"lon": 2.317486,
+"is_music": true,
+"stale_since": null,
+"id": "63e590ab8f70",
+"first_seen": "2026-10-13"
+},
+{
 "title": "Concert intimiste Paris 17",
 "date": "2027-06-03",
 "venue": "Feuille Blanche, Café Noir",
@@ -149711,6 +149366,42 @@
 "stale_since": "2026-10-07",
 "id": "c49a34094082",
 "first_seen": "baseline"
+},
+{
+"title": "Les midi-concerts à la mairie du 8e",
+"date": "2027-06-10",
+"venue": "Mairie du 8e arrondissement",
+"venue_slug": "mairie-du-8e-arrondissement",
+"source": "opendata",
+"time": "13:00",
+"url": "https://www.paris.fr/evenements/les-midi-concerts-a-la-mairie-du-8e-125847",
+"ticket_url": "https://www.paris.fr/crr",
+"price": "Entrée libre et gratuite dans la limite des places disponibl",
+"free": true,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"classical"
+],
+"genre_source": "llm",
+"subgenres": [
+"classical guitar"
+],
+"description": "Concert à la mairie du 8e par les élèves de Musique de chambre",
+"summary": null,
+"image": "https://cdn.paris.fr/qfapv4/2025/10/01/huge-06ade22905642e6dba7b6386927d2a14.jpg",
+"address": "3 rue de Lisbonne, 75008, Paris",
+"area": "8e",
+"headliner": "Les midi-concerts à la mairie du 8e",
+"support": [],
+"players": {},
+"lat": 48.877751,
+"lon": 2.317486,
+"is_music": true,
+"stale_since": null,
+"id": "843fc7ee4919",
+"first_seen": "2026-10-13"
 },
 {
 "title": "Concert intimiste Paris 17",
@@ -152694,7 +152385,7 @@
 ],
 "description": null,
 "summary": "Le duo Felhur x Andro présente un nouveau show après une tournée indépendante : un rap doux et acide nourri de chanson, de rock et de techno, où Felhur écrit les textes et Andro signe les compositions. Après l'album-roman Liaisons & Ruptures et l'EP Pousser sur des cendres, porté par le titre viral Bébou.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/affiche-felhuretandro-7794-scaled-e1789656496947-535x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/affiche-felhuretandro-7794-scaled-e1789656496947-535x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FELHUR",
