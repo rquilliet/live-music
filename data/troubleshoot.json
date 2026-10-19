@@ -27,12 +27,17 @@
    ],
    "usd": 0.0,
    "issue": "REM-83"
+  },
+  "zenith-paris": {
+   "since": "2026-10-08",
+   "days": [],
+   "usd": 0.0
   }
  },
  "last": {
-  "date": "2026-10-18",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39113849905",
-  "usd": 0,
+  "date": "2026-10-19",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39236432323",
+  "usd": 0.0,
   "sessions": 0,
   "fixed": [],
   "recovered": [],
@@ -43,7 +48,6 @@
     "venues": [
      "Accor Arena",
      "L'Olympia",
-     "Zénith Paris",
      "La Seine Musicale",
      "Plenitude Arena",
      "Alhambra",
@@ -75,13 +79,19 @@
      "Le 360 Paris Music Factory",
      "Le Triton",
      "La Dynamo de Banlieues Bleues",
-     "Canal 93",
      "Espace 1789",
      "La Gaîté Lyrique",
      "PopUp!",
      "Le Truskel",
      "Nouveau Casino",
      "La Générale"
+    ]
+   },
+   {
+    "cause": "0 events parsed (0 outside the window or invalid): Claude API error 401: invalid x-api-key",
+    "venues": [
+     "Zénith Paris",
+     "Canal 93"
     ]
    }
   ],
@@ -100,7 +110,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-13",
+  "date": "2026-10-19",
   "usd": 0.0
  }
 }
