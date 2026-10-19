@@ -128,5 +128,8 @@
   {"name": "Nouveau Casino", "slug": "nouveau-casino", "strategy": "llm", "url": "https://nouveaucasino.fr/",
    "address": "109 rue Oberkampf, 75011 Paris", "area": "Oberkampf", "lat": 48.8660, "lon": 2.3782},
   {"name": "La Générale", "slug": "la-generale", "strategy": "llm", "url": "https://www.lagenerale.fr/",
-   "address": "39 rue Gassendi, 75014 Paris", "lat": 48.8340, "lon": 2.3290, "genres": ["experimental"]}
+   "address": "39 rue Gassendi, 75014 Paris", "lat": 48.8340, "lon": 2.3290, "genres": ["experimental"]},
+  {"name": "Maison de la Radio et de la Musique", "slug": "maison-de-la-radio-et-de-la-musique", "strategy": "llm", "url": "https://www.maisondelaradioetdelamusique.fr/evenements",
+   "urls": ["https://www.maisondelaradioetdelamusique.fr/evenements", "https://www.maisondelaradioetdelamusique.fr/concerts", "https://www.maisondelaradioetdelamusique.fr/"],
+   "address": "116 avenue du Président Kennedy, 75016 Paris", "area": "Passy", "lat": 48.8524, "lon": 2.2787, "genres": ["classical"]}
 ]
