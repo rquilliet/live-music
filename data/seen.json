@@ -2528,12 +2528,6 @@
 "venue": "la-seine-musicale",
 "last": "2026-10-20"
 },
-"038bd5e9e99b": {
-"first_seen": "baseline",
-"date": "2026-11-03",
-"venue": "la-seine-musicale",
-"last": "2026-10-20"
-},
 "75e40849f87a": {
 "first_seen": "baseline",
 "date": "2026-11-04",
@@ -4306,12 +4300,6 @@
 "venue": "mairie-du-10e-arrondissement",
 "last": "2026-10-20"
 },
-"a5d7398c4589": {
-"first_seen": "baseline",
-"date": "2026-10-28",
-"venue": "le-baiser-sale",
-"last": "2026-10-20"
-},
 "8e7de1fad333": {
 "first_seen": "baseline",
 "date": "2026-10-28",
@@ -4588,12 +4576,6 @@
 "venue": "l-institut-du-monde-arabe",
 "last": "2026-10-20"
 },
-"6626854dbcf5": {
-"first_seen": "baseline",
-"date": "2026-10-31",
-"venue": "le-104",
-"last": "2026-10-20"
-},
 "a3c87eec90c8": {
 "first_seen": "baseline",
 "date": "2026-10-31",
@@ -4804,12 +4786,6 @@
 "first_seen": "baseline",
 "date": "2026-11-08",
 "venue": "le-dome-de-paris",
-"last": "2026-10-20"
-},
-"311a3cd533aa": {
-"first_seen": "baseline",
-"date": "2026-11-08",
-"venue": "le-baiser-sale",
 "last": "2026-10-20"
 },
 "d2efafbab778": {
@@ -5730,7 +5706,7 @@
 "first_seen": "baseline",
 "date": "2026-11-29",
 "venue": "paris-la-defense-arena",
-"last": "2026-10-06"
+"last": "2026-10-20"
 },
 "9466f7c9ba9a": {
 "first_seen": "baseline",
@@ -5772,7 +5748,7 @@
 "first_seen": "baseline",
 "date": "2026-12-20",
 "venue": "paris-la-defense-arena",
-"last": "2026-10-06"
+"last": "2026-10-20"
 },
 "8b5da033984c": {
 "first_seen": "baseline",
@@ -5784,7 +5760,7 @@
 "first_seen": "baseline",
 "date": "2026-12-27",
 "venue": "paris-la-defense-arena",
-"last": "2026-10-06"
+"last": "2026-10-20"
 },
 "614129408d9f": {
 "first_seen": "baseline",
@@ -5849,12 +5825,6 @@
 "c9aa6924f21b": {
 "first_seen": "baseline",
 "date": "2026-11-21",
-"venue": "cabaret-sauvage",
-"last": "2026-10-20"
-},
-"829ab8260c23": {
-"first_seen": "baseline",
-"date": "2026-11-22",
 "venue": "cabaret-sauvage",
 "last": "2026-10-20"
 },
@@ -6326,7 +6296,7 @@
 "first_seen": "baseline",
 "date": "2026-11-19",
 "venue": "cirque-electrique",
-"last": "2026-10-06"
+"last": "2026-10-20"
 },
 "7851d506e0c3": {
 "first_seen": "baseline",
@@ -6592,21 +6562,9 @@
 "venue": "les-trois-baudets",
 "last": "2026-10-20"
 },
-"b61f70b2d628": {
-"first_seen": "baseline",
-"date": "2026-10-22",
-"venue": "les-trois-baudets",
-"last": "2026-10-20"
-},
 "fea2153f1aed": {
 "first_seen": "baseline",
 "date": "2026-10-23",
-"venue": "les-trois-baudets",
-"last": "2026-10-20"
-},
-"68185a4d0536": {
-"first_seen": "baseline",
-"date": "2026-10-28",
 "venue": "les-trois-baudets",
 "last": "2026-10-20"
 },
@@ -6892,30 +6850,6 @@
 "venue": "le-triton",
 "last": "2026-10-20"
 },
-"6e6902f841a7": {
-"first_seen": "baseline",
-"date": "2026-10-28",
-"venue": "la-dynamo",
-"last": "2026-10-20"
-},
-"cbe997de4e41": {
-"first_seen": "baseline",
-"date": "2026-10-31",
-"venue": "la-dynamo",
-"last": "2026-10-20"
-},
-"3a73cad325ff": {
-"first_seen": "baseline",
-"date": "2026-11-06",
-"venue": "la-dynamo",
-"last": "2026-10-20"
-},
-"0eda1516c20f": {
-"first_seen": "baseline",
-"date": "2026-11-18",
-"venue": "la-dynamo",
-"last": "2026-10-20"
-},
 "889cfd82f447": {
 "first_seen": "baseline",
 "date": "2026-12-04",
@@ -7091,12 +7025,6 @@
 "c4779ec0fe94": {
 "first_seen": "baseline",
 "date": "2026-11-21",
-"venue": "popup",
-"last": "2026-10-20"
-},
-"52c3d6b44037": {
-"first_seen": "baseline",
-"date": "2026-11-27",
 "venue": "popup",
 "last": "2026-10-20"
 },
@@ -8164,12 +8092,6 @@
 "first_seen": "2026-09-13",
 "date": "2027-01-09"
 },
-"f4bc8695f6e3": {
-"first_seen": "2026-09-13",
-"date": "2026-10-22",
-"venue": "popup",
-"last": "2026-10-20"
-},
 "9e8b6c0aa308": {
 "first_seen": "2026-09-13",
 "date": "2026-11-14",
@@ -8972,12 +8894,6 @@
 "venue": "badaboum",
 "last": "2026-10-20"
 },
-"6a603e131079": {
-"first_seen": "2026-09-18",
-"date": "2026-12-10",
-"venue": "fgo-barbara",
-"last": "2026-10-20"
-},
 "1d70a813ca5e": {
 "first_seen": "2026-09-18",
 "date": "2026-10-28"
@@ -9126,7 +9042,9 @@
 },
 "95065bc39b6a": {
 "first_seen": "2026-09-19",
-"date": "2026-11-07"
+"date": "2026-11-07",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
 },
 "b2fed8f6c437": {
 "first_seen": "2026-09-19",
@@ -9338,7 +9256,9 @@
 },
 "7ef6a174e2cd": {
 "first_seen": "2026-09-21",
-"date": "2026-12-04"
+"date": "2026-12-04",
+"venue": "file7",
+"last": "2026-10-20"
 },
 "8624eeccfe71": {
 "first_seen": "2026-09-21",
@@ -10176,18 +10096,6 @@
 "venue": "la-seine-musicale",
 "last": "2026-10-20"
 },
-"02ad8685fc79": {
-"first_seen": "2026-09-25",
-"date": "2027-01-15",
-"venue": "paris-la-defense-arena",
-"last": "2026-10-20"
-},
-"4921eb6d88fe": {
-"first_seen": "2026-09-25",
-"date": "2027-01-16",
-"venue": "paris-la-defense-arena",
-"last": "2026-10-20"
-},
 "9e78f27d81ea": {
 "first_seen": "2026-09-25",
 "date": "2026-10-30",
@@ -10210,12 +10118,6 @@
 "first_seen": "2026-09-25",
 "date": "2026-12-12",
 "venue": "la-machine",
-"last": "2026-10-20"
-},
-"dc9f2d44e15f": {
-"first_seen": "2026-09-25",
-"date": "2026-10-31",
-"venue": "la-petite-halle",
 "last": "2026-10-20"
 },
 "e520a78e1055": {
@@ -11648,12 +11550,6 @@
 "venue": "la-seine-musicale",
 "last": "2026-10-20"
 },
-"70b20877d14b": {
-"first_seen": "baseline",
-"date": "2027-03-07",
-"venue": "la-seine-musicale",
-"last": "2026-10-20"
-},
 "f4d090b8a4c2": {
 "first_seen": "baseline",
 "date": "2027-03-10",
@@ -11975,12 +11871,6 @@
 "434851742d12": {
 "first_seen": "baseline",
 "date": "2027-03-26",
-"venue": "la-machine",
-"last": "2026-10-20"
-},
-"7df21b21ba2e": {
-"first_seen": "baseline",
-"date": "2027-04-01",
 "venue": "la-machine",
 "last": "2026-10-20"
 },
@@ -14330,12 +14220,6 @@
 "venue": "le-grand-rex",
 "last": "2026-10-20"
 },
-"4afc5711ed28": {
-"first_seen": "baseline",
-"date": "2027-03-24",
-"venue": "le-grand-rex",
-"last": "2026-10-20"
-},
 "a2de47619862": {
 "first_seen": "baseline",
 "date": "2027-04-06",
@@ -14379,12 +14263,6 @@
 "last": "2026-10-20"
 },
 "115bf1429d04": {
-"first_seen": "baseline",
-"date": "2027-05-15",
-"venue": "le-grand-rex",
-"last": "2026-10-20"
-},
-"941e8eea4f32": {
 "first_seen": "baseline",
 "date": "2027-05-15",
 "venue": "le-grand-rex",
@@ -16478,12 +16356,6 @@
 "venue": "popup",
 "last": "2026-10-20"
 },
-"7bfc59f42ea8": {
-"first_seen": "baseline",
-"date": "2026-11-05",
-"venue": "popup",
-"last": "2026-10-20"
-},
 "372f18c0f91c": {
 "first_seen": "baseline",
 "date": "2026-11-06",
@@ -17516,12 +17388,6 @@
 "venue": "la-seine-musicale",
 "last": "2026-10-20"
 },
-"e91121042c8f": {
-"first_seen": "baseline",
-"date": "2027-07-16",
-"venue": "paris-la-defense-arena",
-"last": "2026-10-20"
-},
 "79b60dafffe2": {
 "first_seen": "baseline",
 "date": "2027-07-17",
@@ -18170,12 +18036,6 @@
 "venue": "file7",
 "last": "2026-10-06"
 },
-"644fb3feef3b": {
-"first_seen": "baseline",
-"date": "2027-01-28",
-"venue": "le-grand-rex",
-"last": "2026-10-20"
-},
 "d359bf7a1342": {
 "first_seen": "baseline",
 "date": "2026-11-09",
@@ -18720,12 +18580,6 @@
 "first_seen": "2026-10-07",
 "date": "2027-05-19",
 "venue": "la-seine-musicale",
-"last": "2026-10-20"
-},
-"fdd469e6fc44": {
-"first_seen": "baseline",
-"date": "2028-06-10",
-"venue": "paris-la-defense-arena",
 "last": "2026-10-20"
 },
 "2311b5032da5": {
@@ -20665,6 +20519,1866 @@
 "date": "2026-12-15",
 "venue": "auditorium-du-campus-clignancourt-de-sorbonne-universite",
 "last": "2026-10-20"
+},
+"4fbf203efdd6": {
+"first_seen": "2026-10-20",
+"date": "2027-04-24",
+"venue": "la-cigale",
+"last": "2026-10-20"
+},
+"b67de7804aa2": {
+"first_seen": "2026-10-20",
+"date": "2027-01-28",
+"venue": "la-boule-noire",
+"last": "2026-10-20"
+},
+"7d2e0ddec386": {
+"first_seen": "2026-10-20",
+"date": "2027-01-28",
+"venue": "la-maroquinerie",
+"last": "2026-10-20"
+},
+"e09fdf96e720": {
+"first_seen": "2026-10-20",
+"date": "2027-04-12",
+"venue": "la-maroquinerie",
+"last": "2026-10-20"
+},
+"ab649eabce35": {
+"first_seen": "2026-10-20",
+"date": "2026-10-27",
+"venue": "point-ephemere",
+"last": "2026-10-20"
+},
+"aa8a5c8e9437": {
+"first_seen": "baseline",
+"date": "2026-10-27",
+"venue": "point-ephemere",
+"last": "2026-10-20"
+},
+"17b2d29b37af": {
+"first_seen": "2026-10-20",
+"date": "2026-11-04",
+"venue": "point-ephemere",
+"last": "2026-10-20"
+},
+"8f2680f12afd": {
+"first_seen": "2026-10-20",
+"date": "2026-11-10",
+"venue": "point-ephemere",
+"last": "2026-10-20"
+},
+"80aeb24f055d": {
+"first_seen": "2026-10-20",
+"date": "2027-01-17",
+"venue": "point-ephemere",
+"last": "2026-10-20"
+},
+"254fe95e6311": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "instants-chavires",
+"last": "2026-10-20"
+},
+"116b70a101f0": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "accor-arena",
+"last": "2026-10-20"
+},
+"305f78d00413": {
+"first_seen": "2026-10-20",
+"date": "2026-10-23",
+"venue": "accor-arena",
+"last": "2026-10-20"
+},
+"a4fda9a51785": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "accor-arena",
+"last": "2026-10-20"
+},
+"50134f05562a": {
+"first_seen": "2026-10-20",
+"date": "2026-10-25",
+"venue": "accor-arena",
+"last": "2026-10-20"
+},
+"40556a3ee5a6": {
+"first_seen": "2026-10-20",
+"date": "2027-05-15",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"58582aa4a2bb": {
+"first_seen": "2026-10-20",
+"date": "2027-03-11",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"63df2cfee738": {
+"first_seen": "2026-10-20",
+"date": "2028-03-25",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"719e6d6ad233": {
+"first_seen": "2026-10-20",
+"date": "2028-10-01",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"3b93483e5bc2": {
+"first_seen": "2026-10-20",
+"date": "2026-11-05",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"36ca741aa15d": {
+"first_seen": "2026-10-20",
+"date": "2026-10-26",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"76f829ae0f9e": {
+"first_seen": "2026-10-20",
+"date": "2026-10-25",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"7383ead9bb80": {
+"first_seen": "2026-10-20",
+"date": "2027-02-12",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"8b3810806686": {
+"first_seen": "2026-10-20",
+"date": "2027-06-28",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"070b6e626c29": {
+"first_seen": "2026-10-20",
+"date": "2027-06-22",
+"venue": "olympia",
+"last": "2026-10-20"
+},
+"b3e9dd991b49": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "zenith-paris",
+"last": "2026-10-20"
+},
+"98154bf0d596": {
+"first_seen": "2026-10-20",
+"date": "2027-01-24",
+"venue": "zenith-paris",
+"last": "2026-10-20"
+},
+"45aea642c204": {
+"first_seen": "2026-10-20",
+"date": "2027-02-27",
+"venue": "zenith-paris",
+"last": "2026-10-20"
+},
+"3f1987c916f3": {
+"first_seen": "2026-10-20",
+"date": "2027-03-29",
+"venue": "zenith-paris",
+"last": "2026-10-20"
+},
+"48e196ec8b3b": {
+"first_seen": "2026-10-20",
+"date": "2027-04-22",
+"venue": "zenith-paris",
+"last": "2026-10-20"
+},
+"67e353f0e50a": {
+"first_seen": "2026-10-20",
+"date": "2027-12-11",
+"venue": "zenith-paris",
+"last": "2026-10-20"
+},
+"21bc7f819e9c": {
+"first_seen": "2026-10-20",
+"date": "2026-10-29",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"4251e84905fd": {
+"first_seen": "baseline",
+"date": "2026-11-03",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"6aa205d9dd7f": {
+"first_seen": "2026-10-20",
+"date": "2027-01-16",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"b11827fbaa4d": {
+"first_seen": "2026-10-20",
+"date": "2027-01-23",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"ab5b8426cb7d": {
+"first_seen": "2026-10-20",
+"date": "2027-01-28",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"1d32bc6a8986": {
+"first_seen": "baseline",
+"date": "2027-03-07",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"06ce2ef1e57e": {
+"first_seen": "2026-10-20",
+"date": "2027-06-29",
+"venue": "la-seine-musicale",
+"last": "2026-10-20"
+},
+"697206ca88b1": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"fe327e8000c9": {
+"first_seen": "2026-09-25",
+"date": "2027-01-15",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"3220d9c334a2": {
+"first_seen": "2026-09-25",
+"date": "2027-01-16",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"f8a1debd38ab": {
+"first_seen": "2026-10-20",
+"date": "2027-03-20",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"dd788cdab311": {
+"first_seen": "baseline",
+"date": "2027-07-16",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"dbc5e608d95b": {
+"first_seen": "2026-10-20",
+"date": "2027-12-11",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"f98652620ef8": {
+"first_seen": "baseline",
+"date": "2028-06-10",
+"venue": "paris-la-defense-arena",
+"last": "2026-10-20"
+},
+"583f23cbd0fc": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"2aec02379e41": {
+"first_seen": "2026-10-20",
+"date": "2026-11-08",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"5d9ff7f37d41": {
+"first_seen": "2026-10-20",
+"date": "2026-11-15",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"6645a09c7721": {
+"first_seen": "2026-10-20",
+"date": "2026-11-21",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"dd07f765f083": {
+"first_seen": "2026-10-20",
+"date": "2026-11-29",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"da485a26417b": {
+"first_seen": "2026-10-20",
+"date": "2026-12-06",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"89642b2cebaa": {
+"first_seen": "2026-10-20",
+"date": "2026-12-20",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"eea62b7f1fcb": {
+"first_seen": "2026-10-20",
+"date": "2027-02-22",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"b2a7e4bab883": {
+"first_seen": "2026-10-20",
+"date": "2027-02-26",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"388f8938da0e": {
+"first_seen": "2026-10-20",
+"date": "2027-03-13",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"c81e70d7cf4c": {
+"first_seen": "2026-10-20",
+"date": "2027-03-16",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"d243f12d58c5": {
+"first_seen": "2026-10-20",
+"date": "2027-03-22",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"ed88cbf493fa": {
+"first_seen": "2026-10-20",
+"date": "2027-03-25",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"2f05ee574c2c": {
+"first_seen": "2026-10-20",
+"date": "2027-04-24",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"1a0f4115d74e": {
+"first_seen": "2026-10-20",
+"date": "2027-06-03",
+"venue": "alhambra",
+"last": "2026-10-20"
+},
+"e28c588957ae": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"6742cc52abaf": {
+"first_seen": "2026-10-20",
+"date": "2026-11-08",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"2a109d5b0f31": {
+"first_seen": "2026-10-20",
+"date": "2026-11-12",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"915dfcdce66e": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"a1f6c79c9ea6": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"d2d968cc2670": {
+"first_seen": "baseline",
+"date": "2026-11-22",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"8edb5d426546": {
+"first_seen": "2026-10-20",
+"date": "2026-11-26",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"d7292091d1d8": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"4f59c95d7047": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"748ff413e617": {
+"first_seen": "2026-10-20",
+"date": "2026-12-06",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"2f5818b240ec": {
+"first_seen": "2026-10-20",
+"date": "2026-12-12",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"c6e2bf4bd53a": {
+"first_seen": "2026-10-20",
+"date": "2026-12-19",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"01c7e389f302": {
+"first_seen": "2026-10-20",
+"date": "2027-01-02",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"aaba77ccea15": {
+"first_seen": "2026-10-20",
+"date": "2027-01-17",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"1c8bd23c039c": {
+"first_seen": "2026-10-20",
+"date": "2027-01-31",
+"venue": "cabaret-sauvage",
+"last": "2026-10-20"
+},
+"cfb0954835de": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"a87a57d9f913": {
+"first_seen": "2026-10-20",
+"date": "2026-10-29",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"67d2a3191ef4": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"aaa6eec12edd": {
+"first_seen": "2026-10-20",
+"date": "2026-11-01",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"4ecdf5759fb7": {
+"first_seen": "2026-10-20",
+"date": "2026-11-01",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"79322fb82eda": {
+"first_seen": "2026-10-20",
+"date": "2026-11-04",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"08fb14c999d4": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"e7c2c290717f": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"0d6948c692d4": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"060ed37e71b5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"2f63b06c2bb5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"80192b6c4267": {
+"first_seen": "2026-10-20",
+"date": "2026-11-08",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"1f655e7fca1e": {
+"first_seen": "2026-10-20",
+"date": "2026-11-11",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"c2421eb659e3": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"8cc3c8f72af8": {
+"first_seen": "2026-10-20",
+"date": "2026-11-15",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"6b85c75d30b6": {
+"first_seen": "2026-10-20",
+"date": "2026-11-18",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"19bbce56b881": {
+"first_seen": "2026-10-20",
+"date": "2026-11-19",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"3ad8ad26e034": {
+"first_seen": "2026-10-20",
+"date": "2026-11-19",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"3d48ce0b18f2": {
+"first_seen": "2026-10-20",
+"date": "2026-11-20",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"537539bc48a0": {
+"first_seen": "2026-10-20",
+"date": "2026-11-20",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"9e7c313e5fee": {
+"first_seen": "2026-10-20",
+"date": "2026-11-21",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"f45ff3d2fc20": {
+"first_seen": "2026-10-20",
+"date": "2026-11-22",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"4b6fa026d0eb": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"ec93d23f3c1b": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"8a14b935be1d": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"7835c9f9a848": {
+"first_seen": "2026-10-20",
+"date": "2026-12-04",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"2a6e2a7ec859": {
+"first_seen": "2026-10-20",
+"date": "2026-12-11",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"e9e5a8686fd3": {
+"first_seen": "2026-10-20",
+"date": "2026-12-16",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"c96ef1818657": {
+"first_seen": "2026-10-20",
+"date": "2027-01-03",
+"venue": "la-bellevilloise",
+"last": "2026-10-20"
+},
+"21a2c9662e65": {
+"first_seen": "2026-10-20",
+"date": "2026-11-01",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"1227f554d8bc": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"e738ee52babc": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"83dd698ab1bc": {
+"first_seen": "2026-10-20",
+"date": "2026-11-08",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"8048ba015323": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"a4bade47f700": {
+"first_seen": "2026-10-20",
+"date": "2026-11-27",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"c91b7606203a": {
+"first_seen": "2026-10-20",
+"date": "2026-12-04",
+"venue": "la-marbrerie",
+"last": "2026-10-20"
+},
+"637a54ed5ac0": {
+"first_seen": "2026-10-20",
+"date": "2027-02-04",
+"venue": "le-plan",
+"last": "2026-10-20"
+},
+"c39fa355f780": {
+"first_seen": "2026-10-20",
+"date": "2027-03-20",
+"venue": "le-plan",
+"last": "2026-10-20"
+},
+"2ec13411a4bd": {
+"first_seen": "2026-10-20",
+"date": "2026-11-21",
+"venue": "file7",
+"last": "2026-10-20"
+},
+"c4a62692e9f7": {
+"first_seen": "2026-10-20",
+"date": "2026-11-27",
+"venue": "file7",
+"last": "2026-10-20"
+},
+"21979ee9c51c": {
+"first_seen": "2026-10-20",
+"date": "2026-10-25",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"9efc72b4b4c9": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"f419a8ea5aaf": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"fbb1fb0c3e22": {
+"first_seen": "2026-10-20",
+"date": "2026-11-01",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"368fc0546cf1": {
+"first_seen": "2026-10-20",
+"date": "2027-01-30",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"d96a6e6bbd48": {
+"first_seen": "2026-10-20",
+"date": "2027-02-14",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"ebf5b3dd8dc3": {
+"first_seen": "2026-10-20",
+"date": "2027-03-24",
+"venue": "glazart",
+"last": "2026-10-20"
+},
+"78795a4197ab": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"fcf68568dc7f": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"37d38e6401ce": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"c6a2cdc1e01f": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"7a090d2b4503": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"5ea3dcc60c6c": {
+"first_seen": "2026-10-20",
+"date": "2026-12-13",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"a4d97f31006c": {
+"first_seen": "2026-10-20",
+"date": "2026-12-18",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"b62ccc2f4753": {
+"first_seen": "2026-10-20",
+"date": "2027-01-29",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"654a87d9f4c2": {
+"first_seen": "baseline",
+"date": "2027-04-01",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"a68352763e16": {
+"first_seen": "2026-10-20",
+"date": "2027-04-09",
+"venue": "la-machine",
+"last": "2026-10-20"
+},
+"634ce696a066": {
+"first_seen": "2026-10-20",
+"date": "2026-10-20",
+"venue": "duc-des-lombards",
+"last": "2026-10-20"
+},
+"871ed804b000": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "duc-des-lombards",
+"last": "2026-10-20"
+},
+"55ae6ef72fcf": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "duc-des-lombards",
+"last": "2026-10-20"
+},
+"0ffabc5652cb": {
+"first_seen": "2026-10-20",
+"date": "2026-10-26",
+"venue": "duc-des-lombards",
+"last": "2026-10-20"
+},
+"bfefce2321b9": {
+"first_seen": "2026-10-20",
+"date": "2026-10-27",
+"venue": "duc-des-lombards",
+"last": "2026-10-20"
+},
+"fce18cac185c": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"7c1fcef4c676": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"6ec8d00503c2": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"93307a0c6ead": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"dc0019ea98e3": {
+"first_seen": "2026-10-20",
+"date": "2026-10-25",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"a42bc592f439": {
+"first_seen": "baseline",
+"date": "2026-10-28",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"4bedea836eac": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"4c46417670fa": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"e254ad155cb7": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"59abc6f72039": {
+"first_seen": "2026-10-20",
+"date": "2026-11-02",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"000fa42bb5d0": {
+"first_seen": "2026-10-20",
+"date": "2026-11-04",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"3281d1889286": {
+"first_seen": "2026-10-20",
+"date": "2026-11-04",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"53b707728de2": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"d9461e3f1aee": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"f46770622501": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"737a37e2518a": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"86423ed5c8f4": {
+"first_seen": "baseline",
+"date": "2026-11-08",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"aa5bcc2adcc1": {
+"first_seen": "2026-10-20",
+"date": "2026-11-09",
+"venue": "le-baiser-sale",
+"last": "2026-10-20"
+},
+"00ade827a268": {
+"first_seen": "2026-10-20",
+"date": "2026-10-23",
+"venue": "le-104",
+"last": "2026-10-20"
+},
+"ab9ad278017b": {
+"first_seen": "baseline",
+"date": "2026-10-31",
+"venue": "le-104",
+"last": "2026-10-20"
+},
+"460233756e84": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"5ca7be545be6": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"7eaf79985fb7": {
+"first_seen": "2026-09-25",
+"date": "2026-10-31",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"43b137233a65": {
+"first_seen": "2026-10-20",
+"date": "2026-11-05",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"4116f378d814": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"f05b326950a4": {
+"first_seen": "2026-10-20",
+"date": "2026-11-08",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"07c57edb82a3": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"5190646003a9": {
+"first_seen": "2026-10-20",
+"date": "2026-11-15",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"813896c35c00": {
+"first_seen": "2026-10-20",
+"date": "2026-11-21",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"528e275118b6": {
+"first_seen": "2026-10-20",
+"date": "2027-01-30",
+"venue": "la-petite-halle",
+"last": "2026-10-20"
+},
+"ca12fa6ccea9": {
+"first_seen": "2026-10-20",
+"date": "2026-11-11",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"8d09fe3bd8e2": {
+"first_seen": "2026-10-20",
+"date": "2026-12-14",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"299a3d2fefce": {
+"first_seen": "baseline",
+"date": "2027-01-28",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"d5fab3546ec0": {
+"first_seen": "baseline",
+"date": "2027-03-24",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"55a2ac4a4d7d": {
+"first_seen": "2026-10-20",
+"date": "2027-04-09",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"7fb7195c7f79": {
+"first_seen": "2026-10-20",
+"date": "2027-04-12",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"5005d7c73948": {
+"first_seen": "baseline",
+"date": "2027-05-15",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"5d4ba3739f1c": {
+"first_seen": "2026-10-20",
+"date": "2027-11-14",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"8ac756073ff7": {
+"first_seen": "2026-10-20",
+"date": "2028-10-07",
+"venue": "le-grand-rex",
+"last": "2026-10-20"
+},
+"61bcc73c6ce2": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "mains-d-oeuvres",
+"last": "2026-10-20"
+},
+"8271eb8d8790": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "mains-d-oeuvres",
+"last": "2026-10-20"
+},
+"6da4d393aa9a": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "mains-d-oeuvres",
+"last": "2026-10-20"
+},
+"11e8faa22d96": {
+"first_seen": "2026-10-20",
+"date": "2026-10-25",
+"venue": "badaboum",
+"last": "2026-10-20"
+},
+"4afd72e421b7": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "badaboum",
+"last": "2026-10-20"
+},
+"28ec48f15be8": {
+"first_seen": "2026-10-20",
+"date": "2026-11-10",
+"venue": "badaboum",
+"last": "2026-10-20"
+},
+"0d379da9cfda": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "badaboum",
+"last": "2026-10-20"
+},
+"9dee4c4b3bec": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "badaboum",
+"last": "2026-10-20"
+},
+"7cf4eefcfbb0": {
+"first_seen": "2026-10-20",
+"date": "2027-02-13",
+"venue": "badaboum",
+"last": "2026-10-20"
+},
+"6d7172adc032": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"0ec9734bcc2c": {
+"first_seen": "2026-10-20",
+"date": "2026-11-27",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"48d3ba1b58de": {
+"first_seen": "2026-10-20",
+"date": "2026-12-08",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"a15c236b20ec": {
+"first_seen": "2026-10-20",
+"date": "2026-12-16",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"ef31b9b0c213": {
+"first_seen": "2026-10-20",
+"date": "2027-02-06",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"25fbf7dd02d2": {
+"first_seen": "2026-10-20",
+"date": "2027-02-26",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"948a87576e5f": {
+"first_seen": "2026-10-20",
+"date": "2027-03-04",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"277debaf15e2": {
+"first_seen": "2026-10-20",
+"date": "2027-03-09",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"94d2b7cc4923": {
+"first_seen": "2026-10-20",
+"date": "2027-03-12",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"8355619c7d0f": {
+"first_seen": "2026-10-20",
+"date": "2027-04-22",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"938be93d7261": {
+"first_seen": "2026-10-20",
+"date": "2027-04-27",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"84508e046202": {
+"first_seen": "2026-10-20",
+"date": "2027-05-19",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"fac464754dd1": {
+"first_seen": "2026-10-20",
+"date": "2027-06-06",
+"venue": "le-trabendo",
+"last": "2026-10-20"
+},
+"1a23866e3167": {
+"first_seen": "2026-10-20",
+"date": "2026-10-25",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"75b0b2512abf": {
+"first_seen": "2026-10-20",
+"date": "2026-11-03",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"398287d0f017": {
+"first_seen": "2026-10-20",
+"date": "2026-11-05",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"20d0a1e1609a": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"f8b9b60ec41a": {
+"first_seen": "2026-10-20",
+"date": "2026-11-24",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"fc422841e4fd": {
+"first_seen": "2026-10-20",
+"date": "2026-11-27",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"f05c3eed2c70": {
+"first_seen": "2026-09-18",
+"date": "2026-12-10",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"badb489a24aa": {
+"first_seen": "2026-10-20",
+"date": "2026-12-13",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"fbbb35e707a3": {
+"first_seen": "2026-10-20",
+"date": "2027-01-23",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"d60077319dc8": {
+"first_seen": "2026-10-20",
+"date": "2027-03-04",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"93ef34be017f": {
+"first_seen": "2026-10-20",
+"date": "2027-04-23",
+"venue": "fgo-barbara",
+"last": "2026-10-20"
+},
+"047ef873cdc2": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "la-station",
+"last": "2026-10-20"
+},
+"e6fef7ee10ff": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"53786cd6dd9b": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"bd565b561cd5": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"ea9ed8829b78": {
+"first_seen": "2026-10-20",
+"date": "2026-11-05",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"3340da734b32": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"a55556f209dd": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"136c47ec6879": {
+"first_seen": "2026-10-20",
+"date": "2026-11-11",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"00c7fc450e6e": {
+"first_seen": "2026-10-20",
+"date": "2027-04-18",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"528969af7bad": {
+"first_seen": "2026-10-20",
+"date": "2027-04-18",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"c38875ff05be": {
+"first_seen": "2026-10-20",
+"date": "2027-04-17",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"b7eea5bd8cc8": {
+"first_seen": "2026-10-20",
+"date": "2027-04-16",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"e83656e21131": {
+"first_seen": "2026-10-20",
+"date": "2027-04-12",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"727afe18ac5e": {
+"first_seen": "2026-10-20",
+"date": "2027-04-10",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"3b4cf2fe287e": {
+"first_seen": "2026-10-20",
+"date": "2027-04-11",
+"venue": "cirque-electrique",
+"last": "2026-10-20"
+},
+"e8220faca043": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
+},
+"94455562fb04": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
+},
+"1b1a67f3830c": {
+"first_seen": "2026-10-20",
+"date": "2026-11-10",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
+},
+"bf42c07419b8": {
+"first_seen": "2026-10-20",
+"date": "2026-11-11",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
+},
+"25b559ee9d88": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
+},
+"f7a84e985763": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "la-dame-de-canton",
+"last": "2026-10-20"
+},
+"1e9eee8dd53e": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"9b4db8b4653f": {
+"first_seen": "2026-10-20",
+"date": "2026-10-23",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"d207e33b2d0c": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"7af3993dcf78": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"662df2ddb7fc": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"b047032fa475": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"f8490bf68411": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"2e98d61fa36f": {
+"first_seen": "2026-10-20",
+"date": "2026-11-05",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"505c8cc18e78": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"be84167e17be": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"3830316696e5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-10",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"08e3abde8c0d": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"4f8ad0c552e4": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"a17f87ed4cd5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"99ebf049d338": {
+"first_seen": "2026-10-20",
+"date": "2026-11-19",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"33ce7346117c": {
+"first_seen": "2026-10-20",
+"date": "2026-11-20",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"cb75d69dcad5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-21",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"90537a11de7f": {
+"first_seen": "2026-10-20",
+"date": "2026-11-26",
+"venue": "la-java",
+"last": "2026-10-20"
+},
+"385a37a4e0ff": {
+"first_seen": "2026-10-20",
+"date": "2026-10-29",
+"venue": "doc",
+"last": "2026-10-20"
+},
+"02495a0f6b53": {
+"first_seen": "2026-10-20",
+"date": "2026-10-30",
+"venue": "doc",
+"last": "2026-10-20"
+},
+"1cc8ac5912ea": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "doc",
+"last": "2026-10-20"
+},
+"7e65c6a6465c": {
+"first_seen": "2026-10-20",
+"date": "2026-10-31",
+"venue": "doc",
+"last": "2026-10-20"
+},
+"091979df4ade": {
+"first_seen": "2026-10-20",
+"date": "2026-11-01",
+"venue": "doc",
+"last": "2026-10-20"
+},
+"008875296ce1": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "doc",
+"last": "2026-10-20"
+},
+"c6c0abffc5aa": {
+"first_seen": "2026-10-20",
+"date": "2026-11-27",
+"venue": "studio-de-l-ermitage",
+"last": "2026-10-20"
+},
+"c4877349a810": {
+"first_seen": "2026-10-20",
+"date": "2026-12-08",
+"venue": "studio-de-l-ermitage",
+"last": "2026-10-20"
+},
+"475f3b08f0cf": {
+"first_seen": "baseline",
+"date": "2026-10-22",
+"venue": "les-trois-baudets",
+"last": "2026-10-20"
+},
+"b031057a4d14": {
+"first_seen": "baseline",
+"date": "2026-10-28",
+"venue": "les-trois-baudets",
+"last": "2026-10-20"
+},
+"16aa793600d5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "les-trois-baudets",
+"last": "2026-10-20"
+},
+"b8ebe009a903": {
+"first_seen": "2026-10-20",
+"date": "2027-01-22",
+"venue": "les-trois-baudets",
+"last": "2026-10-20"
+},
+"c0fbffab7118": {
+"first_seen": "2026-10-20",
+"date": "2026-11-04",
+"venue": "le-360",
+"last": "2026-10-20"
+},
+"a2265593bfd9": {
+"first_seen": "2026-10-20",
+"date": "2026-11-12",
+"venue": "le-360",
+"last": "2026-10-20"
+},
+"9ee49a8e3378": {
+"first_seen": "2026-10-20",
+"date": "2026-11-10",
+"venue": "le-triton",
+"last": "2026-10-20"
+},
+"de3f6b7756eb": {
+"first_seen": "baseline",
+"date": "2026-10-28",
+"venue": "la-dynamo",
+"last": "2026-10-20"
+},
+"1b55afd504be": {
+"first_seen": "baseline",
+"date": "2026-10-31",
+"venue": "la-dynamo",
+"last": "2026-10-20"
+},
+"69f836d148c3": {
+"first_seen": "baseline",
+"date": "2026-11-06",
+"venue": "la-dynamo",
+"last": "2026-10-20"
+},
+"169f20c92b7d": {
+"first_seen": "baseline",
+"date": "2026-11-18",
+"venue": "la-dynamo",
+"last": "2026-10-20"
+},
+"ef53a46a5ace": {
+"first_seen": "2026-10-20",
+"date": "2026-12-18",
+"venue": "la-dynamo",
+"last": "2026-10-20"
+},
+"831ba458d2a8": {
+"first_seen": "2026-10-20",
+"date": "2026-10-20",
+"venue": "la-gaite-lyrique",
+"last": "2026-10-20"
+},
+"fcaaec4d1f17": {
+"first_seen": "2026-09-13",
+"date": "2026-10-22",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"5aad04d891f0": {
+"first_seen": "2026-10-20",
+"date": "2026-10-23",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"25c768548121": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"e15f552e1864": {
+"first_seen": "baseline",
+"date": "2026-11-05",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"0f40043b53f4": {
+"first_seen": "baseline",
+"date": "2026-11-27",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"c8083bd5a7f1": {
+"first_seen": "2026-10-20",
+"date": "2026-11-30",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"058a8de87239": {
+"first_seen": "2026-10-20",
+"date": "2026-11-30",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"b3b1136e0c0e": {
+"first_seen": "2026-10-20",
+"date": "2026-12-14",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"cb8fa8f3b940": {
+"first_seen": "2026-10-20",
+"date": "2026-12-14",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"b3c2788aa0b4": {
+"first_seen": "2026-10-20",
+"date": "2027-01-21",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"a16bf680b55c": {
+"first_seen": "2026-10-20",
+"date": "2027-02-05",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"87f532c48b24": {
+"first_seen": "2026-10-20",
+"date": "2027-04-29",
+"venue": "popup",
+"last": "2026-10-20"
+},
+"23eb0f81298c": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "le-truskel",
+"last": "2026-10-20"
+},
+"005f78ca1fe9": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "le-truskel",
+"last": "2026-10-20"
+},
+"acd1c65fd591": {
+"first_seen": "2026-10-20",
+"date": "2026-10-22",
+"venue": "le-truskel",
+"last": "2026-10-20"
+},
+"64f90f57b9b1": {
+"first_seen": "2026-10-20",
+"date": "2026-10-23",
+"venue": "le-truskel",
+"last": "2026-10-20"
+},
+"be00d35cc6ef": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "nouveau-casino",
+"last": "2026-10-20"
+},
+"6d7ca8aecbb3": {
+"first_seen": "2026-10-20",
+"date": "2026-11-14",
+"venue": "nouveau-casino",
+"last": "2026-10-20"
+},
+"84f482570489": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "nouveau-casino",
+"last": "2026-10-20"
+},
+"d70b61e78d01": {
+"first_seen": "2026-10-20",
+"date": "2026-12-05",
+"venue": "nouveau-casino",
+"last": "2026-10-20"
+},
+"617e13d0a5a2": {
+"first_seen": "2026-10-20",
+"date": "2026-10-20",
+"venue": "la-generale",
+"last": "2026-10-20"
+},
+"4466b0ce28bc": {
+"first_seen": "2026-10-20",
+"date": "2026-10-21",
+"venue": "la-generale",
+"last": "2026-10-20"
+},
+"283e38d22019": {
+"first_seen": "2026-10-20",
+"date": "2026-10-24",
+"venue": "la-generale",
+"last": "2026-10-20"
+},
+"23964eb06778": {
+"first_seen": "2026-10-20",
+"date": "2026-10-26",
+"venue": "la-generale",
+"last": "2026-10-20"
+},
+"eab6a8e23291": {
+"first_seen": "2026-10-20",
+"date": "2026-11-02",
+"venue": "la-generale",
+"last": "2026-10-20"
+},
+"dcd2e197fd1b": {
+"first_seen": "2026-10-20",
+"date": "2026-11-13",
+"venue": "la-generale",
+"last": "2026-10-20"
+},
+"dad374c5be16": {
+"first_seen": "2026-10-20",
+"date": "2026-12-16",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"da91983c3006": {
+"first_seen": "2026-10-20",
+"date": "2027-01-20",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"ad4620d6bbdb": {
+"first_seen": "2026-10-20",
+"date": "2027-02-24",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"d5ecae89c109": {
+"first_seen": "2026-10-20",
+"date": "2027-03-17",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"38301d262e2a": {
+"first_seen": "2026-10-20",
+"date": "2027-04-21",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"d930fc5c4981": {
+"first_seen": "2026-10-20",
+"date": "2027-05-19",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"19088d80f557": {
+"first_seen": "2026-10-20",
+"date": "2027-06-16",
+"venue": "la-trockette",
+"last": "2026-10-20"
+},
+"35e3b7034ad5": {
+"first_seen": "2026-10-20",
+"date": "2026-11-06",
+"venue": "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein",
+"last": "2026-10-20"
+},
+"4673b71d7c79": {
+"first_seen": "2026-10-20",
+"date": "2026-11-05",
+"venue": "fondation-des-etats-unis",
+"last": "2026-10-20"
+},
+"61a757f868ec": {
+"first_seen": "2026-10-20",
+"date": "2026-11-07",
+"venue": "bibliotheque-germaine-tillion",
+"last": "2026-10-20"
+},
+"2851fb18db2d": {
+"first_seen": "2026-10-20",
+"date": "2026-11-19",
+"venue": "conservatoire-municipal-nadia-et-lili-boulanger",
+"last": "2026-10-20"
+},
+"5a9590cbbf33": {
+"first_seen": "2026-10-20",
+"date": "2026-11-19",
+"venue": "theatre-traversiere",
+"last": "2026-10-20"
+},
+"1ccfd8daebfd": {
+"first_seen": "2026-10-20",
+"date": "2026-11-27",
+"venue": "conservatoire-municipal-charles-munch",
+"last": "2026-10-20"
+},
+"3ef51f0a05b1": {
+"first_seen": "2026-10-20",
+"date": "2026-11-28",
+"venue": "conservatoire-municipal-charles-munch",
+"last": "2026-10-20"
+},
+"6e64e0643dcc": {
+"first_seen": "baseline",
+"date": "2026-11-28",
+"venue": "eglise-saint-roch",
+"last": "2026-10-20"
+},
+"e840d4ad6ec8": {
+"first_seen": "baseline",
+"date": "2026-11-29",
+"venue": "eglise-saint-roch",
+"last": "2026-10-20"
 }
 },
 "venues": [
@@ -20816,6 +22530,7 @@
 "opendata:eglise-saint-merry",
 "opendata:eglise-saint-paul-saint-louis",
 "opendata:eglise-saint-philippe-du-roule",
+"opendata:eglise-saint-roch",
 "opendata:eglise-saint-sulpice",
 "opendata:eglise-saint-vincent-de-paul",
 "opendata:eglise-sainte-elizabeth",
@@ -20957,6 +22672,7 @@
 "opendata:place-du-colonel-fabien",
 "opendata:place-maurice-chevalier",
 "opendata:plantation-paris",
+"opendata:point-ephemere",
 "opendata:popup",
 "opendata:pub-la-station-paris",
 "opendata:quai-liberte",
@@ -21013,63 +22729,63 @@
 "tribe:supersonic"
 ],
 "counts": {
-"Paris open data (Que faire \u00e0 Paris ?)": 1202,
+"Paris open data (Que faire \u00e0 Paris ?)": 1218,
 "Le Bataclan": 48,
-"La Cigale": 107,
+"La Cigale": 108,
 "Le Trianon": 35,
-"\u00c9lys\u00e9e Montmartre": 56,
-"La Maroquinerie": 106,
-"Petit Bain": 51,
-"Point \u00c9ph\u00e9m\u00e8re": 63,
+"\u00c9lys\u00e9e Montmartre": 55,
+"La Maroquinerie": 108,
+"Petit Bain": 50,
+"Point \u00c9ph\u00e9m\u00e8re": 67,
 "Caf\u00e9 de la Danse": 20,
-"Le Hasard Ludique": 10,
+"Le Hasard Ludique": 9,
 "New Morning": 71,
-"Instants Chavir\u00e9s": 11,
+"Instants Chavir\u00e9s": 12,
 "Supersonic": 61,
 "Sunset / Sunside": 134,
-"Accor Arena": 8,
+"Accor Arena": 7,
 "L'Olympia": 16,
-"Z\u00e9nith Paris": 114,
-"La Seine Musicale": 77,
-"Alhambra": 61,
-"Cabaret Sauvage": 66,
-"La Bellevilloise": 70,
-"La Marbrerie": 31,
-"Le Plan": 17,
-"File7": 8,
-"Glazart": 16,
-"La Machine du Moulin Rouge": 48,
-"Duc des Lombards": 4,
-"Le Baiser Sal\u00e9": 25,
-"Le Centquatre": 23,
-"La Petite Halle": 15,
-"Le Grand Rex": 73,
-"Mains d'\u0152uvres": 8,
-"Badaboum": 47,
-"Philharmonie de Paris": 337,
+"Z\u00e9nith Paris": 108,
+"La Seine Musicale": 59,
+"Alhambra": 68,
+"Cabaret Sauvage": 67,
+"La Bellevilloise": 73,
+"La Marbrerie": 27,
+"Le Plan": 16,
+"File7": 9,
+"Glazart": 17,
+"La Machine du Moulin Rouge": 49,
+"Duc des Lombards": 5,
+"Le Baiser Sal\u00e9": 26,
+"Le Centquatre": 15,
+"La Petite Halle": 17,
+"Le Grand Rex": 69,
+"Mains d'\u0152uvres": 6,
+"Badaboum": 40,
+"Philharmonie de Paris": 319,
 "La Clef": 0,
 "Les Disquaires": 0,
-"FGO-Barbara": 27,
+"FGO-Barbara": 30,
 "La Boule Noire": 71,
-"Plenitude Arena": 32,
-"Le Trabendo": 76,
-"La Station - Gare des Mines": 16,
-"Cirque Electrique": 52,
+"Plenitude Arena": 34,
+"Le Trabendo": 81,
+"La Station - Gare des Mines": 5,
+"Cirque Electrique": 49,
 "La Dame de Canton": 18,
-"La Java": 5,
-"DOC": 6,
-"Le Bal Blomet": 52,
-"Studio de l'Ermitage": 32,
-"Les Trois Baudets": 36,
-"Le 360 Paris Music Factory": 18,
-"Le Triton": 37,
-"La Dynamo de Banlieues Bleues": 11,
-"Canal 93": 10,
-"Espace 1789": 51,
-"La Ga\u00eet\u00e9 Lyrique": 13,
-"PopUp!": 65,
+"La Java": 20,
+"DOC": 9,
+"Le Bal Blomet": 41,
+"Studio de l'Ermitage": 27,
+"Les Trois Baudets": 32,
+"Le 360 Paris Music Factory": 11,
+"Le Triton": 32,
+"La Dynamo de Banlieues Bleues": 9,
+"Canal 93": 7,
+"Espace 1789": 46,
+"La Ga\u00eet\u00e9 Lyrique": 1,
+"PopUp!": 56,
 "Le Truskel": 4,
-"Nouveau Casino": 33,
+"Nouveau Casino": 28,
 "La G\u00e9n\u00e9rale": 8,
 "Dernier Bar avant la Fin du Monde": 2,
 "La Pointe Lafayette": 2,
@@ -21093,48 +22809,48 @@
 "Dernier Bar avant la Fin du Monde": "2026-10-20",
 "La Pointe Lafayette": "2026-10-20",
 "Sunset / Sunside": "2026-10-20",
-"Le Grand Rex": "2026-10-07",
-"Philharmonie de Paris": "2026-10-07",
-"Accor Arena": "2026-10-08",
-"L'Olympia": "2026-10-07",
-"Z\u00e9nith Paris": "2026-10-07",
-"La Seine Musicale": "2026-10-07",
-"Plenitude Arena": "2026-10-07",
-"Alhambra": "2026-10-07",
-"Cabaret Sauvage": "2026-10-07",
-"La Bellevilloise": "2026-10-07",
-"La Marbrerie": "2026-10-07",
-"File7": "2026-10-07",
-"Glazart": "2026-10-07",
-"La Machine du Moulin Rouge": "2026-10-07",
-"Duc des Lombards": "2026-10-07",
-"Le Baiser Sal\u00e9": "2026-10-07",
-"Le Centquatre": "2026-10-07",
-"La Petite Halle": "2026-10-07",
-"Mains d'\u0152uvres": "2026-10-07",
-"Badaboum": "2026-10-07",
-"Le Trabendo": "2026-10-07",
-"FGO-Barbara": "2026-10-07",
-"La Station - Gare des Mines": "2026-10-07",
-"Cirque Electrique": "2026-10-07",
-"La Dame de Canton": "2026-10-07",
-"La Java": "2026-10-11",
-"DOC": "2026-10-07",
-"Le Bal Blomet": "2026-10-07",
-"Studio de l'Ermitage": "2026-10-07",
-"Les Trois Baudets": "2026-10-08",
-"Le 360 Paris Music Factory": "2026-10-07",
-"Le Triton": "2026-10-08",
-"La Dynamo de Banlieues Bleues": "2026-10-08",
-"Canal 93": "2026-10-07",
-"Espace 1789": "2026-10-08",
-"La Ga\u00eet\u00e9 Lyrique": "2026-10-07",
-"PopUp!": "2026-10-07",
-"Le Truskel": "2026-10-07",
-"Nouveau Casino": "2026-10-07",
-"La G\u00e9n\u00e9rale": "2026-10-07",
+"Le Grand Rex": "2026-10-20",
+"Philharmonie de Paris": "2026-10-20",
+"Accor Arena": "2026-10-20",
+"L'Olympia": "2026-10-20",
+"Z\u00e9nith Paris": "2026-10-20",
+"La Seine Musicale": "2026-10-20",
+"Plenitude Arena": "2026-10-20",
+"Alhambra": "2026-10-20",
+"Cabaret Sauvage": "2026-10-20",
+"La Bellevilloise": "2026-10-20",
+"La Marbrerie": "2026-10-20",
+"File7": "2026-10-20",
+"Glazart": "2026-10-20",
+"La Machine du Moulin Rouge": "2026-10-20",
+"Duc des Lombards": "2026-10-20",
+"Le Baiser Sal\u00e9": "2026-10-20",
+"Le Centquatre": "2026-10-20",
+"La Petite Halle": "2026-10-20",
+"Mains d'\u0152uvres": "2026-10-20",
+"Badaboum": "2026-10-20",
+"Le Trabendo": "2026-10-20",
+"FGO-Barbara": "2026-10-20",
+"La Station - Gare des Mines": "2026-10-20",
+"Cirque Electrique": "2026-10-20",
+"La Dame de Canton": "2026-10-20",
+"La Java": "2026-10-20",
+"DOC": "2026-10-20",
+"Le Bal Blomet": "2026-10-20",
+"Studio de l'Ermitage": "2026-10-20",
+"Les Trois Baudets": "2026-10-20",
+"Le 360 Paris Music Factory": "2026-10-20",
+"Le Triton": "2026-10-20",
+"La Dynamo de Banlieues Bleues": "2026-10-20",
+"Canal 93": "2026-10-20",
+"Espace 1789": "2026-10-20",
+"La Ga\u00eet\u00e9 Lyrique": "2026-10-20",
+"PopUp!": "2026-10-20",
+"Le Truskel": "2026-10-20",
+"Nouveau Casino": "2026-10-20",
+"La G\u00e9n\u00e9rale": "2026-10-20",
 "Bal Chavaux": "2026-10-20",
-"Le Plan": "2026-10-08"
+"Le Plan": "2026-10-20"
 },
 "horizon": 730
 }
