@@ -131,5 +131,8 @@
    "address": "39 rue Gassendi, 75014 Paris", "lat": 48.8340, "lon": 2.3290, "genres": ["experimental"]},
   {"name": "Maison de la Radio et de la Musique", "slug": "maison-de-la-radio-et-de-la-musique", "strategy": "llm", "url": "https://www.maisondelaradioetdelamusique.fr/evenements",
    "urls": ["https://www.maisondelaradioetdelamusique.fr/evenements", "https://www.maisondelaradioetdelamusique.fr/concerts", "https://www.maisondelaradioetdelamusique.fr/"],
-   "address": "116 avenue du Président Kennedy, 75016 Paris", "area": "Passy", "lat": 48.8524, "lon": 2.2787, "genres": ["classical"]}
+   "address": "116 avenue du Président Kennedy, 75016 Paris", "area": "Passy", "lat": 48.8524, "lon": 2.2787, "genres": ["classical"]},
+  {"name": "LIV", "slug": "liv", "strategy": "llm", "url": "https://liv.paris/",
+   "note": "bar + basement club, rue Quincampoix; programme URL not verified (site unreachable from the cloud session), geo_match off: dense block near Beaubourg",
+   "address": "57 rue Quincampoix, 75004 Paris", "area": "Châtelet", "lat": 48.8609, "lon": 2.3511, "geo_match": false}
 ]
