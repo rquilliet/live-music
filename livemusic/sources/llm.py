@@ -50,16 +50,22 @@ def _model():
 
 
 def _params(venue, n, total, chunk, today):
+    """"llm_hint" in venues.json is a sentence for the model about this venue's page (an agenda that
+    also lists the orchestra's concerts in other cities, say); it is part of the chunk's cache key."""
+    head = f"Venue: {venue['name']} (part {n}/{total})"
+    if venue.get("llm_hint"):
+        head += f"\n{venue['llm_hint']}"
     return {"model": _model(), "max_tokens": 16000,
             "system": SYSTEM.format(today=today.isoformat(), tags=", ".join(TAGS)),
-            "messages": [{"role": "user", "content": f"Venue: {venue['name']} (part {n}/{total})\n\n{chunk}"}],
+            "messages": [{"role": "user", "content": f"{head}\n\n{chunk}"}],
             "output_config": {"format": {"type": "json_schema", "schema": SCHEMA}}}
 
 
 def _key(venue, chunk):
     """Cache key of one chunk: its text, not the day. The system prompt's date only matters for year-less
     dates, which _fix_year corrects, and past events are dropped by the pipeline."""
-    return hashlib.sha1(f"{PROMPT_VERSION}|{_model()}|{venue['slug']}|{chunk}".encode("utf-8")).hexdigest()
+    hint = f"|{venue['llm_hint']}" if venue.get("llm_hint") else ""
+    return hashlib.sha1(f"{PROMPT_VERSION}|{_model()}|{venue['slug']}{hint}|{chunk}".encode("utf-8")).hexdigest()
 
 
 def _plan(venue, ctx):
@@ -90,7 +96,7 @@ def _read_plan(venue, ctx):
     texts = []
     for u in urls:
         try:
-            texts.append(f"### {u}\n" + html_to_text(get(u)))
+            texts.append(f"### {u}\n" + html_to_text(get(u, timeout=venue.get("timeout", 25))))
         except FetchError as e:
             ctx["log"](f"  {venue['name']}: fetch failed: {e}")
             ctx["problem"] = str(e)

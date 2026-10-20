@@ -49,7 +49,7 @@ class LlmCacheTest(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.page = PAGE
         patches = [mock.patch.object(L, "CACHE_PATH", os.path.join(self.tmp.name, "llm_cache.json")),
-                   mock.patch.object(L, "get", lambda url: self.page),
+                   mock.patch.object(L, "get", lambda url, **kw: self.page),
                    mock.patch.object(L, "llm_available", lambda: True),
                    mock.patch.object(L, "CHUNK_CHARS", 600)]
         for p in patches:
@@ -147,6 +147,20 @@ class LlmCacheTest(unittest.TestCase):
         b = L._chunks("new first line\n" + text, 2000)
         self.assertTrue(all(len(c) <= 2000 for c in a))
         self.assertGreaterEqual(len(set(a) & set(b)), len(a) - 2)   # an insertion only changes its own chunk
+
+    def test_hint_and_timeout_are_per_venue(self):
+        hinted = dict(VENUE, llm_hint="Skip the concerts the page lists in other cities.", timeout=150)
+        today = dt.date(2026, 10, 20)
+        plain, with_hint = L._params(VENUE, 1, 1, "chunk", today), L._params(hinted, 1, 1, "chunk", today)
+        self.assertEqual(plain["messages"][0]["content"], "Venue: Le Trabendo (part 1/1)\n\nchunk")
+        self.assertEqual(with_hint["messages"][0]["content"],
+                         "Venue: Le Trabendo (part 1/1)\nSkip the concerts the page lists in other cities.\n\nchunk")
+        self.assertNotEqual(L._key(VENUE, "chunk"), L._key(hinted, "chunk"))   # a new hint re-extracts the page
+        seen = []
+        with mock.patch.object(L, "get", lambda url, timeout=25: seen.append(timeout) or self.page):
+            L._read_plan(hinted, self.ctx(0))
+            L._read_plan(VENUE, self.ctx(0))
+        self.assertEqual(seen, [150, 25])
 
     def test_old_cache_format_is_dropped(self):
         with open(L.CACHE_PATH, "w") as f:

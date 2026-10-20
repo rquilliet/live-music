@@ -128,5 +128,14 @@
   {"name": "Nouveau Casino", "slug": "nouveau-casino", "strategy": "llm", "url": "https://nouveaucasino.fr/",
    "address": "109 rue Oberkampf, 75011 Paris", "area": "Oberkampf", "lat": 48.8660, "lon": 2.3782},
   {"name": "La Générale", "slug": "la-generale", "strategy": "llm", "url": "https://www.lagenerale.fr/",
-   "address": "39 rue Gassendi, 75014 Paris", "lat": 48.8340, "lon": 2.3290, "genres": ["experimental"]}
+   "address": "39 rue Gassendi, 75014 Paris", "lat": 48.8340, "lon": 2.3290, "genres": ["experimental"]},
+  {"name": "Maison de la Radio et de la Musique", "slug": "maison-de-la-radio-et-de-la-musique", "strategy": "llm",
+   "url": "https://www.maisondelaradioetdelamusique.fr/agenda",
+   "urls": ["https://www.maisondelaradioetdelamusique.fr/agenda?page=0", "https://www.maisondelaradioetdelamusique.fr/agenda?page=1", "https://www.maisondelaradioetdelamusique.fr/agenda?page=2", "https://www.maisondelaradioetdelamusique.fr/agenda?page=3", "https://www.maisondelaradioetdelamusique.fr/agenda?page=4", "https://www.maisondelaradioetdelamusique.fr/agenda?page=5", "https://www.maisondelaradioetdelamusique.fr/agenda?page=6", "https://www.maisondelaradioetdelamusique.fr/agenda?page=7", "https://www.maisondelaradioetdelamusique.fr/agenda?page=8", "https://www.maisondelaradioetdelamusique.fr/agenda?page=9"],
+   "llm_hint": "Keep only the events held at the Maison de la Radio et de la Musique itself (Auditorium, Studio 104, 105, 109...); skip the ones the agenda lists in other halls or cities (Théâtre des Champs-Élysées, tours in Dijon, Bâle...). Public radio shows ('Émission en public') are not music unless the show is a live concert.",
+   "note": "agenda paginated 12 events a page, pages 0-9 cover about 6 months; /evenements and /concerts answer 404",
+   "address": "116 avenue du Président Kennedy, 75016 Paris", "area": "Passy", "lat": 48.8524, "lon": 2.2787, "genres": ["classical"]},
+  {"name": "LIV - Les Inspirations Visibles", "slug": "liv", "strategy": "llm", "url": "https://liv.paris/", "timeout": 150,
+   "note": "concert series (organ, drone, contemporary) at the Église du Saint-Esprit; the site takes 1-2 min to answer, liv.ideologic.org is a stale copy",
+   "address": "186 avenue Daumesnil, 75012 Paris", "area": "Daumesnil", "lat": 48.8390, "lon": 2.3975, "genres": ["experimental"]}
 ]

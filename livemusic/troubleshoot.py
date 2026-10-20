@@ -334,7 +334,8 @@ Failing since: {since}. Events at its last success: {prev}.
 
 How the scraper works
 - venues.json: one entry per venue. "strategy" names the function of livemusic/sources/__init__.py (STRATEGIES)
-  that scrapes it. "url" is the programme page; "urls" (a list) replaces it when the programme spans several pages.
+  that scrapes it. "url" is the programme page; "urls" (a list) replaces it when the programme spans several pages;
+  "timeout" (seconds, default 25) for a slow site; "llm_hint" is a sentence for Claude about the page (strategy llm).
 - strategy "llm": the page text is sent to Claude, which extracts the concerts (livemusic/sources/llm.py). Such a
   source breaks when its URL moved, the page is empty without JavaScript, or the site blocks robots. The usual
   repair is a better "url"/"urls" in venues.json (an agenda page, a JSON or RSS feed, a WordPress REST endpoint).
