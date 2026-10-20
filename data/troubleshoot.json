@@ -19,77 +19,17 @@
    ],
    "usd": 0.1027,
    "issue": "REM-79"
-  },
-  "mains-d-oeuvres": {
-   "since": "2026-10-08",
-   "days": [
-    "2026-10-13"
-   ],
-   "usd": 0.0,
-   "issue": "REM-83"
-  },
-  "zenith-paris": {
-   "since": "2026-10-08",
-   "days": [],
-   "usd": 0.0
   }
  },
  "last": {
   "date": "2026-10-20",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39402226073",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39501881868",
   "usd": 0,
   "sessions": 0,
   "fixed": [],
   "recovered": [],
   "unresolved": [],
-  "systemic": [
-   {
-    "cause": "Claude API error 401: invalid x-api-key",
-    "venues": [
-     "Accor Arena",
-     "L'Olympia",
-     "Zénith Paris",
-     "La Seine Musicale",
-     "Plenitude Arena",
-     "Alhambra",
-     "Cabaret Sauvage",
-     "La Bellevilloise",
-     "La Marbrerie",
-     "Le Plan",
-     "File7",
-     "Glazart",
-     "La Machine du Moulin Rouge",
-     "Duc des Lombards",
-     "Le Baiser Salé",
-     "Le Centquatre",
-     "La Petite Halle",
-     "Le Grand Rex",
-     "Mains d'Œuvres",
-     "Badaboum",
-     "Philharmonie de Paris",
-     "Le Trabendo",
-     "FGO-Barbara",
-     "La Station - Gare des Mines",
-     "Cirque Electrique",
-     "La Dame de Canton",
-     "La Java",
-     "DOC",
-     "Le Bal Blomet",
-     "Studio de l'Ermitage",
-     "Les Trois Baudets",
-     "Le 360 Paris Music Factory",
-     "Le Triton",
-     "La Dynamo de Banlieues Bleues",
-     "Canal 93",
-     "Espace 1789",
-     "La Gaîté Lyrique",
-     "PopUp!",
-     "Le Truskel",
-     "Nouveau Casino",
-     "La Générale"
-    ]
-   }
-  ],
+  "systemic": [],
   "skipped": [
    {
     "venue": "Supersonic",
