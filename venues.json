@@ -133,6 +133,6 @@
    "urls": ["https://www.maisondelaradioetdelamusique.fr/evenements", "https://www.maisondelaradioetdelamusique.fr/concerts", "https://www.maisondelaradioetdelamusique.fr/"],
    "address": "116 avenue du Président Kennedy, 75016 Paris", "area": "Passy", "lat": 48.8524, "lon": 2.2787, "genres": ["classical"]},
   {"name": "LIV", "slug": "liv", "strategy": "llm", "url": "https://liv.paris/",
-   "note": "bar + basement club, rue Quincampoix; programme URL not verified (site unreachable from the cloud session), geo_match off: dense block near Beaubourg",
-   "address": "57 rue Quincampoix, 75004 Paris", "area": "Châtelet", "lat": 48.8609, "lon": 2.3511, "geo_match": false}
+   "note": "concerts held at the Église du Saint-Esprit; programme URL not verified (site unreachable from the cloud session)",
+   "address": "186 avenue Daumesnil, 75012 Paris", "area": "Daumesnil", "lat": 48.8390, "lon": 2.3975}
 ]
