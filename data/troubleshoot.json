@@ -19,16 +19,67 @@
    ],
    "usd": 0.1027,
    "issue": "REM-79"
+  },
+  "le-trianon": {
+   "since": "2026-10-21",
+   "days": [
+    "2026-10-21"
+   ],
+   "usd": 0.1177,
+   "issue": "REM-85"
+  },
+  "elysee-montmartre": {
+   "since": "2026-10-21",
+   "days": [
+    "2026-10-21"
+   ],
+   "usd": 0.1344,
+   "issue": "REM-86"
   }
  },
  "last": {
-  "date": "2026-10-20",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39501881868",
-  "usd": 0,
-  "sessions": 0,
+  "date": "2026-10-21",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39580433557",
+  "usd": 0.2521,
+  "sessions": 2,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
+  "unresolved": [
+   {
+    "venue": "Le Trianon",
+    "slug": "le-trianon",
+    "error": "0 events parsed (was 35)",
+    "since": "2026-10-21",
+    "prev_count": 35,
+    "url": "https://www.letrianon.fr/fr/programmation/",
+    "attempts": 1,
+    "usd_total": 0.1177,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Le Trianon cannot be repaired from here: the whole letrianon.fr site is serving a \"Maintenance en cours\" page, so there is no programme to parse.\n\nCause: https://www.letrianon.fr/fr/programmation/ returns the site's maintenance page (title \"Maintenance en cours\", \"Le site est momentanément indisponible pour une opération de maintenance\"). It has no `bloc_extrait evenement` blocks, so the trianon parser finds 0 events. The page is 42 KB only because of base64-encoded logos; there is no hidden content.\nThe rest of the site is down too: /fr/, /fr/agenda/ and /sitemap.xml return the same maintenance page, and the root URL / returns HTTP 403. No other URL or feed serves the programme.\nWhat I changed: nothing. The parser and venues.json entry are probably still correct; they can't be checked until the site is back.\nCheck result: {\"ok\": false, \"count\": 0, \"prev_count\": 35, \"error\": \"0 events parsed (0 outside the window or invalid)\"}\nWhat a human should do: run `scrape.py --check le-trianon` again in a day or two. If it still fails once the site is back, compare the new markup with the trianon parser in livemusic/sources/venues_html.py. Élysée Montmartre uses the same theme and may break the same way. No instructions were found in the pages.",
+    "diff": "",
+    "usd": 0.1177,
+    "usd_agent": 0.117708
+   },
+   {
+    "venue": "Élysée Montmartre",
+    "slug": "elysee-montmartre",
+    "error": "0 events parsed (was 55)",
+    "since": "2026-10-21",
+    "prev_count": 55,
+    "url": "https://www.elyseemontmartre.com/fr/programmation/",
+    "attempts": 1,
+    "usd_total": 0.1344,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "The Élysée Montmartre website is down for maintenance, so there is no programme to parse and nothing to repair here.\n\n- Cause: https://www.elyseemontmartre.com/fr/programmation/ (and /en/programmation/) return a \"Maintenance en cours\" page (\"Le site est momentanément indisponible pour une opération de maintenance\"). The homepage returns HTTP 403. The page has no event markup at all: its 42 KB are only inline base64 logos, and the visible text is 135 characters long. The trianon parser is fine; it just has nothing to read.\n- Changed: nothing. No other URL on the domain serves the programme, and the \"trianon\" parser is shared with Le Trianon, which must not be touched.\n- Check result: {\"ok\": false, \"count\": 0, \"error\": \"0 events parsed (0 outside the window or invalid)\"}.\n- The page has no hidden content and no instructions.\n- For a human: re-run `scrape.py --check elysee-montmartre` in a day or two. If the site comes back with new markup, update the parser. If the maintenance goes on, look for the programme on a ticketing site (e.g. the venue's page on a ticket vendor). That would need a new url or strategy.",
+    "diff": "",
+    "usd": 0.1344,
+    "usd_agent": 0.13436099999999998
+   }
+  ],
   "systemic": [],
   "skipped": [
    {
@@ -45,7 +96,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-19",
-  "usd": 0.0
+  "date": "2026-10-21",
+  "usd": 0.2521
  }
 }
