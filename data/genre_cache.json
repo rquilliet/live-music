@@ -12241,6 +12241,13 @@
 "brass ensemble"
 ]
 },
+"la-gaite-lyrique|claude emmanuelle dj set": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-gaite-lyrique|concert d ensemble de cuivres a la gaite lyrique": {
 "genres": [
 "classical"
@@ -12310,6 +12317,14 @@
 "subgenres": [
 "noise"
 ]
+},
+"la-generale|aurelia pie": {
+"genres": [
+"experimental",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-generale|jeff rian": {
 "genres": [
@@ -12427,6 +12442,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-java|pop princess party lady gaga edition paris": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"dance-pop"
+]
 },
 "la-java|queer up one last summer dance soiree lesbienne et queer": {
 "genres": [
@@ -13556,6 +13580,16 @@
 "is_music": true,
 "subgenres": [
 "industrial"
+]
+},
+"la-maroquinerie|hotei": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"japanese rock",
+"guitar instrumental"
 ]
 },
 "la-maroquinerie|igo": {
@@ -15294,6 +15328,18 @@
 "rhapsody"
 ]
 },
+"la-seine-musicale|richard bona": {
+"genres": [
+"jazz",
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"afro-jazz",
+"bass virtuoso"
+]
+},
 "la-seine-musicale|romeo et juliette": {
 "genres": [
 "classical"
@@ -16913,6 +16959,16 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"le-hasard-ludique|kalupto": {
+"genres": [
+"indie",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"neo-soul"
 ]
 },
 "le-hasard-ludique|keiyaa": {
@@ -19208,6 +19264,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-triton|maria laura baccarini et helene labarriere": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"double bass duo"
+]
 },
 "le-triton|martial bort l instante": {
 "genres": [
@@ -21727,6 +21794,17 @@
 "retro soul"
 ]
 },
+"olympia|jeanne added": {
+"genres": [
+"pop",
+"rock",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"art pop"
+]
+},
 "olympia|juste shani": {
 "genres": [
 "pop",
@@ -21827,6 +21905,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"olympia|swing": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"big band"
+]
 },
 "olympia|the musical story of elvis revient en france du 02 au 17 janvier 2027 a l olympia a paris le 09 janvier a 20h": {
 "genres": [
@@ -22842,6 +22930,16 @@
 "is_music": true,
 "subgenres": [
 "noise rock"
+]
+},
+"petit-bain|room on fire the strokes afterparty": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage rock revival"
 ]
 },
 "petit-bain|sad lovers giants": {
@@ -25385,6 +25483,16 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|early show tara": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"alt-pop"
+]
+},
 "popup|filiz": {
 "genres": [
 "pop"
@@ -25514,6 +25622,16 @@
 "is_music": true,
 "subgenres": [
 "throwback"
+]
+},
+"popup|late show tara": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"alt-pop"
 ]
 },
 "popup|lovetempo": {
@@ -25815,6 +25933,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"popup|release party kid sophie": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"synth-pop"
+]
 },
 "popup|release party notes de frais victorine": {
 "genres": [
@@ -31634,6 +31762,16 @@
 "is_music": true,
 "subgenres": [
 "rap suisse"
+]
+},
+"zenith-paris|malcolm todd": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"bedroom pop"
 ]
 },
 "zenith-paris|marguerite": {
