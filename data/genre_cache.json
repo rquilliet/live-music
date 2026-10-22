@@ -1467,6 +1467,17 @@
 "is_music": true,
 "subgenres": []
 },
+"alhambra|hazlett": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"indie folk",
+"singer-songwriter"
+]
+},
 "alhambra|iq": {
 "genres": [
 "rock"
@@ -2582,6 +2593,18 @@
 "turkish folk"
 ]
 },
+"bal-chavaux|derya yildirim grup simsek biadost": {
+"genres": [
+"world",
+"folk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"anatolian psych",
+"turkish folk"
+]
+},
 "bal-chavaux|discoquette halloween carrie au bal chavaux": {
 "genres": [
 "electro",
@@ -2651,6 +2674,16 @@
 "noise rock",
 "post-punk",
 "cold wave"
+]
+},
+"bal-chavaux|johnny montreuil": {
+"genres": [
+"chanson",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"rockabilly"
 ]
 },
 "bal-chavaux|kumo x gloom club": {
@@ -3814,6 +3847,14 @@
 "recital"
 ]
 },
+"bibliotheque-valeyre|monte le son camille laily": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "cabaret-sauvage|aie x sauvage les 5 ans": {
 "genres": [
 "electro",
@@ -4862,6 +4903,26 @@
 "chanson festive"
 ]
 },
+"cirque-electrique|light la precieuse presentent la t4t avec androkill orlando et janis": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno",
+"hard techno"
+]
+},
+"cirque-electrique|loupinho x verdy": {
+"genres": [
+"electro",
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"hyperpop"
+]
+},
 "cirque-electrique|loupinho x verdy par dovblef4ce": {
 "genres": [
 "hip-hop",
@@ -5509,6 +5570,16 @@
 "concerto"
 ]
 },
+"conservatoire-municipal-charles-munch|jazz master class steve potts et concert": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"free jazz",
+"saxophone"
+]
+},
 "conservatoire-municipal-charles-munch|percussions": {
 "genres": [
 "classical"
@@ -5839,6 +5910,14 @@
 "free jazz",
 "improvisation"
 ]
+},
+"doc|release party d eliana": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": []
 },
 "duc-des-lombards|bria skonberg": {
 "genres": [
@@ -6189,6 +6268,16 @@
 "subgenres": [
 "spanish repertoire",
 "chamber music"
+]
+},
+"eglise-notre-dame-du-travail|polyphonie vocale renaissance": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"renaissance polyphony",
+"vocal quartet"
 ]
 },
 "eglise-saint-christophe-de-javel|concert caritatif note bien joue mahler au profit de la recherche": {
@@ -6725,6 +6814,16 @@
 "subgenres": [
 "choral",
 "requiem"
+]
+},
+"eglise-st-severin|concert baroque hommage a lully soprano et trio baroque": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"soprano"
 ]
 },
 "eglise-st-severin|quintette a vents linos": {
@@ -9145,6 +9244,14 @@
 "rap chileno"
 ]
 },
+"la-bellevilloise|autogratis": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-bellevilloise|ax and the hatchetmen": {
 "genres": [
 "indie",
@@ -9571,6 +9678,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|halle aux oliviers imane jade trio": {
+"genres": [
+"jazz",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-bellevilloise|halle aux oliviers lemmy s tribe": {
 "genres": [
 "metal",
@@ -9881,6 +9996,17 @@
 "subgenres": [
 "samba",
 "choro"
+]
+},
+"la-bellevilloise|shattarena veille de jour ferie": {
+"genres": [
+"reggae",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"shatta",
+"dancehall"
 ]
 },
 "la-bellevilloise|six60": {
@@ -11099,6 +11225,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-cigale|django": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "la-cigale|dma": {
 "genres": [
 "hip-hop"
@@ -11224,6 +11359,16 @@
 "subgenres": [
 "natural trance",
 "psytrance"
+]
+},
+"la-cigale|jade": {
+"genres": [
+"hip-hop",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "la-cigale|jake bugg": {
@@ -12374,6 +12519,14 @@
 "disco"
 ]
 },
+"la-java|halloween music generaliste meet in paris": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-java|halloween villains night": {
 "genres": [
 "electro",
@@ -12489,6 +12642,15 @@
 "michael jackson tribute"
 ]
 },
+"la-java|the pop princess party lady gaga": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"dance-pop"
+]
+},
 "la-machine|63kluf": {
 "genres": [
 "electro"
@@ -12597,6 +12759,15 @@
 "subgenres": [
 "house",
 "french touch"
+]
+},
+"la-machine|il est vilaine ymnk": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
 ]
 },
 "la-machine|isaiah falls side b lvrs paradise tour": {
@@ -13203,6 +13374,16 @@
 "is_music": true,
 "subgenres": [
 "indie folk"
+]
+},
+"la-maroquinerie|balik": {
+"genres": [
+"reggae"
+],
+"is_music": true,
+"subgenres": [
+"roots reggae",
+"dub"
 ]
 },
 "la-maroquinerie|barbara carlotti": {
@@ -14879,6 +15060,18 @@
 ],
 "is_music": false,
 "subgenres": []
+},
+"la-seine-cafe|festival they re gonna be big au supersonic": {
+"genres": [
+"rock",
+"indie",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock",
+"post-punk"
+]
 },
 "la-seine-musicale|anne sila yvan cassar": {
 "genres": [
@@ -16772,6 +16965,17 @@
 "is_music": true,
 "subgenres": []
 },
+"le-danube-palace-cafe|jake manzi en concert au danube palace cafe": {
+"genres": [
+"folk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"folk rock",
+"americana"
+]
+},
 "le-dome-de-paris|forever the best show about the king of pop": {
 "genres": [
 "pop"
@@ -16942,6 +17146,16 @@
 "trumpet electronics"
 ]
 },
+"le-hasard-ludique|gold panda": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"idm",
+"downtempo"
+]
+},
 "le-hasard-ludique|hulvey": {
 "genres": [
 "hip-hop"
@@ -17015,6 +17229,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-hasard-ludique|ooralise": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
 },
 "le-hasard-ludique|paris popfest 8": {
 "genres": [
@@ -17572,6 +17795,17 @@
 "subgenres": [
 "bossa nova",
 "brazilian jazz"
+]
+},
+"le-palais-des-congres|unis pour la colombie concert solidaire a l initiative de yuri buenaventura en presence de nombreux artistes": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"salsa",
+"cumbia"
 ]
 },
 "le-pavillon-de-la-sirene|concert carte blanche au tubiste jeremie dufort": {
@@ -19240,6 +19474,16 @@
 "chamber jazz"
 ]
 },
+"le-triton|leila soldevila line borders": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"double bass"
+]
+},
 "le-triton|levy bex goubert jazz revolution": {
 "genres": [
 "jazz"
@@ -19372,6 +19616,13 @@
 "post-punk",
 "cold wave"
 ]
+},
+"le-truskel|concert jam maison des sons": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": []
 },
 "le-truskel|falvino tati and the chronicle": {
 "genres": [
