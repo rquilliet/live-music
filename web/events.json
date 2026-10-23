@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-10-23T09:40:48",
+"generated_at": "2026-10-23T09:44:29",
 "today": "2026-10-23",
 "new_window_days": 7,
 "tags": [
@@ -336,7 +336,6 @@
 "alt-r&b": "soul-rnb",
 "alternative dance": "electro",
 "alternative metal": "metal",
-"alternative pop": "pop",
 "alternative r&b": "soul-rnb",
 "alternative rnb": "afro",
 "alternative rock": "rock",
@@ -483,7 +482,7 @@
 "caribbean": "world",
 "caribbean grooves": "jazz",
 "caribbean jazz": "jazz",
-"caribbean pop": "pop",
+"caribbean pop": "afro",
 "carnatic": "classical",
 "carnival": "latin",
 "casamance": "afro",
@@ -974,7 +973,7 @@
 "mod revival": "punk",
 "modal": "world",
 "modal jazz": "jazz",
-"modern funk": "funk",
+"modern funk": "electro",
 "modern jazz": "jazz",
 "modern soul": "funk",
 "monteverdi": "classical",
@@ -1295,7 +1294,7 @@
 "soul jazz": "jazz",
 "sound art": "experimental",
 "sound system": "reggae",
-"soundtrack": "classical",
+"soundtrack": "jazz",
 "south american": "classical",
 "southern rap": "hip-hop",
 "southern rock": "rock",
@@ -1566,13 +1565,6 @@
 "count": 13
 },
 {
-"venue": "Zénith Paris",
-"ok": false,
-"error": "URLError: <urlopen error timed out> for https://www.zenith-paris.com/",
-"carried": 104,
-"stale_since": "2026-10-22"
-},
-{
 "venue": "La Seine Musicale",
 "ok": true,
 "count": 58
@@ -1761,6 +1753,11 @@
 "venue": "La Générale",
 "ok": true,
 "count": 19
+},
+{
+"venue": "Zénith Paris",
+"ok": true,
+"count": 109
 }
 ],
 "events": [
@@ -4121,7 +4118,7 @@
 "piano solo",
 "balkan jazz"
 ],
-"description": "Dans le cadre de Jazz Sur Seine. 25 ans après sa sortie, l’album solo culte reprend vie sur scène ! En 2001, on pouvait lire dans Citizen Jazz « Solobsession porte déjà la marque indélébile du génie musical de Bojan Z ». Et ce n’était que le début ! Figure incontournable de la scène jazz européenne, le pianiste franco-serbe Bojan Z s’est imposé grâce à un style unique qui fusionne la tradition du ",
+"description": "Dans le cadre de Jazz Sur Seine. 25 ans après sa sortie, l’album solo culte reprend vie sur scène ! En 2001, on pouvait lire dans Citizen Jazz « Solobsession porte déjà la marque indélébile du génie musical de Bojan Z ». Et ce n’était que le début ! Figure incontournable de la scène jazz européenne, le pianiste franco-serbe Bojan Z s’est imposé grâce à un style unique qui fusionne la tradition du",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Henri-Bojan.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -5797,7 +5794,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "8362e38a5c62",
 "first_seen": "baseline"
 },
@@ -6107,7 +6104,7 @@
 "subgenres": [
 "art contemporain"
 ],
-"description": "Le CCS se transforme en terrain de jeu artistique Performances, films, lecture et musique expérimentale : le temps d’une après-midi, SuPERFORM invite à découvrir la création contemporaine sous des formes multiples. Les espaces du Centre culturel suisse s’animent au fil d’un programme qui fait se rencontrer les œuvres et encourage le public à circuler d’une proposition à l’autre. Au programme, une ",
+"description": "Le CCS se transforme en terrain de jeu artistique Performances, films, lecture et musique expérimentale : le temps d’une après-midi, SuPERFORM invite à découvrir la création contemporaine sous des formes multiples. Les espaces du Centre culturel suisse s’animent au fil d’un programme qui fait se rencontrer les œuvres et encourage le public à circuler d’une proposition à l’autre. Au programme, une",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/10/09/huge-2692118d50d01aee525f49a542bba70f.jpg",
 "address": "32 rue des Francs-Bourgeois, 75003, Paris",
@@ -7313,7 +7310,7 @@
 "subgenres": [
 "trombone jazz"
 ],
-"description": "Tromboniste solaire et compositeur à la plume toujours aussi affûtée, Daniel Zimmermann a récemment sorti un nouvel album remarquable (oct 2025 – Label Bleu). Un projet imaginé comme une galerie de portraits et de souvenirs capturés sur le vif, où la mélodie reine se teinte de swing, de poésie et d’une sacrée dose d’énergie. Aux côtés de Daniel Zimmermann, un quartet d’esthètes et de complices au ",
+"description": "Tromboniste solaire et compositeur à la plume toujours aussi affûtée, Daniel Zimmermann a récemment sorti un nouvel album remarquable (oct 2025 – Label Bleu). Un projet imaginé comme une galerie de portraits et de souvenirs capturés sur le vif, où la mélodie reine se teinte de swing, de poésie et d’une sacrée dose d’énergie. Aux côtés de Daniel Zimmermann, un quartet d’esthètes et de complices au",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/WEB_5829.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -8788,9 +8785,9 @@
 },
 "CORINNE": {
 "youtube": {
-"videoId": "h--fvyPu5e4",
+"publishedAt": "2016-09-26",
 "title": "Corinne Bailey Rae: NPR Music Tiny Desk Concert",
-"publishedAt": "2016-09-26"
+"videoId": "h--fvyPu5e4"
 }
 },
 "TATI AND THE CHRONICLE": {
@@ -8942,7 +8939,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "960248822a62",
 "first_seen": "baseline"
 },
@@ -9081,7 +9078,7 @@
 "subgenres": [
 "rock'n'roll covers"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -9965,9 +9962,9 @@
 "url": "https://open.spotify.com/artist/3x11XrMEnyP18hv73pmKRL"
 },
 "youtube": {
-"videoId": "hRPu8WFEFb4",
+"publishedAt": "2026-10-22",
 "title": "Chanel Beads | NTS Studio Session",
-"publishedAt": "2026-10-22"
+"videoId": "hRPu8WFEFb4"
 }
 },
 "Urika's Bedroom": {
@@ -9976,9 +9973,9 @@
 "url": "https://open.spotify.com/artist/6LhbOssuAbrXa5Wzcskhhw"
 },
 "youtube": {
-"videoId": "GVmaelrgaHU",
+"publishedAt": "2025-07-21",
 "title": "urika's bedroom | Live | Baby's All Right Brooklyn NYC | February 22, 2025",
-"publishedAt": "2025-07-21"
+"videoId": "GVmaelrgaHU"
 }
 }
 },
@@ -10777,7 +10774,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "2e7c21150626",
 "first_seen": "baseline"
 },
@@ -12590,7 +12587,7 @@
 "subgenres": [
 "contemporary jazz"
 ],
-"description": "Avec « Dance Me Home » 5tet, le jeune batteur et arrangeur Guillaume Leguérinel présente son premier projet en tant que compositeur, inspiré par les sonorités qui ont bercé son enfance. Entouré de César Forques (saxophones), Malo Athouël (guitare), Baptiste Le Fischer (piano) et Rayan Besançon (basse), il propose une musique sensible et énergique, où se mêlent écriture et improvisation. Le groupe ",
+"description": "Avec « Dance Me Home » 5tet, le jeune batteur et arrangeur Guillaume Leguérinel présente son premier projet en tant que compositeur, inspiré par les sonorités qui ont bercé son enfance. Entouré de César Forques (saxophones), Malo Athouël (guitare), Baptiste Le Fischer (piano) et Rayan Besançon (basse), il propose une musique sensible et énergique, où se mêlent écriture et improvisation. Le groupe",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Format-carre-77.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -16203,9 +16200,9 @@
 "players": {
 "FREE PALESTINE TOUR": {
 "youtube": {
-"videoId": "EToyDh8RQPo",
+"publishedAt": "2026-09-25",
 "title": "Macklemore announces 'Free Palestine' tour after Ed Sheeran fallout. #BBCNews",
-"publishedAt": "2026-09-25"
+"videoId": "EToyDh8RQPo"
 }
 }
 },
@@ -16894,12 +16891,12 @@
 "raw_genre": null,
 "genres": [
 "funk",
-"soul-rnb"
+"electro"
 ],
 "genre_source": "llm",
 "subgenres": [
-"modern funk",
-"boogie"
+"boogie",
+"modern funk"
 ],
 "description": "Dabeull",
 "summary": null,
@@ -16912,7 +16909,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "cd866f8a9267",
 "first_seen": "baseline"
 },
@@ -19701,7 +19698,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "74d94217d0c0",
 "first_seen": "baseline"
 },
@@ -22886,7 +22883,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "9995285fd65e",
 "first_seen": "baseline"
 },
@@ -23018,7 +23015,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -24082,6 +24079,42 @@
 "first_seen": "baseline"
 },
 {
+"title": "Le gwo ka monte au Zénith",
+"date": "2026-11-01",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"world"
+],
+"genre_source": "llm",
+"subgenres": [
+"gwo ka"
+],
+"description": null,
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "Le gwo ka monte",
+"support": [],
+"players": {},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "52f01b3d8b69",
+"first_seen": "baseline"
+},
+{
 "title": "Technologies de l’Esprit / Machines à coexister",
 "date": "2026-11-02",
 "venue": "La Générale",
@@ -24346,7 +24379,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Davina Michelle sera sur la scène de La Boule Noire à Paris le lundi 2 novembre 2026 à 19h30. Figure incontournable de la pop néerlandaise, la chanteuse s’est fait connaître en 2017 grâce à une reprise de P!NK devenue virale. Depuis, elle a multiplié les succès avec « Skyward », « Better Now » et « 17 Miljoen Mensen ». Son premier album My Own World, certifié disque d’or, puis Higher ont confirmé ",
+"description": "Davina Michelle sera sur la scène de La Boule Noire à Paris le lundi 2 novembre 2026 à 19h30. Figure incontournable de la pop néerlandaise, la chanteuse s’est fait connaître en 2017 grâce à une reprise de P!NK devenue virale. Depuis, elle a multiplié les succès avec « Skyward », « Better Now » et « 17 Miljoen Mensen ». Son premier album My Own World, certifié disque d’or, puis Higher ont confirmé",
 "summary": null,
 "image": "https://laboule-noire.fr/wp-content/uploads/2026/02/DM_paris_1800x1800-1024x1024.jpg",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
@@ -30808,7 +30841,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "793569a50de8",
 "first_seen": "baseline"
 },
@@ -34141,9 +34174,9 @@
 "url": "https://open.spotify.com/artist/0zIKoyCU0O58442FNcnwSP"
 },
 "youtube": {
-"videoId": "7SjagpXeNhM",
+"publishedAt": "2013-12-31",
 "title": "Camille Saint-Saëns – The Carnival Of The Animals, Le Carnaval des animaux",
-"publishedAt": "2013-12-31"
+"videoId": "7SjagpXeNhM"
 }
 }
 },
@@ -34183,9 +34216,9 @@
 "players": {
 "Histoire de ma vie": {
 "youtube": {
-"videoId": "K_PTr0s3TUY",
+"publishedAt": "2026-04-22",
 "title": "Histoire de ma vie Fidèle Kankonde en live ",
-"publishedAt": "2026-04-22"
+"videoId": "K_PTr0s3TUY"
 }
 }
 },
@@ -34546,16 +34579,16 @@
 "url": "https://musiquedechambre1.bandcamp.com"
 },
 "youtube": {
-"videoId": "kTCYNRWyN4E",
+"publishedAt": "2026-10-02",
 "title": "Concert Musique de Chambre",
-"publishedAt": "2026-10-02"
+"videoId": "kTCYNRWyN4E"
 }
 },
 "Flute traversière": {
 "youtube": {
-"videoId": "62IkESOgrBM",
+"publishedAt": "2024-11-09",
 "title": "Comment apprendre à jouer de la flûte traversière",
-"publishedAt": "2024-11-09"
+"videoId": "62IkESOgrBM"
 }
 }
 },
@@ -34789,9 +34822,9 @@
 "players": {
 "conférence": {
 "youtube": {
-"videoId": "xMxjoh4mPsw",
+"publishedAt": "2026-10-19",
 "title": "Nick Sirianni Live Eagles press conference | Today at 3p",
-"publishedAt": "2026-10-19"
+"videoId": "xMxjoh4mPsw"
 }
 }
 },
@@ -34846,9 +34879,9 @@
 "url": "https://open.spotify.com/artist/7zjBOWru8RBRZ1dQQk0B4g"
 },
 "youtube": {
-"videoId": "PcyXOij4pj0",
+"publishedAt": "2026-01-06",
 "title": "TRAUMATIZER (NL) - Live Multicam - Full Set - Noise Annoys 2025 - MPRV News",
-"publishedAt": "2026-01-06"
+"videoId": "PcyXOij4pj0"
 }
 },
 "TURQUOISE": {
@@ -34857,16 +34890,16 @@
 "url": "https://turquoise.bandcamp.com"
 },
 "youtube": {
-"videoId": "pJqrjIuvGFE",
+"publishedAt": "2020-12-09",
 "title": "Live from Turquoise Place",
-"publishedAt": "2020-12-09"
+"videoId": "pJqrjIuvGFE"
 }
 },
 "MEGAHEX": {
 "youtube": {
-"videoId": "dnc-Yuaauac",
+"publishedAt": "2019-11-02",
 "title": "MegaHex Live Stream",
-"publishedAt": "2019-11-02"
+"videoId": "dnc-Yuaauac"
 }
 }
 },
@@ -35095,9 +35128,9 @@
 "url": "https://open.spotify.com/artist/5kWK4UGTuzfbsWpOdGnEzs"
 },
 "youtube": {
-"videoId": "XD7E28i8cbc",
+"publishedAt": "2020-09-28",
 "title": "Sélène Saint-Aimé en concert sur TSFJAZZ !",
-"publishedAt": "2020-09-28"
+"videoId": "XD7E28i8cbc"
 }
 }
 },
@@ -35144,9 +35177,9 @@
 "url": "https://open.spotify.com/artist/0Waq0e4oiQxOvsfoAiOIC5"
 },
 "youtube": {
-"videoId": "fUbDznYhF7Y",
+"publishedAt": "2026-08-23",
 "title": "LIVE FRAPCORE ACIDCORE 2026 TRACK 5 - GU1T4R x LAYLOW",
-"publishedAt": "2026-08-23"
+"videoId": "fUbDznYhF7Y"
 }
 }
 },
@@ -35385,9 +35418,9 @@
 "players": {
 "TOUT EN ROSE": {
 "youtube": {
-"videoId": "bW2Jk5USZpk",
+"publishedAt": "2025-09-28",
 "title": "24H TOUT EN ROSE !",
-"publishedAt": "2025-09-28"
+"videoId": "bW2Jk5USZpk"
 }
 },
 "MARIE PERBOST": {
@@ -35400,9 +35433,9 @@
 "url": "https://open.spotify.com/artist/3qes1v684M3fbpOnz9Mc8E"
 },
 "youtube": {
-"videoId": "R1-p5rqwaAY",
+"publishedAt": "2020-01-27",
 "title": "Marie Perbost : Dihau, La Tour Eiffel (Révélations Classique 2020)",
-"publishedAt": "2020-01-27"
+"videoId": "R1-p5rqwaAY"
 }
 }
 },
@@ -35487,9 +35520,9 @@
 "url": "https://pio444.bandcamp.com"
 },
 "youtube": {
-"videoId": "DMm2IO2qPDY",
+"publishedAt": "2026-10-22",
 "title": "HOLY MASS TODAY HEALING LIVE MASS at Santo Padre Pio International Shrine * Oktubre 23, 2026  6AM",
-"publishedAt": "2026-10-22"
+"videoId": "DMm2IO2qPDY"
 }
 },
 "MargauxRZ": {
@@ -35543,9 +35576,9 @@
 "url": "https://open.spotify.com/artist/45uTDvyiNkBNj7gwFCzWcd"
 },
 "youtube": {
-"videoId": "7YLBniJa1w0",
+"publishedAt": "2026-10-11",
 "title": "AMARI NATURA – Live Concert// Blois -FRANCE",
-"publishedAt": "2026-10-11"
+"videoId": "7YLBniJa1w0"
 }
 }
 },
@@ -35592,9 +35625,9 @@
 "url": "https://open.spotify.com/artist/0dSAqgiskNQy5Kr6aRDiZj"
 },
 "youtube": {
-"videoId": "_CCMOD85mro",
+"publishedAt": "2024-03-04",
 "title": "Sifoor - Mon Temps & Amamakossa (Live sur Canal + Sport)",
-"publishedAt": "2024-03-04"
+"videoId": "_CCMOD85mro"
 }
 }
 },
@@ -35643,9 +35676,9 @@
 "url": "https://open.spotify.com/artist/4yaVj1SnoAFuqdRNGMCcFW"
 },
 "youtube": {
-"videoId": "xEMpgeWgrV0",
+"publishedAt": "2016-11-29",
 "title": "Concert du Paris Mozart Orchestra au CESE",
-"publishedAt": "2016-11-29"
+"videoId": "xEMpgeWgrV0"
 }
 },
 "Claire Gibault": {
@@ -35654,16 +35687,16 @@
 "url": "https://open.spotify.com/artist/2k5WmbnjSX7XKocTLkzupP"
 },
 "youtube": {
-"videoId": "5PPhQIpp2VM",
+"publishedAt": "2012-07-12",
 "title": "Les Inestimables Chroniques du Bon Géant Gargantua dirigé par Claire Gibault",
-"publishedAt": "2012-07-12"
+"videoId": "5PPhQIpp2VM"
 }
 },
 "Jiajing Lai": {
 "youtube": {
-"videoId": "q6MeukHP_LQ",
+"publishedAt": "2017-10-25",
 "title": "Jiajing Lai conducts Titus Overture",
-"publishedAt": "2017-10-25"
+"videoId": "q6MeukHP_LQ"
 }
 }
 },
@@ -35711,9 +35744,9 @@
 "url": "https://open.spotify.com/artist/35NnUEPKGspM23lTZvK3cb"
 },
 "youtube": {
-"videoId": "jT9TQFMwPhA",
+"publishedAt": "2025-06-21",
 "title": "Smetana: My Fatherland | Czech Philharmonic & Semyon Bychkov",
-"publishedAt": "2025-06-21"
+"videoId": "jT9TQFMwPhA"
 }
 },
 "Semyon Bychkov": {
@@ -35722,9 +35755,9 @@
 "url": "https://open.spotify.com/artist/6qg886AZaBjnfRF5tEs4Ht"
 },
 "youtube": {
-"videoId": "1dsbkhTkD7s",
+"publishedAt": "2020-06-20",
 "title": "Tchaikovsky - Symphony No. 5 - Semyon Bychkov | Concertgebouworkest",
-"publishedAt": "2020-06-20"
+"videoId": "1dsbkhTkD7s"
 }
 }
 },
@@ -35776,9 +35809,9 @@
 "url": "https://open.spotify.com/artist/6eCDJqUoJxeme8sa3yuoPZ"
 },
 "youtube": {
-"videoId": "XR0ATdNlc_Y",
+"publishedAt": "2007-09-20",
 "title": "Akcent - French Kiss Live Poland (2007)",
-"publishedAt": "2007-09-20"
+"videoId": "XR0ATdNlc_Y"
 }
 }
 },
@@ -35822,9 +35855,9 @@
 "url": "https://open.spotify.com/artist/4xZQd2qkqAiqpFwOfaxGHw"
 },
 "youtube": {
-"videoId": "twIg-Qu5zLM",
+"publishedAt": "2026-10-09",
 "title": "Cypher Moulin Rouge | Saphir Session #14 - Mischa, CKAY,  Sophieanne, Daniel, Apollo, Big D…",
-"publishedAt": "2026-10-09"
+"videoId": "twIg-Qu5zLM"
 }
 }
 },
@@ -35910,16 +35943,16 @@
 "players": {
 "Orchestre Silmaril": {
 "youtube": {
-"videoId": "-lPZVvmX0NA",
+"publishedAt": "2025-01-18",
 "title": "Gabriel Fauré - Cantique de Jean Racine",
-"publishedAt": "2025-01-18"
+"videoId": "-lPZVvmX0NA"
 }
 },
 "Concerto pour violon": {
 "youtube": {
-"videoId": "GplH3ZfZa9c",
+"publishedAt": "2017-12-15",
 "title": "Mendelssohn : Concerto pour violon n°2 (Julia Fischer)",
-"publishedAt": "2017-12-15"
+"videoId": "GplH3ZfZa9c"
 }
 }
 },
@@ -35971,23 +36004,23 @@
 "url": "https://open.spotify.com/artist/3gqjUB2DuBKc6Ek8s9z34p"
 },
 "youtube": {
-"videoId": "6cGDngGswik",
+"publishedAt": "2013-03-21",
 "title": "Bosquito - Marcela | LIVE in Garajul Europa FM",
-"publishedAt": "2013-03-21"
+"videoId": "6cGDngGswik"
 }
 },
 "FULL BAND": {
 "youtube": {
-"videoId": "KXi9xfmC-dc",
+"publishedAt": "2024-05-03",
 "title": "Sing it Live: Dancing Queen (ABBA) - Full Band Performance",
-"publishedAt": "2024-05-03"
+"videoId": "KXi9xfmC-dc"
 }
 },
 "DJ AMÉDÉE": {
 "youtube": {
-"videoId": "FXB1GQL38CQ",
+"publishedAt": "2025-12-26",
 "title": "Dj Amédée  Chalon dans la rue 2025",
-"publishedAt": "2025-12-26"
+"videoId": "FXB1GQL38CQ"
 }
 }
 },
@@ -36038,9 +36071,9 @@
 "url": "https://open.spotify.com/artist/7zfl0DQa6Ds6AsB1OQBM54"
 },
 "youtube": {
-"videoId": "RTbSQQLtUCQ",
+"publishedAt": "2023-01-20",
 "title": "Kin'gongolo Kiniata - Full Performance (Live on KEXP)",
-"publishedAt": "2023-01-20"
+"videoId": "RTbSQQLtUCQ"
 }
 }
 },
@@ -36273,9 +36306,9 @@
 "players": {
 "J.A Jayant": {
 "youtube": {
-"videoId": "PyulRIohFcE",
+"publishedAt": "2022-10-01",
 "title": "Flute J.A. Jayant LIVE IN CONCERT | A BMusician Premiere | #prrc",
-"publishedAt": "2022-10-01"
+"videoId": "PyulRIohFcE"
 }
 },
 "Inde": {
@@ -36284,9 +36317,9 @@
 "url": "https://artbyinde.bandcamp.com"
 },
 "youtube": {
-"videoId": "juZF2jD166E",
+"publishedAt": "2026-05-28",
 "title": "Jason DM'D Obsession STAR Inde Navarrette",
-"publishedAt": "2026-05-28"
+"videoId": "juZF2jD166E"
 }
 }
 },
@@ -36328,7 +36361,15 @@
 "support": [
 "7 novembre 2026"
 ],
-"players": {},
+"players": {
+"7 novembre 2026": {
+"youtube": {
+"videoId": "fbqAL5CLdfM",
+"title": "Niort le 7 Novembre 2026 à L'acclameur Billetterie Leclerc, Cultura #concert #fetedelamusique",
+"publishedAt": "2026-10-13"
+}
+}
+},
 "lat": 48.8466791932329,
 "lon": 2.34726588037976,
 "is_music": true,
@@ -36449,9 +36490,9 @@
 "url": "https://open.spotify.com/artist/0fwVrpm40ibmSV0BNqbQgT"
 },
 "youtube": {
-"videoId": "NKhkduNWhXo",
+"publishedAt": "2025-12-19",
 "title": "Baron Von Trax Recorded Live at A3 Festival 2025",
-"publishedAt": "2025-12-19"
+"videoId": "NKhkduNWhXo"
 }
 },
 "Cattoni": {
@@ -36460,9 +36501,9 @@
 "url": "https://open.spotify.com/artist/2GuvCxVgiOOXRhlgTA1McU"
 },
 "youtube": {
-"videoId": "InFjiYQ1W6k",
+"publishedAt": "2026-10-13",
 "title": "CATTONI [MIA MAO live] DJ set | Progressive trance",
-"publishedAt": "2026-10-13"
+"videoId": "InFjiYQ1W6k"
 }
 }
 },
@@ -36735,9 +36776,9 @@
 "url": "https://open.spotify.com/artist/08Z0yhWGksNk3wceqlCeGE"
 },
 "youtube": {
-"videoId": "sHwvG6X_cW8",
+"publishedAt": "2019-01-12",
 "title": "PANGAEA @ Dead Of Winter Festival 2018 | Rockit Live Studios (Full Show) 4K",
-"publishedAt": "2019-01-12"
+"videoId": "sHwvG6X_cW8"
 }
 }
 },
@@ -37746,9 +37787,9 @@
 "url": "https://open.spotify.com/artist/1oiQONBMdImY1DvPQzt7o8"
 },
 "youtube": {
-"videoId": "SA_IFDMdu7k",
+"publishedAt": "2026-09-08",
 "title": "Officer John | Live at Blacklion Studios",
-"publishedAt": "2026-09-08"
+"videoId": "SA_IFDMdu7k"
 }
 },
 "DEER PARK": {
@@ -37761,9 +37802,9 @@
 "url": "https://open.spotify.com/artist/6Lq0JPdh83AUSeMfuMPCjy"
 },
 "youtube": {
-"videoId": "2_aSbZzkrAY",
+"publishedAt": "2026-03-19",
 "title": "Deer park | Live | Night Club 101 NYC | March 18, 2026",
-"publishedAt": "2026-03-19"
+"videoId": "2_aSbZzkrAY"
 }
 }
 },
@@ -37925,7 +37966,22 @@
 "support": [
 "Habiter les nuits"
 ],
-"players": {},
+"players": {
+"Le Classique du Dimanche": {
+"youtube": {
+"videoId": "AAU8jTChwBk",
+"title": "Le Classique du Dimanche à La Seine Musicale",
+"publishedAt": "2019-04-16"
+}
+},
+"Habiter les nuits": {
+"youtube": {
+"videoId": "ZFxWcxVP6yw",
+"title": "HABITER LES NUITS - Elie Blanchard, Victoria Follonier & Erwan Raguenes (Teaser)",
+"publishedAt": "2024-11-06"
+}
+}
+},
 "lat": 48.8264,
 "lon": 2.23,
 "is_music": true,
@@ -37955,7 +38011,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -38117,6 +38173,13 @@
 "Ensemble les Virtuoses"
 ],
 "players": {
+"Grand Concert": {
+"youtube": {
+"videoId": "Jl87u31Loz8",
+"title": "The Minmaxxer's Guide to Grand Concert",
+"publishedAt": "2026-07-26"
+}
+},
 "Ensemble les Virtuoses": {
 "spotify": {
 "id": "7fgvcJDDBFMBa6kBa8rgPC",
@@ -38405,6 +38468,13 @@
 "id": "5FCqIwJYwGR51ebxW6z3wT",
 "url": "https://open.spotify.com/artist/5FCqIwJYwGR51ebxW6z3wT"
 }
+},
+"L'Aventure Continue": {
+"youtube": {
+"videoId": "HJR2lyqPelE",
+"title": "[LIVE]🏰💎 Enshrouded 1.0 : une vraie pépite, l’aventure continue !",
+"publishedAt": "2026-10-23"
+}
 }
 },
 "lat": 48.8338529871934,
@@ -38483,6 +38553,11 @@
 "spotify": {
 "id": "3i67VvAwUlOKZa3fc75zs8",
 "url": "https://open.spotify.com/artist/3i67VvAwUlOKZa3fc75zs8"
+},
+"youtube": {
+"videoId": "-7-iLKAWC0s",
+"title": "Chopin's Nocturne Op.9 No. 2 by Elisabeth Leonskaja at Le Piano Symphonique Festival",
+"publishedAt": "2024-01-21"
 }
 }
 },
@@ -38590,6 +38665,11 @@
 "spotify": {
 "id": "450iujbtN6XgiA9pv6fVZz",
 "url": "https://open.spotify.com/artist/450iujbtN6XgiA9pv6fVZz"
+},
+"youtube": {
+"videoId": "a1Q1MnF-B8U",
+"title": "Razorlight - Live at Belladrum Festival * Belladrum Estate, Belladrum, Scotland (Aug 01, 2026) HDTV",
+"publishedAt": "2026-08-05"
 }
 },
 "The K's": {
@@ -38600,6 +38680,11 @@
 "spotify": {
 "id": "6DlKk9ibc9dCgvyNPGNXdH",
 "url": "https://open.spotify.com/artist/6DlKk9ibc9dCgvyNPGNXdH"
+},
+"youtube": {
+"videoId": "VLp9bktwnuI",
+"title": "The K's - Live at TRNSMT Festival * Glasgow Green, Glasgow, Scotland (Jul 13, 2025) HDTV",
+"publishedAt": "2025-10-20"
 }
 }
 },
@@ -38739,6 +38824,11 @@
 "spotify": {
 "id": "4dQjaFOXAyC4AZjXAmCGQ2",
 "url": "https://open.spotify.com/artist/4dQjaFOXAyC4AZjXAmCGQ2"
+},
+"youtube": {
+"videoId": "BVTVLQMYKrQ",
+"title": "Tony & The Kiki - Extra Express- Live @ Union Pool in Brooklyn, NY",
+"publishedAt": "2025-08-19"
 }
 }
 },
@@ -38781,6 +38871,11 @@
 "spotify": {
 "id": "4WBCjNjq0MGPsvcXyOPWKW",
 "url": "https://open.spotify.com/artist/4WBCjNjq0MGPsvcXyOPWKW"
+},
+"youtube": {
+"videoId": "FG7e-haunVA",
+"title": "Sons of Legion - Strange (Live From The Barn) Get Ready for an Unforgettable Live Rendition",
+"publishedAt": "2024-12-03"
 }
 }
 },
@@ -38825,6 +38920,11 @@
 "spotify": {
 "id": "03xhe54t4qQ8ONHLpgzPGs",
 "url": "https://open.spotify.com/artist/03xhe54t4qQ8ONHLpgzPGs"
+},
+"youtube": {
+"videoId": "4GCNV1HTp7I",
+"title": "THE EVERMINDS LIVE - CAFE DE LA DANSE - 2 mn RECAP",
+"publishedAt": "2024-07-12"
 }
 }
 },
@@ -38978,6 +39078,11 @@
 "spotify": {
 "id": "2m06zgj65MhD45QvqYgDqF",
 "url": "https://open.spotify.com/artist/2m06zgj65MhD45QvqYgDqF"
+},
+"youtube": {
+"videoId": "28MmTCD6Eu4",
+"title": "Devin Shaffer Live Stream",
+"publishedAt": "2018-01-14"
 }
 }
 },
@@ -39213,7 +39318,15 @@
 "area": "Opéra",
 "headliner": "SWING",
 "support": [],
-"players": {},
+"players": {
+"SWING": {
+"youtube": {
+"videoId": "Gu_bO9uEilA",
+"title": "The All-American Rejects - Swing Swing (Live on Hard Rock)",
+"publishedAt": "2007-05-24"
+}
+}
+},
 "lat": 48.8703,
 "lon": 2.3283,
 "is_music": true,
@@ -39328,6 +39441,11 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=958607882/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://rastrio.bandcamp.com"
+},
+"youtube": {
+"videoId": "UbGoWMWnVII",
+"title": "Manomba hula-hula sawan na hujujung [cover] RAS trio + Rezeky music",
+"publishedAt": "2021-12-19"
 }
 }
 },
@@ -39456,6 +39574,11 @@
 "spotify": {
 "id": "450iujbtN6XgiA9pv6fVZz",
 "url": "https://open.spotify.com/artist/450iujbtN6XgiA9pv6fVZz"
+},
+"youtube": {
+"videoId": "a1Q1MnF-B8U",
+"title": "Razorlight - Live at Belladrum Festival * Belladrum Estate, Belladrum, Scotland (Aug 01, 2026) HDTV",
+"publishedAt": "2026-08-05"
 }
 }
 },
@@ -39500,6 +39623,11 @@
 "spotify": {
 "id": "6Jg3DFzPWX2VIy01oqLGkz",
 "url": "https://open.spotify.com/artist/6Jg3DFzPWX2VIy01oqLGkz"
+},
+"youtube": {
+"videoId": "16AoGTnrU6U",
+"title": "The Clockworks – 2 Meter Session",
+"publishedAt": "2024-08-09"
 }
 }
 },
@@ -39583,7 +39711,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "4c7f23cc9fab",
 "first_seen": "baseline"
 },
@@ -39985,16 +40113,16 @@
 "players": {
 "Orchestre Silmaril": {
 "youtube": {
-"videoId": "-lPZVvmX0NA",
+"publishedAt": "2025-01-18",
 "title": "Gabriel Fauré - Cantique de Jean Racine",
-"publishedAt": "2025-01-18"
+"videoId": "-lPZVvmX0NA"
 }
 },
 "Concerto pour violon": {
 "youtube": {
-"videoId": "GplH3ZfZa9c",
+"publishedAt": "2017-12-15",
 "title": "Mendelssohn : Concerto pour violon n°2 (Julia Fischer)",
-"publishedAt": "2017-12-15"
+"videoId": "GplH3ZfZa9c"
 }
 }
 },
@@ -42344,7 +42472,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "5fd1e8959b2e",
 "first_seen": "baseline"
 },
@@ -42419,7 +42547,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -43184,6 +43312,11 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=958607882/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://rastrio.bandcamp.com"
+},
+"youtube": {
+"videoId": "UbGoWMWnVII",
+"title": "Manomba hula-hula sawan na hujujung [cover] RAS trio + Rezeky music",
+"publishedAt": "2021-12-19"
 }
 }
 },
@@ -48070,7 +48203,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "35e7cba19495",
 "first_seen": "baseline"
 },
@@ -50705,7 +50838,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "59447b8f782b",
 "first_seen": "baseline"
 },
@@ -50852,7 +50985,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -52032,7 +52165,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "f6db61d4602d",
 "first_seen": "baseline"
 },
@@ -54205,7 +54338,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "056cf193031c",
 "first_seen": "baseline"
 },
@@ -55792,7 +55925,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "9a91590022d5",
 "first_seen": "baseline"
 },
@@ -57920,7 +58053,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ed623f265c72",
 "first_seen": "baseline"
 },
@@ -60234,7 +60367,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "007242e908d4",
 "first_seen": "baseline"
 },
@@ -62731,7 +62864,7 @@
 "bossa nova",
 "samba"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -63695,7 +63828,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "d658b1b193d4",
 "first_seen": "baseline"
 },
@@ -65269,7 +65402,7 @@
 "subgenres": [
 "modern jazz"
 ],
-"description": "VERB est un groupe de jazz issu d’un coup de foudre entre trois musiciens lors d’une jam. Les trois musiciens partagent un moment unique et décident de se revoir régulièrement. Les répétitions se multiplient et, à l’issue d’une résidence, le répertoire, fait entièrement de compositions, est monté. Le trio s’est inspiré des plus grands, du trio de Keith Jarrett à Oscar Peterson en passant par Bill ",
+"description": "VERB est un groupe de jazz issu d’un coup de foudre entre trois musiciens lors d’une jam. Les trois musiciens partagent un moment unique et décident de se revoir régulièrement. Les répétitions se multiplient et, à l’issue d’une résidence, le répertoire, fait entièrement de compositions, est monté. Le trio s’est inspiré des plus grands, du trio de Keith Jarrett à Oscar Peterson en passant par Bill",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/09/Format-carre-1.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -65752,7 +65885,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "6a2228d07022",
 "first_seen": "baseline"
 },
@@ -67075,7 +67208,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "4874ad537f6c",
 "first_seen": "baseline"
 },
@@ -70187,7 +70320,7 @@
 "subgenres": [
 "gypsy jazz"
 ],
-"description": "Antoine Boyer a bu aux sources les plus authentiques du jazz manouche, disciple en particulier des maîtres Mandino Reinhardt et Francis Alfred Moerman. Il a été programmé par la plupart des festivals consacrés au swing manouche aux Etats-Unis et en Europe, et a partagé la scène avec des artistes tels que, Stochelo Rosenberg, Angelo Debarre, Raphael Faÿs et bien d’autres. En plus de sa maîtrise du ",
+"description": "Antoine Boyer a bu aux sources les plus authentiques du jazz manouche, disciple en particulier des maîtres Mandino Reinhardt et Francis Alfred Moerman. Il a été programmé par la plupart des festivals consacrés au swing manouche aux Etats-Unis et en Europe, et a partagé la scène avec des artistes tels que, Stochelo Rosenberg, Angelo Debarre, Raphael Faÿs et bien d’autres. En plus de sa maîtrise du",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Antoine-Boyer-Yeore-Kim_8499-scaled-e1786104364572.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -70223,7 +70356,7 @@
 "subgenres": [
 "piano trio"
 ],
-"description": "Timeline, c’est un format de concerts imaginé par Juliette Poitrenaud. Régulièrement depuis 2023, un.e musicien.ne investit le Sunset ou le Sunside durant trois soirs pour évoquer trois temporalités de sa carrière : des concerts déclinés au passé, au présent et au futur. Pour ce concert au futur, Giovanni Mirabassi nous présentera le programme de son album New-York Sessions Vol.2 , tout récemment ",
+"description": "Timeline, c’est un format de concerts imaginé par Juliette Poitrenaud. Régulièrement depuis 2023, un.e musicien.ne investit le Sunset ou le Sunside durant trois soirs pour évoquer trois temporalités de sa carrière : des concerts déclinés au passé, au présent et au futur. Pour ce concert au futur, Giovanni Mirabassi nous présentera le programme de son album New-York Sessions Vol.2 , tout récemment",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/WhatsApp-Image-2025-04-17-at-12_25_27-1.avif",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -71122,7 +71255,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "30c87fb12d26",
 "first_seen": "baseline"
 },
@@ -73637,7 +73770,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "dc68e7ef9672",
 "first_seen": "baseline"
 },
@@ -73741,7 +73874,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -74616,7 +74749,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "86c92c56e8f1",
 "first_seen": "baseline"
 },
@@ -75366,7 +75499,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "536fcd849e2e",
 "first_seen": "baseline"
 },
@@ -75932,7 +76065,7 @@
 "subgenres": [
 "contemporary jazz"
 ],
-"description": "Il est toutes sortes de joies. La joie n’est pas une émotion superficielle. C’est une manière de recevoir intensément le monde qui nous entoure. Elle peut prendre diverses formes, la tristesse peut être une de celles-ci. On en ressort enrichi, changé. La musique proposée par ce quintet est le résultat de cette disponibilité au monde. Elle est mue par le désir de construire une histoire commune et ",
+"description": "Il est toutes sortes de joies. La joie n’est pas une émotion superficielle. C’est une manière de recevoir intensément le monde qui nous entoure. Elle peut prendre diverses formes, la tristesse peut être une de celles-ci. On en ressort enrichi, changé. La musique proposée par ce quintet est le résultat de cette disponibilité au monde. Elle est mue par le désir de construire une histoire commune et",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/visuel-joies-multiples.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -77555,7 +77688,7 @@
 "subgenres": [
 "instrumental pop"
 ],
-"description": "Le Forum Culturel Autrichien Paris présente le duo autrichien Sinfonia de Carnaval. Anna Lang et Alois Eberl créent une pop instrumentale qui ne connaît aucune limite : des éléments de jazz et de pop rencontrent des univers sonores électroniques et toute la palette sonore des techniques de jeu classiques. Au violoncelle au trombone à l’accordéon aux percussions aux instruments électroniques et au ",
+"description": "Le Forum Culturel Autrichien Paris présente le duo autrichien Sinfonia de Carnaval. Anna Lang et Alois Eberl créent une pop instrumentale qui ne connaît aucune limite : des éléments de jazz et de pop rencontrent des univers sonores électroniques et toute la palette sonore des techniques de jeu classiques. Au violoncelle au trombone à l’accordéon aux percussions aux instruments électroniques et au",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/09/Sinfonia-de-Carnaval-photo-avec-logo-FCA.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -78570,7 +78703,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ee762035fbd3",
 "first_seen": "baseline"
 },
@@ -79091,7 +79224,7 @@
 "subgenres": [
 "free improvisation"
 ],
-"description": "Trio Cassaro, c’est la rencontre de trois générations, trois parcours étonnants réunis autour de l’envie commune d’improviser, de jouer et d’écrire ensemble de nouvelles histoires. Confrontant les sons baroques de la viole d’Atsushi Sakaï et de l’alto monté en boyaux de Guillaume Roy avec la voix et l’électronique de Lynn Cassiers, le trio tisse des sons hors du temps, change nos repères, élargit ",
+"description": "Trio Cassaro, c’est la rencontre de trois générations, trois parcours étonnants réunis autour de l’envie commune d’improviser, de jouer et d’écrire ensemble de nouvelles histoires. Confrontant les sons baroques de la viole d’Atsushi Sakaï et de l’alto monté en boyaux de Guillaume Roy avec la voix et l’électronique de Lynn Cassiers, le trio tisse des sons hors du temps, change nos repères, élargit",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/09/04/huge-6255d9c0c94c18638f50b048906d79cf.jpg",
 "address": "5 Rue du Plateau, 75019, Paris",
@@ -82221,7 +82354,7 @@
 "raw_genre": null,
 "genres": [
 "rock",
-"punk"
+"electro"
 ],
 "genre_source": "llm",
 "subgenres": [
@@ -82245,7 +82378,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "8d9b2e330053",
 "first_seen": "baseline"
 },
@@ -82307,7 +82440,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -83441,7 +83574,7 @@
 "genre_source": "llm",
 "subgenres": [
 "video game music",
-"soundtrack"
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -83456,7 +83589,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "175012154166",
 "first_seen": "baseline"
 },
@@ -84029,7 +84162,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "4ac91cd5f495",
 "first_seen": "baseline"
 },
@@ -85311,7 +85444,7 @@
 "indo-jazz",
 "bansuri"
 ],
-"description": "Après le succès de l’album The Indo-Jazz Sessions, le Guillaume Barraud Quartet revient avec un nouvel opus, Tales of the Bamboo Reed, explorant les potentiels du bansuri sur fond de guitare électrique et de grooves organiques basse-batterie. Une sélection de pièces hautement poétiques interprétées par le flûtiste/compositeur Guillaume Barraud, le guitariste Tam De Villiers, le bassiste Guillaume ",
+"description": "Après le succès de l’album The Indo-Jazz Sessions, le Guillaume Barraud Quartet revient avec un nouvel opus, Tales of the Bamboo Reed, explorant les potentiels du bansuri sur fond de guitare électrique et de grooves organiques basse-batterie. Une sélection de pièces hautement poétiques interprétées par le flûtiste/compositeur Guillaume Barraud, le guitariste Tam De Villiers, le bassiste Guillaume",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Guillaume_Barraud_4tet_Tales_of_the_Bamboo_Reed-scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -85582,7 +85715,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "49e987de5ef9",
 "first_seen": "baseline"
 },
@@ -86930,7 +87063,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "35ff43678b4b",
 "first_seen": "baseline"
 },
@@ -87860,7 +87993,7 @@
 "piano trio",
 "modern jazz"
 ],
-"description": "Concert organisé dans le cadre du festival Jazzycolors 2026 – 24e édition Présenté par l’Institut Polonais de Paris En partenariat avec Ficep, Jazz Rive Gauche et Studio Raspail Après les débuts marquants de Kasia Pietrzko avec son trio, la jeune pianiste et compositrice de jazz polonaise est rapidement devenue une artiste de premier plan, suscitant également un grand intérêt dans toute l’Europe. ",
+"description": "Concert organisé dans le cadre du festival Jazzycolors 2026 – 24e édition Présenté par l’Institut Polonais de Paris En partenariat avec Ficep, Jazz Rive Gauche et Studio Raspail Après les débuts marquants de Kasia Pietrzko avec son trio, la jeune pianiste et compositrice de jazz polonaise est rapidement devenue une artiste de premier plan, suscitant également un grand intérêt dans toute l’Europe.",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Kasia-Pietrzko-Trio-photo-Bartosz-Maciejewski-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -88451,7 +88584,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "5a7bf572b877",
 "first_seen": "baseline"
 },
@@ -89689,7 +89822,8 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"soundtrack"
+"film music",
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -89713,7 +89847,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "b4a7700f1088",
 "first_seen": "baseline"
 },
@@ -89785,7 +89919,7 @@
 "subgenres": [
 "comptines"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -95790,7 +95924,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "23527e2ae5e1",
 "first_seen": "baseline"
 },
@@ -95852,7 +95986,7 @@
 "christmas songs",
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -97110,7 +97244,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "11de752b734d",
 "first_seen": "baseline"
 },
@@ -97135,7 +97269,7 @@
 "subgenres": [
 "christmas songs"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -98243,7 +98377,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -99313,7 +99447,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "614c70c50ef5",
 "first_seen": "2026-09-13"
 },
@@ -99956,7 +100090,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "5a78bc6f3e6b",
 "first_seen": "2026-09-13"
 },
@@ -100298,6 +100432,51 @@
 "first_seen": "baseline"
 },
 {
+"title": "Griot Prophétique",
+"date": "2027-01-10",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"world",
+"afro"
+],
+"genre_source": "llm",
+"subgenres": [
+"mandingue",
+"griot"
+],
+"description": null,
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "Griot Prophétique",
+"support": [],
+"players": {
+"Griot Prophétique": {
+"spotify": {
+"id": "4VeiAaBSWWNEzvk102AsKn",
+"url": "https://open.spotify.com/artist/4VeiAaBSWWNEzvk102AsKn"
+}
+}
+},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "3e5e59ccd23a",
+"first_seen": "2026-10-23"
+},
+{
 "title": "Stage STUDIO SON : Fabrique tes beats et instrus",
 "date": "2027-01-11",
 "venue": "Centre Paris Anim' Point du Jour",
@@ -100448,7 +100627,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "460cc38b998e",
 "first_seen": "2026-09-14"
 },
@@ -101564,47 +101743,6 @@
 "first_seen": "2026-09-17"
 },
 {
-"title": "Génération Céline",
-"date": "2027-01-15",
-"venue": "Zénith Paris",
-"venue_slug": "zenith-paris",
-"source": "llm",
-"time": "20:30",
-"url": "https://www.zenith-paris.com/",
-"ticket_url": "https://www.leconcertextraordinaire.com/en-tournee/generation-celine-concerts",
-"price": "Carré Or : 110€ / < 25 ans : 55 € Cat. 1 : 89€ / < 25 ans : ",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Spectacle musical",
-"genres": [
-"pop"
-],
-"genre_source": "llm",
-"subgenres": [],
-"description": "« Génération Céline Le Melleur des Tributes : 4 voix pour une légende ! » vous invite à plonger dans l’univers musical de Céline Dion, légende francophone aux millions de fans à travers le monde.",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2026/04/21/huge-786157f2f44aaf999096f245d19544a2.jpg",
-"address": "211 avenue Jean-Jaurès, 75019 Paris",
-"area": "Villette",
-"headliner": "Génération Céline",
-"support": [],
-"players": {
-"Génération Céline": {
-"spotify": {
-"id": "3hyMJbMuCymLM20AR7R51e",
-"url": "https://open.spotify.com/artist/3hyMJbMuCymLM20AR7R51e"
-}
-}
-},
-"lat": 48.8938,
-"lon": 2.3931,
-"is_music": true,
-"stale_since": null,
-"id": "74b875b0aa2f",
-"first_seen": "2026-09-17"
-},
-{
 "title": "Je reviens te chanter",
 "date": "2027-01-15",
 "venue": "Théâtre Comédie Bastille",
@@ -101768,6 +101906,47 @@
 "stale_since": null,
 "id": "fe327e8000c9",
 "first_seen": "2026-09-25"
+},
+{
+"title": "Génération Céline",
+"date": "2027-01-15",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"pop"
+],
+"genre_source": "llm",
+"subgenres": [],
+"description": null,
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "Génération Céline",
+"support": [],
+"players": {
+"Génération Céline": {
+"spotify": {
+"id": "3hyMJbMuCymLM20AR7R51e",
+"url": "https://open.spotify.com/artist/3hyMJbMuCymLM20AR7R51e"
+}
+}
+},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "74b875b0aa2f",
+"first_seen": "2026-09-17"
 },
 {
 "title": "Master classes, ateliers, rencontres, restitutions et conférences",
@@ -102594,7 +102773,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "c72ffc3f815d",
 "first_seen": "2026-09-18"
 },
@@ -102669,7 +102848,15 @@
 "support": [
 "La Fugue Enchantée"
 ],
-"players": {},
+"players": {
+"Le Classique du Dimanche": {
+"youtube": {
+"videoId": "AAU8jTChwBk",
+"title": "Le Classique du Dimanche à La Seine Musicale",
+"publishedAt": "2019-04-16"
+}
+}
+},
 "lat": 48.8264,
 "lon": 2.23,
 "is_music": true,
@@ -104604,7 +104791,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "82f5151c8a9b",
 "first_seen": "2026-09-23"
 },
@@ -105272,7 +105459,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "29afe5678e1c",
 "first_seen": "2026-09-24"
 },
@@ -105961,12 +106148,12 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"chanson",
-"pop"
+"pop",
+"chanson"
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Claudio Capeo",
+"description": "Claudio Capéo",
 "summary": null,
 "image": null,
 "address": "211 avenue Jean-Jaurès, 75019 Paris",
@@ -105988,7 +106175,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "deec8e25a81c",
 "first_seen": "2026-09-25"
 },
@@ -106505,7 +106692,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "98154bf0d596",
 "first_seen": "2026-10-20"
 },
@@ -106902,42 +107089,6 @@
 "first_seen": "baseline"
 },
 {
-"title": "One Night Of Queen",
-"date": "2027-01-26",
-"venue": "Zénith Paris",
-"venue_slug": "zenith-paris",
-"source": "llm",
-"time": "20:30",
-"url": "https://www.zenith-paris.com/",
-"ticket_url": "https://www.leconcertextraordinaire.com/en-tournee/one-night-of-queen-concerts",
-"price": "Info, Groupes et C.E : Haracom – Tél : 03.21.26.52.94 – info",
-"free": false,
-"sold_out": false,
-"cancelled": false,
-"raw_genre": "Spectacle musical",
-"genres": [
-"rock"
-],
-"genre_source": "llm",
-"subgenres": [
-"glam rock"
-],
-"description": "Gary Mullen,à la tête de son nouveau One night of Queen. Le plus grand tribute de Queen au Monde, revient en France après une tournée américaine triomphale avec son spectacle hors-normes : « Wembley 86 », le concert légendaire de l'histoire du Rock !",
-"summary": null,
-"image": "https://cdn.paris.fr/qfapv4/2025/11/27/huge-5ea3c5ea9466c8ee7c2e279cf84946a2.jpg",
-"address": "211 avenue Jean-Jaurès, 75019 Paris",
-"area": "Villette",
-"headliner": "One Night Of Queen",
-"support": [],
-"players": {},
-"lat": 48.8938,
-"lon": 2.3931,
-"is_music": true,
-"stale_since": null,
-"id": "5f436520c40f",
-"first_seen": "baseline"
-},
-{
 "title": "Jam Session Funk au 38Riv, animée par Pierre Gibbe",
 "date": "2027-01-26",
 "venue": "38Riv Jazz Club",
@@ -107178,6 +107329,42 @@
 "stale_since": null,
 "id": "ee3e4a691c9c",
 "first_seen": "2026-10-05"
+},
+{
+"title": "One Night Of Queen",
+"date": "2027-01-26",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"rock"
+],
+"genre_source": "llm",
+"subgenres": [
+"glam rock"
+],
+"description": "Gary Mullen & The Works",
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "One Night Of Queen",
+"support": [],
+"players": {},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "5f436520c40f",
+"first_seen": "baseline"
 },
 {
 "title": "Master classes, ateliers, rencontres, restitutions et conférences",
@@ -107671,7 +107858,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "5f12cc9b8495",
 "first_seen": "baseline"
 },
@@ -108424,7 +108611,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "8b47fc13380c",
 "first_seen": "baseline"
 },
@@ -109394,7 +109581,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ae8f24ed2695",
 "first_seen": "baseline"
 },
@@ -110131,7 +110318,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"pop"
+"pop",
+"afro"
 ],
 "genre_source": "llm",
 "subgenres": [
@@ -110156,7 +110344,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "2a3edbad7317",
 "first_seen": "2026-10-03"
 },
@@ -111092,8 +111280,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"french pop",
-"synth-pop"
+"pop française"
 ],
 "description": "Adèle Castillon",
 "summary": null,
@@ -111113,7 +111300,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "52eef4d86611",
 "first_seen": "baseline"
 },
@@ -111882,7 +112069,8 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"video game music"
+"video game music",
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -111895,7 +112083,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "81550d2ed4d3",
 "first_seen": "baseline"
 },
@@ -112117,7 +112305,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "752690386eb8",
 "first_seen": "baseline"
 },
@@ -113175,7 +113363,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "275f5a06758d",
 "first_seen": "baseline"
 },
@@ -115651,7 +115839,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "f6cf97bbc58d",
 "first_seen": "baseline"
 },
@@ -116068,7 +116256,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "b3bbef2860fb",
 "first_seen": "baseline"
 },
@@ -116505,8 +116693,8 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"indie",
-"pop"
+"pop",
+"indie"
 ],
 "genre_source": "llm",
 "subgenres": [
@@ -116530,7 +116718,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "f57d678aca10",
 "first_seen": "baseline"
 },
@@ -116849,7 +117037,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ec93669ee0bd",
 "first_seen": "2026-10-07"
 },
@@ -117286,7 +117474,7 @@
 "genre_source": "llm",
 "subgenres": [
 "afrobeat",
-"nu-jazz"
+"uk jazz"
 ],
 "description": "Ezra Collective",
 "summary": null,
@@ -117310,7 +117498,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "f04c0630edc6",
 "first_seen": "baseline"
 },
@@ -117768,7 +117956,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "9264751fe815",
 "first_seen": "baseline"
 },
@@ -118215,7 +118403,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "9847ce9db37c",
 "first_seen": "baseline"
 },
@@ -118875,7 +119063,7 @@
 "genre_source": "llm",
 "subgenres": [
 "blues rock",
-"garage rock"
+"garage"
 ],
 "description": "Royal Blood",
 "summary": null,
@@ -118895,7 +119083,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "45aea642c204",
 "first_seen": "2026-10-20"
 },
@@ -119272,7 +119460,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "af5054147300",
 "first_seen": "baseline"
 },
@@ -120618,7 +120806,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "94c7dfe2240d",
 "first_seen": "baseline"
 },
@@ -121782,7 +121970,15 @@
 "support": [
 "Le Tour du monde en 80 jours"
 ],
-"players": {},
+"players": {
+"Le Classique du Dimanche": {
+"youtube": {
+"videoId": "AAU8jTChwBk",
+"title": "Le Classique du Dimanche à La Seine Musicale",
+"publishedAt": "2019-04-16"
+}
+}
+},
 "lat": 48.8264,
 "lon": 2.23,
 "is_music": true,
@@ -122039,7 +122235,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "81c516d2f8dd",
 "first_seen": "baseline"
 },
@@ -122371,7 +122567,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "832f5db1b387",
 "first_seen": "2026-10-07"
 },
@@ -124248,7 +124444,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "c846e46c110c",
 "first_seen": "baseline"
 },
@@ -125138,7 +125334,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "74010bb34fd9",
 "first_seen": "baseline"
 },
@@ -125441,6 +125637,42 @@
 "stale_since": null,
 "id": "384159cd55f7",
 "first_seen": "baseline"
+},
+{
+"title": "K-Pop Sensations",
+"date": "2027-03-14",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"pop"
+],
+"genre_source": "llm",
+"subgenres": [
+"k-pop"
+],
+"description": null,
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "K-Pop Sensations",
+"support": [],
+"players": {},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "caa270dcc63f",
+"first_seen": "2026-10-23"
 },
 {
 "title": "Je reviens te chanter",
@@ -126462,7 +126694,7 @@
 "raw_genre": null,
 "genres": [
 "funk",
-"pop"
+"soul-rnb"
 ],
 "genre_source": "llm",
 "subgenres": [
@@ -126490,7 +126722,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "7c64a326c630",
 "first_seen": "baseline"
 },
@@ -126930,7 +127162,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "0dbf94446545",
 "first_seen": "baseline"
 },
@@ -127455,7 +127687,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "8caf787cec2f",
 "first_seen": "baseline"
 },
@@ -127947,7 +128179,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "5486ccc550cc",
 "first_seen": "baseline"
 },
@@ -128236,7 +128468,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "0d9e93b08ddc",
 "first_seen": "baseline"
 },
@@ -128587,7 +128819,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ad009ceb29c5",
 "first_seen": "baseline"
 },
@@ -129201,7 +129433,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "44ae9aaeb5a2",
 "first_seen": "baseline"
 },
@@ -130508,7 +130740,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "02c9af4369ae",
 "first_seen": "baseline"
 },
@@ -130678,7 +130910,8 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"soundtrack"
+"film music",
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -130691,7 +130924,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ce27d6d0af00",
 "first_seen": "baseline"
 },
@@ -130770,7 +131003,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "3f1987c916f3",
 "first_seen": "2026-10-20"
 },
@@ -131707,7 +131940,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "abb8ac3c0621",
 "first_seen": "baseline"
 },
@@ -132034,7 +132267,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "e4b1f3d78871",
 "first_seen": "baseline"
 },
@@ -133367,7 +133600,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "6f3fa3f6fe5b",
 "first_seen": "baseline"
 },
@@ -133604,7 +133837,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "2dca5135a27e",
 "first_seen": "baseline"
 },
@@ -135445,7 +135678,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "e807db1128ec",
 "first_seen": "baseline"
 },
@@ -136450,6 +136683,50 @@
 "first_seen": "baseline"
 },
 {
+"title": "2hollis",
+"date": "2027-04-21",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"electro",
+"hip-hop"
+],
+"genre_source": "llm",
+"subgenres": [
+"hyperpop"
+],
+"description": "2hollis",
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "2hollis",
+"support": [],
+"players": {
+"2hollis": {
+"spotify": {
+"id": "72NhFAGG5Pt91VbheJeEPG",
+"url": "https://open.spotify.com/artist/72NhFAGG5Pt91VbheJeEPG"
+}
+}
+},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "fc886ae1a6c6",
+"first_seen": "2026-10-23"
+},
+{
 "title": "Concert intimiste Paris 17",
 "date": "2027-04-22",
 "venue": "Feuille Blanche, Café Noir",
@@ -136832,7 +137109,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "48e196ec8b3b",
 "first_seen": "2026-10-20"
 },
@@ -137328,7 +137605,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "7148dd7c0bf2",
 "first_seen": "baseline"
 },
@@ -137716,7 +137993,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "962637e9155e",
 "first_seen": "baseline"
 },
@@ -139400,7 +139677,8 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"soundtrack"
+"film music",
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -139413,7 +139691,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "731669d219a3",
 "first_seen": "baseline"
 },
@@ -139447,7 +139725,15 @@
 "support": [
 "Ciné-concert Charlie Chaplin"
 ],
-"players": {},
+"players": {
+"Le Classique du Dimanche": {
+"youtube": {
+"videoId": "AAU8jTChwBk",
+"title": "Le Classique du Dimanche à La Seine Musicale",
+"publishedAt": "2019-04-16"
+}
+}
+},
 "lat": 48.8264,
 "lon": 2.23,
 "is_music": true,
@@ -140047,6 +140333,42 @@
 "stale_since": null,
 "id": "26b4f673e030",
 "first_seen": "2026-09-29"
+},
+{
+"title": "Le gwo ka monte au Zénith",
+"date": "2027-05-09",
+"venue": "Zénith Paris",
+"venue_slug": "zenith-paris",
+"source": "llm",
+"time": null,
+"url": "https://www.zenith-paris.com/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": null,
+"genres": [
+"world"
+],
+"genre_source": "llm",
+"subgenres": [
+"gwo ka"
+],
+"description": null,
+"summary": null,
+"image": null,
+"address": "211 avenue Jean-Jaurès, 75019 Paris",
+"area": "Villette",
+"headliner": "Le gwo ka monte",
+"support": [],
+"players": {},
+"lat": 48.8938,
+"lon": 2.3931,
+"is_music": true,
+"stale_since": null,
+"id": "7f6d6a6390d1",
+"first_seen": "2026-10-23"
 },
 {
 "title": "Liberté(s)",
@@ -141042,7 +141364,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "d512d38838bb",
 "first_seen": "baseline"
 },
@@ -141261,7 +141583,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "2fde66e3bb16",
 "first_seen": "baseline"
 },
@@ -142591,7 +142913,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "45cbade7da12",
 "first_seen": "baseline"
 },
@@ -142638,9 +142960,9 @@
 "url": "https://musiquedechambre1.bandcamp.com"
 },
 "youtube": {
-"videoId": "kTCYNRWyN4E",
+"publishedAt": "2026-10-02",
 "title": "Concert Musique de Chambre",
-"publishedAt": "2026-10-02"
+"videoId": "kTCYNRWyN4E"
 }
 }
 },
@@ -143136,7 +143458,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "4bf99ccdf603",
 "first_seen": "baseline"
 },
@@ -143826,7 +144148,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "23a711d7a1cf",
 "first_seen": "baseline"
 },
@@ -146148,7 +146470,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "c6205f48702e",
 "first_seen": "baseline"
 },
@@ -146339,12 +146661,12 @@
 "cancelled": false,
 "raw_genre": null,
 "genres": [
-"pop",
-"rock"
+"rock",
+"pop"
 ],
 "genre_source": "llm",
 "subgenres": [
-"alternative pop"
+"alt pop"
 ],
 "description": "Hayley Williams",
 "summary": null,
@@ -146364,7 +146686,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "230063b01e6d",
 "first_seen": "baseline"
 },
@@ -147438,7 +147760,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "2c27ddf534d6",
 "first_seen": "baseline"
 },
@@ -147733,7 +148055,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "9ebcae604523",
 "first_seen": "baseline"
 },
@@ -148420,7 +148742,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "5c953c4ea07c",
 "first_seen": "baseline"
 },
@@ -148541,7 +148863,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "664a81ff9520",
 "first_seen": "baseline"
 },
@@ -148588,7 +148910,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "09d6384017e5",
 "first_seen": "baseline"
 },
@@ -148684,7 +149006,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "58a0177906e9",
 "first_seen": "2026-10-03"
 },
@@ -148998,7 +149320,7 @@
 "raw_genre": null,
 "genres": [
 "reggae",
-"world"
+"afro"
 ],
 "genre_source": "llm",
 "subgenres": [
@@ -149026,7 +149348,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "c850825494f5",
 "first_seen": "baseline"
 },
@@ -149186,7 +149508,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"symphonique"
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -149199,7 +149521,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "2214a0d82225",
 "first_seen": "baseline"
 },
@@ -149231,7 +149553,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": false,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "ae9af61e6b51",
 "first_seen": "baseline"
 },
@@ -149277,7 +149599,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "7182bda78c87",
 "first_seen": "baseline"
 },
@@ -149344,7 +149666,8 @@
 ],
 "genre_source": "llm",
 "subgenres": [
-"soundtrack"
+"film music",
+"orchestral"
 ],
 "description": null,
 "summary": null,
@@ -149368,7 +149691,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "67e353f0e50a",
 "first_seen": "2026-10-20"
 },
@@ -149403,7 +149726,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "926271f7e65a",
 "first_seen": "baseline"
 },
@@ -149447,7 +149770,7 @@
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
-"stale_since": "2026-10-22",
+"stale_since": null,
 "id": "dcf79ada7721",
 "first_seen": "baseline"
 },

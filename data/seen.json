@@ -2168,7 +2168,7 @@
 "first_seen": "baseline",
 "date": "2026-11-01",
 "venue": "zenith-paris",
-"last": "2026-10-20"
+"last": "2026-10-23"
 },
 "8d9b2e330053": {
 "first_seen": "baseline",
@@ -22473,6 +22473,30 @@
 "date": "2027-01-19",
 "venue": "theatre-de-l-opprime",
 "last": "2026-10-23"
+},
+"3e5e59ccd23a": {
+"first_seen": "2026-10-23",
+"date": "2027-01-10",
+"venue": "zenith-paris",
+"last": "2026-10-23"
+},
+"caa270dcc63f": {
+"first_seen": "2026-10-23",
+"date": "2027-03-14",
+"venue": "zenith-paris",
+"last": "2026-10-23"
+},
+"fc886ae1a6c6": {
+"first_seen": "2026-10-23",
+"date": "2027-04-21",
+"venue": "zenith-paris",
+"last": "2026-10-23"
+},
+"7f6d6a6390d1": {
+"first_seen": "2026-10-23",
+"date": "2027-05-09",
+"venue": "zenith-paris",
+"last": "2026-10-23"
 }
 },
 "venues": [
@@ -22845,7 +22869,7 @@
 "Sunset / Sunside": 139,
 "Accor Arena": 8,
 "L'Olympia": 13,
-"Z\u00e9nith Paris": 105,
+"Z\u00e9nith Paris": 109,
 "La Seine Musicale": 58,
 "Alhambra": 66,
 "Cabaret Sauvage": 69,
@@ -22913,7 +22937,7 @@
 "Philharmonie de Paris": "2026-10-23",
 "Accor Arena": "2026-10-23",
 "L'Olympia": "2026-10-23",
-"Z\u00e9nith Paris": "2026-10-22",
+"Z\u00e9nith Paris": "2026-10-23",
 "La Seine Musicale": "2026-10-23",
 "Plenitude Arena": "2026-10-23",
 "Alhambra": "2026-10-23",
