@@ -2806,6 +2806,17 @@
 "sound system"
 ]
 },
+"bal-chavaux|samiam": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"melodic punk",
+"pop punk"
+]
+},
 "bal-chavaux|schlaasss corto malaise": {
 "genres": [
 "punk",
@@ -4180,6 +4191,15 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|bastien devilles": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"nouvelle chanson française"
+]
+},
 "cafe-de-la-danse|candice": {
 "genres": [
 "chanson",
@@ -4536,6 +4556,11 @@
 "classical crossover"
 ]
 },
+"cafe-de-la-danse|siegfried joy las vegas in paris": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "cafe-de-la-danse|strawberry guy": {
 "genres": [
 "indie",
@@ -4716,6 +4741,11 @@
 "latin"
 ],
 "is_music": true,
+"subgenres": []
+},
+"centre-paris-anim-maurice-ravel|soiree jeunes talents queer": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "centre-tcheque-de-paris|cine concert viva kapralova": {
@@ -4924,6 +4954,16 @@
 "garage punk"
 ]
 },
+"cirque-electrique|en veux tu en v la presente 854 the eurosuite mother medusa les ogeez": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "cirque-electrique|fanfare experience electrique free kids party": {
 "genres": [
 "world",
@@ -4932,6 +4972,17 @@
 "is_music": true,
 "subgenres": [
 "brass band"
+]
+},
+"cirque-electrique|la cyberqueer": {
+"genres": [
+"electro",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"hyperpop",
+"industrial"
 ]
 },
 "cirque-electrique|la cyberqueer ilel elil tata band e tedaak blood drinker lauve lunel scoliose france blue": {
@@ -5090,6 +5141,15 @@
 "queer club"
 ]
 },
+"cirque-electrique|rhizome records x 6ar6ie6oy": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"hyperpop"
+]
+},
 "cirque-electrique|rhizome records x 6ar6ie6oy khaos la p tite petasse ryu higgs azel sun so line et tenshi": {
 "genres": [
 "electro",
@@ -5157,6 +5217,15 @@
 "subgenres": [
 "bass music",
 "idm"
+]
+},
+"cirque-electrique|supersonique": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"live performance"
 ]
 },
 "cirque-electrique|supersonique cie supercho zartan cosmyte pantomiman abiotiq": {
@@ -6364,6 +6433,16 @@
 "vocal quartet"
 ]
 },
+"eglise-reformee-du-saint-esprit|nour concert de noel du ch ur des musicales du liban": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"sacred music"
+]
+},
 "eglise-saint-christophe-de-javel|concert caritatif note bien joue mahler au profit de la recherche": {
 "genres": [
 "classical"
@@ -7536,6 +7615,16 @@
 "subgenres": [
 "reggae punk",
 "metalcore"
+]
+},
+"elysee-montmartre|skepta": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"grime",
+"uk rap"
 ]
 },
 "elysee-montmartre|sniper": {
@@ -9706,6 +9795,13 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|halle aux oliviers ben lopez alex perrot": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-bellevilloise|halle aux oliviers blf pauline duprat": {
 "genres": [
 "folk",
@@ -10429,6 +10525,16 @@
 "is_music": true,
 "subgenres": [
 "hyperpop"
+]
+},
+"la-boule-noire|ecran total": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"french pop"
 ]
 },
 "la-boule-noire|eloquence": {
@@ -12263,6 +12369,13 @@
 "subgenres": [
 "neo-soul"
 ]
+},
+"la-dame-de-canton|la triple tribute to lady gaga": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-dame-de-canton|ligne 10 x capitaine sky": {
 "genres": [
@@ -15083,6 +15196,13 @@
 "is_music": true,
 "subgenres": []
 },
+"la-petite-halle|veeko residence 1 i 13 11 26": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-place|ak4seven": {
 "genres": [
 "hip-hop"
@@ -15350,6 +15470,18 @@
 "oud",
 "arabic",
 "chamber jazz"
+]
+},
+"la-seine-musicale|asaf avidan orchestra en concert a la seine musicale": {
+"genres": [
+"folk",
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"folk rock",
+"orchestral"
 ]
 },
 "la-seine-musicale|bach les brandebourgeois": {
@@ -17298,6 +17430,14 @@
 "big band"
 ]
 },
+"le-grand-rex|belinda davids": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-grand-rex|belinda davids a tribute to whitney houston": {
 "genres": [
 "soul-rnb",
@@ -17590,6 +17730,16 @@
 "cuban"
 ]
 },
+"le-melville|anastasia 4tet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"contemporary jazz"
+]
+},
 "le-melville|ballet des fous": {
 "genres": [
 "world",
@@ -17759,6 +17909,17 @@
 "contemporary jazz"
 ]
 },
+"le-melville|gashka": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"gypsy jazz",
+"klezmer"
+]
+},
 "le-melville|gautier montegu 4tet": {
 "genres": [
 "jazz"
@@ -17866,6 +18027,17 @@
 "swing"
 ]
 },
+"le-melville|laura buenrostro latin jazz": {
+"genres": [
+"latin",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"latin jazz",
+"brazilian jazz"
+]
+},
 "le-melville|laurent maur 4tet": {
 "genres": [
 "jazz"
@@ -17906,6 +18078,17 @@
 "subgenres": [
 "spanish song",
 "poetry setting"
+]
+},
+"le-melville|miss delmonde vintage band": {
+"genres": [
+"jazz",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"vintage"
 ]
 },
 "le-melville|mister melvin and friends": {
@@ -17968,6 +18151,16 @@
 "nordic jazz"
 ]
 },
+"le-melville|philippe chagne 4tet to duke with love": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"big band"
+]
+},
 "le-melville|porgy and bess": {
 "genres": [
 "jazz"
@@ -18013,6 +18206,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-melville|the palace 6tet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"sextet"
+]
 },
 "le-melville|tommy roots trio": {
 "genres": [
@@ -18382,6 +18584,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-plan|typhee": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"electro pop"
+]
 },
 "le-plan|wordsofazia lynn": {
 "genres": [
@@ -19434,6 +19646,17 @@
 "alternative r&b"
 ]
 },
+"le-trianon|pedro abrunhosa": {
+"genres": [
+"pop",
+"rock",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"portuguese pop"
+]
+},
 "le-trianon|pony pony run run au trianon": {
 "genres": [
 "pop",
@@ -20074,6 +20297,16 @@
 "subgenres": [
 "caribbean",
 "dancehall"
+]
+},
+"les-rendez-vous-d-ailleurs|yannick thepault denis cuniot presentent universel klezmer klezmer aolam": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"klezmer"
 ]
 },
 "les-trois-baudets|baozi kanou maline": {
@@ -22673,6 +22906,14 @@
 "kurdish",
 "mediterranean"
 ]
+},
+"peniche-marcounet|109 b ast x red cloud": {
+"genres": [
+"jazz",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
 },
 "peniche-marcounet|109 capucine easy tigre": {
 "genres": [
@@ -25984,6 +26225,16 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|beaks oscar palace": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie rock"
+]
+},
 "popup|blue boys club release party": {
 "genres": [
 "indie",
@@ -27495,6 +27746,17 @@
 "gypsy jazz"
 ]
 },
+"sunset-sunside|akoda": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"creole jazz",
+"maloya"
+]
+},
 "sunset-sunside|alex freiman the hot sauce": {
 "genres": [
 "funk",
@@ -27631,6 +27893,17 @@
 "is_music": true,
 "subgenres": [
 "poetry settings"
+]
+},
+"sunset-sunside|arshid azarine trio": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"persian jazz",
+"piano trio"
 ]
 },
 "sunset-sunside|astor par atres": {
@@ -27777,6 +28050,16 @@
 "subgenres": [
 "solo piano",
 "balkan jazz"
+]
+},
+"sunset-sunside|boulou elios ferre invitent ludovic beier": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"gypsy jazz",
+"valse swing"
 ]
 },
 "sunset-sunside|brad leali quintet ft ronald baker": {
@@ -27931,6 +28214,16 @@
 "is_music": true,
 "subgenres": [
 "free improvisation"
+]
+},
+"sunset-sunside|damien nedonchelle metamorphose": {
+"genres": [
+"jazz",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"third stream"
 ]
 },
 "sunset-sunside|dani de moron life sketching": {
@@ -28579,6 +28872,15 @@
 "is_music": true,
 "subgenres": [
 "hard bop"
+]
+},
+"sunset-sunside|hommage a miles davis concert thematique": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop"
 ]
 },
 "sunset-sunside|hommage a peggy lee avec cecil l recchia jam vocale": {
@@ -29329,6 +29631,17 @@
 "accordion"
 ]
 },
+"sunset-sunside|olivier ker ourio quartet": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"harmonica jazz",
+"creole"
+]
+},
 "sunset-sunside|pablo murgier trio": {
 "genres": [
 "jazz"
@@ -29419,6 +29732,16 @@
 "piano trio"
 ]
 },
+"sunset-sunside|romain pilon trio jeff denson": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"guitar trio"
+]
+},
 "sunset-sunside|roni eytan quartet": {
 "genres": [
 "jazz"
@@ -29465,6 +29788,15 @@
 "is_music": true,
 "subgenres": [
 "piano trio"
+]
+},
+"sunset-sunside|samuel maingaud quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "sunset-sunside|samuelito": {
@@ -29645,6 +29977,15 @@
 "is_music": true,
 "subgenres": [
 "chamber jazz"
+]
+},
+"sunset-sunside|the watershed": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
 ]
 },
 "sunset-sunside|thibault renard quintet": {
@@ -30829,6 +31170,18 @@
 "lo-fi"
 ]
 },
+"supersonic|shoom flurp namakis": {
+"genres": [
+"indie",
+"rock",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"art rock"
+]
+},
 "supersonic|shoreline": {
 "genres": [
 "rock",
@@ -31192,6 +31545,18 @@
 "garage rock"
 ]
 },
+"supersonic|the spook school": {
+"genres": [
+"indie",
+"pop",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"twee pop",
+"queercore"
+]
+},
 "supersonic|the wants off center": {
 "genres": [
 "rock",
@@ -31297,6 +31662,14 @@
 "choral",
 "romantic"
 ]
+},
+"tennessee-bar|jam session soul funk ouverte a tous": {
+"genres": [
+"soul-rnb",
+"funk"
+],
+"is_music": true,
+"subgenres": []
 },
 "theatre-artistic-athevains|concert de sortie d album canta in cumpagnia": {
 "genres": [
