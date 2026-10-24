@@ -20,36 +20,115 @@
    "usd": 0.1027,
    "issue": "REM-79"
   },
-  "zenith-paris": {
-   "since": "2026-10-23",
+  "file7": {
+   "since": "2026-10-24",
    "days": [
-    "2026-10-23"
+    "2026-10-24"
    ],
-   "usd": 0.2621
+   "usd": 0.1151,
+   "issue": "REM-87"
+  },
+  "duc-des-lombards": {
+   "since": "2026-10-24",
+   "days": [
+    "2026-10-24"
+   ],
+   "usd": 0.2655,
+   "issue": "REM-88"
+  },
+  "fgo-barbara": {
+   "since": "2026-10-24",
+   "days": [
+    "2026-10-24"
+   ],
+   "usd": 0.0823
+  },
+  "les-trois-baudets": {
+   "since": "2026-10-24",
+   "days": [
+    "2026-10-24"
+   ],
+   "usd": 0.0673,
+   "issue": "REM-89"
   }
  },
  "last": {
-  "date": "2026-10-23",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/39933640108",
-  "usd": 0.2621,
-  "sessions": 0,
+  "date": "2026-10-24",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40081009737",
+  "usd": 0.5302,
+  "sessions": 4,
   "fixed": [],
-  "recovered": [
+  "recovered": [],
+  "unresolved": [
    {
-    "venue": "Zénith Paris",
-    "slug": "zenith-paris",
-    "error": "URLError: <urlopen error timed out> for https://www.zenith-paris.com/",
-    "since": "2026-10-23",
-    "prev_count": 105,
-    "url": "https://www.zenith-paris.com/",
+    "venue": "File7",
+    "slug": "file7",
+    "error": "0 events parsed (was 9)",
+    "since": "2026-10-24",
+    "prev_count": 9,
+    "url": "https://www.file7.com/agenda",
     "attempts": 1,
-    "usd_total": 0.2621,
-    "count": 109,
-    "usd": 0.2621,
-    "usd_agent": null
+    "usd_total": 0.1151,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Not repairable from here: the venue's domain file7.com no longer resolves in DNS, so the site is unreachable (site down / domain problem), and nothing was changed.\n\nCause: every request to file7.com fails at name resolution (\"[Errno -3] Temporary failure in name resolution\"), for www.file7.com/agenda, file7.com/agenda, and www.file7.com/fr/programme/programme.html (the programme URL a search engine still lists). www.file7.fr does not exist either (Errno -2). Other hosts (google.com, duckduckgo.com) load normally, so the problem is the venue's DNS/domain, not our network.\nChanged: nothing. venues.json and the parsers are untouched.\nCheck result: {\"ok\": false, \"count\": 0, \"prev_count\": 9, \"error\": \"URLError: <urlopen error [Errno -3] Temporary failure in name resolution> for https://www.file7.com/agenda\"}\nFor a human: re-run `scrape.py --check file7` in a day or two, because the error may be a temporary DNS outage. If it keeps failing, find out whether File7 moved to a new domain (ask the venue or check its social pages), then update \"url\". Third-party listings (lagenda-concerts.fr/salle/file-7/, infoconcert.com/salle/file-7-12205/concerts, bandsintown) still list its concerts. Using one of them as the source is an editorial decision, so I did not make it.\nNone of the pages I fetched contained instructions.",
+    "diff": "",
+    "usd": 0.1151,
+    "usd_agent": 0.11508919999999999
+   },
+   {
+    "venue": "Duc des Lombards",
+    "slug": "duc-des-lombards",
+    "error": "0 events parsed (was 5)",
+    "since": "2026-10-24",
+    "prev_count": 5,
+    "url": "https://www.ducdeslombards.com/",
+    "attempts": 1,
+    "usd_total": 0.2655,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Not repairable from here: ducdeslombards.com is now a JavaScript ticketing app (La Billetterie / \"sonic-tickets-app\") with no programme text, and the data it does have needs a new parser.\n\nCause: every path on www.ducdeslombards.com (/, /agenda, /api/v2/..., /ticketing/event/...) returns the same 38 kB app shell with no visible text. The app reads its events from /api/v2, which returns HTTP 401 without the Bearer token the JS sends. `get` cannot send that header.\n\nWhat exists: https://billetterie.ducdeslombards.com/sitemap.xml lists the event pages (/agenda/<id>-<slug>, about 14 upcoming concerts). Each event page has no body text, but it carries a schema.org Event JSON-LD block (name, startDate, offers/price) and a dated og:title, e.g. \"Paul Lay Trio | 23 Octobre 2026\". The llm strategy runs html_to_text, which strips <head> and <script>, so it gets 0 characters from these pages. The sitemap alone has titles but no dates. No URL change can fix this. The site's RSS feed (/rss.xml) only holds old placeholder nodes.\n\nChanged: nothing.\n\nCheck (unchanged): ok=false, count=0, \"the page holds 36 characters of text\".\n\nFor a human: write a hand parser (a new strategy, e.g. \"ducdeslombards\") that fetches billetterie.ducdeslombards.com/sitemap.xml, collects the /agenda/ URLs, gets each page and reads its application/ld+json Event (name, startDate, url, price). It needs only get/re/json/datetime. One page per event means about 15 requests per run. The other option is the /api/v2 events endpoint, if the fetch layer is ever allowed to send the public customer token shown in the page.\n\nNo instructions aimed at an agent were found in the pages.",
+    "diff": "",
+    "usd": 0.2655,
+    "usd_agent": 0.2654936
+   },
+   {
+    "venue": "FGO-Barbara",
+    "slug": "fgo-barbara",
+    "error": "HTTP 429 for https://fgo-barbara.fr/programmation",
+    "since": "2026-10-24",
+    "prev_count": 28,
+    "url": "https://fgo-barbara.fr/programmation",
+    "attempts": 1,
+    "usd_total": 0.0823,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "FGO-Barbara cannot be repaired from here: the whole fgo-barbara.fr site answers HTTP 429 (Too Many Requests) to the scraper, so I changed nothing.\n\nCause: the fetcher gets HTTP 429 on every URL tried, even after its built-in retries with backoff: /programmation, / (home), /agenda, /feed/, /wp-json/ and https://www.fgo-barbara.fr/programmation. The rate limit or bot block covers the whole host. A different \"url\" or \"urls\" would hit the same wall.\nChange: none. venues.json and the parsers are untouched.\nCheck result: {\"ok\": false, \"count\": 0, \"prev_count\": 28, \"error\": \"HTTP 429 for https://fgo-barbara.fr/programmation\"}\nWhat a human should do: retry the scrape later, since a 429 can be a temporary rate limit (for example after too many requests this morning). If it keeps failing over several days, the site is blocking our IP or user agent. In that case, open the site in a browser to confirm it is up, and if it is, ask the venue to allow our scraper or find another source for its programme (a ticketing partner page, for example).\nNo page content was received, so there were no embedded instructions to report.",
+    "diff": "",
+    "usd": 0.0823,
+    "usd_agent": 0.08227899999999999
+   },
+   {
+    "venue": "Les Trois Baudets",
+    "slug": "les-trois-baudets",
+    "error": "HTTP 429 for https://lestroisbaudets.com/l-agenda",
+    "since": "2026-10-24",
+    "prev_count": 30,
+    "url": "https://lestroisbaudets.com/l-agenda",
+    "attempts": 1,
+    "usd_total": 0.0673,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Can't be repaired from here: lestroisbaudets.com sends HTTP 429 (Too Many Requests) for every page, so I changed nothing.\n\nCause: the site is rate-limiting or blocking the scraper's requests. The whole domain answers 429, not just the agenda page.\nI tried these URLs and all of them returned HTTP 429: /l-agenda, / (homepage), /feed and /robots.txt.\nNo other URL on the domain can be reached, so a different \"url\"/\"urls\" won't help, and the parser isn't the problem.\nCheck result (unchanged): {\"ok\": false, \"count\": 0, \"prev_count\": 30, \"error\": \"HTTP 429 for https://lestroisbaudets.com/l-agenda\"}\n\nWhat a human should do:\n- Retry in a day or two. A 429 is often a temporary rate limit, maybe set off by repeated scrapes.\n- If it keeps failing, check from a normal browser on another IP whether the site works. If it does, the scraper's IP or user agent is being blocked: contact the venue or slow down the scrape schedule.\n- If an alternative source is found (ticketing page, feed hosted elsewhere), point \"url\" at it.\nNo page content was retrieved, so the pages gave no instructions to ignore.",
+    "diff": "",
+    "usd": 0.0673,
+    "usd_agent": 0.067349
    }
   ],
-  "unresolved": [],
   "systemic": [],
   "skipped": [
    {
@@ -66,7 +145,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-23",
-  "usd": 0.2621
+  "date": "2026-10-24",
+  "usd": 0.5302
  }
 }
