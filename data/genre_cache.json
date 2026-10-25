@@ -3855,6 +3855,16 @@
 "is_music": false,
 "subgenres": []
 },
+"bibliotheque-rainer-maria-rilke|recital musical etty rilke une quete d absolu": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"recital",
+"art song"
+]
+},
 "bibliotheque-rainer-maria-rilke|sullivan coredo": {
 "genres": [
 "pop",
@@ -10261,6 +10271,13 @@
 "dream pop"
 ]
 },
+"la-bellevilloise|trou terrible terrible trou": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-bellevilloise|un ete latino": {
 "genres": [
 "latin",
@@ -12655,6 +12672,16 @@
 "is_music": true,
 "subgenres": [
 "gnawa"
+]
+},
+"la-dynamo|les rencontres ajc jazz migration 12 felsenmeer moustik haterz neno tornade spectrale": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
 ]
 },
 "la-dynamo|monopoly of bells milkweed": {
@@ -16777,6 +16804,15 @@
 "latin jazz"
 ]
 },
+"le-baiser-sale|lajamdulundi de francois constantin speciale funk electro": {
+"genres": [
+"funk",
+"electro",
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-baiser-sale|lapetiteheure by etienne mbappe": {
 "genres": [
 "jazz",
@@ -19083,6 +19119,18 @@
 "noise rock"
 ]
 },
+"le-trabendo|bongeziwe mabandla": {
+"genres": [
+"afro",
+"folk",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"xhosa soul",
+"south african folk"
+]
+},
 "le-trabendo|bonne nuit": {
 "genres": [
 "indie",
@@ -20117,6 +20165,16 @@
 "vocal jazz"
 ]
 },
+"le-truskel|bisous": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage punk"
+]
+},
 "le-truskel|black pontiac electric enemy au truskel": {
 "genres": [
 "rock",
@@ -20139,12 +20197,32 @@
 "cold wave"
 ]
 },
+"le-truskel|chute eclair mty": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
+},
 "le-truskel|concert jam maison des sons": {
 "genres": [
 "rock"
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-truskel|date with the night": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
 },
 "le-truskel|falvino tati and the chronicle": {
 "genres": [
@@ -29374,6 +29452,16 @@
 ]
 },
 "sunset-sunside|laurent de wilde trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano trio",
+"bebop"
+]
+},
+"sunset-sunside|laurent de wilde trio hommage a miles davis": {
 "genres": [
 "jazz"
 ],
