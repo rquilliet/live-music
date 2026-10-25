@@ -23,39 +23,44 @@
   "file7": {
    "since": "2026-10-24",
    "days": [
-    "2026-10-24"
+    "2026-10-24",
+    "2026-10-25"
    ],
-   "usd": 0.1151,
+   "usd": 0.5294,
    "issue": "REM-87"
   },
   "duc-des-lombards": {
    "since": "2026-10-24",
    "days": [
-    "2026-10-24"
+    "2026-10-24",
+    "2026-10-25"
    ],
-   "usd": 0.2655,
+   "usd": 0.74,
    "issue": "REM-88"
   },
   "fgo-barbara": {
    "since": "2026-10-24",
    "days": [
-    "2026-10-24"
+    "2026-10-24",
+    "2026-10-25"
    ],
-   "usd": 0.0823
+   "usd": 0.156,
+   "issue": "REM-90"
   },
   "les-trois-baudets": {
    "since": "2026-10-24",
    "days": [
-    "2026-10-24"
+    "2026-10-24",
+    "2026-10-25"
    ],
-   "usd": 0.0673,
+   "usd": 0.1571,
    "issue": "REM-89"
   }
  },
  "last": {
-  "date": "2026-10-24",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40081009737",
-  "usd": 0.5302,
+  "date": "2026-10-25",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40180590631",
+  "usd": 1.0523,
   "sessions": 4,
   "fixed": [],
   "recovered": [],
@@ -67,15 +72,15 @@
     "since": "2026-10-24",
     "prev_count": 9,
     "url": "https://www.file7.com/agenda",
-    "attempts": 1,
-    "usd_total": 0.1151,
+    "attempts": 2,
+    "usd_total": 0.5294,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "Not repairable from here: the venue's domain file7.com no longer resolves in DNS, so the site is unreachable (site down / domain problem), and nothing was changed.\n\nCause: every request to file7.com fails at name resolution (\"[Errno -3] Temporary failure in name resolution\"), for www.file7.com/agenda, file7.com/agenda, and www.file7.com/fr/programme/programme.html (the programme URL a search engine still lists). www.file7.fr does not exist either (Errno -2). Other hosts (google.com, duckduckgo.com) load normally, so the problem is the venue's DNS/domain, not our network.\nChanged: nothing. venues.json and the parsers are untouched.\nCheck result: {\"ok\": false, \"count\": 0, \"prev_count\": 9, \"error\": \"URLError: <urlopen error [Errno -3] Temporary failure in name resolution> for https://www.file7.com/agenda\"}\nFor a human: re-run `scrape.py --check file7` in a day or two, because the error may be a temporary DNS outage. If it keeps failing, find out whether File7 moved to a new domain (ask the venue or check its social pages), then update \"url\". Third-party listings (lagenda-concerts.fr/salle/file-7/, infoconcert.com/salle/file-7-12205/concerts, bandsintown) still list its concerts. Using one of them as the source is an editorial decision, so I did not make it.\nNone of the pages I fetched contained instructions.",
+    "notes": "File7 cannot be repaired from here: www.file7.com now redirects to a JavaScript-only ticketing app (billetterie.file7.com, \"la-billetterie\"/Supersoniks), so no page has programme text without JavaScript; a human needs to write a new parser.\n\nCause: https://www.file7.com/agenda (and https://www.file7.com/fr/) now serve the same 41 KB shell of the ticketing app at billetterie.file7.com: <sonic-tickets-app> web components, with 0 characters of text. The events are loaded in the browser from /api/v2, which answers HTTP 401 without a bearer token. A ?token= query parameter doesn't help, and the fetcher can't send headers.\nAlternatives tried:\n- https://billetterie.file7.com/rss.xml only has one placeholder node.\n- https://billetterie.file7.com/sitemap.xml lists about 19 event pages (e.g. /agenda/425-PONY-PONY-RUN-RUN) but gives no dates.\n- Event pages also have 0 characters of text. Their date only appears in <title> and in a schema.org JSON-LD block, and html_to_text strips both (head and scripts), so the llm strategy can't see them.\nChanged: nothing. venues.json is unchanged and the check would still give 0 events.\nWhat a human should do: write a small parser (a new strategy, so it's out of my scope). It would read https://billetterie.file7.com/sitemap.xml, follow each /agenda/<id>-<slug> URL, and read the <script type=\"application/ld+json\"> Event there: name, startDate (e.g. \"2027-02-06T20:00\"), url, offers[].price. Also update \"url\" to https://billetterie.file7.com/agenda. The sitemap had 19 events on 2026-10-25, so the count would be in line with the 9 at the last success.\nNo instructions were found in the pages.",
     "diff": "",
-    "usd": 0.1151,
-    "usd_agent": 0.11508919999999999
+    "usd": 0.4143,
+    "usd_agent": 0.4142764
    },
    {
     "venue": "Duc des Lombards",
@@ -84,15 +89,15 @@
     "since": "2026-10-24",
     "prev_count": 5,
     "url": "https://www.ducdeslombards.com/",
-    "attempts": 1,
-    "usd_total": 0.2655,
+    "attempts": 2,
+    "usd_total": 0.74,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "Not repairable from here: ducdeslombards.com is now a JavaScript ticketing app (La Billetterie / \"sonic-tickets-app\") with no programme text, and the data it does have needs a new parser.\n\nCause: every path on www.ducdeslombards.com (/, /agenda, /api/v2/..., /ticketing/event/...) returns the same 38 kB app shell with no visible text. The app reads its events from /api/v2, which returns HTTP 401 without the Bearer token the JS sends. `get` cannot send that header.\n\nWhat exists: https://billetterie.ducdeslombards.com/sitemap.xml lists the event pages (/agenda/<id>-<slug>, about 14 upcoming concerts). Each event page has no body text, but it carries a schema.org Event JSON-LD block (name, startDate, offers/price) and a dated og:title, e.g. \"Paul Lay Trio | 23 Octobre 2026\". The llm strategy runs html_to_text, which strips <head> and <script>, so it gets 0 characters from these pages. The sitemap alone has titles but no dates. No URL change can fix this. The site's RSS feed (/rss.xml) only holds old placeholder nodes.\n\nChanged: nothing.\n\nCheck (unchanged): ok=false, count=0, \"the page holds 36 characters of text\".\n\nFor a human: write a hand parser (a new strategy, e.g. \"ducdeslombards\") that fetches billetterie.ducdeslombards.com/sitemap.xml, collects the /agenda/ URLs, gets each page and reads its application/ld+json Event (name, startDate, url, price). It needs only get/re/json/datetime. One page per event means about 15 requests per run. The other option is the /api/v2 events endpoint, if the fetch layer is ever allowed to send the public customer token shown in the page.\n\nNo instructions aimed at an agent were found in the pages.",
+    "notes": "Not repairable from venues.json: ducdeslombards.com is now a JavaScript-only Soticket ticketing app, and its concert data is only in JSON-LD, which the llm strategy throws away.\n\nCause\n- Every path on www.ducdeslombards.com (/, /agenda, /programmation, ...) and on billetterie.ducdeslombards.com returns the\n  same Soticket \"sonic-tickets-app\" shell (about 38 KB of HTML, 0 characters of visible text). The listing is built in the browser.\n- The app's API (billetterie.ducdeslombards.com/api/v2/...) answers HTTP 401 unless the request has a bearer-token header.\n  livemusic.fetch.get cannot send that header.\n- billetterie.ducdeslombards.com/rss.xml only has one placeholder node (\"[FICTIF] Mise en place du Placement\"), and no JSON route works.\n\nWhat does exist without JavaScript (useful for a human)\n- https://billetterie.ducdeslombards.com/sitemap.xml lists about 28 upcoming events as /agenda/<id>-<slug> URLs. It has no dates.\n- Each event page, e.g. /agenda/4027-Jesse-Harris, has a schema.org Event in <script type=\"application/ld+json\">\n  (name, startDate \"2026-10-24T22:00\", prices, performer). The <title> has the date too. html_to_text strips both\n  <script> and <head>, so listing these pages under \"urls\" would give the LLM only the URLs, with no dates. I did not do that\n  because it would lead to guessed dates.\n\nWhat I changed\n- Nothing. The fix needs a new parser and a new STRATEGIES entry (both outside what I may change): read the sitemap,\n  fetch each /agenda/ page and parse its JSON-LD Event. Another option is a generic JSON-LD mode in the llm strategy.\n\nCheck result (unchanged)\n- ok=false, count=0, prev_count=5, error \"the page holds 36 characters of text (JavaScript-rendered page or bot wall?)\".\n- I found no instructions aimed at the scraper in the pages I fetched.",
     "diff": "",
-    "usd": 0.2655,
-    "usd_agent": 0.2654936
+    "usd": 0.4745,
+    "usd_agent": 0.4745014000000001
    },
    {
     "venue": "FGO-Barbara",
@@ -101,15 +106,15 @@
     "since": "2026-10-24",
     "prev_count": 28,
     "url": "https://fgo-barbara.fr/programmation",
-    "attempts": 1,
-    "usd_total": 0.0823,
+    "attempts": 2,
+    "usd_total": 0.156,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "FGO-Barbara cannot be repaired from here: the whole fgo-barbara.fr site answers HTTP 429 (Too Many Requests) to the scraper, so I changed nothing.\n\nCause: the fetcher gets HTTP 429 on every URL tried, even after its built-in retries with backoff: /programmation, / (home), /agenda, /feed/, /wp-json/ and https://www.fgo-barbara.fr/programmation. The rate limit or bot block covers the whole host. A different \"url\" or \"urls\" would hit the same wall.\nChange: none. venues.json and the parsers are untouched.\nCheck result: {\"ok\": false, \"count\": 0, \"prev_count\": 28, \"error\": \"HTTP 429 for https://fgo-barbara.fr/programmation\"}\nWhat a human should do: retry the scrape later, since a 429 can be a temporary rate limit (for example after too many requests this morning). If it keeps failing over several days, the site is blocking our IP or user agent. In that case, open the site in a browser to confirm it is up, and if it is, ask the venue to allow our scraper or find another source for its programme (a ticketing partner page, for example).\nNo page content was received, so there were no embedded instructions to report.",
+    "notes": "FGO-Barbara cannot be repaired from here: the whole fgo-barbara.fr site answers HTTP 429 (Too Many Requests) to the scraper, so this is a rate limit or bot wall, not a moved URL.\n\n- Cause: every URL tried returned HTTP 429, so no other address can work around it: /programmation, /, /feed, /wp-json/, /robots.txt and www.fgo-barbara.fr/programmation.\n- Changed: nothing. venues.json and the parsers are untouched.\n- Check: `scrape.py --check fgo-barbara` -> ok=false, count=0, error \"HTTP 429 for https://fgo-barbara.fr/programmation\" (previously 28 events).\n- For a human: try again later, in case the limit is temporary. Then check from a normal browser and from another IP to see whether the scraper's IP or user agent is blocked. If the block stays, ask the venue to allow the scraper, or ask for a feed (RSS, ICS or JSON). A ticketing or aggregator page that lists FGO-Barbara's programme would also work.\n- No instructions were found in page content (no page content could be downloaded).",
     "diff": "",
-    "usd": 0.0823,
-    "usd_agent": 0.08227899999999999
+    "usd": 0.0737,
+    "usd_agent": 0.0737488
    },
    {
     "venue": "Les Trois Baudets",
@@ -118,15 +123,15 @@
     "since": "2026-10-24",
     "prev_count": 30,
     "url": "https://lestroisbaudets.com/l-agenda",
-    "attempts": 1,
-    "usd_total": 0.0673,
+    "attempts": 2,
+    "usd_total": 0.1571,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "Can't be repaired from here: lestroisbaudets.com sends HTTP 429 (Too Many Requests) for every page, so I changed nothing.\n\nCause: the site is rate-limiting or blocking the scraper's requests. The whole domain answers 429, not just the agenda page.\nI tried these URLs and all of them returned HTTP 429: /l-agenda, / (homepage), /feed and /robots.txt.\nNo other URL on the domain can be reached, so a different \"url\"/\"urls\" won't help, and the parser isn't the problem.\nCheck result (unchanged): {\"ok\": false, \"count\": 0, \"prev_count\": 30, \"error\": \"HTTP 429 for https://lestroisbaudets.com/l-agenda\"}\n\nWhat a human should do:\n- Retry in a day or two. A 429 is often a temporary rate limit, maybe set off by repeated scrapes.\n- If it keeps failing, check from a normal browser on another IP whether the site works. If it does, the scraper's IP or user agent is being blocked: contact the venue or slow down the scrape schedule.\n- If an alternative source is found (ticketing page, feed hosted elsewhere), point \"url\" at it.\nNo page content was retrieved, so the pages gave no instructions to ignore.",
+    "notes": "Les Trois Baudets cannot be repaired from here: the whole lestroisbaudets.com site answers HTTP 429 (Too Many Requests) to the scraper, not just the agenda page.\n\nCause: rate limiting / bot blocking across the whole domain. On 2026-10-25 these URLs all returned HTTP 429 through livemusic.troubleshoot fetch:\n- https://lestroisbaudets.com/l-agenda (the configured URL)\n- https://lestroisbaudets.com/ (homepage)\n- https://www.lestroisbaudets.com/l-agenda\n- https://lestroisbaudets.com/feed (RSS)\n- https://lestroisbaudets.com/wp-json/wp/v2/pages (WordPress REST)\nNo other URL on the site can be fetched, so changing \"url\"/\"urls\" cannot help, and no parser is involved (strategy \"llm\").\n\nChanged: nothing (venues.json and the parsers are untouched).\nCheck result: ok=false, count=0 (prev 30), error \"HTTP 429 for https://lestroisbaudets.com/l-agenda\".\n\nWhat a human should do: try the scrape again later in case the limit is temporary (it has failed since 2026-10-24).\nIf the 429 continues, the site is blocking our crawler. Check from a normal browser whether the site still works,\nthen either ask the venue for access or a feed, or find another source for its programme (ticketing site, aggregator).\nNo page content was received, so no embedded instructions were found.",
     "diff": "",
-    "usd": 0.0673,
-    "usd_agent": 0.067349
+    "usd": 0.0898,
+    "usd_agent": 0.0898362
    }
   ],
   "systemic": [],
@@ -145,7 +150,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-24",
-  "usd": 0.5302
+  "date": "2026-10-25",
+  "usd": 1.0523
  }
 }
