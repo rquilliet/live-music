@@ -24,84 +24,121 @@
    "since": "2026-10-24",
    "days": [
     "2026-10-24",
-    "2026-10-25"
+    "2026-10-25",
+    "2026-10-27"
    ],
-   "usd": 0.5294,
+   "usd": 0.8512,
    "issue": "REM-87"
   },
   "duc-des-lombards": {
    "since": "2026-10-24",
    "days": [
     "2026-10-24",
-    "2026-10-25"
+    "2026-10-25",
+    "2026-10-27"
    ],
-   "usd": 0.74,
+   "usd": 0.8961,
    "issue": "REM-88"
   },
   "fgo-barbara": {
    "since": "2026-10-24",
    "days": [
     "2026-10-24",
-    "2026-10-25"
+    "2026-10-25",
+    "2026-10-27"
    ],
-   "usd": 0.156,
+   "usd": 0.2319,
    "issue": "REM-90"
   },
   "les-trois-baudets": {
    "since": "2026-10-24",
    "days": [
     "2026-10-24",
-    "2026-10-25"
+    "2026-10-25",
+    "2026-10-27"
    ],
-   "usd": 0.1571,
+   "usd": 0.2368,
    "issue": "REM-89"
   }
  },
  "last": {
-  "date": "2026-10-26",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40307707122",
-  "usd": 0.0,
-  "sessions": 1,
+  "date": "2026-10-27",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40486278829",
+  "usd": 0.6335,
+  "sessions": 4,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
-  "systemic": [
+  "unresolved": [
    {
-    "cause": "Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-    "venues": [
-     "Accor Arena",
-     "Zénith Paris",
-     "Alhambra",
-     "Cabaret Sauvage",
-     "La Bellevilloise",
-     "La Marbrerie",
-     "Glazart",
-     "Le Baiser Salé",
-     "Le Centquatre",
-     "La Petite Halle",
-     "Le Grand Rex",
-     "Mains d'Œuvres",
-     "Badaboum",
-     "Philharmonie de Paris",
-     "La Java",
-     "Le Bal Blomet",
-     "Studio de l'Ermitage",
-     "Le 360 Paris Music Factory",
-     "La Dynamo de Banlieues Bleues",
-     "La Gaîté Lyrique",
-     "Nouveau Casino"
-    ]
+    "venue": "File7",
+    "slug": "file7",
+    "error": "0 events parsed (was 9)",
+    "since": "2026-10-24",
+    "prev_count": 9,
+    "url": "https://www.file7.com/agenda",
+    "attempts": 3,
+    "usd_total": 0.8512,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "File7 can't be repaired from venues.json: its site is now a JavaScript ticketing app, and the dates are only in each event page's JSON-LD, which the \"llm\" strategy throws away. It needs a new parser, written by a human.\n\nCause: www.file7.com (including /agenda) now serves the \"La Billetterie\" / Sonic web-component app of billetterie.file7.com. The pages are empty shells (<sonic-home>, <sonic-tickets-app>) that JavaScript fills from /api/v2, and that API answers HTTP 401 without a token (/api/v2/events, /api/v2/sessions).\nWhat I tried: www.file7.com/, /agenda, robots.txt, billetterie.file7.com/agenda and rss.xml (empty Drupal feed) all give 0 characters of usable text. https://billetterie.file7.com/sitemap.xml lists about 19 event pages (/agenda/<id>-<SLUG>), but it has no dates. Pointing the LLM at it would only make it guess dates, so I did not use it.\nWhere the data is: each event page (e.g. https://billetterie.file7.com/agenda/439-INTO-THE-WOODS) has a schema.org Event JSON-LD block in <head>, with name, startDate, prices, availability and url. html_to_text drops <head> and <script>, so the LLM strategy sees nothing.\nSuggestion for a human: write a parser in venues_html.py, for example \"file7\". It would get() the sitemap, collect the /agenda/<id>-... URLs, get() each one, and json.loads its application/ld+json Event (name, startDate, offers price/availability, url). That's about 20 requests per run, and the same parser would probably work for other \"La Billetterie\" sites. Then register it in STRATEGIES (sources/__init__.py), which is outside what I'm allowed to change here.\nWhat I changed: nothing (venues.json and the parsers are untouched).\nCheck result: ok=false, count 0 (prev 9), \"the page holds 33 characters of text (JavaScript-rendered page or bot wall?)\".\nNone of the pages I fetched contained instructions aimed at an agent.",
+    "diff": "",
+    "usd": 0.3218,
+    "usd_agent": 0.32183560000000005
    },
    {
-    "cause": "Credit balance is too low",
-    "venues": [
-     "File7",
-     "Duc des Lombards",
-     "FGO-Barbara",
-     "Les Trois Baudets"
-    ]
+    "venue": "Duc des Lombards",
+    "slug": "duc-des-lombards",
+    "error": "0 events parsed (was 5)",
+    "since": "2026-10-24",
+    "prev_count": 5,
+    "url": "https://www.ducdeslombards.com/",
+    "attempts": 3,
+    "usd_total": 0.8961,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Duc des Lombards replaced its site with a JavaScript-only \"La Billetterie\" ticketing app whose event API needs a bearer token, so it cannot be repaired from venues.json; nothing was changed.\n\nCause: https://www.ducdeslombards.com/ (and ducdeslombards.com, /feed/, /sitemap.xml) now serve the same 38 KB HTML shell of\nthe billetterie.ducdeslombards.com app (<sonic-tickets-app>, <sonic-home>), with no concert text in it. The events are loaded in the browser.\n- https://billetterie.ducdeslombards.com/agenda: same empty shell (title \"Agenda | Duc des Lombards\", 0 characters of text).\n- https://billetterie.ducdeslombards.com/api/v2/events: HTTP 401. The app sends an \"Authorization: Bearer <token>\" header,\n  using a public token embedded in the page. livemusic.fetch.get cannot send custom headers, so no \"url\"/\"urls\" change can reach it.\n- I found no RSS, WordPress or static agenda page.\nNo page contained instructions aimed at the scraper.\n\nChanged: nothing. The check still fails with the same error (0 events, page with no text).\n\nFor a human: write a dedicated parser/strategy for the La Billetterie API (GET https://billetterie.ducdeslombards.com/api/v2/...\nwith the Bearer token from the page's <sonic-tickets-app token=\"...\">). That needs header support in livemusic.fetch.\nOr find out whether the venue publishes its programme elsewhere (newsletter, a partner listing).",
+    "diff": "",
+    "usd": 0.1561,
+    "usd_agent": 0.15609479999999998
+   },
+   {
+    "venue": "FGO-Barbara",
+    "slug": "fgo-barbara",
+    "error": "HTTP 429 for https://fgo-barbara.fr/programmation",
+    "since": "2026-10-24",
+    "prev_count": 28,
+    "url": "https://fgo-barbara.fr/programmation",
+    "attempts": 3,
+    "usd_total": 0.2319,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Not repairable from here: fgo-barbara.fr answers HTTP 429 (Too Many Requests) to every URL on the domain, so the site is rate-limiting or blocking the scraper as a whole.\n\nCause: since 2026-10-24 the scraper's requests to the site are refused with 429. I tested:\n- https://fgo-barbara.fr/programmation (the configured URL)\n- https://fgo-barbara.fr/ (home page)\n- https://fgo-barbara.fr/feed/ (RSS)\n- https://fgo-barbara.fr/wp-json/wp/v2/pages (WordPress REST)\n- https://www.fgo-barbara.fr/programmation\nAll returned 429. No page loaded, so no other URL can be used in venues.json.\n\nWhat I changed: nothing. venues.json and the parsers are as they were.\n\nCheck result: {\"ok\": false, \"count\": 0, \"prev_count\": 28, \"error\": \"HTTP 429 for https://fgo-barbara.fr/programmation\"}\n\nWhat a human should do: open the site in a normal browser from another network to see whether this is an IP or user-agent block (bot wall / WAF) or a temporary rate limit. If the block lasts, ask the venue for access or a feed, or find the programme somewhere else, such as a ticketing site or the Ville de Paris agenda. That would need a new URL and possibly a new parser. If the 429 goes away on its own, the source should work again with no change.",
+    "diff": "",
+    "usd": 0.0759,
+    "usd_agent": 0.0759196
+   },
+   {
+    "venue": "Les Trois Baudets",
+    "slug": "les-trois-baudets",
+    "error": "HTTP 429 for https://lestroisbaudets.com/l-agenda",
+    "since": "2026-10-24",
+    "prev_count": 30,
+    "url": "https://lestroisbaudets.com/l-agenda",
+    "attempts": 3,
+    "usd_total": 0.2368,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Not repairable from here: lestroisbaudets.com answers HTTP 429 (Too Many Requests) to every URL the scraper fetches, so the whole site is blocking or rate-limiting it, not just the agenda page.\nCause: the whole domain returns 429 to the scraper's fetcher: /l-agenda, the homepage /, /wp-json/ and /feed/ all fail the same way. It has done so on every run since 2026-10-24 (3 days), so it looks like a lasting block (WAF/anti-bot or IP rate limit), not a one-off spike.\nChanged: nothing. No other URL on the site can be fetched, and the fix isn't in venues.json or a parser.\nCheck result: ok=false, count=0, error \"HTTP 429 for https://lestroisbaudets.com/l-agenda\" (previous count 30).\nFor a human: open the agenda in a normal browser from the scraper's network to see whether the IP or user agent is blocked. If it is, contact the venue or lower the request rate. Also look for another source for the programme (a ticketing partner page, an export or feed). If the block stays, think about a different fetch method (outside what this agent may change).\nNo instructions were found in page content (no page content could be downloaded).",
+    "diff": "",
+    "usd": 0.0797,
+    "usd_agent": 0.079665
    }
   ],
+  "systemic": [],
   "skipped": [
    {
     "venue": "Supersonic",
@@ -117,7 +154,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-26",
-  "usd": 0.0
+  "date": "2026-10-27",
+  "usd": 0.6335
  }
 }
