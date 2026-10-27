@@ -1,13 +1,41 @@
 {
- "generated_at": "2026-10-26T10:28:23Z",
- "today": "2026-10-26",
- "duration_s": 235,
- "run_url": "https://github.com/rquilliet/live-music/actions/runs/40307139240",
+ "generated_at": "2026-10-27T10:08:58Z",
+ "today": "2026-10-27",
+ "duration_s": 573,
+ "run_url": "https://github.com/rquilliet/live-music/actions/runs/40484953147",
  "low_below": 3,
  "cost": {
-  "date": "2026-10-26",
-  "usd": 0,
-  "steps": []
+  "date": "2026-10-27",
+  "usd": 2.6712,
+  "steps": [
+   {
+    "what": "genres",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 2,
+    "tokens_in": 6584,
+    "tokens_out": 5537,
+    "usd": 0.1713
+   },
+   {
+    "what": "summaries",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 4,
+    "tokens_in": 40099,
+    "tokens_out": 2025,
+    "usd": 0.2511
+   },
+   {
+    "what": "venues",
+    "model": "claude-opus-5",
+    "batch": true,
+    "calls": 36,
+    "tokens_in": 195727,
+    "tokens_out": 140756,
+    "usd": 2.2488
+   }
+  ]
  },
  "sources": [
   {
@@ -15,12 +43,12 @@
    "slug": "opendata",
    "strategy": "opendata",
    "url": "https://opendata.paris.fr/explore/dataset/que-faire-a-paris-/",
-   "prev_count": 1205,
-   "seconds": 5.2,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 1198,
+   "seconds": 7.7,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 1198,
-   "last_ok": "2026-10-26"
+   "count": 1237,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Bataclan",
@@ -28,11 +56,11 @@
    "strategy": "bataclan",
    "url": "https://www.bataclan.fr/programmation",
    "prev_count": 46,
-   "seconds": 0.4,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 0.5,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 46,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Cigale",
@@ -40,35 +68,35 @@
    "strategy": "cigale",
    "url": "https://lacigale.fr/programmation/",
    "prev_count": 109,
-   "seconds": 0.1,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 2.6,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 109,
-   "last_ok": "2026-10-26"
+   "count": 108,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Boule Noire",
    "slug": "la-boule-noire",
    "strategy": "boulenoire",
    "url": "https://laboule-noire.fr/",
-   "prev_count": 71,
-   "seconds": 6.6,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 70,
+   "seconds": 8.8,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 70,
-   "last_ok": "2026-10-26"
+   "count": 73,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Trianon",
    "slug": "le-trianon",
    "strategy": "trianon",
    "url": "https://www.letrianon.fr/fr/programmation/",
-   "prev_count": 34,
-   "seconds": 1.6,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 35,
+   "seconds": 1.7,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 35,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Élysée Montmartre",
@@ -76,47 +104,47 @@
    "strategy": "trianon",
    "url": "https://www.elyseemontmartre.com/fr/programmation/",
    "prev_count": 54,
-   "seconds": 1.5,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 1.7,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 54,
-   "last_ok": "2026-10-26"
+   "count": 56,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Maroquinerie",
    "slug": "la-maroquinerie",
    "strategy": "maroquinerie",
    "url": "https://www.lamaroquinerie.fr/fr/agenda/",
-   "prev_count": 107,
-   "seconds": 1.8,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 106,
+   "seconds": 2.4,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 106,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Petit Bain",
    "slug": "petit-bain",
    "strategy": "petitbain",
    "url": "https://petitbain.org/agenda/",
-   "prev_count": 46,
-   "seconds": 1.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 45,
+   "seconds": 1.1,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 45,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Point Éphémère",
    "slug": "point-ephemere",
    "strategy": "pointephemere",
    "url": "https://www.pointephemere.org/agenda",
-   "prev_count": 57,
-   "seconds": 1.1,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 56,
+   "seconds": 1.3,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 56,
-   "last_ok": "2026-10-26"
+   "count": 58,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Café de la Danse",
@@ -124,11 +152,11 @@
    "strategy": "cafedeladanse",
    "url": "https://www.cafedeladanse.com/",
    "prev_count": 22,
-   "seconds": 0.5,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 0.9,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 22,
-   "last_ok": "2026-10-26"
+   "count": 23,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Hasard Ludique",
@@ -136,11 +164,11 @@
    "strategy": "hasardludique",
    "url": "https://www.lehasardludique.paris/programmation",
    "prev_count": 9,
-   "seconds": 2.1,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 2.4,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 9,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "New Morning",
@@ -148,8 +176,8 @@
    "strategy": "newmorning",
    "url": "https://www.newmorning.com/programmation.html",
    "prev_count": 71,
-   "seconds": 0.4,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 0.8,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "failed",
    "error": "HTTP 404 for https://www.newmorning.com/programmation.html",
    "last_ok": "2026-10-06",
@@ -161,24 +189,24 @@
    "slug": "instants-chavires",
    "strategy": "instantschavires",
    "url": "https://www.instantschavires.com/musique/concerts/",
-   "prev_count": 10,
-   "seconds": 1.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 11,
+   "seconds": 1.4,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 11,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Bal Chavaux",
    "slug": "bal-chavaux",
    "strategy": "balchavaux",
    "url": "https://balchavaux.fr/agenda",
-   "prev_count": 30,
-   "seconds": 16.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 29,
+   "seconds": 25.9,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 29,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Supersonic",
@@ -186,10 +214,10 @@
    "strategy": "tribe",
    "url": "https://supersonic-club.fr",
    "prev_count": 61,
-   "seconds": 0.6,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 0.8,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "failed",
-   "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-26&page=1",
+   "error": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-27&page=1",
    "last_ok": "2026-09-30",
    "failing_since": "2026-10-01",
    "carried": 0
@@ -201,10 +229,10 @@
    "url": "https://dernierbar.com/pages/paris",
    "prev_count": 1,
    "seconds": 0.4,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 1,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Pointe Lafayette",
@@ -213,22 +241,22 @@
    "url": "https://www.facebook.com/lapointelafayetteofficielle/",
    "prev_count": 2,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "low",
    "count": 2,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Sunset / Sunside",
    "slug": "sunset-sunside",
    "strategy": "tribe",
    "url": "https://www.sunset-sunside.com",
-   "prev_count": 146,
-   "seconds": 19.1,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "prev_count": 144,
+   "seconds": 29.0,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 144,
-   "last_ok": "2026-10-26"
+   "count": 143,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Accor Arena",
@@ -236,13 +264,11 @@
    "strategy": "llm",
    "url": "https://www.accorarena.com/fr/programmation",
    "prev_count": 8,
-   "seconds": 0.4,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 8): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 7
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 7,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "L'Olympia",
@@ -251,10 +277,10 @@
    "url": "https://www.olympiahall.com/",
    "prev_count": 13,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 13,
-   "last_ok": "2026-10-26"
+   "count": 12,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Zénith Paris",
@@ -262,13 +288,11 @@
    "strategy": "llm",
    "url": "https://www.zenith-paris.com/",
    "prev_count": 105,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 105): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 104
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 105,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Seine Musicale",
@@ -277,10 +301,10 @@
    "url": "https://www.laseinemusicale.com/",
    "prev_count": 58,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 58,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Plenitude Arena",
@@ -289,10 +313,10 @@
    "url": "https://www.plenitudearena.com/",
    "prev_count": 31,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 31,
-   "last_ok": "2026-10-26"
+   "count": 32,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Alhambra",
@@ -300,13 +324,11 @@
    "strategy": "llm",
    "url": "https://www.alhambra-paris.com/",
    "prev_count": 65,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 65): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 64
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 64,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Cabaret Sauvage",
@@ -314,13 +336,11 @@
    "strategy": "llm",
    "url": "https://www.cabaretsauvage.com/agenda",
    "prev_count": 66,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 66): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 65
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 66,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Bellevilloise",
@@ -328,13 +348,11 @@
    "strategy": "llm",
    "url": "https://www.labellevilloise.com/agenda/",
    "prev_count": 72,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 72): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 68
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 69,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Marbrerie",
@@ -342,13 +360,11 @@
    "strategy": "llm",
    "url": "https://www.lamarbrerie.fr/agenda/",
    "prev_count": 27,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 27): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 26
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 27,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Plan",
@@ -357,10 +373,10 @@
    "url": "https://www.leplan.com/",
    "prev_count": 15,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 15,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "File7",
@@ -369,7 +385,7 @@
    "url": "https://www.file7.com/agenda",
    "prev_count": 9,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "failed",
    "error": "0 events parsed (was 9)",
    "last_ok": "2026-10-23",
@@ -382,13 +398,11 @@
    "strategy": "llm",
    "url": "https://www.glazart.com/agenda/",
    "prev_count": 14,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 14): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 13
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 13,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Machine du Moulin Rouge",
@@ -397,10 +411,10 @@
    "url": "https://www.lamachinedumoulinrouge.com/agenda/",
    "prev_count": 45,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 45,
-   "last_ok": "2026-10-26"
+   "count": 46,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Duc des Lombards",
@@ -409,12 +423,12 @@
    "url": "https://www.ducdeslombards.com/",
    "prev_count": 5,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "failed",
    "error": "0 events parsed (was 5)",
    "last_ok": "2026-10-23",
    "failing_since": "2026-10-24",
-   "carried": 2
+   "carried": 1
   },
   {
    "venue": "Le Baiser Salé",
@@ -422,13 +436,11 @@
    "strategy": "llm",
    "url": "https://www.lebaisersale.com/fr/agenda",
    "prev_count": 25,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 25): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 24
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 25,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Centquatre",
@@ -436,13 +448,11 @@
    "strategy": "llm",
    "url": "https://www.104.fr/",
    "prev_count": 11,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 11): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 7
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 18,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Petite Halle",
@@ -450,13 +460,11 @@
    "strategy": "llm",
    "url": "https://www.lapetitehalle.com/programmation/",
    "prev_count": 22,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 22): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 21
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 21,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Grand Rex",
@@ -464,13 +472,11 @@
    "strategy": "llm",
    "url": "https://www.legrandrex.com/evenement/",
    "prev_count": 71,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 71): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 70
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 70,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Mains d'Œuvres",
@@ -478,13 +484,11 @@
    "strategy": "llm",
    "url": "https://mainsdoeuvres.org/",
    "prev_count": 4,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 4): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 4
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 3,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Badaboum",
@@ -492,13 +496,11 @@
    "strategy": "llm",
    "url": "https://badaboum.paris/agenda/",
    "prev_count": 32,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 32): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 31
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 35,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Philharmonie de Paris",
@@ -506,13 +508,11 @@
    "strategy": "llm",
    "url": "https://www.philharmoniedeparis.fr/fr/agenda",
    "prev_count": 315,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 315): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 314
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 314,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Trabendo",
@@ -521,10 +521,10 @@
    "url": "https://www.letrabendo.net/programmation/",
    "prev_count": 83,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 83,
-   "last_ok": "2026-10-26"
+   "count": 84,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "FGO-Barbara",
@@ -532,8 +532,8 @@
    "strategy": "llm",
    "url": "https://fgo-barbara.fr/programmation",
    "prev_count": 28,
-   "seconds": 10.6,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 10.8,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "failed",
    "error": "HTTP 429 for https://fgo-barbara.fr/programmation",
    "last_ok": "2026-10-23",
@@ -547,10 +547,10 @@
    "url": "https://lastation.paris/stationgdm/agenda",
    "prev_count": 1,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "low",
    "count": 1,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Cirque Electrique",
@@ -559,10 +559,10 @@
    "url": "https://www.cirque-electrique.com/agenda",
    "prev_count": 41,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 41,
-   "last_ok": "2026-10-26"
+   "count": 54,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Dame de Canton",
@@ -571,10 +571,10 @@
    "url": "https://www.damedecanton.com/event-list",
    "prev_count": 18,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 18,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Java",
@@ -582,25 +582,23 @@
    "strategy": "llm",
    "url": "https://www.la-java.fr/programmation",
    "prev_count": 20,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 20): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 20
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 19,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "DOC",
    "slug": "doc",
    "strategy": "llm",
    "url": "https://doc.work/project_category/concert/",
-   "prev_count": 8,
+   "prev_count": 7,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 7,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Bal Blomet",
@@ -608,13 +606,11 @@
    "strategy": "llm",
    "url": "https://www.balblomet.fr/agenda",
    "prev_count": 37,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 37): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 37
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 37,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Studio de l'Ermitage",
@@ -622,13 +618,11 @@
    "strategy": "llm",
    "url": "https://www.studio-ermitage.com/index.php/agenda",
    "prev_count": 25,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 25): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 24
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 24,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Les Trois Baudets",
@@ -636,8 +630,8 @@
    "strategy": "llm",
    "url": "https://lestroisbaudets.com/l-agenda",
    "prev_count": 30,
-   "seconds": 10.3,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "seconds": 10.9,
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "failed",
    "error": "HTTP 429 for https://lestroisbaudets.com/l-agenda",
    "last_ok": "2026-10-23",
@@ -650,13 +644,11 @@
    "strategy": "llm",
    "url": "https://le360paris.com/programmation/",
    "prev_count": 9,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 9): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 8
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 9,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Triton",
@@ -665,10 +657,10 @@
    "url": "https://letriton.com/agenda",
    "prev_count": 33,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 33,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Dynamo de Banlieues Bleues",
@@ -676,13 +668,11 @@
    "strategy": "llm",
    "url": "https://www.banlieuesbleues.org/dynamo/",
    "prev_count": 9,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 9): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 9
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 9,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Canal 93",
@@ -691,10 +681,10 @@
    "url": "https://www.canal93.com/agendaetbilletterie",
    "prev_count": 6,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 6,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Espace 1789",
@@ -703,10 +693,10 @@
    "url": "https://www.espace-1789.com/spectacle/saison",
    "prev_count": 46,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 46,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Gaîté Lyrique",
@@ -714,13 +704,11 @@
    "strategy": "llm",
    "url": "https://www.gaite-lyrique.net/agenda/",
    "prev_count": 12,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 12): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 9
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 10,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "PopUp!",
@@ -729,10 +717,10 @@
    "url": "https://www.popup.paris/agenda/",
    "prev_count": 47,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
-   "count": 47,
-   "last_ok": "2026-10-26"
+   "count": 48,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Le Truskel",
@@ -741,10 +729,10 @@
    "url": "https://www.truskel.fr/",
    "prev_count": 4,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 4,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "Nouveau Casino",
@@ -752,13 +740,11 @@
    "strategy": "llm",
    "url": "https://nouveaucasino.fr/",
    "prev_count": 25,
-   "seconds": 0.2,
-   "checked_at": "2026-10-26T10:28:23Z",
-   "status": "failed",
-   "error": "0 events parsed (was 25): Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
-   "last_ok": "2026-10-25",
-   "failing_since": "2026-10-26",
-   "carried": 24
+   "seconds": 0.0,
+   "checked_at": "2026-10-27T10:08:58Z",
+   "status": "ok",
+   "count": 24,
+   "last_ok": "2026-10-27"
   },
   {
    "venue": "La Générale",
@@ -767,13 +753,79 @@
    "url": "https://www.lagenerale.fr/",
    "prev_count": 7,
    "seconds": 0.0,
-   "checked_at": "2026-10-26T10:28:23Z",
+   "checked_at": "2026-10-27T10:08:58Z",
    "status": "ok",
    "count": 7,
-   "last_ok": "2026-10-26"
+   "last_ok": "2026-10-27"
   }
  ],
  "history": [
+  {
+   "date": "2026-10-27",
+   "run_url": "https://github.com/rquilliet/live-music/actions/runs/40484953147",
+   "usd": 2.6712,
+   "sources": {
+    "opendata": 1237,
+    "bataclan": 46,
+    "la-cigale": 108,
+    "la-boule-noire": 73,
+    "le-trianon": 35,
+    "elysee-montmartre": 56,
+    "la-maroquinerie": 106,
+    "petit-bain": 45,
+    "point-ephemere": 58,
+    "cafe-de-la-danse": 23,
+    "le-hasard-ludique": 9,
+    "new-morning": "HTTP 404 for https://www.newmorning.com/programmation.html",
+    "instants-chavires": 11,
+    "bal-chavaux": 29,
+    "supersonic": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-27&page=1",
+    "dernier-bar-avant-la-fin-du-monde": 1,
+    "la-pointe-lafayette": 2,
+    "sunset-sunside": 143,
+    "accor-arena": 7,
+    "olympia": 12,
+    "zenith-paris": 105,
+    "la-seine-musicale": 58,
+    "paris-la-defense-arena": 32,
+    "alhambra": 64,
+    "cabaret-sauvage": 66,
+    "la-bellevilloise": 69,
+    "la-marbrerie": 27,
+    "le-plan": 15,
+    "file7": "0 events parsed (was 9)",
+    "glazart": 13,
+    "la-machine": 46,
+    "duc-des-lombards": "0 events parsed (was 5)",
+    "le-baiser-sale": 25,
+    "le-104": 18,
+    "la-petite-halle": 21,
+    "le-grand-rex": 70,
+    "mains-d-oeuvres": 3,
+    "badaboum": 35,
+    "philharmonie": 314,
+    "le-trabendo": 84,
+    "fgo-barbara": "HTTP 429 for https://fgo-barbara.fr/programmation",
+    "la-station": 1,
+    "cirque-electrique": 54,
+    "la-dame-de-canton": 18,
+    "la-java": 19,
+    "doc": 7,
+    "le-bal-blomet": 37,
+    "studio-de-l-ermitage": 24,
+    "les-trois-baudets": "HTTP 429 for https://lestroisbaudets.com/l-agenda",
+    "le-360": 9,
+    "le-triton": 33,
+    "la-dynamo": 9,
+    "canal-93": 6,
+    "espace-1789": 46,
+    "la-gaite-lyrique": 10,
+    "popup": 48,
+    "le-truskel": 4,
+    "nouveau-casino": 24,
+    "la-generale": 7
+   }
+  },
   {
    "date": "2026-10-26",
    "run_url": "https://github.com/rquilliet/live-music/actions/runs/40307139240",
@@ -1608,72 +1660,6 @@
     "la-petite-halle": "0 events parsed (was 15): Claude API error 401: invalid x-api-key",
     "le-grand-rex": "0 events parsed (was 73): Claude API error 401: invalid x-api-key",
     "mains-d-oeuvres": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
-    "badaboum": "0 events parsed (was 47): Claude API error 401: invalid x-api-key",
-    "philharmonie": "0 events parsed (was 337): Claude API error 401: invalid x-api-key",
-    "le-trabendo": "0 events parsed (was 76): Claude API error 401: invalid x-api-key",
-    "fgo-barbara": "0 events parsed (was 27): Claude API error 401: invalid x-api-key",
-    "la-station": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
-    "cirque-electrique": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
-    "la-dame-de-canton": "0 events parsed (was 18): Claude API error 401: invalid x-api-key",
-    "la-java": "0 events parsed (was 5): Claude API error 401: invalid x-api-key",
-    "doc": "0 events parsed (was 6): Claude API error 401: invalid x-api-key",
-    "le-bal-blomet": "0 events parsed (was 52): Claude API error 401: invalid x-api-key",
-    "studio-de-l-ermitage": "0 events parsed (was 32): Claude API error 401: invalid x-api-key",
-    "les-trois-baudets": "0 events parsed (was 36): Claude API error 401: invalid x-api-key",
-    "le-360": "0 events parsed (was 18): Claude API error 401: invalid x-api-key",
-    "le-triton": "0 events parsed (was 37): Claude API error 401: invalid x-api-key",
-    "la-dynamo": "0 events parsed (was 11): Claude API error 401: invalid x-api-key",
-    "canal-93": "0 events parsed (was 10): Claude API error 401: invalid x-api-key",
-    "espace-1789": "0 events parsed (was 51): Claude API error 401: invalid x-api-key",
-    "la-gaite-lyrique": "0 events parsed (was 13): Claude API error 401: invalid x-api-key",
-    "popup": "0 events parsed (was 65): Claude API error 401: invalid x-api-key",
-    "le-truskel": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
-    "nouveau-casino": "0 events parsed (was 33): Claude API error 401: invalid x-api-key",
-    "la-generale": "0 events parsed (was 8): Claude API error 401: invalid x-api-key"
-   }
-  },
-  {
-   "date": "2026-10-13",
-   "run_url": "https://github.com/rquilliet/live-music/actions/runs/38394578567",
-   "usd": 0,
-   "sources": {
-    "opendata": 1250,
-    "bataclan": 49,
-    "la-cigale": 107,
-    "la-boule-noire": 75,
-    "le-trianon": 35,
-    "elysee-montmartre": 58,
-    "la-maroquinerie": 108,
-    "petit-bain": 54,
-    "point-ephemere": 61,
-    "cafe-de-la-danse": 21,
-    "le-hasard-ludique": 9,
-    "new-morning": "HTTP 404 for https://www.newmorning.com/programmation.html",
-    "instants-chavires": 11,
-    "bal-chavaux": 34,
-    "supersonic": "HTTP 404 for https://supersonic-club.fr/wp-json/tribe/events/v1/events?per_page=50&start_date=2026-10-13&page=1",
-    "dernier-bar-avant-la-fin-du-monde": 5,
-    "la-pointe-lafayette": 3,
-    "sunset-sunside": 155,
-    "accor-arena": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
-    "olympia": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
-    "zenith-paris": "0 events parsed (was 114): Claude API error 401: invalid x-api-key",
-    "la-seine-musicale": "0 events parsed (was 77): Claude API error 401: invalid x-api-key",
-    "paris-la-defense-arena": "0 events parsed (was 32): Claude API error 401: invalid x-api-key",
-    "alhambra": "0 events parsed (was 61): Claude API error 401: invalid x-api-key",
-    "cabaret-sauvage": "0 events parsed (was 66): Claude API error 401: invalid x-api-key",
-    "la-bellevilloise": "0 events parsed (was 70): Claude API error 401: invalid x-api-key",
-    "la-marbrerie": "0 events parsed (was 31): Claude API error 401: invalid x-api-key",
-    "le-plan": "0 events parsed (was 17): Claude API error 401: invalid x-api-key",
-    "file7": "0 events parsed (was 8): Claude API error 401: invalid x-api-key",
-    "glazart": "0 events parsed (was 16): Claude API error 401: invalid x-api-key",
-    "la-machine": "0 events parsed (was 48): Claude API error 401: invalid x-api-key",
-    "duc-des-lombards": "0 events parsed (was 4): Claude API error 401: invalid x-api-key",
-    "le-baiser-sale": "0 events parsed (was 25): Claude API error 401: invalid x-api-key",
-    "le-104": "0 events parsed (was 23): Claude API error 401: invalid x-api-key",
-    "la-petite-halle": "0 events parsed (was 15): Claude API error 401: invalid x-api-key",
-    "le-grand-rex": "0 events parsed (was 73): Claude API error 401: invalid x-api-key",
-    "mains-d-oeuvres": "URLError: <urlopen error timed out> for https://mainsdoeuvres.org/",
     "badaboum": "0 events parsed (was 47): Claude API error 401: invalid x-api-key",
     "philharmonie": "0 events parsed (was 337): Claude API error 401: invalid x-api-key",
     "le-trabendo": "0 events parsed (was 76): Claude API error 401: invalid x-api-key",
