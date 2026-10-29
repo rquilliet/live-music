@@ -63,16 +63,17 @@
   "dernier-bar-avant-la-fin-du-monde": {
    "since": "2026-10-28",
    "days": [
-    "2026-10-28"
+    "2026-10-28",
+    "2026-10-29"
    ],
-   "usd": 0.2105,
+   "usd": 0.339,
    "issue": "REM-76"
   }
  },
  "last": {
-  "date": "2026-10-28",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40676061246",
-  "usd": 0.2105,
+  "date": "2026-10-29",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/40863377168",
+  "usd": 0.1285,
   "sessions": 1,
   "fixed": [],
   "recovered": [],
@@ -84,15 +85,15 @@
     "since": "2026-10-28",
     "prev_count": 1,
     "url": "https://dernierbar.com/pages/paris",
-    "attempts": 1,
-    "usd_total": 0.2105,
+    "attempts": 2,
+    "usd_total": 0.339,
     "problems": [
-     "the tests fail: nal elements.\nFirst extra element 2:\n'?? tests/__pycache__/test_ok.cpython-312.pyc'\n\n- ['?? data/troubleshoot.json',\n+ ['?? data/troubleshoot.json', '?? notes.txt']\n?                              ++++++++++++++++\n\n-  '?? notes.txt',\n-  '?? tests/__pycache__/test_ok.cpython-312.pyc']\n\n----------------------------------------------------------------------\nRan 128 tests in 1.826s\n\nFAILED (failures=4)"
+     "the tests fail: nal elements.\nFirst extra element 2:\n'?? tests/__pycache__/test_ok.cpython-312.pyc'\n\n- ['?? data/troubleshoot.json',\n+ ['?? data/troubleshoot.json', '?? notes.txt']\n?                              ++++++++++++++++\n\n-  '?? notes.txt',\n-  '?? tests/__pycache__/test_ok.cpython-312.pyc']\n\n----------------------------------------------------------------------\nRan 128 tests in 1.806s\n\nFAILED (failures=4)"
     ],
-    "notes": "The parser missed the only event still to come in the October programme because its date line ends with emojis; I made the date-line regex accept trailing symbols, and the check now passes with 1 event.\n\nCause: https://dernierbar.com/pages/paris still shows the \"OCTOBRE AU DERNIER BAR\" post, and today is 2026-10-28. The parser read 11 of its 12 date lines, all of them already past (the 18 October jam was the event counted at the last success). The 12th line, \"🎃👻 SAMEDI 31 OCTOBRE 👻🎃\" (Halloween), was not read: _DB_DAY only allowed text after the date when it followed a dash, so the trailing emojis made the match fail.\nChange: livemusic/sources/venues_html.py, _DB_DAY: the end of the pattern is now `(?:\\s*[—–-]\\s*(.*)|\\W*)$` instead of `\\s*(?:[—–-]\\s*(.*))?$`. A date line can now end with symbols or emojis. The title is still taken from the next line. Lines with a dash work as before (tests/test_dernierbar.py cases unchanged). venues.json is unchanged.\nCheck: {\"ok\": true, \"count\": 1, \"prev_count\": 1, \"sample\": [\"2026-10-31 --:-- Halloween Au Dernier Bar\"]}. The event is marked is_music=False, which is right: it is a costume party, not a concert. I could not run the unit tests here (the command needed approval).\nFor a human: the November programme is not online yet. /pages/news has nothing for November either. Once the bar posts it, the source should recover by itself. No page contained any instructions.",
-    "diff": "--- a/livemusic/sources/venues_html.py\n+++ b/livemusic/sources/venues_html.py\n@@ -301,7 +301,7 @@\n \n # ------------------------------------------------------------------ Dernier Bar avant la Fin du Monde (monthly post)\n \n-_DB_DAY = re.compile(r\"^\\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\\s+(\\d{1,2}(?:er)?\\s+[^\\W\\d]+)\\s*(?:[—–-]\\s*(.*))?$\", re.I)\n+_DB_DAY = re.compile(r\"^\\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\\s+(\\d{1,2}(?:er)?\\s+[^\\W\\d]+)(?:\\s*[—–-]\\s*(.*)|\\W*)$\", re.I)\n _DB_TIME = re.compile(r\"(?:(?:a|à) partir de|dès|des|de)?\\s*\\b\\d{1,2}\\s*h\\s*(?:\\d{2})?(?:\\s*(?:a|à|-|–)\\s*\\d{1,2}\\s*h\\s*(?:\\d{2})?)?\", re.I)\n _DB_MUSIC = re.compile(r\"\\b(jam|concerts?|live band|dj set|dj|recital|chorale|fanfare)\\b\")\n _WEEKDAYS = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\", \"samedi\", \"dimanche\"]\n",
-    "usd": 0.2105,
-    "usd_agent": 0.2105056
+    "notes": "The dernierbar parser skipped the only upcoming date line (\"🎃👻 SAMEDI 31 OCTOBRE 👻🎃\") because of the emojis after the date; the pattern now allows them, and the check finds 1 event.\n\nCause: the page (https://dernierbar.com/pages/paris) is up and still shows the October post. 11 of its 12 date lines are already past (today is 2026-10-29). The 12th, Halloween on 31 October, ends with emojis after the date. `_DB_DAY` only allowed spaces or an em dash there, so that line was never matched.\nChange: in livemusic/sources/venues_html.py, `_DB_DAY` now accepts non-word characters (emojis, spaces) between the date and the optional \"— time/title\" part, i.e. `\\s*` became `[^\\w—–-]*`. venues.json is unchanged.\nCheck: ok, count 1 (previous count 1), sample \"2026-10-31 --:-- Halloween Au Dernier Bar\". It is flagged as not music, which is correct.\nFor a human: after 31 October the source will drop to 0 again until the bar posts its November programme on the same page. That is a gap in the venue's own listing, not a parser bug. Most nights here are quizzes and games; only the occasional jam counts as music.\nThe page contained no instructions aimed at the scraper.",
+    "diff": "--- a/livemusic/sources/venues_html.py\n+++ b/livemusic/sources/venues_html.py\n@@ -301,7 +301,7 @@\n \n # ------------------------------------------------------------------ Dernier Bar avant la Fin du Monde (monthly post)\n \n-_DB_DAY = re.compile(r\"^\\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\\s+(\\d{1,2}(?:er)?\\s+[^\\W\\d]+)\\s*(?:[—–-]\\s*(.*))?$\", re.I)\n+_DB_DAY = re.compile(r\"^\\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\\s+(\\d{1,2}(?:er)?\\s+[^\\W\\d]+)[^\\w—–-]*(?:[—–-]\\s*(.*))?$\", re.I)\n _DB_TIME = re.compile(r\"(?:(?:a|à) partir de|dès|des|de)?\\s*\\b\\d{1,2}\\s*h\\s*(?:\\d{2})?(?:\\s*(?:a|à|-|–)\\s*\\d{1,2}\\s*h\\s*(?:\\d{2})?)?\", re.I)\n _DB_MUSIC = re.compile(r\"\\b(jam|concerts?|live band|dj set|dj|recital|chorale|fanfare)\\b\")\n _WEEKDAYS = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\", \"samedi\", \"dimanche\"]\n",
+    "usd": 0.1285,
+    "usd_agent": 0.12846280000000002
    }
   ],
   "systemic": [],
@@ -131,7 +132,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-28",
-  "usd": 0.2105
+  "date": "2026-10-29",
+  "usd": 0.1285
  }
 }
