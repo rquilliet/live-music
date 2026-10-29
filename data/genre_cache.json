@@ -1241,6 +1241,15 @@
 "symphonic rock"
 ]
 },
+"accor-arena|j cole the fall off tour": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"conscious hip hop"
+]
+},
 "accor-arena|macklemore friends free palestine tour": {
 "genres": [
 "hip-hop"
@@ -2019,6 +2028,16 @@
 "chamber music"
 ]
 },
+"auditorium-de-l-hopital-bretonneau|la flute les oiseaux": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"flute repertoire",
+"chamber music"
+]
+},
 "auditorium-du-campus-clignancourt-de-sorbonne-universite|concert participatif peru": {
 "genres": [
 "world",
@@ -2614,6 +2633,17 @@
 "post-punk"
 ]
 },
+"bal-chavaux|cirrus process": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"ambient",
+"techno"
+]
+},
 "bal-chavaux|daniele silvestri": {
 "genres": [
 "pop",
@@ -2981,6 +3011,18 @@
 "rap français"
 ]
 },
+"bataclan|ali amran": {
+"genres": [
+"world",
+"folk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"kabyle music",
+"chanson kabyle"
+]
+},
 "bataclan|artemas": {
 "genres": [
 "pop"
@@ -3305,6 +3347,18 @@
 "is_music": true,
 "subgenres": [
 "retro soul"
+]
+},
+"bataclan|leonid friends": {
+"genres": [
+"funk",
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"brass rock",
+"cover band"
 ]
 },
 "bataclan|les foudres": {
@@ -3711,6 +3765,16 @@
 "is_music": true,
 "subgenres": []
 },
+"bibliotheque-drouot|nohant terre d artistes": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"romantic",
+"piano recital"
+]
+},
 "bibliotheque-drouot|tous en ch ur la musique au feminin": {
 "genres": [],
 "is_music": false,
@@ -3836,6 +3900,11 @@
 "rap français"
 ]
 },
+"bibliotheque-louise-walser-gaillard|poesie en gestes": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "bibliotheque-mohammed-arkoun|concert colette magny": {
 "genres": [
 "chanson"
@@ -3863,6 +3932,21 @@
 "subgenres": [
 "baroque"
 ]
+},
+"bibliotheque-musicale-la-grange-fleuret|english art song": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"art song",
+"vocal recital"
+]
+},
+"bibliotheque-musicale-la-grange-fleuret|soiree mime": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "bibliotheque-musicale-lagrange-fleuret|barock today": {
 "genres": [
@@ -3957,6 +4041,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"bibliotheque-valeyre|poesie en mouvement": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"spoken word"
+]
 },
 "cabaret-sauvage|aie x sauvage les 5 ans": {
 "genres": [
@@ -5103,6 +5196,16 @@
 "garage rock"
 ]
 },
+"cirque-electrique|en veux tu en v la presente 856 arno de cea the clockwork wizards cul zag inred": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "cirque-electrique|fanfare experience electrique free kids party": {
 "genres": [
 "world",
@@ -5860,6 +5963,11 @@
 "percussion ensemble"
 ]
 },
+"conservatoire-municipal-claude-debussy-la-jonquiere|danse s plurielles": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "conservatoire-municipal-claude-debussy-site-courcelles|cine concert chaplin en action": {
 "genres": [
 "classical"
@@ -6130,6 +6238,16 @@
 "south american"
 ]
 },
+"conservatoire-municipal-jean-philippe-rameau|concert le mythe de faust dans l oeuvre de liszt": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"piano recital",
+"romantic"
+]
+},
 "conservatoire-municipal-jean-philippe-rameau|concert spectacle jean tardieu et les arts": {
 "genres": [
 "classical"
@@ -6188,6 +6306,15 @@
 "chamber music"
 ]
 },
+"conservatoire-municipal-nadia-et-lili-boulanger|ecrire la musique": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"contemporary composition"
+]
+},
 "conservatoire-municipal-nadia-et-lili-boulanger|la clarinette son histoire et ses grands interpretes": {
 "genres": [],
 "is_music": false,
@@ -6212,6 +6339,16 @@
 "accordion"
 ]
 },
+"conservatoire-municipal-nadia-et-lili-boulanger|pauline viardot": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"mélodie française",
+"romantic"
+]
+},
 "conservatoire-municipal-nadia-et-lili-boulanger|rever lire grandir": {
 "genres": [
 "classical"
@@ -6219,6 +6356,17 @@
 "is_music": false,
 "subgenres": [
 "spoken word"
+]
+},
+"conservatoire-municipal-nadia-et-lili-boulanger|saxophones en fete": {
+"genres": [
+"classical",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"saxophone quartet",
+"contemporary classical"
 ]
 },
 "conservatoire-municipal-w-a-mozart-centre|les heures musicales": {
@@ -6716,6 +6864,15 @@
 "subgenres": [
 "baroque",
 "concerto"
+]
+},
+"eglise-saint-germain-des-pres|le souffle de la flute": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"flute ensemble"
 ]
 },
 "eglise-saint-germain-des-pres|les 4 saisons de vivaldi ave maria concerto de mendelssohn a l eglise saint germain des pres": {
@@ -8626,6 +8783,11 @@
 "crossover"
 ]
 },
+"forum-des-images|demain festival international du film documentaire outre mer au forum des images": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "gambetta-club|pavillonn label soiree club": {
 "genres": [
 "electro"
@@ -8684,6 +8846,16 @@
 "is_music": true,
 "subgenres": [
 "techno"
+]
+},
+"glazart|cancer void": {
+"genres": [
+"metal",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"hardcore"
 ]
 },
 "glazart|codefendants": {
@@ -9005,6 +9177,16 @@
 "is_music": false,
 "subgenres": []
 },
+"hotel-national-des-invalides|concert de noel": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"brass band",
+"christmas music"
+]
+},
 "hotel-wendel|reynaldo hahn recital de chant lyrique": {
 "genres": [
 "classical"
@@ -9166,6 +9348,16 @@
 "electroacoustic"
 ]
 },
+"instants-chavires|quasi 2026 9 les grottes de betharram dafake naegleria fowleri": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"noise",
+"improvisation"
+]
+},
 "instants-chavires|vice de forme 18 smr tni xomo andrea pensado": {
 "genres": [
 "experimental",
@@ -9196,6 +9388,16 @@
 "is_music": true,
 "subgenres": [
 "traditional dance music"
+]
+},
+"jardin-cromot-du-bourg-cour-cadet|world tap day hommage a bill bojangles robinson": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"tap dance"
 ]
 },
 "jardin-du-carre-de-baudouin|ecran vivant films de patrimoines concerts et danses": {
@@ -9333,6 +9535,16 @@
 ],
 "is_music": true,
 "subgenres": [
+"vocal jazz"
+]
+},
+"jass-club-paris|frank sinatra tribute gustave reichert quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
 "vocal jazz"
 ]
 },
@@ -9835,6 +10047,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|brooke combe": {
+"genres": [
+"soul-rnb",
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"neo-soul"
+]
+},
 "la-bellevilloise|cafe concert anastasia konstantinidouk pierre andrin": {
 "genres": [
 "jazz",
@@ -10263,6 +10486,14 @@
 "la-bellevilloise|halle aux oliviers fabio franzone quartet": {
 "genres": [
 "jazz"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-bellevilloise|halle aux oliviers hypermetrope": {
+"genres": [
+"indie",
+"pop"
 ],
 "is_music": true,
 "subgenres": []
@@ -11031,6 +11262,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|float": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|frizzy p mr cole": {
 "genres": [
 "hip-hop"
@@ -11421,6 +11660,17 @@
 "is_music": true,
 "subgenres": [
 "french pop"
+]
+},
+"la-boule-noire|penelope road": {
+"genres": [
+"indie",
+"pop",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"dream pop"
 ]
 },
 "la-boule-noire|pernod ricard live music": {
@@ -12511,6 +12761,17 @@
 "singer-songwriter"
 ]
 },
+"la-cigale|the molotovs": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"mod revival",
+"garage rock"
+]
+},
 "la-cigale|the songs of jeff buckley": {
 "genres": [
 "rock",
@@ -12936,6 +13197,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-dame-de-canton|ondes x malya x bonjourseb dj set": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
+]
 },
 "la-dame-de-canton|paco diatta": {
 "genres": [
@@ -13973,6 +14243,14 @@
 "sound system"
 ]
 },
+"la-marbrerie|lancement du collectif emerge es": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-marbrerie|laura misch": {
 "genres": [
 "electro",
@@ -14386,6 +14664,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|copy cat": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-maroquinerie|crc": {
 "genres": [
 "hip-hop"
@@ -14755,6 +15041,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-maroquinerie|kid wise": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"dream pop"
+]
 },
 "la-maroquinerie|la 808e nuit": {
 "genres": [
@@ -17458,6 +17754,17 @@
 "modern jazz"
 ]
 },
+"le-baiser-sale|pablo murgier padzera trio": {
+"genres": [
+"jazz",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"tango",
+"piano trio"
+]
+},
 "le-baiser-sale|rdv avec benjamin sanz": {
 "genres": [
 "jazz"
@@ -17727,6 +18034,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-baiser-sale|trio agulhon beuf imbert tribute to sonny rollins": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop",
+"piano-less trio"
+]
 },
 "le-baiser-sale|xavier belin trio pleonasme 5": {
 "genres": [
@@ -18233,6 +18550,17 @@
 "neo-soul"
 ]
 },
+"le-hasard-ludique|kiwi jr": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"jangle pop",
+"power pop"
+]
+},
 "le-hasard-ludique|konradsen": {
 "genres": [
 "indie",
@@ -18502,6 +18830,15 @@
 "is_music": true,
 "subgenres": [
 "piano trio"
+]
+},
+"le-melville|drop six": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing"
 ]
 },
 "le-melville|eboni fondren 4tet": {
@@ -19279,6 +19616,15 @@
 "rap français"
 ]
 },
+"le-plan|soiree decouverte apero electro mu et slama": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
+]
+},
 "le-plan|super mc contest 13": {
 "genres": [
 "hip-hop"
@@ -19597,6 +19943,14 @@
 "bossa nova"
 ]
 },
+"le-son-de-la-terre|rene miller and the montreuil parasites": {
+"genres": [
+"jazz",
+"blues"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-son-de-la-terre|ricky ford": {
 "genres": [
 "jazz"
@@ -19681,6 +20035,15 @@
 "is_music": true,
 "subgenres": [
 "swing"
+]
+},
+"le-son-de-la-terre|thierry peala niu blud 4tet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
 ]
 },
 "le-son-de-la-terre|thomas duvigneau quartet avec alex terrier": {
@@ -20960,6 +21323,17 @@
 "is_music": true,
 "subgenres": []
 },
+"le-truskel|fogg chiennes": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock",
+"noise rock"
+]
+},
 "le-truskel|happy hour mellow": {
 "genres": [
 "indie",
@@ -21592,6 +21966,17 @@
 "is_music": true,
 "subgenres": [
 "classical guitar"
+]
+},
+"mairie-du-9e-arrondissement|cabaret de la filiere voix": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"cabaret",
+"musical theatre"
 ]
 },
 "mairie-du-9e-arrondissement|orchestres en scene": {
@@ -24007,6 +24392,16 @@
 "post-punk"
 ]
 },
+"petit-bain|avant post": {
+"genres": [
+"experimental",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-rock"
+]
+},
 "petit-bain|bain de minuit": {
 "genres": [
 "electro"
@@ -24629,6 +25024,16 @@
 "subgenres": [
 "dream pop",
 "psychedelic pop"
+]
+},
+"petit-bain|petit bain de minuit x smells like teen spirit": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"90s grunge"
 ]
 },
 "petit-bain|pralines 2": {
@@ -27226,6 +27631,14 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|channel dixneuf session 2 biron emma bergman lyes kaci sugah": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|ciao lucifer": {
 "genres": [
 "indie",
@@ -28087,6 +28500,14 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|tomode": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|twin blade vickie cherie": {
 "genres": [
 "rock"
@@ -28519,6 +28940,15 @@
 "subgenres": [
 "celtic",
 "danse traditionnelle"
+]
+},
+"salle-pleyel|concert sentinelles d un soir": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"military band"
 ]
 },
 "salle-pleyel|pasion de buena vista cuba s invite a la salle pleyel": {
@@ -31044,6 +31474,16 @@
 "is_music": true,
 "subgenres": [
 "chamber jazz"
+]
+},
+"sunset-sunside|the tribevibers": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"piano trio"
 ]
 },
 "sunset-sunside|the watershed": {
