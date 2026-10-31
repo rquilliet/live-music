@@ -1267,6 +1267,15 @@
 "art pop"
 ]
 },
+"accor-arena|niall horan dinner party live on tour": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"pop rock"
+]
+},
 "accor-arena|sidiki diabate": {
 "genres": [
 "world",
@@ -1332,6 +1341,11 @@
 ]
 },
 "adidas-arena|world championships breaking hip hop freestyle": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"ageca|chabaret mystere": {
 "genres": [],
 "is_music": false,
 "subgenres": []
@@ -1405,6 +1419,16 @@
 "is_music": true,
 "subgenres": [
 "indie folk"
+]
+},
+"alhambra|emei": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"bedroom pop",
+"singer-songwriter"
 ]
 },
 "alhambra|estl": {
@@ -2755,6 +2779,17 @@
 "noise rock",
 "post-punk",
 "cold wave"
+]
+},
+"bal-chavaux|john bush": {
+"genres": [
+"metal",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"thrash metal",
+"heavy metal"
 ]
 },
 "bal-chavaux|johnny montreuil": {
@@ -4994,6 +5029,13 @@
 "is_music": false,
 "subgenres": []
 },
+"centre-paris-anim-rene-goscinny|open mic session centre paris anim rene goscinny": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "centre-tcheque-de-paris|cine concert viva kapralova": {
 "genres": [
 "classical"
@@ -6645,6 +6687,16 @@
 "romantic"
 ]
 },
+"eglise-de-la-madeleine|concert de la st valentin les duos d amour": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"opera",
+"duets"
+]
+},
 "eglise-de-la-madeleine|grand concert de chants traditionnels de noel": {
 "genres": [
 "classical"
@@ -6695,6 +6747,16 @@
 ]
 },
 "eglise-de-la-madeleine|les 4 saisons de vivaldi ave maria et celebres concertos": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"concerto"
+]
+},
+"eglise-de-la-madeleine|les 4 saisons de vivaldi extraits prelude et allegro de kreisler concerto pour violon de beethoven": {
 "genres": [
 "classical"
 ],
@@ -13392,6 +13454,17 @@
 "coupé-décalé"
 ]
 },
+"la-dame-de-canton|touch of groove x lost kaban": {
+"genres": [
+"funk",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"disco",
+"groove"
+]
+},
 "la-dame-de-canton|two trains left x neon sabrina x tom apter": {
 "genres": [
 "indie",
@@ -14463,6 +14536,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-marbrerie|sweet apric ts 8 ans": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
+]
+},
 "la-marbrerie|the ex brass unbound": {
 "genres": [
 "punk",
@@ -15435,6 +15517,14 @@
 "la-maroquinerie|ofe": {
 "genres": [
 "pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-maroquinerie|ozzy": {
+"genres": [
+"pop",
+"indie"
 ],
 "is_music": true,
 "subgenres": []
@@ -18846,6 +18936,16 @@
 "folk-tinged jazz"
 ]
 },
+"le-melville|blow up trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"standards",
+"piano trio"
+]
+},
 "le-melville|blue moon": {
 "genres": [
 "jazz"
@@ -21530,6 +21630,16 @@
 "garage punk"
 ]
 },
+"le-truskel|pao simon detour": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie pop"
+]
+},
 "le-truskel|pop rock electro": {
 "genres": [
 "pop",
@@ -21538,6 +21648,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-truskel|the dream machine ligne10": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage rock",
+"psychedelic"
+]
 },
 "le-truskel|the supreme night club": {
 "genres": [
@@ -21790,6 +21911,14 @@
 "les-trois-baudets|kakamu les p tits baudets 17h15": {
 "genres": [],
 "is_music": false,
+"subgenres": []
+},
+"les-trois-baudets|kemit": {
+"genres": [
+"soul-rnb",
+"afro"
+],
+"is_music": true,
 "subgenres": []
 },
 "les-trois-baudets|l opera c est pas pour moi": {
@@ -22621,6 +22750,17 @@
 "is_music": true,
 "subgenres": [
 "italo-tropical"
+]
+},
+"mission-bretonne|concert de la harpiste cecile corbel a la mission bretonne": {
+"genres": [
+"folk",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"celtic",
+"harp"
 ]
 },
 "mpaa-broussais-maison-des-pratiques-artistiques-amateurs|diary of women": {
@@ -26187,6 +26327,15 @@
 "early music"
 ]
 },
+"philharmonie|le roi qui": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"conte musical"
+]
+},
 "philharmonie|les aventures du prince ahmed": {
 "genres": [
 "classical"
@@ -26257,6 +26406,15 @@
 "subgenres": [
 "baroque",
 "sacred vocal"
+]
+},
+"philharmonie|mozart chostakovitch": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
 ]
 },
 "philharmonie|mozart et nous": {
@@ -26415,6 +26573,16 @@
 "is_music": true,
 "subgenres": [
 "storytelling"
+]
+},
+"philharmonie|peer gynt compagnie": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic",
+"romantic"
 ]
 },
 "philharmonie|petar pejcic": {
@@ -27451,6 +27619,18 @@
 "is_music": true,
 "subgenres": [
 "club"
+]
+},
+"point-ephemere|nuits blanches blind delon sydney valette": {
+"genres": [
+"electro",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"coldwave",
+"darkwave",
+"ebm"
 ]
 },
 "point-ephemere|observatoire des libertes associatives": {
@@ -29201,6 +29381,16 @@
 "danse traditionnelle"
 ]
 },
+"salle-pleyel|christmas by candelight le grand spectacle des chants de noel": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"christmas carols",
+"musical"
+]
+},
 "salle-pleyel|concert sentinelles d un soir": {
 "genres": [
 "classical"
@@ -30537,6 +30727,16 @@
 "bebop"
 ]
 },
+"sunset-sunside|hommage a duke ellington avec laurent courthaliac jam session": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"big band"
+]
+},
 "sunset-sunside|hommage a eric clapton avec big dez jam blues": {
 "genres": [
 "blues"
@@ -31343,6 +31543,16 @@
 "modern jazz"
 ]
 },
+"sunset-sunside|musina": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"quartet"
+]
+},
 "sunset-sunside|nefesh ft jonathan orland shimon gambourg": {
 "genres": [
 "jazz",
@@ -31574,6 +31784,16 @@
 "subgenres": [
 "gypsy jazz",
 "musique manouche"
+]
+},
+"sunset-sunside|serge merlaud laurent guanzini": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"guitar jazz",
+"swing"
 ]
 },
 "sunset-sunside|serge merlaud organ trio": {
