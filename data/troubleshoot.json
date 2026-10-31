@@ -52,51 +52,32 @@
   }
  },
  "last": {
-  "date": "2026-10-30",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/41045706182",
-  "usd": 0.1535,
-  "sessions": 1,
+  "date": "2026-10-31",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/41193586351",
+  "usd": 0,
+  "sessions": 0,
   "fixed": [],
   "recovered": [],
-  "unresolved": [
+  "unresolved": [],
+  "systemic": [
    {
-    "venue": "Dernier Bar avant la Fin du Monde",
-    "slug": "dernier-bar-avant-la-fin-du-monde",
-    "error": "0 events parsed (was 1)",
-    "since": "2026-10-28",
-    "prev_count": 1,
-    "url": "https://dernierbar.com/pages/paris",
-    "attempts": 3,
-    "usd_total": 0.4925,
-    "problems": [
-     "the tests fail: nal elements.\nFirst extra element 2:\n'?? tests/__pycache__/test_ok.cpython-312.pyc'\n\n- ['?? data/troubleshoot.json',\n+ ['?? data/troubleshoot.json', '?? notes.txt']\n?                              ++++++++++++++++\n\n-  '?? notes.txt',\n-  '?? tests/__pycache__/test_ok.cpython-312.pyc']\n\n----------------------------------------------------------------------\nRan 128 tests in 1.681s\n\nFAILED (failures=4)"
-    ],
-    "notes": "Fixed: the only upcoming date line in the October post ends with emojis (\"🎃👻 SAMEDI 31 OCTOBRE 👻🎃\"), and the date-line regex didn't accept that.\nCause: the page (https://dernierbar.com/pages/paris) is still up and has the October programme. Of its 12 date lines, 11 were parsed, but they're all past dates, so they fall outside the window. The last one, Halloween on Sat 31 Oct, has emojis after the month and no \"—\", and `_DB_DAY` only allowed \"— rest\" or nothing after the month. So nothing upcoming was left.\nChange: in livemusic/sources/venues_html.py, `_DB_DAY` now also accepts trailing symbols after the month (`[^\\w—–-]*`). The \"— time/title\" form works as before. venues.json is unchanged.\nCheck: ok, count 1 (previously 1): \"2026-10-31 --:-- Halloween Au Dernier Bar\". It's a party, not music (is_music false), which is correct.\nTests: I read tests/test_dernierbar.py and none of its cases should change, but I couldn't run pytest here because the command wasn't approved.\nNote: the November programme isn't online yet. The source will be empty again after 31 Oct until the bar posts it, and that's not a parser bug.\nNo instructions were found in the page content.",
-    "diff": "--- a/livemusic/sources/venues_html.py\n+++ b/livemusic/sources/venues_html.py\n@@ -301,7 +301,7 @@\n \n # ------------------------------------------------------------------ Dernier Bar avant la Fin du Monde (monthly post)\n \n-_DB_DAY = re.compile(r\"^\\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\\s+(\\d{1,2}(?:er)?\\s+[^\\W\\d]+)\\s*(?:[—–-]\\s*(.*))?$\", re.I)\n+_DB_DAY = re.compile(r\"^\\W*(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)\\s+(\\d{1,2}(?:er)?\\s+[^\\W\\d]+)\\s*(?:[—–-]\\s*(.*)|[^\\w—–-]*)$\", re.I)\n _DB_TIME = re.compile(r\"(?:(?:a|à) partir de|dès|des|de)?\\s*\\b\\d{1,2}\\s*h\\s*(?:\\d{2})?(?:\\s*(?:a|à|-|–)\\s*\\d{1,2}\\s*h\\s*(?:\\d{2})?)?\", re.I)\n _DB_MUSIC = re.compile(r\"\\b(jam|concerts?|live band|dj set|dj|recital|chorale|fanfare)\\b\")\n _WEEKDAYS = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\", \"samedi\", \"dimanche\"]\n",
-    "usd": 0.1535,
-    "usd_agent": 0.15346520000000002
+    "cause": "HTTP 404",
+    "venues": [
+     "New Morning",
+     "Supersonic",
+     "File7"
+    ]
    }
   ],
-  "systemic": [],
   "skipped": [
-   {
-    "venue": "Supersonic",
-    "slug": "supersonic",
-    "why": "tried on 3 days without success, left to its issue"
-   },
-   {
-    "venue": "New Morning",
-    "slug": "new-morning",
-    "why": "tried on 3 days without success, left to its issue"
-   },
-   {
-    "venue": "File7",
-    "slug": "file7",
-    "why": "tried on 3 days without success, left to its issue"
-   },
    {
     "venue": "Duc des Lombards",
     "slug": "duc-des-lombards",
+    "why": "tried on 3 days without success, left to its issue"
+   },
+   {
+    "venue": "Dernier Bar avant la Fin du Monde",
+    "slug": "dernier-bar-avant-la-fin-du-monde",
     "why": "tried on 3 days without success, left to its issue"
    }
   ],
