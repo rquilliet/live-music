@@ -49,16 +49,42 @@
    ],
    "usd": 0.4925,
    "issue": "REM-76"
+  },
+  "la-station": {
+   "since": "2026-11-01",
+   "days": [
+    "2026-11-01"
+   ],
+   "usd": 0.1384,
+   "issue": "REM-94"
   }
  },
  "last": {
-  "date": "2026-10-31",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/41193586351",
-  "usd": 0,
-  "sessions": 0,
+  "date": "2026-11-01",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/41302374222",
+  "usd": 0.1384,
+  "sessions": 1,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
+  "unresolved": [
+   {
+    "venue": "La Station - Gare des Mines",
+    "slug": "la-station",
+    "error": "0 events parsed (was 1)",
+    "since": "2026-11-01",
+    "prev_count": 1,
+    "url": "https://lastation.paris/stationgdm/agenda",
+    "attempts": 1,
+    "usd_total": 0.1384,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Not a scraper fault: La Station's agenda currently publishes no upcoming events (\"Pas d'événement.\"), so 0 events is the correct result and nothing was changed.\n\n- Cause: https://lastation.paris/stationgdm/agenda is server-rendered HTML (no JavaScript loading, no bot wall) and its event list contains only the \"Pas d'événement.\" placeholder. The tag:concert filter page is empty in the same way.\n- Other sources checked: the Billetterie page links to DICE (https://dice.fm/venue/la-station--gare-des-mines-enqd) for concerts and Resident Advisor (promoter 73354) for club nights. The DICE venue page also lists no events: its text and embedded data have no event entries. No other feed exists that would give events.\n- Changes: none. The URL is still correct. Swapping in another URL would not add real events, and loosening the source would only produce made-up events.\n- Check result: {\"ok\": false, \"count\": 0, \"prev_count\": 1, \"error\": \"0 events parsed (0 outside the window or invalid)\"}. This matches what the site shows.\n- For a human: this looks like a gap in the programme (the season may be between announcements). Re-check in a few days. If the agenda stays empty for a long time while events appear on Facebook, Instagram or RA, the programme has moved to social networks or ticketing platforms. That would need a new strategy (for example an RA promoter source), which is a job for a human.\n- No instructions were found in the fetched pages.",
+    "diff": "",
+    "usd": 0.1384,
+    "usd_agent": 0.1383866
+   }
+  ],
   "systemic": [
    {
     "cause": "HTTP 404",
@@ -84,7 +110,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-10-30",
-  "usd": 0.1535
+  "date": "2026-11-01",
+  "usd": 0.1384
  }
 }
