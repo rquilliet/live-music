@@ -4653,6 +4653,16 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|kwoon": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-rock",
+"dream pop"
+]
+},
 "cafe-de-la-danse|le sacre du tympan sextet": {
 "genres": [
 "jazz",
@@ -8635,6 +8645,17 @@
 "is_music": true,
 "subgenres": [
 "rnb français"
+]
+},
+"fgo-barbara|post in paris winter edition": {
+"genres": [
+"rock",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"post-rock",
+"post-metal"
 ]
 },
 "fgo-barbara|ridgeclub": {
@@ -15529,6 +15550,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|paerish": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"emo",
+"shoegaze"
+]
+},
 "la-maroquinerie|pamela": {
 "genres": [
 "pop"
@@ -20863,6 +20895,17 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"le-trianon|la roux": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"synth-pop",
+"new wave"
+]
 },
 "le-trianon|le podkatz tour": {
 "genres": [],
@@ -29563,6 +29606,25 @@
 "contemporary jazz"
 ]
 },
+"studio-de-l-ermitage|the jazz room hommage a la soul": {
+"genres": [
+"soul-rnb",
+"jazz",
+"funk"
+],
+"is_music": true,
+"subgenres": []
+},
+"studio-de-l-ermitage|vincent dupuy inside out baba wazo": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"afro-jazz"
+]
+},
 "studio-l-accord-parfait|concert gratuit a table musique gourmande": {
 "genres": [
 "classical"
@@ -30687,6 +30749,16 @@
 "cool jazz"
 ]
 },
+"sunset-sunside|hommage a chet baker avec fabien mary jam": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"bebop"
+]
+},
 "sunset-sunside|hommage a chico buarque jam bresil avec bruna hetzel": {
 "genres": [
 "world",
@@ -30867,6 +30939,16 @@
 "hard bop"
 ]
 },
+"sunset-sunside|hommage a stan getz avec david sauzay jam": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"bossa nova"
+]
+},
 "sunset-sunside|hommage a thelonious monk avec laurent courthaliac jam session": {
 "genres": [
 "jazz"
@@ -30956,6 +31038,16 @@
 "subgenres": [
 "gwoka jazz",
 "spiritual jazz"
+]
+},
+"sunset-sunside|jam blues avec big dez": {
+"genres": [
+"blues",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"electric blues"
 ]
 },
 "sunset-sunside|jam session django celebration avec alex swing": {
