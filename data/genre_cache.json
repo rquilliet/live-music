@@ -2802,6 +2802,16 @@
 "rockabilly"
 ]
 },
+"bal-chavaux|komodor": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"hard rock",
+"classic rock"
+]
+},
 "bal-chavaux|kumo x gloom club": {
 "genres": [
 "electro"
@@ -4645,6 +4655,14 @@
 "guitar hero"
 ]
 },
+"cafe-de-la-danse|jey khemeya release party independence carel": {
+"genres": [
+"pop",
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "cafe-de-la-danse|joolsy": {
 "genres": [
 "pop",
@@ -4772,6 +4790,17 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"cafe-de-la-danse|pitchfork avant garde celine dessberg sell everything maddie ahman": {
+"genres": [
+"indie",
+"experimental",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"art pop"
 ]
 },
 "cafe-de-la-danse|ramon pipin une folle envie de bisser": {
@@ -5207,6 +5236,15 @@
 "hyperpop"
 ]
 },
+"cirque-electrique|en veux tu en v la presente 831 aggressive extension dona casque vin de messe": {
+"genres": [
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"hardcore punk"
+]
+},
 "cirque-electrique|en veux tu en v la presente 842 beer vetust": {
 "genres": [
 "punk",
@@ -5286,6 +5324,14 @@
 "subgenres": [
 "brass band"
 ]
+},
+"cirque-electrique|friend of a friend bird voices rosa d alba": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": []
 },
 "cirque-electrique|la cyberqueer": {
 "genres": [
@@ -7778,6 +7824,17 @@
 "subgenres": [
 "blue-eyed soul",
 "new wave"
+]
+},
+"elysee-montmartre|die arzte": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"deutschpunk",
+"punk rock"
 ]
 },
 "elysee-montmartre|dragonflies dumbhead": {
@@ -11672,6 +11729,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|meltt": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"dream pop",
+"psychedelic rock"
+]
+},
 "la-boule-noire|mischa": {
 "genres": [
 "pop"
@@ -14659,6 +14727,16 @@
 "rap français"
 ]
 },
+"la-maroquinerie|archimede": {
+"genres": [
+"pop",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "la-maroquinerie|arthur fu bandini": {
 "genres": [
 "rock",
@@ -15902,6 +15980,14 @@
 "genres": [
 "pop",
 "chanson"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-maroquinerie|underground canopy": {
+"genres": [
+"rock",
+"indie"
 ],
 "is_music": true,
 "subgenres": []
@@ -19742,6 +19828,16 @@
 "is_music": true,
 "subgenres": []
 },
+"le-piano-vache|les mardis blues rock du piano vache": {
+"genres": [
+"blues",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"blues rock"
+]
+},
 "le-plan|ajna": {
 "genres": [
 "pop"
@@ -20954,6 +21050,17 @@
 "indie pop"
 ]
 },
+"le-trianon|marcel khalife": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"arabic music",
+"oud"
+]
+},
 "le-trianon|marcus gad": {
 "genres": [
 "reggae"
@@ -21703,6 +21810,16 @@
 "psychedelic"
 ]
 },
+"le-truskel|the joke sucks chleo": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "le-truskel|the supreme night club": {
 "genres": [
 "indie",
@@ -22220,6 +22337,15 @@
 ]
 },
 "mairie-de-paris-centre|l inclusion dans la culture et la creation artistique concert debat": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music"
+]
+},
+"mairie-de-paris-centre|voyage musical au feminin": {
 "genres": [
 "classical"
 ],
@@ -26395,6 +26521,18 @@
 "is_music": true,
 "subgenres": [
 "maghreb"
+]
+},
+"philharmonie|les demoiselles de rochefort": {
+"genres": [
+"classical",
+"jazz",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"film music",
+"comédie musicale"
 ]
 },
 "philharmonie|les droles de petites betes": {
@@ -34147,6 +34285,16 @@
 "piano-voix"
 ]
 },
+"theatre-du-gouvernail|l homme heron en spectacle concert les 9 16 et 23 novembre a paris au theatre du gouvernail": {
+"genres": [
+"chanson",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"spectacle musical"
+]
+},
 "theatre-du-temps|in gowan ring et adaya en concert": {
 "genres": [
 "folk"
@@ -34428,6 +34576,11 @@
 "subgenres": [
 "rock français"
 ]
+},
+"wat-pho-paris|festival des lanternes flottantes thailandaises 2026": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "zebre-de-belleville|agathe peyrat et pierre cussac en concert au zebre de belleville": {
 "genres": [
