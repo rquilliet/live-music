@@ -53,16 +53,17 @@
   "la-station": {
    "since": "2026-11-01",
    "days": [
-    "2026-11-01"
+    "2026-11-01",
+    "2026-11-02"
    ],
-   "usd": 0.1384,
+   "usd": 0.2942,
    "issue": "REM-94"
   }
  },
  "last": {
-  "date": "2026-11-01",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/41302374222",
-  "usd": 0.1384,
+  "date": "2026-11-02",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/41448524310",
+  "usd": 0.1558,
   "sessions": 1,
   "fixed": [],
   "recovered": [],
@@ -74,15 +75,15 @@
     "since": "2026-11-01",
     "prev_count": 1,
     "url": "https://lastation.paris/stationgdm/agenda",
-    "attempts": 1,
-    "usd_total": 0.1384,
+    "attempts": 2,
+    "usd_total": 0.2942,
     "problems": [
      "the agent changed nothing"
     ],
-    "notes": "Not a scraper fault: La Station's agenda currently publishes no upcoming events (\"Pas d'événement.\"), so 0 events is the correct result and nothing was changed.\n\n- Cause: https://lastation.paris/stationgdm/agenda is server-rendered HTML (no JavaScript loading, no bot wall) and its event list contains only the \"Pas d'événement.\" placeholder. The tag:concert filter page is empty in the same way.\n- Other sources checked: the Billetterie page links to DICE (https://dice.fm/venue/la-station--gare-des-mines-enqd) for concerts and Resident Advisor (promoter 73354) for club nights. The DICE venue page also lists no events: its text and embedded data have no event entries. No other feed exists that would give events.\n- Changes: none. The URL is still correct. Swapping in another URL would not add real events, and loosening the source would only produce made-up events.\n- Check result: {\"ok\": false, \"count\": 0, \"prev_count\": 1, \"error\": \"0 events parsed (0 outside the window or invalid)\"}. This matches what the site shows.\n- For a human: this looks like a gap in the programme (the season may be between announcements). Re-check in a few days. If the agenda stays empty for a long time while events appear on Facebook, Instagram or RA, the programme has moved to social networks or ticketing platforms. That would need a new strategy (for example an RA promoter source), which is a job for a human.\n- No instructions were found in the fetched pages.",
+    "notes": "La Station - Gare des Mines has no upcoming events published anywhere we can reach, so the scrape is right to find 0 and nothing was changed.\n\nCause: the agenda URL (https://lastation.paris/stationgdm/agenda) still works and is server-rendered HTML, not JavaScript-only. But its \"Prochains événements\" list just says \"Pas d'événement.\" The newest entry in the archives (/stationgdm/archives) is 25.04.26, and the \"Billetterie\" page sends people to DICE and RA. DICE's venue page has \"profile_has_events\": false. RA (fr.ra.co/promoters/73354) returns HTTP 403 (bot wall). The venue looks to be between seasons or paused (it is a seasonal venue), so this is not a broken URL or parser.\nChanges: none. A different URL would not produce real events, and none of the pages contained instructions aimed at the scraper.\nCheck: {\"ok\": false, \"count\": 0, \"error\": \"0 events parsed (0 outside the window or invalid)\"}, which is expected while the agenda is empty.\nFor a human: leave the entry as it is and check again in a few weeks. Once the agenda lists events again, the existing \"llm\" strategy on the same URL should pick them up. If the venue announces only on RA or Instagram, it would need a new source, which is a human job.",
     "diff": "",
-    "usd": 0.1384,
-    "usd_agent": 0.1383866
+    "usd": 0.1558,
+    "usd_agent": 0.1558284
    }
   ],
   "systemic": [
@@ -110,7 +111,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-11-01",
-  "usd": 0.1384
+  "date": "2026-11-02",
+  "usd": 0.1558
  }
 }
