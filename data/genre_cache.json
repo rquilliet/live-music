@@ -2768,6 +2768,18 @@
 "is_music": true,
 "subgenres": []
 },
+"bal-chavaux|jazzcore": {
+"genres": [
+"experimental",
+"punk",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazzcore",
+"noise rock"
+]
+},
 "bal-chavaux|jessica93 maria violenza la scroafa emputecida noir boy george": {
 "genres": [
 "punk",
@@ -4514,6 +4526,16 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|diane en concert au cafe de la danse": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "cafe-de-la-danse|dominique fils aime": {
 "genres": [
 "jazz",
@@ -4801,6 +4823,30 @@
 "is_music": true,
 "subgenres": [
 "art pop"
+]
+},
+"cafe-de-la-danse|pitchfork avant garde freak slug petra more": {
+"genres": [
+"indie",
+"pop",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"bedroom pop",
+"art pop"
+]
+},
+"cafe-de-la-danse|pitchfork avant garde lido pimienta mackeeper jp o grady": {
+"genres": [
+"indie",
+"world",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"art pop",
+"electronic cumbia"
 ]
 },
 "cafe-de-la-danse|ramon pipin une folle envie de bisser": {
@@ -7119,6 +7165,16 @@
 "symphonic"
 ]
 },
+"eglise-saint-merry|brian hsu piano": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"solo piano",
+"impressionism"
+]
+},
 "eglise-saint-merry|chorale du conservatoire national des arts et metiers": {
 "genres": [
 "classical"
@@ -7167,6 +7223,17 @@
 "subgenres": [
 "piano recital",
 "portuguese repertoire"
+]
+},
+"eglise-saint-merry|la troupe ipac chant polyphonique du monde a cappella": {
+"genres": [
+"world",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"a cappella",
+"polyphony"
 ]
 },
 "eglise-saint-merry|lucie deroian chant corine durous piano": {
@@ -8001,6 +8068,14 @@
 "subgenres": [
 "neo-soul"
 ]
+},
+"elysee-montmartre|julie pujols experience": {
+"genres": [
+"soul-rnb",
+"jazz"
+],
+"is_music": true,
+"subgenres": []
 },
 "elysee-montmartre|kelela": {
 "genres": [
@@ -11632,6 +11707,13 @@
 "synth-pop"
 ]
 },
+"la-boule-noire|kynn": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|lakna": {
 "genres": [
 "pop"
@@ -12165,6 +12247,15 @@
 "is_music": true,
 "subgenres": [
 "caribbean"
+]
+},
+"la-boule-noire|young eman": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "la-boule-noire|zalbecino": {
@@ -12958,6 +13049,18 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"la-cigale|the interrupters": {
+"genres": [
+"punk",
+"reggae",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"ska punk",
+"two-tone"
 ]
 },
 "la-cigale|the molotovs": {
@@ -16536,6 +16639,15 @@
 "subgenres": [
 "lo-fi",
 "garage rock"
+]
+},
+"la-pointe-lafayette|house of groove a la rotonde club xxl musique live 3 scenes": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
 ]
 },
 "la-pointe-lafayette|laces": {
@@ -25083,6 +25195,13 @@
 "post-punk"
 ]
 },
+"petit-bain|deserttgirlz": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "petit-bain|desire": {
 "genres": [
 "electro",
@@ -31012,6 +31131,15 @@
 ]
 },
 "sunset-sunside|hommage a kenny burrell john coltrane avec david sauzay jam": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop"
+]
+},
+"sunset-sunside|hommage a kenny dorham avec fabien mary jam": {
 "genres": [
 "jazz"
 ],
