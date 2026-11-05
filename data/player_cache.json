@@ -48,10 +48,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "10 ANS !",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2026-10-01",
+"title": "Petite-Vallée - 10 ans (Live)",
+"videoId": "EUVNke3IdlQ"
+}
 },
 "10 ans a travers le monde": {
 "bandcamp": null,
@@ -230,10 +236,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-10-30"
+"spotify": "2026-10-30",
+"youtube": "2026-11-05"
 },
 "name": "11 000 Cordes",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "11 12 26": {
 "bandcamp": null,
@@ -1709,7 +1717,7 @@
 "a r t": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "A.R.T",
@@ -1748,8 +1756,8 @@
 "a tribute to bob marley": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06"
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
 },
 "name": "A TRIBUTE TO BOB MARLEY",
 "spotify": null
@@ -2585,6 +2593,15 @@
 "url": "https://open.spotify.com/artist/0toBP3LoIrAkCutxp4QnVf"
 }
 },
+"after manif des sales connes": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "after manif des sales connes",
+"spotify": null
+},
 "after o clock": {
 "bandcamp": null,
 "checked": {
@@ -2714,8 +2731,8 @@
 "agathe peyrat et pierre cussac": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06",
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
 "youtube": "2026-10-31"
 },
 "name": "Agathe Peyrat et Pierre Cussac",
@@ -2959,6 +2976,24 @@
 "spotify": {
 "id": "2VcWFvgGxVdma52qB5DSDw",
 "url": "https://open.spotify.com/artist/2VcWFvgGxVdma52qB5DSDw"
+}
+},
+"akissi": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Akissi",
+"spotify": {
+"id": "7HmUx8UMfeye4x3IDYF3D0",
+"url": "https://open.spotify.com/artist/7HmUx8UMfeye4x3IDYF3D0"
+},
+"youtube": {
+"publishedAt": "2025-11-23",
+"title": "EXCLU - Akissi au grünt festival !",
+"videoId": "wTa7eOlI0NI"
 }
 },
 "akiyo": {
@@ -5333,6 +5368,17 @@
 "videoId": "bZnLHRLcZw4"
 }
 },
+"antoine boyer and bireli lagrene": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Antoine Boyer & Bireli Lagrene",
+"spotify": null,
+"youtube": null
+},
 "antoine boyer and matteo mancuso": {
 "bandcamp": null,
 "checked": {
@@ -5368,10 +5414,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "Antoine Boyer & Yeore Kim Duo",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "antoine boyer group and special guest": {
 "bandcamp": null,
@@ -7392,10 +7440,27 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-10-29"
+"spotify": "2026-10-29",
+"youtube": "2026-11-05"
 },
 "name": "Ayam Dj & More",
-"spotify": null
+"spotify": null,
+"youtube": null
+},
+"aylon": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Aylon",
+"spotify": null,
+"youtube": {
+"publishedAt": "2021-11-07",
+"title": "Tribute To Senegal • Ben Aylon • One Man Tribe • Live In The Desert (Full Concert)",
+"videoId": "qiSzE9smeKA"
+}
 },
 "aymeric avice": {
 "bandcamp": null,
@@ -7897,6 +7962,17 @@
 "videoId": "Ss7E5YQ4-Os"
 }
 },
+"baile brasil special black power edition": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Baile Brasil spécial Black Power edition",
+"spotify": null,
+"youtube": null
+},
 "baile brasil special festa na favela": {
 "bandcamp": null,
 "checked": {
@@ -8325,12 +8401,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "Baozi",
 "spotify": {
 "id": "0diMEZ4I6FNSzchS3CE22z",
 "url": "https://open.spotify.com/artist/0diMEZ4I6FNSzchS3CE22z"
+},
+"youtube": {
+"publishedAt": "2026-11-05",
+"title": "Artistic Steamed Buns Crafting Live | Slicing & Decorating Traditional Baozi with Soft Music",
+"videoId": "7MDJaYs4FXE"
 }
 },
 "baptiste bailly trio": {
@@ -9078,6 +9160,15 @@
 "videoId": "c2Tw_yG6Glg"
 }
 },
+"beaubourg mon amour": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Beaubourg mon amour",
+"spotify": null
+},
 "bebe concert": {
 "bandcamp": null,
 "checked": {
@@ -9292,19 +9383,25 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "Beija Jeanzac",
 "spotify": {
 "id": "2f1esWO7n1fRfCzUwI0DrS",
 "url": "https://open.spotify.com/artist/2f1esWO7n1fRfCzUwI0DrS"
+},
+"youtube": {
+"publishedAt": "2026-01-24",
+"title": "Beija Jeanzac — Route 66 (Live au Sunset, Paris 2025)",
+"videoId": "qhy-1VvMPso"
 }
 },
 "beija jeanzac quartet": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06"
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
 },
 "name": "Beija Jeanzac quartet",
 "spotify": null
@@ -10009,7 +10106,7 @@
 "beth orton": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "BETH ORTON",
@@ -11149,12 +11246,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "BLOW",
 "spotify": {
 "id": "39HLbTdg48gwqAIa1CA266",
 "url": "https://open.spotify.com/artist/39HLbTdg48gwqAIa1CA266"
+},
+"youtube": {
+"publishedAt": "2017-04-21",
+"title": "BLOW - Full Performance (Live on KEXP)",
+"videoId": "2J919XjT0Wo"
 }
 },
 "blow up trio": {
@@ -11201,8 +11304,8 @@
 "blue moon": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06"
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
 },
 "name": "Blue Moon",
 "spotify": null
@@ -11508,6 +11611,15 @@
 "videoId": "LV9kNzmy4gk"
 }
 },
+"bonnes annees 2000 s": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "BONNES ANNÉES 2000'S",
+"spotify": null
+},
 "boo radleys": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=1205498059/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -11591,11 +11703,15 @@
 "checked": {
 "bandcamp": "2026-10-29",
 "spotify": "2026-10-29",
-"youtube": "2026-09-30"
+"youtube": "2026-11-05"
 },
 "name": "Born 2 Bounce",
 "spotify": null,
-"youtube": null
+"youtube": {
+"publishedAt": "2022-03-26",
+"title": "#17 TheDjStuE & Mc Kidda - Born 2 Bounce Friday Night Live",
+"videoId": "lQSnr8FnaEs"
+}
 },
 "born bad records": {
 "bandcamp": {
@@ -12971,10 +13087,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "Cabaret Sauvage?",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2017-03-15",
+"title": "VIDEO INTEGRALE - Concert Pierpoljak au Cabaret Sauvage de Paris  -11 MARS 2017",
+"videoId": "Gw-ETNG10oM"
+}
 },
 "cabaret yvette guilbert": {
 "bandcamp": null,
@@ -13462,12 +13584,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "Cancer House",
 "spotify": {
 "id": "5h90IG7NOZURivxPGkr6Lb",
 "url": "https://open.spotify.com/artist/5h90IG7NOZURivxPGkr6Lb"
+},
+"youtube": {
+"publishedAt": "2026-03-10",
+"title": "Cancer House @ HOTH",
+"videoId": "UwkB3868TmE"
 }
 },
 "cancer void": {
@@ -14692,10 +14820,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "Cendres du motif",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "centenaire du compositeur jacques casterede 1926": {
 "bandcamp": null,
@@ -14780,6 +14910,15 @@
 "name": "CH!CK MUSIC ONLY 2010",
 "spotify": null
 },
+"ch ck nye": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "LA CH!CK NYE",
+"spotify": null
+},
 "ch ck projet x": {
 "bandcamp": null,
 "checked": {
@@ -14835,6 +14974,21 @@
 "publishedAt": "2026-02-15",
 "title": "【Valentine's Roleplay】Your Sweet Little Sister Bakes You Cookies? 🍪",
 "videoId": "LusjcGnGy50"
+}
+},
+"cha": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Cha",
+"spotify": null,
+"youtube": {
+"publishedAt": "2026-06-19",
+"title": "Bruno Mars - CHA CHA CHA | The Romantic Tour | 4K Live in Paris 18.06.2026",
+"videoId": "_jZLa-Lsk98"
 }
 },
 "chabtan": {
@@ -14993,6 +15147,17 @@
 "url": "https://open.spotify.com/artist/1fWoiW6kTjrVDoRc4ba3kh"
 }
 },
+"chansons deracinees": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "“CHANSONS DÉRACINÉES”",
+"spotify": null,
+"youtube": null
+},
 "chant interieur": {
 "bandcamp": null,
 "checked": {
@@ -15063,6 +15228,15 @@
 "title": "Chapel Sessions (Full Album) | Gateway Worship",
 "videoId": "an0okdsyEQ0"
 }
+},
+"charbel rouhana quintet": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Charbel Rouhana Quintet",
+"spotify": null
 },
 "charles brunet": {
 "bandcamp": null,
@@ -16075,6 +16249,18 @@
 "videoId": "q3Ao4sU6B-E"
 }
 },
+"christophe panzani": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Christophe Panzani",
+"spotify": {
+"id": "7qlnxGVgoAD6gg2kfg9yAV",
+"url": "https://open.spotify.com/artist/7qlnxGVgoAD6gg2kfg9yAV"
+}
+},
 "chrocktikal": {
 "bandcamp": null,
 "checked": {
@@ -16321,8 +16507,8 @@
 "cine concert": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06",
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
 "youtube": "2026-10-12"
 },
 "name": "Ciné-concert",
@@ -17101,10 +17287,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "¡Club Sauvage Part 1",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "club xxl": {
 "bandcamp": null,
@@ -17274,6 +17462,18 @@
 "publishedAt": "2013-07-01",
 "title": "Coeur de Pirate - Live@Home - Full Show",
 "videoId": "AvQoRrXmfJY"
+}
+},
+"coeurpourpre": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "COEURPOURPRE",
+"spotify": {
+"id": "57fkNkl8jIo5JQrooz1VE8",
+"url": "https://open.spotify.com/artist/57fkNkl8jIo5JQrooz1VE8"
 }
 },
 "coffee beanz": {
@@ -17449,10 +17649,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "#Collerette",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "collignon": {
 "bandcamp": null,
@@ -20725,6 +20927,15 @@
 "name": "D’Alger à Paris",
 "spotify": null
 },
+"d awards": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "D Awards",
+"spotify": null
+},
 "d block europe and french montana": {
 "bandcamp": null,
 "checked": {
@@ -21371,8 +21582,8 @@
 "danses folkloriques et chants populaires": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06"
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
 },
 "name": "Danses folkloriques et Chants populaires",
 "spotify": null
@@ -21995,7 +22206,7 @@
 "checked": {
 "bandcamp": "2026-10-18",
 "spotify": "2026-10-18",
-"youtube": "2026-10-06"
+"youtube": "2026-11-05"
 },
 "name": "DE MAXENCE LEROY",
 "spotify": null,
@@ -24284,12 +24495,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-10-29"
+"spotify": "2026-10-29",
+"youtube": "2026-11-05"
 },
 "name": "Dj Tallboy",
 "spotify": {
 "id": "2ozDW7ok5kyD0zxju8gWuN",
 "url": "https://open.spotify.com/artist/2ozDW7ok5kyD0zxju8gWuN"
+},
+"youtube": {
+"publishedAt": "2026-01-23",
+"title": "DJ TALLBOY I ULTRAFAST I BOILER ROOM I DJ LIVESET",
+"videoId": "sKN8nRpxFrk"
 }
 },
 "djan": {
@@ -26515,7 +26732,7 @@
 "eisbrecher": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "EISBRECHER",
@@ -26528,12 +26745,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-25",
-"spotify": "2026-10-25"
+"spotify": "2026-10-25",
+"youtube": "2026-11-05"
 },
 "name": "EKATERINA SHELEHOVA",
 "spotify": {
 "id": "2TGfzbEaJkHLEsRvryVhsJ",
 "url": "https://open.spotify.com/artist/2TGfzbEaJkHLEsRvryVhsJ"
+},
+"youtube": {
+"publishedAt": "2021-04-20",
+"title": "SCARBOROUGH FAIR - Ekaterina Shelehova on Festival",
+"videoId": "SYzLdiujByU"
 }
 },
 "el besta": {
@@ -27394,7 +27617,7 @@
 "checked": {
 "bandcamp": "2026-10-27",
 "spotify": "2026-10-27",
-"youtube": "2026-09-26"
+"youtube": "2026-11-05"
 },
 "name": "Emergenza Live Festival",
 "spotify": null,
@@ -27978,6 +28201,18 @@
 },
 "youtube": null
 },
+"encounters": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "ENCOUNTERS",
+"spotify": {
+"id": "1gbEy6AUoE5sRUEnVHga0S",
+"url": "https://open.spotify.com/artist/1gbEy6AUoE5sRUEnVHga0S"
+}
+},
 "end of day": {
 "bandcamp": null,
 "checked": {
@@ -28383,13 +28618,15 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "​Erotic Secrets of Pompeii",
 "spotify": {
 "id": "4YreULe3QeBKIv7oWit0MO",
 "url": "https://open.spotify.com/artist/4YreULe3QeBKIv7oWit0MO"
-}
+},
+"youtube": null
 },
 "erra": {
 "bandcamp": {
@@ -28531,12 +28768,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-10-29"
+"spotify": "2026-10-29",
+"youtube": "2026-11-05"
 },
 "name": "EsDeeKid",
 "spotify": {
 "id": "0EyhkwP3UnwGFBy6xwKjSy",
 "url": "https://open.spotify.com/artist/0EyhkwP3UnwGFBy6xwKjSy"
+},
+"youtube": {
+"publishedAt": "2026-05-10",
+"title": "EsDeeKid LIVE @ Rolling Loud Orlando 2026 [FULL SET]",
+"videoId": "R3nmR7QsiP8"
 }
 },
 "esoteric and magic jazz": {
@@ -29004,7 +29247,7 @@
 "evnne": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "EVNNE",
@@ -30902,10 +31145,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-25",
-"spotify": "2026-10-25"
+"spotify": "2026-10-25",
+"youtube": "2026-11-05"
 },
 "name": "The FinalSlam",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2026-10-27",
+"title": "REPLAY: The FinalSlam — Conférence de presse et face-à-face",
+"videoId": "LY6FRrx2knY"
+}
 },
 "fine": {
 "bandcamp": null,
@@ -31361,10 +31610,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "Florence Camensuli « Jazz entre les mots »",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "florence road": {
 "bandcamp": null,
@@ -33128,7 +33379,7 @@
 "checked": {
 "bandcamp": "2026-10-13",
 "spotify": "2026-10-13",
-"youtube": "2026-09-16"
+"youtube": "2026-11-05"
 },
 "name": "Galop Galop",
 "spotify": null,
@@ -33156,10 +33407,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "the game tour",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "gang of youths": {
 "bandcamp": null,
@@ -33701,7 +33954,7 @@
 "giant rooks": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "GIANT ROOKS",
@@ -33944,10 +34197,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-10",
-"spotify": "2026-10-10"
+"spotify": "2026-10-10",
+"youtube": "2026-11-05"
 },
 "name": "Giovanni Mirabassi « New-York Sessions » Trio",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "giovanni mirabassi the new york sessions": {
 "bandcamp": null,
@@ -35283,7 +35538,7 @@
 "groundation": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "GROUNDATION",
@@ -35775,12 +36030,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-27",
-"spotify": "2026-09-27"
+"spotify": "2026-09-27",
+"youtube": "2026-11-05"
 },
 "name": "Gus Englehorn",
 "spotify": {
 "id": "5DL9yEXrWKddfCe8SxM08Z",
 "url": "https://open.spotify.com/artist/5DL9yEXrWKddfCe8SxM08Z"
+},
+"youtube": {
+"publishedAt": "2026-08-27",
+"title": "Gus Englehorn LIVE @ CJSW x Sled Island",
+"videoId": "KMfMtdXfIiI"
 }
 },
 "gustave reichert": {
@@ -36317,12 +36578,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "Hanneke",
 "spotify": {
 "id": "51CB4lu78TCeMGQQ8eqwu6",
 "url": "https://open.spotify.com/artist/51CB4lu78TCeMGQQ8eqwu6"
+},
+"youtube": {
+"publishedAt": "2026-02-16",
+"title": "Hanneke - Live in Brussels @ LaVallée 12 Feb 26",
+"videoId": "P9PjUtODA_g"
 }
 },
 "hans luchs quartet": {
@@ -37415,6 +37682,21 @@
 "videoId": "dLaf-tKWIGM"
 }
 },
+"himene": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "HIMENE",
+"spotify": null,
+"youtube": {
+"publishedAt": "2024-10-06",
+"title": "HIMENE - Amar (Capta live à la mer)",
+"videoId": "IFtPXU24_5w"
+}
+},
 "hip hop dev 93": {
 "bandcamp": null,
 "checked": {
@@ -37539,10 +37821,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "Hoa Hoa Hoa Rave 2",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "hohnen ford": {
 "bandcamp": {
@@ -37783,6 +38067,24 @@
 "spotify": "2026-10-23"
 },
 "name": "Hommage à Al Jarreau",
+"spotify": null
+},
+"hommage a albert king": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Hommage à Albert King",
+"spotify": null
+},
+"hommage a amy winehouse": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Hommage à Amy Winehouse",
 "spotify": null
 },
 "hommage a angelo debarre": {
@@ -38938,6 +39240,18 @@
 "publishedAt": "2025-05-26",
 "title": "Humanity's Last Breath - Live at Hangar 1819 in Greensboro, NC - May 16th, 2025",
 "videoId": "xyBPqiRWkbA"
+}
+},
+"hura mirshekari": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Hura Mirshekari",
+"spotify": {
+"id": "7zWWwVTTSW840xxpBB0WrJ",
+"url": "https://open.spotify.com/artist/7zWWwVTTSW840xxpBB0WrJ"
 }
 },
 "hyas": {
@@ -41194,8 +41508,8 @@
 "jam du dimanche d isaias alves": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06"
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
 },
 "name": "LA JAM DU DIMANCHE D’ISAIAS ALVES",
 "spotify": null
@@ -42039,8 +42353,8 @@
 "jazz and gouter fete walt disney": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-09-19",
-"spotify": "2026-09-19",
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
 "youtube": "2026-10-11"
 },
 "name": "Jazz & goûter fête Walt Disney",
@@ -44239,6 +44553,15 @@
 "name": "José Caparros & Irokazu Ishida Quartet",
 "spotify": null
 },
+"jose caparros and irokazu ishida quintet": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "José Caparros & Irokazu Ishida Quintet",
+"spotify": null
+},
 "jose gonzalez": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=3597114824/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -44831,6 +45154,15 @@
 "url": "https://open.spotify.com/artist/0JOUsJ5t6U5ZfkQsf0DmJf"
 }
 },
+"julie erikssen quartet": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Julie Erikssen quartet",
+"spotify": null
+},
 "julie pujols experience": {
 "bandcamp": null,
 "checked": {
@@ -44864,10 +45196,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-07",
-"spotify": "2026-10-07"
+"spotify": "2026-10-07",
+"youtube": "2026-11-05"
 },
 "name": "Julie Saury trio",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2023-02-19",
+"title": "CAVEAU DES OUBLIETTES: JULIE SAURY TRIO🥁🎹🎻🔥🔥🔥🔥🔥",
+"videoId": "fM433AY9z2w"
+}
 },
 "julien claire": {
 "bandcamp": null,
@@ -45487,13 +45825,15 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "Kanou",
 "spotify": {
 "id": "60GJy34zjNrmeQ72GMK3Wg",
 "url": "https://open.spotify.com/artist/60GJy34zjNrmeQ72GMK3Wg"
-}
+},
+"youtube": null
 },
 "kanza": {
 "bandcamp": {
@@ -46051,7 +46391,7 @@
 "keo": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "KEO",
@@ -46487,12 +46827,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "Kingfishr",
 "spotify": {
 "id": "6c2qQFq3xfxFJndX6wSe4f",
 "url": "https://open.spotify.com/artist/6c2qQFq3xfxFJndX6wSe4f"
+},
+"youtube": {
+"publishedAt": "2025-09-24",
+"title": "Kingfishr – Live at Fairview | Full Concert (June 21, 2025)",
+"videoId": "11ziT8HVCoI"
 }
 },
 "kings and queens of pop": {
@@ -47664,12 +48010,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "L'IDYLLE",
 "spotify": {
 "id": "6gDg5tCVHRHR2kvRxsPHBk",
 "url": "https://open.spotify.com/artist/6gDg5tCVHRHR2kvRxsPHBk"
+},
+"youtube": {
+"publishedAt": "2026-10-04",
+"title": "L’IDYLLE – Live @ Les Lunatiques Festival 2026, Pacé (France) | October 3, 2026 | Full Concert 4K",
+"videoId": "0iKIFyV6SHc"
 }
 },
 "l immense petit cabaret": {
@@ -47735,10 +48087,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-30",
-"spotify": "2026-10-30"
+"spotify": "2026-10-30",
+"youtube": "2026-11-05"
 },
 "name": "L'Opéra C'est Pour Moi",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "l or du rhin": {
 "bandcamp": null,
@@ -49837,6 +50191,17 @@
 "videoId": "D2m33WXT-Ds"
 }
 },
+"levara reporte": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Levara [reporté]",
+"spotify": null,
+"youtube": null
+},
 "levi sct": {
 "bandcamp": null,
 "checked": {
@@ -50162,12 +50527,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "Lila Ehjä",
 "spotify": {
 "id": "3oBlZb5sfqJkSH1QnNxA7E",
 "url": "https://open.spotify.com/artist/3oBlZb5sfqJkSH1QnNxA7E"
+},
+"youtube": {
+"publishedAt": "2024-04-25",
+"title": "Lila Ehjä - Laser Disc - ARTE Concert",
+"videoId": "CFozY_1JLVQ"
 }
 },
 "lila ehja live": {
@@ -50390,6 +50761,24 @@
 "publishedAt": "2018-01-16",
 "title": "Line Kruse Orchestra - live at the Pan Piper, Paris",
 "videoId": "h0nDbgBRt_o"
+}
+},
+"line marsa": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Line Marsa",
+"spotify": {
+"id": "3WLG8fm0DsEMaK6h32WMuu",
+"url": "https://open.spotify.com/artist/3WLG8fm0DsEMaK6h32WMuu"
+},
+"youtube": {
+"publishedAt": "2024-06-12",
+"title": "Line Marsa - chanteuse des faubourgs parisiens 🤠💃🏻",
+"videoId": "fsB4CXfdzEc"
 }
 },
 "linh": {
@@ -52281,12 +52670,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "LUGOSI",
 "spotify": {
 "id": "44nEAsuSrfRSRpHK3xT0Pj",
 "url": "https://open.spotify.com/artist/44nEAsuSrfRSRpHK3xT0Pj"
+},
+"youtube": {
+"publishedAt": "2016-12-18",
+"title": "Bauhaus - Bela Lugosi's Dead (Live Coachella 2005)",
+"videoId": "w9DPEkguMqE"
 }
 },
 "lujipeka": {
@@ -52584,6 +52979,15 @@
 "spotify": "2026-10-21"
 },
 "name": "Ly",
+"spotify": null
+},
+"lyaun and bettina martinez": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Lyaun & Bettina Martinez",
 "spotify": null
 },
 "lybro": {
@@ -53421,13 +53825,15 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "Maline",
 "spotify": {
 "id": "2V2vK0RLM5kCodOHaZxMgl",
 "url": "https://open.spotify.com/artist/2V2vK0RLM5kCodOHaZxMgl"
-}
+},
+"youtube": null
 },
 "malko": {
 "bandcamp": {
@@ -54289,10 +54695,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "MARIACHIDO",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2026-07-12",
+"title": "Mariachido en concert 10 Juillet 2026",
+"videoId": "3jCtvrvYYQg"
+}
 },
 "mariam the believer": {
 "bandcamp": null,
@@ -56001,10 +56413,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-28",
-"spotify": "2026-10-28"
+"spotify": "2026-10-28",
+"youtube": "2026-11-05"
 },
 "name": "MELISSA WEIKART TRIO",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "melittah and more": {
 "bandcamp": null,
@@ -56071,8 +56485,8 @@
 "melodies nomades": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06",
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
 "youtube": "2026-10-24"
 },
 "name": "MELODIES NOMADES",
@@ -56502,10 +56916,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-02",
-"spotify": "2026-11-02"
+"spotify": "2026-11-02",
+"youtube": "2026-11-05"
 },
 "name": "Metro Balkan",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "metro verlaine": {
 "bandcamp": {
@@ -57419,6 +57835,24 @@
 "url": "https://open.spotify.com/artist/6UGRTKdpIxUdUsz0ox9UNk"
 }
 },
+"mino 4 miles": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Mino 4 Miles",
+"spotify": null
+},
+"mino cinelu and surprise guests": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Mino Cinelu & Surprise Guests",
+"spotify": null
+},
 "miramondo multiplo": {
 "bandcamp": null,
 "checked": {
@@ -57593,12 +58027,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "MNEK",
 "spotify": {
 "id": "7uMh23xWiuR7zsNkuNcm2G",
 "url": "https://open.spotify.com/artist/7uMh23xWiuR7zsNkuNcm2G"
+},
+"youtube": {
+"publishedAt": "2016-06-11",
+"title": "MNEK feat. Zara Larsson - 'Never Forget You' (Live At The Summertime Ball 2016)",
+"videoId": "iIuV6rj7_Tc"
 }
 },
 "mob 2": {
@@ -57757,12 +58197,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-28",
-"spotify": "2026-09-28"
+"spotify": "2026-09-28",
+"youtube": "2026-11-05"
 },
 "name": "MOMOKO GILL",
 "spotify": {
 "id": "1j3dtntfKtyjvsyr7TpzoF",
 "url": "https://open.spotify.com/artist/1j3dtntfKtyjvsyr7TpzoF"
+},
+"youtube": {
+"publishedAt": "2026-02-20",
+"title": "Momoko Gill - No Others, Live at Banquet Records",
+"videoId": "5l_9BJsf31M"
 }
 },
 "mon premier cine concert souvenirs de famille": {
@@ -58743,12 +59189,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "Muse",
 "spotify": {
 "id": "12Chz98pHFMPJEknJQMWvI",
 "url": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+},
+"youtube": {
+"publishedAt": "2020-11-10",
+"title": "Muse | Live at Rome Olympic Stadium 4K (Full concert)",
+"videoId": "PQdBUEXxCoo"
 }
 },
 "musee prend l eau": {
@@ -59029,12 +59481,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "mustbejohn",
 "spotify": {
 "id": "5hgZ7PGI0EM2UfiWAIKdFc",
 "url": "https://open.spotify.com/artist/5hgZ7PGI0EM2UfiWAIKdFc"
+},
+"youtube": {
+"publishedAt": "2026-01-22",
+"title": "mustbejohn - Eurosonic Noorderslag 2026 - ARTE Concert",
+"videoId": "C5L981k0iN4"
 }
 },
 "mutek": {
@@ -60176,10 +60634,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "NEW EP MAGDALENA",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "new jazz underground i 11 11 26": {
 "bandcamp": null,
@@ -61815,12 +62275,18 @@
 },
 "checked": {
 "bandcamp": "2026-09-23",
-"spotify": "2026-09-23"
+"spotify": "2026-09-23",
+"youtube": "2026-11-05"
 },
 "name": "NÚRIA ROVIRA SALAT",
 "spotify": {
 "id": "1ggeux3strYvivRTM5R66M",
 "url": "https://open.spotify.com/artist/1ggeux3strYvivRTM5R66M"
+},
+"youtube": {
+"publishedAt": "2025-01-11",
+"title": "CAMINITO (live version) composed by Núria Rovira Salat",
+"videoId": "LI09E-b974U"
 }
 },
 "nyokobop festival": {
@@ -62491,6 +62957,15 @@
 "spotify": "2026-10-24"
 },
 "name": "Olivier ker Ourio Quartet",
+"spotify": null
+},
+"olivier ker ourio quartet life as it is": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Olivier ker Ourio Quartet « Life as it is »",
 "spotify": null
 },
 "olivier lasson": {
@@ -63807,10 +64282,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-12",
-"spotify": "2026-10-30"
+"spotify": "2026-10-30",
+"youtube": "2026-11-05"
 },
 "name": "Les P'tits Baudets",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2022-01-19",
+"title": "Teaser Les P'tits Baudets - Concerts Jeune Public 2022",
+"videoId": "16a30b-2eoY"
+}
 },
 "pablo campos": {
 "bandcamp": {
@@ -64847,6 +65328,15 @@
 "videoId": "0FTexUFTSec"
 }
 },
+"patami": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Patami",
+"spotify": null
+},
 "patio flamenco": {
 "bandcamp": null,
 "checked": {
@@ -65518,13 +66008,15 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "Perlah",
 "spotify": {
 "id": "41jyEikKxLbNLoiyfRCkj7",
 "url": "https://open.spotify.com/artist/41jyEikKxLbNLoiyfRCkj7"
-}
+},
+"youtube": null
 },
 "perle": {
 "bandcamp": {
@@ -65706,10 +66198,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "La Petite Halle",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2020-11-17",
+"title": "Enjoy the Silence - Live at la Petite Halle",
+"videoId": "sfJh3yc32yU"
+}
 },
 "petite messe solennelle de rossini": {
 "bandcamp": null,
@@ -66673,6 +67171,18 @@
 "spotify": null,
 "youtube": null
 },
+"poesie chevalier": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Poésie Chevalier",
+"spotify": {
+"id": "5V4GjtUOtHbFpSmCbnRrzB",
+"url": "https://open.spotify.com/artist/5V4GjtUOtHbFpSmCbnRrzB"
+}
+},
 "poesie en mouvement": {
 "bandcamp": null,
 "checked": {
@@ -66756,10 +67266,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-07",
-"spotify": "2026-10-07"
+"spotify": "2026-10-07",
+"youtube": "2026-11-05"
 },
 "name": "Politic Lovers présente MARAVE",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "poluxx": {
 "bandcamp": null,
@@ -67548,6 +68060,24 @@
 },
 "name": "Psycho attack over Montreuil #2",
 "spotify": null
+},
+"psykasya": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Psykasya",
+"spotify": {
+"id": "3dZd3eU2xs51IRbwCXACAS",
+"url": "https://open.spotify.com/artist/3dZd3eU2xs51IRbwCXACAS"
+},
+"youtube": {
+"publishedAt": "2026-10-07",
+"title": "PSYKASYA - Your Heaven (Live at Antipode)",
+"videoId": "cJmrTBvuDnQ"
+}
 },
 "ptite soeur": {
 "bandcamp": null,
@@ -69672,7 +70202,7 @@
 "rhapsodies": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "Rhapsodies",
@@ -70497,6 +71027,24 @@
 "name": "Rok & Dudu",
 "spotify": null
 },
+"roland decembre": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Roland Décembre",
+"spotify": {
+"id": "2UxITzDZ5wN79zzSiJ9KeK",
+"url": "https://open.spotify.com/artist/2UxITzDZ5wN79zzSiJ9KeK"
+},
+"youtube": {
+"publishedAt": "2025-02-20",
+"title": "roland decembre - fais-moi tout oublier / live au studio Mastoïd",
+"videoId": "W2Tj1c_b6k8"
+}
+},
 "role model": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=2091735472/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -70923,16 +71471,37 @@
 "videoId": "F5D3-gKjoJs"
 }
 },
+"roni eytan quintet": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Roni Eytan Quintet",
+"spotify": null,
+"youtube": {
+"publishedAt": "2018-05-24",
+"title": "Whisper Not - Shachar Elnatan, Roni Eytan Quintet (Live at ZigaZag)",
+"videoId": "Sl9rZ2Y-jhE"
+}
+},
 "ronis goliath": {
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "Ronis Goliath",
 "spotify": {
 "id": "7ab3brrz3yehEwzYJf7F8t",
 "url": "https://open.spotify.com/artist/7ab3brrz3yehEwzYJf7F8t"
+},
+"youtube": {
+"publishedAt": "2025-05-23",
+"title": "RONIS GOLIATH LIVE (BWA TOUR)",
+"videoId": "YKXL-xVqsN0"
 }
 },
 "ronny hates hasan": {
@@ -71053,6 +71622,24 @@
 "spotify": {
 "id": "79xQdsSFyN4cmMsxtWrvUc",
 "url": "https://open.spotify.com/artist/79xQdsSFyN4cmMsxtWrvUc"
+}
+},
+"rougail space program": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "ROUGAIL SPACE PROGRAM",
+"spotify": {
+"id": "31IaAnl2zXvb8TF6YKOdwN",
+"url": "https://open.spotify.com/artist/31IaAnl2zXvb8TF6YKOdwN"
+},
+"youtube": {
+"publishedAt": "2026-05-22",
+"title": "rougail space program (DJ Set) | Rinse France",
+"videoId": "ss1tytWbfDk"
 }
 },
 "roukie": {
@@ -72083,6 +72670,17 @@
 "url": "https://open.spotify.com/artist/3hBQ4zniNdQf1cqqo6hzuW"
 }
 },
+"salsa jazz cubain": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Salsa Jazz Cubain",
+"spotify": null,
+"youtube": null
+},
 "salse especial": {
 "bandcamp": null,
 "checked": {
@@ -72690,8 +73288,8 @@
 "satie en fete": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
-"spotify": "2026-10-06",
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
 "youtube": "2026-10-26"
 },
 "name": "Satie en fête !",
@@ -73392,10 +73990,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "Sebastián Muñoz & Matt Carmichael",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "sebastien giniaux trio": {
 "bandcamp": null,
@@ -73420,6 +74020,18 @@
 },
 "name": "Sébastien Jarrousse & Pierre de Bethmann Quartet",
 "spotify": null
+},
+"sebastien jarrousse quartet": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Sébastien Jarrousse Quartet",
+"spotify": {
+"id": "3xEiyX9TumekIIyE34MBaV",
+"url": "https://open.spotify.com/artist/3xEiyX9TumekIIyE34MBaV"
+}
 },
 "sebastien jarrousse quartet ft pierre de bethmann": {
 "bandcamp": null,
@@ -73803,10 +74415,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "Serane & Kasper939",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "serge merlaud and laurent guanzini": {
 "bandcamp": null,
@@ -74647,6 +75261,18 @@
 "spotify": {
 "id": "1xyaWjnqi42AlEzaXcr7IY",
 "url": "https://open.spotify.com/artist/1xyaWjnqi42AlEzaXcr7IY"
+}
+},
+"show me the body": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "Show Me The Body",
+"spotify": {
+"id": "5jh7sgXW2njALiIh0aPXjB",
+"url": "https://open.spotify.com/artist/5jh7sgXW2njALiIh0aPXjB"
 }
 },
 "shrizz n maze": {
@@ -76327,7 +76953,7 @@
 "checked": {
 "bandcamp": "2026-10-20",
 "spotify": "2026-10-20",
-"youtube": "2026-10-03"
+"youtube": "2026-11-05"
 },
 "name": "Soirées Fan-Club",
 "spotify": null,
@@ -76742,10 +77368,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-10",
-"spotify": "2026-10-10"
+"spotify": "2026-10-10",
+"youtube": "2026-11-05"
 },
 "name": "Sophie Alour & Hugo Guezbar",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "sophie hunger": {
 "bandcamp": null,
@@ -77405,8 +78033,8 @@
 "speranza galez orchestra": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-09-13",
-"spotify": "2026-09-18",
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
 "youtube": "2026-10-04"
 },
 "name": "Speranza Galez Orchestra",
@@ -78094,7 +78722,7 @@
 "stereo mc s": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06"
 },
 "name": "STEREO MC'S",
@@ -78336,12 +78964,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-09-30"
+"spotify": "2026-09-30",
+"youtube": "2026-11-05"
 },
 "name": "Studio 19",
 "spotify": {
 "id": "5dq5VBcESer5FLLXiPzcwv",
 "url": "https://open.spotify.com/artist/5dq5VBcESer5FLLXiPzcwv"
+},
+"youtube": {
+"publishedAt": "2025-06-20",
+"title": "Chloe improved sm at Studio 19 #shorts #shortsfeed #viral #dancemoms #edit #aldc #dance #trending",
+"videoId": "8hjqF7C9a3c"
 }
 },
 "stupide foudre": {
@@ -79141,6 +79775,20 @@
 "videoId": "bzZmsMTQN54"
 }
 },
+"swoush": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Swoush",
+"spotify": {
+"id": "2eFQDzvOlswU3yO7GTcoEm",
+"url": "https://open.spotify.com/artist/2eFQDzvOlswU3yO7GTcoEm"
+},
+"youtube": null
+},
 "sydney valette": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=447685096/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -79861,10 +80509,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-20",
-"spotify": "2026-10-20"
+"spotify": "2026-10-20",
+"youtube": "2026-11-05"
 },
 "name": "Tard La Nuit #01",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "tarkno": {
 "bandcamp": null,
@@ -80439,10 +81089,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "TËNK",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2020-08-22",
+"title": "Tënk Live - En direct des Etats Généraux du Film Documentaire de Lussas",
+"videoId": "ObHnZ8scS3s"
+}
 },
 "tenside": {
 "bandcamp": {
@@ -80730,6 +81386,20 @@
 "spotify": null,
 "youtube": null
 },
+"thai beats": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Thai Beats",
+"spotify": {
+"id": "3Lhjv0JgyaXDHezrpfEHrk",
+"url": "https://open.spotify.com/artist/3Lhjv0JgyaXDHezrpfEHrk"
+},
+"youtube": null
+},
 "thea": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=2453253427/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
@@ -80781,6 +81451,24 @@
 "publishedAt": "2022-05-02",
 "title": "Thee Sinseers: Tiny Desk (Home) Concert",
 "videoId": "lsg1BCISPNU"
+}
+},
+"thelma": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "ThelmA",
+"spotify": {
+"id": "4IS7EbRbUL6auk4zF4fcji",
+"url": "https://open.spotify.com/artist/4IS7EbRbUL6auk4zF4fcji"
+},
+"youtube": {
+"publishedAt": "2024-09-20",
+"title": "Thelma Plum | Full Set (live at One Night Stand 2024)",
+"videoId": "6wS-SV6GBvk"
 }
 },
 "theo and valentin ceccaldi": {
@@ -81022,6 +81710,18 @@
 "spotify": {
 "id": "0GmYGGZZIU8vHbI0bAXZun",
 "url": "https://open.spotify.com/artist/0GmYGGZZIU8vHbI0bAXZun"
+}
+},
+"this is the kit": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "THIS IS THE KIT",
+"spotify": {
+"id": "0ZUyFEafMwocvApBjTXvdo",
+"url": "https://open.spotify.com/artist/0ZUyFEafMwocvApBjTXvdo"
 }
 },
 "thomas ades": {
@@ -81559,6 +82259,24 @@
 "publishedAt": "2019-04-17",
 "title": "Tiss Rodriguez \"Plug In\" live at Le Baiser Salé 2019.02",
 "videoId": "nPF148YAhWI"
+}
+},
+"tita nzebi": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "Tita Nzebi",
+"spotify": {
+"id": "0ffYa0ubrREYy9OGyzApWt",
+"url": "https://open.spotify.com/artist/0ffYa0ubrREYy9OGyzApWt"
+},
+"youtube": {
+"publishedAt": "2014-02-02",
+"title": "Tita Nzebi - Fulani (Live At \"La Boule Noire / Paris 2013)",
+"videoId": "pEWlEuj9IEI"
 }
 },
 "titan": {
@@ -82902,10 +83620,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-24",
-"spotify": "2026-10-24"
+"spotify": "2026-10-24",
+"youtube": "2026-11-05"
 },
 "name": "LA TRIPLE // Tribute to LADY GAGA",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "tristan guillaume quintet": {
 "bandcamp": null,
@@ -82922,10 +83642,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-23",
-"spotify": "2026-10-23"
+"spotify": "2026-10-23",
+"youtube": "2026-11-05"
 },
 "name": "Tristan Macé & Annelise Clément",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "trivium": {
 "bandcamp": null,
@@ -83026,6 +83748,20 @@
 },
 "name": "Tryangle Man Concert",
 "spotify": null,
+"youtube": null
+},
+"ttristana": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05",
+"youtube": "2026-11-05"
+},
+"name": "TTRISTANA",
+"spotify": {
+"id": "4SlSai14tKk2Lie7Egi3XC",
+"url": "https://open.spotify.com/artist/4SlSai14tKk2Lie7Egi3XC"
+},
 "youtube": null
 },
 "tufan show": {
@@ -84016,10 +84752,12 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-11-04",
-"spotify": "2026-11-04"
+"spotify": "2026-11-04",
+"youtube": "2026-11-05"
 },
 "name": "The Urs & Cristian Porcari",
-"spotify": null
+"spotify": null,
+"youtube": null
 },
 "uzi freyja and shygirl": {
 "bandcamp": null,
@@ -84995,7 +85733,7 @@
 "villa fantome": {
 "bandcamp": null,
 "checked": {
-"bandcamp": "2026-10-06",
+"bandcamp": "2026-11-05",
 "spotify": "2026-10-06",
 "youtube": "2026-10-22"
 },
@@ -85684,10 +86422,16 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-10-30"
+"spotify": "2026-10-30",
+"youtube": "2026-11-05"
 },
 "name": "VOYAGE DANS LE TEMPS",
-"spotify": null
+"spotify": null,
+"youtube": {
+"publishedAt": "2019-10-23",
+"title": "Live: Le voyage dans le temps est-il possible ? #timemachine",
+"videoId": "nTEUR5Ojd9U"
+}
 },
 "voyage danse": {
 "bandcamp": null,
@@ -86410,12 +87154,18 @@
 "bandcamp": null,
 "checked": {
 "bandcamp": "2026-10-29",
-"spotify": "2026-10-29"
+"spotify": "2026-10-29",
+"youtube": "2026-11-05"
 },
 "name": "Westfall",
 "spotify": {
 "id": "42NeHFNce2txjR0yLUXpas",
 "url": "https://open.spotify.com/artist/42NeHFNce2txjR0yLUXpas"
+},
+"youtube": {
+"publishedAt": "2013-05-22",
+"title": "WESTFALL live at Small show great friends",
+"videoId": "M4iy_CRdPeY"
 }
 },
 "westlife": {
@@ -87318,6 +88068,18 @@
 "publishedAt": "2025-07-23",
 "title": "Yakko's World Performed LIVE at MCM London",
 "videoId": "8RAiMJaXJis"
+}
+},
+"yalifay": {
+"bandcamp": null,
+"checked": {
+"bandcamp": "2026-11-05",
+"spotify": "2026-11-05"
+},
+"name": "YALIFAY",
+"spotify": {
+"id": "5ZJWB8HzMgwn51gNHg3sk3",
+"url": "https://open.spotify.com/artist/5ZJWB8HzMgwn51gNHg3sk3"
 }
 },
 "yamajoy": {

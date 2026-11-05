@@ -2598,6 +2598,16 @@
 "is_music": true,
 "subgenres": []
 },
+"badaboum|la ch ck nye bonnes annees 2000 s": {
+"genres": [
+"pop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"2000s hits"
+]
+},
 "badaboum|la magic live by darling deluxe karaoke bal live": {
 "genres": [
 "pop",
@@ -5618,6 +5628,17 @@
 "doo-wop"
 ]
 },
+"cirque-electrique|poesie chevalier coeurpourpre hura mirshekari": {
+"genres": [
+"experimental",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"noise",
+"post-punk"
+]
+},
 "cirque-electrique|politic lovers presente marave tapage": {
 "genres": [
 "punk",
@@ -6752,6 +6773,14 @@
 "is_music": true,
 "subgenres": []
 },
+"doc|thai beats": {
+"genres": [
+"electro",
+"world"
+],
+"is_music": true,
+"subgenres": []
+},
 "duc-des-lombards|bria skonberg": {
 "genres": [
 "jazz"
@@ -6883,6 +6912,15 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"ecuje|mino cinelu surprise mino 4 miles": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz fusion"
 ]
 },
 "ecuje|omri mor mehdi nassouli karim ziad": {
@@ -8689,6 +8727,17 @@
 "is_music": false,
 "subgenres": []
 },
+"espace-sorano|tita nzebi en concert reminiscence": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"nzebi",
+"gabonese music"
+]
+},
 "feuille-blanche-cafe-noir|concert french accent is cute": {
 "genres": [
 "folk"
@@ -10309,6 +10358,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"l-institut-du-monde-arabe|charbel rouhana quintet concert": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"oud",
+"arabic music"
+]
 },
 "l-institut-du-monde-arabe|concert de souad massi": {
 "genres": [
@@ -12456,6 +12515,14 @@
 "rap français"
 ]
 },
+"la-boule-noire|yalifay": {
+"genres": [
+"pop",
+"world"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|yanamko": {
 "genres": [
 "world",
@@ -13765,6 +13832,16 @@
 "subgenres": [
 "funk rock",
 "rap rock"
+]
+},
+"la-dame-de-canton|roland decembre x line marsa x aylon": {
+"genres": [
+"chanson",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
 ]
 },
 "la-dame-de-canton|sam 10 10 loner deer release party": {
@@ -16299,6 +16376,17 @@
 "is_music": true,
 "subgenres": [
 "indie rock"
+]
+},
+"la-maroquinerie|this is the kit": {
+"genres": [
+"folk",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"indie folk",
+"british folk"
 ]
 },
 "la-maroquinerie|thomas kahn": {
@@ -19927,6 +20015,17 @@
 "solo piano"
 ]
 },
+"le-melville|salsa jazz cubain": {
+"genres": [
+"latin",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"salsa",
+"afro-cuban jazz"
+]
+},
 "le-melville|sam ghezzi blues band": {
 "genres": [
 "blues",
@@ -20249,6 +20348,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-plan|ajna akissi": {
+"genres": [
+"soul-rnb",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"afro-pop"
+]
 },
 "le-plan|c ur de pirate 1ere partie suzanne belaubre": {
 "genres": [
@@ -22087,6 +22196,14 @@
 "is_music": true,
 "subgenres": []
 },
+"le-truskel|concert jam science concert": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-truskel|date with the night": {
 "genres": [
 "rock",
@@ -22694,6 +22811,11 @@
 "rock"
 ],
 "is_music": true,
+"subgenres": []
+},
+"mains-d-oeuvres|cabaret ecos3xxx": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "mains-d-oeuvres|ciclade": {
@@ -24497,6 +24619,26 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"nouveau-casino|hoa hoa hoa rave": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"rave",
+"techno"
+]
+},
+"nouveau-casino|hoa hoa hoa rave 2": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"rave",
+"techno"
+]
 },
 "nouveau-casino|jacek stachursky": {
 "genres": [
@@ -26520,6 +26662,26 @@
 "accordion"
 ]
 },
+"philharmonie|beaubourg mon amour": {
+"genres": [
+"classical",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"contemporary classical"
+]
+},
+"philharmonie|beaubourg mon amour la nuit": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"club night",
+"techno"
+]
+},
 "philharmonie|bricologie": {
 "genres": [],
 "is_music": false,
@@ -26814,6 +26976,11 @@
 "cello",
 "chamber music"
 ]
+},
+"philharmonie|il sera une fois": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "philharmonie|in between trance": {
 "genres": [
@@ -27562,6 +27729,13 @@
 "is_music": false,
 "subgenres": []
 },
+"point-ephemere|after manif des sales connes": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "point-ephemere|au poste commando": {
 "genres": [
 "punk",
@@ -27664,6 +27838,11 @@
 "subgenres": []
 },
 "point-ephemere|cq wrestling the 113": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"point-ephemere|cringe market": {
 "genres": [],
 "is_music": false,
 "subgenres": []
@@ -27789,6 +27968,15 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"point-ephemere|encounters": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"club night"
+]
 },
 "point-ephemere|etat d arbres parlons des forets": {
 "genres": [],
@@ -29450,6 +29638,16 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|swoush ttristana rougail space program": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "popup|take me out guacayo en concert a paris": {
 "genres": [
 "indie",
@@ -30438,6 +30636,16 @@
 "vocal jazz"
 ]
 },
+"sunset-sunside|antoine boyer bireli lagrene": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz manouche",
+"guitar duo"
+]
+},
 "sunset-sunside|antoine boyer group the big step": {
 "genres": [
 "jazz"
@@ -31320,6 +31528,25 @@
 "vocal jazz"
 ]
 },
+"sunset-sunside|hommage a albert king avec big dez jam blues": {
+"genres": [
+"blues"
+],
+"is_music": true,
+"subgenres": [
+"electric blues"
+]
+},
+"sunset-sunside|hommage a amy winehouse avec jazz loves amy": {
+"genres": [
+"jazz",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
 "sunset-sunside|hommage a art blakey avec les blakettes jam session": {
 "genres": [
 "jazz"
@@ -31991,6 +32218,16 @@
 "hard bop"
 ]
 },
+"sunset-sunside|jose caparros irokazu ishida quintet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop",
+"trumpet jazz"
+]
+},
 "sunset-sunside|joya x tc kylie somewhere between": {
 "genres": [
 "pop",
@@ -32165,6 +32402,16 @@
 "salsa"
 ]
 },
+"sunset-sunside|les samedis salsa du sunset avec speranza galez orchestra": {
+"genres": [
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"salsa",
+"salsa dura"
+]
+},
 "sunset-sunside|liane limon trio": {
 "genres": [
 "jazz"
@@ -32231,6 +32478,16 @@
 "is_music": true,
 "subgenres": [
 "contemporary jazz"
+]
+},
+"sunset-sunside|lyaun bettina martinez": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz standards",
+"vocal jazz"
 ]
 },
 "sunset-sunside|mahmoud sadi trio": {
@@ -32364,6 +32621,15 @@
 "creole"
 ]
 },
+"sunset-sunside|olivier ker ourio quartet life as it is": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"harmonica jazz"
+]
+},
 "sunset-sunside|pablo murgier trio": {
 "genres": [
 "jazz"
@@ -32481,6 +32747,16 @@
 "is_music": true,
 "subgenres": [
 "modern jazz"
+]
+},
+"sunset-sunside|roni eytan quintet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"harmonica jazz",
+"post-bop"
 ]
 },
 "sunset-sunside|rotem sivan": {
@@ -32759,6 +33035,15 @@
 "is_music": true,
 "subgenres": [
 "modern jazz"
+]
+},
+"sunset-sunside|the watershed ft christophe panzani": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "sunset-sunside|thibault renard quintet": {
