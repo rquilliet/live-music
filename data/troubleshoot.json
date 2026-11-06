@@ -30,16 +30,6 @@
    "usd": 0.8512,
    "issue": "REM-87"
   },
-  "duc-des-lombards": {
-   "since": "2026-10-24",
-   "days": [
-    "2026-10-24",
-    "2026-10-25",
-    "2026-10-27"
-   ],
-   "usd": 0.8961,
-   "issue": "REM-88"
-  },
   "dernier-bar-avant-la-fin-du-monde": {
    "since": "2026-10-28",
    "days": [
@@ -50,25 +40,41 @@
    "usd": 0.4925,
    "issue": "REM-76"
   },
-  "la-station": {
-   "since": "2026-11-01",
+  "la-boule-noire": {
+   "since": "2026-11-06",
    "days": [
-    "2026-11-01",
-    "2026-11-02",
-    "2026-11-03"
+    "2026-11-06"
    ],
-   "usd": 0.4788,
-   "issue": "REM-94"
+   "usd": 0.0871,
+   "issue": "REM-95"
   }
  },
  "last": {
-  "date": "2026-11-05",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/42030231767",
-  "usd": 0,
-  "sessions": 0,
+  "date": "2026-11-06",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/42218402705",
+  "usd": 0.0871,
+  "sessions": 1,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
+  "unresolved": [
+   {
+    "venue": "La Boule Noire",
+    "slug": "la-boule-noire",
+    "error": "0 events parsed (was 73)",
+    "since": "2026-11-06",
+    "prev_count": 73,
+    "url": "https://laboule-noire.fr/",
+    "attempts": 1,
+    "usd_total": 0.0871,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "The failure could not be reproduced: the check now returns 73 events (same as the last success), so nothing was changed.\n\nCause: most likely transient (site briefly down, returning an empty/error page, or a temporary different response this morning). The live page https://laboule-noire.fr/ still uses the Elementor cards (`<article class=\"elementor-post ...\">`, `elementor-post__title`, `elementor-post__excerpt` with \"SAMEDI 7 NOVEMBRE 2026 – 19H30\") that the `boulenoire` parser expects.\nChanged: nothing (no edit to venues.json or venues_html.py; the parser and URL are correct).\nCheck result (run twice): {\"ok\": true, \"count\": 73, \"prev_count\": 73, sample \"2026-11-07 19:30 PARVIZ\", \"2026-11-08 19:30 TONY & THE KIKI\", ...}.\nNo instructions aimed at an agent were found in the page.\nHuman follow-up: re-run the next scheduled scrape; if it fails again with 0 events, capture the HTML the scraper received at that moment (possible intermittent bot protection or maintenance page).\nSide note (not changed): cards with the \"Annulé\" badge (e.g. SOFY, 10 Nov) are still listed as events; the parser only detects \"Complet\".",
+    "diff": "",
+    "usd": 0.0871,
+    "usd_agent": 0.08714240000000001
+   }
+  ],
   "systemic": [
    {
     "cause": "HTTP 404",
@@ -81,25 +87,15 @@
   ],
   "skipped": [
    {
-    "venue": "Duc des Lombards",
-    "slug": "duc-des-lombards",
-    "why": "tried on 3 days without success, left to its issue"
-   },
-   {
     "venue": "Dernier Bar avant la Fin du Monde",
     "slug": "dernier-bar-avant-la-fin-du-monde",
-    "why": "tried on 3 days without success, left to its issue"
-   },
-   {
-    "venue": "La Station - Gare des Mines",
-    "slug": "la-station",
     "why": "tried on 3 days without success, left to its issue"
    }
   ],
   "done": true
  },
  "spent": {
-  "date": "2026-11-03",
-  "usd": 0.1846
+  "date": "2026-11-06",
+  "usd": 0.0871
  }
 }

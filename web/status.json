@@ -6,7 +6,7 @@
  "low_below": 3,
  "cost": {
   "date": "2026-11-06",
-  "usd": 2.3823,
+  "usd": 2.4694,
   "steps": [
    {
     "what": "genres",
@@ -34,6 +34,13 @@
     "tokens_in": 160571,
     "tokens_out": 139541,
     "usd": 2.1457
+   },
+   {
+    "what": "troubleshooting",
+    "model": "Claude Code",
+    "batch": false,
+    "calls": 1,
+    "usd": 0.0871
    }
   ]
  },
@@ -761,7 +768,7 @@
   {
    "date": "2026-11-06",
    "run_url": "https://github.com/rquilliet/live-music/actions/runs/42217178217",
-   "usd": 2.3823,
+   "usd": 2.4694,
    "sources": {
     "opendata": 1253,
     "bataclan": 49,
