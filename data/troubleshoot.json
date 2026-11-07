@@ -39,42 +39,16 @@
    ],
    "usd": 0.4925,
    "issue": "REM-76"
-  },
-  "la-boule-noire": {
-   "since": "2026-11-06",
-   "days": [
-    "2026-11-06"
-   ],
-   "usd": 0.0871,
-   "issue": "REM-95"
   }
  },
  "last": {
-  "date": "2026-11-06",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/42218402705",
-  "usd": 0.0871,
-  "sessions": 1,
+  "date": "2026-11-07",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/42367899991",
+  "usd": 0,
+  "sessions": 0,
   "fixed": [],
   "recovered": [],
-  "unresolved": [
-   {
-    "venue": "La Boule Noire",
-    "slug": "la-boule-noire",
-    "error": "0 events parsed (was 73)",
-    "since": "2026-11-06",
-    "prev_count": 73,
-    "url": "https://laboule-noire.fr/",
-    "attempts": 1,
-    "usd_total": 0.0871,
-    "problems": [
-     "the agent changed nothing"
-    ],
-    "notes": "The failure could not be reproduced: the check now returns 73 events (same as the last success), so nothing was changed.\n\nCause: most likely transient (site briefly down, returning an empty/error page, or a temporary different response this morning). The live page https://laboule-noire.fr/ still uses the Elementor cards (`<article class=\"elementor-post ...\">`, `elementor-post__title`, `elementor-post__excerpt` with \"SAMEDI 7 NOVEMBRE 2026 – 19H30\") that the `boulenoire` parser expects.\nChanged: nothing (no edit to venues.json or venues_html.py; the parser and URL are correct).\nCheck result (run twice): {\"ok\": true, \"count\": 73, \"prev_count\": 73, sample \"2026-11-07 19:30 PARVIZ\", \"2026-11-08 19:30 TONY & THE KIKI\", ...}.\nNo instructions aimed at an agent were found in the page.\nHuman follow-up: re-run the next scheduled scrape; if it fails again with 0 events, capture the HTML the scraper received at that moment (possible intermittent bot protection or maintenance page).\nSide note (not changed): cards with the \"Annulé\" badge (e.g. SOFY, 10 Nov) are still listed as events; the parser only detects \"Complet\".",
-    "diff": "",
-    "usd": 0.0871,
-    "usd_agent": 0.08714240000000001
-   }
-  ],
+  "unresolved": [],
   "systemic": [
    {
     "cause": "HTTP 404",
