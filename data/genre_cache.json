@@ -194,6 +194,15 @@
 "groove"
 ]
 },
+"38riv-jazz-club|bonifacio gomez quartet bebop au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop"
+]
+},
 "38riv-jazz-club|caloe a kind of cabaret au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -534,6 +543,15 @@
 "guitar jazz"
 ]
 },
+"38riv-jazz-club|henry spencer en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
+]
+},
 "38riv-jazz-club|herbin derache cairoli django afternoon au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -826,6 +844,17 @@
 "vocal jazz"
 ]
 },
+"38riv-jazz-club|mario ponce enrile raconte frank sinatra velours velours": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"crooner",
+"swing"
+]
+},
 "38riv-jazz-club|marion chretien raconte dinah washington au 38riv jazz club jss26": {
 "genres": [
 "jazz",
@@ -923,6 +952,15 @@
 "is_music": true,
 "subgenres": [
 "spiritual jazz"
+]
+},
+"38riv-jazz-club|parages guilhem flouzat en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "38riv-jazz-club|peaks invite roman reidid en concert au 38riv jazz club": {
@@ -1639,6 +1677,16 @@
 "is_music": true,
 "subgenres": []
 },
+"alhambra|midnight generation": {
+"genres": [
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"covers"
+]
+},
 "alhambra|mnek": {
 "genres": [
 "soul-rnb",
@@ -1722,6 +1770,17 @@
 "is_music": true,
 "subgenres": [
 "indie pop"
+]
+},
+"alhambra|ramon pipin band": {
+"genres": [
+"rock",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"rock'n'roll",
+"parody"
 ]
 },
 "alhambra|revnoir": {
@@ -4822,6 +4881,17 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|kinga g yk": {
+"genres": [
+"funk",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz fusion",
+"bass"
+]
+},
 "cafe-de-la-danse|kinga glyk": {
 "genres": [
 "jazz",
@@ -5248,6 +5318,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"centre-paris-anim-mado-robin|concert pro quartet musique de chambre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music",
+"string quartet"
+]
 },
 "centre-paris-anim-maurice-ravel|soiree jeunes talents queer": {
 "genres": [],
@@ -7243,6 +7323,16 @@
 "vocal quartet"
 ]
 },
+"eglise-reformee-du-saint-esprit|concert gospel de noel avec voice2gether": {
+"genres": [
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"gospel",
+"christmas"
+]
+},
 "eglise-reformee-du-saint-esprit|nour concert de noel du ch ur des musicales du liban": {
 "genres": [
 "classical"
@@ -8847,6 +8937,15 @@
 "is_music": true,
 "subgenres": []
 },
+"fgo-barbara|bromaz": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "fgo-barbara|draft malter liouba gt1boiavantcsurr": {
 "genres": [
 "electro",
@@ -8997,6 +9096,11 @@
 "subgenres": [
 "rap français"
 ]
+},
+"fgo-barbara|la boum des p tits rebelles": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "fgo-barbara|ledbyher": {
 "genres": [
@@ -10339,6 +10443,14 @@
 "l-apollo-theatre|zelie la pirate s installe a l apollo theatre pour l hiver": {
 "genres": [],
 "is_music": false,
+"subgenres": []
+},
+"l-archipel|sab s installe pour 6 soirees a l archipel du 28 novembre au 19 decembre": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
 "subgenres": []
 },
 "l-atelier-du-plateau|depuis la bas distinguent ils ce qui s ecaille de ce qui brille": {
@@ -12257,6 +12369,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|ouidad": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|paolo": {
 "genres": [
 "pop"
@@ -12485,6 +12605,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-boule-noire|tape 12": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
 },
 "la-boule-noire|the buoys": {
 "genres": [
@@ -13654,6 +13783,14 @@
 "cumbia"
 ]
 },
+"la-dame-de-canton|collectif les oiseaux migrateurs roland decembre x line marsa x aylon": {
+"genres": [
+"chanson",
+"folk"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-dame-de-canton|concert coplateau marty jjh potter": {
 "genres": [
 "pop",
@@ -14144,6 +14281,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dynamo|alexandre herer all you can play franges": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"electro-jazz"
+]
+},
 "la-dynamo|alexandre herer franges": {
 "genres": [
 "jazz",
@@ -14190,6 +14337,15 @@
 "genres": [
 "jazz",
 "experimental"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
+]
+},
+"la-dynamo|les rencontres ajc jazz with 3 anaphora kabarila quartet smiodair": {
+"genres": [
+"jazz"
 ],
 "is_music": true,
 "subgenres": [
@@ -14307,6 +14463,11 @@
 "chanson"
 ],
 "is_music": true,
+"subgenres": []
+},
+"la-generale|freud vit au far west": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "la-generale|jeff rian": {
@@ -19397,6 +19558,14 @@
 "is_music": true,
 "subgenres": []
 },
+"le-grand-rex|belinda davids a tribute to whitney houston by belinda davids": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-grand-rex|belinda davids a tribute to whitney houston the greatest love of all": {
 "genres": [
 "soul-rnb",
@@ -19663,6 +19832,16 @@
 "subgenres": [
 "noise rock",
 "techno"
+]
+},
+"le-hasard-ludique|yndling": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"dream pop"
 ]
 },
 "le-kibele|il fait toujours beau quelque part bertrand ferrier chante guy beart": {
@@ -21373,6 +21552,18 @@
 "indie rock"
 ]
 },
+"le-trabendo|marc broussard": {
+"genres": [
+"soul-rnb",
+"blues",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"bayou soul",
+"southern soul"
+]
+},
 "le-trabendo|marika hackman": {
 "genres": [
 "indie",
@@ -21402,6 +21593,16 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"le-trabendo|mattiel": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
 ]
 },
 "le-trabendo|new constellations": {
@@ -21709,6 +21910,14 @@
 "le-trianon|james baker": {
 "genres": [],
 "is_music": false,
+"subgenres": []
+},
+"le-trianon|jeanne": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
 "subgenres": []
 },
 "le-trianon|jesse welles": {
@@ -22547,6 +22756,16 @@
 "garage rock"
 ]
 },
+"le-truskel|kharoub sker": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
+},
 "le-truskel|laces": {
 "genres": [
 "rock",
@@ -22994,6 +23213,14 @@
 "is_music": true,
 "subgenres": []
 },
+"les-trois-baudets|mee shel friends rosanne joseph": {
+"genres": [
+"soul-rnb",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "les-trois-baudets|nuit noire roukie": {
 "genres": [
 "indie",
@@ -23085,6 +23312,14 @@
 "mains-d-oeuvres|dj set de la louuve": {
 "genres": [
 "electro"
+],
+"is_music": true,
+"subgenres": []
+},
+"mains-d-oeuvres|fete d anniversaire de mains d uvres": {
+"genres": [
+"electro",
+"indie"
 ],
 "is_music": true,
 "subgenres": []
@@ -23396,6 +23631,15 @@
 "contemporary classical"
 ]
 },
+"maison-heinrich-heine|heine komplex": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"lieder"
+]
+},
 "maison-le-kinff|les 48h de la petite ceinture": {
 "genres": [],
 "is_music": false,
@@ -23546,6 +23790,11 @@
 "subgenres": [
 "ciné-concert"
 ]
+},
+"mediatheque-marguerite-duras|festival close up ville architecture et paysage au cinema": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "mediatheque-marguerite-duras|gisele pape en concert": {
 "genres": [
@@ -23708,6 +23957,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"mediatheque-musicale-de-paris-christiane-eda-pierre|monte le son 2026 o feminins amari natura live session divina concert au 12 decembre 2026": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"romani"
+]
 },
 "mediatheque-musicale-de-paris-christiane-eda-pierre|monte le son 2026 o feminins scene ouverte 100 feminine": {
 "genres": [
@@ -25400,6 +25658,16 @@
 "is_music": true,
 "subgenres": [
 "commemorative concert"
+]
+},
+"palais-des-congres|maman j ai rate l avion en cine concert": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"film score",
+"ciné-concert"
 ]
 },
 "pan-piper-paris|festival avec la langue": {
@@ -28181,6 +28449,11 @@
 "subgenres": [
 "post-punk"
 ]
+},
+"point-ephemere|democratie en danger": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "point-ephemere|devotchka": {
 "genres": [
@@ -33509,6 +33782,17 @@
 "subgenres": [
 "modal jazz",
 "hard bop"
+]
+},
+"sunset-sunside|toninho horta quintet ft dawson reinhardt": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"mpb",
+"bossa nova"
 ]
 },
 "sunset-sunside|trio escualo": {
