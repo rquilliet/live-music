@@ -42,8 +42,8 @@
   }
  },
  "last": {
-  "date": "2026-11-07",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/42367899991",
+  "date": "2026-11-08",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/42476114553",
   "usd": 0,
   "sessions": 0,
   "fixed": [],
@@ -56,6 +56,40 @@
      "New Morning",
      "Supersonic",
      "File7"
+    ]
+   },
+   {
+    "cause": "Claude API error 400: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.",
+    "venues": [
+     "Accor Arena",
+     "Zénith Paris",
+     "Alhambra",
+     "Cabaret Sauvage",
+     "La Bellevilloise",
+     "La Marbrerie",
+     "Le Plan",
+     "La Machine du Moulin Rouge",
+     "Duc des Lombards",
+     "Le Baiser Salé",
+     "Le Centquatre",
+     "La Petite Halle",
+     "Le Grand Rex",
+     "Badaboum",
+     "Philharmonie de Paris",
+     "Le Trabendo",
+     "FGO-Barbara",
+     "La Station - Gare des Mines",
+     "Cirque Electrique",
+     "Le Bal Blomet",
+     "Studio de l'Ermitage",
+     "Les Trois Baudets",
+     "Le Triton",
+     "Canal 93",
+     "La Gaîté Lyrique",
+     "PopUp!",
+     "Le Truskel",
+     "Nouveau Casino",
+     "La Générale"
     ]
    }
   ],
