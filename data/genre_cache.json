@@ -3034,6 +3034,16 @@
 "post-punk"
 ]
 },
+"bal-chavaux|catastrophe vers nos printemps": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"art pop"
+]
+},
 "bal-chavaux|cirrus process": {
 "genres": [
 "electro",
@@ -3356,6 +3366,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"bal-chavaux|roadrunners": {
+"genres": [
+"rock",
+"blues"
+],
+"is_music": true,
+"subgenres": [
+"rock'n'roll",
+"garage rock"
+]
 },
 "bal-chavaux|samiam": {
 "genres": [
@@ -5010,6 +5031,13 @@
 "yiddish song"
 ]
 },
+"cafe-de-la-danse|creation hommage a laurent voulzy voulzy collection": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "cafe-de-la-danse|cysoul": {
 "genres": [
 "soul-rnb",
@@ -5387,6 +5415,11 @@
 "singer-songwriter"
 ]
 },
+"cafe-de-la-danse|pierluca mariti a parigi con abbi pazienza": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "cafe-de-la-danse|pitchfork avant garde celine dessberg sell everything maddie ahman": {
 "genres": [
 "indie",
@@ -5570,6 +5603,15 @@
 "subgenres": [
 "disco",
 "tropical grooves"
+]
+},
+"cathedrale-sainte-croix-des-armeniens|concert 55e anniversaire de la chorale franco allemande de paris": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral"
 ]
 },
 "cathedrale-sainte-croix-des-armeniens|singing earth divine concert de noel": {
@@ -5791,6 +5833,16 @@
 "subgenres": [
 "cabaret",
 "drag"
+]
+},
+"cinema-arlequin|cine concert inedit paris express ou souvenir de paris festival close up": {
+"genres": [
+"classical",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"ciné-concert"
 ]
 },
 "cinema-chaplin-saint-lambert|elastic bird the green album show": {
@@ -8611,6 +8663,16 @@
 "hardcore"
 ]
 },
+"elysee-montmartre|blowsom": {
+"genres": [
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie pop"
+]
+},
 "elysee-montmartre|bury tomorrow": {
 "genres": [
 "metal"
@@ -9052,6 +9114,17 @@
 "is_music": true,
 "subgenres": []
 },
+"elysee-montmartre|neurosis": {
+"genres": [
+"metal",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"post-metal",
+"sludge"
+]
+},
 "elysee-montmartre|nevermore": {
 "genres": [
 "metal"
@@ -9318,6 +9391,15 @@
 "genres": [
 "hip-hop",
 "soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
+"elysee-montmartre|zamdane": {
+"genres": [
+"hip-hop"
 ],
 "is_music": true,
 "subgenres": [
@@ -13234,6 +13316,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|uwase": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"neo-soul"
+]
+},
 "la-boule-noire|vestige": {
 "genres": [
 "indie",
@@ -13900,6 +13992,15 @@
 "is_music": false,
 "subgenres": []
 },
+"la-cigale|mona guba": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "la-cigale|mous k": {
 "genres": [
 "hip-hop"
@@ -14467,6 +14568,16 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"la-dame-de-canton|jooyoung": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"k-r&b"
 ]
 },
 "la-dame-de-canton|joseph martone x 1ere partie impostor costume": {
@@ -16360,6 +16471,17 @@
 "rap français"
 ]
 },
+"la-maroquinerie|flower face": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"dream pop",
+"singer-songwriter"
+]
+},
 "la-maroquinerie|flowerovlove": {
 "genres": [
 "pop",
@@ -16890,6 +17012,16 @@
 "subgenres": [
 "blackgaze",
 "post-hardcore"
+]
+},
+"la-maroquinerie|odezenne": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français",
+"alternative rap"
 ]
 },
 "la-maroquinerie|ofe": {
@@ -18664,6 +18796,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-station|boukan records": {
+"genres": [
+"world",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"caribbean bass",
+"zouk"
+]
+},
 "la-station|ciclade devon rexi nicolini": {
 "genres": [
 "electro"
@@ -18781,6 +18924,13 @@
 "is_music": true,
 "subgenres": []
 },
+"la-station|la culottee": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-station|ondulation by atoem 2": {
 "genres": [
 "electro"
@@ -18851,6 +19001,13 @@
 "psychedelic",
 "krautrock"
 ]
+},
+"la-station|soiree de soutien aux caisses de greve": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-station|solidarite avec le soudan": {
 "genres": [
@@ -20475,6 +20632,11 @@
 "chanson"
 ],
 "is_music": true,
+"subgenres": []
+},
+"le-kibele|le debut de quelque chose": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "le-lucernaire|pauline paris projette son film dejeuner s du matin au lucernaire": {
@@ -29093,6 +29255,13 @@
 "house"
 ]
 },
+"point-ephemere|brune et la nuit": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "point-ephemere|burning festival": {
 "genres": [
 "rock"
@@ -29142,6 +29311,11 @@
 "subgenres": []
 },
 "point-ephemere|cine club tsedek presente fama une heroine sans gloire de dalila ennadre": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"point-ephemere|climbing district et arc teryx": {
 "genres": [],
 "is_music": false,
 "subgenres": []
@@ -29388,6 +29562,13 @@
 "point-ephemere|flash x playground jeanne moynot toi meme 15 novembre 17h": {
 "genres": [],
 "is_music": false,
+"subgenres": []
+},
+"point-ephemere|freakish take over": {
+"genres": [
+"electro"
+],
+"is_music": true,
 "subgenres": []
 },
 "point-ephemere|ftv unplugged grandma s ashes": {
@@ -30135,6 +30316,11 @@
 "noise pop"
 ]
 },
+"point-ephemere|zinzin market": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "popup|abess 10th anniversary": {
 "genres": [
 "electro"
@@ -30544,6 +30730,13 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|jazz in 110v mardi jazz avec clement trimouille jack kinsella ties laarakker stephane chandelier": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|kate stephenson selkee": {
 "genres": [
 "indie",
@@ -30617,6 +30810,13 @@
 "subgenres": [
 "alt-pop"
 ]
+},
+"popup|lesneu djokovic": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
 },
 "popup|lovetempo": {
 "genres": [
@@ -32056,6 +32256,16 @@
 "is_music": true,
 "subgenres": [
 "rhythm and blues"
+]
+},
+"sunset-sunside|alicia witt": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter",
+"christmas"
 ]
 },
 "sunset-sunside|alime bebegue": {
@@ -37495,6 +37705,16 @@
 "is_music": true,
 "subgenres": [
 "irish rap"
+]
+},
+"zenith-paris|kool the gang": {
+"genres": [
+"funk",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"disco"
 ]
 },
 "zenith-paris|la rvfleuze": {
