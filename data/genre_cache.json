@@ -523,6 +523,15 @@
 "chanson engagée"
 ]
 },
+"38riv-jazz-club|ella rabeson joyride trio jazz vocal au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
 "38riv-jazz-club|emma rawicz en concert au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -1148,6 +1157,16 @@
 "vocal jazz"
 ]
 },
+"38riv-jazz-club|pablo campos trio jazz vocal au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"swing"
+]
+},
 "38riv-jazz-club|pamina beroff michael valeanu cool jazz for quiet dreams": {
 "genres": [
 "jazz"
@@ -1535,6 +1554,14 @@
 "subgenres": [
 "rap français"
 ]
+},
+"accor-arena|christophe mae": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "accor-arena|eric serra live le spectacle immersif a l accor arena": {
 "genres": [
@@ -2947,6 +2974,13 @@
 "dream pop"
 ]
 },
+"badaboum|intermiteuf 4": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "badaboum|jigitz badaboum": {
 "genres": [
 "electro"
@@ -2983,6 +3017,15 @@
 "is_music": true,
 "subgenres": [
 "pop rock"
+]
+},
+"badaboum|run to the beat night call": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
 ]
 },
 "badaboum|sampa the great": {
@@ -5605,6 +5648,16 @@
 "tropical grooves"
 ]
 },
+"cathedrale-americaine|concert de musique baroque a la cour de versailles": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"sacred choral"
+]
+},
 "cathedrale-sainte-croix-des-armeniens|concert 55e anniversaire de la chorale franco allemande de paris": {
 "genres": [
 "classical"
@@ -6420,6 +6473,15 @@
 "flamenco"
 ]
 },
+"cite-de-l-architecture-et-du-patrimoine|en scene au musee": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral"
+]
+},
 "cite-de-l-architecture-et-du-patrimoine|resonances": {
 "genres": [
 "classical"
@@ -6896,6 +6958,17 @@
 "renaissance",
 "baroque",
 "madrigal"
+]
+},
+"conservatoire-municipal-darius-milhaud|carte blanche a francois bousch": {
+"genres": [
+"classical",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"contemporary classical",
+"improvisation"
 ]
 },
 "conservatoire-municipal-darius-milhaud|concert nous sommes le vent par l harmonie de la sirene et horme": {
@@ -7427,6 +7500,15 @@
 "subgenres": [
 "jazz fusion",
 "guitar jazz"
+]
+},
+"duc-des-lombards|jam du duc gael horellou": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop"
 ]
 },
 "duc-des-lombards|jam du duc paul morvan": {
@@ -8481,6 +8563,16 @@
 "subgenres": [
 "baroque",
 "soprano"
+]
+},
+"eglise-st-severin|orchestre jeunes solistes prodiges clarinette violon hautbois": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"orchestral",
+"concerto"
 ]
 },
 "eglise-st-severin|quintette a vents linos": {
@@ -12279,6 +12371,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-boule-noire|acid gras": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"psychedelic rock"
+]
 },
 "la-boule-noire|afar": {
 "genres": [
@@ -19062,6 +19163,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-station|with us presente ex toxique": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno"
+]
+},
 "la-station|zawa show": {
 "genres": [
 "electro"
@@ -19976,6 +20086,15 @@
 "subgenres": [
 "contemporary jazz",
 "caribbean jazz"
+]
+},
+"le-baiser-sale|y robert g coquard c affre soul cages trio a jazz tribute to sting": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"jazz fusion"
 ]
 },
 "le-baiser-sale|yahe 4tet": {
@@ -23601,6 +23720,14 @@
 "rock français"
 ]
 },
+"le-truskel|marr not meeger": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-truskel|namid a lyncelia": {
 "genres": [
 "rock",
@@ -23629,6 +23756,16 @@
 "is_music": true,
 "subgenres": [
 "indie pop"
+]
+},
+"le-truskel|pcr kr jail maggots": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"hardcore punk"
 ]
 },
 "le-truskel|pop rock electro": {
@@ -23715,6 +23852,11 @@
 "balkan",
 "sephardic songs"
 ]
+},
+"les-etoiles|les meneuses fetent leur un an": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "les-grandes-serres-de-pantin|fip 360 la soiree electro aux grandes serres de pantin": {
 "genres": [
@@ -24449,6 +24591,17 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"maison-de-la-vie-associative-et-citoyenne-du-7e-arrondissement|concert de noel russe": {
+"genres": [
+"world",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"russian folk",
+"orthodox choral"
+]
 },
 "maison-de-victor-hugo|ruy blas de victor hugo": {
 "genres": [],
@@ -27417,6 +27570,18 @@
 "americana"
 ]
 },
+"petit-bain|joshua idehen": {
+"genres": [
+"experimental",
+"jazz",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"spoken word",
+"poetry"
+]
+},
 "petit-bain|jozeph x jude aston": {
 "genres": [
 "soul-rnb",
@@ -27671,6 +27836,18 @@
 "is_music": true,
 "subgenres": [
 "power metal"
+]
+},
+"petit-bain|pussy riot": {
+"genres": [
+"punk",
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"art punk",
+"protest"
 ]
 },
 "petit-bain|rage sacree off x chapel sessions": {
@@ -29255,6 +29432,13 @@
 "house"
 ]
 },
+"point-ephemere|beaujolais nouveau": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "point-ephemere|brune et la nuit": {
 "genres": [
 "electro"
@@ -29925,6 +30109,11 @@
 "spoken word"
 ]
 },
+"point-ephemere|matiere s d oeuvre": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|meryl streek": {
 "genres": [
 "punk",
@@ -30418,6 +30607,14 @@
 "indie rock"
 ]
 },
+"popup|bexblu paul stephan": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|bexlu paul stephan": {
 "genres": [
 "pop",
@@ -30825,6 +31022,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"popup|lunedel": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"dream pop"
+]
 },
 "popup|luxie friends paradis fiscal clover kone": {
 "genres": [
@@ -33112,6 +33319,15 @@
 "hard bop"
 ]
 },
+"sunset-sunside|gagnez des places pour le concert d erella au sunside": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
 "sunset-sunside|galaad moutoz orchestra": {
 "genres": [
 "jazz"
@@ -33370,6 +33586,16 @@
 "is_music": true,
 "subgenres": [
 "bebop"
+]
+},
+"sunset-sunside|hommage a duke ellington avec cecil l recchia jam vocale": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"swing"
 ]
 },
 "sunset-sunside|hommage a duke ellington avec laurent courthaliac jam session": {
@@ -36693,6 +36919,11 @@
 "orchestral"
 ]
 },
+"theatre-douze|dudi un spectacle musical participatif pour les tout petits": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "theatre-du-chatelet|autour de jean sebastien bach": {
 "genres": [
 "classical"
@@ -37858,6 +38089,17 @@
 "subgenres": [
 "ragga",
 "rap français"
+]
+},
+"zenith-paris|noga erez": {
+"genres": [
+"electro",
+"pop",
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"electropop"
 ]
 },
 "zenith-paris|nothing but thieves": {
