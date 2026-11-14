@@ -3202,6 +3202,19 @@
 "metalcore"
 ]
 },
+"bal-chavaux|giles corey et drowse a bal chavaux": {
+"genres": [
+"experimental",
+"folk",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"drone",
+"neofolk",
+"slowcore"
+]
+},
 "bal-chavaux|half pipe patrick coutin": {
 "genres": [
 "rock"
@@ -3409,6 +3422,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"bal-chavaux|rai sentimental": {
+"genres": [
+"world",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"raï"
+]
 },
 "bal-chavaux|roadrunners": {
 "genres": [
@@ -4392,6 +4415,11 @@
 "romantic",
 "piano recital"
 ]
+},
+"bibliotheque-drouot|soiree guitare et chants": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "bibliotheque-drouot|tous en ch ur la musique au feminin": {
 "genres": [],
@@ -6234,6 +6262,19 @@
 "subgenres": [
 "post-metal",
 "blackgaze"
+]
+},
+"cirque-electrique|neon bay melasse grrrotesque from our bodies the church will burn down release party": {
+"genres": [
+"punk",
+"metal",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"hardcore",
+"screamo",
+"noise"
 ]
 },
 "cirque-electrique|oberkampf musique presente niboby collective concert et jam groove": {
@@ -9884,6 +9925,15 @@
 "rap français"
 ]
 },
+"fgo-barbara|ronis goliath the game tour": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "fgo-barbara|saoirse dream estelle allen michele bry": {
 "genres": [
 "soul-rnb",
@@ -11636,6 +11686,15 @@
 "soca"
 ]
 },
+"la-bellevilloise|candlelight babies": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"string quartet"
+]
+},
 "la-bellevilloise|cavalli mongoli": {
 "genres": [
 "indie",
@@ -13140,6 +13199,16 @@
 "garage rock"
 ]
 },
+"la-boule-noire|princesses leya": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage punk"
+]
+},
 "la-boule-noire|pyo": {
 "genres": [
 "pop",
@@ -13434,6 +13503,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-boule-noire|witchorious": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"doom metal",
+"sludge"
+]
 },
 "la-boule-noire|xam": {
 "genres": [
@@ -14503,6 +14582,17 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"la-dame-de-canton|bodie x bachar murad": {
+"genres": [
+"pop",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic pop",
+"alt-pop"
 ]
 },
 "la-dame-de-canton|celestin": {
@@ -16021,6 +16111,15 @@
 "subgenres": [
 "fanfare",
 "carnival"
+]
+},
+"la-marbrerie|noizey kids invites t no x 33virgile x onoema x kimo x k jackpot": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "la-marbrerie|panam not dead 6 cockney rejects friends": {
@@ -21840,6 +21939,17 @@
 "spectralism"
 ]
 },
+"le-saumur|festival de musique africaine et des caraibes": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"zouk",
+"rumba congolaise"
+]
+},
 "le-son-de-la-terre|1 voix 6 cordes de claude a nougaro": {
 "genres": [
 "chanson",
@@ -23386,6 +23496,18 @@
 "is_music": true,
 "subgenres": []
 },
+"le-triton|fabiana striffler karsten hochapfel match": {
+"genres": [
+"jazz",
+"experimental",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"improvisation",
+"chamber"
+]
+},
 "le-triton|henri texier": {
 "genres": [
 "jazz"
@@ -23427,6 +23549,14 @@
 "double bass"
 ]
 },
+"le-triton|les etrangers familiers carte blanche a la compagnie des musiques a ouir": {
+"genres": [
+"chanson",
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-triton|levy bex goubert jazz revolution": {
 "genres": [
 "jazz"
@@ -23451,6 +23581,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-triton|manudo en langue brulee": {
+"genres": [
+"jazz",
+"chanson",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"improvisation"
+]
 },
 "le-triton|maria laura baccarini et helene labarriere": {
 "genres": [
@@ -23529,6 +23670,15 @@
 "improvised music"
 ]
 },
+"le-triton|william te chin trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano trio"
+]
+},
 "le-triton|yumi ito": {
 "genres": [
 "jazz"
@@ -23536,6 +23686,17 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"le-truskel|aikin eliemot": {
+"genres": [
+"indie",
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie rock"
 ]
 },
 "le-truskel|bisous": {
@@ -33767,6 +33928,16 @@
 "bossa nova"
 ]
 },
+"sunset-sunside|hommage a stan getz concert thematique": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"bossa nova"
+]
+},
 "sunset-sunside|hommage a thelonious monk avec laurent courthaliac jam session": {
 "genres": [
 "jazz"
@@ -33813,6 +33984,18 @@
 "is_music": true,
 "subgenres": [
 "contemporary jazz"
+]
+},
+"sunset-sunside|hulk exp": {
+"genres": [
+"jazz",
+"experimental",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"free jazz",
+"noise rock"
 ]
 },
 "sunset-sunside|hypnagogic drift": {
@@ -35132,6 +35315,16 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"sunset-sunside|walt weiskopf quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop",
+"post-bop"
 ]
 },
 "sunset-sunside|william brunard laurent coulondre romain sarron": {
@@ -37141,6 +37334,17 @@
 "is_music": true,
 "subgenres": [
 "traditional songs"
+]
+},
+"theatre-essaion|abyr en concert au theatre de l essaion a paris": {
+"genres": [
+"world",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"arabic song",
+"spoken poetry"
 ]
 },
 "theatre-juliette-recamier|memoires vivantes ensemble vocal sequenza 9 3": {
