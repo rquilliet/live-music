@@ -4829,6 +4829,17 @@
 "is_music": false,
 "subgenres": []
 },
+"cabaret-sauvage|grand concert hommage a francois castiello": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"musique tzigane",
+"balkan"
+]
+},
 "cabaret-sauvage|hommage a francois castiello": {
 "genres": [
 "world",
@@ -7321,6 +7332,16 @@
 "is_music": true,
 "subgenres": [
 "strings"
+]
+},
+"conservatoire-municipal-nadia-et-lili-boulanger|audition des ensembles de musique ancienne": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"early music",
+"baroque"
 ]
 },
 "conservatoire-municipal-nadia-et-lili-boulanger|beethoven transcrit": {
@@ -11711,6 +11732,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-bellevilloise|classics only": {
+"genres": [
+"hip-hop",
+"soul-rnb",
+"funk"
+],
+"is_music": true,
+"subgenres": [
+"90s classics"
+]
+},
 "la-bellevilloise|classics only halloween": {
 "genres": [
 "hip-hop",
@@ -11813,6 +11845,17 @@
 "is_music": true,
 "subgenres": [
 "mariachi"
+]
+},
+"la-bellevilloise|fierce faces punk cunt": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"queercore",
+"riot grrrl"
 ]
 },
 "la-bellevilloise|fiesta de los muertos": {
@@ -15831,6 +15874,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-machine|wet for me is a lesbo a good emo": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno"
+]
 },
 "la-machine|wet for me the queer season starts here": {
 "genres": [
@@ -23149,6 +23201,18 @@
 "portuguese pop"
 ]
 },
+"le-trianon|pony pony run run": {
+"genres": [
+"pop",
+"indie",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"electropop",
+"indie pop"
+]
+},
 "le-trianon|pony pony run run au trianon": {
 "genres": [
 "pop",
@@ -23977,6 +24041,15 @@
 "is_music": true,
 "subgenres": [
 "club night"
+]
+},
+"le-truskel|tribute muse": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"alternative rock"
 ]
 },
 "le-truskel|zabe la rouge paris after six": {
@@ -25172,6 +25245,18 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"mission-bretonne-ti-ar-vretoned|showcase concert et mini fest noz graal conte feerique arthurien": {
+"genres": [
+"folk",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"breton music",
+"fest-noz",
+"conte musical"
+]
 },
 "mission-bretonne|concert de la harpiste cecile corbel a la mission bretonne": {
 "genres": [
