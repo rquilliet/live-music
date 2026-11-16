@@ -5417,6 +5417,14 @@
 "instrumental rock"
 ]
 },
+"cafe-de-la-danse|lorenz": {
+"genres": [
+"world",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "cafe-de-la-danse|lou adriane cassidy": {
 "genres": [
 "chanson",
@@ -6653,6 +6661,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|big bands de jazz crr et cnsmdp de paris": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"big band"
+]
 },
 "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|ch urs de clarinettes": {
 "genres": [
@@ -8239,6 +8256,18 @@
 "mediterranean"
 ]
 },
+"eglise-saint-merry|lussine levoni soprano varduhi yeritsyan piano": {
+"genres": [
+"classical",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"opera",
+"sacred music",
+"armenian traditional"
+]
+},
 "eglise-saint-merry|maitrise du conservatoire de chartres philippe fremont chef de choeur murielle petit piano": {
 "genres": [
 "classical"
@@ -8266,6 +8295,17 @@
 "is_music": true,
 "subgenres": [
 "classical guitar"
+]
+},
+"eglise-saint-merry|sofia falkovitch mezzo soprano et didier matry orgue": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"sacred music",
+"organ",
+"lieder"
 ]
 },
 "eglise-saint-merry|sophia vaillant piano": {
@@ -8302,6 +8342,15 @@
 "is_music": true,
 "subgenres": [
 "symphony",
+"romantic"
+]
+},
+"eglise-saint-philippe-du-roule|concert de musique classique mendelssohn et berlioz": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
 "romantic"
 ]
 },
@@ -9511,6 +9560,17 @@
 "hard rock"
 ]
 },
+"elysee-montmartre|underoath": {
+"genres": [
+"metal",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"metalcore",
+"post-hardcore"
+]
+},
 "elysee-montmartre|vive la fete potochkine": {
 "genres": [
 "electro",
@@ -9673,6 +9733,14 @@
 "subgenres": [
 "rap français"
 ]
+},
+"fgo-barbara|crossed feelings": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
 },
 "fgo-barbara|draft malter liouba gt1boiavantcsurr": {
 "genres": [
@@ -18071,6 +18139,17 @@
 "blues rock"
 ]
 },
+"la-petite-halle|theo ceccaldi the final bloom": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"free jazz",
+"improvised music"
+]
+},
 "la-petite-halle|thiefs papatef": {
 "genres": [
 "jazz",
@@ -18446,6 +18525,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-seine-musicale|beethoven": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphony",
+"romantic"
+]
+},
 "la-seine-musicale|beethoven et la nature": {
 "genres": [
 "classical"
@@ -18481,6 +18570,16 @@
 "subgenres": [
 "symphonic",
 "romantic"
+]
+},
+"la-seine-musicale|beethoven weber": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"romantic",
+"symphony"
 ]
 },
 "la-seine-musicale|bireli lagrene": {
@@ -26550,6 +26649,14 @@
 "rap français"
 ]
 },
+"nouveau-casino|superthai first roar": {
+"genres": [
+"electro",
+"hip-hop"
+],
+"is_music": true,
+"subgenres": []
+},
 "nouveau-casino|take me out antimatter sleeping pulse en concert a paris": {
 "genres": [
 "rock",
@@ -26667,6 +26774,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"olympia|daoud": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
 },
 "olympia|decrochez des places pour le concert des wriggles": {
 "genres": [
@@ -26790,6 +26906,17 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"olympia|lio": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"synth-pop",
+"new wave"
+]
 },
 "olympia|loic nottet": {
 "genres": [
