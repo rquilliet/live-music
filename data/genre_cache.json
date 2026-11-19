@@ -786,6 +786,26 @@
 "jazz manouche"
 ]
 },
+"38riv-jazz-club|igor osypov quartet en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"jazz fusion"
+]
+},
+"38riv-jazz-club|igor osypov quintet en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"jazz fusion"
+]
+},
 "38riv-jazz-club|jake sherman en concert au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -1321,6 +1341,16 @@
 "gypsy jazz"
 ]
 },
+"38riv-jazz-club|richard sears invite joe sanders jeff ballard en concert": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"piano trio"
+]
+},
 "38riv-jazz-club|richard sears quartet invite sandro zerafa au 38riv jazz cl": {
 "genres": [
 "jazz"
@@ -1586,6 +1616,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"38riv-jazz-club|woohp trio en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"chamber jazz",
+"standards"
+]
 },
 "38riv-jazz-club|xavier belin baptiste poulin crossing au 38riv jazz club jss26": {
 "genres": [
@@ -2165,6 +2205,16 @@
 "subgenres": [
 "alternative rock",
 "singer-songwriter"
+]
+},
+"alhambra|patrice": {
+"genres": [
+"reggae",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"dancehall"
 ]
 },
 "alhambra|pauline croze": {
@@ -3387,6 +3437,18 @@
 "noise rock"
 ]
 },
+"bal-chavaux|jazzcore 2 au bal chavaux": {
+"genres": [
+"experimental",
+"rock",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-rock",
+"noise"
+]
+},
 "bal-chavaux|jessica93 maria violenza la scroafa emputecida noir boy george": {
 "genres": [
 "punk",
@@ -3879,6 +3941,16 @@
 "hard rock"
 ]
 },
+"bataclan|deryck whibley": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"pop-punk"
+]
+},
 "bataclan|devin townsend": {
 "genres": [
 "metal"
@@ -4086,6 +4158,18 @@
 "is_music": true,
 "subgenres": [
 "black metal"
+]
+},
+"bataclan|kardes turkuler": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"turkish folk",
+"kurdish music",
+"anatolian"
 ]
 },
 "bataclan|kovacs": {
@@ -4796,6 +4880,15 @@
 "oud"
 ]
 },
+"bibliotheque-publique-d-information|concert bruits blancs 16eme edition": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"free improvisation"
+]
+},
 "bibliotheque-publique-d-information|enregistrement public de l emission metaclassique": {
 "genres": [
 "classical"
@@ -5195,6 +5288,15 @@
 "is_music": true,
 "subgenres": [
 "balkan"
+]
+},
+"cabaret-sauvage|the urs mark stam": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"eastern european pop"
 ]
 },
 "cabaret-sauvage|wafa oudjit": {
@@ -5966,6 +6068,17 @@
 "vocal jazz"
 ]
 },
+"centre-culturel-armenien-alex-manoogian|jazzmazz naissam jalal en concert": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"oriental jazz",
+"middle eastern"
+]
+},
 "centre-culturel-armenien-alex-manoogian|jazzmazz zeit zeitoun presente son nouvel album soukoun": {
 "genres": [
 "jazz",
@@ -6061,6 +6174,14 @@
 "centre-paris-anim-bessie-smith-ex-reuilly|jam latino": {
 "genres": [
 "latin"
+],
+"is_music": true,
+"subgenres": []
+},
+"centre-paris-anim-bessie-smith-ex-reuilly|show de mell et jam latino": {
+"genres": [
+"latin",
+"electro"
 ],
 "is_music": true,
 "subgenres": []
@@ -6707,6 +6828,16 @@
 "is_music": true,
 "subgenres": []
 },
+"cirque-electrique|suz a l anticlub politic lovers presente marave tapage": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"hardcore"
+]
+},
 "cirque-electrique|syrano feat danielito bravo de tryo concert anniversaire marin fauvel": {
 "genres": [
 "chanson",
@@ -7179,6 +7310,13 @@
 "dream pop"
 ]
 },
+"conservatoire-municipal-charles-munch|blue note": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "conservatoire-municipal-charles-munch|concert de musique carnatique inde du sud suryaprakash classical trio": {
 "genres": [
 "world",
@@ -7188,6 +7326,16 @@
 "subgenres": [
 "carnatic",
 "indian classical"
+]
+},
+"conservatoire-municipal-charles-munch|concert maa": {
+"genres": [
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"musiques actuelles amplifiées"
 ]
 },
 "conservatoire-municipal-charles-munch|grand concert de l orchestre enjeux": {
@@ -7208,6 +7356,16 @@
 "subgenres": [
 "free jazz",
 "saxophone"
+]
+},
+"conservatoire-municipal-charles-munch|noel baroque": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"choral"
 ]
 },
 "conservatoire-municipal-charles-munch|percussions": {
@@ -7570,6 +7728,16 @@
 "is_music": true,
 "subgenres": [
 "poetry and music"
+]
+},
+"conservatoire-municipal-jean-philippe-rameau|escapade musicale voyage autour de faust": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"opera",
+"romantic"
 ]
 },
 "conservatoire-municipal-maurice-ravel|concert de l orchestre des jeunes altistes parisiens ojap": {
@@ -10790,6 +10958,18 @@
 "cold wave"
 ]
 },
+"glazart|concert lugosi l idylle long lost": {
+"genres": [
+"rock",
+"punk",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"shoegaze"
+]
+},
 "glazart|concert predition temple force of darkness hexekration rites": {
 "genres": [
 "metal"
@@ -12857,6 +13037,17 @@
 "reggaeton"
 ]
 },
+"la-bellevilloise|una fiesta latina": {
+"genres": [
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"salsa",
+"reggaeton",
+"cumbia"
+]
+},
 "la-bellevilloise|vendredixxl": {
 "genres": [
 "electro",
@@ -13029,10 +13220,28 @@
 "singer-songwriter"
 ]
 },
+"la-boule-noire|blooming discord": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-hardcore"
+]
+},
 "la-boule-noire|blue boys club": {
 "genres": [
 "rock",
 "indie"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-boule-noire|blue katrice anaysa": {
+"genres": [
+"soul-rnb",
+"pop"
 ],
 "is_music": true,
 "subgenres": []
@@ -13687,6 +13896,18 @@
 "is_music": true,
 "subgenres": [
 "garage punk"
+]
+},
+"la-boule-noire|priya ragu": {
+"genres": [
+"soul-rnb",
+"pop",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"tamil pop",
+"neo-soul"
 ]
 },
 "la-boule-noire|pyo": {
@@ -15039,6 +15260,17 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dame-de-canton|arthur dart": {
+"genres": [
+"chanson",
+"pop",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
 "la-dame-de-canton|bckst": {
 "genres": [
 "pop",
@@ -15395,6 +15627,16 @@
 "subgenres": [
 "funk rock",
 "rap rock"
+]
+},
+"la-dame-de-canton|rares x 1ere partie roberto cicogna": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
 ]
 },
 "la-dame-de-canton|roland decembre x line marsa x aylon": {
@@ -15765,6 +16007,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-gaite-lyrique|maelle": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-gaite-lyrique|mutek x nightclubbing": {
 "genres": [
 "electro"
@@ -15773,6 +16023,14 @@
 "subgenres": [
 "techno"
 ]
+},
+"la-gaite-lyrique|nilusi": {
+"genres": [
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-gaite-lyrique|tendre nuit une soiree poetique pour reparer les coeurs": {
 "genres": [
@@ -16819,6 +17077,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-maroquinerie|agriculture": {
+"genres": [
+"metal",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"black metal"
+]
 },
 "la-maroquinerie|allt": {
 "genres": [
@@ -24670,6 +24938,17 @@
 "garage punk"
 ]
 },
+"le-truskel|pampam cathy": {
+"genres": [
+"rock",
+"punk",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage"
+]
+},
 "le-truskel|pao simon detour": {
 "genres": [
 "indie",
@@ -25342,6 +25621,15 @@
 "is_music": true,
 "subgenres": [
 "romantic"
+]
+},
+"mairie-du-11e-arrondissement|jazz dansant": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing"
 ]
 },
 "mairie-du-20e-arrondissement|concert de restitution de la jeune scene lyrique": {
@@ -28640,6 +28928,16 @@
 "ebm"
 ]
 },
+"petit-bain|knives": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"noise rock"
+]
+},
 "petit-bain|la coka nostra": {
 "genres": [
 "hip-hop"
@@ -28711,6 +29009,18 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"petit-bain|man woman chainsaw": {
+"genres": [
+"indie",
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"art rock"
+]
 },
 "petit-bain|marko hietala": {
 "genres": [
@@ -30288,6 +30598,15 @@
 "contemporary classical"
 ]
 },
+"philharmonie|studio 19 moutons libres": {
+"genres": [
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"sound creation"
+]
+},
 "philharmonie|su": {
 "genres": [
 "world"
@@ -30396,6 +30715,11 @@
 "is_music": false,
 "subgenres": []
 },
+"point-ephemere|30 ans de raisons d agir": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|3672 techno": {
 "genres": [
 "electro"
@@ -30488,6 +30812,14 @@
 "point-ephemere|beaujolais nouveau": {
 "genres": [
 "electro"
+],
+"is_music": true,
+"subgenres": []
+},
+"point-ephemere|bitchounes dream fever judy vendredi": {
+"genres": [
+"electro",
+"pop"
 ],
 "is_music": true,
 "subgenres": []
@@ -31461,6 +31793,16 @@
 "garage rock"
 ]
 },
+"point-ephemere|the country western alternative": {
+"genres": [
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"country",
+"americana"
+]
+},
 "point-ephemere|the funeral party halloween": {
 "genres": [
 "electro",
@@ -32196,6 +32538,13 @@
 "subgenres": [
 "piano trio"
 ]
+},
+"popup|mardi jazz avec mario ponce enrile clement trimouille guy david stephane chandelier": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
 },
 "popup|mardi jazz avec martin jacobsen alain jean marie yoni zelnik stephane chandelier": {
 "genres": [
@@ -33630,6 +33979,17 @@
 "vocal jazz"
 ]
 },
+"sunset-sunside|amaro freitas": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"afro-brazilian",
+"piano jazz"
+]
+},
 "sunset-sunside|andre villeger quartet avec alain jean marie": {
 "genres": [
 "jazz"
@@ -34010,6 +34370,16 @@
 "piano trio"
 ]
 },
+"sunset-sunside|cesar quintet": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
 "sunset-sunside|charlotte reinhardt": {
 "genres": [
 "jazz"
@@ -34038,6 +34408,16 @@
 "subgenres": [
 "burt bacharach songbook",
 "cinematic pop"
+]
+},
+"sunset-sunside|chloe pfeiffer ensemble dixit": {
+"genres": [
+"jazz",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"crossover"
 ]
 },
 "sunset-sunside|christie dashiell quartet": {
@@ -34313,6 +34693,16 @@
 "subgenres": [
 "swing",
 "ellington repertoire"
+]
+},
+"sunset-sunside|elisabeth salaun": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"guitar duo"
 ]
 },
 "sunset-sunside|elsa darnal quartet": {
@@ -34596,6 +34986,16 @@
 "gypsy jazz"
 ]
 },
+"sunset-sunside|haim isaacs sextet joue joni mitchell": {
+"genres": [
+"jazz",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
 "sunset-sunside|hallelujah hommage a jeff buckley": {
 "genres": [
 "rock",
@@ -34843,6 +35243,17 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"sunset-sunside|hommage a jobim avec paris bossa nova": {
+"genres": [
+"latin",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bossa nova",
+"mpb"
 ]
 },
 "sunset-sunside|hommage a john coltrane coltrane s sound avec les blakettes jam": {
@@ -35472,6 +35883,27 @@
 "bebop"
 ]
 },
+"sunset-sunside|laurent coulondre buy lopez nussa": {
+"genres": [
+"jazz",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"afro-cuban",
+"piano jazz"
+]
+},
+"sunset-sunside|laurent courthaliac quartet ft hugh coltman": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop",
+"vocal jazz"
+]
+},
 "sunset-sunside|laurent de wilde trio": {
 "genres": [
 "jazz"
@@ -35687,6 +36119,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"sunset-sunside|marc perrenoud christoph irniger": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz",
+"improvisation"
+]
 },
 "sunset-sunside|matthieu bore quintet": {
 "genres": [
@@ -36048,6 +36490,15 @@
 "subgenres": [
 "organ trio",
 "jazz guitar"
+]
+},
+"sunset-sunside|severine eouzan le flexband": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
 ]
 },
 "sunset-sunside|simela namavar quartet": {
@@ -36437,6 +36888,16 @@
 "is_music": true,
 "subgenres": [
 "groove"
+]
+},
+"sunset-sunside|yumiko yamashita medium ensemble": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"chamber jazz",
+"improvisation"
 ]
 },
 "sunset-sunside|zora trio": {
