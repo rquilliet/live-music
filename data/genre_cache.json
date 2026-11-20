@@ -2536,6 +2536,11 @@
 "choral"
 ]
 },
+"angle-popincourt-chemin-vert|fete de quartier village popincourt": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "atelier-aoflo|artichaut de decembre apero et concert baroque": {
 "genres": [
 "classical"
@@ -3179,6 +3184,11 @@
 "bal"
 ]
 },
+"badaboum|la magic live by darling deluxe speciale noel": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "badaboum|moizo brinkert feather aid la mecanique ondulatoire": {
 "genres": [
 "rock",
@@ -3228,6 +3238,16 @@
 "trap"
 ]
 },
+"bal-chavaux|after bal de l aeri tactic x trio mihisa": {
+"genres": [
+"world",
+"afro"
+],
+"is_music": true,
+"subgenres": [
+"malagasy music"
+]
+},
 "bal-chavaux|afterhours tour 2027 quello che non c e": {
 "genres": [
 "rock",
@@ -3236,6 +3256,16 @@
 "is_music": true,
 "subgenres": [
 "alternative rock"
+]
+},
+"bal-chavaux|bandabardo": {
+"genres": [
+"rock",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"italian folk rock"
 ]
 },
 "bal-chavaux|beirut groove collective": {
@@ -3752,6 +3782,15 @@
 "gothic rock"
 ]
 },
+"bal-chavaux|yonaka": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"alternative rock"
+]
+},
 "base-217-du-plessis-pate|la fete de l humanite": {
 "genres": [
 "pop",
@@ -4170,6 +4209,17 @@
 "turkish folk",
 "kurdish music",
 "anatolian"
+]
+},
+"bataclan|kardes turkuler hommage a ahmet kaya": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"anatolian folk",
+"turkish"
 ]
 },
 "bataclan|kovacs": {
@@ -4961,6 +5011,11 @@
 "storytelling"
 ]
 },
+"bibliotheque-valeyre|il fait noir enfant voleur d etincelles": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "bibliotheque-valeyre|monte le son camille laily": {
 "genres": [
 "chanson",
@@ -5343,6 +5398,14 @@
 "subgenres": [
 "singer-songwriter"
 ]
+},
+"cafe-de-la-danse|artdeco": {
+"genres": [
+"pop",
+"rock"
+],
+"is_music": true,
+"subgenres": []
 },
 "cafe-de-la-danse|axel deval": {
 "genres": [
@@ -6035,6 +6098,16 @@
 "subgenres": [
 "baroque",
 "sacred choral"
+]
+},
+"cathedrale-saint-louis|monteverdi vepres de la vierge cori spezzati versailles": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"sacred music"
 ]
 },
 "cathedrale-sainte-croix-des-armeniens|concert 55e anniversaire de la chorale franco allemande de paris": {
@@ -6800,6 +6873,16 @@
 "industrial"
 ]
 },
+"cirque-electrique|soiree de soutien aux reprime e s du mouvement social 2035 rio autobahn": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
+},
 "cirque-electrique|spel x folded woodini fthmlss asta hiroki peine rose": {
 "genres": [
 "electro",
@@ -7317,6 +7400,15 @@
 "is_music": true,
 "subgenres": []
 },
+"conservatoire-municipal-charles-munch|concert de l orchestre symphonique charles munch": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
+]
+},
 "conservatoire-municipal-charles-munch|concert de musique carnatique inde du sud suryaprakash classical trio": {
 "genres": [
 "world",
@@ -7435,6 +7527,16 @@
 "renaissance",
 "baroque",
 "madrigal"
+]
+},
+"conservatoire-municipal-darius-milhaud|cafe concert improvise": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"standards",
+"improvisation"
 ]
 },
 "conservatoire-municipal-darius-milhaud|carte blanche a francois bousch": {
@@ -8029,6 +8131,13 @@
 "guitar jazz"
 ]
 },
+"duc-des-lombards|jam du duc alex monfort": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "duc-des-lombards|jam du duc gael horellou": {
 "genres": [
 "jazz"
@@ -8363,6 +8472,16 @@
 "is_music": true,
 "subgenres": [
 "chamber music"
+]
+},
+"eglise-nd-des-blancs-manteaux|monteverdi vepres de la vierge cori spezzati paris 4e": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"baroque",
+"sacred music"
 ]
 },
 "eglise-notre-dame-de-la-salette|musique baroque allemande": {
@@ -13262,6 +13381,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|chaka": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "la-boule-noire|charles dolle": {
 "genres": [
 "chanson",
@@ -16032,6 +16160,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-gaite-lyrique|nilusi 1ere partie eugenie": {
+"genres": [
+"pop",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-gaite-lyrique|tendre nuit une soiree poetique pour reparer les coeurs": {
 "genres": [
 "chanson",
@@ -17086,6 +17222,18 @@
 "is_music": true,
 "subgenres": [
 "black metal"
+]
+},
+"la-maroquinerie|al tarba yoshi meets s o a p lewca": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"trip-hop",
+"instrumental hip-hop",
+"rap français"
 ]
 },
 "la-maroquinerie|allt": {
@@ -18275,6 +18423,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-maroquinerie|stephane": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-maroquinerie|sumac dub": {
 "genres": [
 "reggae",
@@ -18783,6 +18939,15 @@
 "is_music": true,
 "subgenres": []
 },
+"la-petite-halle|la cuisine de gildaa": {
+"genres": [
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"neo-soul"
+]
+},
 "la-petite-halle|la cuisine de gildaa i 01 10 26": {
 "genres": [
 "soul-rnb"
@@ -18971,6 +19136,13 @@
 "subgenres": []
 },
 "la-petite-halle|veeko residence 1 i 13 11 26": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-petite-halle|veeko residence 2": {
 "genres": [
 "pop"
 ],
@@ -22766,6 +22938,13 @@
 "is_music": true,
 "subgenres": []
 },
+"le-plan|chest honk gong": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-plan|coeur de pirate suzanne belaubre": {
 "genres": [
 "pop",
@@ -25407,6 +25586,16 @@
 "is_music": true,
 "subgenres": []
 },
+"les-trois-baudets|michelle ashley foster": {
+"genres": [
+"folk",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter"
+]
+},
 "les-trois-baudets|nuit noire roukie": {
 "genres": [
 "indie",
@@ -25631,6 +25820,13 @@
 "subgenres": [
 "swing"
 ]
+},
+"mairie-du-11e-arrondissement|live pop": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
 },
 "mairie-du-20e-arrondissement|concert de restitution de la jeune scene lyrique": {
 "genres": [
@@ -29051,6 +29247,14 @@
 "chaabi"
 ]
 },
+"petit-bain|mon cher guy": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "petit-bain|mother s cake": {
 "genres": [
 "rock"
@@ -31312,6 +31516,17 @@
 "garage punk"
 ]
 },
+"point-ephemere|kebra noite": {
+"genres": [
+"electro",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"baile funk",
+"brazilian funk"
+]
+},
 "point-ephemere|kleopatra divine": {
 "genres": [
 "electro",
@@ -32317,6 +32532,14 @@
 "garage punk"
 ]
 },
+"popup|grand eugene": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|guacayo dancing in the moonlight tour": {
 "genres": [
 "latin",
@@ -33165,6 +33388,14 @@
 "subgenres": [
 "americana"
 ]
+},
+"popup|true mountain laurel june carousel": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": []
 },
 "popup|twin blade vickie cherie": {
 "genres": [
@@ -35321,6 +35552,16 @@
 "rhythm and blues"
 ]
 },
+"sunset-sunside|hommage a roland kirk eric dolphy avec ludivine issambourg quintet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-bop",
+"free jazz"
+]
+},
 "sunset-sunside|hommage a serge gainsbourg": {
 "genres": [
 "chanson",
@@ -35537,6 +35778,15 @@
 "kids concert"
 ]
 },
+"sunset-sunside|jazz gouter fete django reinhardt avec liane limon quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"gypsy jazz"
+]
+},
 "sunset-sunside|jazz gouter fete elvis presley": {
 "genres": [
 "jazz"
@@ -35544,6 +35794,16 @@
 "is_music": true,
 "subgenres": [
 "rock'n'roll covers"
+]
+},
+"sunset-sunside|jazz gouter fete frank sinatra nat king cole avec matthieu bore quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"crooner"
 ]
 },
 "sunset-sunside|jazz gouter fete halloween": {
@@ -35555,6 +35815,35 @@
 "swing"
 ]
 },
+"sunset-sunside|jazz gouter fete l amour de nina simone a madonna avec lea castro quartet": {
+"genres": [
+"jazz",
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
+"sunset-sunside|jazz gouter fete l histoire du rock n roll de elvis presley aux beatles avec mathieu bore quartet": {
+"genres": [
+"jazz",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"rock'n'roll"
+]
+},
+"sunset-sunside|jazz gouter fete la grande chanson francaise de trenet a brassens avec matthieu bore quartet": {
+"genres": [
+"chanson",
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
 "sunset-sunside|jazz gouter fete la musique bresilienne samba bossa nova de joao gilberto a jobim": {
 "genres": [
 "latin",
@@ -35565,6 +35854,14 @@
 "bossa nova",
 "samba"
 ]
+},
+"sunset-sunside|jazz gouter fete le carnaval des animaux avec morgane dessislava quartet": {
+"genres": [
+"jazz",
+"classical"
+],
+"is_music": true,
+"subgenres": []
 },
 "sunset-sunside|jazz gouter fete les beatles": {
 "genres": [
@@ -35583,6 +35880,15 @@
 "is_music": true,
 "subgenres": [
 "comptines"
+]
+},
+"sunset-sunside|jazz gouter fete les comptines avec pierre yves plat": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano jazz"
 ]
 },
 "sunset-sunside|jazz gouter fete les divas du jazz nina simone billie holiday et ella fitzgerald": {
@@ -35604,6 +35910,15 @@
 "swing"
 ]
 },
+"sunset-sunside|jazz gouter fete stevie wonder elton john avec lea castro quartet": {
+"genres": [
+"soul-rnb",
+"jazz",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "sunset-sunside|jazz gouter fete walt disney": {
 "genres": [
 "jazz"
@@ -35613,6 +35928,15 @@
 "film music"
 ]
 },
+"sunset-sunside|jazz gouter fete walt disney avec morgane dessislava quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
+]
+},
 "sunset-sunside|jazz gouter speak english": {
 "genres": [
 "jazz"
@@ -35620,6 +35944,15 @@
 "is_music": true,
 "subgenres": [
 "swing"
+]
+},
+"sunset-sunside|jazz gouter speak english avec pierre yves plat melissa": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano jazz"
 ]
 },
 "sunset-sunside|jazz gouter toute la programmation": {
@@ -39148,6 +39481,15 @@
 "subgenres": [
 "alternative rock",
 "90s rock"
+]
+},
+"theatre-traversiere|festival de guitare de paris": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"classical guitar"
 ]
 },
 "theatre-traversiere|nuages cine concert jeune public": {
