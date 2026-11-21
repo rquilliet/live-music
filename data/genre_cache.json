@@ -658,6 +658,17 @@
 "vocal jazz"
 ]
 },
+"38riv-jazz-club|gabrielle sandman raconte boris vian a kind of cabaret au 38riv jazz club": {
+"genres": [
+"jazz",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"cabaret",
+"swing"
+]
+},
 "38riv-jazz-club|gilliam sayad standards trio au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -874,6 +885,17 @@
 "piano jazz"
 ]
 },
+"38riv-jazz-club|jean saint loubert trio compositions au 38riv jazz club": {
+"genres": [
+"jazz",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"piano trio"
+]
+},
 "38riv-jazz-club|jeanne lee par aulne en concert au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -894,6 +916,16 @@
 ]
 },
 "38riv-jazz-club|jules charbonnier trio en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz",
+"standards"
+]
+},
+"38riv-jazz-club|jules charbonnier trio standards compositions au 38riv jazz club": {
 "genres": [
 "jazz"
 ],
@@ -1028,6 +1060,16 @@
 "subgenres": [
 "contemporary jazz",
 "big band"
+]
+},
+"38riv-jazz-club|live for gil hommage a gil evans au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"big band",
+"cool jazz"
 ]
 },
 "38riv-jazz-club|lluc casares paris trio en concert au 38riv jazz club": {
@@ -1838,6 +1880,17 @@
 "is_music": false,
 "subgenres": []
 },
+"alhambra|allie sherlock": {
+"genres": [
+"pop",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter",
+"acoustic pop"
+]
+},
 "alhambra|amenra": {
 "genres": [
 "metal"
@@ -2106,6 +2159,17 @@
 "subgenres": [
 "mpb",
 "brazilian"
+]
+},
+"alhambra|les soignantes chantent noel": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"christmas songs",
+"choral"
 ]
 },
 "alhambra|levi sct": {
@@ -6390,6 +6454,17 @@
 "field recording"
 ]
 },
+"cirque-electrique|856 arno de cea the clockwork wizards cul zag inred": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock",
+"noise rock"
+]
+},
 "cirque-electrique|almost famous presente clegane release party pray kugelblitz": {
 "genres": [
 "metal",
@@ -8024,6 +8099,15 @@
 "romantic"
 ]
 },
+"crl10-centre-paris-anim-espace-jemmapes|c ur majeur en concert soiree de lancement de l album tu m aventures et du recueil de poesies unis vers": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"poésie en musique"
+]
+},
 "dernier-bar-avant-la-fin-du-monde|jam session": {
 "genres": [
 "rock",
@@ -8169,6 +8253,16 @@
 "subgenres": [
 "hard bop",
 "spiritual jazz"
+]
+},
+"duc-des-lombards|jultrane confirmation sortie d album": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-bop",
+"saxophone jazz"
 ]
 },
 "duc-des-lombards|kassa overall": {
@@ -8552,6 +8646,17 @@
 "subgenres": [
 "renaissance polyphony",
 "vocal quartet"
+]
+},
+"eglise-notre-dame-du-travail|polyphonies italiennes traditionnelles chants de noel des differentes regions d italie": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"italian polyphony",
+"christmas songs"
 ]
 },
 "eglise-reformee-du-saint-esprit|concert gospel de noel avec voice2gether": {
@@ -9199,6 +9304,16 @@
 "subgenres": [
 "balkan",
 "gypsy music"
+]
+},
+"eglise-st-philippe-du-roule|grand concert du nouvel an": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"strings",
+"new year concert"
 ]
 },
 "eglise-st-philippe-du-roule|grand concert tango guitare couple de danseurs": {
@@ -15487,6 +15602,16 @@
 "chanson électronique"
 ]
 },
+"la-dame-de-canton|cool cats x razana x penny redwood": {
+"genres": [
+"world",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"malagasy"
+]
+},
 "la-dame-de-canton|dire straits tribute by straits": {
 "genres": [
 "rock"
@@ -16666,6 +16791,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-machine|serane kasper939": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno"
+]
 },
 "la-machine|sethlo": {
 "genres": [
@@ -21732,6 +21866,15 @@
 "is_music": true,
 "subgenres": []
 },
+"le-grand-rex|great straits": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"classic rock"
+]
+},
 "le-grand-rex|imany": {
 "genres": [
 "soul-rnb",
@@ -24484,6 +24627,16 @@
 "hard rock"
 ]
 },
+"le-trianon|the pineapple thief": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"progressive rock",
+"art rock"
+]
+},
 "le-trianon|transfert les 10ans": {
 "genres": [
 "electro"
@@ -25205,6 +25358,16 @@
 "is_music": true,
 "subgenres": [
 "alternative rock"
+]
+},
+"le-truskel|waarhead dalishka": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage punk"
 ]
 },
 "le-truskel|zabe la rouge paris after six": {
@@ -29941,6 +30104,16 @@
 "baroque"
 ]
 },
+"philharmonie|chamber orchestra of europe yannick nezet seguin": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber orchestra",
+"symphonic"
+]
+},
 "philharmonie|chanter le feminisme": {
 "genres": [
 "chanson"
@@ -30556,6 +30729,15 @@
 "orchestral"
 ]
 },
+"philharmonie|orchestre de paris alan gilbert": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
+]
+},
 "philharmonie|orchestre de paris klaus makela": {
 "genres": [
 "classical"
@@ -30735,6 +30917,16 @@
 "contemporary vocal ensemble"
 ]
 },
+"philharmonie|rotterdam philharmonic orchestra shani argerich": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic",
+"piano concerto"
+]
+},
 "philharmonie|rythme signe": {
 "genres": [
 "experimental",
@@ -30753,6 +30945,15 @@
 "is_music": true,
 "subgenres": [
 "middle eastern"
+]
+},
+"philharmonie|santa cecilia harding s rensen": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
 ]
 },
 "philharmonie|songline": {
@@ -32588,6 +32789,14 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|jonah": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "popup|kate stephenson selkee": {
 "genres": [
 "indie",
@@ -32742,6 +32951,16 @@
 "is_music": true,
 "subgenres": [
 "hard bop"
+]
+},
+"popup|mardi jazz avec jean baptiste lenoir guillaume naud malo mazurie stephane chandelier": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"mainstream jazz"
 ]
 },
 "popup|mardi jazz avec joan fort david sauzay kim baiunco et stephane chandelier": {
@@ -36227,6 +36446,17 @@
 "piano jazz"
 ]
 },
+"sunset-sunside|laurent coulondre ruy lopez nussa": {
+"genres": [
+"jazz",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"afro-cuban jazz",
+"piano jazz"
+]
+},
 "sunset-sunside|laurent courthaliac quartet ft hugh coltman": {
 "genres": [
 "jazz"
@@ -37532,6 +37762,15 @@
 "subgenres": [
 "surf rock",
 "psychedelic rock"
+]
+},
+"supersonic|dans le cadre de forte concert du jeune ch ur de paris": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral"
 ]
 },
 "supersonic|dans le cadre forte concert du jeune ch ur de paris": {
@@ -39259,6 +39498,16 @@
 "is_music": false,
 "subgenres": []
 },
+"theatre-le-regard-du-cygne|concert faure bizet debussy ravel": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"piano four hands",
+"french impressionism"
+]
+},
 "theatre-mandapa|atelier de chant persan": {
 "genres": [],
 "is_music": false,
@@ -39454,6 +39703,16 @@
 ]
 },
 "theatre-thenardier|recital flamenco avec el turry": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"flamenco",
+"cante jondo"
+]
+},
+"theatre-thenardier|recital flamenco avec nicky garcia et samuelito": {
 "genres": [
 "world"
 ],
