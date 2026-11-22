@@ -16203,6 +16203,16 @@
 "is_music": true,
 "subgenres": []
 },
+"la-gaite-lyrique|billie 1ere partie louison": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "la-gaite-lyrique|claude emmanuelle dj set": {
 "genres": [
 "electro"
@@ -24231,6 +24241,17 @@
 "rap français"
 ]
 },
+"le-trianon|francois staal": {
+"genres": [
+"chanson",
+"pop",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"auteur-compositeur-interprète"
+]
+},
 "le-trianon|hasan hates ronny ronny hates hasan": {
 "genres": [],
 "is_music": false,
@@ -25299,6 +25320,17 @@
 "is_music": true,
 "subgenres": [
 "hardcore punk"
+]
+},
+"le-truskel|poisson de l aube eadgar": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"garage rock"
 ]
 },
 "le-truskel|pop rock electro": {
@@ -27922,6 +27954,15 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"nouveau-casino|sunburn co 1st edition": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"club night"
 ]
 },
 "nouveau-casino|superthai first roar": {
@@ -32934,6 +32975,16 @@
 "hard bop"
 ]
 },
+"popup|mardi jazz avec dmitry baevsky yoni zelnik stephane chandelier": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop",
+"bebop"
+]
+},
 "popup|mardi jazz avec essaie cid clement trimouille kim baiunco stephane chandelier": {
 "genres": [
 "jazz"
@@ -33015,6 +33066,16 @@
 "subgenres": [
 "bebop",
 "hard bop"
+]
+},
+"popup|mardi jazz joyride trio avec david sauzay laurent marode stephane chandelier": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop",
+"swing"
 ]
 },
 "popup|michel hubert": {
@@ -35308,6 +35369,16 @@
 "standards"
 ]
 },
+"sunset-sunside|florian marques peaks quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"post-bop"
+]
+},
 "sunset-sunside|funky sax project": {
 "genres": [
 "funk",
@@ -36763,6 +36834,39 @@
 "quartet"
 ]
 },
+"sunset-sunside|naissam jalal landscapes of eternity": {
+"genres": [
+"world",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hindustani",
+"spiritual jazz"
+]
+},
+"sunset-sunside|naissam jalal rhythms of resistance": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"arabic jazz",
+"spiritual jazz"
+]
+},
+"sunset-sunside|naissam jalal shining legacy": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"trance ritual",
+"spiritual jazz"
+]
+},
 "sunset-sunside|nefesh ft jonathan orland shimon gambourg": {
 "genres": [
 "jazz",
@@ -36772,6 +36876,17 @@
 "subgenres": [
 "klezmer",
 "yiddish song"
+]
+},
+"sunset-sunside|neko trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop",
+"modal jazz",
+"free jazz"
 ]
 },
 "sunset-sunside|nicolas dary fleur de sable ft laurent naouri": {
@@ -37133,6 +37248,16 @@
 "piano trio"
 ]
 },
+"sunset-sunside|soulation groovy band tribute to stevie wonder": {
+"genres": [
+"soul-rnb",
+"funk"
+],
+"is_music": true,
+"subgenres": [
+"groove"
+]
+},
 "sunset-sunside|stephane belmondo love for chet": {
 "genres": [
 "jazz"
@@ -37405,6 +37530,16 @@
 "modern jazz"
 ]
 },
+"sunset-sunside|vid sketa quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz",
+"original compositions"
+]
+},
 "sunset-sunside|voicingers reunion": {
 "genres": [
 "jazz"
@@ -37432,6 +37567,16 @@
 "subgenres": [
 "piano trio",
 "modern jazz"
+]
+},
+"sunset-sunside|wolf pack s tribute to bill withers otis redding": {
+"genres": [
+"soul-rnb",
+"funk"
+],
+"is_music": true,
+"subgenres": [
+"southern soul"
 ]
 },
 "sunset-sunside|xavier thollard trio": {
