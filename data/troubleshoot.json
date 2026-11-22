@@ -39,42 +39,16 @@
    ],
    "usd": 0.4925,
    "issue": "REM-76"
-  },
-  "point-ephemere": {
-   "since": "2026-11-21",
-   "days": [
-    "2026-11-21"
-   ],
-   "usd": 0.0909,
-   "issue": "REM-96"
   }
  },
  "last": {
-  "date": "2026-11-21",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/44906876703",
-  "usd": 0.0909,
-  "sessions": 1,
+  "date": "2026-11-22",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/45024704338",
+  "usd": 0,
+  "sessions": 0,
   "fixed": [],
   "recovered": [],
-  "unresolved": [
-   {
-    "venue": "Point Éphémère",
-    "slug": "point-ephemere",
-    "error": "HTTP 402 for https://www.pointephemere.org/agenda",
-    "since": "2026-11-21",
-    "prev_count": 50,
-    "url": "https://www.pointephemere.org/agenda",
-    "attempts": 1,
-    "usd_total": 0.0909,
-    "problems": [
-     "the agent changed nothing"
-    ],
-    "notes": "Not repairable from here: every URL on www.pointephemere.org, including robots.txt, returns HTTP 402, so the site itself is refusing us.\nCause: HTTP 402 \"Payment Required\" comes back for /agenda, /agenda/, the homepage, the bare domain (pointephemere.org/agenda), /programmation, /api/events and /robots.txt. When a whole site answers 402, the usual reasons are a suspended hosting or CDN account or an edge block/paywall. It is not a URL move or a markup change, so the parser is not at fault.\nChanged: nothing (venues.json and venues_html.py are untouched).\nCheck result: ok=false, count=0 (prev 50), error \"HTTP 402 for https://www.pointephemere.org/agenda\".\nFor a human: open https://www.pointephemere.org/agenda in a browser. If it loads there, the 402 is only for bots, so ask the venue to allow us or find another feed (ticketing site, e.g. Shotgun/Dice). If it is down for everyone too, wait for the venue to restore its hosting and re-run the check. The pointephemere parser should work again once the page is served.",
-    "diff": "",
-    "usd": 0.0909,
-    "usd_agent": 0.0908594
-   }
-  ],
+  "unresolved": [],
   "systemic": [
    {
     "cause": "HTTP 404",
