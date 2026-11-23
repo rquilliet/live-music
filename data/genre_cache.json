@@ -2394,6 +2394,13 @@
 "is_music": true,
 "subgenres": []
 },
+"alhambra|stella": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "alhambra|tabber": {
 "genres": [
 "rock",
@@ -6572,6 +6579,16 @@
 "hyperpop"
 ]
 },
+"cirque-electrique|en veux tu en v la et pied de biche presentent 856 arno de cea the clockwork wizards cul zag inred": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "cirque-electrique|en veux tu en v la presente 831 aggressive extension dona casque vin de messe": {
 "genres": [
 "punk"
@@ -7375,6 +7392,16 @@
 "russian repertoire"
 ]
 },
+"conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|so british": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"20th century",
+"british music"
+]
+},
 "conservatoire-a-rayonnement-regional-de-paris-ida-rubinstein|un mois avec bach bach marchand": {
 "genres": [
 "classical"
@@ -7623,6 +7650,17 @@
 "subgenres": [
 "contemporary classical",
 "improvisation"
+]
+},
+"conservatoire-municipal-darius-milhaud|caveaux goguettes caf conc et cabaret cabaretec": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"café-concert",
+"goguette",
+"cabaret"
 ]
 },
 "conservatoire-municipal-darius-milhaud|concert nous sommes le vent par l harmonie de la sirene et horme": {
@@ -8183,6 +8221,15 @@
 "is_music": true,
 "subgenres": [
 "vocal jazz"
+]
+},
+"duc-des-lombards|dave bristow sides": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano jazz"
 ]
 },
 "duc-des-lombards|ege turev": {
@@ -8855,6 +8902,16 @@
 "is_music": true,
 "subgenres": []
 },
+"eglise-saint-merry|association femmes et musique": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music",
+"mélodie"
+]
+},
 "eglise-saint-merry|bertrand giraud piano et osb orchestre symphonique de bry sur marne xavier jacquet chef d orchestre": {
 "genres": [
 "classical"
@@ -8883,6 +8940,16 @@
 "subgenres": [
 "choral",
 "renaissance"
+]
+},
+"eglise-saint-merry|concert de noel artelab ch ur et orchestre": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"christmas"
 ]
 },
 "eglise-saint-merry|concours international de quatuor de saxophones grande finale 3 quatuors introduction par un soliste dmitry pinchuk": {
@@ -11307,6 +11374,17 @@
 "hardcore"
 ]
 },
+"glazart|lugosi l idylle long lost": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-hardcore",
+"emo"
+]
+},
 "glazart|roman candle": {
 "genres": [
 "rock"
@@ -11314,6 +11392,15 @@
 "is_music": true,
 "subgenres": [
 "emo"
+]
+},
+"glazart|sotherion": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"death metal"
 ]
 },
 "grand-amphitheatre-de-la-sorbonne|america latina": {
@@ -14214,6 +14301,13 @@
 "is_music": true,
 "subgenres": []
 },
+"la-boule-noire|runout": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|ruoma": {
 "genres": [
 "pop"
@@ -15211,6 +15305,16 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"la-cigale|public image ltd": {
+"genres": [
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
 ]
 },
 "la-cigale|rover": {
@@ -21922,6 +22026,15 @@
 "tribute band"
 ]
 },
+"le-grand-rex|remportez des billets pour le concert so floyd from pompeii to pulse au grand rex": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"progressive rock"
+]
+},
 "le-grand-rex|robert en charleboisscope 2": {
 "genres": [
 "chanson",
@@ -24318,6 +24431,15 @@
 "nueva canción"
 ]
 },
+"le-trianon|juliette": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"chanson à texte"
+]
+},
 "le-trianon|kodaline": {
 "genres": [
 "indie",
@@ -26269,6 +26391,15 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"mediatheque-francoise-sagan|choeurs de prison": {
+"genres": [
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"choral"
+]
 },
 "mediatheque-francoise-sagan|discomarche brocante vinyles dj sets": {
 "genres": [],
@@ -31549,6 +31680,11 @@
 "is_music": true,
 "subgenres": []
 },
+"point-ephemere|finissage under the neon glow": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|flash x danse dense jacquelyn elder et yu hsuan chiu danse dense le 10 decembre": {
 "genres": [],
 "is_music": false,
@@ -31737,6 +31873,17 @@
 "broken beat"
 ]
 },
+"point-ephemere|joe armon jones maxwell owin yoko uno": {
+"genres": [
+"jazz",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"uk jazz",
+"broken beat"
+]
+},
 "point-ephemere|june mcdoom": {
 "genres": [
 "folk",
@@ -31861,6 +32008,16 @@
 "subgenres": [
 "dream folk",
 "lo-fi"
+]
+},
+"point-ephemere|le buff boeuf acoustique participatif": {
+"genres": [
+"jazz",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"acoustic"
 ]
 },
 "point-ephemere|le pokpok show goes live": {
@@ -34978,6 +35135,14 @@
 "subgenres": [
 "modern jazz"
 ]
+},
+"sunset-sunside|concert d erella au sunside": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": []
 },
 "sunset-sunside|concert johanna saint pierre": {
 "genres": [
