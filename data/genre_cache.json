@@ -234,6 +234,16 @@
 "free improvisation"
 ]
 },
+"38riv-jazz-club|bettina martinez trio en concert au 38riv jazz club": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz",
+"piano trio"
+]
+},
 "38riv-jazz-club|bonifacio gomez quartet bebop au 38riv jazz club": {
 "genres": [
 "jazz"
@@ -579,6 +589,17 @@
 "is_music": true,
 "subgenres": [
 "jazz fusion"
+]
+},
+"38riv-jazz-club|estelle perrault michael valeanu cool jazz for quiet drea": {
+"genres": [
+"jazz",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"cool jazz",
+"vocal jazz"
 ]
 },
 "38riv-jazz-club|etienne renard standards compositions au 38riv ja": {
@@ -1874,6 +1895,15 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"alhambra|absolem": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
 },
 "alhambra|albert tawil": {
 "genres": [],
@@ -4991,6 +5021,16 @@
 "baroque"
 ]
 },
+"bibliotheque-naguib-mahfouz|guetteuse du temps lecture musicale": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"spoken word",
+"maghrebi"
+]
+},
 "bibliotheque-naguib-mahfouz|voyage musical en orient avec le trio samarah": {
 "genres": [
 "world"
@@ -6109,6 +6149,18 @@
 "subgenres": [
 "canarian folk",
 "singer-songwriter"
+]
+},
+"cafe-de-paris-oberkampf|amazonica cumbia psychedelique vs salsaton": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"cumbia",
+"salsatón",
+"psychedelic cumbia"
 ]
 },
 "canal-barboteur|le beau dimanche break ya bones live dj la bise": {
@@ -7750,6 +7802,17 @@
 "chamber music"
 ]
 },
+"conservatoire-municipal-francis-poulenc|music in rhythm": {
+"genres": [
+"classical",
+"jazz",
+"blues"
+],
+"is_music": true,
+"subgenres": [
+"tango"
+]
+},
 "conservatoire-municipal-francis-poulenc|musiques au tournant du xixeme siecle": {
 "genres": [
 "classical"
@@ -8137,6 +8200,16 @@
 "romantic"
 ]
 },
+"couvent-de-l-annonciation|grand concert de noel du couvent": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"lyric singing",
+"russian repertoire"
+]
+},
 "crl10-centre-paris-anim-espace-jemmapes|c ur majeur en concert soiree de lancement de l album tu m aventures et du recueil de poesies unis vers": {
 "genres": [
 "chanson"
@@ -8170,6 +8243,11 @@
 "subgenres": [
 "free improvisation"
 ]
+},
+"doc|nourrir la lutte": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "doc|parasite jazz": {
 "genres": [
@@ -8885,6 +8963,27 @@
 "romantic"
 ]
 },
+"eglise-saint-jean|concert de noel de la filiere voix": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"christmas carols"
+]
+},
+"eglise-saint-joseph-artisan|autour de babel chorale de chants traditionnels polyphoniques": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"polyphonic singing",
+"traditional songs"
+]
+},
 "eglise-saint-louis-en-l-ile|a la lueur des bougies stabat mater de dvorak": {
 "genres": [
 "classical"
@@ -9091,6 +9190,16 @@
 "is_music": true,
 "subgenres": [
 "sacred choral"
+]
+},
+"eglise-saint-paul-saint-louis|saint paul par victor hugo": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"lecture musicale",
+"sacred music"
 ]
 },
 "eglise-saint-philippe-du-roule|brahms symphonie n 1": {
@@ -9472,6 +9581,17 @@
 "subgenres": [
 "symphony",
 "romantic"
+]
+},
+"eglise-ste-marie-des-batignolles|concert de noel du ch ur gabriel faure grand orgue": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"sacred choral",
+"baroque",
+"organ"
 ]
 },
 "eglise-ste-marie-des-batignolles|concert de noel du choeur armenien koghtan": {
@@ -10124,6 +10244,16 @@
 "is_music": true,
 "subgenres": []
 },
+"elysee-montmartre|paradise lost": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"gothic metal",
+"doom metal"
+]
+},
 "elysee-montmartre|portugal the man": {
 "genres": [
 "rock",
@@ -10207,6 +10337,19 @@
 "uk rap"
 ]
 },
+"elysee-montmartre|skinshape": {
+"genres": [
+"funk",
+"folk",
+"reggae"
+],
+"is_music": true,
+"subgenres": [
+"psychedelic soul",
+"dub",
+"lo-fi"
+]
+},
 "elysee-montmartre|sniper": {
 "genres": [
 "hip-hop"
@@ -10235,6 +10378,16 @@
 "is_music": true,
 "subgenres": [
 "rap italien"
+]
+},
+"elysee-montmartre|stratovarius": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"power metal",
+"symphonic metal"
 ]
 },
 "elysee-montmartre|takana zion": {
@@ -12216,6 +12369,18 @@
 "free improvisation"
 ]
 },
+"l-auguste-theatre|imboscata": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"italian folk",
+"canzone italiana",
+"storytelling"
+]
+},
 "l-institut-du-monde-arabe|banquet concert camelia jordana se marie a l ima": {
 "genres": [
 "chanson",
@@ -12878,6 +13043,16 @@
 "is_music": true,
 "subgenres": [
 "singer-songwriter"
+]
+},
+"la-bellevilloise|halle aux oliviers clemence lesauvage": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"nouvelle chanson française"
 ]
 },
 "la-bellevilloise|halle aux oliviers diez cuerdas": {
@@ -16655,6 +16830,28 @@
 "house"
 ]
 },
+"la-java|soiree state of mind": {
+"genres": [
+"soul-rnb",
+"afro",
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"afrobeats"
+]
+},
+"la-java|soundsystems tessitta nina baby mme comtesse tbd": {
+"genres": [
+"reggae",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"dancehall",
+"sound system"
+]
+},
 "la-java|the mj party live edition": {
 "genres": [
 "pop",
@@ -17339,6 +17536,15 @@
 "subgenres": [
 "rock'n'roll",
 "rockabilly"
+]
+},
+"la-marbrerie|sisteuf presente solstice circus": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno"
 ]
 },
 "la-marbrerie|sixpence none the richer": {
@@ -20145,6 +20351,14 @@
 "standards"
 ]
 },
+"la-seine-musicale|mousquetaire": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-seine-musicale|mozart les trois dernieres symphonies": {
 "genres": [
 "classical"
@@ -21956,6 +22170,18 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"le-grand-rex|dark night 90 ans": {
+"genres": [
+"electro",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"industrial",
+"ebm",
+"goth"
+]
 },
 "le-grand-rex|forever the best show about the king of pop": {
 "genres": [
@@ -23886,6 +24112,14 @@
 "is_music": true,
 "subgenres": []
 },
+"le-trabendo|breathe": {
+"genres": [
+"indie",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "le-trabendo|buffalo traffic jam": {
 "genres": [
 "rock"
@@ -24465,6 +24699,19 @@
 "subgenres": [
 "synth-pop",
 "new wave"
+]
+},
+"le-trianon|lass voilaaa sound system pat kalla le super mojo poirier": {
+"genres": [
+"afro",
+"world",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"afrobeat",
+"afro disco",
+"mbalax"
 ]
 },
 "le-trianon|le podkatz tour": {
@@ -26180,6 +26427,14 @@
 "is_music": true,
 "subgenres": []
 },
+"mairie-du-8e-arrondissement|concert caritatif de dave a la mairie de paris 8e": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "mairie-du-8e-arrondissement|les midi concerts a la mairie du 8e": {
 "genres": [
 "classical"
@@ -26756,6 +27011,18 @@
 "atmospheric folk"
 ]
 },
+"mediatheque-violette-leduc|the reed conservation society tramble concert dessine": {
+"genres": [
+"folk",
+"indie",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"dream folk",
+"ballads"
+]
+},
 "memorial-de-la-shoah|imre kertesz par margaux eskenazi": {
 "genres": [
 "classical"
@@ -26961,6 +27228,15 @@
 "subgenres": [
 "piano",
 "romantic"
+]
+},
+"musee-marmottan-monet|notes de noel 2026 au musee marmottan monet": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music"
 ]
 },
 "musee-national-de-la-marine|une nuit deux plongees anne paceo en concert et l exposition l appel des profondeurs a paris": {
@@ -28432,6 +28708,16 @@
 "is_music": true,
 "subgenres": []
 },
+"olympia|rodrigue": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
+},
 "olympia|swing": {
 "genres": [
 "jazz"
@@ -29841,6 +30127,16 @@
 "death metal"
 ]
 },
+"petit-bain|signs of the swarm": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"deathcore",
+"slam"
+]
+},
 "petit-bain|slope": {
 "genres": [
 "punk",
@@ -29923,6 +30219,16 @@
 "is_music": true,
 "subgenres": [
 "metalcore"
+]
+},
+"petit-bain|the black dahlia murder fuming mouth celestial sanctuary": {
+"genres": [
+"metal"
+],
+"is_music": true,
+"subgenres": [
+"melodic death metal",
+"death metal"
 ]
 },
 "petit-bain|the bones of j r jones": {
@@ -30058,6 +30364,13 @@
 "subgenres": [
 "indie pop"
 ]
+},
+"petit-bain|vers le nord": {
+"genres": [
+"indie"
+],
+"is_music": true,
+"subgenres": []
 },
 "petit-bain|westside cowboys": {
 "genres": [
@@ -30506,6 +30819,15 @@
 "cimbalom"
 ]
 },
+"philharmonie|hatik en concert au zenith de paris": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "philharmonie|histoire de ma vie": {
 "genres": [
 "classical"
@@ -30572,6 +30894,16 @@
 "genres": [],
 "is_music": false,
 "subgenres": []
+},
+"philharmonie|jeanne cherhal en concert au zenith de paris": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"pop française"
+]
 },
 "philharmonie|juke box contemporain": {
 "genres": [
@@ -31213,6 +31545,16 @@
 "orchestral pop"
 ]
 },
+"philharmonie|the dire straits experience le lundi 7 decembre a paris": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"blues rock",
+"classic rock"
+]
+},
 "philharmonie|tourbillon": {
 "genres": [
 "classical"
@@ -31663,6 +32005,71 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"point-ephemere|festival superflash angelica ardiot 26 janv": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"performance"
+]
+},
+"point-ephemere|festival superflash angelica ardiot 27 janv": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"performance"
+]
+},
+"point-ephemere|festival superflash antoine briot et jennifer gold toxxic": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"live electronics"
+]
+},
+"point-ephemere|festival superflash conversation d ouverture": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"point-ephemere|festival superflash paris montreal 20 janv": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"live electronics"
+]
+},
+"point-ephemere|festival superflash paris montreal 21 janv": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"live electronics"
+]
+},
+"point-ephemere|festival superflash tentative": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"performance"
+]
 },
 "point-ephemere|fierce birthday 3": {
 "genres": [
@@ -32724,6 +33131,16 @@
 "is_music": true,
 "subgenres": []
 },
+"popup|ciao lucifer good afternoon percheye": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
+},
 "popup|claimax": {
 "genres": [
 "pop",
@@ -33242,6 +33659,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"popup|mstrklsh the velvet brothers ppin mstrklshs": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"garage rock"
+]
 },
 "popup|mustbejohn": {
 "genres": [
@@ -40053,6 +40480,15 @@
 ]
 },
 "theatre-traversiere|festival de guitare de paris": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"classical guitar"
+]
+},
+"theatre-traversiere|festival international de guitare de paris xxiie edition": {
 "genres": [
 "classical"
 ],
