@@ -21331,6 +21331,12 @@
 "date": "2027-01-25",
 "venue": "38riv-jazz-club",
 "last": "2026-11-24"
+},
+"df5639d3e62b": {
+"first_seen": "2026-11-24",
+"date": "2027-02-05",
+"venue": "bataclan",
+"last": "2026-11-24"
 }
 },
 "venues": [
@@ -21754,7 +21760,7 @@
 ],
 "counts": {
 "Paris open data (Que faire \u00e0 Paris ?)": 1169,
-"Le Bataclan": 44,
+"Le Bataclan": 45,
 "La Cigale": 97,
 "Le Trianon": 35,
 "\u00c9lys\u00e9e Montmartre": 53,
@@ -21817,7 +21823,7 @@
 },
 "last_ok": {
 "Paris open data (Que faire \u00e0 Paris ?)": "2026-11-24",
-"Le Bataclan": "2026-11-23",
+"Le Bataclan": "2026-11-24",
 "La Cigale": "2026-11-24",
 "La Boule Noire": "2026-11-24",
 "Le Trianon": "2026-11-24",

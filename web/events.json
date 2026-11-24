@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-11-24T15:18:41",
+"generated_at": "2026-11-24T15:29:40",
 "today": "2026-11-24",
 "new_window_days": 7,
 "tags": [
@@ -1587,13 +1587,6 @@
 "count": 1169
 },
 {
-"venue": "Le Bataclan",
-"ok": false,
-"error": "0 events parsed (was 44)",
-"carried": 44,
-"stale_since": "2026-11-23"
-},
-{
 "venue": "La Cigale",
 "ok": true,
 "count": 97
@@ -1877,6 +1870,11 @@
 "venue": "La Générale",
 "ok": true,
 "count": 13
+},
+{
+"venue": "Le Bataclan",
+"ok": true,
+"count": 45
 }
 ],
 "events": [
@@ -3102,7 +3100,7 @@
 "subgenres": [
 "modern jazz"
 ],
-"description": "VERB est un groupe de jazz issu d’un coup de foudre entre trois musiciens lors d’une jam. Les trois musiciens partagent un moment unique et décident de se revoir régulièrement. Les répétitions se multiplient et, à l’issue d’une résidence, le répertoire, fait entièrement de compositions, est monté. Le trio s’est inspiré des plus grands, du trio de Keith Jarrett à Oscar Peterson en passant par Bill ",
+"description": "VERB est un groupe de jazz issu d’un coup de foudre entre trois musiciens lors d’une jam. Les trois musiciens partagent un moment unique et décident de se revoir régulièrement. Les répétitions se multiplient et, à l’issue d’une résidence, le répertoire, fait entièrement de compositions, est monté. Le trio s’est inspiré des plus grands, du trio de Keith Jarrett à Oscar Peterson en passant par Bill",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/09/Format-carre-13.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -4721,9 +4719,9 @@
 "url": "https://open.spotify.com/artist/0SKanyzuV3xDc5Irtwyqbn"
 },
 "youtube": {
-"videoId": "IIXUSQ7T5Qg",
+"publishedAt": "2023-05-18",
 "title": "Gabi Hartmann en live chez Radio Nova | Chambre Noire",
-"publishedAt": "2023-05-18"
+"videoId": "IIXUSQ7T5Qg"
 }
 }
 },
@@ -7494,9 +7492,9 @@
 "url": "https://open.spotify.com/artist/0SKanyzuV3xDc5Irtwyqbn"
 },
 "youtube": {
-"videoId": "IIXUSQ7T5Qg",
+"publishedAt": "2023-05-18",
 "title": "Gabi Hartmann en live chez Radio Nova | Chambre Noire",
-"publishedAt": "2023-05-18"
+"videoId": "IIXUSQ7T5Qg"
 }
 }
 },
@@ -7711,8 +7709,8 @@
 "players": {
 "EKATERINA SHELEHOVA": {
 "bandcamp": {
-"url": "https://ekaterinashelehova.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2539191135/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2539191135/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ekaterinashelehova.bandcamp.com"
 },
 "spotify": {
 "id": "2TGfzbEaJkHLEsRvryVhsJ",
@@ -9086,7 +9084,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "06c754d99280",
 "first_seen": "baseline"
 },
@@ -10454,9 +10452,9 @@
 "url": "https://open.spotify.com/artist/0SKanyzuV3xDc5Irtwyqbn"
 },
 "youtube": {
-"videoId": "IIXUSQ7T5Qg",
+"publishedAt": "2023-05-18",
 "title": "Gabi Hartmann en live chez Radio Nova | Chambre Noire",
-"publishedAt": "2023-05-18"
+"videoId": "IIXUSQ7T5Qg"
 }
 }
 },
@@ -10872,8 +10870,8 @@
 "players": {
 "EKATERINA SHELEHOVA": {
 "bandcamp": {
-"url": "https://ekaterinashelehova.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2539191135/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2539191135/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ekaterinashelehova.bandcamp.com"
 },
 "spotify": {
 "id": "2TGfzbEaJkHLEsRvryVhsJ",
@@ -11649,7 +11647,7 @@
 "subgenres": [
 "gypsy jazz"
 ],
-"description": "Antoine Boyer a bu aux sources les plus authentiques du jazz manouche, disciple en particulier des maîtres Mandino Reinhardt et Francis Alfred Moerman. Il a été programmé par la plupart des festivals consacrés au swing manouche aux Etats-Unis et en Europe, et a partagé la scène avec des artistes tels que, Stochelo Rosenberg, Angelo Debarre, Raphael Faÿs et bien d’autres. En plus de sa maîtrise du ",
+"description": "Antoine Boyer a bu aux sources les plus authentiques du jazz manouche, disciple en particulier des maîtres Mandino Reinhardt et Francis Alfred Moerman. Il a été programmé par la plupart des festivals consacrés au swing manouche aux Etats-Unis et en Europe, et a partagé la scène avec des artistes tels que, Stochelo Rosenberg, Angelo Debarre, Raphael Faÿs et bien d’autres. En plus de sa maîtrise du",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Antoine-Boyer-Yeore-Kim_8499-scaled-e1786104364572.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -13040,7 +13038,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "48c12843e683",
 "first_seen": "baseline"
 },
@@ -15516,9 +15514,9 @@
 "url": "https://open.spotify.com/artist/0SKanyzuV3xDc5Irtwyqbn"
 },
 "youtube": {
-"videoId": "IIXUSQ7T5Qg",
+"publishedAt": "2023-05-18",
 "title": "Gabi Hartmann en live chez Radio Nova | Chambre Noire",
-"publishedAt": "2023-05-18"
+"videoId": "IIXUSQ7T5Qg"
 }
 }
 },
@@ -17796,7 +17794,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "86c1734135d3",
 "first_seen": "baseline"
 },
@@ -18383,7 +18381,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -18880,9 +18878,9 @@
 "players": {
 "Festival international de guitare de Paris": {
 "youtube": {
-"videoId": "wZ68v2xnvik",
+"publishedAt": "2021-11-05",
 "title": "Richard BONA AU FESTIVAL INTERNATIONAL DE GUITARE DE PARIS",
-"publishedAt": "2021-11-05"
+"videoId": "wZ68v2xnvik"
 }
 }
 },
@@ -19752,7 +19750,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "6b0dac9543af",
 "first_seen": "baseline"
 },
@@ -20037,8 +20035,8 @@
 },
 "FELSENMEER": {
 "bandcamp": {
-"url": "https://felsenmeer.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2660296615/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2660296615/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://felsenmeer.bandcamp.com"
 },
 "spotify": {
 "id": "7uG2zz3LNANQbiTdg97VWo",
@@ -20063,8 +20061,8 @@
 },
 "NENO": {
 "bandcamp": {
-"url": "https://neno3.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3968368001/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3968368001/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://neno3.bandcamp.com"
 }
 }
 },
@@ -20975,7 +20973,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "477a01cdbb75",
 "first_seen": "baseline"
 },
@@ -22130,7 +22128,7 @@
 "subgenres": [
 "contemporary jazz"
 ],
-"description": "Il est toutes sortes de joies. La joie n’est pas une émotion superficielle. C’est une manière de recevoir intensément le monde qui nous entoure. Elle peut prendre diverses formes, la tristesse peut être une de celles-ci. On en ressort enrichi, changé. La musique proposée par ce quintet est le résultat de cette disponibilité au monde. Elle est mue par le désir de construire une histoire commune et ",
+"description": "Il est toutes sortes de joies. La joie n’est pas une émotion superficielle. C’est une manière de recevoir intensément le monde qui nous entoure. Elle peut prendre diverses formes, la tristesse peut être une de celles-ci. On en ressort enrichi, changé. La musique proposée par ce quintet est le résultat de cette disponibilité au monde. Elle est mue par le désir de construire une histoire commune et",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/visuel-joies-multiples.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -25239,7 +25237,7 @@
 "subgenres": [
 "instrumental pop"
 ],
-"description": "Le Forum Culturel Autrichien Paris présente le duo autrichien Sinfonia de Carnaval. Anna Lang et Alois Eberl créent une pop instrumentale qui ne connaît aucune limite : des éléments de jazz et de pop rencontrent des univers sonores électroniques et toute la palette sonore des techniques de jeu classiques. Au violoncelle au trombone à l’accordéon aux percussions aux instruments électroniques et au ",
+"description": "Le Forum Culturel Autrichien Paris présente le duo autrichien Sinfonia de Carnaval. Anna Lang et Alois Eberl créent une pop instrumentale qui ne connaît aucune limite : des éléments de jazz et de pop rencontrent des univers sonores électroniques et toute la palette sonore des techniques de jeu classiques. Au violoncelle au trombone à l’accordéon aux percussions aux instruments électroniques et au",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/09/Sinfonia-de-Carnaval-photo-avec-logo-FCA.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -27176,9 +27174,9 @@
 "players": {
 "Technosterone": {
 "youtube": {
-"videoId": "zY5PDyk2R_4",
+"publishedAt": "2023-10-05",
 "title": "Teaser Technosterone - Vendredi 06/10/2023",
-"publishedAt": "2023-10-05"
+"videoId": "zY5PDyk2R_4"
 }
 }
 },
@@ -28152,7 +28150,7 @@
 "subgenres": [
 "free improvisation"
 ],
-"description": "Trio Cassaro, c’est la rencontre de trois générations, trois parcours étonnants réunis autour de l’envie commune d’improviser, de jouer et d’écrire ensemble de nouvelles histoires. Confrontant les sons baroques de la viole d’Atsushi Sakaï et de l’alto monté en boyaux de Guillaume Roy avec la voix et l’électronique de Lynn Cassiers, le trio tisse des sons hors du temps, change nos repères, élargit ",
+"description": "Trio Cassaro, c’est la rencontre de trois générations, trois parcours étonnants réunis autour de l’envie commune d’improviser, de jouer et d’écrire ensemble de nouvelles histoires. Confrontant les sons baroques de la viole d’Atsushi Sakaï et de l’alto monté en boyaux de Guillaume Roy avec la voix et l’électronique de Lynn Cassiers, le trio tisse des sons hors du temps, change nos repères, élargit",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/09/04/huge-6255d9c0c94c18638f50b048906d79cf.jpg",
 "address": "5 Rue du Plateau, 75019, Paris",
@@ -30306,7 +30304,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "9521adc72d65",
 "first_seen": "baseline"
 },
@@ -30562,13 +30560,13 @@
 },
 "Good Afternoon": {
 "bandcamp": {
-"url": "https://good-afternoon.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1920744545/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1920744545/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://good-afternoon.bandcamp.com"
 },
 "youtube": {
-"videoId": "GcjGbKsPdWk",
+"publishedAt": "2026-11-24",
 "title": "🔴LIVE: GOOD AFTERNOON GHANA || NOVEMBER 23, 2026",
-"publishedAt": "2026-11-24"
+"videoId": "GcjGbKsPdWk"
 }
 },
 "Percheye": {
@@ -34447,7 +34445,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "477e27f435fb",
 "first_seen": "baseline"
 },
@@ -34985,7 +34983,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -35600,9 +35598,9 @@
 "url": "https://open.spotify.com/artist/4MGdxZU2pjPSgyO8L6vw1d"
 },
 "youtube": {
-"videoId": "qGL9fCTmqbI",
+"publishedAt": "2025-02-14",
 "title": "Franco Battiato - L'imboscata live - Tour 1997",
-"publishedAt": "2025-02-14"
+"videoId": "qGL9fCTmqbI"
 }
 }
 },
@@ -36870,7 +36868,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": false,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "7e89015d9f15",
 "first_seen": "2026-11-06"
 },
@@ -40407,7 +40405,7 @@
 "indo-jazz",
 "bansuri"
 ],
-"description": "Après le succès de l’album The Indo-Jazz Sessions, le Guillaume Barraud Quartet revient avec un nouvel opus, Tales of the Bamboo Reed, explorant les potentiels du bansuri sur fond de guitare électrique et de grooves organiques basse-batterie. Une sélection de pièces hautement poétiques interprétées par le flûtiste/compositeur Guillaume Barraud, le guitariste Tam De Villiers, le bassiste Guillaume ",
+"description": "Après le succès de l’album The Indo-Jazz Sessions, le Guillaume Barraud Quartet revient avec un nouvel opus, Tales of the Bamboo Reed, explorant les potentiels du bansuri sur fond de guitare électrique et de grooves organiques basse-batterie. Une sélection de pièces hautement poétiques interprétées par le flûtiste/compositeur Guillaume Barraud, le guitariste Tam De Villiers, le bassiste Guillaume",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Guillaume_Barraud_4tet_Tales_of_the_Bamboo_Reed-scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -41323,27 +41321,27 @@
 "players": {
 "✨ Broadway Session": {
 "youtube": {
-"videoId": "5klHz-iB88M",
+"publishedAt": "2009-07-30",
 "title": "Eric Michael Krop-Perfect World (Broadway Sessions 7/8/09)",
-"publishedAt": "2009-07-30"
+"videoId": "5klHz-iB88M"
 }
 },
 "Once Upon A December ✨": {
 "youtube": {
-"videoId": "7RUnMYV1WKQ",
+"publishedAt": "2019-08-29",
 "title": "Once upon a December (Anastasia)",
-"publishedAt": "2019-08-29"
+"videoId": "7RUnMYV1WKQ"
 }
 },
 "10/12": {
 "bandcamp": {
-"url": "https://10-12.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=4082950525/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4082950525/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://10-12.bandcamp.com"
 },
 "youtube": {
-"videoId": "O1p03l1MuOg",
+"publishedAt": "2026-10-12",
 "title": "TMZ Live - Streaming Live From The Newsroom! - 10/12/2026",
-"publishedAt": "2026-10-12"
+"videoId": "O1p03l1MuOg"
 }
 }
 },
@@ -42875,13 +42873,13 @@
 "players": {
 "NOIR DE SOUL": {
 "bandcamp": {
-"url": "https://noirdesoul.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1924061635/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1924061635/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://noirdesoul.bandcamp.com"
 },
 "youtube": {
-"videoId": "-60aRpf8rZQ",
+"publishedAt": "2026-10-30",
 "title": "Noir de Soul - Live at Bix Jazz Club & Lounge",
-"publishedAt": "2026-10-30"
+"videoId": "-60aRpf8rZQ"
 }
 }
 },
@@ -42915,7 +42913,7 @@
 "creole jazz",
 "maloya"
 ],
-"description": "AKODA est un groupe de Kreol Jazz fondé en 2013 autour de la pianiste, chanteuse et compositrice réunionnaise Valérie Chane Tef. Le projet développe une identité musicale singulière où se rencontrent le maloya, les chants traditionnels créoles, les pulsations afro-caribéennes et les codes du jazz contemporain. Porté par une énergie organique et un jeu intense, AKODA propose une musique ",
+"description": "AKODA est un groupe de Kreol Jazz fondé en 2013 autour de la pianiste, chanteuse et compositrice réunionnaise Valérie Chane Tef. Le projet développe une identité musicale singulière où se rencontrent le maloya, les chants traditionnels créoles, les pulsations afro-caribéennes et les codes du jazz contemporain. Porté par une énergie organique et un jeu intense, AKODA propose une musique",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Capture-decran-2026-10-23-a-13.51.01.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -43209,7 +43207,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://bataclan-medias.s3.eu-west-3.amazonaws.com/list_1080x1080_b1aa2f5b0d.jpg",
+"image": "https://bataclan-medias.s3.eu-west-3.amazonaws.com/list_Foudres26_Affiche_Line_Up_1080x1080_VF_d6f0e145c1.jpg",
 "address": "50 boulevard Voltaire, 75011 Paris",
 "area": "Oberkampf",
 "headliner": "LES FOUDRES",
@@ -43226,7 +43224,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "a226609c2f2f",
 "first_seen": "2026-09-18"
 },
@@ -45203,7 +45201,7 @@
 "piano trio",
 "modern jazz"
 ],
-"description": "Concert organisé dans le cadre du festival Jazzycolors 2026 – 24e édition Présenté par l’Institut Polonais de Paris En partenariat avec Ficep, Jazz Rive Gauche et Studio Raspail Après les débuts marquants de Kasia Pietrzko avec son trio, la jeune pianiste et compositrice de jazz polonaise est rapidement devenue une artiste de premier plan, suscitant également un grand intérêt dans toute l’Europe. ",
+"description": "Concert organisé dans le cadre du festival Jazzycolors 2026 – 24e édition Présenté par l’Institut Polonais de Paris En partenariat avec Ficep, Jazz Rive Gauche et Studio Raspail Après les débuts marquants de Kasia Pietrzko avec son trio, la jeune pianiste et compositrice de jazz polonaise est rapidement devenue une artiste de premier plan, suscitant également un grand intérêt dans toute l’Europe.",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Kasia-Pietrzko-Trio-photo-Bartosz-Maciejewski-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -45327,23 +45325,23 @@
 "players": {
 "Shield Run": {
 "bandcamp": {
-"url": "https://shieldproject.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1184209466/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1184209466/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://shieldproject.bandcamp.com"
 }
 },
 "Npc": {
 "bandcamp": {
-"url": "https://npccc.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=931753551/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=931753551/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://npccc.bandcamp.com"
 },
 "spotify": {
 "id": "3YEsNNbHlb88K9QCog4R0Y",
 "url": "https://open.spotify.com/artist/3YEsNNbHlb88K9QCog4R0Y"
 },
 "youtube": {
-"videoId": "cw29tYo69rU",
+"publishedAt": "2023-07-20",
 "title": "NPC TikTok LIVES be like #npc #tiktok #comedy #contentcreator #viral #trending #pinkydoll #tiktok",
-"publishedAt": "2023-07-20"
+"videoId": "cw29tYo69rU"
 }
 },
 "Draktar": {
@@ -45352,9 +45350,9 @@
 "url": "https://open.spotify.com/artist/2JpyWsSGWTELdQJ97flJ5M"
 },
 "youtube": {
-"videoId": "i7zoKkBlivU",
+"publishedAt": "2022-05-04",
 "title": "Draktar go EXE. #shorts #leagueoflegends #lol #viral #viralshorts",
-"publishedAt": "2022-05-04"
+"videoId": "i7zoKkBlivU"
 }
 },
 "Lymsa": {
@@ -45458,24 +45456,24 @@
 "players": {
 "AMAZÓNICA": {
 "bandcamp": {
-"url": "https://amazonica1.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=4199645556/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4199645556/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://amazonica1.bandcamp.com"
 },
 "spotify": {
 "id": "6LUiJoLQTYPQwA0mMuZ38v",
 "url": "https://open.spotify.com/artist/6LUiJoLQTYPQwA0mMuZ38v"
 },
 "youtube": {
-"videoId": "OQxXljzDfOs",
+"publishedAt": "2021-12-17",
 "title": "Amazónica - Live the journey",
-"publishedAt": "2021-12-17"
+"videoId": "OQxXljzDfOs"
 }
 },
 "Salsatón": {
 "youtube": {
-"videoId": "egosoZ77W7g",
+"publishedAt": "2015-04-23",
 "title": "Dj Adalberto - Salsaton Live Mix 2015 (98 BPM)",
-"publishedAt": "2015-04-23"
+"videoId": "egosoZ77W7g"
 }
 }
 },
@@ -46016,7 +46014,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "70f53b00e870",
 "first_seen": "baseline"
 },
@@ -46320,9 +46318,9 @@
 "url": "https://open.spotify.com/artist/0Dh24oWVF7TBDA0qihQOEH"
 },
 "youtube": {
-"videoId": "qKMMztNYNbA",
+"publishedAt": "2021-04-23",
 "title": "Don't Tell Mum Live From Camelot Studios",
-"publishedAt": "2021-04-23"
+"videoId": "qKMMztNYNbA"
 }
 }
 },
@@ -48346,17 +48344,17 @@
 "players": {
 "Herr Krank": {
 "bandcamp": {
-"url": "https://herrkrank.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=290197329/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=290197329/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://herrkrank.bandcamp.com"
 },
 "spotify": {
 "id": "6867qRW4fPy1KtxyeBIKkl",
 "url": "https://open.spotify.com/artist/6867qRW4fPy1KtxyeBIKkl"
 },
 "youtube": {
-"videoId": "YhRvQV2gqTE",
+"publishedAt": "2021-06-10",
 "title": "Herr Krank Live for La Frairie Festival",
-"publishedAt": "2021-06-10"
+"videoId": "YhRvQV2gqTE"
 }
 }
 },
@@ -49362,7 +49360,7 @@
 "subgenres": [
 "comptines"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -49820,7 +49818,7 @@
 "jump blues",
 "blues dance"
 ],
-"description": "Initiation à la danse blues et concert de Juke & Joint — SPEAKEASY BLUES — initiation à la danse blues et concert de Juke & Joint Les Speakeasy Blues continuent au Bal Chavaux ! Un dimanche par mois, Groov’it vous donne rendez-vous pour une soirée où le blues se joue en live, se danse et se partage autour d’un verre. Que vous soyez danseur·euse de blues ou simplement amateur·rice de musique live, ",
+"description": "Initiation à la danse blues et concert de Juke & Joint — SPEAKEASY BLUES — initiation à la danse blues et concert de Juke & Joint Les Speakeasy Blues continuent au Bal Chavaux ! Un dimanche par mois, Groov’it vous donne rendez-vous pour une soirée où le blues se joue en live, se danse et se partage autour d’un verre. Que vous soyez danseur·euse de blues ou simplement amateur·rice de musique live,",
 "summary": null,
 "image": "https://balchavaux.fr/sites/balchavaux/files/styles/auto_1920/public/import_billetterie/1123-field_illustration_id-1794921382.jpg?itok=j_UNVnue",
 "address": "2 avenue de la Résistance, 93100 Montreuil",
@@ -51510,7 +51508,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "24024ea48b99",
 "first_seen": "baseline"
 },
@@ -52754,9 +52752,9 @@
 "url": "https://open.spotify.com/artist/5Zj3vazMOh0sADCiAejr3z"
 },
 "youtube": {
-"videoId": "fk8LF74UKYA",
+"publishedAt": "2025-11-27",
 "title": "[4K] NEWBEAT(뉴비트) “Look So Good” Band LIVE | it's Live",
-"publishedAt": "2025-11-27"
+"videoId": "fk8LF74UKYA"
 }
 }
 },
@@ -57649,9 +57647,9 @@
 "players": {
 "Autour de Babel": {
 "youtube": {
-"videoId": "cru3yvrSXGM",
+"publishedAt": "2024-12-07",
 "title": "Autour de Babel - Los hilhs de la montanha (Pano-répète)",
-"publishedAt": "2024-12-07"
+"videoId": "cru3yvrSXGM"
 }
 }
 },
@@ -58291,9 +58289,9 @@
 "players": {
 "Solstice Circus": {
 "youtube": {
-"videoId": "w3qiVM-BSgc",
+"publishedAt": "2013-12-21",
 "title": "Solstice Circus Presents Winter Whiteout ~ Molly Baechtold and Christine Newsham ~",
-"publishedAt": "2013-12-21"
+"videoId": "w3qiVM-BSgc"
 }
 }
 },
@@ -60704,7 +60702,7 @@
 "christmas songs",
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -62758,9 +62756,9 @@
 "url": "https://open.spotify.com/artist/7p2WvlI2C3z88oObTv3VXU"
 },
 "youtube": {
-"videoId": "MyMta6BV95s",
+"publishedAt": "2025-12-16",
 "title": "ABIMÉE - Live (Warner Music France)",
-"publishedAt": "2025-12-16"
+"videoId": "MyMta6BV95s"
 }
 }
 },
@@ -64553,7 +64551,7 @@
 "subgenres": [
 "film music"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -65828,7 +65826,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Jazz loves Amy – « Nouvelle voix sur la scène Jazz parisienne, Eléonore Langelier explore avec passion le répertoire des Ladies du Jazz pour en révéler la profondeur et l’émotion. Elle rend ici hommage à Amy Winehouse, voix incontournable de la Soul, pour faire revivre, à travers son timbre âpre et grave, la puissance de ses mélodies et de ses textes. Entourée de musiciens rompus à la Soul music, ",
+"description": "Jazz loves Amy – « Nouvelle voix sur la scène Jazz parisienne, Eléonore Langelier explore avec passion le répertoire des Ladies du Jazz pour en révéler la profondeur et l’émotion. Elle rend ici hommage à Amy Winehouse, voix incontournable de la Soul, pour faire revivre, à travers son timbre âpre et grave, la puissance de ses mélodies et de ses textes. Entourée de musiciens rompus à la Soul music,",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/01/Photo-Jazz-loves-Amy-2026.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -66097,7 +66095,7 @@
 "subgenres": [
 "marathon du jazz"
 ],
-"description": "Le tap dancer percussionniste Aurélien Lehmann s’entoure de trois musiciens d’exception pour un concert intense et flamboyant en hommage à Michel Petrucciani – le pianiste français qui a conquis New-York – et d’autres légendes du jazz. Les compositions originales de l’artiste et de son quartet complètent ce programme riche en émotions. Un concert à voir autant qu’à écouter, pour tous les amateurs ",
+"description": "Le tap dancer percussionniste Aurélien Lehmann s’entoure de trois musiciens d’exception pour un concert intense et flamboyant en hommage à Michel Petrucciani – le pianiste français qui a conquis New-York – et d’autres légendes du jazz. Les compositions originales de l’artiste et de son quartet complètent ce programme riche en émotions. Un concert à voir autant qu’à écouter, pour tous les amateurs",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/hands-feet-connection-aurelien-lehmannTD-18-Modifie-scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -67895,7 +67893,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -70113,7 +70111,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "13a1df8386e1",
 "first_seen": "2026-09-11"
 },
@@ -71282,7 +71280,7 @@
 "subgenres": [
 "rock'n'roll"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -74023,7 +74021,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "9889e6d86b4f",
 "first_seen": "2026-09-17"
 },
@@ -74952,9 +74950,9 @@
 },
 "Vêpres de la Vierge": {
 "youtube": {
-"videoId": "zIl_ia-VWuc",
+"publishedAt": "2021-10-26",
 "title": "Monteverdi : Les Vêpres de la Vierge (Leonardo Garcia Alarcon, Mariana Flores...)",
-"publishedAt": "2021-10-26"
+"videoId": "zIl_ia-VWuc"
 }
 },
 "Cori Spezzati": {
@@ -74963,9 +74961,9 @@
 "url": "https://open.spotify.com/artist/6bi20uPfFYwgVC0eyd2e3y"
 },
 "youtube": {
-"videoId": "rWRyNYGiOdU",
+"publishedAt": "2021-10-23",
 "title": "Cori Spezzati 360 - Pre-concert talk",
-"publishedAt": "2021-10-23"
+"videoId": "rWRyNYGiOdU"
 }
 }
 },
@@ -75006,9 +75004,9 @@
 "players": {
 "De Michel à France": {
 "youtube": {
-"videoId": "RqERavtUENQ",
+"publishedAt": "2026-10-06",
 "title": "DE MICHEL À FRANCE – Le grand hommage à Michel Berger & France Gall | Teaser officiel",
-"publishedAt": "2026-10-06"
+"videoId": "RqERavtUENQ"
 }
 }
 },
@@ -75382,9 +75380,9 @@
 "url": "https://open.spotify.com/artist/4eghmDl7ZC9SgEOU5LxYec"
 },
 "youtube": {
-"videoId": "eRnZtZphZj0",
+"publishedAt": "2026-05-08",
 "title": "Live manal gherbi montréal 3 2026 ",
-"publishedAt": "2026-05-08"
+"videoId": "eRnZtZphZj0"
 }
 }
 },
@@ -75542,7 +75540,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "bc074efed453",
 "first_seen": "2026-10-07"
 },
@@ -75629,9 +75627,9 @@
 "url": "https://open.spotify.com/artist/36DPRJZmIgZ4pqFfuiQPTl"
 },
 "youtube": {
-"videoId": "iOuHqAgXSZw",
+"publishedAt": "2025-10-09",
 "title": "Eatbrain Carnage - Darkshire In The Woods 2025 (Jade Venom x Teddy Killerz x MNDSCP x Coppa) [FULL]",
-"publishedAt": "2025-10-09"
+"videoId": "iOuHqAgXSZw"
 }
 }
 },
@@ -75713,9 +75711,9 @@
 "players": {
 "Lesneu & Djokovic": {
 "youtube": {
-"videoId": "_LXD7B2QuJE",
+"publishedAt": "2026-10-13",
 "title": "Lesneu & Djokovic - Même si tout vous sépare (official video)",
-"publishedAt": "2026-10-13"
+"videoId": "_LXD7B2QuJE"
 }
 }
 },
@@ -75765,9 +75763,9 @@
 "url": "https://open.spotify.com/artist/7rqJQQxuUOCk052MK5kLsH"
 },
 "youtube": {
-"videoId": "UmcKQ68r5yg",
+"publishedAt": "2026-11-15",
 "title": "Imminence - AXIS MUNDI TOUR [4K60FPS](FULLSET) Live at the Palladium Times Square NYC 11/14/26",
-"publishedAt": "2026-11-15"
+"videoId": "UmcKQ68r5yg"
 }
 }
 },
@@ -75864,9 +75862,9 @@
 },
 "La Fugue Enchantée": {
 "youtube": {
-"videoId": "-6pmZ5VmK8g",
+"publishedAt": "2019-01-22",
 "title": "La fugue enchantée",
-"publishedAt": "2019-01-22"
+"videoId": "-6pmZ5VmK8g"
 }
 }
 },
@@ -75920,9 +75918,9 @@
 },
 "Vêpres de la Vierge": {
 "youtube": {
-"videoId": "zIl_ia-VWuc",
+"publishedAt": "2021-10-26",
 "title": "Monteverdi : Les Vêpres de la Vierge (Leonardo Garcia Alarcon, Mariana Flores...)",
-"publishedAt": "2021-10-26"
+"videoId": "zIl_ia-VWuc"
 }
 },
 "Cori Spezzati": {
@@ -75931,9 +75929,9 @@
 "url": "https://open.spotify.com/artist/6bi20uPfFYwgVC0eyd2e3y"
 },
 "youtube": {
-"videoId": "rWRyNYGiOdU",
+"publishedAt": "2021-10-23",
 "title": "Cori Spezzati 360 - Pre-concert talk",
-"publishedAt": "2021-10-23"
+"videoId": "rWRyNYGiOdU"
 }
 },
 "Versailles": {
@@ -75946,9 +75944,9 @@
 "url": "https://open.spotify.com/artist/3suWpKrodV4J0ozhubrmir"
 },
 "youtube": {
-"videoId": "YX_gMwVwvz8",
+"publishedAt": "2022-01-05",
 "title": "【公式】Versailles「MASQUERADE (CHATEAU DE VERSAILLES -Holy Grail- Live at 渋谷公会堂, 2012.2.12)」ヴェルサイユ",
-"publishedAt": "2022-01-05"
+"videoId": "YX_gMwVwvz8"
 }
 }
 },
@@ -75999,9 +75997,9 @@
 },
 "Les Pêcheurs de perles": {
 "youtube": {
-"videoId": "LJKIJpWUNHE",
+"publishedAt": "2016-10-29",
 "title": "Je crois entendre encore Alain Vanzo Les pêcheurs de perles Georges Bizet",
-"publishedAt": "2016-10-29"
+"videoId": "LJKIJpWUNHE"
 }
 }
 },
@@ -76124,9 +76122,9 @@
 "url": "https://open.spotify.com/artist/48Uo32C1G3blZJD5w0HGaa"
 },
 "youtube": {
-"videoId": "Vj9mp8me--Y",
+"publishedAt": "2025-11-14",
 "title": "Electric Pyramid - High Flying Kind (Live sur OÜI FM)",
-"publishedAt": "2025-11-14"
+"videoId": "Vj9mp8me--Y"
 }
 }
 },
@@ -76254,9 +76252,9 @@
 "url": "https://open.spotify.com/artist/5rUH4jIWVupg6PliGC5VZU"
 },
 "youtube": {
-"videoId": "_EFgV7ofpxw",
+"publishedAt": "2024-12-07",
 "title": "kedym Live in Columbus 2024 TAYRI",
-"publishedAt": "2024-12-07"
+"videoId": "_EFgV7ofpxw"
 }
 }
 },
@@ -76474,9 +76472,9 @@
 "url": "https://open.spotify.com/artist/0bouHpX4JiuPnIfP2jFxRi"
 },
 "youtube": {
-"videoId": "fjAsT-5D0fw",
+"publishedAt": "2025-11-06",
 "title": "Rachmaninoff Piano Concerto No. 2. Khatia Buniatishvili's LEGENDARY Performance (Full Concerto)",
-"publishedAt": "2025-11-06"
+"videoId": "fjAsT-5D0fw"
 }
 }
 },
@@ -76591,6 +76589,11 @@
 "spotify": {
 "id": "66rDbD3tWR3M1uNuIaDAGx",
 "url": "https://open.spotify.com/artist/66rDbD3tWR3M1uNuIaDAGx"
+},
+"youtube": {
+"videoId": "cmAMLcY_bXA",
+"title": "JGrrey - deh pon (Live Performance Video)",
+"publishedAt": "2026-11-15"
 }
 }
 },
@@ -76713,9 +76716,9 @@
 "url": "https://open.spotify.com/artist/1AKiAMwxnF2f1zBlSGDfXC"
 },
 "youtube": {
-"videoId": "q6UYaZd2RMk",
+"publishedAt": "2023-09-15",
 "title": "Léon Phal \"Stress Killer\"  en session TSFJAZZ !",
-"publishedAt": "2023-09-15"
+"videoId": "q6UYaZd2RMk"
 }
 }
 },
@@ -76762,6 +76765,11 @@
 "spotify": {
 "id": "5khLeY0JUWp0K2KZVxKNut",
 "url": "https://open.spotify.com/artist/5khLeY0JUWp0K2KZVxKNut"
+},
+"youtube": {
+"videoId": "-z68JCk8KB4",
+"title": "\"Gorée Island\"... HūLK exp ➡️ Café Music.",
+"publishedAt": "2026-09-08"
 }
 }
 },
@@ -76840,6 +76848,11 @@
 "spotify": {
 "id": "3M5OFl0jQm9m58mfbdprae",
 "url": "https://open.spotify.com/artist/3M5OFl0jQm9m58mfbdprae"
+},
+"youtube": {
+"videoId": "gA7R_bs1_RI",
+"title": "LEVI.SCT - CUBO LIVE 2026",
+"publishedAt": "2026-07-29"
 }
 }
 },
@@ -76889,16 +76902,16 @@
 "url": "https://open.spotify.com/artist/2aWjaq32aRQo58dw0w8NM6"
 },
 "youtube": {
-"videoId": "LK7fEeAeRJ8",
+"publishedAt": "2018-11-04",
 "title": "U.D.O. Live in Sofia 2012",
-"publishedAt": "2018-11-04"
+"videoId": "LK7fEeAeRJ8"
 }
 }
 },
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "db3e1192a0da",
 "first_seen": "2026-09-21"
 },
@@ -76939,6 +76952,11 @@
 "spotify": {
 "id": "67f7GZXNMGRn98lqrtIdrN",
 "url": "https://open.spotify.com/artist/67f7GZXNMGRn98lqrtIdrN"
+},
+"youtube": {
+"videoId": "_G-GDrPN9WE",
+"title": "Comeback Kid // Live in Tokyo 2026.01.23 [4K Full Set]",
+"publishedAt": "2026-01-28"
 }
 }
 },
@@ -77250,12 +77268,22 @@
 "spotify": {
 "id": "4kMdQKGCjwNnQj6HKBP3xx",
 "url": "https://open.spotify.com/artist/4kMdQKGCjwNnQj6HKBP3xx"
+},
+"youtube": {
+"videoId": "35B0DzFpQqU",
+"title": "BLUE KATRICE﹒LUXURY LIVE @ AÉRONEF LILLE",
+"publishedAt": "2026-03-03"
 }
 },
 "ANAYSA": {
 "spotify": {
 "id": "5FLuUoiN586FLUc52TzYv9",
 "url": "https://open.spotify.com/artist/5FLuUoiN586FLUc52TzYv9"
+},
+"youtube": {
+"videoId": "QcVZBMroUjU",
+"title": "Anaysa- Papillons Live    #music #livemusic #pop",
+"publishedAt": "2026-01-28"
 }
 }
 },
@@ -77350,6 +77378,11 @@
 "spotify": {
 "id": "0wajW5BBnk40YAhJdTkrrG",
 "url": "https://open.spotify.com/artist/0wajW5BBnk40YAhJdTkrrG"
+},
+"youtube": {
+"videoId": "K2U5BZA0GIM",
+"title": "[FULL SHOW] MICO - Running From A Feeling Tour (live in toronto) • November 07, 2026",
+"publishedAt": "2026-11-09"
 }
 }
 },
@@ -77394,6 +77427,11 @@
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=1318312313/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://lento.bandcamp.com"
+},
+"youtube": {
+"videoId": "IwisUeBY4ig",
+"title": "lento live @ magnolia 2008",
+"publishedAt": "2009-07-14"
 }
 }
 },
@@ -77580,13 +77618,18 @@
 "spotify": {
 "id": "4gFssfOmWNY3LfIZ3zyoy4",
 "url": "https://open.spotify.com/artist/4gFssfOmWNY3LfIZ3zyoy4"
+},
+"youtube": {
+"videoId": "FWCH_h8SEuo",
+"title": "Punch Brothers — Live at House of Blues (Full Set)",
+"publishedAt": "2018-08-09"
 }
 }
 },
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "11af8790b33a",
 "first_seen": "2026-09-22"
 },
@@ -77629,6 +77672,11 @@
 "spotify": {
 "id": "7IdPmzvB3PugXieZE9vS4S",
 "url": "https://open.spotify.com/artist/7IdPmzvB3PugXieZE9vS4S"
+},
+"youtube": {
+"videoId": "wKJ69H29mgQ",
+"title": "Gilla Band -  Eight Fivers | Live at Other Voices Festival (2022)",
+"publishedAt": "2023-11-19"
 }
 }
 },
@@ -77720,6 +77768,11 @@
 "spotify": {
 "id": "5rXNmuTfaGC8hw0JEQOpLc",
 "url": "https://open.spotify.com/artist/5rXNmuTfaGC8hw0JEQOpLc"
+},
+"youtube": {
+"videoId": "14d9EmAzsHQ",
+"title": "Tia Gordon - feel | Later… with Jools Holland (2026)",
+"publishedAt": "2026-11-08"
 }
 }
 },
@@ -78027,6 +78080,11 @@
 "spotify": {
 "id": "269ucQArovY0uXXKEuf5d2",
 "url": "https://open.spotify.com/artist/269ucQArovY0uXXKEuf5d2"
+},
+"youtube": {
+"videoId": "O0u30RbSVIk",
+"title": "You Said Strange - Full Performance (Live on KEXP)",
+"publishedAt": "2023-05-01"
 }
 }
 },
@@ -78160,6 +78218,11 @@
 "spotify": {
 "id": "6TD08jYeuN128P2MZTbc8E",
 "url": "https://open.spotify.com/artist/6TD08jYeuN128P2MZTbc8E"
+},
+"youtube": {
+"videoId": "UBuSJXObgpw",
+"title": "Mussorgsky  Pictures at an Exhibition + Encore   Solti Chicago Symphony Orchestra 1990 Movie Live",
+"publishedAt": "2020-09-27"
 }
 },
 "Klaus Mäkelä": {
@@ -78287,10 +78350,22 @@
 "DIRE"
 ],
 "players": {
+"bROTHERS iN bAND": {
+"youtube": {
+"videoId": "nKgx8sS1AYc",
+"title": "bROTHERS iN bAND - BROTHERS IN ARMS LIVE - DIRE STRAITS TRIBUTE #direstraits #markknopfler #knopfler",
+"publishedAt": "2024-04-02"
+}
+},
 "DIRE": {
 "bandcamp": {
 "embed": "https://bandcamp.com/EmbeddedPlayer/album=390702903/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
 "url": "https://dire.bandcamp.com"
+},
+"youtube": {
+"videoId": "dVUjkBmrMZI",
+"title": "Dire Straits - Live Wembley 1985",
+"publishedAt": "2019-01-24"
 }
 }
 },
@@ -78532,6 +78607,11 @@
 "spotify": {
 "id": "7eD8EPA4Rmzheennd53Dfr",
 "url": "https://open.spotify.com/artist/7eD8EPA4Rmzheennd53Dfr"
+},
+"youtube": {
+"videoId": "MfYH-RDsUdo",
+"title": "Kid Sophie - Minuit | LIVE @ La Sucrerie (Wavre, Belgique) 11 OCT. 2025",
+"publishedAt": "2025-10-13"
 }
 }
 },
@@ -78575,6 +78655,11 @@
 "spotify": {
 "id": "4P2HohWBtvSxxwabNDdYXN",
 "url": "https://open.spotify.com/artist/4P2HohWBtvSxxwabNDdYXN"
+},
+"youtube": {
+"videoId": "3ztCE7rz_XQ",
+"title": "NONO LA GRINTA LIVE DANS BÂTIMENT B - 4K - slash musique",
+"publishedAt": "2026-05-14"
 }
 }
 },
@@ -79208,6 +79293,11 @@
 "spotify": {
 "id": "6TD08jYeuN128P2MZTbc8E",
 "url": "https://open.spotify.com/artist/6TD08jYeuN128P2MZTbc8E"
+},
+"youtube": {
+"videoId": "UBuSJXObgpw",
+"title": "Mussorgsky  Pictures at an Exhibition + Encore   Solti Chicago Symphony Orchestra 1990 Movie Live",
+"publishedAt": "2020-09-27"
 }
 },
 "Klaus Mäkelä": {
@@ -79294,7 +79384,15 @@
 "support": [
 "THE SPIRI"
 ],
-"players": {},
+"players": {
+"THE SPIRI": {
+"youtube": {
+"videoId": "VTBN6nX9bpU",
+"title": "The Strumbellas \"Spirits\" - Live at the 2017 JUNO Awards",
+"publishedAt": "2017-04-03"
+}
+}
+},
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
@@ -79449,6 +79547,11 @@
 "spotify": {
 "id": "5V4GjtUOtHbFpSmCbnRrzB",
 "url": "https://open.spotify.com/artist/5V4GjtUOtHbFpSmCbnRrzB"
+},
+"youtube": {
+"videoId": "1LNpjo_tgCE",
+"title": "INTERVIEW DE POESIE CHEVALIER - CCF MEDIA",
+"publishedAt": "2023-04-03"
 }
 },
 "COEURPOURPRE": {
@@ -79461,6 +79564,11 @@
 "spotify": {
 "id": "7zWWwVTTSW840xxpBB0WrJ",
 "url": "https://open.spotify.com/artist/7zWWwVTTSW840xxpBB0WrJ"
+},
+"youtube": {
+"videoId": "Ssq6u4YZWB4",
+"title": "Nana",
+"publishedAt": "2024-06-27"
 }
 }
 },
@@ -79682,7 +79790,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "9f011e2e905c",
 "first_seen": "2026-09-24"
 },
@@ -79723,6 +79831,11 @@
 "spotify": {
 "id": "6bu7CtcOMWcS0BMq7snHW6",
 "url": "https://open.spotify.com/artist/6bu7CtcOMWcS0BMq7snHW6"
+},
+"youtube": {
+"videoId": "dqMAxmOZwYw",
+"title": "Wage War - \"Low\" LIVE! Vans Warped Tour 25th Anniversary 2019",
+"publishedAt": "2020-12-04"
 }
 }
 },
@@ -80848,7 +80961,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "9d0e1659356f",
 "first_seen": "2026-10-29"
 },
@@ -81118,7 +81231,7 @@
 "subgenres": [
 "piano jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -82746,7 +82859,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "34620b49633f",
 "first_seen": "2026-10-06"
 },
@@ -86131,7 +86244,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "98b3eea1882e",
 "first_seen": "baseline"
 },
@@ -86346,7 +86459,7 @@
 "subgenres": [
 "gypsy jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -87636,8 +87749,8 @@
 "players": {
 "THE BLACK DAHLIA MURDER": {
 "bandcamp": {
-"url": "https://theblackdahliamurder.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3322338235/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3322338235/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://theblackdahliamurder.bandcamp.com"
 },
 "spotify": {
 "id": "4xTDPgk4jHCF0qui3dH6BS",
@@ -87646,8 +87759,8 @@
 },
 "FUMING MOUTH": {
 "bandcamp": {
-"url": "https://fumingmouth.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1799661418/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1799661418/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://fumingmouth.bandcamp.com"
 },
 "spotify": {
 "id": "2I7atnUFOmvMyGPuesD7cB",
@@ -87656,8 +87769,8 @@
 },
 "CELESTIAL SANCTUARY": {
 "bandcamp": {
-"url": "https://celestialsanctuary.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1302589881/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1302589881/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://celestialsanctuary.bandcamp.com"
 },
 "spotify": {
 "id": "3XoDjY6V07YGHB3bw8ux1k",
@@ -89455,6 +89568,53 @@
 "first_seen": "baseline"
 },
 {
+"title": "SINIK",
+"date": "2027-02-05",
+"venue": "Le Bataclan",
+"venue_slug": "bataclan",
+"source": "bataclan",
+"time": null,
+"url": "https://www.bataclan.fr/programmation",
+"ticket_url": "https://billetterie.bataclan.fr/fr/manifestation/846/sinik",
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "CONCERT & FESTIVAL",
+"genres": [
+"hip-hop"
+],
+"genre_source": "llm",
+"subgenres": [
+"rap français"
+],
+"description": null,
+"summary": null,
+"image": "https://bataclan-medias.s3.eu-west-3.amazonaws.com/list_1080x1080_6_b39c2fe76e.jpg",
+"address": "50 boulevard Voltaire, 75011 Paris",
+"area": "Oberkampf",
+"headliner": "SINIK",
+"support": [],
+"players": {
+"SINIK": {
+"bandcamp": {
+"url": "https://sinikalkinid.bandcamp.com",
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3565952440/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+},
+"spotify": {
+"id": "1ONnyhQBTnkvg4QmI97hJg",
+"url": "https://open.spotify.com/artist/1ONnyhQBTnkvg4QmI97hJg"
+}
+}
+},
+"lat": 48.8631,
+"lon": 2.3708,
+"is_music": true,
+"stale_since": null,
+"id": "df5639d3e62b",
+"first_seen": "2026-11-24"
+},
+{
 "title": "TUTU",
 "date": "2027-02-05",
 "venue": "Le Grand Rex",
@@ -90168,7 +90328,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "1f05eb6c13a9",
 "first_seen": "2026-10-29"
 },
@@ -90381,7 +90541,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -91701,8 +91861,8 @@
 "players": {
 "Trym": {
 "bandcamp": {
-"url": "https://trym.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=415131948/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=415131948/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://trym.bandcamp.com"
 },
 "spotify": {
 "id": "5Nd385K2g3s0828W8Ab70z",
@@ -92958,7 +93118,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -93297,7 +93457,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "e1fd63650a3f",
 "first_seen": "2026-10-06"
 },
@@ -93851,7 +94011,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "d2412fa95934",
 "first_seen": "baseline"
 },
@@ -95804,7 +95964,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -96763,8 +96923,8 @@
 "players": {
 "SIGNS OF THE SWARM": {
 "bandcamp": {
-"url": "https://signsoftheswarm.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1664652242/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1664652242/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://signsoftheswarm.bandcamp.com"
 },
 "spotify": {
 "id": "0yxJx8OEyDfd7dzLsFuNrS",
@@ -98770,7 +98930,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "e7d0779005ca",
 "first_seen": "2026-11-11"
 },
@@ -99953,7 +100113,7 @@
 "subgenres": [
 "piano jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -100669,7 +100829,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "c6f020fa0441",
 "first_seen": "2026-10-20"
 },
@@ -100927,7 +101087,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "7e12b616b72a",
 "first_seen": "2026-10-28"
 },
@@ -103613,7 +103773,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -107085,8 +107245,8 @@
 "players": {
 "PEELINGFLESH": {
 "bandcamp": {
-"url": "https://peelingfleshok.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=727450582/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=727450582/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://peelingfleshok.bandcamp.com"
 },
 "spotify": {
 "id": "40DbKvYvADTiks7hZIUPHG",
@@ -107213,7 +107373,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "1f7194e4fad4",
 "first_seen": "2026-11-19"
 },
@@ -108457,20 +108617,20 @@
 "players": {
 "LASS": {
 "bandcamp": {
-"url": "https://lass.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3761528208/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3761528208/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://lass.bandcamp.com"
 }
 },
 "PAT KALLA & LE SUPER MOJO": {
 "bandcamp": {
-"url": "https://patkallalesupermojo.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3353286036/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3353286036/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://patkallalesupermojo.bandcamp.com"
 }
 },
 "POIRIER": {
 "bandcamp": {
-"url": "https://poirier.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=23839821/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=23839821/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://poirier.bandcamp.com"
 },
 "spotify": {
 "id": "5IpvS5ea4bymk3HpP1jVU4",
@@ -108919,8 +109079,8 @@
 "players": {
 "Mastodon": {
 "bandcamp": {
-"url": "https://mastodon.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3653801622/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3653801622/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://mastodon.bandcamp.com"
 },
 "spotify": {
 "id": "1Dvfqq39HxvCJ3GvfeIFuT",
@@ -109343,7 +109503,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "670a8d3ed502",
 "first_seen": "2026-10-27"
 },
@@ -109737,8 +109897,8 @@
 "players": {
 "MOONSPELL": {
 "bandcamp": {
-"url": "https://moonspell.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=295545498/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=295545498/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://moonspell.bandcamp.com"
 },
 "spotify": {
 "id": "17bYSQ9ZRnreVnJjE5X2x6",
@@ -109747,8 +109907,8 @@
 },
 "IOTUNN": {
 "bandcamp": {
-"url": "https://iotunn.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3491774832/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3491774832/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://iotunn.bandcamp.com"
 },
 "spotify": {
 "id": "3yJvUOZq6oH130RTa68hQz",
@@ -109757,8 +109917,8 @@
 },
 "TODOMAL": {
 "bandcamp": {
-"url": "https://todomalband.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=178750345/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=178750345/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://todomalband.bandcamp.com"
 },
 "spotify": {
 "id": "2grCvuOH8MibDqryxpW6jR",
@@ -109814,7 +109974,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "760550c3b217",
 "first_seen": "baseline"
 },
@@ -110288,8 +110448,8 @@
 "players": {
 "EX:RE": {
 "bandcamp": {
-"url": "https://ex-re.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3997519039/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3997519039/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ex-re.bandcamp.com"
 },
 "spotify": {
 "id": "3FIsBWNLmqLvTQnhJLAWUJ",
@@ -110912,7 +111072,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "5f959f1212af",
 "first_seen": "baseline"
 },
@@ -111843,7 +112003,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "d32b5b21ff23",
 "first_seen": "2026-10-17"
 },
@@ -112283,7 +112443,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": false,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "e1e1793d12a9",
 "first_seen": "baseline"
 },
@@ -112585,7 +112745,7 @@
 "vocal jazz",
 "crooner"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -115648,7 +115808,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -116449,7 +116609,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "14aebcb7ee48",
 "first_seen": "2026-11-04"
 },
@@ -119096,7 +119256,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "5e1e6f65e59a",
 "first_seen": "2026-11-17"
 },
@@ -119909,7 +120069,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "07ccbffd07dc",
 "first_seen": "baseline"
 },
@@ -120474,7 +120634,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "1111683df327",
 "first_seen": "baseline"
 },
@@ -121123,7 +121283,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "86a52aab5c4d",
 "first_seen": "baseline"
 },
@@ -122099,8 +122259,8 @@
 "players": {
 "Breathe.": {
 "bandcamp": {
-"url": "https://breathe-team.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3038707559/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3038707559/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://breathe-team.bandcamp.com"
 },
 "spotify": {
 "id": "6XrEYPg6rrQMV4GKabTxbE",
@@ -122801,8 +122961,8 @@
 "players": {
 "SKINSHAPE": {
 "bandcamp": {
-"url": "https://skinshape.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1924944537/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1924944537/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://skinshape.bandcamp.com"
 },
 "spotify": {
 "id": "1itM5tXaK5THggpXA7ovAe",
@@ -123045,7 +123205,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "94adf6427e85",
 "first_seen": "2026-11-17"
 },
@@ -123610,7 +123770,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "2407de10d09b",
 "first_seen": "2026-11-19"
 },
@@ -124958,7 +125118,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": false,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "037ba798984a",
 "first_seen": "2026-11-06"
 },
@@ -128050,7 +128210,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "3c99960861e8",
 "first_seen": "2026-10-15"
 },
@@ -128875,8 +129035,8 @@
 "players": {
 "Rodrigue": {
 "bandcamp": {
-"url": "https://rodrigueweb.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=314993958/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=314993958/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rodrigueweb.bandcamp.com"
 }
 }
 },
@@ -128950,8 +129110,8 @@
 "players": {
 "Rodrigue": {
 "bandcamp": {
-"url": "https://rodrigueweb.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=314993958/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=314993958/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rodrigueweb.bandcamp.com"
 }
 }
 },
@@ -129203,8 +129363,8 @@
 "players": {
 "Rodrigue": {
 "bandcamp": {
-"url": "https://rodrigueweb.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=314993958/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=314993958/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rodrigueweb.bandcamp.com"
 }
 }
 },
@@ -133730,7 +133890,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "1b7e4ed8e414",
 "first_seen": "2026-11-04"
 },
@@ -134577,7 +134737,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "fe9fb4eeca76",
 "first_seen": "2026-11-13"
 },
@@ -141763,8 +141923,8 @@
 "players": {
 "Diana Krall": {
 "bandcamp": {
-"url": "https://dianakrallsteppingout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3844210417/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3844210417/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://dianakrallsteppingout.bandcamp.com"
 },
 "spotify": {
 "id": "5z1VAFwT35EVvCp1XlZZuL",
@@ -141847,8 +142007,8 @@
 "players": {
 "Diana Krall": {
 "bandcamp": {
-"url": "https://dianakrallsteppingout.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3844210417/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3844210417/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://dianakrallsteppingout.bandcamp.com"
 },
 "spotify": {
 "id": "5z1VAFwT35EVvCp1XlZZuL",
@@ -142866,8 +143026,8 @@
 "players": {
 "PARADISE LOST": {
 "bandcamp": {
-"url": "https://paradiselostofficial.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=921085548/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=921085548/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://paradiselostofficial.bandcamp.com"
 },
 "spotify": {
 "id": "0gIo6kGl4KsCeIbqtZVHYp",
@@ -142914,8 +143074,8 @@
 "players": {
 "NO MONEY KIDS": {
 "bandcamp": {
-"url": "https://nomoneykids.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1745502688/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1745502688/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://nomoneykids.bandcamp.com"
 },
 "spotify": {
 "id": "7FhOFt7mORRpbrgHdSeCfF",
@@ -143077,7 +143237,7 @@
 "lat": 48.8631,
 "lon": 2.3708,
 "is_music": true,
-"stale_since": "2026-11-23",
+"stale_since": null,
 "id": "5c97b024d3ea",
 "first_seen": "baseline"
 },

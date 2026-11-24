@@ -39,15 +39,36 @@
    ],
    "usd": 0.4925,
    "issue": "REM-76"
+  },
+  "bataclan": {
+   "since": "2026-11-24",
+   "days": [
+    "2026-11-24"
+   ],
+   "usd": 0.0
   }
  },
  "last": {
-  "date": "2026-11-23",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/45203820994",
-  "usd": 0,
+  "date": "2026-11-24",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/45426006058",
+  "usd": 0.0,
   "sessions": 0,
   "fixed": [],
-  "recovered": [],
+  "recovered": [
+   {
+    "venue": "Le Bataclan",
+    "slug": "bataclan",
+    "error": "0 events parsed (was 44)",
+    "since": "2026-11-24",
+    "prev_count": 44,
+    "url": "https://www.bataclan.fr/programmation",
+    "attempts": 1,
+    "usd_total": 0.0,
+    "count": 45,
+    "usd": 0.0,
+    "usd_agent": null
+   }
+  ],
   "unresolved": [],
   "systemic": [
    {
@@ -69,7 +90,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-11-21",
-  "usd": 0.0909
+  "date": "2026-11-24",
+  "usd": 0.0
  }
 }

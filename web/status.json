@@ -6,7 +6,7 @@
  "low_below": 3,
  "cost": {
   "date": "2026-11-24",
-  "usd": 2.372,
+  "usd": 2.3783,
   "steps": [
    {
     "what": "genres",
@@ -34,6 +34,15 @@
     "tokens_in": 149493,
     "tokens_out": 122717,
     "usd": 1.9077
+   },
+   {
+    "what": "genres",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 1,
+    "tokens_in": 885,
+    "tokens_out": 75,
+    "usd": 0.0063
    }
   ]
  },
@@ -56,13 +65,11 @@
    "strategy": "bataclan",
    "url": "https://www.bataclan.fr/programmation",
    "prev_count": 44,
-   "seconds": 0.4,
-   "checked_at": "2026-11-24T15:18:42Z",
-   "status": "failed",
-   "error": "0 events parsed (was 44)",
-   "last_ok": "2026-11-23",
-   "failing_since": "2026-11-24",
-   "carried": 44
+   "seconds": 0.2,
+   "checked_at": "2026-11-24T15:29:40Z",
+   "status": "ok",
+   "count": 45,
+   "last_ok": "2026-11-24"
   },
   {
    "venue": "La Cigale",
@@ -760,11 +767,11 @@
  "history": [
   {
    "date": "2026-11-24",
-   "run_url": "https://github.com/rquilliet/live-music/actions/runs/45422255474",
-   "usd": 2.372,
+   "run_url": "https://github.com/rquilliet/live-music/actions/runs/45426006058",
+   "usd": 2.3783,
    "sources": {
     "opendata": 1169,
-    "bataclan": "0 events parsed (was 44)",
+    "bataclan": 45,
     "la-cigale": 97,
     "la-boule-noire": 69,
     "le-trianon": 35,
