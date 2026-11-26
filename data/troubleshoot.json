@@ -39,15 +39,36 @@
    ],
    "usd": 0.4925,
    "issue": "REM-76"
+  },
+  "la-cigale": {
+   "since": "2026-11-26",
+   "days": [
+    "2026-11-26"
+   ],
+   "usd": 0.0
   }
  },
  "last": {
-  "date": "2026-11-25",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/45640270894",
-  "usd": 0,
+  "date": "2026-11-26",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/45838871246",
+  "usd": 0.0,
   "sessions": 0,
   "fixed": [],
-  "recovered": [],
+  "recovered": [
+   {
+    "venue": "La Cigale",
+    "slug": "la-cigale",
+    "error": "TimeoutError: The read operation timed out for https://lacigale.fr/programmation/",
+    "since": "2026-11-26",
+    "prev_count": 97,
+    "url": "https://lacigale.fr/programmation/",
+    "attempts": 1,
+    "usd_total": 0.0,
+    "count": 97,
+    "usd": 0.0,
+    "usd_agent": null
+   }
+  ],
   "unresolved": [],
   "systemic": [
    {
@@ -69,7 +90,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-11-24",
+  "date": "2026-11-26",
   "usd": 0.0
  }
 }

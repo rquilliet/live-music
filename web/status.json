@@ -6,7 +6,7 @@
  "low_below": 3,
  "cost": {
   "date": "2026-11-26",
-  "usd": 2.127,
+  "usd": 2.1741,
   "steps": [
    {
     "what": "genres",
@@ -34,6 +34,24 @@
     "tokens_in": 147399,
     "tokens_out": 118481,
     "usd": 1.8495
+   },
+   {
+    "what": "genres",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 1,
+    "tokens_in": 881,
+    "tokens_out": 104,
+    "usd": 0.007
+   },
+   {
+    "what": "summaries",
+    "model": "claude-opus-5",
+    "batch": false,
+    "calls": 1,
+    "tokens_in": 6418,
+    "tokens_out": 322,
+    "usd": 0.0401
    }
   ]
  },
@@ -68,13 +86,11 @@
    "strategy": "cigale",
    "url": "https://lacigale.fr/programmation/",
    "prev_count": 97,
-   "seconds": 84.7,
-   "checked_at": "2026-11-26T14:25:08Z",
-   "status": "failed",
-   "error": "TimeoutError: The read operation timed out for https://lacigale.fr/programmation/",
-   "last_ok": "2026-11-25",
-   "failing_since": "2026-11-26",
-   "carried": 96
+   "seconds": 0.1,
+   "checked_at": "2026-11-26T14:26:23Z",
+   "status": "ok",
+   "count": 97,
+   "last_ok": "2026-11-26"
   },
   {
    "venue": "La Boule Noire",
@@ -760,12 +776,12 @@
  "history": [
   {
    "date": "2026-11-26",
-   "run_url": "https://github.com/rquilliet/live-music/actions/runs/45837016112",
-   "usd": 2.127,
+   "run_url": "https://github.com/rquilliet/live-music/actions/runs/45838871246",
+   "usd": 2.1741,
    "sources": {
     "opendata": 1230,
     "bataclan": 47,
-    "la-cigale": "TimeoutError: The read operation timed out for https://lacigale.fr/programmation/",
+    "la-cigale": 97,
     "la-boule-noire": 68,
     "le-trianon": 35,
     "elysee-montmartre": 51,

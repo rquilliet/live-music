@@ -1,5 +1,5 @@
 {
-"generated_at": "2026-11-26T14:25:08",
+"generated_at": "2026-11-26T14:26:23",
 "today": "2026-11-26",
 "new_window_days": 7,
 "tags": [
@@ -1618,13 +1618,6 @@
 "count": 47
 },
 {
-"venue": "La Cigale",
-"ok": false,
-"error": "TimeoutError: The read operation timed out for https://lacigale.fr/programmation/",
-"carried": 96,
-"stale_since": "2026-11-25"
-},
-{
 "venue": "La Boule Noire",
 "ok": true,
 "count": 68
@@ -1903,6 +1896,11 @@
 "venue": "La Générale",
 "ok": true,
 "count": 14
+},
+{
+"venue": "La Cigale",
+"ok": true,
+"count": 97
 }
 ],
 "events": [
@@ -3167,7 +3165,7 @@
 ],
 "description": null,
 "summary": "Révélée par l'émission Nouvelle École, la rappeuse Eve La Marka mêle rap, trap, dancehall et pop urbaine dans un show intense et sans filtre. (Événement annulé.)",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/photo-neutre-1080x1350-1-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/photo-neutre-1080x1350-1-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EVE LA MARKA",
@@ -3188,7 +3186,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "3f035e1bdb42",
 "first_seen": "baseline"
 },
@@ -6307,7 +6305,7 @@
 ],
 "description": null,
 "summary": "Le rappeur nantais Cielbleu présente son EP « Gosse Coureur », une écriture aérienne mêlant poésie brute, humour et sincérité sur des beats entre rap, soul et jazz.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/gs-26-01-29-1276©gabriel-senechal-@gab.senechal-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/gs-26-01-29-1276©gabriel-senechal-@gab.senechal-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CIELBLEU",
@@ -6328,7 +6326,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "8261b90a18d9",
 "first_seen": "baseline"
 },
@@ -7011,7 +7009,7 @@
 "subgenres": [
 "gypsy jazz"
 ],
-"description": "Antoine Boyer a bu aux sources les plus authentiques du jazz manouche, disciple en particulier des maîtres Mandino Reinhardt et Francis Alfred Moerman. Il a été programmé par la plupart des festivals consacrés au swing manouche aux Etats-Unis et en Europe, et a partagé la scène avec des artistes tels que, Stochelo Rosenberg, Angelo Debarre, Raphael Faÿs et bien d’autres. En plus de sa maîtrise du ",
+"description": "Antoine Boyer a bu aux sources les plus authentiques du jazz manouche, disciple en particulier des maîtres Mandino Reinhardt et Francis Alfred Moerman. Il a été programmé par la plupart des festivals consacrés au swing manouche aux Etats-Unis et en Europe, et a partagé la scène avec des artistes tels que, Stochelo Rosenberg, Angelo Debarre, Raphael Faÿs et bien d’autres. En plus de sa maîtrise du",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/08/Antoine-Boyer-Yeore-Kim_8499-scaled-e1786104364572.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -11374,8 +11372,8 @@
 "source": "cigale",
 "time": "20:00",
 "url": "https://lacigale.fr/evenements/nous-etions-une-armee/",
-"ticket_url": "https://lacigale.fnacspectacles.com/event/nous-etions-une-armee-la-cigale-20973933/",
-"price": "payant",
+"ticket_url": null,
+"price": null,
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -11388,9 +11386,9 @@
 "subgenres": [
 "alternative rock"
 ],
-"description": "Rendez-vous samedi 28 novembre 2026 pour découvrir « Nous Étions Une Armée en concert à La Cigale ! »",
-"summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2025/11/neua_2026_visuelweb_salle_650x650_la-cigale_draft1-600x600.jpg",
+"description": null,
+"summary": "Le duo nous étions une armée présente son premier album « mais le ciel est sublime » : une voix parlée-chantée, des guitares saisissantes et des boîtes à rythmes, entre punk et rock alternatif, dans un univers mélancolique en clair-obscur.",
+"image": "https://lacigale.fr/wp-content/uploads/2025/11/neua_2026_visuelweb_salle_650x650_la-cigale_draft1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOUS ÉTIONS UNE ARMÉE",
@@ -13800,32 +13798,32 @@
 "players": {
 "KUROI PAYNE": {
 "bandcamp": {
-"url": "https://kuroipayne.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=809929147/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=809929147/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://kuroipayne.bandcamp.com"
 },
 "spotify": {
 "id": "3wwpEfs5FUHk65fQdzXCxH",
 "url": "https://open.spotify.com/artist/3wwpEfs5FUHk65fQdzXCxH"
 },
 "youtube": {
-"videoId": "TdbFYCHzhdg",
+"publishedAt": "2023-12-03",
 "title": "Kuroi Payne - Des questions, des réponses, et un peu de live !",
-"publishedAt": "2023-12-03"
+"videoId": "TdbFYCHzhdg"
 }
 },
 "AARAMIS": {
 "bandcamp": {
-"url": "https://aaramis.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=130426335/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=130426335/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://aaramis.bandcamp.com"
 },
 "spotify": {
 "id": "4LvfKxvAhyw8fAbz9Ygvfg",
 "url": "https://open.spotify.com/artist/4LvfKxvAhyw8fAbz9Ygvfg"
 },
 "youtube": {
-"videoId": "M-vqMWiwZPw",
+"publishedAt": "2026-09-21",
 "title": "Aaramis Live Session Rainbow Attic Studio",
-"publishedAt": "2026-09-21"
+"videoId": "M-vqMWiwZPw"
 }
 },
 "KNDNS": {
@@ -14276,7 +14274,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -15322,7 +15320,7 @@
 ],
 "description": null,
 "summary": "SENYSS, artiste aux influences urbaines, caribéennes et R&B, présente un show accompagné de musiciens live konpa, entre rythmes caribéens, sensualité et énergie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/senyss-650650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/senyss-650650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SENYSS",
@@ -15343,7 +15341,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "3c4598b57094",
 "first_seen": "baseline"
 },
@@ -16682,7 +16680,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "3d7171dd1068",
 "first_seen": "baseline"
 },
@@ -18119,7 +18117,7 @@
 ],
 "description": null,
 "summary": "Nuit Incolore, alias Théo Marclay, revient avec un nouveau chapitre pop aux accents orchestraux et épiques, après les succès « Dépassé », « Crush » et l'album « La loi du papillon ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NUIT INCOLORE",
@@ -18140,7 +18138,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "afcfe3f9917e",
 "first_seen": "baseline"
 },
@@ -18280,8 +18278,8 @@
 "players": {
 "Indigo": {
 "bandcamp": {
-"url": "https://indigotheband.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3877693197/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3877693197/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://indigotheband.bandcamp.com"
 },
 "spotify": {
 "id": "4dCxQs4IZfRx0GtKLqjjZN",
@@ -18396,7 +18394,7 @@
 "subgenres": [
 "contemporary jazz"
 ],
-"description": "Il est toutes sortes de joies. La joie n’est pas une émotion superficielle. C’est une manière de recevoir intensément le monde qui nous entoure. Elle peut prendre diverses formes, la tristesse peut être une de celles-ci. On en ressort enrichi, changé. La musique proposée par ce quintet est le résultat de cette disponibilité au monde. Elle est mue par le désir de construire une histoire commune et ",
+"description": "Il est toutes sortes de joies. La joie n’est pas une émotion superficielle. C’est une manière de recevoir intensément le monde qui nous entoure. Elle peut prendre diverses formes, la tristesse peut être une de celles-ci. On en ressort enrichi, changé. La musique proposée par ce quintet est le résultat de cette disponibilité au monde. Elle est mue par le désir de construire une histoire commune et",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/visuel-joies-multiples.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -19791,7 +19789,7 @@
 ],
 "description": null,
 "summary": "Première à La Cigale pour Mauvaise Bouche, qui défend une pop francophone accrocheuse aux textes sincères et au franc-parler, autour de son premier album « La vie d'adulte ».",
-"image": "https://lacigale.fr/wp-content/uploads/2025/10/1080x1080-credit-charlotte-steppe-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/10/1080x1080-credit-charlotte-steppe-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MAUVAISE BOUCHE",
@@ -19812,7 +19810,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "4a9ff6ccb084",
 "first_seen": "baseline"
 },
@@ -21526,7 +21524,7 @@
 "subgenres": [
 "instrumental pop"
 ],
-"description": "Le Forum Culturel Autrichien Paris présente le duo autrichien Sinfonia de Carnaval. Anna Lang et Alois Eberl créent une pop instrumentale qui ne connaît aucune limite : des éléments de jazz et de pop rencontrent des univers sonores électroniques et toute la palette sonore des techniques de jeu classiques. Au violoncelle au trombone à l’accordéon aux percussions aux instruments électroniques et au ",
+"description": "Le Forum Culturel Autrichien Paris présente le duo autrichien Sinfonia de Carnaval. Anna Lang et Alois Eberl créent une pop instrumentale qui ne connaît aucune limite : des éléments de jazz et de pop rencontrent des univers sonores électroniques et toute la palette sonore des techniques de jeu classiques. Au violoncelle au trombone à l’accordéon aux percussions aux instruments électroniques et au",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/09/Sinfonia-de-Carnaval-photo-avec-logo-FCA.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -22061,7 +22059,7 @@
 ],
 "description": null,
 "summary": "Le rappeur, compositeur et multi-instrumentiste Sheldon, membre du collectif 75e Session, présente son nouveau disque nourri de jazz, reggae et rock, à l'issue d'une tournée.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-pour-la-cigale-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/format-pour-la-cigale-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHELDON",
@@ -22082,7 +22080,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "75cdc7ee41e0",
 "first_seen": "baseline"
 },
@@ -24460,7 +24458,7 @@
 "subgenres": [
 "free improvisation"
 ],
-"description": "Trio Cassaro, c’est la rencontre de trois générations, trois parcours étonnants réunis autour de l’envie commune d’improviser, de jouer et d’écrire ensemble de nouvelles histoires. Confrontant les sons baroques de la viole d’Atsushi Sakaï et de l’alto monté en boyaux de Guillaume Roy avec la voix et l’électronique de Lynn Cassiers, le trio tisse des sons hors du temps, change nos repères, élargit ",
+"description": "Trio Cassaro, c’est la rencontre de trois générations, trois parcours étonnants réunis autour de l’envie commune d’improviser, de jouer et d’écrire ensemble de nouvelles histoires. Confrontant les sons baroques de la viole d’Atsushi Sakaï et de l’alto monté en boyaux de Guillaume Roy avec la voix et l’électronique de Lynn Cassiers, le trio tisse des sons hors du temps, change nos repères, élargit",
 "summary": null,
 "image": "https://cdn.paris.fr/qfapv4/2026/09/04/huge-6255d9c0c94c18638f50b048906d79cf.jpg",
 "address": "5 Rue du Plateau, 75019, Paris",
@@ -24498,7 +24496,7 @@
 ],
 "description": null,
 "summary": "Le duo Bonbon Vodou (Oriane Lacaille et JereM Boucris) défend son troisième album, Épopée métèque, entre océan Indien et Méditerranée, sur la route des exils, avec des textes en français, créole et gascon et le renfort du trio Piment Piment.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/format-site-bb-vodou-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/format-site-bb-vodou-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BONBON VODOU",
@@ -24523,7 +24521,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "2dfa568e2a16",
 "first_seen": "baseline"
 },
@@ -28878,7 +28876,7 @@
 ],
 "description": null,
 "summary": "Broken Back, auteur-compositeur-interprète nommé aux Victoires de la Musique 2017, présente sa folk pop lumineuse et fédératrice. Le concert s'inscrit dans le dernier chapitre du « Follow The Sun Tour », avant une pause consacrée à l'écriture de son prochain album.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/12/brokenback-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2025/12/brokenback-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BROKEN BACK",
@@ -28903,7 +28901,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "8cf9f9dc5438",
 "first_seen": "baseline"
 },
@@ -31367,7 +31365,7 @@
 "subgenres": [
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -32700,8 +32698,8 @@
 "source": "cigale",
 "time": "20:00",
 "url": "https://lacigale.fr/evenements/shaarghot-2/",
-"ticket_url": "https://www.gdp.fr/fr/artistes/shaarghot",
-"price": "à partir de 37 euros",
+"ticket_url": null,
+"price": null,
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -32716,9 +32714,9 @@
 "heavy metal",
 "hard rock"
 ],
-"description": "Shaârghot donne rendez-vous aux amateurs de metal et de musique industrielle le 6 décembre 2026 à La Cigale, à Paris. Une date qui s’annonce particulièrement intense et qui viendra s’inscrire dans une tournée à travers toute la France.",
-"summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg",
+"description": null,
+"summary": "Shaârghot déploie son univers cyber-punk et post-apocalyptique entouré de ses « Shadows », une figure révélée sur la scène indus electro/punk aux côtés de Little Big, Punish Yourself, Hocico ou Ministry.",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/shaarghot_2025_web_1080x1080_photo1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SHAÂRGHOT",
@@ -34375,9 +34373,9 @@
 "url": "https://open.spotify.com/artist/2RQXRUsr4IW1f3mKyKsy4B"
 },
 "youtube": {
-"videoId": "NffPMQPGCO0",
+"publishedAt": "2026-06-25",
 "title": "Noah Kahan ¦ Bonnaroo Music Festival 2026 ¦ Full Set",
-"publishedAt": "2026-06-25"
+"videoId": "NffPMQPGCO0"
 }
 }
 },
@@ -36490,7 +36488,7 @@
 ],
 "description": null,
 "summary": "Concert de Wamen, artiste franco-camerounaise de rap et R'n'B à l'écriture directe et poétique, connue pour son titre « Discipline » et son projet « RE ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-la-cigale-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/650x650-la-cigale-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "WAMEN",
@@ -36511,7 +36509,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "9bc22c448b16",
 "first_seen": "baseline"
 },
@@ -36813,7 +36811,7 @@
 "indo-jazz",
 "bansuri"
 ],
-"description": "Après le succès de l’album The Indo-Jazz Sessions, le Guillaume Barraud Quartet revient avec un nouvel opus, Tales of the Bamboo Reed, explorant les potentiels du bansuri sur fond de guitare électrique et de grooves organiques basse-batterie. Une sélection de pièces hautement poétiques interprétées par le flûtiste/compositeur Guillaume Barraud, le guitariste Tam De Villiers, le bassiste Guillaume ",
+"description": "Après le succès de l’album The Indo-Jazz Sessions, le Guillaume Barraud Quartet revient avec un nouvel opus, Tales of the Bamboo Reed, explorant les potentiels du bansuri sur fond de guitare électrique et de grooves organiques basse-batterie. Une sélection de pièces hautement poétiques interprétées par le flûtiste/compositeur Guillaume Barraud, le guitariste Tam De Villiers, le bassiste Guillaume",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Guillaume_Barraud_4tet_Tales_of_the_Bamboo_Reed-scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -38545,7 +38543,7 @@
 ],
 "description": null,
 "summary": "Le rappeur parisien Jwles, qui avait rempli la Machine du Moulin Rouge en 2024, revient sur scène à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/flyer-jwles_768x768-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/flyer-jwles_768x768-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JWLES",
@@ -38570,7 +38568,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "12304f16e508",
 "first_seen": "baseline"
 },
@@ -39112,8 +39110,8 @@
 "players": {
 "Florian Marques": {
 "bandcamp": {
-"url": "https://florianmarquesmusic.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2078004804/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2078004804/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://florianmarquesmusic.bandcamp.com"
 },
 "spotify": {
 "id": "7Dyg4gp3kUXGgBd42wPmjh",
@@ -39304,7 +39302,7 @@
 "creole jazz",
 "maloya"
 ],
-"description": "AKODA est un groupe de Kreol Jazz fondé en 2013 autour de la pianiste, chanteuse et compositrice réunionnaise Valérie Chane Tef. Le projet développe une identité musicale singulière où se rencontrent le maloya, les chants traditionnels créoles, les pulsations afro-caribéennes et les codes du jazz contemporain. Porté par une énergie organique et un jeu intense, AKODA propose une musique ",
+"description": "AKODA est un groupe de Kreol Jazz fondé en 2013 autour de la pianiste, chanteuse et compositrice réunionnaise Valérie Chane Tef. Le projet développe une identité musicale singulière où se rencontrent le maloya, les chants traditionnels créoles, les pulsations afro-caribéennes et les codes du jazz contemporain. Porté par une énergie organique et un jeu intense, AKODA propose une musique",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Capture-decran-2026-10-23-a-13.51.01.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -41031,7 +41029,7 @@
 ],
 "description": null,
 "summary": "Retrouvailles entre le groupe parisien Java et le chanteur jamaïcain Winston McAnuff, vingt ans après leur tournée « Paris Rockin' », autour d'un projet commun reggae-chanson. Sur scène : R.Wan et Winston au chant, Fixi à l'accordéon et aux claviers, Alexis Bossard à la batterie et Tom Fire à la basse et aux machines.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/java-mcanuuf-carre_-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/java-mcanuuf-carre_-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JAVA & WINSTON MCANUFF",
@@ -41040,7 +41038,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "49201a0e2232",
 "first_seen": "baseline"
 },
@@ -41794,7 +41792,7 @@
 "piano trio",
 "modern jazz"
 ],
-"description": "Concert organisé dans le cadre du festival Jazzycolors 2026 – 24e édition Présenté par l’Institut Polonais de Paris En partenariat avec Ficep, Jazz Rive Gauche et Studio Raspail Après les débuts marquants de Kasia Pietrzko avec son trio, la jeune pianiste et compositrice de jazz polonaise est rapidement devenue une artiste de premier plan, suscitant également un grand intérêt dans toute l’Europe. ",
+"description": "Concert organisé dans le cadre du festival Jazzycolors 2026 – 24e édition Présenté par l’Institut Polonais de Paris En partenariat avec Ficep, Jazz Rive Gauche et Studio Raspail Après les débuts marquants de Kasia Pietrzko avec son trio, la jeune pianiste et compositrice de jazz polonaise est rapidement devenue une artiste de premier plan, suscitant également un grand intérêt dans toute l’Europe.",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/Kasia-Pietrzko-Trio-photo-Bartosz-Maciejewski-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -42669,9 +42667,9 @@
 "players": {
 "On oublie rien": {
 "youtube": {
-"videoId": "jiTrCzyYIlo",
+"publishedAt": "2008-05-15",
 "title": "GRÖDASH - ON OUBLIE RIEN",
-"publishedAt": "2008-05-15"
+"videoId": "jiTrCzyYIlo"
 }
 }
 },
@@ -44205,7 +44203,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "4bb9a0fccb00",
 "first_seen": "baseline"
 },
@@ -45139,17 +45137,17 @@
 "players": {
 "Rythme Brisé": {
 "bandcamp": {
-"url": "https://rythmebrise.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2629825055/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2629825055/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://rythmebrise.bandcamp.com"
 },
 "spotify": {
 "id": "7uOLm9DBy3LSWqBmokHM3s",
 "url": "https://open.spotify.com/artist/7uOLm9DBy3LSWqBmokHM3s"
 },
 "youtube": {
-"videoId": "VDiutySbW4Q",
+"publishedAt": "2026-02-02",
 "title": "Rythme Brisé : Abik (Live) | Rinse France",
-"publishedAt": "2026-02-02"
+"videoId": "VDiutySbW4Q"
 }
 }
 },
@@ -46086,7 +46084,7 @@
 "subgenres": [
 "comptines"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -46502,7 +46500,7 @@
 "jump blues",
 "blues dance"
 ],
-"description": "Initiation à la danse blues et concert de Juke & Joint — SPEAKEASY BLUES — initiation à la danse blues et concert de Juke & Joint Les Speakeasy Blues continuent au Bal Chavaux ! Un dimanche par mois, Groov’it vous donne rendez-vous pour une soirée où le blues se joue en live, se danse et se partage autour d’un verre. Que vous soyez danseur·euse de blues ou simplement amateur·rice de musique live, ",
+"description": "Initiation à la danse blues et concert de Juke & Joint — SPEAKEASY BLUES — initiation à la danse blues et concert de Juke & Joint Les Speakeasy Blues continuent au Bal Chavaux ! Un dimanche par mois, Groov’it vous donne rendez-vous pour une soirée où le blues se joue en live, se danse et se partage autour d’un verre. Que vous soyez danseur·euse de blues ou simplement amateur·rice de musique live,",
 "summary": null,
 "image": "https://balchavaux.fr/sites/balchavaux/files/styles/auto_1920/public/import_billetterie/1123-field_illustration_id-1794921382.jpg?itok=j_UNVnue",
 "address": "2 avenue de la Résistance, 93100 Montreuil",
@@ -46544,7 +46542,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/feet-650_650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/feet-650_650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FEET",
@@ -46553,7 +46551,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "906fe4ab8585",
 "first_seen": "baseline"
 },
@@ -48864,7 +48862,7 @@
 ],
 "description": null,
 "summary": "Ladaniva, duo formé par la chanteuse Jaklin Baghdasaryan et le multi-instrumentiste Louis Thomas, mêle musiques traditionnelles arménienne et balkanique, maloya et reggae dans une musique-monde explosive. Le groupe, connu pour « Kef Chilini », « Shakar » et « Jako » (Eurovision 2024), présente son deuxième album entre tradition revisitée et sonorités contemporaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/07/ladaniva_photo-carree-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/07/ladaniva_photo-carree-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LADANIVA",
@@ -48885,7 +48883,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "c70167a3f819",
 "first_seen": "baseline"
 },
@@ -50464,7 +50462,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Florent Marchet, figure singulière de la chanson française depuis plus de vingt ans, revient sur scène avec un nouveau projet écrit entre la France et la Méditerranée, aux sonorités plus organiques et à l'écriture attentive aux trajectoires humaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FLORENT MARCHET",
@@ -50489,7 +50487,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "971241847bfa",
 "first_seen": "baseline"
 },
@@ -52040,7 +52038,7 @@
 ],
 "description": null,
 "summary": "Renan Luce célèbre les vingt ans de son premier album « Repentie » en rejouant sur scène les treize chansons du disque dans l'ordre.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/renan-luce_2026_bd©laurent_seroussi_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/renan-luce_2026_bd©laurent_seroussi_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RENAN LUCE",
@@ -52061,7 +52059,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "262825d9f607",
 "first_seen": "baseline"
 },
@@ -53276,6 +53274,50 @@
 "first_seen": "baseline"
 },
 {
+"title": "PROGRAMME PHARE",
+"date": "2026-12-18",
+"venue": "La Cigale",
+"venue_slug": "la-cigale",
+"source": "cigale",
+"time": "19:00",
+"url": "https://lacigale.fr/evenements/programme-phare/",
+"ticket_url": null,
+"price": null,
+"free": false,
+"sold_out": false,
+"cancelled": false,
+"raw_genre": "Rap",
+"genres": [
+"hip-hop"
+],
+"genre_source": "site",
+"subgenres": [
+"rap français"
+],
+"description": null,
+"summary": "Soirée « Du single à la scène #4 » du Programme Phare : les 14 artistes émergents de la 4e promotion, aux esthétiques variées, présentent leur univers en live, accompagnés d'invités et de parrains de la promotion.",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/programmephare-affiche-480x600.jpg.webp",
+"address": "120 boulevard de Rochechouart, 75018 Paris",
+"area": "Pigalle",
+"headliner": "PROGRAMME PHARE",
+"support": [],
+"players": {
+"PROGRAMME PHARE": {
+"youtube": {
+"publishedAt": "2026-05-29",
+"title": "Non Au Harcèlement - Programme Phare 6e8 Collège Les CLauzades - Lavaur (2026)",
+"videoId": "uDRe7v5PZoE"
+}
+}
+},
+"lat": 48.8823,
+"lon": 2.34,
+"is_music": true,
+"stale_since": null,
+"id": "a8f723a7e04b",
+"first_seen": "2026-11-26"
+},
+{
 "title": "Carte blanche à Natascha Rogers",
 "date": "2026-12-18",
 "venue": "Le Baiser Salé",
@@ -53883,17 +53925,17 @@
 "players": {
 "David shea": {
 "bandcamp": {
-"url": "https://davidshea.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1830351753/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1830351753/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://davidshea.bandcamp.com"
 },
 "spotify": {
 "id": "1jnB8rF67HTwy5L5ZbIr0W",
 "url": "https://open.spotify.com/artist/1jnB8rF67HTwy5L5ZbIr0W"
 },
 "youtube": {
-"videoId": "newGiBbNCk0",
+"publishedAt": "2021-04-04",
 "title": "David Shea - Live in Blackwood",
-"publishedAt": "2021-04-04"
+"videoId": "newGiBbNCk0"
 }
 }
 },
@@ -54752,9 +54794,9 @@
 "players": {
 "Mila moja": {
 "youtube": {
-"videoId": "HBCBjC4y86U",
+"publishedAt": "2014-02-14",
 "title": "Fantastic Band - Mila moja (VIP Room)",
-"publishedAt": "2014-02-14"
+"videoId": "HBCBjC4y86U"
 }
 }
 },
@@ -55077,9 +55119,9 @@
 "players": {
 "The Bends of Symmetry": {
 "youtube": {
-"videoId": "kEisCSM_bfo",
+"publishedAt": "2026-10-28",
 "title": "The Bends Of Symmetry - Radiohead covers @ Truskel",
-"publishedAt": "2026-10-28"
+"videoId": "kEisCSM_bfo"
 }
 }
 },
@@ -55585,23 +55627,23 @@
 "players": {
 "BRTINZZ": {
 "bandcamp": {
-"url": "https://brtinzz.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=811360284/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=811360284/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://brtinzz.bandcamp.com"
 },
 "spotify": {
 "id": "57QUX9gYis9qbs3C0ksxVD",
 "url": "https://open.spotify.com/artist/57QUX9gYis9qbs3C0ksxVD"
 },
 "youtube": {
-"videoId": "LM-UJOpFhQE",
+"publishedAt": "2025-12-08",
 "title": "TineX B2B Brtinzz @ HardBeats Festival 3rd Anniversary | Cvetličarna, Ljubljana | 19.9.2025",
-"publishedAt": "2025-12-08"
+"videoId": "LM-UJOpFhQE"
 }
 },
 "NO MISS": {
 "bandcamp": {
-"url": "https://nomiss.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=245823304/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=245823304/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://nomiss.bandcamp.com"
 },
 "spotify": {
 "id": "5tqs9w3YfGiqXObHskDZ13",
@@ -55625,13 +55667,13 @@
 },
 "MR COZZO": {
 "bandcamp": {
-"url": "https://mrcozzo.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4091316553/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4091316553/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://mrcozzo.bandcamp.com"
 },
 "youtube": {
-"videoId": "tkNuObjynWc",
+"publishedAt": "2021-04-24",
 "title": "Mr Cozzo / Less Drama More Techno Livestream",
-"publishedAt": "2021-04-24"
+"videoId": "tkNuObjynWc"
 }
 }
 },
@@ -57525,8 +57567,8 @@
 },
 "POLYAMORE": {
 "bandcamp": {
-"url": "https://polyamore.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1870405921/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1870405921/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://polyamore.bandcamp.com"
 }
 }
 },
@@ -57885,7 +57927,7 @@
 "christmas songs",
 "swing"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -61490,7 +61532,7 @@
 "subgenres": [
 "film music"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -62642,7 +62684,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Jazz loves Amy – « Nouvelle voix sur la scène Jazz parisienne, Eléonore Langelier explore avec passion le répertoire des Ladies du Jazz pour en révéler la profondeur et l’émotion. Elle rend ici hommage à Amy Winehouse, voix incontournable de la Soul, pour faire revivre, à travers son timbre âpre et grave, la puissance de ses mélodies et de ses textes. Entourée de musiciens rompus à la Soul music, ",
+"description": "Jazz loves Amy – « Nouvelle voix sur la scène Jazz parisienne, Eléonore Langelier explore avec passion le répertoire des Ladies du Jazz pour en révéler la profondeur et l’émotion. Elle rend ici hommage à Amy Winehouse, voix incontournable de la Soul, pour faire revivre, à travers son timbre âpre et grave, la puissance de ses mélodies et de ses textes. Entourée de musiciens rompus à la Soul music,",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/01/Photo-Jazz-loves-Amy-2026.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -62797,7 +62839,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/650x650-cigale-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/650x650-cigale-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOAM SINSEAU",
@@ -62806,7 +62848,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "d116c48e0dd3",
 "first_seen": "2026-11-09"
 },
@@ -62870,7 +62912,7 @@
 "subgenres": [
 "marathon du jazz"
 ],
-"description": "Le tap dancer percussionniste Aurélien Lehmann s’entoure de trois musiciens d’exception pour un concert intense et flamboyant en hommage à Michel Petrucciani – le pianiste français qui a conquis New-York – et d’autres légendes du jazz. Les compositions originales de l’artiste et de son quartet complètent ce programme riche en émotions. Un concert à voir autant qu’à écouter, pour tous les amateurs ",
+"description": "Le tap dancer percussionniste Aurélien Lehmann s’entoure de trois musiciens d’exception pour un concert intense et flamboyant en hommage à Michel Petrucciani – le pianiste français qui a conquis New-York – et d’autres légendes du jazz. Les compositions originales de l’artiste et de son quartet complètent ce programme riche en émotions. Un concert à voir autant qu’à écouter, pour tous les amateurs",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/10/hands-feet-connection-aurelien-lehmannTD-18-Modifie-scaled.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -63449,7 +63491,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/nadege_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/nadege_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NADÈGE 100 GÊNE",
@@ -63458,7 +63500,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "fbf71edc9adc",
 "first_seen": "baseline"
 },
@@ -64666,7 +64708,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -65615,17 +65657,17 @@
 "players": {
 "LUDO": {
 "bandcamp": {
-"url": "https://ludo303.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1279551738/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1279551738/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://ludo303.bandcamp.com"
 },
 "spotify": {
 "id": "6ok7bEDf9CZ0448D59AaNL",
 "url": "https://open.spotify.com/artist/6ok7bEDf9CZ0448D59AaNL"
 },
 "youtube": {
-"videoId": "e-ttb9o5fWE",
+"publishedAt": "2022-10-26",
 "title": "Ludo - Lake Pontchartrain (Live at HalLUDOween 2021)",
-"publishedAt": "2022-10-26"
+"videoId": "e-ttb9o5fWE"
 }
 }
 },
@@ -66031,7 +66073,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAMIEN GILLARD",
@@ -66040,7 +66082,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "5674d547c392",
 "first_seen": "2026-09-11"
 },
@@ -66373,20 +66415,20 @@
 "url": "https://open.spotify.com/artist/3j2JOqx0mLDrHZzm9TVT3G"
 },
 "youtube": {
-"videoId": "3CG7f_aH3oc",
+"publishedAt": "2010-09-17",
 "title": "Elio e le Storie Tese - Pagàno - Live in Carroponte di Sesto San Giovanni 4/17",
-"publishedAt": "2010-09-17"
+"videoId": "3CG7f_aH3oc"
 }
 },
 "Mr Cozzo": {
 "bandcamp": {
-"url": "https://mrcozzo.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4091316553/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4091316553/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://mrcozzo.bandcamp.com"
 },
 "youtube": {
-"videoId": "tkNuObjynWc",
+"publishedAt": "2021-04-24",
 "title": "Mr Cozzo / Less Drama More Techno Livestream",
-"publishedAt": "2021-04-24"
+"videoId": "tkNuObjynWc"
 }
 }
 },
@@ -66662,7 +66704,7 @@
 ],
 "description": null,
 "summary": "K-Reen, pionnière du R&B en France, donne son tout premier concert solo : après plus de 30 ans de carrière, elle y réunit ses plus grands succès, des invités surprises et des moments inédits.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/08/k-reen-cigale-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/08/k-reen-cigale-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "K-REEN",
@@ -66683,7 +66725,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "7280424e3c85",
 "first_seen": "2026-09-11"
 },
@@ -68384,7 +68426,7 @@
 "subgenres": [
 "rock'n'roll"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -68704,7 +68746,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "86e16da54408",
 "first_seen": "2026-10-05"
 },
@@ -69976,7 +70018,7 @@
 ],
 "description": null,
 "summary": "Heaven Sam, DJ et artiste-performer de la scène afro, architecte du mouvement Afro Disco et créateur du phénomène SKALALA, investit La Cigale pour son show « The Afrodisco Experience », présenté comme une expérience sensorielle totale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HEAVEN SAM",
@@ -69997,7 +70039,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "7e601091e1e3",
 "first_seen": "2026-09-16"
 },
@@ -70736,7 +70778,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Après plus de 100 dates sur les routes de France, la jeune artiste Dinaa présente un show sublimé à La Cigale, où sa voix soul raconte ses expériences personnelles entre mélancolie et résilience.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DINAA",
@@ -70757,7 +70799,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "bbd6cf24e7a8",
 "first_seen": "2026-09-17"
 },
@@ -71338,24 +71380,24 @@
 "players": {
 "Dox’Art": {
 "youtube": {
-"videoId": "ayMEj26Vy9M",
+"publishedAt": "2025-09-23",
 "title": "Etienne Nogues | Dox'Art Festival 2025 [full set movie]",
-"publishedAt": "2025-09-23"
+"videoId": "ayMEj26Vy9M"
 }
 },
 "Anthea": {
 "bandcamp": {
-"url": "https://antheametal.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2522029496/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2522029496/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://antheametal.bandcamp.com"
 },
 "spotify": {
 "id": "3Lv5HLsOFocq6pbErHETiP",
 "url": "https://open.spotify.com/artist/3Lv5HLsOFocq6pbErHETiP"
 },
 "youtube": {
-"videoId": "PYa-VylOSRQ",
+"publishedAt": "2026-10-15",
 "title": "Anthea in the Groove Box @ Sandbox Festival 2026, El Gouna",
-"publishedAt": "2026-10-15"
+"videoId": "PYa-VylOSRQ"
 }
 },
 "Giammarco Orsini": {
@@ -71364,16 +71406,16 @@
 "url": "https://open.spotify.com/artist/2UeJ7KtpW2Qm6cNATgPzsY"
 },
 "youtube": {
-"videoId": "Zj8fKOUvkKM",
+"publishedAt": "2023-09-01",
 "title": "Giammarco Orsini | Boiler Room x Polifonic Festival",
-"publishedAt": "2023-09-01"
+"videoId": "Zj8fKOUvkKM"
 }
 },
 "Iambp": {
 "youtube": {
-"videoId": "AeCS8iAYjLU",
+"publishedAt": "2024-06-27",
 "title": "IAMBP | Live DJ Set at Rex Club Paris | Electronic Subculture",
-"publishedAt": "2024-06-27"
+"videoId": "AeCS8iAYjLU"
 }
 }
 },
@@ -72171,7 +72213,7 @@
 ],
 "description": null,
 "summary": "Concert du rappeur et auteur-interprète parisien DMA, entre rap introspectif et mélodie, qui défend son album CŒUR DE LION dans un live intense et habité.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-affiche-vierge-dma-la-cigale-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-affiche-vierge-dma-la-cigale-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DMA",
@@ -72192,7 +72234,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "33de8679ca11",
 "first_seen": "2026-09-18"
 },
@@ -73314,7 +73356,7 @@
 "vocal jazz",
 "musical theatre songs"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -73326,9 +73368,9 @@
 "players": {
 "Morgane Dessislava Quartet": {
 "youtube": {
-"videoId": "5ESqTHD1tKc",
+"publishedAt": "2025-03-06",
 "title": "Disney Jazz, Morgane Dessislava Quartet au Théâtre du Châtelet",
-"publishedAt": "2025-03-06"
+"videoId": "5ESqTHD1tKc"
 }
 }
 },
@@ -74326,7 +74368,7 @@
 ],
 "description": null,
 "summary": "Le saxophoniste Léon Phal, figure de la nouvelle scène jazz européenne, défend son quatrième album Bodies & Ideas, entre jazz, groove et électronique, accompagné de Gauthier Toux, Zacharie Ksyk, Rémi Bouyssière et Arthur Alard pour un live dansant et intense.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/format-site-phal-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/format-site-phal-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LÉON PHAL",
@@ -74351,7 +74393,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "2cfbdb2a9a8c",
 "first_seen": "2026-09-21"
 },
@@ -75069,7 +75111,7 @@
 ],
 "description": null,
 "summary": "MICO, artiste alt-pop-rock philippino-canadien révélé par l'EP Internet hometown hero puis l'album When the lights turn on, est de passage à Paris dans le cadre de sa tournée IN:BETWEEN, entre nostalgie pop-punk, alt-pop moderne et hyperpop.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/mico-milwaukee-9.28-40-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/mico-milwaukee-9.28-40-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MICO",
@@ -75090,7 +75132,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "803b93933000",
 "first_seen": "2026-10-10"
 },
@@ -76054,7 +76096,7 @@
 ],
 "description": null,
 "summary": "Brothers in Band rend hommage à Dire Straits avec The Very Best of Dire Straits, un spectacle qui parcourt les grandes périodes du groupe de Mark Knopfler et ses titres emblématiques comme « Sultans of Swing », « Money for Nothing » ou « Brothers in Arms », dans le respect des arrangements d'origine.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/dire-straits-bib-la-cigale-650x650px-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/dire-straits-bib-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "bROTHERS iN bAND",
@@ -76084,7 +76126,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "d03575b16450",
 "first_seen": "2026-09-23"
 },
@@ -76195,7 +76237,7 @@
 "latin jazz",
 "salsa"
 ],
-"description": "Le pianiste et producteur Simon Bolzinger incessant promoteur des musiques sud-américaines depuis plus de trois décennies brouille les pistes avec son nouveau quintet : jazz ou salsa ? On écoute ou on danse ? ou les deux ! Son nom est « Cántalo » car il nous invite à chanter et réunit la joie des musiques sud-américaines et la liberté du jazz. Ils nous livrent une version dynamitée et chantée des ",
+"description": "Le pianiste et producteur Simon Bolzinger incessant promoteur des musiques sud-américaines depuis plus de trois décennies brouille les pistes avec son nouveau quintet : jazz ou salsa ? On écoute ou on danse ? ou les deux ! Son nom est « Cántalo » car il nous invite à chanter et réunit la joie des musiques sud-américaines et la liberté du jazz. Ils nous livrent une version dynamitée et chantée des",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/11/Format-carre-9-1.png",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -77180,8 +77222,8 @@
 "source": "cigale",
 "time": "20:30",
 "url": "https://lacigale.fr/evenements/logicaltramp-the-spirit-of-supertramp/",
-"ticket_url": "https://www.ticketmaster.fr/fr/manifestation/logicaltramp-billet/idmanif/664460",
-"price": "TARIFS : Carré Or : 95 € - Cat.1 : 65 € - Cat.2 : 45 € - VR ",
+"ticket_url": null,
+"price": null,
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -77193,9 +77235,9 @@
 "subgenres": [
 "progressive rock"
 ],
-"description": "LOGICALTRAMP ravive avec éclat l’esprit de Supertramp : un hommage authentique, soutenu par les membres historiques, pour replonger dans des titres légendaires au charme intact. Un voyage musical fidèle, brillant & intensément Supertramp.",
-"summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/logicaltramp-la-cigale-650x650px-600x600.jpg",
+"description": null,
+"summary": "Le groupe LOGICALTRAMP – The Spirit of Supertramp rend hommage au répertoire de Supertramp (« The Logical Song », « Breakfast in America », « Dreamer »…), avec le soutien de John Helliwell et Roger Hodgson.",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/logicaltramp-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOGICALTRAMP",
@@ -77932,9 +77974,9 @@
 "players": {
 "Forever the best show about the King of Pop": {
 "youtube": {
-"videoId": "nzKTnCvr__s",
+"publishedAt": "2023-09-20",
 "title": "FOREVER - the best show about the KING OF POP",
-"publishedAt": "2023-09-20"
+"videoId": "nzKTnCvr__s"
 }
 }
 },
@@ -78099,9 +78141,9 @@
 "players": {
 "Django Celebration": {
 "youtube": {
-"videoId": "XgavR-XmCYs",
+"publishedAt": "2026-06-19",
 "title": "Autumn Leaves - Angelo Debarre / Adrien Moignard / William Brunard (Django Celebration #03)",
-"publishedAt": "2026-06-19"
+"videoId": "XgavR-XmCYs"
 }
 }
 },
@@ -78185,9 +78227,9 @@
 "url": "https://open.spotify.com/artist/7lPt4PyRpBvznm3LDZW1El"
 },
 "youtube": {
-"videoId": "ezJ8SF1YHUQ",
+"publishedAt": "2025-02-19",
 "title": "OUIDAD – LIVE SESSION (WE ARE)",
-"publishedAt": "2025-02-19"
+"videoId": "ezJ8SF1YHUQ"
 }
 }
 },
@@ -78237,9 +78279,9 @@
 "url": "https://open.spotify.com/artist/7fxtWEwKKrFaykKItspdYg"
 },
 "youtube": {
-"videoId": "CrqQX-TA8Zo",
+"publishedAt": "2025-12-31",
 "title": "The Milk Carton Kids - Live From The Ryman - Official Release (Full Concert - 2/1/2024)",
-"publishedAt": "2025-12-31"
+"videoId": "CrqQX-TA8Zo"
 }
 }
 },
@@ -78288,9 +78330,9 @@
 "url": "https://open.spotify.com/artist/1FB2KXUR5fVBtysfeJN1BK"
 },
 "youtube": {
-"videoId": "2RMBQvcapLg",
+"publishedAt": "2017-02-19",
 "title": "Jad Wio - You're Gonna Miss Me Live - Supersonic Paris",
-"publishedAt": "2017-02-19"
+"videoId": "2RMBQvcapLg"
 }
 },
 "GUERRE FROIDE": {
@@ -78303,9 +78345,9 @@
 "url": "https://open.spotify.com/artist/1KJArhoaqmQLmiQLx8xShr"
 },
 "youtube": {
-"videoId": "zzQ_-5aVc4o",
+"publishedAt": "2025-11-22",
 "title": "Guerre Froide live - Demain Berlin @ Minicave-Festival, Triptychon, Münster 21/09/2018",
-"publishedAt": "2025-11-22"
+"videoId": "zzQ_-5aVc4o"
 }
 }
 },
@@ -78357,9 +78399,9 @@
 "url": "https://open.spotify.com/artist/15AjOL739oG631trFL1Vg7"
 },
 "youtube": {
-"videoId": "aV0h3jCqu3k",
+"publishedAt": "2026-09-08",
 "title": "TONY MARLOW - C-C Rider -#elvispresley #tonymarlow #ccrider  #rockabilly #rocknroll #livemusic",
-"publishedAt": "2026-09-08"
+"videoId": "aV0h3jCqu3k"
 }
 },
 "New": {
@@ -78383,9 +78425,9 @@
 "url": "https://open.spotify.com/artist/6mSunWpFeTLOAEDLYWi44x"
 },
 "youtube": {
-"videoId": "eH27GYBiWOY",
+"publishedAt": "2025-01-26",
 "title": "🎸♫ No Hit Makers 🔊 l'Armony  📍 Montreuil  📅  25 janvier 2025 #nohitmakers #vide0rock",
-"publishedAt": "2025-01-26"
+"videoId": "eH27GYBiWOY"
 }
 }
 },
@@ -78475,9 +78517,9 @@
 "url": "https://open.spotify.com/artist/0qudezVgvl4Chd9BgNFB83"
 },
 "youtube": {
-"videoId": "BqClh8IvVMQ",
+"publishedAt": "2026-03-30",
 "title": "Chilly Gonzales - Live at @arteconcert Festival 2023 (Paris)",
-"publishedAt": "2026-03-30"
+"videoId": "BqClh8IvVMQ"
 }
 },
 "La Rumeur": {
@@ -78561,8 +78603,8 @@
 "source": "cigale",
 "time": "20:30",
 "url": "https://lacigale.fr/evenements/lenoise-a-tribute-to-neil-young/",
-"ticket_url": "https://www.ticketmaster.fr/fr/manifestation/lenoise-billet/idmanif/582480",
-"price": "Infos Groupes et C.E : Haracom Tél : 03.21.26.52.94 Tarifs :",
+"ticket_url": null,
+"price": null,
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -78574,9 +78616,9 @@
 "subgenres": [
 "singer-songwriter"
 ],
-"description": "Après le succès sans précédent de leurs spectacles à travers toute l'Europe, \"LeNoise\" arrive enfin en France grâce au CONCERT EXTRAORDINAIRE, afin de combler les fans de Neil Young qui pourront revivre sur scène les versions originales plus vraies que nature, de ses plus grands classiques.",
-"summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/le-noise-la-cigale-650x650px-600x600.jpg",
+"description": null,
+"summary": "Le groupe LeNoise, mené par le chanteur Piet De Pessemier, rend hommage à Neil Young en traversant son répertoire, des ballades de la période « Harvest » aux envolées électriques de Crazy Horse, entre folk acoustique et guitares électriques.",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/le-noise-la-cigale-650x650px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LENOISE",
@@ -78594,9 +78636,9 @@
 "url": "https://open.spotify.com/artist/1zbtdItCDLhQLlyL3ASTZG"
 },
 "youtube": {
-"videoId": "ISaZho5RVzg",
+"publishedAt": "2026-09-11",
 "title": "LeNoise live at Bospop 2025 (full concert)",
-"publishedAt": "2026-09-11"
+"videoId": "ISaZho5RVzg"
 }
 }
 },
@@ -79007,9 +79049,9 @@
 "url": "https://open.spotify.com/artist/2nsGWZA0LtO7istBNsyNTE"
 },
 "youtube": {
-"videoId": "l9Y-rvF94kA",
+"publishedAt": "2022-08-09",
 "title": "Les Wampas Live Full Concert",
-"publishedAt": "2022-08-09"
+"videoId": "l9Y-rvF94kA"
 }
 }
 },
@@ -79050,9 +79092,9 @@
 "players": {
 "POOL PARTY": {
 "youtube": {
-"videoId": "v8K2hZTJOjM",
+"publishedAt": "2024-04-27",
 "title": "The Aquabats, Pool Party!! live at Coachella 2024",
-"publishedAt": "2024-04-27"
+"videoId": "v8K2hZTJOjM"
 }
 }
 },
@@ -79137,9 +79179,9 @@
 "url": "https://open.spotify.com/artist/5KBbs98MK59UNMF1VTwMmz"
 },
 "youtube": {
-"videoId": "l94BGZIUuOU",
+"publishedAt": "2023-05-07",
 "title": "Claudio Capéo - Si j'avais su (Live) - Le Grand Studio RTL",
-"publishedAt": "2023-05-07"
+"videoId": "l94BGZIUuOU"
 }
 }
 },
@@ -79189,9 +79231,9 @@
 "url": "https://open.spotify.com/artist/6aaMZ3fcfLv4tEbmY7bjRM"
 },
 "youtube": {
-"videoId": "LNHJXv_DdtI",
+"publishedAt": "2026-05-23",
 "title": "Isaiah Rashad - Live From YouTube Music Nights (Full Performance)",
-"publishedAt": "2026-05-23"
+"videoId": "LNHJXv_DdtI"
 }
 }
 },
@@ -79223,7 +79265,7 @@
 "subgenres": [
 "piano jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -79305,7 +79347,15 @@
 "area": "Villette",
 "headliner": "Visions sonores",
 "support": [],
-"players": {},
+"players": {
+"Visions sonores": {
+"youtube": {
+"videoId": "RbyK7wWjFBs",
+"title": "Visions Sonores- Espèce à Part- Live 2011",
+"publishedAt": "2011-11-01"
+}
+}
+},
 "lat": 48.8892,
 "lon": 2.3939,
 "is_music": true,
@@ -79356,6 +79406,11 @@
 "spotify": {
 "id": "00FQb4jTyendYWaN8pK0wa",
 "url": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+},
+"youtube": {
+"videoId": "Iy721YJzY08",
+"title": "Lana Del Rey - Young & Beautiful - First time in Live - Rockhal [HD 1080p]",
+"publishedAt": "2013-05-10"
 }
 }
 },
@@ -79438,9 +79493,9 @@
 "players": {
 "SOUL SUGAR MEETS DUB SHEPHERDS": {
 "youtube": {
-"videoId": "-8yxfhrnU-4",
+"publishedAt": "2026-06-04",
 "title": "Soul Sugar meets Dub Shepherds featuring Jolly Joseph ★ Super freak ★",
-"publishedAt": "2026-06-04"
+"videoId": "-8yxfhrnU-4"
 }
 }
 },
@@ -79470,7 +79525,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/06/hl-tour-press-pic-scaled-e1782220099550-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/06/hl-tour-press-pic-scaled-e1782220099550-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DAN & PHIL",
@@ -79479,7 +79534,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "b233bc1367ca",
 "first_seen": "2026-09-26"
 },
@@ -79642,18 +79697,33 @@
 "spotify": {
 "id": "4U8T5U8hv5IsEQIYfiroTy",
 "url": "https://open.spotify.com/artist/4U8T5U8hv5IsEQIYfiroTy"
+},
+"youtube": {
+"videoId": "k_tGpdNOC7Y",
+"title": "Taous arhab Live 2026",
+"publishedAt": "2026-05-27"
 }
 },
 "Amine Amirouche": {
 "spotify": {
 "id": "02K61O9SmM6DI5pOirryVX",
 "url": "https://open.spotify.com/artist/02K61O9SmM6DI5pOirryVX"
+},
+"youtube": {
+"videoId": "TkTDy1rrKdQ",
+"title": "Amine Amirouche ( LIVE KABYLE 💯 % Live inédite 100 % ambiance )",
+"publishedAt": "2024-12-27"
 }
 },
 "Karima Kemmache": {
 "spotify": {
 "id": "36tnt93Nc7ph6QwG9vSNsY",
 "url": "https://open.spotify.com/artist/36tnt93Nc7ph6QwG9vSNsY"
+},
+"youtube": {
+"videoId": "s_A8AIxiT6A",
+"title": "Karima Kemmache – Live | Deux Belles Chanson",
+"publishedAt": "2026-03-19"
 }
 }
 },
@@ -79705,6 +79775,11 @@
 "spotify": {
 "id": "2DynE7m1BMVl4hQMvCXXq0",
 "url": "https://open.spotify.com/artist/2DynE7m1BMVl4hQMvCXXq0"
+},
+"youtube": {
+"videoId": "bG2GQxpKZ90",
+"title": "SPITE on Audiotree Live (Full Session)",
+"publishedAt": "2026-02-27"
 }
 },
 "EMMURE": {
@@ -79715,6 +79790,11 @@
 "spotify": {
 "id": "1C62FV9Cltn9L4c9jAwCyk",
 "url": "https://open.spotify.com/artist/1C62FV9Cltn9L4c9jAwCyk"
+},
+"youtube": {
+"videoId": "pcFHsLWdSgc",
+"title": "Emmure - Full Set w/ Multitrack Audio - Live @ The Roxy at Mahall's",
+"publishedAt": "2024-06-18"
 }
 },
 "DISTANT": {
@@ -79725,6 +79805,11 @@
 "spotify": {
 "id": "7dfpBi0QvO9FmlhBK6XHwJ",
 "url": "https://open.spotify.com/artist/7dfpBi0QvO9FmlhBK6XHwJ"
+},
+"youtube": {
+"videoId": "tHEgfwiUsIM",
+"title": "DISTANT - Hellmouth live at Impericon 2026",
+"publishedAt": "2026-07-19"
 }
 },
 "MAULED": {
@@ -79735,6 +79820,11 @@
 "spotify": {
 "id": "6UcO509nWHNHlMhDYbuel2",
 "url": "https://open.spotify.com/artist/6UcO509nWHNHlMhDYbuel2"
+},
+"youtube": {
+"videoId": "k4_KyQf9N2w",
+"title": "Mauled - Full Set w/ Multitrack Audio - Live @ The Foundry Concert Club",
+"publishedAt": "2026-04-06"
 }
 }
 },
@@ -79874,6 +79964,11 @@
 "spotify": {
 "id": "2ATMnbQv6DrIUY8KrezlTX",
 "url": "https://open.spotify.com/artist/2ATMnbQv6DrIUY8KrezlTX"
+},
+"youtube": {
+"videoId": "26U0gd31_ms",
+"title": "Metaphor: ReFantazio Orchestra Concert Digest｜メタファー：リファンタジオ オーケストラコンサートダイジェスト映像【2026年再演決定！】",
+"publishedAt": "2026-01-30"
 }
 }
 },
@@ -79920,9 +80015,9 @@
 "url": "https://open.spotify.com/artist/4tXtAqJV0KS75ndQsYh1GG"
 },
 "youtube": {
-"videoId": "U1F25i33W5Y",
+"publishedAt": "2024-04-12",
 "title": "MOTHER'S CAKE - FULL STUDIO LIVE SESSION - LITTLE BIG BEAT STUDIOS",
-"publishedAt": "2024-04-12"
+"videoId": "U1F25i33W5Y"
 }
 }
 },
@@ -80007,6 +80102,11 @@
 "spotify": {
 "id": "3ZpEKRjHaHANcpk10u6Ntq",
 "url": "https://open.spotify.com/artist/3ZpEKRjHaHANcpk10u6Ntq"
+},
+"youtube": {
+"videoId": "h4JVg4JDxMU",
+"title": "Ayra Starr: Tiny Desk Concert",
+"publishedAt": "2026-06-08"
 }
 }
 },
@@ -80428,8 +80528,8 @@
 "players": {
 "Basic Partner": {
 "bandcamp": {
-"url": "https://basicpartner.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=15707075/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=15707075/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://basicpartner.bandcamp.com"
 },
 "spotify": {
 "id": "4mO0SduTbxEusUepUcjNj3",
@@ -80438,8 +80538,8 @@
 },
 "Knife Crime": {
 "bandcamp": {
-"url": "https://knifecrime.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2573112981/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2573112981/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://knifecrime.bandcamp.com"
 },
 "spotify": {
 "id": "3w4gwOCRrFtYB6HxVX7NPj",
@@ -80637,7 +80737,7 @@
 ],
 "description": null,
 "summary": "Concert pop de Pi Ja Ma, alias Pauline de Tarragon, autour de son nouvel album « Magnetofille », pour une « Pi Ja Ma party » mêlant douceur, humour et poésie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/visuel_pi-ja-ma-la-cigale-2-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/visuel_pi-ja-ma-la-cigale-2-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PI JA MA",
@@ -80657,7 +80757,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "717350dc2411",
 "first_seen": "baseline"
 },
@@ -80788,7 +80888,15 @@
 "area": "Villette",
 "headliner": "One Night Of Queen",
 "support": [],
-"players": {},
+"players": {
+"One Night Of Queen": {
+"youtube": {
+"videoId": "G39S_KrkMzM",
+"title": "One Night of Queen Performed By Gary Mullen & The Works",
+"publishedAt": "2021-07-12"
+}
+}
+},
 "lat": 48.8938,
 "lon": 2.3931,
 "is_music": true,
@@ -81008,6 +81116,11 @@
 "spotify": {
 "id": "0krXCIkthz13P8o0v2tksH",
 "url": "https://open.spotify.com/artist/0krXCIkthz13P8o0v2tksH"
+},
+"youtube": {
+"videoId": "m1ZVepnelVE",
+"title": "Ensiferum - Lai Lai Hei - Live at Wacken Open Air 2018",
+"publishedAt": "2021-08-27"
 }
 },
 "ANGUS McSIX": {
@@ -81018,6 +81131,11 @@
 "spotify": {
 "id": "1NDBvJdsUcycpj4K8l0ooy",
 "url": "https://open.spotify.com/artist/1NDBvJdsUcycpj4K8l0ooy"
+},
+"youtube": {
+"videoId": "eSbpzy-UjIw",
+"title": "Angus McSix - Live at Wacken Open Air 2023",
+"publishedAt": "2024-03-15"
 }
 }
 },
@@ -81108,6 +81226,11 @@
 "spotify": {
 "id": "2wMA0cyQGggqKOjMfUNenu",
 "url": "https://open.spotify.com/artist/2wMA0cyQGggqKOjMfUNenu"
+},
+"youtube": {
+"videoId": "G-lP87eQfs0",
+"title": "TeddyBear - Chaussures roses | LIVE @ Les Solidarités (Namur, Belgique) SAM 05 SEPT. 2026",
+"publishedAt": "2026-09-07"
 }
 }
 },
@@ -81568,7 +81691,7 @@
 ],
 "description": null,
 "summary": "Le groupe rock britannique Editors est en tournée après son single « Call It In », premier morceau depuis l'album EBM, qui annonce un nouveau chapitre pour la formation menée par Tom Smith.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/editors-2026by-rahi-rezvani-first-press-shot-600x399.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/editors-2026by-rahi-rezvani-first-press-shot-600x399.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EDITORS",
@@ -81582,13 +81705,18 @@
 "spotify": {
 "id": "6e9wIFWhBPHLE9bXK8gtBI",
 "url": "https://open.spotify.com/artist/6e9wIFWhBPHLE9bXK8gtBI"
+},
+"youtube": {
+"videoId": "3M0X7eErtso",
+"title": "Editors - live at Pinkpop 2026",
+"publishedAt": "2026-06-25"
 }
 }
 },
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "42093a86aef0",
 "first_seen": "baseline"
 },
@@ -81785,6 +81913,11 @@
 "spotify": {
 "id": "3UqRgrDIQ208yNGiWKRMNt",
 "url": "https://open.spotify.com/artist/3UqRgrDIQ208yNGiWKRMNt"
+},
+"youtube": {
+"videoId": "fyrX5BHh7UU",
+"title": "Napalm Death, live at Hellfest Open Air 2026 - ARTE Concert",
+"publishedAt": "2026-06-25"
 }
 }
 },
@@ -82332,7 +82465,7 @@
 "post-bop",
 "sax trio"
 ],
-"description": "Salué par le New York Times comme « un saxophoniste ténor au style énigmatique, élégant et incisif », JD Allen s’impose comme l’une des figures marquantes de la scène jazz internationale actuelle. Sa voix singulière et captivante au saxophone, fruit d’un travail patient et exigeant sur les fondamentaux de cet art, lui vaut depuis de nombreuses années une reconnaissance critique qui le place parmi ",
+"description": "Salué par le New York Times comme « un saxophoniste ténor au style énigmatique, élégant et incisif », JD Allen s’impose comme l’une des figures marquantes de la scène jazz internationale actuelle. Sa voix singulière et captivante au saxophone, fruit d’un travail patient et exigeant sur les fondamentaux de cet art, lui vaut depuis de nombreuses années une reconnaissance critique qui le place parmi",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/11/Format-carre-2.png",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -83135,7 +83268,7 @@
 ],
 "description": null,
 "summary": "Concert de rap du artiste Sean, dans le cadre de sa tournée « tfkpourlafindumonde? ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/©erwan-blaszka-1038304-600x600.jpeg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/©erwan-blaszka-1038304-600x600.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SEAN",
@@ -83144,7 +83277,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "7beacf99b026",
 "first_seen": "baseline"
 },
@@ -84222,7 +84355,7 @@
 ],
 "description": null,
 "summary": "Resolve donne son plus gros concert parisien en tête d'affiche, dans un registre metal puissant mêlant mélodies accrocheuses et intensité émotionnelle, avec Spleen en première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/resolve-2026-aurelien-mariat-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/resolve-2026-aurelien-mariat-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "RESOLVE",
@@ -84242,7 +84375,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "6c2211931c72",
 "first_seen": "baseline"
 },
@@ -84931,7 +85064,7 @@
 "subgenres": [
 "gypsy jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -85897,8 +86030,8 @@
 "players": {
 "Bryan's Magic Tears": {
 "bandcamp": {
-"url": "https://bryansmagictears.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=155116583/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=155116583/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://bryansmagictears.bandcamp.com"
 },
 "spotify": {
 "id": "4HgpwARKKErmILpXm5YcST",
@@ -85907,8 +86040,8 @@
 },
 "Stonks": {
 "bandcamp": {
-"url": "https://stonkss.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2568767609/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2568767609/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://stonkss.bandcamp.com"
 },
 "spotify": {
 "id": "0iwWvPe7sbKfFHkuFnXzgt",
@@ -85917,8 +86050,8 @@
 },
 "Sarakiniko": {
 "bandcamp": {
-"url": "https://sarakiniko.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=3400657473/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=3400657473/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://sarakiniko.bandcamp.com"
 },
 "spotify": {
 "id": "0H26r3mGvRWfWgRxne9pIn",
@@ -86558,8 +86691,8 @@
 "players": {
 "CLIO": {
 "bandcamp": {
-"url": "https://clio.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1086678790/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1086678790/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://clio.bandcamp.com"
 },
 "spotify": {
 "id": "0TMi4dfaeWLOtRybyX09XW",
@@ -86724,8 +86857,8 @@
 "players": {
 "Satin Jackets": {
 "bandcamp": {
-"url": "https://satinjackets.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1504745079/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1504745079/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://satinjackets.bandcamp.com"
 },
 "spotify": {
 "id": "5Gn7NoCZvbVlGgtZMILRcv",
@@ -87584,8 +87717,8 @@
 "players": {
 "RICHIE CAMPBELL": {
 "bandcamp": {
-"url": "https://richiecampbell.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=314529404/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=314529404/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://richiecampbell.bandcamp.com"
 },
 "spotify": {
 "id": "2swvbEAfN70ZFcQB4Y7MaS",
@@ -89377,7 +89510,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -89389,9 +89522,9 @@
 "players": {
 "Morgane Dessislava Quartet": {
 "youtube": {
-"videoId": "5ESqTHD1tKc",
+"publishedAt": "2025-03-06",
 "title": "Disney Jazz, Morgane Dessislava Quartet au Théâtre du Châtelet",
-"publishedAt": "2025-03-06"
+"videoId": "5ESqTHD1tKc"
 }
 }
 },
@@ -90003,8 +90136,8 @@
 "players": {
 "The Wytches": {
 "bandcamp": {
-"url": "https://the-wytches.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2525683818/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2525683818/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://the-wytches.bandcamp.com"
 },
 "spotify": {
 "id": "46cDW79OcUXlCbYPj7Ds5L",
@@ -90013,8 +90146,8 @@
 },
 "Holy Motors": {
 "bandcamp": {
-"url": "https://holymotorsband.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1363899751/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1363899751/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://holymotorsband.bandcamp.com"
 },
 "spotify": {
 "id": "5iYU8FJ5aU8X4A77hA76st",
@@ -90104,9 +90237,9 @@
 "players": {
 "Forever the best show about the King of Pop": {
 "youtube": {
-"videoId": "nzKTnCvr__s",
+"publishedAt": "2023-09-20",
 "title": "FOREVER - the best show about the KING OF POP",
-"publishedAt": "2023-09-20"
+"videoId": "nzKTnCvr__s"
 }
 }
 },
@@ -90441,9 +90574,9 @@
 "players": {
 "Forever the best show about the King of Pop": {
 "youtube": {
-"videoId": "nzKTnCvr__s",
+"publishedAt": "2023-09-20",
 "title": "FOREVER - the best show about the KING OF POP",
-"publishedAt": "2023-09-20"
+"videoId": "nzKTnCvr__s"
 }
 }
 },
@@ -90858,14 +90991,14 @@
 },
 "GEN": {
 "bandcamp": {
-"url": "https://gen-japanaustralia.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2319249863/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2319249863/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://gen-japanaustralia.bandcamp.com"
 }
 },
 "DANIEL": {
 "bandcamp": {
-"url": "https://horriblehouses.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3425937883/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3425937883/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://horriblehouses.bandcamp.com"
 }
 }
 },
@@ -92261,7 +92394,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -92483,7 +92616,7 @@
 ],
 "description": null,
 "summary": "Le trio britannique The Molotovs, mené par Matt et Issey Cartlidge avec le batteur Noah Riley, défend son premier album Wasted On Youth. Un rock live et énergique mêlant new wave, punk et indie, avec une esthétique inspirée de la culture mod.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/the-molotovs-photo-promo-credit_-rankin-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/the-molotovs-photo-promo-credit_-rankin-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE MOLOTOVS",
@@ -92508,7 +92641,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "58072ce02e31",
 "first_seen": "2026-10-29"
 },
@@ -92837,7 +92970,7 @@
 ],
 "description": null,
 "summary": "Le quatuor canadien de hard rock Theory of a Deadman revient à La Cigale avec « The Barricade Tour », en défense de son EP « Funeral Songs Vol. 1 » qui renoue avec un heavy rock brut, énergique et accrocheur.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/format-site-theory-of-a-deadman-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THEORY OF A DEADMAN",
@@ -92853,7 +92986,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "f5966bc4317c",
 "first_seen": "baseline"
 },
@@ -92973,8 +93106,8 @@
 "players": {
 "Hallan": {
 "bandcamp": {
-"url": "https://hallan.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3962304895/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3962304895/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://hallan.bandcamp.com"
 },
 "spotify": {
 "id": "2cVFmKTidTQi4wVOWYcWi6",
@@ -92983,8 +93116,8 @@
 },
 "Painted Vein": {
 "bandcamp": {
-"url": "https://paintedvein.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2872960334/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2872960334/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://paintedvein.bandcamp.com"
 },
 "spotify": {
 "id": "1Yz4iQXuDT8WRluhIxYHLa",
@@ -93134,7 +93267,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "2e7146682eb4",
 "first_seen": "2026-10-06"
 },
@@ -93989,7 +94122,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "7f3ee049ad5e",
 "first_seen": "2026-10-13"
 },
@@ -95047,7 +95180,7 @@
 ],
 "description": null,
 "summary": "Le trio berlinois d'électro Klangphonics défend son nouvel album « Zest », écrit par Maxl Walmsley-Pledl, avec des collaborations (Anna Metko, BRØR, LUCIE, The Bros. Landreth) et une production entre house et techno. Leur nouveau spectacle est conçu comme une rencontre entre l'expérience du concert et celle du club.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/1_1_klang_press-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/1_1_klang_press-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "KLANGPHONICS",
@@ -95055,8 +95188,8 @@
 "players": {
 "KLANGPHONICS": {
 "bandcamp": {
-"url": "https://klangphonics.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=225410818/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=225410818/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://klangphonics.bandcamp.com"
 },
 "spotify": {
 "id": "0UoXOPQo2BAZ3pSfkt5XZA",
@@ -95067,7 +95200,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "d0995ce092bd",
 "first_seen": "2026-10-27"
 },
@@ -95225,7 +95358,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -96006,7 +96139,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "9623c516081f",
 "first_seen": "baseline"
 },
@@ -98198,8 +98331,8 @@
 "players": {
 "DJ Set": {
 "bandcamp": {
-"url": "https://popmeetsphilhamonic.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=316655634/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=316655634/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://popmeetsphilhamonic.bandcamp.com"
 },
 "spotify": {
 "id": "7qvgHr4p2tbIl5vh1UEeVY",
@@ -99524,7 +99657,7 @@
 "subgenres": [
 "piano jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -99657,7 +99790,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "18f7d88a5eba",
 "first_seen": "baseline"
 },
@@ -100052,7 +100185,7 @@
 ],
 "description": null,
 "summary": "La chanteuse portugaise Cristina Branco célèbre 30 ans de carrière, entre fado traditionnel, poésie et influences jazz, accompagnée de Bernardo Couto à la guitare portugaise, Bernardo Moreira à la contrebasse et Luís Figueiredo au piano.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/cristina_brancofado1_@augusto_brazio-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/cristina_brancofado1_@augusto_brazio-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CRISTINA BRANCO",
@@ -100072,7 +100205,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "2611e77ef815",
 "first_seen": "baseline"
 },
@@ -100491,7 +100624,7 @@
 ],
 "description": null,
 "summary": "Le compositeur et producteur danois Anders Trentemøller livre un live en groupe mêlant post-rock, électronica, shoegaze et dark wave, entre atmosphères cinématographiques et climax sonores.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/trente_2026_credit_jj-345x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/trente_2026_credit_jj-345x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "TRENTEMØLLER",
@@ -100511,7 +100644,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "d7f5250fb5b4",
 "first_seen": "baseline"
 },
@@ -101035,7 +101168,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "f87bab372222",
 "first_seen": "baseline"
 },
@@ -101473,8 +101606,8 @@
 "players": {
 "Tallisker": {
 "bandcamp": {
-"url": "https://tallisker.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2655179582/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2655179582/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://tallisker.bandcamp.com"
 },
 "spotify": {
 "id": "5kHKhgCMg9yezOrISm4wJH",
@@ -101798,7 +101931,7 @@
 ],
 "description": null,
 "summary": "Le groupe britannique Palace revient à Paris pour défendre Ox, son cinquième album enregistré à Deptford avec Adam Jaffrey, aux couleurs organiques et americana inspirées de The Band ou Townes Van Zandt.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/credit-adrian-lee-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/credit-adrian-lee-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PALACE",
@@ -101818,7 +101951,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "cf7f1381b761",
 "first_seen": "2026-09-28"
 },
@@ -102275,8 +102408,8 @@
 "players": {
 "SAINT ETIENNE": {
 "bandcamp": {
-"url": "https://saintetienne.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1696995912/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1696995912/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://saintetienne.bandcamp.com"
 },
 "spotify": {
 "id": "1N2FgBLehaq77UEdJhCt7f",
@@ -102640,8 +102773,8 @@
 "source": "cigale",
 "time": "20:00",
 "url": "https://lacigale.fr/evenements/loa-mercury/",
-"ticket_url": "https://shotgun.live/events/loa-mercury-a-cigale?utm_source=qfap",
-"price": "payant",
+"ticket_url": null,
+"price": null,
 "free": false,
 "sold_out": false,
 "cancelled": false,
@@ -102654,9 +102787,9 @@
 "subgenres": [
 "pop française"
 ],
-"description": "Delco music présente Loa Mercury à La Cigale (Paris), le 6 mars 2027 à 20 h.",
-"summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/01/loa@lacigale_650x650.jpeg",
+"description": null,
+"summary": "Loa Mercury, artiste queer aux textes poétiques qui revendique sa transidentité et sa fluidité de genre, présente un concert de pop électro chantée mêlant sens des mots et sens du spectacle.",
+"image": "https://lacigale.fr/wp-content/uploads/2026/01/loa@lacigale_650x650.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LOA MERCURY",
@@ -103253,7 +103386,7 @@
 ],
 "genre_source": "llm",
 "subgenres": [],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -103501,7 +103634,7 @@
 ],
 "description": null,
 "summary": "Philippe Manœuvre, figure du journalisme rock, monte pour la première fois sur scène avec un spectacle mêlant musique, souvenirs, émotion et humour autour d'une époque révolue.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/manoeuvre-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/manoeuvre-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "UN ENFANT DU ROCK",
@@ -103510,7 +103643,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "2e66d1af69dc",
 "first_seen": "2026-11-25"
 },
@@ -103988,7 +104121,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-10-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-10-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "Match d’Impro Pro",
@@ -103997,7 +104130,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "251cc609bfac",
 "first_seen": "2026-11-20"
 },
@@ -104437,7 +104570,7 @@
 ],
 "description": null,
 "summary": "Le chanteur bruxellois Noé Preszow, auteur-compositeur de chanson française, vient présenter sur scène les titres de son troisième album.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650_cigale-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650_cigale-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOÉ PRESZOW",
@@ -104453,7 +104586,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "f01a5a1641d8",
 "first_seen": "baseline"
 },
@@ -105098,7 +105231,7 @@
 ],
 "description": null,
 "summary": "Lancelot revient sur scène après son EP Curriculum Vitae, son single Madame et son dernier morceau Guéri, une pop française nostalgique et teintée d'humour sur les tourments amoureux.",
-"image": "https://lacigale.fr/wp-content/uploads/2025/04/lancelot_1000x1000_chugolardenet-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2025/04/lancelot_1000x1000_chugolardenet-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LANCELOT",
@@ -105118,7 +105251,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "f59c2c66e5f2",
 "first_seen": "baseline"
 },
@@ -106195,8 +106328,8 @@
 "players": {
 "BUNT.": {
 "bandcamp": {
-"url": "https://bunt15.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2353598973/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2353598973/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://bunt15.bandcamp.com"
 },
 "spotify": {
 "id": "2CpLIMBoE2ZzyY3ZBCRZ7j",
@@ -106494,7 +106627,7 @@
 ],
 "description": null,
 "summary": "Blanco White, projet solo du Londonien Josh Edwards, mêle guitare flamenco, charango et musique andalouse et latino à ses influences folk anglo-saxonnes, dans le sillage de son album Tarifa.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/blanco-white-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/blanco-white-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BLANCO WHITE",
@@ -106514,7 +106647,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "9bf2ff25fc83",
 "first_seen": "baseline"
 },
@@ -107516,7 +107649,7 @@
 ],
 "description": null,
 "summary": "Retour sur scène d'Assassin, groupe mythique du hip-hop français mené par Rockin' Squat, pionnier d'un rap conscient et engagé produit en indépendance.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/03/2_1080x1350-assassin-la-cigale-c-sixtine-raider-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/03/2_1080x1350-assassin-la-cigale-c-sixtine-raider-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ASSASSIN",
@@ -107536,7 +107669,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "9a354bd3afc4",
 "first_seen": "baseline"
 },
@@ -109266,7 +109399,7 @@
 ],
 "description": null,
 "summary": "Cali présente « Caliciuri », nouvel album et nouveau spectacle de chanson française, dans un concert placé sous le signe de la proximité et du partage avec le public.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/cali_cigale_site-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/cali_cigale_site-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CALI",
@@ -109284,7 +109417,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "840dd1d2a84f",
 "first_seen": "baseline"
 },
@@ -109868,7 +110001,7 @@
 ],
 "description": null,
 "summary": "Joyce Jonathan présente sur scène « De justesse », son sixième album personnel qu'elle a produit elle-même, évoquant amour, séparation, maternité et reconstruction, en alternant nouvelles chansons et titres emblématiques.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/1080x1080-neutre-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/1080x1080-neutre-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JOYCE JONATHAN",
@@ -109884,7 +110017,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "d2dec32324bd",
 "first_seen": "baseline"
 },
@@ -110508,7 +110641,7 @@
 ],
 "description": null,
 "summary": "Le rappeur Asfar Shamsi est en concert, après des dates complètes à La Boule Noire et à La Maroquinerie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/02/cigale4-480x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/02/cigale4-480x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ASFAR SHAMSI",
@@ -110524,7 +110657,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "8fd2cb0d46f5",
 "first_seen": "baseline"
 },
@@ -111255,7 +111388,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/madam-credit-boby-1-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/madam-credit-boby-1-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MADAM",
@@ -111271,7 +111404,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "7d2597457589",
 "first_seen": "baseline"
 },
@@ -111924,7 +112057,7 @@
 ],
 "description": null,
 "summary": "Auteur-compositeur-interprète et producteur inclassable, CHATON revient à La Cigale avec son univers à la croisée de la chanson, du dub et de l'électro, dans des concerts intimes où il se livre seul sur scène, parfois accompagné de ses enfants.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650-x-650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650-x-650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "CHATON",
@@ -111944,7 +112077,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "c1fb6cb69866",
 "first_seen": "baseline"
 },
@@ -112463,7 +112596,7 @@
 "vocal jazz",
 "crooner"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -113030,7 +113163,7 @@
 ],
 "description": null,
 "summary": "Jäde, autrice-compositrice-productrice à la croisée du R'n'B, de la pop et du rap, prolonge son album « Les Malheurs de Jäde » et son EP « Sexe & the City » avec une nouvelle ère plus pop et électronique ouverte par le single « Mon Sac ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/sans-titre-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/sans-titre-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JÄDE",
@@ -113050,7 +113183,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "e2e2db5eaf5e",
 "first_seen": "2026-10-22"
 },
@@ -113466,7 +113599,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Dominique A défend sur scène « Spirales », son quinzième album studio, à l'esthétique plus brute et plus rock, aux textes autobiographiques et universels.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/650x650-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DOMINIQUE A",
@@ -113482,7 +113615,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "64bd87deea9b",
 "first_seen": "baseline"
 },
@@ -115747,7 +115880,7 @@
 "subgenres": [
 "vocal jazz"
 ],
-"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie ",
+"description": "Tarif unique à 16€ par personne (adulte et enfant, chaque participant doit être muni d’un billet). 10€ pour les enfants de moins de 2 ans. Jazz & Goûter, le concept qui cartonne chaque dimanche à l’heure du goûter est de retour pour une 19ème saison. Vous avez le choix entre deux séances : 15h ou 17h et même 11h pour certaines dates ! Retrouvez nos hommages : Walt Disney, Ella Fitzgerald & Billie",
 "summary": null,
 "image": "https://www.sunset-sunside.com/app/uploads/2026/07/Format-carre-2.webp",
 "address": "60 rue des Lombards, 75001 Paris",
@@ -115766,9 +115899,9 @@
 },
 "Morgane Dessislava Quartet": {
 "youtube": {
-"videoId": "5ESqTHD1tKc",
+"publishedAt": "2025-03-06",
 "title": "Disney Jazz, Morgane Dessislava Quartet au Théâtre du Châtelet",
-"publishedAt": "2025-03-06"
+"videoId": "5ESqTHD1tKc"
 }
 }
 },
@@ -115803,7 +115936,7 @@
 ],
 "description": null,
 "summary": "Colonel Reyel célèbre les 16 ans de son album « Au rapport », qui a marqué la pop urbaine française, en reprenant ses titres emblématiques comme « Celui », « Aurélie » ou « Toutes les nuits ».",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/colonel-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/colonel-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "COLONEL REYEL",
@@ -115819,7 +115952,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "5b508ae3c714",
 "first_seen": "baseline"
 },
@@ -116146,7 +116279,7 @@
 ],
 "description": null,
 "summary": "Hervé Salters, alias General Elektriks, présente sa soul funk nourrie de musiques afro-américaines (funk, soul, hip-hop, jazz) et portée par son jeu de claviers, à l'occasion d'un septième album. Entouré de Jessie Chaton, Guillaume Lantonnet, Toma Milteau et Eric Starczan, il réarrange ses morceaux pour un show live sans laptop.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/ge-600x600-1.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/ge-600x600-1.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "General Elektriks",
@@ -116162,7 +116295,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "a7f5612b4956",
 "first_seen": "baseline"
 },
@@ -117173,8 +117306,8 @@
 "players": {
 "THE WOMBATS": {
 "bandcamp": {
-"url": "https://thewombatsmusic.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=1928156098/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=1928156098/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://thewombatsmusic.bandcamp.com"
 },
 "spotify": {
 "id": "0Ya43ZKWHTKkAbkoJJkwIB",
@@ -117512,7 +117645,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/oria650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/oria650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ORIA",
@@ -117532,7 +117665,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "e2b167ec7ac4",
 "first_seen": "baseline"
 },
@@ -117933,7 +118066,7 @@
 ],
 "description": null,
 "summary": "Le trio réunionnais PLL (Power Love Life), composé de Lil King, S.G et Luidgi, mêle dancehall, shatta, afro-caribéen et musiques urbaines. Le groupe, connu pour les titres Shattiment, Maya ou Roulman, joue pour la première fois à La Cigale.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/p.l.l-hd-©tony-600x400.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/p.l.l-hd-©tony-600x400.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "P.L.L",
@@ -117949,7 +118082,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "25edfad4e29a",
 "first_seen": "baseline"
 },
@@ -118502,8 +118635,8 @@
 "players": {
 "VESTIGE": {
 "bandcamp": {
-"url": "https://vestigesom.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/track=4052443012/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/track=4052443012/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://vestigesom.bandcamp.com"
 },
 "spotify": {
 "id": "0He1jblX9hIvQotJb3YBmc",
@@ -119861,7 +119994,7 @@
 ],
 "description": null,
 "summary": "STARSEED'Z, girl group français formé de Léa, Kalee, Kanya et Nana, présente son ECLIPSE TOUR : des compositions originales aux influences K-pop portées par des performances vocales et des chorégraphies millimétrées.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/sublime_groupe-1800x1800px-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/sublime_groupe-1800x1800px-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "STARSEED’Z",
@@ -119877,7 +120010,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "86e7bca16513",
 "first_seen": "2026-10-29"
 },
@@ -121589,7 +121722,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "b6c1ce28c3c4",
 "first_seen": "baseline"
 },
@@ -122202,7 +122335,7 @@
 ],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/visu-cigale-650x650-1-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/visu-cigale-650x650-1-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LUSHE",
@@ -122222,7 +122355,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "c644a48dc70a",
 "first_seen": "baseline"
 },
@@ -122518,7 +122651,7 @@
 ],
 "description": null,
 "summary": "Premier concert parisien de Ntaba 2 London, artiste afro-urbaine et danseuse de formation incarnant une nouvelle génération féminine du ndombolo moderne, entre tradition congolaise et sonorités afro contemporaines.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-8-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-8-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NTABA 2 LONDON",
@@ -122534,7 +122667,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "8a1b9c8cd9d2",
 "first_seen": "2026-11-19"
 },
@@ -123222,7 +123355,7 @@
 ],
 "description": null,
 "summary": "Le Duo Jatekok (Adélaïde Panaget et Naïri Badal) présente « Rammstein on the beach », un concert hybride mis en scène par David Gauchard qui fait dialoguer l'univers rock de Rammstein, avec lequel les pianistes ont tourné, et la musique minimaliste de Monk, Adams et Glass.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-ctina-dubrovsky-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-ctina-dubrovsky-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DUO JATEKOK",
@@ -123246,7 +123379,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "553f66f8c56a",
 "first_seen": "2026-10-07"
 },
@@ -123536,7 +123669,7 @@
 ],
 "description": null,
 "summary": "Le rappeur Django défend son album LAZAR, prolongeant un univers introspectif et mélancolique entre emo-rap, noirceur de la drill et mélodies autotunées.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/django-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/django-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "DJANGO",
@@ -123556,7 +123689,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "34cb5c7c0b73",
 "first_seen": "2026-10-22"
 },
@@ -123770,7 +123903,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "c26c080d0294",
 "first_seen": "baseline"
 },
@@ -124123,7 +124256,7 @@
 ],
 "description": null,
 "summary": "Juste Shani, voix montante du rap français révélée par son EP « Diamant Noir » et ses vidéos virales, monte sur la scène de La Cigale après avoir rempli la Gaîté Lyrique.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-justeshani-cigale-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/04/650x650-justeshani-cigale-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "JUSTE SHANI",
@@ -124144,7 +124277,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "5e7a2e869f28",
 "first_seen": "baseline"
 },
@@ -124383,8 +124516,8 @@
 "players": {
 "THE CINEMATIC ORCHESTRA": {
 "bandcamp": {
-"url": "https://cinematicorchestramusic.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=4136205851/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=4136205851/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://cinematicorchestramusic.bandcamp.com"
 },
 "spotify": {
 "id": "32ogthv0BdaSMPml02X9YB",
@@ -124456,7 +124589,7 @@
 ],
 "description": null,
 "summary": "Nouvelle Vague présente son septième album, entièrement consacré aux reprises de Depeche Mode : treize titres emblématiques réinterprétés par de nouvelles voix et enregistrés à Rio avec des musiciens brésiliens.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/nouvelle-vague-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/nouvelle-vague-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NOUVELLE VAGUE",
@@ -124472,7 +124605,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "1cb368f2e514",
 "first_seen": "baseline"
 },
@@ -125172,7 +125305,7 @@
 ],
 "description": null,
 "summary": "La Yegros, figure de la nu-cumbia et des musiques globales, défend son album « HAZ » mêlant folklore latino-américain, reggae, ska et électro, dans un show live survolté.",
-"image": "https://lacigale.fr/wp-content/uploads/2023/03/1080x1080_sansecri-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2023/03/1080x1080_sansecri-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA YEGROS",
@@ -125192,7 +125325,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "3ecd2544206d",
 "first_seen": "baseline"
 },
@@ -125439,8 +125572,8 @@
 "players": {
 "Gans": {
 "bandcamp": {
-"url": "https://gansbham.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=1103542679/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=1103542679/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://gansbham.bandcamp.com"
 },
 "spotify": {
 "id": "05PzzXnIetN4rWDlYv23SK",
@@ -125888,7 +126021,7 @@
 ],
 "description": null,
 "summary": "The Odds, groupe français de pop-rock formé en 2021 et révélé par les EP « Danse Animale » et « Kids » ainsi que le titre « Gabriella », présente son pop-rock moderne et dansant sur scène.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE ODDS",
@@ -125908,7 +126041,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "4fbf203efdd6",
 "first_seen": "2026-10-20"
 },
@@ -126292,7 +126425,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "6456496b614a",
 "first_seen": "2026-10-10"
 },
@@ -127414,7 +127547,7 @@
 ],
 "description": null,
 "summary": "Le trio strasbourgeois Emile Londonien — Nils Boyny (claviers), Théodore Eristoff (basse) et Matthieu Drago (batterie) — issu du collectif Omezis, propose un jazz nourri de la scène britannique et de culture clubbing. Après les albums Legacy et Inwards, le groupe élargit son univers vers le R&B et la house moderne.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/c-ambre-savagnac-1-338x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/c-ambre-savagnac-1-338x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "EMILE LONDONIEN",
@@ -127434,7 +127567,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "6fe0aeac4cb3",
 "first_seen": "2026-09-28"
 },
@@ -127701,7 +127834,7 @@
 ],
 "description": null,
 "summary": "Mélissa Laveaux présente en live son album « At my softest, I am most dangerous », une pop indé aux guitares électriques en fingerpicking psychédélique, avec un travail marqué sur la voix et les chœurs.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/05/melissa-laveaux-cigale-650x650-v2-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/05/melissa-laveaux-cigale-650x650-v2-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MÉLISSA LAVEAUX",
@@ -127721,7 +127854,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "11fab0fa4150",
 "first_seen": "baseline"
 },
@@ -129884,7 +130017,7 @@
 ],
 "description": null,
 "summary": "Le chanteur Séverin défend sur scène son nouvel album « Tout est vrai », enregistré sur l'île de Wight, entouré de ses musiciens complices et d'invités surprises.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/visuel-neutre-severin-650x650px-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/visuel-neutre-severin-650x650px-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "SEVERIN",
@@ -129904,7 +130037,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "05f0d9ee17b3",
 "first_seen": "baseline"
 },
@@ -130089,7 +130222,7 @@
 "subgenres": [],
 "description": null,
 "summary": "Révélée par la Star Academy, Anouk, 21 ans, lance sa première tournée après son premier titre Ta peau. Elle défend une pop intime et contrastée, dans la lignée d'Olivia Rodrigo ou Gracie Abrams.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/anouk-©ghalia-kriaa-1080x1350-1-e1793724305808-600x449.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/anouk-©ghalia-kriaa-1080x1350-1-e1793724305808-600x449.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "ANOUK",
@@ -130105,7 +130238,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "145dc638608c",
 "first_seen": "2026-11-04"
 },
@@ -131801,7 +131934,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "5aa77e75f7a0",
 "first_seen": "2026-10-14"
 },
@@ -132152,7 +132285,7 @@
 ],
 "description": null,
 "summary": "Manon Lisa, révélée sur les réseaux pour ses textes engagés et son flow percutant après les titres « Le Petit Pêcheur » et « Jeune Demoiselle », se produit avec ses trois musiciennes. Un concert de chanson/pop française annoncé comme émouvant, puissant et intense.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/051126©elodiedaguin_manonlisa__534_cmjn_fogra39-400x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/051126©elodiedaguin_manonlisa__534_cmjn_fogra39-400x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MANON LISA",
@@ -132168,7 +132301,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "a9a6068ee052",
 "first_seen": "2026-11-09"
 },
@@ -132581,7 +132714,7 @@
 ],
 "description": null,
 "summary": "Le rappeur Hippocampe Fou vient présenter un tout nouveau projet, après sa trilogie consacrée au cycle de l'eau, son spectacle musical immersif et son album de famille.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/page-artiste-cigale-650x650-1-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/page-artiste-cigale-650x650-1-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "HIPPOCAMPE FOU",
@@ -132597,7 +132730,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "546555872247",
 "first_seen": "2026-10-23"
 },
@@ -133879,7 +134012,7 @@
 ],
 "description": null,
 "summary": "Brakence revient à Paris avec son mélange d'hyperpop, d'émo et d'électronique et ses textes très personnels, après les albums punk2, hypochondriac et son nouvel opus MarroW.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-brakence-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/650x650-brakence-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "BRAKENCE",
@@ -133895,7 +134028,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "b72db61abe23",
 "first_seen": "2026-10-28"
 },
@@ -134436,7 +134569,7 @@
 ],
 "description": null,
 "summary": "Stanislas, jeune auteur-compositeur-interprète de Colombes révélé avec l'EP « Topless », défend son rap indie teinté de pop alternative.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/07/1080-x-1440-450x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/07/1080-x-1440-450x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "STANISLAS",
@@ -134457,7 +134590,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "86f5c83bfc04",
 "first_seen": "baseline"
 },
@@ -134611,7 +134744,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "97ddeb87589c",
 "first_seen": "2026-10-09"
 },
@@ -135113,8 +135246,8 @@
 "players": {
 "CODEINE": {
 "bandcamp": {
-"url": "https://codeineband.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=3076343403/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=3076343403/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://codeineband.bandcamp.com"
 },
 "spotify": {
 "id": "60CBjmRpwr02JwAd3Ho25U",
@@ -136828,7 +136961,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "dfc86ae8c7e2",
 "first_seen": "2026-10-12"
 },
@@ -138451,7 +138584,7 @@
 "subgenres": [],
 "description": null,
 "summary": null,
-"image": "https://lacigale.fr/wp-content/uploads/2026/10/nataly-aukar-bio-photo-600x400.jpeg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/10/nataly-aukar-bio-photo-600x400.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NATALY AUKAR",
@@ -138460,7 +138593,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": false,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "53a54888636d",
 "first_seen": "2026-10-14"
 },
@@ -138829,7 +138962,7 @@
 ],
 "description": null,
 "summary": "Les Californiens de The Interrupters, figures du ska punk produites par Tim Armstrong, reviennent à Paris avec The Suicide Machines en première partie.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-2-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-2-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "THE INTERRUPTERS",
@@ -138845,7 +138978,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "0001a34965f7",
 "first_seen": "2026-11-03"
 },
@@ -140327,8 +140460,8 @@
 "players": {
 "Kool & The Gang": {
 "bandcamp": {
-"url": "https://koolandthegang.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=356459975/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=356459975/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://koolandthegang.bandcamp.com"
 },
 "spotify": {
 "id": "3VNITwohbvU5Wuy5PC6dsI",
@@ -142698,7 +142831,7 @@
 ],
 "description": null,
 "summary": "Figure du rock métal français, No One Is Innocent, fort de dix albums et d'une solide réputation scénique, poursuit son combat rock sans concession. Le groupe revient avec le single Folamour, qui vise le duo Trump/Poutine.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/nooneisinnocent-bikini-creditphotoericcanto_10-600x400.jpeg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/nooneisinnocent-bikini-creditphotoericcanto_10-600x400.jpeg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "NO ONE IS INNOCENT",
@@ -142714,7 +142847,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "88665621a9fd",
 "first_seen": "2026-11-04"
 },
@@ -143653,7 +143786,7 @@
 ],
 "description": null,
 "summary": "Le duo Felhur x Andro présente un nouveau show après une tournée indépendante : un rap doux et acide nourri de chanson, de rock et de techno, où Felhur écrit les textes et Andro signe les compositions. Après l'album-roman Liaisons & Ruptures et l'EP Pousser sur des cendres, porté par le titre viral Bébou.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/09/affiche-felhuretandro-7794-scaled-e1789656496947-535x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/09/affiche-felhuretandro-7794-scaled-e1789656496947-535x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "FELHUR",
@@ -143681,7 +143814,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "505cb2c6f0d9",
 "first_seen": "baseline"
 },
@@ -143935,7 +144068,7 @@
 ],
 "description": null,
 "summary": "La rappeuse Mona Guba, après le Solo Théâtre, la Boule Noire et la Maroquinerie, monte sur la scène de La Cigale avec des textes piquants et sincères, mêlant les genres, les messages engagés et l'humour.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/1080x1080_sansecri-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/1080x1080_sansecri-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "MONA GUBA",
@@ -143956,7 +144089,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "79d67ec1e5d3",
 "first_seen": "2026-11-12"
 },
@@ -144100,7 +144233,7 @@
 ],
 "description": null,
 "summary": "La Chica présente son nouvel album dans un live entièrement repensé : fini le piano-voix, elle joue en trio pour un set électronique et physique mêlant synthés, beats et voix.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-4-600x600.png",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/1800x1800-4-600x600.png.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "LA CHICA",
@@ -144125,7 +144258,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "c6093c3e64ba",
 "first_seen": "2026-11-10"
 },
@@ -144372,7 +144505,7 @@
 ],
 "description": null,
 "summary": "Le groupe punk Public Image Ltd (PiL), mené par John Lydon, passe par La Cigale dans le cadre de son « Actual Intelligence Tour », qui accompagne la sortie de son nouvel album studio Actual Intelligence enregistré à Porto et à Londres.",
-"image": "https://lacigale.fr/wp-content/uploads/2026/11/pil_2027_visuelweb_salle_650x650-600x600.jpg",
+"image": "https://lacigale.fr/wp-content/uploads/2026/11/pil_2027_visuelweb_salle_650x650-600x600.jpg.webp",
 "address": "120 boulevard de Rochechouart, 75018 Paris",
 "area": "Pigalle",
 "headliner": "PUBLIC IMAGE LTD",
@@ -144392,7 +144525,7 @@
 "lat": 48.8823,
 "lon": 2.34,
 "is_music": true,
-"stale_since": "2026-11-25",
+"stale_since": null,
 "id": "5520f6a74386",
 "first_seen": "2026-11-23"
 },
@@ -144695,8 +144828,8 @@
 "players": {
 "Heilung": {
 "bandcamp": {
-"url": "https://heilung.bandcamp.com",
-"embed": "https://bandcamp.com/EmbeddedPlayer/album=2129455323/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+"embed": "https://bandcamp.com/EmbeddedPlayer/album=2129455323/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+"url": "https://heilung.bandcamp.com"
 },
 "spotify": {
 "id": "7sTKZr30LqC928DZ5P9mNQ",
