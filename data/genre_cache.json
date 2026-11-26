@@ -1225,6 +1225,16 @@
 "cabaret"
 ]
 },
+"38riv-jazz-club|melissa lesnie raconte gatsby le magnifique a kind of cabar": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"swing",
+"vocal jazz"
+]
+},
 "38riv-jazz-club|michel zenino ronnie lynn patterson cool jazz for quiet dreams au 38riv": {
 "genres": [
 "jazz"
@@ -1895,6 +1905,11 @@
 "chanson"
 ],
 "is_music": true,
+"subgenres": []
+},
+"adidas-arena|gagnez des places pour les world championships breaking hip hop freestyle": {
+"genres": [],
+"is_music": false,
 "subgenres": []
 },
 "adidas-arena|world championships breaking hip hop freestyle": {
@@ -3560,6 +3575,15 @@
 "rock'n'roll"
 ]
 },
+"bal-chavaux|ideal clubbing presents": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"psychedelic"
+]
+},
 "bal-chavaux|jazz": {
 "genres": [
 "jazz"
@@ -3664,6 +3688,17 @@
 "subgenres": [
 "glam metal",
 "hard rock"
+]
+},
+"bal-chavaux|la descarga du bal chavaux": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"salsa",
+"descarga"
 ]
 },
 "bal-chavaux|lebanon hanover": {
@@ -3843,6 +3878,15 @@
 "subgenres": [
 "nu-metal",
 "industrial metal"
+]
+},
+"bal-chavaux|surprise gen daniel": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "bal-chavaux|swift guad nuisance x al tarba": {
@@ -4576,6 +4620,17 @@
 "venezuelan indie"
 ]
 },
+"bataclan|richie campbell": {
+"genres": [
+"reggae",
+"soul-rnb"
+],
+"is_music": true,
+"subgenres": [
+"dancehall",
+"lovers rock"
+]
+},
 "bataclan|seth gueko": {
 "genres": [
 "hip-hop"
@@ -5058,6 +5113,26 @@
 "is_music": true,
 "subgenres": [
 "baroque"
+]
+},
+"bibliotheque-musicale-la-grange-fleuret|concert beethoven tryptique volume 2": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"string quartet",
+"chamber music"
+]
+},
+"bibliotheque-musicale-la-grange-fleuret|concert lieder et melodies": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"lieder",
+"art song"
 ]
 },
 "bibliotheque-musicale-la-grange-fleuret|english art song": {
@@ -5905,6 +5980,14 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|katrine sansregret": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "cafe-de-la-danse|kinga g yk": {
 "genres": [
 "funk",
@@ -6306,6 +6389,15 @@
 "subgenres": [
 "baroque",
 "sacred choral"
+]
+},
+"cathedrale-americaine|vepres jazz": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"sacred jazz"
 ]
 },
 "cathedrale-saint-louis|monteverdi vepres de la vierge cori spezzati versailles": {
@@ -6843,6 +6935,16 @@
 "is_music": true,
 "subgenres": []
 },
+"cirque-electrique|ivana lcx release party attaquee ariel tintar ivana lcx dj anacaona": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "cirque-electrique|la cyberqueer": {
 "genres": [
 "electro",
@@ -6914,6 +7016,17 @@
 "is_music": true,
 "subgenres": [
 "rap français"
+]
+},
+"cirque-electrique|manouche party 4 ca repart de plus belle": {
+"genres": [
+"jazz",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"jazz manouche",
+"swing"
 ]
 },
 "cirque-electrique|marcela full band ch ur de baba jaga dj amedee": {
@@ -7758,6 +7871,11 @@
 "is_music": false,
 "subgenres": []
 },
+"conservatoire-municipal-claude-debussy-site-courcelles|danse s plurielles": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "conservatoire-municipal-claude-debussy-site-courcelles|dmitri chostakovitch 1906 1975": {
 "genres": [
 "classical"
@@ -8060,6 +8178,16 @@
 "is_music": false,
 "subgenres": [
 "carnatic"
+]
+},
+"conservatoire-municipal-gustave-charpentier|espace fil d ecoute": {
+"genres": [
+"experimental",
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"free improvisation"
 ]
 },
 "conservatoire-municipal-hector-berlioz|carnaval": {
@@ -8878,6 +9006,16 @@
 "romantic"
 ]
 },
+"eglise-lutherienne-de-la-redemption|requiem s": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"sacred choral",
+"requiem"
+]
+},
 "eglise-lutherienne-saint-jean|concert piano violoncelle": {
 "genres": [
 "classical"
@@ -8925,6 +9063,16 @@
 "subgenres": [
 "baroque",
 "sacred choral"
+]
+},
+"eglise-notre-dame-des-buttes-chaumont|meli melo de noel un projet de la filiere voix du conservatoire jacques ibert": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral",
+"christmas carols"
 ]
 },
 "eglise-notre-dame-des-otages|ensemble vocal cassius palmyre": {
@@ -11864,6 +12012,36 @@
 "chamber music"
 ]
 },
+"hopital-bretonneau|et voila concerts gratuits a l hopital bretonneau": {
+"genres": [
+"classical",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"chamber music"
+]
+},
+"hopital-bretonneau|la flute les oiseaux": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"flute recital",
+"chamber music"
+]
+},
+"hopital-bretonneau|synestezik": {
+"genres": [
+"classical",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"music theatre"
+]
+},
 "hotel-de-la-marine|concert animalia les oiseaux enchantes l hotel de la marine": {
 "genres": [
 "classical"
@@ -14541,6 +14719,14 @@
 "singer-songwriter"
 ]
 },
+"la-boule-noire|no sex last night": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-boule-noire|nothhingspecial": {
 "genres": [
 "pop",
@@ -16364,6 +16550,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dame-de-canton|ludo x no easy silence": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-dame-de-canton|melehan x l ambulancier": {
 "genres": [
 "chanson",
@@ -16500,6 +16694,16 @@
 "french pop"
 ]
 },
+"la-dame-de-canton|the bends of symmetry": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"progressive rock"
+]
+},
 "la-dame-de-canton|the expats jam": {
 "genres": [
 "jazz",
@@ -16530,6 +16734,14 @@
 "genres": [
 "indie",
 "pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-dame-de-canton|the shared stage 3": {
+"genres": [
+"pop",
+"rock"
 ],
 "is_music": true,
 "subgenres": []
@@ -18439,6 +18651,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"la-maroquinerie|guerta": {
+"genres": [
+"hip-hop",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
 },
 "la-maroquinerie|gwendoline": {
 "genres": [
@@ -20834,6 +21056,14 @@
 "symphonic"
 ]
 },
+"la-seine-musicale|veronique sanson": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-seine-musicale|vibe factor": {
 "genres": [
 "pop"
@@ -22781,6 +23011,15 @@
 "is_music": true,
 "subgenres": []
 },
+"le-hasard-ludique|on oublie rien": {
+"genres": [
+"hip-hop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
+]
+},
 "le-hasard-ludique|ooralise": {
 "genres": [
 "hip-hop"
@@ -24504,6 +24743,17 @@
 "lo-fi"
 ]
 },
+"le-trabendo|ex re": {
+"genres": [
+"indie",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"indie folk",
+"dream pop"
+]
+},
 "le-trabendo|genesis owusu": {
 "genres": [
 "hip-hop",
@@ -25404,6 +25654,18 @@
 "art rock"
 ]
 },
+"le-trianon|the wombats": {
+"genres": [
+"indie",
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie rock",
+"britpop"
+]
+},
 "le-trianon|transfert les 10ans": {
 "genres": [
 "electro"
@@ -25975,6 +26237,16 @@
 "is_music": true,
 "subgenres": [
 "post-punk"
+]
+},
+"le-truskel|kuroi payne aaramis kndns": {
+"genres": [
+"hip-hop",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"trap"
 ]
 },
 "le-truskel|laces": {
@@ -26797,6 +27069,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"mairie-du-18e-arrondissement|le deuxieme voyage du petit prince": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"orchestral",
+"youth orchestra"
+]
 },
 "mairie-du-20e-arrondissement|concert de restitution de la jeune scene lyrique": {
 "genres": [
@@ -32154,6 +32436,16 @@
 "club night"
 ]
 },
+"point-ephemere|basma temir alcy": {
+"genres": [
+"world",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"central asian"
+]
+},
 "point-ephemere|bavardages fete ses 3 ans": {
 "genres": [
 "electro"
@@ -32267,6 +32559,17 @@
 "is_music": true,
 "subgenres": [
 "house"
+]
+},
+"point-ephemere|david shea": {
+"genres": [
+"experimental",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"turntablism",
+"sound collage"
 ]
 },
 "point-ephemere|dazzling killmen pord": {
@@ -32758,6 +33061,14 @@
 "brazilian funk"
 ]
 },
+"point-ephemere|kissed": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": []
+},
 "point-ephemere|kleopatra divine": {
 "genres": [
 "electro",
@@ -32986,6 +33297,16 @@
 "drone",
 "slowcore",
 "ambient"
+]
+},
+"point-ephemere|mila moja": {
+"genres": [
+"world",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"balkan"
 ]
 },
 "point-ephemere|mimoon": {
@@ -37223,6 +37544,16 @@
 "swing"
 ]
 },
+"sunset-sunside|jazz gouter fete les comedies musicales avec morgane dessislava quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz",
+"musical theatre songs"
+]
+},
 "sunset-sunside|jazz gouter fete les comptines": {
 "genres": [
 "jazz"
@@ -37329,6 +37660,16 @@
 "is_music": true,
 "subgenres": [
 "contemporary jazz"
+]
+},
+"sunset-sunside|jd allen european trio": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-bop",
+"sax trio"
 ]
 },
 "sunset-sunside|jean jacques elangue n9": {
@@ -37798,6 +38139,17 @@
 "vocal jazz"
 ]
 },
+"sunset-sunside|maeva fischer abracadabra": {
+"genres": [
+"pop",
+"soul-rnb",
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"neo-soul"
+]
+},
 "sunset-sunside|mahmoud sadi trio": {
 "genres": [
 "jazz"
@@ -38248,6 +38600,17 @@
 "subgenres": [
 "armenian music",
 "modal jazz"
+]
+},
+"sunset-sunside|simon bolzinger quintet cantalo": {
+"genres": [
+"jazz",
+"latin"
+],
+"is_music": true,
+"subgenres": [
+"latin jazz",
+"salsa"
 ]
 },
 "sunset-sunside|sinfonia de carnaval": {
@@ -41465,6 +41828,16 @@
 "subgenres": [
 "synth-pop",
 "cold wave"
+]
+},
+"zenith-paris|fredz": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"bedroom pop"
 ]
 },
 "zenith-paris|gaetan roussel": {
