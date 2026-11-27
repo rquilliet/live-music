@@ -3291,6 +3291,16 @@
 "is_music": true,
 "subgenres": []
 },
+"badaboum|joker out": {
+"genres": [
+"rock",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"indie rock"
+]
+},
 "badaboum|la ch ck nye bonnes annees 2000 s": {
 "genres": [
 "pop",
@@ -4631,6 +4641,14 @@
 "lovers rock"
 ]
 },
+"bataclan|roland cristal": {
+"genres": [
+"pop",
+"chanson"
+],
+"is_music": true,
+"subgenres": []
+},
 "bataclan|seth gueko": {
 "genres": [
 "hip-hop"
@@ -5652,6 +5670,15 @@
 "is_music": true,
 "subgenres": []
 },
+"cafe-de-la-danse|agour sarahoui": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"sahrawi"
+]
+},
 "cafe-de-la-danse|alain chamfort chamfort temps forts": {
 "genres": [
 "chanson",
@@ -6568,6 +6595,15 @@
 "chamber music"
 ]
 },
+"centre-paris-anim-mado-robin|concert orchestre musique en seine": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"symphonic"
+]
+},
 "centre-paris-anim-mado-robin|concert pro quartet musique de chambre": {
 "genres": [
 "classical"
@@ -6927,10 +6963,27 @@
 "brass band"
 ]
 },
+"cirque-electrique|fire horse s bird s day party ay caramba si senior koncerts dj sets": {
+"genres": [
+"rock",
+"punk",
+"electro"
+],
+"is_music": true,
+"subgenres": []
+},
 "cirque-electrique|friend of a friend bird voices rosa d alba": {
 "genres": [
 "indie",
 "rock"
+],
+"is_music": true,
+"subgenres": []
+},
+"cirque-electrique|hors piste 1 by warriorz": {
+"genres": [
+"electro",
+"hip-hop"
 ],
 "is_music": true,
 "subgenres": []
@@ -6967,6 +7020,15 @@
 "queer club",
 "noise"
 ]
+},
+"cirque-electrique|la nuit fauve reveillon 2027 au cirque electrique": {
+"genres": [
+"electro",
+"punk",
+"rock"
+],
+"is_music": true,
+"subgenres": []
 },
 "cirque-electrique|les 3 ans de vinyoff records zz z pamela tulpa surprises": {
 "genres": [
@@ -7430,6 +7492,15 @@
 "fanfare"
 ]
 },
+"communale-saint-ouen|glow a winter s songbook par some voices": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"choral"
+]
+},
 "communale-saint-ouen|loke rahbek et frederik valentin a v vina konda a v": {
 "genres": [
 "electro",
@@ -7856,6 +7927,13 @@
 "is_music": false,
 "subgenres": []
 },
+"conservatoire-municipal-claude-debussy-site-courcelles|carte blanche aux grands eleves du conservatoire": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": []
+},
 "conservatoire-municipal-claude-debussy-site-courcelles|cine concert chaplin en action": {
 "genres": [
 "classical"
@@ -8188,6 +8266,23 @@
 "is_music": true,
 "subgenres": [
 "free improvisation"
+]
+},
+"conservatoire-municipal-gustave-charpentier|living space": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": []
+},
+"conservatoire-municipal-gustave-charpentier|xcentric crazy divas": {
+"genres": [
+"electro",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"electroacoustic"
 ]
 },
 "conservatoire-municipal-hector-berlioz|carnaval": {
@@ -9853,6 +9948,16 @@
 "subgenres": [
 "gregorian chant",
 "irish traditional"
+]
+},
+"eglise-st-philippe-du-roule|concert de noel jazz piano": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano jazz",
+"christmas jazz"
 ]
 },
 "eglise-st-philippe-du-roule|concert jazz festif": {
@@ -13802,6 +13907,16 @@
 "neo-soul"
 ]
 },
+"la-bellevilloise|neth priere cain": {
+"genres": [
+"soul-rnb",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"gospel"
+]
+},
 "la-bellevilloise|nobody club vol 2": {
 "genres": [
 "electro"
@@ -14493,6 +14608,14 @@
 "subgenres": [
 "singer-songwriter"
 ]
+},
+"la-boule-noire|jeanne bringtown": {
+"genres": [
+"pop",
+"indie"
+],
+"is_music": true,
+"subgenres": []
 },
 "la-boule-noire|jetlag release party de baozi cumulus ilo navahy": {
 "genres": [
@@ -15904,6 +16027,11 @@
 "club",
 "hyperpop"
 ]
+},
+"la-cigale|philippe manoeuvre un enfant": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "la-cigale|pi ja ma en concert a la cigale": {
 "genres": [
@@ -21246,6 +21374,16 @@
 "sound art"
 ]
 },
+"la-station|eternal buildup": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno",
+"rave"
+]
+},
 "la-station|eternal mana x isengard": {
 "genres": [
 "electro"
@@ -21407,6 +21545,15 @@
 ]
 },
 "la-station|station electronique last part": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"techno"
+]
+},
+"la-station|subtyl x la station iels ressuscitent": {
 "genres": [
 "electro"
 ],
@@ -25907,6 +26054,15 @@
 "european jazz"
 ]
 },
+"le-triton|janis fedotovs quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
+]
+},
 "le-triton|jean marie machado keyvan chemirani la saga des vagues": {
 "genres": [
 "jazz",
@@ -26037,6 +26193,16 @@
 "is_music": true,
 "subgenres": [
 "trio"
+]
+},
+"le-triton|trio shooze carte blanche a la compagnie des musiques a ouir": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"improvised music"
 ]
 },
 "le-triton|tristan mace annelise clement cendres du motif": {
@@ -27718,6 +27884,15 @@
 "subgenres": [
 "dream folk",
 "ballads"
+]
+},
+"mediatheque-virginia-woolf|petit concert de musique traditionnelle chinoise a l occasion du nouvel an chinois": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": [
+"chinese traditional"
 ]
 },
 "memorial-de-la-shoah|imre kertesz par margaux eskenazi": {
@@ -32397,6 +32572,19 @@
 "is_music": true,
 "subgenres": []
 },
+"point-ephemere|antoine assayas": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"point-ephemere|apero du club vert media": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|au poste commando": {
 "genres": [
 "punk",
@@ -33016,6 +33204,18 @@
 "club night"
 ]
 },
+"point-ephemere|jazzcore take over": {
+"genres": [
+"jazz",
+"experimental",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"jazzcore",
+"noise"
+]
+},
 "point-ephemere|joe armon jones maxwell owin": {
 "genres": [
 "jazz",
@@ -33177,6 +33377,11 @@
 "lo-fi"
 ]
 },
+"point-ephemere|lancement kiblind magazine flamme": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
 "point-ephemere|le buff boeuf acoustique participatif": {
 "genres": [
 "jazz",
@@ -33188,6 +33393,11 @@
 ]
 },
 "point-ephemere|le pokpok show goes live": {
+"genres": [],
+"is_music": false,
+"subgenres": []
+},
+"point-ephemere|les cours florent": {
 "genres": [],
 "is_music": false,
 "subgenres": []
@@ -33226,6 +33436,16 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"point-ephemere|m h aol": {
+"genres": [
+"punk",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
 },
 "point-ephemere|mado": {
 "genres": [
@@ -33460,6 +33680,23 @@
 "is_music": true,
 "subgenres": []
 },
+"point-ephemere|persephone": {
+"genres": [
+"electro",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
+"point-ephemere|piss": {
+"genres": [
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"noise rock"
+]
+},
 "point-ephemere|pop up solidaire moodz": {
 "genres": [],
 "is_music": false,
@@ -33510,6 +33747,11 @@
 "subgenres": [
 "rap français"
 ]
+},
+"point-ephemere|screen queens 8 nanas": {
+"genres": [],
+"is_music": false,
+"subgenres": []
 },
 "point-ephemere|screen queens almodovar": {
 "genres": [],
@@ -33685,6 +33927,16 @@
 "is_music": true,
 "subgenres": []
 },
+"point-ephemere|viriphobia": {
+"genres": [
+"punk",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"noise"
+]
+},
 "point-ephemere|weird nightmare cold beaches": {
 "genres": [
 "rock",
@@ -33694,6 +33946,17 @@
 "subgenres": [
 "power pop",
 "noise pop"
+]
+},
+"point-ephemere|wishy": {
+"genres": [
+"indie",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"shoegaze",
+"power pop"
 ]
 },
 "point-ephemere|zinzin market": {
@@ -36041,6 +36304,15 @@
 "jazz manouche"
 ]
 },
+"sunset-sunside|aymeric avice quintet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"free jazz"
+]
+},
 "sunset-sunside|baby vortex": {
 "genres": [
 "jazz",
@@ -36251,6 +36523,15 @@
 "subgenres": [
 "mizik rasin",
 "haitian"
+]
+},
+"sunset-sunside|cecile brocas quintet that was a dream": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"vocal jazz"
 ]
 },
 "sunset-sunside|cedric hanriot trio ft solene cairoli terreon gully": {
@@ -36964,6 +37245,15 @@
 "electric blues"
 ]
 },
+"sunset-sunside|hommage a bennie golson avec les blakettes jam session": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop"
+]
+},
 "sunset-sunside|hommage a benny golson concert thematique": {
 "genres": [
 "jazz"
@@ -36971,6 +37261,15 @@
 "is_music": true,
 "subgenres": [
 "hard bop"
+]
+},
+"sunset-sunside|hommage a bill evans avec laurent courthaliac jam session": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"piano jazz"
 ]
 },
 "sunset-sunside|hommage a bill evans jim hall": {
@@ -37013,6 +37312,15 @@
 ]
 },
 "sunset-sunside|hommage a charlie parker avec laurent courthaliac jam": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop"
+]
+},
+"sunset-sunside|hommage a charlie parker avec laurent courthaliac jam session": {
 "genres": [
 "jazz"
 ],
@@ -37072,6 +37380,15 @@
 ]
 },
 "sunset-sunside|hommage a dizzie gillespie jam session": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"bebop"
+]
+},
+"sunset-sunside|hommage a dizzy gillespie avec laurent courthaliac jam session": {
 "genres": [
 "jazz"
 ],
@@ -37203,6 +37520,15 @@
 "hard bop"
 ]
 },
+"sunset-sunside|hommage a lee morgan avec fabien mary jam": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"hard bop"
+]
+},
 "sunset-sunside|hommage a miles davis concert thematique": {
 "genres": [
 "jazz"
@@ -37298,6 +37624,15 @@
 "subgenres": [
 "bebop",
 "piano jazz"
+]
+},
+"sunset-sunside|hommage a wayne shorter avec david sauzay jam": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"post-bop"
 ]
 },
 "sunset-sunside|hommage a wayne shorter john coltrane art blakey avec les blakettes jam session": {
@@ -38021,6 +38356,15 @@
 "songwriter covers"
 ]
 },
+"sunset-sunside|leo geller quartet": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"modern jazz"
+]
+},
 "sunset-sunside|leo labarriere trio": {
 "genres": [
 "jazz",
@@ -38643,6 +38987,16 @@
 "power electronics"
 ]
 },
+"sunset-sunside|snap xp transition": {
+"genres": [
+"jazz",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"cinematic"
+]
+},
 "sunset-sunside|sofia levin quintet de piazzolla a nos jours": {
 "genres": [
 "latin",
@@ -39028,6 +39382,16 @@
 "is_music": true,
 "subgenres": [
 "groove"
+]
+},
+"sunset-sunside|yelloworld tribute to david bowie": {
+"genres": [
+"jazz",
+"rock"
+],
+"is_music": true,
+"subgenres": [
+"jazz covers"
 ]
 },
 "sunset-sunside|yumiko yamashita medium ensemble": {
