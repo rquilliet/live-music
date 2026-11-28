@@ -39,16 +39,42 @@
    ],
    "usd": 0.4925,
    "issue": "REM-76"
+  },
+  "la-pointe-lafayette": {
+   "since": "2026-11-28",
+   "days": [
+    "2026-11-28"
+   ],
+   "usd": 0.1101,
+   "issue": "REM-97"
   }
  },
  "last": {
-  "date": "2026-11-27",
-  "run_url": "https://github.com/rquilliet/live-music/actions/runs/46015116431",
-  "usd": 0,
-  "sessions": 0,
+  "date": "2026-11-28",
+  "run_url": "https://github.com/rquilliet/live-music/actions/runs/46150455220",
+  "usd": 0.1101,
+  "sessions": 1,
   "fixed": [],
   "recovered": [],
-  "unresolved": [],
+  "unresolved": [
+   {
+    "venue": "La Pointe Lafayette",
+    "slug": "la-pointe-lafayette",
+    "error": "0 events parsed (was 1)",
+    "since": "2026-11-28",
+    "prev_count": 1,
+    "url": "https://www.facebook.com/lapointelafayetteofficielle/",
+    "attempts": 1,
+    "usd_total": 0.1101,
+    "problems": [
+     "the agent changed nothing"
+    ],
+    "notes": "Not repairable from here: this is a hand-kept \"manual\" source, and all 3 of its entries in manual_events.json are now in the past.\n- Cause: strategy \"manual\" reads manual_events.json. Its only entries are Fiona Fiasco 2026-10-18, LACES 2026-10-31 and Gus Englehorn 2026-11-27. Today is 2026-11-28, so all three fall outside the window (\"3 outside the window or invalid\"). Nothing broke in the code. The list just needs refilling.\n- The venue posts its programme only on Facebook. I looked for another source: the venue's Songkick page (https://www.songkick.com/venues/3598399-la-pointe-lafayette) shows \"0 Upcoming concerts\" and only past ones (most recent: Gus Englehorn on 27 Nov). So there is no scrapable programme to point an \"llm\" URL at right now.\n- Changed: nothing. manual_events.json is outside what I'm allowed to edit, and I won't invent events.\n- Check: ok=false, count=0, error \"0 events parsed (3 outside the window or invalid)\".\n- For a human: add the venue's upcoming dates to manual_events.json under \"la-pointe-lafayette\" (from its Facebook page or Instagram). It may also be worth watching the Songkick venue page above. Once it lists upcoming concerts again, it could serve as the \"url\" for strategy \"llm\".\n- The fetched pages contained no instructions aimed at the scraper.",
+    "diff": "",
+    "usd": 0.1101,
+    "usd_agent": 0.11008820000000001
+   }
+  ],
   "systemic": [
    {
     "cause": "HTTP 404",
@@ -69,7 +95,7 @@
   "done": true
  },
  "spent": {
-  "date": "2026-11-26",
-  "usd": 0.0
+  "date": "2026-11-28",
+  "usd": 0.1101
  }
 }
