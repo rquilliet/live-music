@@ -2252,6 +2252,14 @@
 "is_music": true,
 "subgenres": []
 },
+"alhambra|marianne": {
+"genres": [
+"chanson",
+"pop"
+],
+"is_music": true,
+"subgenres": []
+},
 "alhambra|midnight generation": {
 "genres": [
 "rock",
@@ -2686,6 +2694,16 @@
 "subgenres": [
 "cabaret",
 "weimar"
+]
+},
+"auberge-de-jeunesse-yves-robert-halle-pajol|quatre jours a paris": {
+"genres": [
+"classical",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"opérette"
 ]
 },
 "auditorium-de-l-hopital-bretonneau|concert gratuit monstres et chimeres": {
@@ -3869,6 +3887,18 @@
 "noise rock"
 ]
 },
+"bal-chavaux|soiree de soutien aux de caisses greves enora morice x bonnie banane x joseph schiano di lombo x flavien berger x dj startup": {
+"genres": [
+"electro",
+"soul-rnb",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"french touch",
+"neo-soul"
+]
+},
 "bal-chavaux|speakeasy blues": {
 "genres": [
 "blues"
@@ -4233,6 +4263,16 @@
 "subgenres": [
 "folk metal",
 "melodic death metal"
+]
+},
+"bataclan|esskalibur": {
+"genres": [
+"hip-hop",
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"rap français"
 ]
 },
 "bataclan|eve": {
@@ -4873,6 +4913,15 @@
 "auteur-compositeur-interprète"
 ]
 },
+"bibliotheque-aime-cesaire|concert des ch urs amateurs du pavillon de la sirene": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"choral"
+]
+},
 "bibliotheque-amelie|concert du quatuor kaija festival monte le son": {
 "genres": [
 "classical"
@@ -5324,6 +5373,13 @@
 "club night"
 ]
 },
+"cabaret-sauvage|amadeus": {
+"genres": [
+"world"
+],
+"is_music": true,
+"subgenres": []
+},
 "cabaret-sauvage|amour cosmique hors serie 5e element": {
 "genres": [
 "latin",
@@ -5721,6 +5777,14 @@
 "subgenres": [
 "nouvelle chanson française"
 ]
+},
+"cafe-de-la-danse|berry": {
+"genres": [
+"chanson",
+"folk"
+],
+"is_music": true,
+"subgenres": []
 },
 "cafe-de-la-danse|candice": {
 "genres": [
@@ -6138,6 +6202,16 @@
 "is_music": true,
 "subgenres": [
 "k-pop"
+]
+},
+"cafe-de-la-danse|meimuna 10 ans d eclosions": {
+"genres": [
+"folk",
+"chanson"
+],
+"is_music": true,
+"subgenres": [
+"indie folk"
 ]
 },
 "cafe-de-la-danse|myla": {
@@ -6789,6 +6863,16 @@
 "is_music": false,
 "subgenres": []
 },
+"cirque-electrique|bird voices limbo": {
+"genres": [
+"rock",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
+]
+},
 "cirque-electrique|bubbles jam": {
 "genres": [
 "hip-hop",
@@ -6962,6 +7046,13 @@
 "subgenres": [
 "brass band"
 ]
+},
+"cirque-electrique|fire horse s bird s day party": {
+"genres": [
+"rock"
+],
+"is_music": true,
+"subgenres": []
 },
 "cirque-electrique|fire horse s bird s day party ay caramba si senior koncerts dj sets": {
 "genres": [
@@ -7140,6 +7231,16 @@
 "subgenres": [
 "post-metal",
 "blackgaze"
+]
+},
+"cirque-electrique|neon bay melasse grrrotesque": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"post-punk"
 ]
 },
 "cirque-electrique|neon bay melasse grrrotesque from our bodies the church will burn down release party": {
@@ -11132,6 +11233,16 @@
 "is_music": true,
 "subgenres": []
 },
+"fgo-barbara|a festa": {
+"genres": [
+"latin",
+"world"
+],
+"is_music": true,
+"subgenres": [
+"brazilian"
+]
+},
 "fgo-barbara|a festa showcases": {
 "genres": [
 "world",
@@ -11344,6 +11455,19 @@
 ],
 "is_music": true,
 "subgenres": []
+},
+"fgo-barbara|ledbyher a fgo barbabara": {
+"genres": [
+"hip-hop",
+"pop",
+"experimental"
+],
+"is_music": true,
+"subgenres": [
+"uk drill",
+"bedroom pop",
+"lo-fi"
+]
 },
 "fgo-barbara|ledbyher earfzilla": {
 "genres": [
@@ -16439,6 +16563,14 @@
 "is_music": true,
 "subgenres": []
 },
+"la-dame-de-canton|chick tips x yep4": {
+"genres": [
+"rock",
+"punk"
+],
+"is_music": true,
+"subgenres": []
+},
 "la-dame-de-canton|chu chi cha release party": {
 "genres": [
 "latin",
@@ -16728,6 +16860,14 @@
 "genres": [
 "chanson",
 "rock"
+],
+"is_music": true,
+"subgenres": []
+},
+"la-dame-de-canton|noks x blonk": {
+"genres": [
+"pop",
+"electro"
 ],
 "is_music": true,
 "subgenres": []
@@ -26356,6 +26496,17 @@
 "indie rock"
 ]
 },
+"le-truskel|hivemind 2004 late figure": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"noise rock"
+]
+},
 "le-truskel|host jam": {
 "genres": [
 "rock",
@@ -27163,6 +27314,18 @@
 "is_music": false,
 "subgenres": []
 },
+"mains-d-oeuvres|mofo 21": {
+"genres": [
+"experimental",
+"rock",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"noise",
+"post-punk"
+]
+},
 "mains-d-oeuvres|mur2frappe x mains d oeuvres 3": {
 "genres": [
 "hip-hop"
@@ -27708,6 +27871,15 @@
 "is_music": true,
 "subgenres": []
 },
+"mediatheque-marguerite-yourcenar|concert l orient express": {
+"genres": [
+"classical"
+],
+"is_music": true,
+"subgenres": [
+"chamber music"
+]
+},
 "mediatheque-marguerite-yourcenar|l oreille et la plume atelier musical": {
 "genres": [],
 "is_music": false,
@@ -27872,6 +28044,18 @@
 "subgenres": [
 "soft grunge",
 "atmospheric folk"
+]
+},
+"mediatheque-violette-leduc|sophie oz en live et en duo": {
+"genres": [
+"pop",
+"chanson",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"trip-hop",
+"dream pop"
 ]
 },
 "mediatheque-violette-leduc|the reed conservation society tramble concert dessine": {
@@ -29211,6 +29395,17 @@
 "is_music": true,
 "subgenres": [
 "alternative rock"
+]
+},
+"nouveau-casino|nouveau mardi 2": {
+"genres": [
+"rock",
+"indie"
+],
+"is_music": true,
+"subgenres": [
+"psychedelic rock",
+"shoegaze"
 ]
 },
 "nouveau-casino|overseas acte ii": {
@@ -34017,6 +34212,18 @@
 "indie pop"
 ]
 },
+"popup|asphalt venus d argent sizyf": {
+"genres": [
+"rock",
+"indie",
+"punk"
+],
+"is_music": true,
+"subgenres": [
+"post-punk",
+"cold wave"
+]
+},
 "popup|ava joe": {
 "genres": [
 "pop",
@@ -35349,6 +35556,15 @@
 "nouvelle chanson française"
 ]
 },
+"popup|wdtng party mokado bonnie spacey baptiste lagrave": {
+"genres": [
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"house"
+]
+},
 "popup|xana": {
 "genres": [
 "pop",
@@ -36165,6 +36381,17 @@
 "gypsy jazz"
 ]
 },
+"sunset-sunside|anna farrow": {
+"genres": [
+"jazz",
+"folk"
+],
+"is_music": true,
+"subgenres": [
+"singer-songwriter",
+"vocal jazz"
+]
+},
 "sunset-sunside|anne carleton quintet": {
 "genres": [
 "jazz"
@@ -36875,6 +37102,15 @@
 "subgenres": [
 "swing",
 "ellington repertoire"
+]
+},
+"sunset-sunside|elie martin charriere era p avec club jazz man": {
+"genres": [
+"jazz"
+],
+"is_music": true,
+"subgenres": [
+"contemporary jazz"
 ]
 },
 "sunset-sunside|elisabeth salaun": {
@@ -39223,6 +39459,17 @@
 "modal",
 "gypsy",
 "mediterranean"
+]
+},
+"sunset-sunside|tom chaize": {
+"genres": [
+"jazz",
+"electro"
+],
+"is_music": true,
+"subgenres": [
+"nu-jazz",
+"groove"
 ]
 },
 "sunset-sunside|tom ollendorff with jason brown": {
@@ -42836,6 +43083,15 @@
 "subgenres": [
 "amapiano",
 "afropop"
+]
+},
+"zenith-paris|valery meladze": {
+"genres": [
+"pop"
+],
+"is_music": true,
+"subgenres": [
+"russian pop"
 ]
 },
 "zenith-paris|vianney": {
